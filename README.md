@@ -1,6 +1,3 @@
----
----
-
 # NUGU developers 소개
 
 NUGU developers에 오신 것을 환영합니다.

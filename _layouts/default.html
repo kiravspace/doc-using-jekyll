@@ -1,7 +1,7 @@
 <!doctype html>
 <html lang="en">
 <head>
-    <meta charset="utf-8">
+    {% include head.html %}
 </head>
 <body>
 {% include header.html %}
@@ -10,7 +10,7 @@
         <div style="width:20%;float:left;">
             {% include nav.html %}
         </div>
-        <div style="width:80%;float:left;">{{ content }}</div>
+        <div style="width:80%;float:left;">{% include content.html %}</div>
     </div>
 </section>
 {% include footer.html %}

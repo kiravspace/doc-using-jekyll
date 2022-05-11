@@ -1,19 +1,39 @@
 plugins:
+  - jekyll-optional-front-matter
   - jekyll-titles-from-headings
+  - jekyll-youtube
 
 defaults:
   - scope:
       path: ""
     values:
       layout: "default"
-      strip_title: true
+  - scope:
+      path: "README.md"
+    values:
+      permalink: /
+  - scope:
+      path: "_sections/**/**"
+    values:
+      parent: true
 
 collections:
   sections:
     output: true
-    permalink: :path
+    permalink: /:path
+
+markdown: kramdown
+kramdown:
+  input: GFM
+  syntax_highlighter: rouge
+
+include:
+  - README.md
+
+optional_front_matter:
+  remove_originals: true
 
 titles_from_headings:
   enabled: true
-  strip_title: false
+  strip_title: true
   collections: true

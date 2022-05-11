@@ -1,7 +1,9 @@
-{% for section in site.sections %}
-<h2>
-    <a href="{{ section.url }}">
-        {{ section.title }}
-    </a>
-</h2>
-{% endfor %}
+<ul>
+    <li><a href="/">NUGU developers 소개</a></li>
+    {% for section in site.sections %}
+    {% unless !section.parent %}
+    <li><a href="{{ section.url }}">{{ section.title }}</a></li>
+    {% endunless %}
+    {% endfor %}
+    <li><a href="/terms">용어 정의</a></li>
+</ul>
