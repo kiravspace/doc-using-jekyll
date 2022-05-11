@@ -2,7 +2,7 @@
 parent: false
 ---
 
-# NUGU play
+# NUGU play 1234
 
 {% youtube "https://www.youtube.com/watch?v=1PB5j7FM0EE" %}
 
