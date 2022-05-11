@@ -4,7 +4,7 @@ parent: false
 
 # NUGU play
 
-{% youtube "https://www.youtube.com/watch?v=1PB5j7FM0EE" %}
+<iframe src="https://www.youtube.com/embed/1PB5j7FM0EE" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
 
 NUGU play는 NUGU 플랫폼을 통하여 사용자의 요청에 응답하여 서비스의 단위이며, Play Builder에 Play를 만들 수 있습니다. 좋은 콘텐츠를 보유하고 있는 업체 또는 개인이  Play를 통하여, NUGU 사용자에게 자신의 서비스를 제공할 수 있도록 도와줍니다.
 
