@@ -18,6 +18,8 @@ defaults:
       parent: true
 
 collections:
+  posts:
+    output : false
   sections:
     output: true
     permalink: /:path
@@ -29,6 +31,9 @@ kramdown:
 
 include:
   - README.md
+exclude:
+  - document.iml
+  - .idea/**
 
 optional_front_matter:
   remove_originals: true
