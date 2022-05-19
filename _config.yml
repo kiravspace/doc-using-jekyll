@@ -1,44 +1,36 @@
 plugins:
-  - jekyll-optional-front-matter
-  - jekyll-titles-from-headings
   - jekyll-youtube
+  - jekyll-spaceship
 
 defaults:
   - scope:
       path: ""
     values:
       layout: "default"
+      permalink: /:path/:basename
+      depth_order: 9999
   - scope:
       path: "README.md"
     values:
       permalink: /
-  - scope:
-      path: "_sections/**/**"
-    values:
-      parent: true
-
-collections:
-  posts:
-    output : false
-  sections:
-    output: true
-    permalink: /:path
+      depth_order: 1
 
 markdown: kramdown
+
 kramdown:
   input: GFM
   syntax_highlighter: rouge
+  syntax_highlighter_opts:
+    block:
+      line_numbers: true
 
-include:
-  - README.md
 exclude:
-  - document.iml
-  - .idea/**
+  - "*.iml"
+  - ".idea/"
 
-optional_front_matter:
-  remove_originals: true
+########################################
 
-titles_from_headings:
-  enabled: true
-  strip_title: true
-  collections: true
+jekyll-spaceship:
+  processors:
+    - table-processor
+    - media-processor

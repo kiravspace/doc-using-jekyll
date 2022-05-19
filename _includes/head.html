@@ -7,5 +7,37 @@
 <title>{{ site.title | escape }}</title>
 {%- endif -%}
 
-<link rel="stylesheet" href="/static/style.css">
-<link rel="stylesheet" href="/static/custom.css">
+<link rel="stylesheet" href="/assets/css/style.css">
+<link rel="stylesheet" href="/assets/css/custom.css">
+<link rel="stylesheet" href="/assets/css/syntax.css">
+<script type="text/javascript" src="/assets/js/jquery-3.6.0.js"></script>
+<script type="text/javascript" src="/assets/js/jquery-ui.js"></script>
+<script>
+    $(function () {
+        $("ul.nav").find("ul").css("display", "none");
+
+        $("ul.nav").find("a").each(function() {
+            let $this = $(this);
+            if ($(location).attr("pathname") === $this.attr("href")) {
+                $this.addClass("selected");
+                $this.parents("ul").css("display", "block");
+            }
+        })
+
+        $("ul.nav").find("a").bind("click", function (e) {
+            let $this = $(this);
+            if (typeof (history.pushState) != "undefined") {
+                history.pushState(null, null, $this.attr("href"));
+            }
+
+            e.preventDefault();
+            $("#content").load($this.attr("href") + " #content", function (html) {
+                document.title = html.match("<title>(.*?)</title>")[1];
+            });
+
+            $this.parent().children("ul").toggle("blind", {}, 500);
+        });
+
+        $(".tabs").tabs();
+    });
+</script>
