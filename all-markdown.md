@@ -92,6 +92,14 @@ Title 영역은 본문의 최상단에 위치하며, 본문 제목, 설명으로
 
 이미지는 본문내 중앙 정렬이 된 채로 노출되며, 클릭시 상세화면으로 표현됩니다. 
 
+![](.gitbook/assets/readme-01.png)
+
+### 수식 영역
+
+수식 영역도 이미지와 비슷하지만, 클릭 기능이 없습니다.
+
+$$f(x) = x * e^{2 pi i \xi x}$$
+
 ### 구분선
 
 그냥 아래와 같이 구분된 선입니다. 
@@ -109,11 +117,30 @@ Title 영역은 본문의 최상단에 위치하며, 본문 제목, 설명으로
 아래와 같이 링크정보이며, 일반 문단내 본문과 동일하나, 링크임이 구분되면 됩니다. 
 
 [GOOGLE](https://google.com)
+
 [NAVER](https://naver.com)
 
 ### 코드블럭
 
-코드블럭은 기본적
+코드블럭은 아래와 같이 제목이 있는 경우와 없는 경우 아래와 같이 표현됩니다.
+
+#### 제목이 있는 경우
+{% code title="NuguCentralManager.swift " %}
+```bash
+     private init() { 
+         NuguServerInfo.l4SwitchAddress = "https://review-dghttp.sktnugu.com"
+     }
+```
+{% endcode %}
+
+#### 제목이 없는 경우
+```bash
+     private init() { 
+         NuguServerInfo.l4SwitchAddress = "https://review-dghttp.sktnugu.com"
+     }
+```
+
+모두 우측 상단에 복사모양의 아이콘을 제공합니다.
 
 ***
 
