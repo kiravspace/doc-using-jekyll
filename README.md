@@ -28,7 +28,7 @@ NUGU developers는 개발자가 아니어도 대화 기반 인공지능 서비�
 Play 생성 시에 이 호출 이름을 정의해야 하고, 호출 이름에 대한 자세한 내용은 [호출 이름 정의하기](nugu-play/play-registration-and-review/register-a-play.md#define-an-invocation-name)를 참고하면 됩니다.
 {% endhint %}
 
-{% file src="../.gitbook/assets/assets\_nugu-developers\_documentation\_nugu-sdk\_eng\_v0.9\_20201119.pdf" caption="NUGU SDK Guide \(English\)" %}
+{% file src=".gitbook/assets/assets\_nugu-developers\_documentation\_nugu-sdk\_eng\_v0.9\_20201119.pdf" caption="NUGU SDK Guide \(English\)" %}
 
 {% code title="Discovery Request 예시 (POST, /nugu/v1/devices) %}
 ```
