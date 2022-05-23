@@ -75,11 +75,8 @@ Discovery Request 예시 (POST, /nugu/v1/devices)
 
 Discovery Response Sample
 
-{% code %}
-```
-Discovery Response 예시
-
-
+{% code title="Discovery Response 예시"%}
+```json
 {
     "devices": [{
         "id": "D1234567",
@@ -153,10 +150,8 @@ Control Request 예시 (POST, /nugu/v1/capabilities/{Capability}/directives/{Dir
 
 Control Response Sample
 
-{% code %}
-```scheme
-Control Response 예시
-
+{% code title="Control Response 예시" %}
+```json
 {
     "resultCode": "OK" <-- 에러일 경우 에러코드 응답,
     "requestId": "2019071712638a4378649347bdb21643127a0f6d83", <-- request로 받은 값을 그대로 응답
