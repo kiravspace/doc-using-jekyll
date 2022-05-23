@@ -142,21 +142,102 @@ $$f(x) = x * e^{2 pi i \xi x}$$
 
 ## 내부 페이지 링크
 
+내부 페이지 링크는 아래와 같이 표현됩니다.
+
 {% content-ref url="empty-page/" %}
 [empty-page](empty-page/)
 {% endcontent-ref %}
 
 ## 외부 페이지 링크
 
+외부 페이지 링크는 
+
 {% embed url="https://nugu-developers.github.io/nugu-ios/index.html" %}
 
 ## 힌트
 
+{% hint style="info" %}
+Play 생성 시에 이 호출 이름을 정의해야 하고, 호출 이름에 대한 자세한 내용은 [호출 이름 정의하기](nugu-play/play-registration-and-review/register-a-play.md#define-an-invocation-name)를 참고하면 됩니다.
+{% endhint %}
+
+{% hint style="info" %}
+Play 생성 시에 이 호출 이름을 정의해야 하고, 호출 이름에 대한 자세한 내용은 [호출 이름 정의하기](nugu-play/play-registration-and-review/register-a-play.md#define-an-invocation-name)를 참고하면 됩니다.
+{% endhint %}
+
+{% hint style="info" %}
+Play 생성 시에 이 호출 이름을 정의해야 하고, 호출 이름에 대한 자세한 내용은 [호출 이름 정의하기](nugu-play/play-registration-and-review/register-a-play.md#define-an-invocation-name)를 참고하면 됩니다.
+{% endhint %}
+
+{% hint style="info" %}
+Play 생성 시에 이 호출 이름을 정의해야 하고, 호출 이름에 대한 자세한 내용은 [호출 이름 정의하기](nugu-play/play-registration-and-review/register-a-play.md#define-an-invocation-name)를 참고하면 됩니다.
+{% endhint %}
+
+{% hint style="info" %}
+Play 생성 시에 이 호출 이름을 정의해야 하고, 호출 이름에 대한 자세한 내용은 [호출 이름 정의하기](nugu-play/play-registration-and-review/register-a-play.md#define-an-invocation-name)를 참고하면 됩니다.
+{% endhint %}
+
 ## Tab
+
+{% tabs %}
+{% tab title="First Tab" %}
+NuguAndroidClient instance 를 통해 SoundAgent instance 에 접근할 수 있습니다.
+
+```
+class MySoundProvider: SoundProvider {
+    ...
+}
+NuguAndroidClient.Builder(...)
+    .enableSound(MySoundProvider())
+```
+{% endtab %}
+
+{% tab title="Second Tab" %}
+NuguAndroidClient 생성시 SoundProvider 를 추가합니다.
+
+```
+val soundAgent = nuguAndroidClient.getAgent(DefaultSoundAgent.NAMESPACE)
+```
+{% endtab %}
+{% endtabs %}
 
 ## 확장
 
+<details>
+
+<summary>Expandable</summary>
+
+content
+
+</details>
+
 ## API
+
+{% swagger method="get" path="" baseUrl="https://test.com" summary="설명셜명" %}
+{% swagger-description %}
+description
+{% endswagger-description %}
+
+{% swagger-parameter in="path" required="true" %}
+desc
+{% endswagger-parameter %}
+
+{% swagger-parameter in="query" %}
+desc
+{% endswagger-parameter %}
+
+{% swagger-parameter in="header" %}
+desc
+{% endswagger-parameter %}
+
+{% swagger-parameter in="cookie" %}
+123321
+{% endswagger-parameter %}
+
+{% swagger-parameter in="body" %}
+
+{% endswagger-parameter %}
+
+{% swagger-response status="200: OK" description="desc" %}
 
 ## Navigation 영역
 
