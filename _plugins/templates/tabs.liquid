@@ -1,8 +1,0 @@
-<div id="{{ tabs_id }}" class="tabs">
-    <ul>
-    {% for tab in tabs %}
-        <li><a href="#{{ tab.tab_id }}">{{ tab.title }}</a></li>
-    {% endfor %}
-    </ul>
-    {{ tabs_body | markdownify }}
-</div>
