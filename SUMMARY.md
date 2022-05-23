@@ -1,7 +1,7 @@
 # Table of contents
 
 * [구성 component](README.md)
-* [all markdown](all-markdown.md)
+* [디자인 가이드](all-markdown.md)
 * [empty page](empty-page/README.md)
   * [Page 1](empty-page/page-1.md)
   * [Page 2](empty-page/page-2.md)
