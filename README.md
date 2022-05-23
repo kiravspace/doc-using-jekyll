@@ -1,12 +1,26 @@
 # 구성 component
 
-![](.gitbook/assets/readme-01.png)
+![captioncaption](.gitbook/assets/readme-01.png)
 
 {% embed url="https://www.youtube.com/watch?v=1PB5j7FM0EE" %}
+caption caption
+{% endembed %}
 
 {% embed url="https://nugu-developers.github.io/nugu-ios/index.html" %}
 
 {% hint style="info" %}
+Play 생성 시에 이 호출 이름을 정의해야 하고, 호출 이름에 대한 자세한 내용은 [호출 이름 정의하기](nugu-play/play-registration-and-review/register-a-play.md#define-an-invocation-name)를 참고하면 됩니다.
+{% endhint %}
+
+{% hint style="warning" %}
+Play 생성 시에 이 호출 이름을 정의해야 하고, 호출 이름에 대한 자세한 내용은 [호출 이름 정의하기](nugu-play/play-registration-and-review/register-a-play.md#define-an-invocation-name)를 참고하면 됩니다.
+{% endhint %}
+
+{% hint style="danger" %}
+Play 생성 시에 이 호출 이름을 정의해야 하고, 호출 이름에 대한 자세한 내용은 [호출 이름 정의하기](nugu-play/play-registration-and-review/register-a-play.md#define-an-invocation-name)를 참고하면 됩니다.
+{% endhint %}
+
+{% hint style="success" %}
 Play 생성 시에 이 호출 이름을 정의해야 하고, 호출 이름에 대한 자세한 내용은 [호출 이름 정의하기](nugu-play/play-registration-and-review/register-a-play.md#define-an-invocation-name)를 참고하면 됩니다.
 {% endhint %}
 
@@ -17,8 +31,6 @@ Play 생성 시에 이 호출 이름을 정의해야 하고, 호출 이름에 �
      }
 ```
 {% endcode %}
-
-> 들여쓰기
 
 {% tabs %}
 {% tab title="First Tab" %}
