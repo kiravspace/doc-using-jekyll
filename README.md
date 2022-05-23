@@ -24,17 +24,39 @@ NUGU SDK는 여러분의 다양한 디바이스와 어플리케이션 등에서 
 
 NUGU developers는 개발자가 아니어도 대화 기반 인공지능 서비스를 개발할 수 있는 플랫폼입니다. 또한 자체의 인공지능 플랫폼을 갖추지 못했더라도, 다양한 상품에 쉽고 빠르게 인공지능 기반의 기능을 제공할 수 있도록 지원합니다. NUGU 이용자들에게 좋은 서비스를 제공하길 희망하는 모든 분들과 빠르게 NUGU의 인공지능 기능을 다양한 디바이스와 어플리케이션에서 제공하고자 희망하시는 모든 분들께서 NUGU developers를 통해 그 희망을 실현할 수 있기를 바랍니다.
 
+{% embed url="https://www.youtube.com/watch?v=1PB5j7FM0EE" %}
+
+{% embed url="https://nugu-developers.github.io/nugu-ios/index.html" caption="" %}
+
 {% hint style="info" %}
 Play 생성 시에 이 호출 이름을 정의해야 하고, 호출 이름에 대한 자세한 내용은 [호출 이름 정의하기](nugu-play/play-registration-and-review/register-a-play.md#define-an-invocation-name)를 참고하면 됩니다.
 {% endhint %}
 
 {% file src=".gitbook/assets/assets\_nugu-developers\_documentation\_nugu-sdk\_eng\_v0.9\_20201119.pdf" caption="NUGU SDK Guide \(English\)" %}
 
-{% code title="Discovery Request 예시 (POST, /nugu/v1/devices) %}
-```
-{
-    "userIdentifier": "t6Pv9PLAEmYZilNiloUUnZbVDjXgvUCzwpWY1tPq" (optional, e.g. hue whitelist identifier),
-    "token": "7KOdwPQdJPZf4KYsjtHdqz3e8fKd"
-}
+{% code title="NuguCentralManager.swift " %}
+```bash
+     private init() { 
+         NuguServerInfo.l4SwitchAddress = "https://review-dghttp.sktnugu.com"
+     }
 ```
 {% endcode %}
+
+{% tabs %}
+{% tab title="Android" %}
+NuguAndroidClient instance 를 통해 SoundAgent instance 에 접근할 수 있습니다.
+
+```text
+val soundAgent = nuguAndroidClient.getAgent(DefaultSoundAgent.NAMESPACE)
+```
+
+NuguAndroidClient 생성시 SoundProvider 를 추가합니다.
+
+```text
+class MySoundProvider: SoundProvider {
+    ...
+}
+NuguAndroidClient.Builder(...)
+    .enableSound(MySoundProvider())
+```
+{% endtab %}
