@@ -150,9 +150,9 @@ $$f(x) = x * e^{2 pi i \xi x}$$
 
 ## 외부 페이지 링크
 
-외부 페이지 링크는 
+외부 페이지 링크는 외부 페이지의 Title 영역과 설명으로 구성됩니다.
 
-{% embed url="https://nugu-developers.github.io/nugu-ios/index.html" %}
+{% embed url="https://nugu-developers.github.io/nugu-ios/index.html" caption="caption caption%}
 
 ## 힌트
 
