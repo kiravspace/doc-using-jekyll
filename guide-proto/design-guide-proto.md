@@ -66,14 +66,10 @@ Title 영역은 본문의 최상단에 위치하며, 본문 제목, 설명으로
 인용 영역은 아래와 같이 들여쓰여진 공간을 말합니다.
 
 > 이렇게 위 내용을 좀 더 설명하기 위해 사용됩니다.
->
-> > 그리고 몇 단계의 depth로 구성됩니다.
-> >
-> > > 3번째
-> > >
-> > > > 4번째
-> > > >
-> > > > > 마찬가지로 inline으로 ![](../.gitbook/assets/readme-01.png) 나 $$f(x) = x * e^{2 pi i \xi x}$$ 와 같이 표현이 가능합니다.
+>> 그리고 몇 단계의 depth로 구성됩니다.
+>>> 3번째
+>>>> 4번째
+>>>>> 마찬가지로 inline으로 ![](../.gitbook/assets/readme-01.png) 나 $$f(x) = x * e^{2 pi i \xi x}$$ 와 같이 표현이 가능합니다.
 
 ### 테이블
 
@@ -164,7 +160,7 @@ $$f(x) = x * e^{2 pi i \xi x}$$
 
 ### 외부 페이지 링크
 
-외부 페이지 링크는 외부 페이지의 Title 영역과 설명으로 구성됩니다.
+외부 페이지 링크는 원래 외부 페이지의 Title 영역과 설명으로 구성되었었는데, 설명이 날라갔네요... 설명부도 넣어도 됩니다.
 
 {% embed url="https://nugu-developers.github.io/nugu-ios/index.html" %}
 
@@ -258,6 +254,8 @@ desc
 
 ### File
 
+우측의 섬네일까지는 필요없고 첨부파일이라는 아이콘, 파일명, 사이즈 정도로 구성되면 될 것 같습니다.
+
 {% file src="../.gitbook/assets/readme-02.png" %}
 
 ### Navigation 영역
@@ -271,3 +269,15 @@ desc
 ## 빈 본문 영역
 
 ![](../.gitbook/assets/img\_3.png)
+
+{% hint style="danger"}
+이런 모양들은 통일된 형태로 가져가는 편이 어떨까 합니다.
+
+![](../.gitbook/assets/img_4.png)
+
+![](../.gitbook/assets/img_5.png)
+
+![](../.gitbook/assets/img_6.png)
+
+![](../.gitbook/assets/img_7.png)
+{% endhint %}
