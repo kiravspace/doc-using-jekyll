@@ -234,9 +234,14 @@ desc
 {% endswagger-parameter %}
 
 {% swagger-response status="200: OK" description="desc" %}
+{% swagger %}
 
 ## Navigation 영역
 
+![](.gitbook/assets/img.png)
+![](.gitbook/assets/img_1.png)
+![](.gitbook/assets/img_2.png)
+
 # 빈 본문 영역
 
-
+![](.gitbook/assets/img_3.png)
