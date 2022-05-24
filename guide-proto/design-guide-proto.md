@@ -262,22 +262,22 @@ desc
 
 ![](../.gitbook/assets/img.png)
 
-![](../.gitbook/assets/img_1.png)
+![](../.gitbook/assets/img-1.png)
 
-![](../.gitbook/assets/img_2.png)
+![](../.gitbook/assets/img-2.png)
 
 ## 빈 본문 영역
 
-![](../.gitbook/assets/img_3.png)
+![](../.gitbook/assets/img-3.png)
 
 {% hint style="danger"}
 이런 모양들은 통일된 형태로 가져가는 편이 어떨까 합니다.
 
-![](../.gitbook/assets/img_4.png)
+![](../.gitbook/assets/img-4.png)
 
-![](../.gitbook/assets/img_5.png)
+![](../.gitbook/assets/img-5.png)
 
-![](../.gitbook/assets/img_6.png)
+![](../.gitbook/assets/img-6.png)
 
-![](../.gitbook/assets/img_7.png)
+![](../.gitbook/assets/img-7.png)
 {% endhint %}
