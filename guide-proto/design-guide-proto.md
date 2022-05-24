@@ -270,7 +270,8 @@ desc
 
 ![](../.gitbook/assets/img-3.png)
 
-{% hint style="danger"}
+## 제안 사항
+
 이런 모양들은 통일된 형태로 가져가는 편이 어떨까 합니다.
 
 ![](../.gitbook/assets/img-4.png)
@@ -280,4 +281,3 @@ desc
 ![](../.gitbook/assets/img-6.png)
 
 ![](../.gitbook/assets/img-7.png)
-{% endhint %}
