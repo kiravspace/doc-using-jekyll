@@ -20,7 +20,7 @@ Title 영역은 본문의 최상단에 위치하며, 본문 제목, 설명으로
 
 ## 제목 2
 
-### 제목 3 : 4\~6까지 차이가 없으나, 있어도 상관없음
+### 제목 3 : 4~6까지 차이가 없으나, 있어도 상관없음
 
 #### 제목 4
 
@@ -262,13 +262,13 @@ desc
 
 ![](../.gitbook/assets/img.png)
 
-![](../.gitbook/assets/img\_1.png)
+![](../.gitbook/assets/img_1.png)
 
-![](../.gitbook/assets/img\_2.png)
+![](../.gitbook/assets/img_2.png)
 
 ## 빈 본문 영역
 
-![](../.gitbook/assets/img\_3.png)
+![](../.gitbook/assets/img_3.png)
 
 {% hint style="danger"}
 이런 모양들은 통일된 형태로 가져가는 편이 어떨까 합니다.
