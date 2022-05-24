@@ -5,6 +5,7 @@
 prototype은 아래와 같은 구성으로 되어 있습니다.
 
 {% code title="default.html" %}
+{% raw %}
 ```HTML
 <!doctype html>
 <html lang="en">
@@ -25,4 +26,5 @@ prototype은 아래와 같은 구성으로 되어 있습니다.
 </body>
 </html>
 ```
+{% endraw %}
 {% endcode %}
