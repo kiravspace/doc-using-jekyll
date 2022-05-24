@@ -242,6 +242,10 @@ desc
 {% endswagger-response %}
 {% endswagger %}
 
+## File
+
+{% file src="../.gitbook/assets/assets\_nugu-developers\_documentation\_nugu-sdk\_eng\_v0.9\_20201119.pdf" caption="NUGU SDK Guide \(English\)" %}
+
 ## Navigation 영역
 
 ![](.gitbook/assets/img.png)
