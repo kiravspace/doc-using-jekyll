@@ -1,6 +1,3 @@
----
-description: 현 페이지는 각 구성요소를 모두 표현하며, 각각에 대한 설명을 포함합니다.
----
 
 # Title 영역
 
@@ -26,10 +23,10 @@ Title 영역은 본문의 최상단에 위치하며, 본문 제목, 설명으로
 
 이건 위 문단과 다른 문단입니다. 이렇게 문단내 행간과 명확히 구분이 됩니다.
 
-또한 이렇게 ![](.gitbook/assets/readme-01.png) 와 같은 이미지,나 $$f(x) = x * e^{2 pi i \xi x}$$ 과 같은 수식기호, [링크](https://google.com)를 넣을 수 있습니다.
+또한 이렇게 ![](../.gitbook/assets/readme-01.png) 와 같은 이미지,나 $$f(x) = x * e^{2 pi i \xi x}$$ 과 같은 수식기호, [링크](https://google.com)를 넣을 수 있습니다.
 
-문단 본문에 위와 같이 inline으로 문자가 아닌 요소들이 표현될 경우 최대 사이즈를 기준으로 표현됩니다. 예를 들어 width, height가 100, 100까지만 허용한다면, ratio를 유지한 채로 작은 경우 기본 사이즈를, 
-큰 경우 최대 사이즈로 표현됩니다.  
+문단 본문에 위와 같이 inline으로 문자가 아닌 요소들이 표현될 경우 최대 사이즈를 기준으로 표현됩니다. 예를 들어 width, height가 100, 100까지만 허용한다면, ratio를 유지한 채로 작은 경우 기본 사이즈를,
+큰 경우 최대 사이즈로 표현됩니다.
 
 마지막으로 디자인적으로 중요하지는 않을 것 같긴 하지만 _이텔릭체_, **볼드**, ~~취소~~, `강조` 를 사용할 수 있습니다.
 
@@ -61,7 +58,7 @@ Title 영역은 본문의 최상단에 위치하며, 본문 제목, 설명으로
 >> 그리고 몇 단계의 depth로 구성됩니다.
 >>> 3번째
 >>>> 4번째
->>>>> 마찬가지로 inline으로 ![](.gitbook/assets/readme-01.png) 나 $$f(x) = x * e^{2 pi i \xi x}$$ 와 같이 표현이 가능합니다.
+>>>>> 마찬가지로 inline으로 ![](../.gitbook/assets/readme-01.png) 나 $$f(x) = x * e^{2 pi i \xi x}$$ 와 같이 표현이 가능합니다.
 
 ## 테이블
 
@@ -76,15 +73,15 @@ Title 영역은 본문의 최상단에 위치하며, 본문 제목, 설명으로
 | 값          |           의미           |      기본값 |
 | ---------- | :--------------------: | -------: |
 | `static`   |   유형(기준) 없음 / 배치 불가능   | `static` |
-| `relative` |     요소 자신을 기준으로 배치     |  ![](.gitbook/assets/readme-01.png)   |
+| `relative` |     요소 자신을 기준으로 배치     |  ![](../.gitbook/assets/readme-01.png)   |
 | `absolute` | 위치 상 부모(조상)요소를 기준으로 배치 | $$f(x) = x * e^{2 pi i \xi x}$$ |
 | `fixed`    |     브라우저 창을 기준으로 배치    |          |
 
 ## 이미지
 
-이미지는 본문내 중앙 정렬이 된 채로 노출되며, 클릭시 상세화면으로 표현됩니다. 
+이미지는 본문내 중앙 정렬이 된 채로 노출되며, 클릭시 상세화면으로 표현됩니다.
 
-![](.gitbook/assets/readme-01.png)
+![](../.gitbook/assets/readme-01.png)
 
 ## 수식
 
@@ -94,7 +91,7 @@ $$f(x) = x * e^{2 pi i \xi x}$$
 
 ## 구분선
 
-그냥 아래와 같이 구분된 선입니다. 
+그냥 아래와 같이 구분된 선입니다.
 
 ---
 
@@ -106,7 +103,7 @@ $$f(x) = x * e^{2 pi i \xi x}$$
 
 ## 링크
 
-아래와 같이 링크정보이며, 일반 문단내 본문과 동일하나, 링크임이 구분되면 됩니다. 
+아래와 같이 링크정보이며, 일반 문단내 본문과 동일하나, 링크임이 구분되면 됩니다.
 
 [GOOGLE](https://google.com)
 
@@ -134,7 +131,7 @@ $$f(x) = x * e^{2 pi i \xi x}$$
 
 모두 우측 상단에 복사모양의 아이콘을 제공합니다.
 
-## Youtube 
+## Youtube
 
 기능상으로는 여러 링크를 걸 수 있는 기능이 존재합니다만, Youtube와 같이 바로 재생이 가능한 경우만 있으면 됩니다. 재생 화면 영역은 건드릴 필요없이 영역만 잡으면 될 것 같습니다.
 
@@ -142,116 +139,46 @@ $$f(x) = x * e^{2 pi i \xi x}$$
 
 ## 내부 페이지 링크
 
-내부 페이지 링크는 아래와 같이 표현됩니다.
-
 {% content-ref url="empty-page/" %}
 [empty-page](empty-page/)
 {% endcontent-ref %}
 
 ## 외부 페이지 링크
 
-외부 페이지 링크는 외부 페이지의 Title 영역과 설명으로 구성됩니다.
-
-{% embed url="https://nugu-developers.github.io/nugu-ios/index.html" caption="caption caption%}
+{% embed url="https://nugu-developers.github.io/nugu-ios/index.html" %}
 
 ## 힌트
 
-{% hint style="info" %}
-Play 생성 시에 이 호출 이름을 정의해야 하고, 호출 이름에 대한 자세한 내용은 [호출 이름 정의하기](nugu-play/play-registration-and-review/register-a-play.md#define-an-invocation-name)를 참고하면 됩니다.
-{% endhint %}
-
-{% hint style="warning" %}
-Play 생성 시에 이 호출 이름을 정의해야 하고, 호출 이름에 대한 자세한 내용은 [호출 이름 정의하기](nugu-play/play-registration-and-review/register-a-play.md#define-an-invocation-name)를 참고하면 됩니다.
-{% endhint %}
-
-{% hint style="danger" %}
-Play 생성 시에 이 호출 이름을 정의해야 하고, 호출 이름에 대한 자세한 내용은 [호출 이름 정의하기](nugu-play/play-registration-and-review/register-a-play.md#define-an-invocation-name)를 참고하면 됩니다.
-{% endhint %}
-
-{% hint style="success" %}
-Play 생성 시에 이 호출 이름을 정의해야 하고, 호출 이름에 대한 자세한 내용은 [호출 이름 정의하기](nugu-play/play-registration-and-review/register-a-play.md#define-an-invocation-name)를 참고하면 됩니다.
-{% endhint %}
-
 ## Tab
-
-{% tabs %}
-{% tab title="First Tab" %}
-NuguAndroidClient instance 를 통해 SoundAgent instance 에 접근할 수 있습니다.
-
-```
-class MySoundProvider: SoundProvider {
-    ...
-}
-NuguAndroidClient.Builder(...)
-    .enableSound(MySoundProvider())
-```
-{% endtab %}
-
-{% tab title="Second Tab" %}
-NuguAndroidClient 생성시 SoundProvider 를 추가합니다.
-
-```
-val soundAgent = nuguAndroidClient.getAgent(DefaultSoundAgent.NAMESPACE)
-```
-{% endtab %}
-{% endtabs %}
 
 ## 확장
 
-<details>
-
-<summary>Expandable</summary>
-
-content
-
-</details>
-
 ## API
-
-{% swagger method="get" path="" baseUrl="https://test.com" summary="설명셜명" %}
-{% swagger-description %}
-description
-{% endswagger-description %}
-
-{% swagger-parameter in="path" required="true" %}
-desc
-{% endswagger-parameter %}
-
-{% swagger-parameter in="query" %}
-desc
-{% endswagger-parameter %}
-
-{% swagger-parameter in="header" %}
-desc
-{% endswagger-parameter %}
-
-{% swagger-parameter in="cookie" %}
-123321
-{% endswagger-parameter %}
-
-{% swagger-parameter in="body" %}
-
-{% endswagger-parameter %}
-
-{% swagger-response status="200: OK" description="desc" %}
-```javascript
-{
-    // Response
-}
-```
-{% endswagger-response %}
-{% endswagger %}
-
-## File
-
-{% file src="../.gitbook/assets/assets\_nugu-developers\_documentation\_nugu-sdk\_eng\_v0.9\_20201119.pdf" caption="NUGU SDK Guide \(English\)" %}
 
 ## Navigation 영역
 
-![](.gitbook/assets/img.png)
-![](.gitbook/assets/img_1.png)
-![](.gitbook/assets/img_2.png)
-
 # 빈 본문 영역
 
-![](.gitbook/assets/img_3.png)
+
+# 마크업 가이드
+
+## 본문 영역
+
+markdown의 기본 문법으로 구성된 경우, 자동으로 변경되며 본문 전체를 구성하는 class 이하의 tag에 스타일이 적용되어야 합니다
+
+### 제목
+
+제목은 h1\~h6까지 구성됩니다. 각각은 아래와 같이 변환됩니다
+
+```html
+<h1 id="제목1">제목1</h1>
+<h2 id="제목2">제목2</h2>
+<h3 id="제목3">제목3</h3>
+<h4 id="제목4">제목4</h4>
+<h5 id="제목5">제목5</h5>
+<h6 id="제목6">제목6</h6>
+```
+
+본문
+
+본문은 기본적으로 \<p> 태그를 기준으로 구분이 됩니다. 하나의 본문 내용이 길 경우&#x20;
