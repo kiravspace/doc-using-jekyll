@@ -63,7 +63,9 @@ Title 영역은 본문의 최상단에 위치하며, 본문 제목, 설명으로
 
 이미지는 본문내 중앙 정렬이 된 채로 노출되며, 클릭시 상세화면으로 표현됩니다.
 
-![](../.gitbook/assets/readme-01.png)
+![기본](../.gitbook/assets/img-12.png)
+
+![상세](../.gitbook/assets/img-11.png)
 
 ### 수식
 
