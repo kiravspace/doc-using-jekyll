@@ -4,6 +4,35 @@ description: 현 페이지는 각 구성요소를 모두 표현하며, 각각에
 
 # 마크업 가이드
 
+기본적으로 전체 페이지는 구분이 가능한 명확한 영역을 가지도록 구성해야 합니다. Jekyll은 liquid include 기능을 이용해 페이지를 쪼갤 수 있는데, 각 영역은 envelop된 태그 영역으로 구성하는 것이 좋습니다.
+
+prototype은 아래와 같은 구성으로 되어 있습니다.
+
+{% code title="default.html" %}
+```HTML
+<!doctype html>
+<html lang="en">
+<head>
+    {% include head.html %}
+</head>
+<body>
+{% include header.html %}
+<section>
+    <div class="container">
+        <div style="width:20%;float:left;">
+            {{ site.data.meta.render }}
+        </div>
+        <div id="content" style="width:80%;float:left;">{% include content.html %}</div>
+    </div>
+</section>
+{% include footer.html %}
+</body>
+</html>
+```
+{% endcode %}
+
+또한 css를 기본적으로 지원하긴 하지만 
+
 ## Title 영역
 
 Title 영역은 본문의 최상단에 위치하며, 본문 제목, 설명으로 구성됩니다.
