@@ -234,7 +234,13 @@ desc
 {% endswagger-parameter %}
 
 {% swagger-response status="200: OK" description="desc" %}
-{% swagger %}
+```javascript
+{
+    // Response
+}
+```
+{% endswagger-response %}
+{% endswagger %}
 
 ## Navigation 영역
 
