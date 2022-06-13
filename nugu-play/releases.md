@@ -1,3 +1,7 @@
+---
+depth_order: 6
+---
+
 # Release note
 
 ## Version 2.1.0

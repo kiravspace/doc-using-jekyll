@@ -63,10 +63,10 @@ NUGU스마트홈을 통해 보일러\(BOILER\)를 제어할 때 권장하는 Sma
 
 Capability별 상세한 내용은 아래 리스트의 링크를 통해 확인하실 수 있습니다.
 
-| Capability | Description | 예시발 |
-| :--- | :--- | :--- |
-| [PowerControl](../smarthomecapability/powercontrol-interface) | 보일러 전원 제어 기능입니다. 전원을 켜고 끄며 동작을 제어하는 기능들로 구성되어 있습니다. | "보일러 켜줘" |
-| [TemperatureControl](../smarthomecapability/temperaturecontrol-interface) | 보일러의 설정 온도 제어 기능입니다. 기기 자체의 온도가 아닌 주변 온도 및 희망 온도에 대한 기능들로 구성되어 있습니다. | "보일러 온도 27도로 설정해줘" |
-| [ModeControl](../smarthomecapability/modecontrol-interface) | 보일러의 모드 제어 기능입니다. 설정 모드에 대한 상세헌 정보는 SmartHomeAttribute : Mode를 참조하시기 바랍니다. | "보일러 실내난방모드로 설정해줘" |
-| [SetTimeControl](../smarthomecapability/settimecontrol-interface) | 보일러 기기의 시간 설정 기능입니다. | "보일러 1시간 후로 종료예약해줘" |
+| Capability                                                                | Description                                                                | 예시발                 |
+|:--------------------------------------------------------------------------|:---------------------------------------------------------------------------|:--------------------|
+| [PowerControl](../smarthomecapability/powercontrol-interface)             | 보일러 전원 제어 기능입니다. 전원을 켜고 끄며 동작을 제어하는 기능들로 구성되어 있습니다.                        | "보일러 켜줘"            |
+| [TemperatureControl](../smarthomecapability/temperaturecontrol-interface) | 보일러의 설정 온도 제어 기능입니다. 기기 자체의 온도가 아닌 주변 온도 및 희망 온도에 대한 기능들로 구성되어 있습니다.       | "보일러 온도 27도로 설정해줘"  |
+| [ModeControl](../smarthomecapability/modecontrol-interface)               | 보일러의 모드 제어 기능입니다. 설정 모드에 대한 상세헌 정보는 SmartHomeAttribute : Mode를 참조하시기 바랍니다. | "보일러 실내난방모드로 설정해줘"  |
+| [SetTimeControl](../smarthomecapability/settimecontrol-interface)         | 보일러 기기의 시간 설정 기능입니다.                                                       | "보일러 1시간 후로 종료예약해줘" |
 

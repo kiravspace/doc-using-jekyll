@@ -1,3 +1,7 @@
+---
+depth_order: 3
+---
+
 # Pre-built Play Builder로 스마트홈 Play 만들기
 
 NUGU 스마트홈을 활용해 SmartHome Play 제작하면 NUGU 클라이언가 탑재된 다양한 기기(NUGU 스피커, T map, B tv STB, T 전화 )등에서 음성 인터페이스를 활용하여 스마트홈 기기들을 제어하고 확인할 수 있습니다. 이 문서에서는 NUGU스마트홈을 통해 서비스를 제공하고 싶은 IoT Service Provider에게 규격 및 개발 가이드와 API 레퍼런스, 샘플코드, NUGU SmartHome Play Builder 사용 가이드 등을 제공합니다. NUGU스마트홈은 계속 개발되고 있으며, 관련 규격들은 지속적으로 업데이트됩니다.

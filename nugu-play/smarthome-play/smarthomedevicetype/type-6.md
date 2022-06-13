@@ -50,8 +50,8 @@ NUGU스마트홈을 통해 로봇청소기\(ROBOT\_CLEANER\)를 제어할 때 �
 
 Capability별 상세한 내용은 아래 리스트의 링크를 통해 확인하실 수 있습니다.
 
-| Capability | Description | 예시발 |
-| :--- | :--- | :--- |
-| [PowerControl](../smarthomecapability/powercontrol-interface) | 로봇청소기 전원 제어 기능입니다. 전원을 켜고 끄며 동작을 제어하는 기능들로 구성되어 있습니다. | "로봇청소기 청소 시작해줘" |
-| [ChargeControl](../smarthomecapability/chargecontrol-interface) | 로봇청소기 전원 충전 관련 제어 기능입니다. 충전을 시작/중지하는 기능들로 구성되어 있습니다. | "로봇청소기 충전해줘" |
+| Capability                                                      | Description                                           | 예시발             |
+|:----------------------------------------------------------------|:------------------------------------------------------|:----------------|
+| [PowerControl](../smarthomecapability/powercontrol-interface)   | 로봇청소기 전원 제어 기능입니다. 전원을 켜고 끄며 동작을 제어하는 기능들로 구성되어 있습니다. | "로봇청소기 청소 시작해줘" |
+| [ChargeControl](../smarthomecapability/chargecontrol-interface) | 로봇청소기 전원 충전 관련 제어 기능입니다. 충전을 시작/중지하는 기능들로 구성되어 있습니다.  | "로봇청소기 충전해줘"    |
 

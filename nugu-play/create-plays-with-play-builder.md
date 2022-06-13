@@ -1,3 +1,7 @@
+---
+depth_order: 2
+---
+
 # Play Builder로 Play 만들기
 
 ![](https://www.youtube.com/watch?v=1PB5j7FM0EE)

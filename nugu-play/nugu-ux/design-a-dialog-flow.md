@@ -1,3 +1,7 @@
+---
+depth_order: 3
+---
+
 # 대화 흐름 디자인
 
 사용자와 NUGU간 대화의 유형은 크게 ‘Single-turn 대화’와 ‘Multi-turn 대화’로 구분할 수 있습니다.

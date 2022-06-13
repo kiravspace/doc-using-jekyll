@@ -52,8 +52,8 @@ NUGU스마트홈을 통해 냉장고\(REFRIGERATOR\)를 제어할 때 권장하�
 
 Capability별 상세한 내용은 아래 리스트의 링크를 통해 확인하실 수 있습니다.
 
-| Capability | Description | 예시발 |
-| :--- | :--- | :--- |
-| [ModeControl](../smarthomecapability/modecontrol-interface) | 냉장고의 모드 제어 기능입니다. 설정 모드에 대한 상세한 정보는 SmartHomeAttribute : Mode를 참조하시기 바랍니다. | "냉장고 급속냉동모드로 설정해줘" |
-| [DeviceTemperatureControl](../smarthomecapability/devicetemperaturecontrol-interface) | 냉장고의 기기 온도 제어 기능입니다. 기기 자체의 온도에 대한 기능들로 구성되어 있습니다. | "냉장고 설정 온도 알려줘" |
+| Capability                                                                            | Description                                                                | 예시발                |
+|:--------------------------------------------------------------------------------------|:---------------------------------------------------------------------------|:-------------------|
+| [ModeControl](../smarthomecapability/modecontrol-interface)                           | 냉장고의 모드 제어 기능입니다. 설정 모드에 대한 상세한 정보는 SmartHomeAttribute : Mode를 참조하시기 바랍니다. | "냉장고 급속냉동모드로 설정해줘" |
+| [DeviceTemperatureControl](../smarthomecapability/devicetemperaturecontrol-interface) | 냉장고의 기기 온도 제어 기능입니다. 기기 자체의 온도에 대한 기능들로 구성되어 있습니다.                         | "냉장고 설정 온도 알려줘"    |
 

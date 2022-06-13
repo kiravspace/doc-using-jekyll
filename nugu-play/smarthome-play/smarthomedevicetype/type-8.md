@@ -70,10 +70,10 @@ NUGU스마트홈을 통해 선풍기\(FAN\)를 제어할 때 권장하는 SmartH
 
 Capability별 상세한 내용은 아래 리스트의 링크를 통해 확인하실 수 있습니다.
 
-| Capability | Description | 예시발 |
-| :--- | :--- | :--- |
-| [PowerControl](https://tde.sktelecom.com/wiki/display/NUGUSH/PowerControl+Interface) | 선풍기 전원 제어 기능입니다. 전원을 켜고 끄며 동작을 제어하는 기능들로 구성되어 있습니다. | "선풍기 켜줘" |
-| [AirflowControl](https://tde.sktelecom.com/wiki/display/NUGUSH/AirflowControl+Interface) | 선풍기의 풍량 제어 기능입니다. 설정 풍량에 대한 상세한 정보는 SmartHomeAttribute : Airflow Type을 참조하시기 바랍니다. | "선풍기 풍량 강풍으로 설정해줘" |
-| [ModeControl](https://tde.sktelecom.com/wiki/display/NUGUSH/ModeControl+Interface) | 선풍기의 모드 제어 기능입니다. 설정 모드에 대한 상세한 정보는 SmartHomeAttribute : Mode를 참조하시기 바랍니다. | "선풍기 자동모드로 설정해줘" |
-| [SetTimeControl](https://tde.sktelecom.com/wiki/display/NUGUSH/SetTimeControl+Interface) | 선풍기 기기의 시간 설정 기능입니다. | "선풍기 1시간 후로 종료예약해줘" |
+| Capability                                                                               | Description                                                                        | 예시발                 |
+|:-----------------------------------------------------------------------------------------|:-----------------------------------------------------------------------------------|:--------------------|
+| [PowerControl](https://tde.sktelecom.com/wiki/display/NUGUSH/PowerControl+Interface)     | 선풍기 전원 제어 기능입니다. 전원을 켜고 끄며 동작을 제어하는 기능들로 구성되어 있습니다.                                | "선풍기 켜줘"            |
+| [AirflowControl](https://tde.sktelecom.com/wiki/display/NUGUSH/AirflowControl+Interface) | 선풍기의 풍량 제어 기능입니다. 설정 풍량에 대한 상세한 정보는 SmartHomeAttribute : Airflow Type을 참조하시기 바랍니다. | "선풍기 풍량 강풍으로 설정해줘"  |
+| [ModeControl](https://tde.sktelecom.com/wiki/display/NUGUSH/ModeControl+Interface)       | 선풍기의 모드 제어 기능입니다. 설정 모드에 대한 상세한 정보는 SmartHomeAttribute : Mode를 참조하시기 바랍니다.         | "선풍기 자동모드로 설정해줘"    |
+| [SetTimeControl](https://tde.sktelecom.com/wiki/display/NUGUSH/SetTimeControl+Interface) | 선풍기 기기의 시간 설정 기능입니다.                                                               | "선풍기 1시간 후로 종료예약해줘" |
 

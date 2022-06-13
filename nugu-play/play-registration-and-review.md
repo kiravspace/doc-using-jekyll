@@ -1,3 +1,7 @@
+---
+depth_order: 4
+---
+
 # Play 정보 등록 및 심사 요청하기
 
 Play Builder를 통해 개발한 Play를 사용자에게 제공하기 위해서는 `Developers Console` > `Play kit` > `Play 관리` > `Play 등록` 메뉴에서 Play에 관한 정보를 등록한 후 심사 과정을 거쳐야 합니다.
