@@ -88,7 +88,7 @@ NuguDisplayWebView 의 노출, 갱신, 제거 타이밍은 분명합니다. Disp
 * `onItemSelect` : 리스트의 항목이 선택되었을때
 * `onUserInteraction` : 스크롤, 터치와 같은 userInteraction 이 발생하였을때
 * `onTapForStopRecognition` : VoiceChrome 노출되었을때, 이를 닫기 위한 외부 영역 터치가 발생했을때
-* `onChipsSelect` : `NuguDisplayWebView` 하단의 명령어 \(chips\) 버튼이 선택되었을때
+* `onChipsSelect` : `NuguDisplayWebView` 하단의 명령어 (chips) 버튼이 선택되었을때
 * `onNuguButtonClick` : `NuguDisplayWebView` 하단의 NuguButton 이 선택되었을때
 
 {% code %}

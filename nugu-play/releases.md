@@ -10,7 +10,7 @@
 
 ### 2. 스마트홈 Play 등록, 테스트 가이드 추가
 
-* Play 정보 등록 (smarthome play) 내용 추가 : [자세히 알아보기](broken-reference/)
+* Play 정보 등록 (smarthome play) 내용 추가 : [자세히 알아보기](broken-reference)
 
 ## Version 2.0.0
 
@@ -18,7 +18,7 @@
 
 ### 1. 향상/변경된 기능
 
-* NUGU biz kit 고도화에 의한 용어, 기능변경 및 Biz API 지원 추가 : [자세히 알아보기](../work-with-nugu-biz/)
+* NUGU biz kit 고도화에 의한 용어, 기능변경 및 Biz API 지원 추가 : [자세히 알아보기](../work-with-nugu-biz)
 
 ## Version 1.9.0
 
@@ -54,7 +54,7 @@
 
 ### 1. 새로운 기능
 
-* 실패 발화 분석 도구에 용언 분석 기능 추가 : [자세히 알아보기](create-plays-with-play-builder/support-tools/log-mining.md#log-mining-verb)
+* 실패 발화 분석 도구에 용언 분석 기능 추가 : [자세히 알아보기](/nugu-play/create-plays-with-play-builder/support-tools/log-mining#log-mining-verb)
 
 ### 2. 향상/변경된 기능
 
@@ -106,7 +106,7 @@
 
 ### 1. 새로운 기능
 
-* 실패 발화 분석 도구 추가 : [자세히 알아보기](create-plays-with-play-builder/support-tools/log-mining.md)
+* 실패 발화 분석 도구 추가 : [자세히 알아보기](./create-plays-with-play-builder/support-tools/log-mining)
 
 ### 2. 향상/변경된 기능
 
@@ -125,8 +125,8 @@
 
 ### 1. 새로운 기능
 
-* User Utterance Model 학습 문장 분석 도구 추가 : [자세히 알아보기](create-plays-with-play-builder/support-tools/corpus-inspection-1.md)
-* 합성음 목소리 '벨' 추가 : [자세히 알아보기](create-plays-with-play-builder/customize-a-play.md#setting)
+* User Utterance Model 학습 문장 분석 도구 추가 : [자세히 알아보기](./create-plays-with-play-builder/support-tools/corpus-inspection-1)
+* 합성음 목소리 '벨' 추가 : [자세히 알아보기](./create-plays-with-play-builder/customize-a-play#setting)
 
 ### 2. 향상/변경된 기능
 
@@ -149,13 +149,13 @@
 
 ### 1. 새로운 기능
 
-* Action 중복 생성을 줄이기 위한 Common Action 추가 : [자세히 알아보기](create-plays-with-play-builder/define-an-action/use-common-actions.md)
-* Play 내에서 공통으로 사용할 수 있는 Global Backend Parameter 추가 : [자세히 알아보기](create-plays-with-play-builder/customize-a-play.md#setting-backend-proxy)
-* Response에서 효과음 추가 : [자세히 알아보기](create-plays-with-play-builder/define-an-action/use-responses/use-prompts.md#skml-tag)
+* Action 중복 생성을 줄이기 위한 Common Action 추가 : [자세히 알아보기](./create-plays-with-play-builder/define-an-action/use-common-actions)
+* Play 내에서 공통으로 사용할 수 있는 Global Backend Parameter 추가 : [자세히 알아보기](./create-plays-with-play-builder/customize-a-play#setting-backend-proxy)
+* Response에서 효과음 추가 : [자세히 알아보기](./create-plays-with-play-builder/define-an-action/use-responses/use-prompts#skml-tag)
 
 ### 2. 향상/변경된 기능
 
-* Utterance Parameter에 Entity mapping 방식 변경 : [자세히 알아보기](create-plays-with-play-builder/define-an-action/use-parameters/define-a-parameter.md#utterance-parameter)
+* Utterance Parameter에 Entity mapping 방식 변경 : [자세히 알아보기](./create-plays-with-play-builder/define-an-action/use-parameters/define-a-parameter#utterance-parameter)
 *   Entity value 및 동의어 입력 시 허용 특수기호 추가
 
     ' (Apostrophe), & (Ampersand), - (Hyphen)
@@ -176,10 +176,10 @@
 
 ### 1. 새로운 기능
 
-* 멀티턴 대화 지원 (Response + Branch Action) : [자세히 알아보기](create-plays-with-play-builder/define-an-action/response-with-branch-actions.md)
-* AudioPlayer Interface용 Display Interface 추가 : [자세히 알아보기](create-plays-with-play-builder/use-backend-proxy/capability-interfaces/audioplayer-display-interface.md)
-* 다른 Intent 에서 Entity type 더 가져오기 기능 추가 : [자세히 알아보기](create-plays-with-play-builder/define-an-action/response-with-branch-actions.md#multi-turn-branch)
-* Silent Prompt : [자세히 알아보기](create-plays-with-play-builder/define-an-action/use-responses/use-prompts.md#silent-prompt)
+* 멀티턴 대화 지원 (Response + Branch Action) : [자세히 알아보기](./create-plays-with-play-builder/define-an-action/response-with-branch-actions)
+* AudioPlayer Interface용 Display Interface 추가 : [자세히 알아보기](./create-plays-with-play-builder/use-backend-proxy/capability-interfaces/audioplayer-display-interface)
+* 다른 Intent 에서 Entity type 더 가져오기 기능 추가 : [자세히 알아보기](./create-plays-with-play-builder/define-an-action/response-with-branch-actions#multi-turn-branch)
+* Silent Prompt : [자세히 알아보기](./create-plays-with-play-builder/define-an-action/use-responses/use-prompts#silent-prompt)
 
 ### 2. 향상/변경된 기능
 

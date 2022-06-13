@@ -1,55 +1,59 @@
-require 'securerandom'
-
 module Jekyll
-  module Tags
+  module Potion
     class TabsTag < Liquid::Block
-      TAB_TAG_PATTERN = /({% tab (.*) %})/
+      include RootBlockModule
 
       def initialize(tag_name, markup, options)
         super
-        @template = Jekyll::Tags::find_template("tabs.liquid")
-        @end_tag_name = "{% end#{tag_name} %}"
-        @tabs_id = "tabs-#{options.line_number}"
       end
 
-      def render(context)
-        tabs = []
+      def render_tab_content(page_context)
+        output = []
+        @children.each { |child| output << child.render(page_context) }
+        output.join
+      end
 
-        self.nodelist.each do |tab|
-          if tab.instance_of? Jekyll::Tags::TabTag
-            tabs.push({"title" => tab.title, "tab_id" => tab.tab_id})
+      def render(page_context)
+        render_from_custom_context(
+          page_context,
+          ->(context) do
+            context["tabs_id"] = id
+
+            tabs = []
+            children.each do |child|
+              tabs.push({ "title" => child.title, "tab_id" => child.id })
+            end
+
+            context["tabs"] = tabs
+            context["tab_contents"] = render_tab_content(page_context)
           end
-        end
-        context["tabs"] = tabs
-        context["tabs_body"] = Jekyll::Tags::convert_body(context, super)
-        @template.render(context)
+        )
       end
     end
 
-    class TabTag < Liquid::Block
-      attr_accessor :tab_id
+    class TabContentTag < Liquid::Block
+      include ChildBlockModule
 
-      def initialize(tag_name, markup, options)
-        super
-        @template = Jekyll::Tags::find_template("tab.liquid")
-        @params = Jekyll::Tags::attr_to_hash(markup)
-        @tab_id = "tab-#{options.line_number}"
-
-        Jekyll::Tags::ensure_valid_attr(tag_name, @params, ["title"])
+      def id_format
+        "tab-content-#{options.line_number}"
       end
 
       def title
-        @params["title"]
+        params["title"]
       end
 
-      def render(context)
-        context["tab_id"] = @tab_id
-        context["tab_body"] = Jekyll::Tags::convert_body(context, super.strip)
-        @template.render(context)
+      def render(page_context)
+        render_from_custom_context(
+          page_context,
+          ->(context) do
+            context["tab_id"] = id
+            context["tab_body"] = @body.render(page_context)
+          end
+        )
       end
     end
   end
 end
 
-Liquid::Template.register_tag('tabs', Jekyll::Tags::TabsTag)
-Liquid::Template.register_tag('tab', Jekyll::Tags::TabTag)
+Liquid::Template.register_tag('tabs', Jekyll::Potion::TabsTag)
+Jekyll::Potion::RootBlockTagRegistry.register_tag(Jekyll::Potion::TabsTag, "tabs::content", Jekyll::Potion::TabContentTag)

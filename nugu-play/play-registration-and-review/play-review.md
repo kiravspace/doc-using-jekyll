@@ -1,10 +1,10 @@
 # Play 심사
 
-`Developers Console` >  `Play kit` > `Play 관리`심사 착수 후 2\~3주(워킹데이 10\~15일)입니다.메뉴에서 Play 심사에 필요한 각종 정보(기본 정보, 연동 정보, 배포 정보, 심사 정보)들을 모두 빠짐없이 등록을 한 후에 심사 요청을 하면 Play에 대한 심사가 시작됩니다.([심사 요청](play-review.md#review-request))
+`Developers Console` >  `Play kit` > `Play 관리`심사 착수 후 2\~3주(워킹데이 10\~15일)입니다.메뉴에서 Play 심사에 필요한 각종 정보(기본 정보, 연동 정보, 배포 정보, 심사 정보)들을 모두 빠짐없이 등록을 한 후에 심사 요청을 하면 Play에 대한 심사가 시작됩니다.([심사 요청](play-review#review-request))
 
-Play 심사 중에는 Play 정보를 수정할 수 없기 때문에 수정이 필요한 경우에는 심사 요청을 취소하고, 정보를 수정하여 다시 요청하면 됩니다.([심사 취소](play-review.md#review-cancellation))
+Play 심사 중에는 Play 정보를 수정할 수 없기 때문에 수정이 필요한 경우에는 심사 요청을 취소하고, 정보를 수정하여 다시 요청하면 됩니다.([심사 취소](play-review#review-cancellation))
 
-Play 심사가 시작되면 심사 중으로 상태가 변경되고, 이 과정에서 Play의 정책, 기능, 품질을 종합적으로 검증합니다. 필요시 계정 연동 테스트도 진행합니다.([심사 정책](play-review.md#review-policy) / [심사 프로세스](play-review.md#review-process))
+Play 심사가 시작되면 심사 중으로 상태가 변경되고, 이 과정에서 Play의 정책, 기능, 품질을 종합적으로 검증합니다. 필요시 계정 연동 테스트도 진행합니다.([심사 정책](play-review#review-policy) / [심사 프로세스](play-review#review-process))
 
 Play 심사 기간은 심사 착수 후 2\~3주이며, 심사 결과 정상적으로 서비스가 가능하다고 판단하면 심사 완료, 수정이 필요한 경우에는 반려 의견을 드리게 됩니다.
 
@@ -14,10 +14,10 @@ Play 심사 승인이 거절되면 Play 반려 사유 리포트를 Play 기본 �
 
 ## 심사 프로세스 <a href="review-process" id="review-process"></a>
 
-개발 완료 및 충분한 테스트를 마친 Play는 [심사 요청](play-review.md#review-request) 이후 다음의 프로세스에 따라 심사합니다.\
+개발 완료 및 충분한 테스트를 마친 Play는 [심사 요청](play-review#review-request) 이후 다음의 프로세스에 따라 심사합니다.\
 심사 소요 기간은 각 기준을 충족했을 때, 심사 착수 후 2\~3주(워킹데이 10\~15일)입니다.
 
-![](../../.gitbook/assets/play-review-01.png)
+![](/assets/images/play-review-01.png)
 
 {% alerts style="info" %}
 심사완료 직전, 수정 피드백 반영을 위해 일시 반려할 수 있습니다.
@@ -32,7 +32,7 @@ Play 심사 승인이 거절되면 Play 반려 사유 리포트를 Play 기본 �
 1. Play 등록 정보 검증
    * 등록 정보의 법적 권리 및 사실 여부 확인
    * Play 사용자에게 노출되는 정보의 오탈자 및 내용 적절성 확인
-2. 정책 검증 ([심사 정책](play-review.md#review-policy)에 따름)
+2. 정책 검증 ([심사 정책](play-review#review-policy)에 따름)
    * Play의 호출 이름(Invocation Name) 적합성
    * 제공 서비스 및 콘텐츠의 적합성
    * 다른 서비스와의 간섭 여부
@@ -84,12 +84,12 @@ Play Builder만으로 파악할 수 없는 기대 결과는 심사 요청 시 �
 
 ### 4. Play 배포(배포 요청일 전후)
 
-“심사완료” 상태에서 추가적인 수정사항이 없으시다면, 희망하는 배포일자와 함께 [배포 신청](../distribute-and-manage-a-play/distribute-a-play.md#distribution-request)해주시면 되며, 해당일자 전후로 Play를 배포합니다.\
+“심사완료” 상태에서 추가적인 수정사항이 없으시다면, 희망하는 배포일자와 함께 [배포 신청](../distribute-and-manage-a-play/distribute-a-play#distribution-request)해주시면 되며, 해당일자 전후로 Play를 배포합니다.\
 Play 동작에 이상이 있거나, 내부 사정에 따라 배포가 어려운 경우, 배포 요청일과 실제 배포일이 상이할 수 있습니다.
 
 ## 심사 정책 <a href="review-policy" id="review-policy"></a>
 
-Play의 심사는 앞선 [심사 프로세스](play-review.md#review-process)에 따라 이뤄지며, 이 과정에서 기능/품질 수준 외에 반려 사유가 될 수 있는 정책적 기준들은 다음과 같습니다. 본 정책은 수시로 업데이트될 수 있으며, 원활한 심사를 위해 심사 요청 전 자세히 확인하시길 권장합니다.
+Play의 심사는 앞선 [심사 프로세스](play-review#review-process)에 따라 이뤄지며, 이 과정에서 기능/품질 수준 외에 반려 사유가 될 수 있는 정책적 기준들은 다음과 같습니다. 본 정책은 수시로 업데이트될 수 있으며, 원활한 심사를 위해 심사 요청 전 자세히 확인하시길 권장합니다.
 
 * Play의 호출 이름(Invocation Name) 적합성
 * 제공 서비스 및 콘텐츠의 적합성
@@ -174,11 +174,11 @@ NUGU play와 기본 NUGU서비스 간 간섭을 방지하고자 아래와 같은
 
 등록/심사 요청 페이지 하단에 위치한 `심사요청` 버튼을 클릭하여 Play의 심사를 요청합니다.
 
-![](../../.gitbook/assets/simsago.png)
+![](/assets/images/simsago.png)
 
 심사 요청과 동시에 Play 상태는 심사 대기로 전환되고, Play 심사 담당자에게 심사 요청 사항이 자동으로 전달됩니다. Play 상태는 `Developers Console` > `Play kit` > `Play 관리` 페이지에서 확인할 수 있습니다.
 
-![](../../.gitbook/assets/simsajung.png)
+![](/assets/images/simsajung.png)
 
 {% alerts style="warning" %}
 심사 요청된 Play 정보를 운영자가 검토하여 필수 정보가 누락된 경우에는 본격적인 심사 과정을 진행하기 전에 반려할 수 있습니다.\
@@ -197,7 +197,7 @@ Play 심사가 시작하기 전인 심사 요청 상태(**심사대기** 상태)
 
 2️⃣ 배포/심사 정보 페이지 하단에 위치한 `심사취소` 버튼을 클릭하여 심사 취소를 완료합니다.
 
-![](../../.gitbook/assets/simsacancel2.png)
+![](/assets/images/simsacancel2.png)
 
 3️⃣ 심사 취소 요청과 동시에 Play는 등록 중 상태로 바뀝니다.
 

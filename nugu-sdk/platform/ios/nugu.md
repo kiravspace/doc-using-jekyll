@@ -8,9 +8,9 @@ NUGU 서비스의 핵심 기능인 음성 인식을 표현하기 위한 View 입
 
 | Methods |
 | :--- |
-| **func changeState\(state: NuguVoiceChrome.State\)** NuguVoiceChrome 의 상태\(단계\)와 animation 을 변경합니다. |
-| **func setChipsData\(chipsData: \[NuguChipsButton.NuguChipsButtonType\], onChipsSelect: @escaping \(\(\_ selectedChips: NuguChipsButton.NuguChipsButtonType\) -&gt; Void\)\)** NuguVoiceChrome 에 노출될 NuguChipsButton 을 설정합니다. |
-| **func setRecognizedText\(text: String?\)** NuguVoiceChrome 에 출력될 인식 문구를 설정합니다. |
+| **func changeState(state: NuguVoiceChrome.State)** NuguVoiceChrome 의 상태(단계)와 animation 을 변경합니다. |
+| **func setChipsData(chipsData: [NuguChipsButton.NuguChipsButtonType], onChipsSelect: @escaping ((_ selectedChips: NuguChipsButton.NuguChipsButtonType) -&gt; Void))** NuguVoiceChrome 에 노출될 NuguChipsButton 을 설정합니다. |
+| **func setRecognizedText(text: String?\)** NuguVoiceChrome 에 출력될 인식 문구를 설정합니다. |
 
 ## VoiceChromePresenter
 

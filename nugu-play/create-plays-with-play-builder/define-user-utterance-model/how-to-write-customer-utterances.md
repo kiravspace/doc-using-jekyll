@@ -5,7 +5,7 @@
 이 문장들은 ASR\(Automatic Speech Recognition\), NLU\(Natural Language Understanding\) 엔진의 학습 데이터로 활용되며, 사용자의 발화를 잘 인식하고 이해하는 데 핵심 역할을 합니다. 예상 발화의 학습을 통해 훈련된 ASR, NLU 엔진은 사용자가 실제로 한 발화를 분석한 뒤 그 발화 의도에 맞는 기능을 사용자에게 제공하게 됩니다.
 
 {% alerts style="info" %}
-실제 Intent를 생성하고 등록하는 방법은 [User Utterance Model 정의하기\(Intent & Entity\)](./)를 참고하세요.
+실제 Intent를 생성하고 등록하는 방법은 [User Utterance Model 정의하기 (Intent & Entity)](../define-user-utterance-model)를 참고하세요.
 {% endalerts %}
 
 ## 예상 발화 작성 주요 원칙

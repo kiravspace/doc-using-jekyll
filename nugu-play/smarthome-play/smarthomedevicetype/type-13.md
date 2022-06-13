@@ -52,5 +52,5 @@ Capability별 상세한 내용은 아래 리스트의 링크를 통해 확인하
 
 | Capability | Description | 예시발 |
 | :--- | :--- | :--- |
-| [PowerCheck](../smarthomecapability/powercheck-interface.md) | 에너지미터의 전력사용량 관련 조회 기능입니다. | "에너지미터 전력사용량 알려줘" |
+| [PowerCheck](../smarthomecapability/powercheck-interface) | 에너지미터의 전력사용량 관련 조회 기능입니다. | "에너지미터 전력사용량 알려줘" |
 

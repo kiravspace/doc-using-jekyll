@@ -1,21 +1,24 @@
 module Jekyll
-  module Tags
+  module Potion
     class AlertsTag < Liquid::Block
+      include TagModule
+
       def initialize(tag_name, markup, options)
         super
-        @template = Jekyll::Tags::find_template("alerts.liquid")
-        @params = Jekyll::Tags::attr_to_hash(markup)
-
-        Jekyll::Tags::ensure_valid_attr(tag_name, @params, ["style"])
+        ensure_valid_attr(tag_name, %w[style])
       end
 
-      def render(context)
-        context["style"] = @params["style"]
-        context["alert_body"] = Jekyll::Tags::convert_body(context, super)
-        @template.render(context)
+      def render(page_context)
+        render_from_custom_context(
+          page_context,
+          ->(context) do
+            context["alert_style"] = params["style"]
+            context["alert_body"] = body_to_string(context, super)
+          end
+        )
       end
     end
   end
 end
 
-Liquid::Template.register_tag("alerts", Jekyll::Tags::AlertsTag)
+Liquid::Template.register_tag("alerts", Jekyll::Potion::AlertsTag)

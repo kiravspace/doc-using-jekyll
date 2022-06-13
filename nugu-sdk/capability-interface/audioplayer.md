@@ -20,7 +20,7 @@ description: Play 에서 전달하는 음원을 재생하기 위한 규격
 
 ## State Diagram
 
-![](../../.gitbook/assets/audioplayer-01.png)
+![](/assets/images/audioplayer-01.png)
 
 ## SDK Interface
 
@@ -29,7 +29,7 @@ description: Play 에서 전달하는 음원을 재생하기 위한 규격
 AudioPlayer interface 규격에 따른 디바이스의 동작 제어는 AudioPlayerAgent 가 처리합니다.
 
 {% tabs %}
-{% tab title="Android" %}
+{% tabs::content title="Android" %}
 NuguAndroidClient instance 를 통해 AudioPlayerAgent instance 에 접근할 수 있습니다.
 
 {% code %}
@@ -37,9 +37,9 @@ NuguAndroidClient instance 를 통해 AudioPlayerAgent instance 에 접근할 �
 val audioPlayerAgent = nuguAndroidClient.audioPlayerAgent
 ```
 {% endcode %}
-{% endtab %}
+{% endtabs::content %}
 
-{% tab title="iOS" %}
+{% tabs::content title="iOS" %}
 NuguClient instance 를 통해 AudioPlayerAgent instance 에 접근할 수 있습니다.
 
 {% code %}
@@ -47,9 +47,9 @@ NuguClient instance 를 통해 AudioPlayerAgent instance 에 접근할 수 있�
 let audioPlayerAgent = nuguClient.audioPlayerAgent
 ```
 {% endcode %}
-{% endtab %}
+{% endtabs::content %}
 
-{% tab title="Linux" %}
+{% tabs::content title="Linux" %}
 [CapabilityFactory::makeCapability](https://nugu-developers.github.io/nugu-linux/classNuguCapability\_1\_1CapabilityFactory.html#a46d96b1bc96903f02905c92ba8794bf6) 함수로 [AudioPlayerAgent](https://nugu-developers.github.io/nugu-linux/classNuguCapability\_1\_1IAudioPlayerHandler.html) 를 생성하고 [NuguClient](https://nugu-developers.github.io/nugu-linux/classNuguClientKit\_1\_1NuguClient.html) 에 추가해 주어야합니다.
 
 {% code %}
@@ -62,7 +62,7 @@ nugu_client->getCapabilityBuilder()
     ->construct();
 ```
 {% endcode %}
-{% endtab %}
+{% endtabs::content %}
 {% endtabs %}
 
 ### 재생 상태 모니터링
@@ -70,7 +70,7 @@ nugu_client->getCapabilityBuilder()
 [Play](audioplayer.md#play) directive 로 전달된 음원에 대한 재생 상태를 모니터링 할 수 있습니다.
 
 {% tabs %}
-{% tab title="Android" %}
+{% tabs::content title="Android" %}
 AudioPlayerAgentInterface.Listener 를 추가합니다.
 
 {% code %}
@@ -83,9 +83,9 @@ val listener = object: AudioPlayerAgentInterface.Listener {
 audioPlayerAgent.addListener(listener)
 ```
 {% endcode %}
-{% endtab %}
+{% endtabs::content %}
 
-{% tab title="iOS" %}
+{% tabs::content title="iOS" %}
 AudioPlayerAgentDelegate 를 추가합니다.
 
 {% code %}
@@ -99,9 +99,9 @@ class MyAudioPlayerAgentDelegate: AudioPlayerAgentDelegate {
 audioPlayerAgent.add(delegate: MyAudioPlayerAgentDelegate())
 ```
 {% endcode %}
-{% endtab %}
+{% endtabs::content %}
 
-{% tab title="Linux" %}
+{% tabs::content title="Linux" %}
 [IAudioPlayerListener](https://nugu-developers.github.io/nugu-linux/classNuguCapability\_1\_1IAudioPlayerListener.html) 를 추가합니다.
 
 {% code %}
@@ -121,7 +121,7 @@ auto audio_player_listener(std::make_shared<MyAudioPlayerListener>());
 CapabilityFactory::makeCapability<AudioPlayerAgent, IAudioPlayerHandler>(audio_player_listener.get());
 ```
 {% endcode %}
-{% endtab %}
+{% endtabs::content %}
 {% endtabs %}
 
 ### UI 구성 및 제어
@@ -133,7 +133,7 @@ AudioPlayer 로 음원을 재생할 때 화면을 구성하기 위해 필요한 
 [AudioPlayer.Template1](audioplayer.md#audioitem-metadata-template-audioplayer-template1) 에 포함된 가사의 화면은 `사용자 발화` 에 따라 [ShowLyrics](audioplayer.md#showlyrics), [HideLyrics](audioplayer.md#hidelyrics), [ControlLyricsPage](audioplayer.md#controllyricspage) directive 로 제어될 수 있습니다.
 
 {% tabs %}
-{% tab title="Android" %}
+{% tabs::content title="Android" %}
 DisplayAggregatorInterface.Renderer 를 추가합니다.
 
 {% code %}
@@ -167,9 +167,9 @@ val presenter = object: LyricsPresenter {
 audioPlayerAgent.setLyricsPresenter(presenter)
 ```
 {% endcode %}
-{% endtab %}
+{% endtabs::content %}
 
-{% tab title="iOS" %}
+{% tabs::content title="iOS" %}
 AudioPlayerDisplayDelegate 를 추가합니다.
 
 {% code %}
@@ -193,9 +193,9 @@ class MyAudioPlayerDisplayDelegate: AudioPlayerDisplayDelegate {
 audioPlayerAgent.displayDelegate = MyAudioPlayerDisplayDelegate()
 ```
 {% endcode %}
-{% endtab %}
+{% endtabs::content %}
 
-{% tab title="Linux" %}
+{% tabs::content title="Linux" %}
 [IAudioPlayerListener](https://nugu-developers.github.io/nugu-linux/classNuguCapability\_1\_1IAudioPlayerListener.html) 를 추가합니다.
 
 {% code %}
@@ -225,7 +225,7 @@ auto audio_player_listener(std::make_shared<MyAudioPlayerListener>());
 CapabilityFactory::makeCapability<AudioPlayerAgent, IAudioPlayerHandler>(audio_player_listener.get());
 ```
 {% endcode %}
-{% endtab %}
+{% endtabs::content %}
 {% endtabs %}
 
 ### 제어 명령
@@ -233,7 +233,7 @@ CapabilityFactory::makeCapability<AudioPlayerAgent, IAudioPlayerHandler>(audio_p
 PUI, GUI 등으로 사용자가 [다음](audioplayer.md#nextcommandissued)/[이전](audioplayer.md#previouscommandissued)/[즐겨찾기](audioplayer.md#favoritecommandissued)/[반복](audioplayer.md#repeatcommandissued)/[셔플](audioplayer.md#shufflecommandissued) 요청을 event 로 전달할 수 있습니다.
 
 {% tabs %}
-{% tab title="Android" %}
+{% tabs::content title="Android" %}
 {% code %}
 ```
 // 다음
@@ -248,9 +248,9 @@ audioPlayerAgent.requestRepeatCommand(RepeatMode.NONE)
 audioPlayerAgent.requestShuffleCommand(false)
 ```
 {% endcode %}
-{% endtab %}
+{% endtabs::content %}
 
-{% tab title="iOS" %}
+{% tabs::content title="iOS" %}
 {% code %}
 ```
 // 다음 
@@ -265,9 +265,9 @@ audioPlayerAgent.requestRepeatCommand(.none)
 audioPlayerAgent.requestShuffleCommand(false)
 ```
 {% endcode %}
-{% endtab %}
+{% endtabs::content %}
 
-{% tab title="Linux" %}
+{% tabs::content title="Linux" %}
 {% code %}
 ```
 // 다음
@@ -282,7 +282,7 @@ audio_player_handler->requestRepeatCommand(RepeatType.NONE)
 audio_player_handler->requestShuffleCommand(false)
 ```
 {% endcode %}
-{% endtab %}
+{% endtabs::content %}
 {% endtabs %}
 
 ## Context

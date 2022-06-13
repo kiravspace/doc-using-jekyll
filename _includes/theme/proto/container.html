@@ -1,0 +1,11 @@
+<div id="container" class="container">
+    <div class="title">
+        <h1>{{ page.title }}</h1>
+        {{ page.description }}
+    </div>
+    <div class="content">
+        {{ content | markdownify }}
+        {% include {{ site.data.potion.theme_path }}/empty.html %}
+    </div>
+    {% include {{ site.data.potion.theme_path }}/pagination.html %}
+</div>

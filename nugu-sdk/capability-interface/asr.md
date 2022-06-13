@@ -20,7 +20,7 @@ description: 음성인식 결과를 Play 로 전달하기 위한 규격
 
 ## State Diagram
 
-![](../../.gitbook/assets/asr-01.png)
+![](/assets/images/asr-01.png)
 
 ## SDK Interface
 
@@ -29,7 +29,7 @@ description: 음성인식 결과를 Play 로 전달하기 위한 규격
 ASR interface 규격에 따른 디바이스의 동작 제어는 ASRAgent 가 처리합니다.
 
 {% tabs %}
-{% tab title="Android" %}
+{% tabs::content title="Android" %}
 NuguAndroidClient instance 를 통해 ASRAgent instance 에 접근할 수 있습니다.
 
 {% code %}
@@ -77,9 +77,9 @@ speechRecognizerAggregator = SpeechRecognizerAggregator(
 )
 ```
 {% endcode %}
-{% endtab %}
+{% endtabs::content %}
 
-{% tab title="iOS" %}
+{% tabs::content title="iOS" %}
 NuguClient instance 를 통해 ASRAgent instance 에 접근할 수 있습니다.
 
 {% code %}
@@ -112,9 +112,9 @@ let epdFile = Bundle.main.url(forResource: "skt_epd_model", withExtension: "raw"
 nuguClient.asrAgent.options = ASROptions(endPointing: .client(epdFile: epdFile))
 ```
 {% endcode %}
-{% endtab %}
+{% endtabs::content %}
 
-{% tab title="Linux" %}
+{% tabs::content title="Linux" %}
 [CapabilityFactory::makeCapability](https://nugu-developers.github.io/nugu-linux/classNuguCapability_1_1CapabilityFactory.html#a46d96b1bc96903f02905c92ba8794bf6) 함수로 [ASRAgent](https://nugu-developers.github.io/nugu-linux/classNuguCapability_1_1IASRHandler.html) 를 생성하고 [NuguClient](https://nugu-developers.github.io/nugu-linux/classNuguClientKit_1_1NuguClient.html) 에 추가해 주어야합니다.
 
 {% code %}
@@ -135,7 +135,7 @@ nugu_client->getCapabilityBuilder()
  asr_handler->setAttribute(ASRAttribute { "/var/lib/nugu/model", "CLIENT", "PARTIAL" });
 ```
 {% endcode %}
-{% endtab %}
+{% endtabs::content %}
 {% endtabs %}
 
 ### 음성 인식 요청
@@ -143,30 +143,30 @@ nugu_client->getCapabilityBuilder()
 `아리아` 발화 또는 NUGU Button 선택 시 [Recognize](asr.md#recognize) event 를 전달하여 음성인식을 시작할 수 있습니다.
 
 {% tabs %}
-{% tab title="Android" %}
+{% tabs::content title="Android" %}
 {% code %}
 ```text
 speechRecognizerAggregator.startListening(initiator = TAP)
 ```
 {% endcode %}
-{% endtab %}
+{% endtabs::content %}
 
-{% tab title="iOS" %}
+{% tabs::content title="iOS" %}
 {% code %}
 ```text
 try micInputProvider.start()
 asrAgent.startRecognition(initiator: .user)
 ```
 {% endcode %}
-{% endtab %}
+{% endtabs::content %}
 
-{% tab title="Linux" %}
+{% tabs::content title="Linux" %}
 {% code %}
 ```text
 asr_handler->startRecognition()
 ```
 {% endcode %}
-{% endtab %}
+{% endtabs::content %}
 {% endtabs %}
 
 ### 음성인식 진행 상태 모니터링
@@ -176,7 +176,7 @@ asr_handler->startRecognition()
 음성인식에 대한 STT\(SpeechToText\) 결과가 [NotifyResult](asr.md#notifyresult) directive 로 전달됩니다.
 
 {% tabs %}
-{% tab title="Android" %}
+{% tabs::content title="Android" %}
 SpeechRecognizerAggregatorInterface.OnStateChangeListener 를 추가합니다.
 
 {% code %}
@@ -210,9 +210,9 @@ val resultListener = object: ASRAgentInterface.OnResultListener {
 asrAgent.addOnResultListener(resultListener)
 ```
 {% endcode %}
-{% endtab %}
+{% endtabs::content %}
 
-{% tab title="iOS" %}
+{% tabs::content title="iOS" %}
 ASRAgentDelegate 를 추가합니다.
 
 {% code %}
@@ -230,9 +230,9 @@ class MyASRAgentDelegate: ASRAgentDelegate {
 asrAgent.add(delegate: MyASRAgentDelegate())
 ```
 {% endcode %}
-{% endtab %}
+{% endtabs::content %}
 
-{% tab title="Linux" %}
+{% tabs::content title="Linux" %}
 음성인식 진행 상태를 모니터링 하려면 [IASRListener](https://nugu-developers.github.io/nugu-linux/classNuguCapability_1_1IASRListener.html) 를 추가합니다.
 
 {% code %}
@@ -264,7 +264,7 @@ auto asr_listener(std::make_shared<MyASRListener>());
 CapabilityFactory::makeCapability<ASRAgent, IASRHandler>(asr_listener.get());
 ```
 {% endcode %}
-{% endtab %}
+{% endtabs::content %}
 {% endtabs %}
 
 ### 음성 인식 중단
@@ -272,29 +272,29 @@ CapabilityFactory::makeCapability<ASRAgent, IASRHandler>(asr_listener.get());
 사용자가 음성 인식 중단 요청을 [StopRecognize](asr.md#stoprecognize) event 로 전달할 수 있습니다.
 
 {% tabs %}
-{% tab title="Android" %}
+{% tabs::content title="Android" %}
 {% code %}
 ```text
 speechRecognizerAggregator.stopListening()
 ```
 {% endcode %}
-{% endtab %}
+{% endtabs::content %}
 
-{% tab title="iOS" %}
+{% tabs::content title="iOS" %}
 {% code %}
 ```text
 asrAgent.stopRecognition()
 ```
 {% endcode %}
-{% endtab %}
+{% endtabs::content %}
 
-{% tab title="Linux" %}
+{% tabs::content title="Linux" %}
 {% code %}
 ```text
 asr_handler->stopRecognition()
 ```
 {% endcode %}
-{% endtab %}
+{% endtabs::content %}
 {% endtabs %}
 
 ## Context

@@ -18,36 +18,36 @@ NUGU 플랫폼 인증은 [OAuth 2.0](https://tools.ietf.org/html/rfc6749)의 규
 >
 > %7B%22deviceSerialNumber%22%3A%22DEVICE\_SERIAL\_NUMBER%22%7D
 
-{% swagger baseUrl="https://api.host.domain" path="/v1/auth/oauth/authorize" method="get" summary="인증 요청 (Authorize Endpoint)" %}
-{% swagger-description %}
-\*NUGU계정 미사용, 체험판 사용 시에는 불필요합니다.
-{% endswagger-description %}
+{% api base_url="https://api.host.domain" path="/v1/auth/oauth/authorize" method="get" summary="인증 요청 (Authorize Endpoint)" %}
+{% api::description %}
+NUGU계정 미사용, 체험판 사용 시에는 불필요합니다.
+{% endapi::description %}
 
-{% swagger-parameter name="client:id" type="string" in="query" %}
+{% api::parameter name="client:id" type="string" category="query" %}
 발급받은 ClientId를 사용 합니다.
-{% endswagger-parameter %}
+{% endapi::parameter %}
 
-{% swagger-parameter name="response:type" type="string" in="query" %}
+{% api::parameter name="response:type" type="string" category="query" %}
 code 만 사용 됩니다.
-{% endswagger-parameter %}
+{% endapi::parameter %}
 
-{% swagger-parameter name="redirect:uri" type="string" in="query" %}
+{% api::parameter name="redirect:uri" type="string" category="query" %}
 설정한 RedirectUri를 사용합니다.
-{% endswagger-parameter %}
+{% endapi::parameter %}
 
-{% swagger-parameter name="scope" type="string" in="query" %}
+{% api::parameter name="scope" type="string" category="query" %}
 (TODO)
-{% endswagger-parameter %}
+{% endapi::parameter %}
 
-{% swagger-parameter name="data" type="string" in="query" %}
+{% api::parameter name="data" type="string" category="query" %}
 추가적인 데이터를 포함됩니다.
-{% endswagger-parameter %}
+{% endapi::parameter %}
 
-{% swagger-parameter name="state" type="string" in="query" %}
+{% api::parameter name="state" type="string" category="query" %}
 CSRF를 위해 사용 되는 값입니다.
-{% endswagger-parameter %}
+{% endapi::parameter %}
 
-{% swagger-response status="302" description="" %}
+{% api::response status="302" description="" %}
 {% code %}
 ```
 HTTP/1.1 302 
@@ -55,8 +55,8 @@ Date: Mon, 14 Oct 2019 02:24:58 GMT
 Location: {redirect_uri}?code={code}&state={state}
 ```
 {% endcode %}
-{% endswagger-response %}
-{% endswagger %}
+{% endapi::response %}
+{% endapi %}
 
 ## Token Endpoint
 
@@ -66,36 +66,36 @@ NUGU계정 미사용, 체험판은 `grant_type=client_credentials` 을 사용합
 
 Client 인증 정보는 Body Parameter(application/x-www-form-urlencoded)를 사용 합니다.
 
-{% swagger baseUrl="https://api.host.domain" path="/v1/auth/oauth/token" method="post" summary="토큰 요청 (Token Endpoint)" %}
-{% swagger-description %}
+{% api base_url="https://api.host.domain" path="/v1/auth/oauth/token" method="post" summary="토큰 요청 (Token Endpoint)" %}
+{% api::description %}
 NUGU계정 미사용, 체험판 사용 시에는 code와 redirect_url 입력이 불필요합니다.
-{% endswagger-description %}
+{% endapi::description %}
 
-{% swagger-parameter name="data" type="string" in="body" %}
+{% api::parameter name="data" type="string" category="body" %}
 추가적인 데이터가 포함 됩니다. ex) {"deviceSerialNumber":"DEVICE_SERIAL_NUMBER"}
-{% endswagger-parameter %}
+{% endapi::parameter %}
 
-{% swagger-parameter name="grant:type" type="string" in="body" %}
+{% api::parameter name="grant:type" type="string" category="body" %}
 authorization_code (신규), client_credentials (NUGU 회원 미사용, 체험판)
-{% endswagger-parameter %}
+{% endapi::parameter %}
 
-{% swagger-parameter name="code" type="string" in="body" %}
+{% api::parameter name="code" type="string" category="body" %}
 응답 받은 code 값을 사용 합니다.
-{% endswagger-parameter %}
+{% endapi::parameter %}
 
-{% swagger-parameter name="redirect:uri" type="string" in="body" %}
+{% api::parameter name="redirect:uri" type="string" category="body" %}
 인증 요청 시 사용된 redirect_uri를 사용합니다.
-{% endswagger-parameter %}
+{% endapi::parameter %}
 
-{% swagger-parameter name="client:id" type="string" in="body" %}
+{% api::parameter name="client:id" type="string" category="body" %}
 발급 받은 ClientId를 사용합니다.
-{% endswagger-parameter %}
+{% endapi::parameter %}
 
-{% swagger-parameter name="client:secret" type="string" in="body" %}
+{% api::parameter name="client:secret" type="string" category="body" %}
 발급 받은 ClientSecret을 사용합니다.
-{% endswagger-parameter %}
+{% endapi::parameter %}
 
-{% swagger-response status="200" description="" %}
+{% api::response status="200" description="" %}
 {% code %}
 ```
 HTTP/1.1 200 
@@ -111,9 +111,9 @@ Content-Type: application/json;charset=UTF-8
 }
 ```
 {% endcode %}
-{% endswagger-response %}
+{% endapi::response %}
 
-{% swagger-response status="400" description="" %}
+{% api::response status="400" description="" %}
 {% code %}
 ```
 HTTP/1.1 400 
@@ -123,9 +123,9 @@ Content-Type: application/json;charset=UTF-8
 {"error":"invalid_grant","error_description":"Invalid authorization code: 0rrbEjnOfqxIv6uNic6C"}
 ```
 {% endcode %}
-{% endswagger-response %}
+{% endapi::response %}
 
-{% swagger-response status="401" description="" %}
+{% api::response status="401" description="" %}
 {% code %}
 ```
 HTTP/1.1 401 
@@ -136,35 +136,35 @@ WWW-Authenticate: Form realm="NUGU", error="invalid_client", error_description="
 {"error":"invalid_client","error_description":"Bad client credentials"}
 ```
 {% endcode %}
-{% endswagger-response %}
-{% endswagger %}
+{% endapi::response %}
+{% endapi %}
 
-{% swagger baseUrl="https://api.host.domain" path="/v1/auth/oauth/token" method="post" summary="토큰 갱신 요청 (Token Endpoint)" %}
-{% swagger-description %}
-\*NUGU계정 미사용, 체험판 사용 시에는 불필요합니다.
-{% endswagger-description %}
+{% api base_url="https://api.host.domain" path="/v1/auth/oauth/token" method="post" summary="토큰 갱신 요청 (Token Endpoint)" %}
+{% api::description %}
+NUGU계정 미사용, 체험판 사용 시에는 불필요합니다.
+{% endapi::description %}
 
-{% swagger-parameter name="data" type="string" in="body" %}
+{% api::parameter name="data" type="string" category="body" %}
 추가적인 데이터가 포함 됩니다. ex) {"deviceSerialNumber":"DEVICE_SEERIAL_NUMBER"}
-{% endswagger-parameter %}
+{% endapi::parameter %}
 
-{% swagger-parameter name="grant:type" type="string" in="body" %}
+{% api::parameter name="grant:type" type="string" category="body" %}
 refresh_token (갱신)
-{% endswagger-parameter %}
+{% endapi::parameter %}
 
-{% swagger-parameter name="refresh:token" type="string" in="body" %}
+{% api::parameter name="refresh:token" type="string" category="body" %}
 신규 발급 시 응답 받은 refresh_token을 사용합니다.
-{% endswagger-parameter %}
+{% endapi::parameter %}
 
-{% swagger-parameter name="client:id" type="string" in="body" %}
+{% api::parameter name="client:id" type="string" category="body" %}
 
-{% endswagger-parameter %}
+{% endapi::parameter %}
 
-{% swagger-parameter name="client:secret" type="string" in="body" %}
+{% api::parameter name="client:secret" type="string" category="body" %}
 
-{% endswagger-parameter %}
+{% endapi::parameter %}
 
-{% swagger-response status="200" description="" %}
+{% api::response status="200" description="" %}
 {% code %}
 ```
 HTTP/1.1 200 
@@ -180,9 +180,9 @@ Content-Type: application/json;charset=UTF-8
 }
 ```
 {% endcode %}
-{% endswagger-response %}
+{% endapi::response %}
 
-{% swagger-response status="400" description="" %}
+{% api::response status="400" description="" %}
 {% code %}
 ```
 HTTP/1.1 400 
@@ -192,9 +192,9 @@ Content-Type: application/json;charset=UTF-8
 {"error":"invalid_grant","error_description":""}
 ```
 {% endcode %}
-{% endswagger-response %}
+{% endapi::response %}
 
-{% swagger-response status="401" description="" %}
+{% api::response status="401" description="" %}
 {% code %}
 ```
 HTTP/1.1 401 
@@ -205,33 +205,33 @@ WWW-Authenticate: Form realm="NUGU", error="invalid_client", error_description="
 {"error":"invalid_client","error_description":"Bad client credentials"}
 ```
 {% endcode %}
-{% endswagger-response %}
-{% endswagger %}
+{% endapi::response %}
+{% endapi %}
 
 ## Revoke Endpoint
 
-{% swagger path="/v1/auth/oauth/revoke" method="post" summary="연결 해제 (Revoke Endpoint)" %}
-{% swagger-description %}
+{% api path="/v1/auth/oauth/revoke" method="post" summary="연결 해제 (Revoke Endpoint)" %}
+{% api::description %}
 
-{% endswagger-description %}
+{% endapi::description %}
 
-{% swagger-parameter name="data" type="string" in="body" %}
+{% api::parameter name="data" type="string" category="body" %}
 
-{% endswagger-parameter %}
+{% endapi::parameter %}
 
-{% swagger-parameter name="token" type="string" in="body" %}
+{% api::parameter name="token" type="string" category="body" %}
 
-{% endswagger-parameter %}
+{% endapi::parameter %}
 
-{% swagger-parameter name="client:id" type="string" in="body" %}
+{% api::parameter name="client:id" type="string" category="body" %}
 
-{% endswagger-parameter %}
+{% endapi::parameter %}
 
-{% swagger-parameter name="client:secret" type="string" in="body" %}
+{% api::parameter name="client:secret" type="string" category="body" %}
 
-{% endswagger-parameter %}
+{% endapi::parameter %}
 
-{% swagger-response status="200" description="" %}
+{% api::response status="200" description="" %}
 {% code %}
 ```
 HTTP/1.1 200 
@@ -241,9 +241,9 @@ Content-Type: application/json;charset=UTF-8
 {}
 ```
 {% endcode %}
-{% endswagger-response %}
+{% endapi::response %}
 
-{% swagger-response status="400" description="" %}
+{% api::response status="400" description="" %}
 {% code %}
 ```
 HTTP/1.1 400 
@@ -253,9 +253,9 @@ Content-Type: application/json;charset=UTF-8
 {"error":"invalid_token","error_description":""}
 ```
 {% endcode %}
-{% endswagger-response %}
+{% endapi::response %}
 
-{% swagger-response status="401" description="" %}
+{% api::response status="401" description="" %}
 {% code %}
 ```
 HTTP/1.1 401 
@@ -265,33 +265,33 @@ Content-Type: application/json;charset=UTF-8
 {"error":"invalid_client","error_description":""}
 ```
 {% endcode %}
-{% endswagger-response %}
-{% endswagger %}
+{% endapi::response %}
+{% endapi %}
 
 ## Introspect Endpoint
 
-{% swagger path="/v1/auth/oauth/introspect" method="post" summary="연결 조회 (Introspect Endpoint)" %}
-{% swagger-description %}
+{% api path="/v1/auth/oauth/introspect" method="post" summary="연결 조회 (Introspect Endpoint)" %}
+{% api::description %}
 
-{% endswagger-description %}
+{% endapi::description %}
 
-{% swagger-parameter name="data" type="string" in="body" %}
+{% api::parameter name="data" type="string" category="body" %}
 
-{% endswagger-parameter %}
+{% endapi::parameter %}
 
-{% swagger-parameter name="token" type="string" in="body" %}
+{% api::parameter name="token" type="string" category="body" %}
 
-{% endswagger-parameter %}
+{% endapi::parameter %}
 
-{% swagger-parameter name="client:id" type="string" in="body" %}
+{% api::parameter name="client:id" type="string" category="body" %}
 
-{% endswagger-parameter %}
+{% endapi::parameter %}
 
-{% swagger-parameter name="client:secret" type="string" in="body" %}
+{% api::parameter name="client:secret" type="string" category="body" %}
 
-{% endswagger-parameter %}
+{% endapi::parameter %}
 
-{% swagger-response status="200" description="" %}
+{% api::response status="200" description="" %}
 {% code %}
 ```
 HTTP/1.1 200 
@@ -303,9 +303,9 @@ Content-Type: application/json;charset=UTF-8
 }
 ```
 {% endcode %}
-{% endswagger-response %}
+{% endapi::response %}
 
-{% swagger-response status="400" description="" %}
+{% api::response status="400" description="" %}
 {% code %}
 ```
 HTTP/1.1 400 
@@ -315,9 +315,9 @@ Content-Type: application/json;charset=UTF-8
 {"error":"invalid_token","error_description":""}
 ```
 {% endcode %}
-{% endswagger-response %}
+{% endapi::response %}
 
-{% swagger-response status="401" description="" %}
+{% api::response status="401" description="" %}
 {% code %}
 ```
 HTTP/1.1 401 
@@ -327,5 +327,5 @@ Content-Type: application/json;charset=UTF-8
 {"error":"invalid_client","error_description":""}
 ```
 {% endcode %}
-{% endswagger-response %}
-{% endswagger %}
+{% endapi::response %}
+{% endapi %}

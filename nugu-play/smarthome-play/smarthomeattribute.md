@@ -6,17 +6,17 @@ NUGU스마트홈을 통해 스마트홈 기기를 제어할 때 Capability나 Di
 
 | SmartHomeAttribute | Description |
 | :--- | :--- |
-| [airflowType](smarthomeattribute.md#airflowtype) | 설정하고자 하는 airflowType의 사용자 발화 정보. 해당 parameter의 value는 Device Discovery 당시 Response한 supprtedAirflowTypes 중 하나로 요청됩니다. |
-| [airflowDelta](smarthomeattribute.md#airflowdelta) | airflowType을 몇 단계 조절할지에 대한 사용자 발화 정보입니다. 해당 parameter가 없을 경우에는 1단계를 올리도록 설정해야 합니다. |
-| [brightnessLevel](smarthomeattribute.md#brightnesslevel) | 사용자가 SmartHomeDevice에 설정하고자 하는 밝기의 발화 정보입니다. 1부터 100까지 설정할 수 있습니다. |
-| [brightnessDelta](smarthomeattribute.md#brightnessdelta) | 설정 밝기를 몇 단계 조절지에 대한 사용자 발화 정보입니다. 해당 정보가 없을 경우 1단계를 올리도록 설정합니다. |
-| [colorType](smarthomeattribute.md#colortype) | 사용자가 SmartHomeDevice에 설정하고자 하는 색상 정보입니다. |
-| [deviceTemperatureLevel](smarthomeattribute.md#devicetemperaturelevel) | 사용자가 SmartHomeDevice에 설정하고자 하는 자체설정온도의 발화정보입니다. |
-| [humidityLevel](smarthomeattribute.md#humiditylevel) | 사용자가 SmartHomeDevice에 설정하고자 하는 습도의 발화 정보입니다. %단위입니다. |
-| [humidityDelta](smarthomeattribute.md#humiditydelta) | 설정습도를 몇 % 조절지에 대한 사용자 발화 정보입니다. 해당 정보가 없을 경우 humidityStep만큼 올리도록 설정합니다. |
-| [mode](smarthomeattribute.md#mode) | 설정하고자 하는 mode의 사용자 발화 정보, 해당 parameter의 value는 Device Discovery 당시 응답한 supportedModes 중 하나로 요청됩니다. |
-| [temperatureLevel](smarthomeattribute.md#temperaturelevel) | 사용자가 SmartHomeDevice에 설정하고자 하는 온도\(섭씨\)의 발화 정보입니다. |
-| [temperatureDelta](smarthomeattribute.md#temperaturedelta) | 설정온도를 몇 도\(섭씨\) 올릴지에 대한 사용자 발화 정보입니다. 해당 정보가 없을 경우에는 temperatureStep만큼 올리도록 설정합니다. |
+| [airflowType](#airflowtype) | 설정하고자 하는 airflowType의 사용자 발화 정보. 해당 parameter의 value는 Device Discovery 당시 Response한 supprtedAirflowTypes 중 하나로 요청됩니다. |
+| [airflowDelta](#airflowdelta) | airflowType을 몇 단계 조절할지에 대한 사용자 발화 정보입니다. 해당 parameter가 없을 경우에는 1단계를 올리도록 설정해야 합니다. |
+| [brightnessLevel](#brightnesslevel) | 사용자가 SmartHomeDevice에 설정하고자 하는 밝기의 발화 정보입니다. 1부터 100까지 설정할 수 있습니다. |
+| [brightnessDelta](#brightnessdelta) | 설정 밝기를 몇 단계 조절지에 대한 사용자 발화 정보입니다. 해당 정보가 없을 경우 1단계를 올리도록 설정합니다. |
+| [colorType](#colortype) | 사용자가 SmartHomeDevice에 설정하고자 하는 색상 정보입니다. |
+| [deviceTemperatureLevel](#devicetemperaturelevel) | 사용자가 SmartHomeDevice에 설정하고자 하는 자체설정온도의 발화정보입니다. |
+| [humidityLevel](#humiditylevel) | 사용자가 SmartHomeDevice에 설정하고자 하는 습도의 발화 정보입니다. %단위입니다. |
+| [humidityDelta](#humiditydelta) | 설정습도를 몇 % 조절지에 대한 사용자 발화 정보입니다. 해당 정보가 없을 경우 humidityStep만큼 올리도록 설정합니다. |
+| [mode](#mode) | 설정하고자 하는 mode의 사용자 발화 정보, 해당 parameter의 value는 Device Discovery 당시 응답한 supportedModes 중 하나로 요청됩니다. |
+| [temperatureLevel](#temperaturelevel) | 사용자가 SmartHomeDevice에 설정하고자 하는 온도\(섭씨\)의 발화 정보입니다. |
+| [temperatureDelta](#temperaturedelta) | 설정온도를 몇 도\(섭씨\) 올릴지에 대한 사용자 발화 정보입니다. 해당 정보가 없을 경우에는 temperatureStep만큼 올리도록 설정합니다. |
 
 ## Attribute Details
 
@@ -99,7 +99,7 @@ SetAirflow Directive Control Request 예시 (POST, /nugu/v1/capabilities/{Capabi
 ```
 {% endcode %}
 
-Related to [AirflowControl Interface](smarthomecapability/airflowcontrol-interface.md)
+Related to [AirflowControl Interface](./smarthomecapability/airflowcontrol-interface)
 
 ### airflowDelta
 
@@ -159,7 +159,7 @@ IncreaseAirflow Directive Request 예시 (POST, /nugu/v1/capabilities/{Capabilit
 ```
 {% endcode %}
 
-Related to [AirflowControl Interface](smarthomecapability/airflowcontrol-interface.md)
+Related to [AirflowControl Interface](./smarthomecapability/airflowcontrol-interface)
 
 ### brightnessLevel
 
@@ -209,7 +209,7 @@ SetBrightness Directive Request 예시 (POST, /nugu/v1/capabilities/{Capability}
 ```
 {% endcode %}
 
-Related to [BrightnessControl Interface](smarthomecapability/brightnesscontrol-interface.md)
+Related to [BrightnessControl Interface](./smarthomecapability/brightnesscontrol-interface)
 
 ### brightnessDelta
 
@@ -262,7 +262,7 @@ IncreaseBrightness Directive Control Request 예시 (POST, /nugu/v1/capabilities
 ```
 {% endcode %}
 
-Related to [BrightnessControl Interface](smarthomecapability/brightnesscontrol-interface.md)
+Related to [BrightnessControl Interface](./smarthomecapability/brightnesscontrol-interface)
 
 ### colorType
 
@@ -365,7 +365,7 @@ ChangeColor Directive Request 예시 (POST, /nugu/v1/capabilities/ColorControl/d
 ```
 {% endcode %}
 
-Related to [ColorControl Interface](smarthomecapability/colorcontrol-interface.md)
+Related to [ColorControl Interface](smarthomecapability/colorcontrol-interface)
 
 ### deviceTemperatureLevel
 
@@ -411,7 +411,7 @@ SetDeviceTemperatureLevel Directive Request 예시 (POST, /nugu/v1/capabilities/
 ```
 {% endcode %}
 
-Related to [DeviceTemperatureControl Interface](smarthomecapability/devicetemperaturecontrol-interface.md)
+Related to [DeviceTemperatureControl Interface](smarthomecapability/devicetemperaturecontrol-interface)
 
 ### humidityLevel
 
@@ -461,7 +461,7 @@ SetHumidity Directive Request 예시 (POST, /nugu/v1/capabilities/HumidityContro
 ```
 {% endcode %}
 
-Related to [HumidityControl Interface](smarthomecapability/humiditycontrol-interface.md)
+Related to [HumidityControl Interface](smarthomecapability/humiditycontrol-interface)
 
 ### humidityDelta
 
@@ -511,7 +511,7 @@ IncreaseHumidity Directive Request 예시 (POST, /nugu/v1/capabilities/HumidityC
 ```
 {% endcode %}
 
-Related to [HumidityControl Interface](smarthomecapability/humiditycontrol-interface.md)
+Related to [HumidityControl Interface](smarthomecapability/humiditycontrol-interface)
 
 ### mode
 
@@ -629,7 +629,7 @@ SetMode Directive Request 예시 (POST, /nugu/v1/capabilities/ModeControl/direct
 ```
 {% endcode %}
 
-Related to [ModeControl Interface](smarthomecapability/modecontrol-interface.md)
+Related to [ModeControl Interface](smarthomecapability/modecontrol-interface)
 
 ### temperatureLevel
 
@@ -681,7 +681,7 @@ SetTemperature Directive Request 예시 (POST, /nugu/v1/capabilities/Temperature
 ```
 {% endcode %}
 
-Related to [TemperatureControl Interface](smarthomecapability/temperaturecontrol-interface.md)
+Related to [TemperatureControl Interface](smarthomecapability/temperaturecontrol-interface)
 
 ### temperatureDelta
 
@@ -733,5 +733,5 @@ IncreaseTemperature Directive Request 예시 (POST, /nugu/v1/capabilities/Temper
 ```
 {% endcode %}
 
-Related to [TemperatureControl Interface](smarthomecapability/temperaturecontrol-interface.md)
+Related to [TemperatureControl Interface](smarthomecapability/temperaturecontrol-interface)
 

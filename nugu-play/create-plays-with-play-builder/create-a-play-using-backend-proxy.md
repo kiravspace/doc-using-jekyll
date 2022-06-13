@@ -1,14 +1,14 @@
-# 외부 연동 서버 \(Backend proxy\) 연결하기
+# 외부 연동 서버 (Backend proxy) 연결하기
 
 ## 개요
 
 Backend proxy는 응답을 생성하기 위해 필요한 정보를 외부로부터 가져와야 하는 경우 사용하는 서버입니다.
 
 {% alerts style="info" %}
-개발에 대한 자세한 내용은 [외부 연동 서버\(Backend proxy\)](use-backend-proxy/)를 참고하세요.
+개발에 대한 자세한 내용은 [외부 연동 서버\(Backend proxy\)](use-backend-proxy)를 참고하세요.
 {% endalerts %}
 
-![](../../.gitbook/assets/create-a-play-using-backend-proxy-01.png)
+![](/assets/images/create-a-play-using-backend-proxy-01.png)
 
 Backend proxy는 위 그림과 같이 다음의 경우에 사용합니다.
 
@@ -49,9 +49,9 @@ Backend proxy는 위 그림과 같이 다음의 경우에 사용합니다.
 {% alerts style="info" %}
 Backend Parameter, 예외 상황 관리, Capability Interface\(Directive\)와 관련한 자세한 내용은 다음 링크 페이지를 참고하세요.
 
-* **Parameter**: [Parameter 사용하기](define-an-action/use-parameters/)
-* **Capability Interface\(Directive\)**: [AudioPlayer Interface 지원하는 Play 만들기](create-a-play-with-audioplayer/)
-* **예외 상황**: [예외 상황 관리](define-an-action/manage-exceptions.md)
+* **Parameter**: [Parameter 사용하기](./define-an-action/use-parameters)
+* **Capability Interface\(Directive\)**: [AudioPlayer Interface 지원하는 Play 만들기](./create-a-play-with-audioplayer)
+* **예외 상황**: [예외 상황 관리](./define-an-action/manage-exceptions)
 {% endalerts %}
 
 ## Backend proxy 연결 순서
@@ -59,7 +59,7 @@ Backend Parameter, 예외 상황 관리, Capability Interface\(Directive\)와 �
 Backend proxy를 사용하기 위해서는 다음과 같은 순서로 진행을 해야 합니다.
 
 1. Backend proxy 서버를 구축합니다.
-   * Backend proxy 개발에 대한 자세한 내용은 [외부 연동 서버\(Backend proxy\)](use-backend-proxy/)를 참고하세요. 
+   * Backend proxy 개발에 대한 자세한 내용은 [외부 연동 서버\(Backend proxy\)](use-backend-proxy)를 참고하세요. 
 2. Backend proxy를 Play와 연결합니다.
    * Play Builder에서 해당 Play의 `General` &gt; `외부 서버 연결 정보` 페이지에서 Backend proxy의 Web URL을 입력합니다.
    * Web URL 입력 시 http:// 또는 https://를 포함하여 작성합니다.
@@ -68,7 +68,7 @@ Backend proxy를 사용하기 위해서는 다음과 같은 순서로 진행을 
    * 어떤 Utterance Parameter를 정의하였고, 해당 Utterance Parameter는 어떠한 값들이 전달이 될 것인지 전달해야 합니다. Entity를 정규화 한다면 대표값이 Utterance Parameter에 담겨서 전달이 될 것이므로 해당 대표값을 안내해야 합니다. 
    * 정의한 Backend Parameter에 어떤 값이 담기기를 기대하는지 안내해야 합니다. 
    * Play를 만들면서, 예외 상황을 처리해야 한다면 예외 상황 관리에 등록을 하고, 이를 Exception Code로 요청해야 합니다. \(예 : 서버 장애,  잘못된 사용자의 요청 등\) 
-     * 예외 처리에 대한 자세한 내용은 [예외  상황 관리](define-an-action/manage-exceptions.md)를 참고하세요.
+     * 예외 처리에 대한 자세한 내용은 [예외  상황 관리](./define-an-action/manage-exceptions)를 참고하세요.
    * Capability Interface를 사용하는 경우 어떤 Intent에서 어떻게 Directive를 내보낼 것인지 논의합니다.  
 4. Backend proxy과 연결할 Action에서 `Backend proxy 사용 여부`를 On으로 설정합니다.
    * Backend proxy는 어떤 이름의 Action이 자신을 호출할지 알고 있어야 합니다. Backend proxy에서 알지못하는 Action이 호출을 하면, Play는 그  Action에서 멈추게 됩니다. 즉, Play 개발자는 Backend proxy를 호출할 Action을 Backend proxy 개발자에게 전달해야 합니다. 
@@ -78,7 +78,7 @@ Backend proxy를 사용하기 위해서는 다음과 같은 순서로 진행을 
 {% alerts style="info" %}
 이 장과 같이 보면 좋은 도움말
 
-* [Backend proxy](use-backend-proxy/)
-* [Backend Parameter](define-an-action/use-parameters/)
+* [Backend proxy](./use-backend-proxy)
+* [Backend Parameter](./define-an-action/use-parameters)
 {% endalerts %}
 

@@ -23,7 +23,7 @@ iOS 는 MicAgent 를 지원하지 않습니다.
 {% endalerts %}
 
 {% tabs %}
-{% tab title="Android" %}
+{% tabs::content title="Android" %}
 NuguAndroidClient instance 를 통해 MicrophoneAgent instance 에 접근할 수 있습니다.
 
 {% code %}
@@ -43,9 +43,9 @@ NuguAndroidClient.Builder(...)
     .enableMicrophone(MyMicrophone())
 ```
 {% endcode %}
-{% endtab %}
+{% endtabs::content %}
 
-{% tab title="Linux" %}
+{% tabs::content title="Linux" %}
 [CapabilityFactory::makeCapability](https://nugu-developers.github.io/nugu-linux/classNuguCapability_1_1CapabilityFactory.html#a46d96b1bc96903f02905c92ba8794bf6) 함수로 [MicAgent](https://nugu-developers.github.io/nugu-linux/classNuguCapability_1_1IMicHandler.html) 를 생성하고 [NuguClient](https://nugu-developers.github.io/nugu-linux/classNuguClientKit_1_1NuguClient.html) 에 추가해 주어야합니다.
 
 {% code %}
@@ -58,15 +58,15 @@ nugu_client->getCapabilityBuilder()
     ->construct();
 ```
 {% endcode %}
-{% endtab %}
+{% endtabs::content %}
 {% endtabs %}
 
 ### Context 구성
 
-디바이스의 microphone 상태를 [Context](mic.md#context) 에 포함시켜 주어야 합니다.
+디바이스의 microphone 상태를 [Context](mic#context) 에 포함시켜 주어야 합니다.
 
 {% tabs %}
-{% tab title="Android" %}
+{% tabs::content title="Android" %}
 Microphone 을 구현합니다.
 
 {% code %}
@@ -79,15 +79,15 @@ class MyMicrophone: Microphone {
 }
 ```
 {% endcode %}
-{% endtab %}
+{% endtabs::content %}
 {% endtabs %}
 
 ### Microphone 제어
 
-디바이스의 microphone 제어가 [SetMic](mic.md#setmic) directive 로 요청될 수 있습니다.
+디바이스의 microphone 제어가 [SetMic](mic#setmic) directive 로 요청될 수 있습니다.
 
 {% tabs %}
-{% tab title="Android" %}
+{% tabs::content title="Android" %}
 Microphone 을 구현합니다.
 
 {% code %}
@@ -105,9 +105,9 @@ class MyMicrophone: Microphone {
 }
 ```
 {% endcode %}
-{% endtab %}
+{% endtabs::content %}
 
-{% tab title="Linux" %}
+{% tabs::content title="Linux" %}
 [IMicListener](https://nugu-developers.github.io/nugu-linux/classNuguCapability_1_1IMicListener.html) 를 추가합니다.
 
 {% code %}
@@ -125,7 +125,7 @@ auto mic_listener(std::make_shared<MyMicListener>());
 CapabilityFactory::makeCapability<MicAgent, IMicHandler>(mic_listener.get());
 ```
 {% endcode %}
-{% endtab %}
+{% endtabs::content %}
 {% endtabs %}
 
 ## Context

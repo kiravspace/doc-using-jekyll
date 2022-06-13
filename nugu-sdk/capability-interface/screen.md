@@ -23,7 +23,7 @@ iOS/Linux 는 ScreenAgent 를 지원하지 않습니다.
 {% endalerts %}
 
 {% tabs %}
-{% tab title="Android" %}
+{% tabs::content title="Android" %}
 NuguAndroidClient instance 를 통해 ScreenAgent instance 에 접근할 수 있습니다.
 
 {% code %}
@@ -43,7 +43,7 @@ NuguAndroidClient.Builder(...)
     .enableScreen(MyScreen())
 ```
 {% endcode %}
-{% endtab %}
+{% endtabs::content %}
 {% endtabs %}
 
 ### Context 구성
@@ -51,7 +51,7 @@ NuguAndroidClient.Builder(...)
 디바이스의 디스플레이 상태를 [Context](screen.md#context) 에 포함시켜 주어야 합니다.
 
 {% tabs %}
-{% tab title="Android" %}
+{% tabs::content title="Android" %}
 Screen 을 구현합니다.
 
 {% code %}
@@ -64,7 +64,7 @@ class MyScreen: Screen {
 }
 ```
 {% endcode %}
-{% endtab %}
+{% endtabs::content %}
 {% endtabs %}
 
 ### 디스플레이 제어
@@ -72,7 +72,7 @@ class MyScreen: Screen {
 디바이스의 디스플레이 제어가 [TurnOn](screen.md#turnon)/[TurnOff](screen.md#turnoff)/[SetBrightness](screen.md#setbrightness) directive 로 요청될 수 있습니다.
 
 {% tabs %}
-{% tab title="Android" %}
+{% tabs::content title="Android" %}
 Screen 을 구현합니다.
 {% code %}
 ```text
@@ -93,7 +93,7 @@ class MyScreen: Screen {
 }
 ```
 {% endcode %}
-{% endtab %}
+{% endtabs::content %}
 {% endtabs %}
 
 ## Context

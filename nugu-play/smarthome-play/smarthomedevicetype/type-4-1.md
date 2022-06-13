@@ -69,9 +69,9 @@ Capability별 상세한 내용은 아래 리스트의 링크를 통해 확인하
 
 | Capability | Description | 예시발 |
 | :--- | :--- | :--- |
-| [PowerControl](../smarthomecapability/powercontrol-interface.md) | 공기청정기 전원 제어 기능입니다. 전원을 켜고 끄며 동작을 제어하는 기능들로 구성되어 있습니다. | "공기청정기 켜줘" |
-| [AirflowControl](../smarthomecapability/airflowcontrol-interface.md) | 공기청정기의 풍량 제어 기능입니다. 설정 풍량에 대한 상세한 정보는 SmartHomeAttribute : AirflowType을 참고하시기 바랍니다. | "공기청정기 풍량 강풍으로 설정해줘" |
-| [ModeControl](../smarthomecapability/modecontrol-interface.md) | 에어컨의 모드 제어 기능입니다. 설정 모드에 대한 상세한 정보는 SmartHomeAttribute : Mode를 참조하시기 바랍니다. | "공기청정기 자동모드로 설정해줘" |
-| [SetTimeControl](../smarthomecapability/settimecontrol-interface.md) | 공기청정기 기기의 시간 설정 기능입니다. | "공기청정기 1시간 후로 종료예약해줘" |
-| [AirQualityCheck](../smarthomecapability/airqualitycheck-interface.md) | 공기청정기의 공기상태 조회 기능입니다. | "공기청정기에서 공기상태 조회해줘" |
+| [PowerControl](../smarthomecapability/powercontrol-interface) | 공기청정기 전원 제어 기능입니다. 전원을 켜고 끄며 동작을 제어하는 기능들로 구성되어 있습니다. | "공기청정기 켜줘" |
+| [AirflowControl](../smarthomecapability/airflowcontrol-interface) | 공기청정기의 풍량 제어 기능입니다. 설정 풍량에 대한 상세한 정보는 SmartHomeAttribute : AirflowType을 참고하시기 바랍니다. | "공기청정기 풍량 강풍으로 설정해줘" |
+| [ModeControl](../smarthomecapability/modecontrol-interface) | 에어컨의 모드 제어 기능입니다. 설정 모드에 대한 상세한 정보는 SmartHomeAttribute : Mode를 참조하시기 바랍니다. | "공기청정기 자동모드로 설정해줘" |
+| [SetTimeControl](../smarthomecapability/settimecontrol-interface) | 공기청정기 기기의 시간 설정 기능입니다. | "공기청정기 1시간 후로 종료예약해줘" |
+| [AirQualityCheck](../smarthomecapability/airqualitycheck-interface) | 공기청정기의 공기상태 조회 기능입니다. | "공기청정기에서 공기상태 조회해줘" |
 

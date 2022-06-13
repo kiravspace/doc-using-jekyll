@@ -25,7 +25,7 @@ iOS 는 SpeakerAgent 를 지원하지 않습니다.
 {% endalerts %}
 
 {% tabs %}
-{% tab title="Android" %}
+{% tabs::content title="Android" %}
 NuguAndroidClient instance 를 통해 SpeakerAgent instance 에 접근할 수 있습니다.
 
 {% code %}
@@ -63,9 +63,9 @@ NuguAndroidClient.Builder(...)
     })
 ```
 {% endcode %}
-{% endtab %}
+{% endtabs::content %}
 
-{% tab title="Linux" %}
+{% tabs::content title="Linux" %}
 [CapabilityFactory::makeCapability](https://nugu-developers.github.io/nugu-linux/classNuguCapability_1_1CapabilityFactory.html#a46d96b1bc96903f02905c92ba8794bf6) 함수로 [SpeakerAgent](https://nugu-developers.github.io/nugu-linux/classNuguCapability_1_1ISpeakerHandler.html) 를 생성하고 [NuguClient](https://nugu-developers.github.io/nugu-linux/classNuguClientKit_1_1NuguClient.html) 에 추가해 주어야합니다.
 
 {% code %}
@@ -78,7 +78,7 @@ nugu_client->getCapabilityBuilder()
     ->construct();
 ```
 {% endcode %}
-{% endtab %}
+{% endtabs::content %}
 {% endtabs %}
 
 ### Context 구성
@@ -86,7 +86,7 @@ nugu_client->getCapabilityBuilder()
 Play 에서 디바이스의 볼륨을 제어하기 위해서는 디바이스의 볼륨 정보를 [Context](location.md#context) 에 포함시켜 주어야 합니다.
 
 {% tabs %}
-{% tab title="Android" %}
+{% tabs::content title="Android" %}
 각 Speaker.Type 의 Speaker 를 구현합니다.
 
 {% code %}
@@ -98,9 +98,9 @@ class MySpeaker: Speaker {
 }
 ```
 {% endcode %}
-{% endtab %}
+{% endtabs::content %}
 
-{% tab title="Linux" %}
+{% tabs::content title="Linux" %}
 [SpeakerType](https://nugu-developers.github.io/nugu-linux/group__SpeakerInterface.html#ga8601f6be80368c9d1a7c7b346c99a698) 의 [SpeakerInfo](https://nugu-developers.github.io/nugu-linux/classNuguCapability_1_1SpeakerInfo.html) 를 설정합니다.
 
 {% code %}
@@ -108,7 +108,7 @@ class MySpeaker: Speaker {
 speaker_handler->setSpeakerInfo(speakers)
 ```
 {% endcode %}
-{% endtab %}
+{% endtabs::content %}
 {% endtabs %}
 
 ### 볼륨 제어
@@ -118,7 +118,7 @@ speaker_handler->setSpeakerInfo(speakers)
 디바이스의 볼륨 음소거 제어가 [SetMute](speaker.md#setmute) directive 로 요청될 수 있습니다.
 
 {% tabs %}
-{% tab title="Android" %}
+{% tabs::content title="Android" %}
 Speaker 를 구현합니다.
 
 {% code %}
@@ -136,9 +136,9 @@ class MySpeaker: Speaker {
 }
 ```
 {% endcode %}
-{% endtab %}
+{% endtabs::content %}
 
-{% tab title="Linux" %}
+{% tabs::content title="Linux" %}
 [ISpeakerListener](https://nugu-developers.github.io/nugu-linux/classNuguCapability_1_1ISpeakerListener.html) 를 추가합니다.
 
 {% code %}
@@ -161,7 +161,7 @@ auto speaker_listener(std::make_shared<MySpeakerListener>());
 CapabilityFactory::makeCapability<SpeakerAgent, ISpeakerHandler>(speaker_listener.get());
 ```
 {% endcode %}
-{% endtab %}
+{% endtabs::content %}
 {% endtabs %}
 
 ## Context

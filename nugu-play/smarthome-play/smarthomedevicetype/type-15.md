@@ -78,10 +78,10 @@ Capability별 상세한 내용은 아래 리스트의 링크를 통해 확인하
 
 | Capability | Description | 예시발 |
 | :--- | :--- | :--- |
-| [PowerControl](../smarthomecapability/powercontrol-interface.md) | 에어컨 전원 제어 기능입니다. 전원을 켜고 끄며 동작을 제어하는 기능들로 구성되어 있습니다. | "에어컨 켜줘" |
-| [TemperatureControl](../smarthomecapability/temperaturecontrol-interface.md) | 에어컨의 설정 온도 제어 기능입니다. 기기 자체의 온도가 아닌 주변 온도 및 희망 온도에 대한 기능들로 구성되어 있습니다. | "에어컨 온도 23도로 설정해줘" |
-| [AirflowControl](../smarthomecapability/airflowcontrol-interface.md) | 에어컨의 풍량 제어 기능입니다. 설정 풍량에 대한 상세한 정보는 SmartHomeAttribute : AirflowType을 참조하시기 바랍니다. | "에어컨 풍량 강풍으로 설정해줘" |
-| [ModeControl](../smarthomecapability/modecontrol-interface.md) | 에어컨의 모드 제어 기능입니다. 설정 모드에 대한 상세헌 정보는 SmartHomeAttribute : Mode를 참조하시기 바랍니다. | "에어컨 냉방모드로 설정해줘" |
-| [SetTimeControl](../smarthomecapability/settimecontrol-interface.md) | 에어컨 기기의 시간 설정 기능입니다. | "에어컨 1시간 후로 종료예약해줘" |
-| [AirQualityControl](../smarthomecapability/airqualitycheck-interface.md) | 에어컨의 공기상태 조회 기능입니다. | "에어컨에서 공기상태 조회해줘" |
+| [PowerControl](../smarthomecapability/powercontrol-interface) | 에어컨 전원 제어 기능입니다. 전원을 켜고 끄며 동작을 제어하는 기능들로 구성되어 있습니다. | "에어컨 켜줘" |
+| [TemperatureControl](../smarthomecapability/temperaturecontrol-interface) | 에어컨의 설정 온도 제어 기능입니다. 기기 자체의 온도가 아닌 주변 온도 및 희망 온도에 대한 기능들로 구성되어 있습니다. | "에어컨 온도 23도로 설정해줘" |
+| [AirflowControl](../smarthomecapability/airflowcontrol-interface) | 에어컨의 풍량 제어 기능입니다. 설정 풍량에 대한 상세한 정보는 SmartHomeAttribute : AirflowType을 참조하시기 바랍니다. | "에어컨 풍량 강풍으로 설정해줘" |
+| [ModeControl](../smarthomecapability/modecontrol-interface) | 에어컨의 모드 제어 기능입니다. 설정 모드에 대한 상세헌 정보는 SmartHomeAttribute : Mode를 참조하시기 바랍니다. | "에어컨 냉방모드로 설정해줘" |
+| [SetTimeControl](../smarthomecapability/settimecontrol-interface) | 에어컨 기기의 시간 설정 기능입니다. | "에어컨 1시간 후로 종료예약해줘" |
+| [AirQualityControl](../smarthomecapability/airqualitycheck-interface) | 에어컨의 공기상태 조회 기능입니다. | "에어컨에서 공기상태 조회해줘" |
 

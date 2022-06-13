@@ -1,6 +1,6 @@
 # 구성요소
 
-![](../../../.gitbook/assets/component-01.jpeg)
+![](/assets/images/component-01.jpeg)
 
 ## 구성요소 목록
 
@@ -45,7 +45,7 @@ NUGU SDK for iOS 를 통한 개발을 위해서는 `NuguCore`, `NuguAgents` Fram
 ## CocoaPods
 
 {% alerts style="info" %}
-NUGU iOS SDK는 의존성 관리를 위해 CocoaPods를 지원합니다.\
+NUGU iOS SDK는 의존성 관리를 위해 CocoaPods를 지원합니다.
 더 자세한 내용은 [https://cocoapods.org](https://cocoapods.org)에서 확인이 가능합니다.
 {% endalerts %}
 

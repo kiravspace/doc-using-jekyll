@@ -78,10 +78,10 @@ Capability별 상세한 내용은 아래 리스트의 링크를 통해 확인하
 
 | Capability | Description | 예시발 |
 | :--- | :--- | :--- |
-| [PowerControl](../smarthomecapability/powercontrol-interface.md) | 에어워셔 전원 제어 기능입니다. 전원을 켜고 끄며 동작을 제어하는 기능들로 구성되어 있습니다. | "에어워셔 켜줘" |
-| [AirflowControl](../smarthomecapability/airflowcontrol-interface.md) | 에어워셔의 풍량 제어 기능입니다. 설정 풍량에 대한 상세한 정보는 SmartHomeAttribute : AirflowType을 참조하시기 바랍니다. | "에어워셔 풍량 강풍으로 설정해줘" |
-| [AirQualityCheck](../smarthomecapability/airqualitycheck-interface.md) | 에어워셔의 공기상태 조회 기능입니다. | "에어워셔에서 공기상태 조회해줘" |
-| [SetTimeControl](../smarthomecapability/settimecontrol-interface.md) | 에어워셔 기기의 시간 설정 기능입니다. | "에어워셔 1시간 후로 종료예약해줘" |
-| [ModeControl](../smarthomecapability/modecontrol-interface.md) | 에어워셔의 모드 제어 기능입니다. 설정 모드에 대한 상세한 정보는 SmartHomeAttribute : Mode를 참조하시기 바랍니다. | "에어워셔 공기청정모드로 설정해줘" |
-| [HumidityControl](../smarthomecapability/humiditycontrol-interface.md) | 에어워셔의 습도 제어 기능입니다. | "에어워셔 습도 50%로 설정해줘" |
+| [PowerControl](../smarthomecapability/powercontrol-interface) | 에어워셔 전원 제어 기능입니다. 전원을 켜고 끄며 동작을 제어하는 기능들로 구성되어 있습니다. | "에어워셔 켜줘" |
+| [AirflowControl](../smarthomecapability/airflowcontrol-interface) | 에어워셔의 풍량 제어 기능입니다. 설정 풍량에 대한 상세한 정보는 SmartHomeAttribute : AirflowType을 참조하시기 바랍니다. | "에어워셔 풍량 강풍으로 설정해줘" |
+| [AirQualityCheck](../smarthomecapability/airqualitycheck-interface) | 에어워셔의 공기상태 조회 기능입니다. | "에어워셔에서 공기상태 조회해줘" |
+| [SetTimeControl](../smarthomecapability/settimecontrol-interface) | 에어워셔 기기의 시간 설정 기능입니다. | "에어워셔 1시간 후로 종료예약해줘" |
+| [ModeControl](../smarthomecapability/modecontrol-interface) | 에어워셔의 모드 제어 기능입니다. 설정 모드에 대한 상세한 정보는 SmartHomeAttribute : Mode를 참조하시기 바랍니다. | "에어워셔 공기청정모드로 설정해줘" |
+| [HumidityControl](../smarthomecapability/humiditycontrol-interface) | 에어워셔의 습도 제어 기능입니다. | "에어워셔 습도 50%로 설정해줘" |
 

@@ -53,6 +53,6 @@ Capability별 상세한 내용은 아래 리스트의 링크를 통해 확인하
 
 | Capability | Description | 예시발화 |
 | :--- | :--- | :--- |
-| [PowerControl](../smarthomecapability/powercontrol-interface.md) | 의류관리기의 전원제어 기능입니다. 전원을 켜고 끄며 동작을 제어하는 기능들로 구성되어 있습니다. | "의류관리기 켜줘" |
-| [StateCheck](../smarthomecapability/statecheck-interface.md) | 의류관리기의 상태 조회 기능입니다. 현재 기기의 상태를 조회하는 기능들로 구성되어 있습니다. | "의류관리기 현재 상태 알려줘" |
+| [PowerControl](../smarthomecapability/powercontrol-interface) | 의류관리기의 전원제어 기능입니다. 전원을 켜고 끄며 동작을 제어하는 기능들로 구성되어 있습니다. | "의류관리기 켜줘" |
+| [StateCheck](../smarthomecapability/statecheck-interface) | 의류관리기의 상태 조회 기능입니다. 현재 기기의 상태를 조회하는 기능들로 구성되어 있습니다. | "의류관리기 현재 상태 알려줘" |
 

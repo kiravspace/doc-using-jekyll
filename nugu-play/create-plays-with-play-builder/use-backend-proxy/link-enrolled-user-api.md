@@ -1,6 +1,6 @@
 # Biz 사용자(Enrolled user) 정보 수신 연동
 
-Private Play에 한하여, [Biz 사용자 관리](../../../work-with-nugu-biz/manage-enrolled-user/)를 통해 초대, 등록된 Biz 사용자 (Enrolled User) 정보를 Backend proxy에서 확인 할 수 있습니다. 연동규격에서 제공하는 사용자 정보는 다음과 같습니다.
+Private Play에 한하여, [Biz 사용자 관리](../../../work-with-nugu-biz/manage-enrolled-user)를 통해 초대, 등록된 Biz 사용자 (Enrolled User) 정보를 Backend proxy에서 확인 할 수 있습니다. 연동규격에서 제공하는 사용자 정보는 다음과 같습니다.
 
 {% code %}
 ```bash
@@ -52,7 +52,7 @@ Content-Type: application/json
 | profile.privatePlay.enrolledUser.phoneNo     | string | Y         | 초대 사용자 전화번호                                                                                                                                                       |
 | profile.privatePlay.enrolledUser.email       | string | Y         | 초대 사용자 이메일                                                                                                                                                        |
 | profile.privatePlay.enrolledUser.tag         | string | N         | 초대 사용자 추가 정보 (대리점 코드, 사번, 인트라넷 사용자 아이디 등 필요한 정보를 넣어서 이용)                                                                                                          |
-| profile.privatePlay.enrolledUser.userToken   | string | N         | 초대 사용자에게 [Biz 사용자 API Token 생성](../../../work-with-nugu-biz/biz-api/api-enrolleduser/biz-1/api-enrolleduser-createtoken.md) 과정에 생성한 Token 정보, Biz Kit 정식판 퍼블리셔 전용 |
+| profile.privatePlay.enrolledUser.userToken   | string | N         | 초대 사용자에게 [Biz 사용자 API Token 생성](../../../work-with-nugu-biz/biz-api/api-enrolleduser/biz-1/api-enrolleduser-createtoken) 과정에 생성한 Token 정보, Biz Kit 정식판 퍼블리셔 전용 |
 | profile.privatePlay.enrolledUser.serviceType | string | N         | 초대 받아 등록된 사용자의 초대 유형, Biz Kit 정식판 퍼블리셔 전용 (PLAY, SERVICE)                                                                                                         |
 
 {% alerts style="danger" %}

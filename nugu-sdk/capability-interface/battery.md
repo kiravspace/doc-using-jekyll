@@ -20,7 +20,7 @@ description: 디바이스 배터리 정보를 Play 로 전달하기 위한 규�
 Battery interface 규격에 따른 디바이스의 정보 전달은 BatteryAgent 가 처리합니다.
 
 {% tabs %}
-{% tab title="Android" %}
+{% tabs::content title="Android" %}
 NuguAndroidClient instance 를 통해 BatteryAgent instance 에 접근할 수 있습니다.
 
 {% code %}
@@ -42,9 +42,9 @@ NuguAndroidClient.Builder(...)
     .enableBattery(MyBatteryStatusProvider())
 ```
 {% endcode %}
-{% endtab %}
+{% endtabs::content %}
 
-{% tab title="Linux" %}
+{% tabs::content title="Linux" %}
 CapabilityFactory::makeCapability 함수로 BatteryAgent 를 생성하고 NuguClient 에 추가해 주어야합니다.
 
 {% code %}
@@ -57,7 +57,7 @@ nugu_client->getCapabilityBuilder()
     ->construct();
 ```
 {% endcode %}
-{% endtab %}
+{% endtabs::content %}
 {% endtabs %}
 
 ### Context 구성
@@ -65,7 +65,7 @@ nugu_client->getCapabilityBuilder()
 디바이스 배터리 정보를 [Context](battery.md#context) 에 포함시켜 주어야 합니다.
 
 {% tabs %}
-{% tab title="Android" %}
+{% tabs::content title="Android" %}
 BatteryStatusProvider 를 구현합니다.
 
 {% code %}
@@ -81,9 +81,9 @@ class MyBatteryStatusProvider: BatteryStatusProvider {
 }
 ```
 {% endcode %}
-{% endtab %}
+{% endtabs::content %}
 
-{% tab title="Linux" %}
+{% tabs::content title="Linux" %}
 IBatteryListener를 추가합니다.
 
 {% code %}
@@ -100,7 +100,7 @@ public:
 auto battery_listener(std::make_shared<BatteryListener>());
 ```
 {% endcode %}
-{% endtab %}
+{% endtabs::content %}
 {% endtabs %}
 
 ## Context

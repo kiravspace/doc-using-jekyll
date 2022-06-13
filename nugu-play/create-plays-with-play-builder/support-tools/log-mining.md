@@ -7,7 +7,7 @@
 | 정상 응답 실패  | NLU 분석은 이루어졌으나, 정상 응답이 되지 않은 것으로 추정되는 발화 |
 | NLU 분석 실패 | NLU 분석이 되지 않아, Fallback 처리된 발화           |
 
-이 도구는 스피커를 통해 사용자에게 전달되는 최종 응답이 에러 메세지에 해당하는 경우 '서비스 실패'라고 판단하며, 이 때 NLU 분석이 되었다면 `정상 응답 실패`, NLU 분석 결과가 없다면 `NLU 분석 실패`로 분류합니다. [Fallback prompt](../define-an-action/built-in-actions.md#fallback), [Exception prompt](../define-an-action/manage-exceptions.md) 외에도, 일반 액션에서 "제가 할 수 없는 일이에요.", "검색에 실패했습니다" 등과 같은 응답이 전달된 경우, 서비스 실패로 분류되어 `실패 발화 분석` 도구의 분석 대상이 될 수 있습니다.
+이 도구는 스피커를 통해 사용자에게 전달되는 최종 응답이 에러 메세지에 해당하는 경우 '서비스 실패'라고 판단하며, 이 때 NLU 분석이 되었다면 `정상 응답 실패`, NLU 분석 결과가 없다면 `NLU 분석 실패`로 분류합니다. [Fallback prompt](../define-an-action/built-in-actions#fallback), [Exception prompt](../define-an-action/manage-exceptions) 외에도, 일반 액션에서 "제가 할 수 없는 일이에요.", "검색에 실패했습니다" 등과 같은 응답이 전달된 경우, 서비스 실패로 분류되어 `실패 발화 분석` 도구의 분석 대상이 될 수 있습니다.
 
 ## 정상 응답 실패 <a href="failed" id="failed"></a>
 
@@ -19,13 +19,13 @@
 
 Play 개발자가 요청한 학습 데이터를 기반으로 생성된 User Utterance Model 만으로는 NLU 엔진이 해당 발화를 분석할 수 없는 경우 해당 발화를 보여주며, 그 중 해결 방안을 제안할 수 있는 경우 이를 보여줍니다. 이 도구가 제시하는 해결 방안은 크게 두 가지 `Entity 등록`과 `용언 등록`이 있습니다.
 
-![](../../../.gitbook/assets/log-mining-01.png)
+![](/assets/images/log-mining-01.png)
 
 ### 추천 해결 방안 1 : Entity 등록 <a href="log-mining-entity" id="log-mining-entity"></a>
 
 NLU 분석 실패 발화 내의 특정 단어가 Entity일 가능성이 있어서 Entity로 등록할 필요가 있다고 분석되는 경우에 추천 방안이 제시됩니다. 이 추천 결과를 통해 (1) 해당 문장 자체를 기존 Intent의 예상 발화로 추가하거나, (2) 발화 내의 특정 단어를 Entity로 추가하여 Model을 수정하는 것을 권장합니다.
 
-![](../../../.gitbook/assets/log-mining-02.png)
+![](/assets/images/log-mining-02.png)
 
 #### (1) 이 문장과 유사한 훈련 문장이 있는 Intent
 
@@ -39,7 +39,7 @@ NLU 분석 실패 발화 내의 특정 단어가 Entity일 가능성이 있어�
 
 NLU 분석의 원인이 용언인 경우, 그 문장과 유사한 의미로 분석되는 학습 문장 및 Intent을 추천합니다. 이 용언은 기존 데이터에 포함되지 않은 새로운 용언일 가능성이 높습니다. 이 용언과 기존 학습 문장을 조합하여 새로운 학습 문장 및 Intent를 추천하게 되며, 이때 학습 문장에 Entity 태깅이 필요하다면, Entity 태깅된 학습 문장이 추천됩니다.
 
-![](../../../.gitbook/assets/log-mining-03.png)
+![](/assets/images/log-mining-03.png)
 
 추천된 문장의 의도가 Intent와 유사하다고 판단된다면, 우측 버튼을 통해 훈련 문장으로 추가하는 것을 권장합니다.
 
@@ -53,5 +53,5 @@ NLU 분석의 원인이 용언인 경우, 그 문장과 유사한 의미로 분�
 
 {% alerts style="info" %}
 Play로 들어오는 발화 중, Built-in Intent로 분석되었거나, 정상 응답을 한 발화는 `실패 발화 분석` 결과에 노출되지 않습니다. 전체 발화 통계는 다음의 도움말을 참고하세요.\
-[Play 이용 통계 확인](../../distribute-and-manage-a-play/monitor-play-stats.md)
+[Play 이용 통계 확인](../../distribute-and-manage-a-play/monitor-play-stats)
 {% endalerts %}

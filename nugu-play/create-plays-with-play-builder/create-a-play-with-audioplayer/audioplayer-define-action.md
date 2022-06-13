@@ -14,7 +14,7 @@ AudioPlayer Interface를 지원하는 Play는 다음의 세 경우에 대해 Act
 
 따라서 Custom Intent, Build-in Intent, AudioPlayer Event에 대한 Action을 정의할 때는 각 Action 내에서 스피커의 상태에 따라 구현을 달리해야 할 수 있기 때문에 매우 많은 조합에 대한 처리를 해주어야 합니다.
 
-![](../../../.gitbook/assets/audioplayer-define-action-01.png)
+![](/assets/images/audioplayer-define-action-01.png)
 
 그러나, 실제 구현할 때는 모든 경우의 수를 다 정의할 필요는 없으며, 시나리오에 꼭 필요한 사항만 정의하면 되기 때문에 최댓값보다는 적은 수의 Action을 정의하게 됩니다.
 

@@ -14,8 +14,8 @@ TemplateView Interface에서 필수로 override 해야 하는 method입니다.
 
 | Methods |
 | :--- |
-| **fun load\(templateContent: String, deviceTypeCode: String, dialogRequestId: String, onLoadingComplete: \(\(\) -&gt; Unit\)? = null\)** 새로운 탬플릿 노출이 필요할때 TemplateRenderer의 render\(\)를 통해 호출됩니다. templateContent에는 template payload 전체가 전달됩니다. |
-| **fun update\(templateContent: String, dialogRequestedId: String, onLoadingComplete: \(\(\) -&gt; Unit\)\)** 이미 노출된 탬플릿의 부분 업데이트가 필요할때 TemplateRenderer의 update\(\)를 통해 호출됩니다. templateContent에는 업데이트가 필요한 template payload가 전달됩니다. |
+| **fun load(templateContent: String, deviceTypeCode: String, dialogRequestId: String, onLoadingComplete: (() -&gt; Unit)? = null)** 새로운 탬플릿 노출이 필요할때 TemplateRenderer의 render()를 통해 호출됩니다. templateContent에는 template payload 전체가 전달됩니다. |
+| **fun update(templateContent: String, dialogRequestedId: String, onLoadingComplete: \(\(\) -&gt; Unit\)\)** 이미 노출된 탬플릿의 부분 업데이트가 필요할때 TemplateRenderer의 update\(\)를 통해 호출됩니다. templateContent에는 업데이트가 필요한 template payload가 전달됩니다. |
 
 {% alerts style="info" %}
 TemplateView 구현체는 android View 객체여야 합니다.

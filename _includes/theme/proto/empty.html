@@ -1,0 +1,17 @@
+{% if site.data.potion.is_show_empty_to_child_pages? %}
+{% if page.potion.empty_content? %}
+<div class="pagination">
+    {% for child in page.potion.child_pages %}
+    <a class="left" href="{{ child.url }}">
+        <div class="block left">
+            <div class="thumb"></div>
+            <div class="content">
+                <div class="title">{{ child.title }}</div>
+                <div class="description">{{ child.description }}</div>
+            </div>
+        </div>
+    </a>
+    {% endfor %}
+</div>
+{% endif %}
+{% endif %}

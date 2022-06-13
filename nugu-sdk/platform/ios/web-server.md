@@ -8,9 +8,9 @@ NUGU 서비스 관리 웹에서 사용할 cookie 를 설정합니다.
 
 * authToken: OAuth bearer 토큰
 * appVersion: Application 버전 정보
-* pocId: [https://developers.nugu.co.kr/\#/sdk/pocList](https://developers.nugu.co.kr/#/sdk/pocList) 에서 확인 가능
+* pocId: [https://developers.nugu.co.kr/#/sdk/pocList](https://developers.nugu.co.kr/#/sdk/pocList) 에서 확인 가능
 * theme: LIGHT 또는 DARK
-* oauthRedirectUri: NUGU 서비스 관리 웹 내에서 Play 에 로그인 하고 나면 호출되는 url \(ex&gt; nugu.public.sample://oauth\_refresh\)
+* oauthRedirectUri: NUGU 서비스 관리 웹 내에서 Play 에 로그인 하고 나면 호출되는 url (ex&gt; nugu.public.sample://oauth_refresh)
 * deviceUniqueId: NuguOauthClient 의 인증을 통해 관리되는 device unique id
 
 `NuguClientKit` 에서는 사용자의 편의를 위해 `NuguServiceWebView` 의 cookie 값을 default 로 설정해주고 있습니다. 이를 위해선 `addCookie` 함수를 사용하시고, 직접 cookie 를 설정해주시고 싶다면 `setCookie` 를 사용합니다.

@@ -2,10 +2,10 @@
 
 ## Step 1:최소 요구사항
 
-* Android 5.0\(API level 21\) 이상에서 지원합니다.
+* Android 5.0(API level 21) 이상에서 지원합니다.
 
 {% alerts style="info" %}
-Android 4.4\(API level 19\)에서도 동작하지만, TLS v1.2로 설정이 필요합니다.
+Android 4.4(API level 19\)에서도 동작하지만, TLS v1.2로 설정이 필요합니다.
 {% endalerts %}
 
 ## Step 2: NUGU  SDK 설치하기
@@ -274,5 +274,5 @@ authClient.loginAnonymously(object : NuguOAuthInterface.OnLoginListener {
 
 아래 Github 주소를 통해 NUGU SDK for Android 소스 코드를 다운로드 받을 수 있습니다.
 
-{% embed url="https://github.com/nugu-developers/nugu-android" caption="" %}
+{% link url="https://github.com/nugu-developers/nugu-android" caption="" %}
 

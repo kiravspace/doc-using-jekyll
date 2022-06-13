@@ -58,5 +58,5 @@ Capability별 상세한 내용은 아래 리스트의 링크를 통해 확인하
 
 | Capability | Description | 예시발화 |
 | :--- | :--- | :--- |
-| [PowerControl](../smarthomecapability/powercontrol-interface.md) | 가스차단기 전원 제어 기능입니다. 전원을 켜고 끄며 동작을 제어하는 기능들로 구성되어 있습니다. | "가스차단기 닫아줘" |
+| [PowerControl](../smarthomecapability/powercontrol-interface) | 가스차단기 전원 제어 기능입니다. 전원을 켜고 끄며 동작을 제어하는 기능들로 구성되어 있습니다. | "가스차단기 닫아줘" |
 

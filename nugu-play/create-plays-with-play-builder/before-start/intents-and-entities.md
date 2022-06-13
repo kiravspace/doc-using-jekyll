@@ -3,7 +3,7 @@
 Play가 제공할 기능들을 사용하기 위해 사용자는 발화를 통해 Play에게 의도를 전달해야 합니다. 인간과 기계(Play)가 음성 대화를 통해 상호 작용할 수 있도록 하는 언어모델을 User Utterance Model이라고 합니다. Play는 이러한 모델을 통해 사용자의 말을 이해하고 그 속에 담긴 요청/명령을 수행할 수 있게 됩니다.
 
 {% alerts style="info" %}
-의도와 기능에 대한 자세한 내용은 [Play](intents-and-entities.md)를 참고하세요.
+의도와 기능에 대한 자세한 내용은 [Play](intents-and-entities)를 참고하세요.
 {% endalerts %}
 
 그리고, User Utterance Model은 Intent와 Entity로 구성됩니다. 여기서 Intent는 Play의 기능을 동작시키기 위해 표현하는 사용자 의도를 의미하며, Entity는 사용자의 요청을 정확히 처리하기 위해 Intent 외에 추가로 알아야 하는 개체를 의미합니다.
@@ -11,7 +11,7 @@ Play가 제공할 기능들을 사용하기 위해 사용자는 발화를 통해
 Play Builder는 사용자가 정의한 User Utterance Model을 바탕으로 NLU 엔진을 자동으로 학습시킵니다. 이후 사용자가 예상 발화와 일치하거나 유사한 의도를 가지는 발화를 한 경우에 NLU 엔진은 해당 Intent와 Entity로 분석합니다.
 
 {% alerts style="info" %}
-User Utterance Model 모델에 대한 자세한 내용은 [User Utterance Model 정의하기(Intent & Entity)](../define-user-utterance-model/)를 참고하세요.
+User Utterance Model 모델에 대한 자세한 내용은 [User Utterance Model 정의하기(Intent & Entity)](../define-user-utterance-model)를 참고하세요.
 {% endalerts %}
 
 ## Intent
@@ -44,7 +44,7 @@ Entity는 필요한 경우에만 정의하는 선택 요소이지만, 정의한 
 **Entity Type**은 특정 Entity들의 집합 또는 그 범주를 의미하며,\
 **Entity Role**은 특정 Entity의 발화 문장에서의 역할을 의미합니다.
 
-![](../../../.gitbook/assets/intents-and-entities-01.png)
+![](/assets/images/intents-and-entities-01.png)
 
 Entity Type은 Built-in Entity Type과 Custom Entity type으로 구분됩니다.
 
@@ -71,12 +71,12 @@ Entity Type은 Built-in Entity Type과 Custom Entity type으로 구분됩니다.
 
 ask.weather를 생성하고, 이 Intent에 예상 발화를 연결하면 User Utterance Model이 완성됩니다.
 
-![](../../../.gitbook/assets/intents-and-entities-02.png)
+![](/assets/images/intents-and-entities-02.png)
 
 그러나, 실제로는 사용자가 "어제 날씨 알려줘", "내일 날씨 알려줘", "명동 날씨 알려줘" 와 같이 발화할 수도 있습니다. 이러한 발화들을 각각 독립된 Intent로 정의한 뒤, 각 Intent를 처리하는 기능들을 추가하여 처리하는 것도 가능합니다.
 
-![](../../../.gitbook/assets/intents-and-entities-03.png)
+![](/assets/images/intents-and-entities-03.png)
 
 그러나 '어제', '내일', '명동'을 Entity로 간주하고 동일한 ask.weather Intent로 처리하면, 조금 더 효율적으로 대응이 가능합니다. 이를 위해, 같은 속성을 가진 Entity끼리 하나의 Entity Type으로 묶고, 이를 예상 발화에 지정하면 Entity를 활용한 User Utterance Model을 정의할 수 있습니다. Entity Type을 예상 발화에 지정할 때에는 Entity Type별로 하나의 값만을 사용해도 됩니다.
 
-![](../../../.gitbook/assets/intents-and-entities-04.png)
+![](/assets/images/intents-and-entities-04.png)

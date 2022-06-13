@@ -16,7 +16,7 @@ description: 전화 수/발신 기능 제어를 위한 규격
 
 ## State Diagram
 
-![](../../.gitbook/assets/phonecall-01.png)
+![](/assets/images/phonecall-01.png)
 
 ## SDK Interface
 
@@ -25,7 +25,7 @@ description: 전화 수/발신 기능 제어를 위한 규격
 PhoneCall interface 규격에 따른 디바이스의 동작 제어는 PhoneCallAgent 가 처리합니다.
 
 {% tabs %}
-{% tab title="Android" %}
+{% tabs::content title="Android" %}
 NuguAndroidClient 생성시 PhoneCallAgent 를 추가합니다.
 
 {% code %}
@@ -57,9 +57,9 @@ NuguAndroidClient instance 를 통해 PhoneCallAgent instance 에 접근할 수 
 val phoneCallAgent = nuguAndroidClient.getAgent(PhoneCallAgent.NAMESPACE)
 ```
 {% endcode %}
-{% endtab %}
+{% endtabs::content %}
 
-{% tab title="iOS" %}
+{% tabs::content title="iOS" %}
 NuguClient instance 를 통해 PhoneCallAgent instance 에 접근할 수 있습니다.
 
 {% code %}
@@ -67,9 +67,9 @@ NuguClient instance 를 통해 PhoneCallAgent instance 에 접근할 수 있습�
 let phoneCallAgent = nuguClient.phoneCallAgent
 ```
 {% endcode %}
-{% endtab %}
+{% endtabs::content %}
 
-{% tab title="Linux" %}
+{% tabs::content title="Linux" %}
 [CapabilityFactory::makeCapability](https://nugu-developers.github.io/nugu-linux/classNuguCapability_1_1CapabilityFactory.html#a46d96b1bc96903f02905c92ba8794bf6) 함수로 [PhoneCallAgent](https://nugu-developers.github.io/nugu-linux/classNuguCapability_1_1IPhoneCallHandler.html) 를 생성하고 [NuguClient](https://nugu-developers.github.io/nugu-linux/classNuguClientKit_1_1NuguClient.html) 에 추가해 주어야합니다.
 
 {% code %}
@@ -82,7 +82,7 @@ nugu_client->getCapabilityBuilder()
     ->construct();
 ```
 {% endcode %}
-{% endtab %}
+{% endtabs::content %}
 {% endtabs %}
 
 ### Context 구성
@@ -90,7 +90,7 @@ nugu_client->getCapabilityBuilder()
 통화 상태 정보를 [Context](phonecall.md#context) 에 포함시켜 주어야 합니다.
 
 {% tabs %}
-{% tab title="Android" %}
+{% tabs::content title="Android" %}
 PhoneCallClient 를 구현합니다.
 
 {% code %}
@@ -104,9 +104,9 @@ class MyPhoneCallClient: PhoneCallClient {
 }
 ```
 {% endcode %}
-{% endtab %}
+{% endtabs::content %}
 
-{% tab title="iOS" %}
+{% tabs::content title="iOS" %}
 PhoneCallAgentDelegate 를 추가합니다.
 
 {% code %}
@@ -121,7 +121,7 @@ class MyPhoneCallAgentDelegate: PhoneCallAgentDelegate {
 phoneCallAgent.delegate = self
 ```
 {% endcode %}
-{% endtab %}
+{% endtabs::content %}
 {% endtabs %}
 
 ### 발신
@@ -129,7 +129,7 @@ phoneCallAgent.delegate = self
 전화 발신이 [SendCandidates](phonecall.md#sendcandidates), [MakeCall](phonecall.md#makecall) directive 로 요청될 수 있습니다.
 
 {% tabs %}
-{% tab title="Android" %}
+{% tabs::content title="Android" %}
 PhoneCallClient 를 구현합니다.
 
 {% code %}
@@ -148,9 +148,9 @@ class MyPhoneCallClient: PhoneCallClient {
 }
 ```
 {% endcode %}
-{% endtab %}
+{% endtabs::content %}
 
-{% tab title="iOS" %}
+{% tabs::content title="iOS" %}
 PhoneCallAgentDelegate 를 추가합니다
 
 {% code %}
@@ -171,9 +171,9 @@ class MyPhoneCallAgentDelegate: PhoneCallAgentDelegate {
 phoneCallAgent.delegate = self
 ```
 {% endcode %}
-{% endtab %}
+{% endtabs::content %}
 
-{% tab title="Linux" %}
+{% tabs::content title="Linux" %}
 [IPhoneCallListener](https://nugu-developers.github.io/nugu-linux/classNuguCapability_1_1IPhoneCallListener.html) 를 추가합니다.
 
 {% code %}
@@ -198,7 +198,7 @@ auto phonecall_listener(std::make_shared<MyPhoneCallListener>());
 CapabilityFactory::makeCapability<PhoneCallAgent, IPhoneCallHandler>(phonecall_listener.get());
 ```
 {% endcode %}
-{% endtab %}
+{% endtabs::content %}
 {% endtabs %}
 
 ### 수신
@@ -210,7 +210,7 @@ iOS 는 수신 수락/거절 기능을 제공하지 않습니다.
 {% endalerts %}
 
 {% tabs %}
-{% tab title="Android" %}
+{% tabs::content title="Android" %}
 PhoneCallClient 를 구현합니다.
 
 {% code %}
@@ -229,9 +229,9 @@ class MyPhoneCallClient: PhoneCallClient {
 }
 ```
 {% endcode %}
-{% endtab %}
+{% endtabs::content %}
 
-{% tab title="Linux" %}
+{% tabs::content title="Linux" %}
 [IPhoneCallListener](https://nugu-developers.github.io/nugu-linux/classNuguCapability_1_1IPhoneCallListener.html) 를 추가합니다.
 
 {% code %}
@@ -251,7 +251,7 @@ auto phonecall_listener(std::make_shared<MyPhoneCallListener>());
 CapabilityFactory::makeCapability<PhoneCallAgent, IPhoneCallHandler>(phonecall_listener.get());
 ```
 {% endcode %}
-{% endtab %}
+{% endtabs::content %}
 {% endtabs %}
 
 ## Context

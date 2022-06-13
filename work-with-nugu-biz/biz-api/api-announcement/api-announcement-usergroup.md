@@ -59,7 +59,7 @@ depth_order: 3
 | display.header       | body   | string          | Y  | 본문 제목                                                                                                                     |
 | display.body         | body   | string          | Y  | 본문 내용                                                                                                                     |
 | display.footer       | body   | string          |    | 본문 부가 설명                                                                                                                  |
-| display.image        | body   | string          |    | <p>이미지<br>ImageText Type에서 이미지가 없을 경우, 디폴트 이미지 노출<br><img src="../../../.gitbook/assets/img_notification.png" alt=""></p> |
+| display.image        | body   | string          |    | <p>이미지<br>ImageText Type에서 이미지가 없을 경우, 디폴트 이미지 노출<br><img src="/assets/images/img_notification.png" alt=""></p> |
 | display.grammarGuide | body   | array of string |    | 가이드 발화문                                                                                                                   |
 
 ## 3. Response <a href="#biz-announcement-v1-3response" id="biz-announcement-v1-3response"></a>

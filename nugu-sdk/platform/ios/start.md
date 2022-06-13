@@ -4,8 +4,8 @@
 
 * Xcode 11.0 or later
 * Swift 5.1
-* iOS 12.0+ \(v1.3.0 or more\) iOS 10.0+ \(less than v1.3.0\)
-* macOS 10.15.0+ \(v1.4.0 or more\) including mac catalyst
+* iOS 12.0+ (v1.3.0 or more) iOS 10.0+ (less than v1.3.0)
+* macOS 10.15.0+ (v1.4.0 or more\) including mac catalyst
 * tvOS 13.0+ \(v1.4.0 or more\)
 
 {% alerts style="warning" %}
@@ -16,7 +16,7 @@ iOS12 이상에서는 최신 버전을, iOS11 미만에서는 1.2.8 사용을 �
 ## Step 2: NUGU SDK 설치하기
 
 {% tabs %}
-{% tab title="Cocoapods" %}
+{% tabs::content title="Cocoapods" %}
 `Podfile`에 다음과 같이 의존성을 추가합니다.
 
 {% code %}
@@ -34,9 +34,9 @@ end
 $ pod install
 ```
 {% endcode %}
-{% endtab %}
+{% endtabs::content %}
 
-{% tab title="Carthage" %}
+{% tabs::content title="Carthage" %}
 `Cartfile`에 다음과 같이 의존성을 추가합니다.
 
 {% code %}
@@ -52,7 +52,7 @@ github "nugu-developers/nugu-ios"
 carthage update 
 ```
 {% endcode %}
-{% endtab %}
+{% endtabs::content %}
 {% endtabs %}
 
 ## Step 3: 프로젝트 설정하기
@@ -82,7 +82,7 @@ Redirect URI는 `nugu.user.{client-id}://auth`로 설정하는 것을 권고합�
 `info.plist` 파일에 다음과 같이 URL Scheme을 추가합니다.
 
 {% tabs %}
-{% tab title="info.plist" %}
+{% tabs::content title="info.plist" %}
 {% code %}
 ```xml
 <dict>
@@ -98,7 +98,7 @@ Redirect URI는 `nugu.user.{client-id}://auth`로 설정하는 것을 권고합�
 </dict>
 ```
 {% endcode %}
-{% endtab %}
+{% endtabs::content %}
 {% endtabs %}
 
 ### Configuration 파일 설정하기
@@ -119,7 +119,7 @@ Redirect URI는 `nugu.user.{client-id}://auth`로 설정하는 것을 권고합�
 `ConfigurationStore`을 초기화 합니다.
 
 {% tabs %}
-{% tab title="AppDelegate.swift" %}
+{% tabs::content title="AppDelegate.swift" %}
 {% code %}
 ```swift
 import NuguClientKit
@@ -131,7 +131,7 @@ Any]?) -> Bool {
 }
 ```
 {% endcode %}
-{% endtab %}
+{% endtabs::content %}
 {% endtabs %}
 
 ### 어플리케이션 권한 설정하기
@@ -139,14 +139,14 @@ Any]?) -> Bool {
 NUGU 서비스는 음성인식을 위하여 마이크 권한 문구를 Info.plist 파일에 추가합니다.
 
 {% tabs %}
-{% tab title="info.plist" %}
+{% tabs::content title="info.plist" %}
 {% code %}
 ```xml
 <key>NSMicrophoneUsageDescription</key>
 <string>For speech recognition</string>
 ```
 {% endcode %}
-{% endtab %}
+{% endtabs::content %}
 {% endtabs %}
 
 ## Step 4: NUGU 로그인 추가
@@ -171,7 +171,7 @@ NUGU 회원 연동 방식을 사용하기 위해서는 T아이디 연동이 필�
 인 앱 브라우저를 통한 인증 결과를 `NuguLoginKit`에서 처리하기 위해 다음과 같이 `AppDelegate` 클래스에 추가해야 합니다.
 
 {% tabs %}
-{% tab title="AppDelegate.swift" %}
+{% tabs::content title="AppDelegate.swift" %}
 {% code %}
 ```swift
 import NuguLoginKit
@@ -186,7 +186,7 @@ func application(_ app: UIApplication, open url: URL, options: [UIApplication.Op
 }
 ```
 {% endcode %}
-{% endtab %}
+{% endtabs::content %}
 {% endtabs %}
 
 #### 인 앱 브라우저를 통해 로그인
@@ -194,7 +194,7 @@ func application(_ app: UIApplication, open url: URL, options: [UIApplication.Op
 PoC 정보를 이용하여 다음과 같이 `OAuthManager`를 통해 값을 설정한 후에 인 앱 브라우저\(`SFSafariViewController`\)를 이용한 T아이 로그인을 시도합니다. 인증 절차가 모두 완료되면 결과를 Closure를 통해 받을 수 있습니다.
 
 {% tabs %}
-{% tab title="ViewController.swift" %}
+{% tabs::content title="ViewController.swift" %}
 {% code %}
 ```swift
 import NuguLoginKit
@@ -220,7 +220,7 @@ func login() {
 }
 ```
 {% endcode %}
-{% endtab %}
+{% endtabs::content %}
 {% endtabs %}
 
 #### 로그인 정보 갱신
@@ -228,7 +228,7 @@ func login() {
 발급 받은 `refresh-token`이 이미 있다면, 이 후에는 인 앱 브라우저 없이 로그인 정보를 갱신할 수 있습니다.
 
 {% tabs %}
-{% tab title="ViewController.swift" %}
+{% tabs::content title="ViewController.swift" %}
 {% code %}
 ```swift
 func refresh() {
@@ -243,7 +243,7 @@ func refresh() {
 }
 ```
 {% endcode %}
-{% endtab %}
+{% endtabs::content %}
 {% endtabs %}
 
 ### **NUGU 회원 미사용 방식으**로 로그인
@@ -253,7 +253,7 @@ func refresh() {
 PoC 정보를 이용하여 다음과 같이 `OAuthManager`를 통해 값을 설정한 후 로그인을 시도합니다. 인증 절차가 모두 완료되면 결과를 Closure를 통해 받을 수 있습니다.
 
 {% tabs %}
-{% tab title="ViewController.swift" %}
+{% tabs::content title="ViewController.swift" %}
 {% code %}
 ```swift
 import NuguLoginKit
@@ -279,7 +279,7 @@ func login() {
 }
 ```
 {% endcode %}
-{% endtab %}
+{% endtabs::content %}
 {% endtabs %}
 
 ## Step5. NUGU 음성인식 사용하기
@@ -289,13 +289,13 @@ func login() {
 음성인식을 요청 하기 전에 마이크 권한을 요청해 획득합니다.
 
 {% tabs %}
-{% tab title="ViewController.swift" %}
+{% tabs::content title="ViewController.swift" %}
 {% code %}
 ```swift
 AVAudioSession.sharedInstance().requestRecordPermission { hasPermission in }
 ```
 {% endcode %}
-{% endtab %}
+{% endtabs::content %}
 {% endtabs %}
 
 #### AVAudioSession 설정
@@ -303,7 +303,7 @@ AVAudioSession.sharedInstance().requestRecordPermission { hasPermission in }
 NUGU 서비스를 이용하기 위해서는 `AVAudioSession`의 `Category`를 `.playAndRecord`로 설정이 필요합니다.
 
 {% tabs %}
-{% tab title="ViewController.swift" %}
+{% tabs::content title="ViewController.swift" %}
 {% code %}
 ```swift
 func setAudioSession() throws {
@@ -315,7 +315,7 @@ func setAudioSession() throws {
 }
 ```
 {% endcode %}
-{% endtab %}
+{% endtabs::content %}
 {% endtabs %}
 
 #### NUGU 음성인식 요청
@@ -362,5 +362,5 @@ func setAudioSession() throws {
 
 NUGU SDK for iOS의 Github Repository에 있는 샘플 앱을 통해서도 NUGU SDK의 주요 사용 방법을 확인하실 수 있습니다.
 
-{% embed url="https://github.com/nugu-developers/nugu-ios" caption="" %}
+{% link url="https://github.com/nugu-developers/nugu-ios" caption="" %}
 

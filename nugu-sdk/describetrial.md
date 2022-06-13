@@ -31,7 +31,7 @@ NUGU SDK 를 연동하는 방식은 'NUGU 계정 미사용 방식'과 'NUGU 계�
 | 날씨 | 궁금한 지역의 날씨와 미세먼지 정보를 알려주는 Play | "아리아, 오늘/내일/이번주/다음 날씨 알려줘" "아리아, 내일 제주도 날씨 어때?" "아리아, 오늘 대전 미세먼지 어때?" "아리아, 오늘 세차할까?" |
 | 클래식 매니저 | 클래식을 추천하고 재생관련 컨트롤을 제공하는 Play | "클래식매니저에서 추천 클래식 틀어줘." "클래식매니저에서 잠잘 때 듣기 좋은 음악 틀어줘." "클래식매니저에서 재즈 틀어줘," "\(음악 재생 중\) 이 음악 뭐야?" |
 
-정식판으로 업그레이드 하게 되면 더 많은 NUGU play 를 사용해보실 수 있습니다. NUGU play 에 대해 더 자세히 알고 싶다면 [https://www.nugu.co.kr/static/service/](https://www.nugu.co.kr/static/service/) 를 참고해주세요.
+정식판으로 업그레이드 하게 되면 더 많은 NUGU play 를 사용해보실 수 있습니다. NUGU play 에 대해 더 자세히 알고 싶다면 [https://www.nugu.co.kr/static/service/](https://www.nugu.co.kr/static/service) 를 참고해주세요.
 
 ## 체험판 신청
 

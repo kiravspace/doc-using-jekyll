@@ -54,7 +54,7 @@ Capability별 상세한 내용은 아래 리스트의 링크를 통해 확인하
 
 | Capability | Description | 예시발 |
 | :--- | :--- | :--- |
-| [PowerControl](../smarthomecapability/powercontrol-interface.md) | 스마트플러그 전원 제어 기능입니다. 전원을 켜고 끄며 동작을 제어하는 기능들로 구성되어 있습니다. | "스마트플러그 켜줘" |
-| [PowerCheck](../smarthomecapability/powercheck-interface.md) | 스마트플러그 전력사용량 관련 조회 기능입니다. | "스마트플러그 전력사용량 알려줘" |
-| [SetTimeControl](../smarthomecapability/settimecontrol-interface.md) | 스마트플러그 기기의 시간 설정 기능입니다. | "스마트플러그 1시간 후로 종료예약해줘" |
+| [PowerControl](../smarthomecapability/powercontrol-interface) | 스마트플러그 전원 제어 기능입니다. 전원을 켜고 끄며 동작을 제어하는 기능들로 구성되어 있습니다. | "스마트플러그 켜줘" |
+| [PowerCheck](../smarthomecapability/powercheck-interface) | 스마트플러그 전력사용량 관련 조회 기능입니다. | "스마트플러그 전력사용량 알려줘" |
+| [SetTimeControl](../smarthomecapability/settimecontrol-interface) | 스마트플러그 기기의 시간 설정 기능입니다. | "스마트플러그 1시간 후로 종료예약해줘" |
 

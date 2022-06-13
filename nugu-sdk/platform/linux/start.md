@@ -2,27 +2,27 @@
 
 ## Step 1: 최소 요구사항 확인하기
 
-* Ubuntu xenial\(16.04\)
+* Ubuntu xenial(16.04)
 
 ## Step 2: NUGU SDK 설치하기
 
-NUGU SDK for Linux는 설치에 필요한 패키지\(`*.deb`\) 파일들을 쉽게 다운로드 받을 수 있도록 Ubuntu에서 제공하는 [PPA](https://launchpad.net/~nugulinux/+archive/ubuntu/sdk)\([https://launchpad.net](https://launchpad.net)\)를 통해 배포하고 있습니다.
+NUGU SDK for Linux는 설치에 필요한 패키지(`*.deb`) 파일들을 쉽게 다운로드 받을 수 있도록 Ubuntu에서 제공하는 [PPA](https://launchpad.net/~nugulinux/+archive/ubuntu/sdk)\([https://launchpad.net](https://launchpad.net)\)를 통해 배포하고 있습니다.
 
 ### PPA 추가하기
 
 아래 명령을 통해 시스템에 PPA를 추가할 수 있습니다.
 
 {% tabs %}
-{% tab title="Ubuntu" %}
+{% tabs::content title="Ubuntu" %}
 {% code %}
 ```bash
 sudo add-apt-repository ppa:nugulinux/sdk
 sudo apt-get update
 ```
 {% endcode %}
-{% endtab %}
+{% endtabs::content %}
 
-{% tab title="Debian" %}
+{% tabs::content title="Debian" %}
 사용하고 있는 Debian 버전에 따라 NUGU SDK의 Bionic 또는 Xenial PPA 주소를 추가해야 합니다.
 
 {% code %}
@@ -45,7 +45,7 @@ sudo apt-key adv --keyserver 'hkp://keyserver.ubuntu.com:80' --recv-key 5DE93303
 sudo apt-get update
 ```
 {% endcode %}
-{% endtab %}
+{% endtabs::content %}
 {% endtabs %}
 
 ### 패키지 설치하기
@@ -111,7 +111,7 @@ NUGU SDK for Linux는 아래의 이유로 인해 iOS, Android와 달리 인증�
 
 하지만, 인증을 쉽게 테스트할 수 있도록 아래의 NUGU SDK for Linux Github에 Python으로 작성된 별도의 웹기반 OAuth2 client 예제를 제공하고 있습니다.
 
-{% embed url="https://github.com/nugu-developers/nugu-linux/wiki/Sample-OAuth2" caption="NUGU SDK for Linux OAuth2 client python sample" %}
+{% link url="https://github.com/nugu-developers/nugu-linux/wiki/Sample-OAuth2" caption="NUGU SDK for Linux OAuth2 client python sample" %}
 
 [NUGU SDK PoC목록](https://developers.nugu.co.kr/#/sdk/pocList)에서 nugu-config.json 파일을 다운로드 받은 후, Client ID, Client Secret 정보를 활용하여 위 OAuth2 client 예제를 통해 인증을 진행할 수 있습니다.
 
@@ -198,7 +198,7 @@ network_manager->connect();
 
 전체 코드는 Github의 아래 wiki에서 확인할 수 있습니다.
 
-{% embed url="https://github.com/nugu-developers/nugu-linux/wiki/Create-your-first-application" caption="NUGU SDK for Linux Wiki - Create your first application" %}
+{% link url="https://github.com/nugu-developers/nugu-linux/wiki/Create-your-first-application" caption="NUGU SDK for Linux Wiki - Create your first application" %}
 
 ### Build
 
@@ -216,5 +216,5 @@ $ g++ -std=c++11 hello.cc `pkg-config --cflags --libs nugu` -o hello
 
 아래 Github 주소를 통해 NUGU SDK for Linux 전체 소스 코드를 다운로드 받을 수 있습니다.
 
-{% embed url="https://github.com/nugu-developers/nugu-linux" caption="NUGU SDK for Linux Github repository" %}
+{% link url="https://github.com/nugu-developers/nugu-linux" caption="NUGU SDK for Linux Github repository" %}
 

@@ -6,7 +6,7 @@ depth_order: 1
 
 Biz 사용자를 등록하기 위해, 초대 메일을 발송하는 기능입니다.
 
-* Biz Service 초대장 발송 시에는, Biz Kit 기본 정보 필수값이 미리 입력되어 있어야 합니다. [Biz Kit 기본 정보 입력](../../../manage-enrolled-user/enrolled-user-invitation-biz.md) 참
+* Biz Service 초대장 발송 시에는, Biz Kit 기본 정보 필수값이 미리 입력되어 있어야 합니다. [Biz Kit 기본 정보 입력](../../../manage-enrolled-user/enrolled-user-invitation-biz) 참
 
 ## 1. URL <a id="Biz&#xC0AC;&#xC6A9;&#xC790;&#xCD08;&#xB300;v1-1URL"></a>
 

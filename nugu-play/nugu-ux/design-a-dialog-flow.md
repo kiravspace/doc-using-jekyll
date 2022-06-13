@@ -30,7 +30,7 @@
 
 {% alerts style="info" %}
 음성으로 응답하는 것을 Prompt 응답, 동작을 실행하는 것을 Directive 응답이라고 합니다.  
-자세한 내용은 [Response 사용하기](../create-plays-with-play-builder/define-an-action/use-responses/)를 참고하세요.
+자세한 내용은 [Response 사용하기](../create-plays-with-play-builder/define-an-action/use-responses)를 참고하세요.
 {% endalerts %}
 
 ### 명령의 대안 실행
@@ -137,7 +137,7 @@ Slot-filling 문장 작성 시에는 아래의 항목들을 고려해야 합니�
 * 부족한 필수 Entity\(Required Entity\)에 대해서만 Slot-filling하며, 선택적인 Entity\(Optional Entity\)에 대해서는 기본값으로 설정하여 Slot-filling의 횟수를 최소화하도록 합니다.
 
 {% alerts style="success" %}
-Slot-filling 구현에 대한 자세한 내용은 [필수 Entity 정의하기\(Slot-Filling Prompt\)](../create-plays-with-play-builder/define-an-action/use-parameters/slot-filling-prompt.md)를 참고하세요
+Slot-filling 구현에 대한 자세한 내용은 [필수 Entity 정의하기\(Slot-Filling Prompt\)](../create-plays-with-play-builder/define-an-action/use-parameters/slot-filling-prompt)를 참고하세요
 {% endalerts %}
 
 ### 다음 명령 요청
@@ -161,6 +161,6 @@ Slot-filling 구현에 대한 자세한 내용은 [필수 Entity 정의하기\(S
 {% endalerts %}
 
 {% alerts style="success" %}
-Action 구현에 대한 자세한 내용은 [Action 정의하기](../create-plays-with-play-builder/define-an-action/)를 참고하세요.
+Action 구현에 대한 자세한 내용은 [Action 정의하기](../create-plays-with-play-builder/define-an-action)를 참고하세요.
 {% endalerts %}
 

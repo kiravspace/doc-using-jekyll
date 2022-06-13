@@ -4,13 +4,13 @@ Play에서는 사용자의 발화를 분석한 내용을 기반으로 적절한 
 
 NUGU 플랫폼의 Dialog Manager는 지정된 포맷(Backend proxy API 규격)으로 요청을 하기 때문에 외부 서비스의 REST API 포맷이 Backend proxy API 규격과 다르다면 포맷을 변환해주기 위한 Backend proxy 서버를 개발해야 합니다.
 
-![](../../../.gitbook/assets/backend-proxy-01.png)
+![](/assets/images/backend-proxy-01.png)
 
-이 서버는 Play Builder를 통해 Play를 만드는 과정에서 정의한 파라미터와 [Backend proxy API Reference](backend-proxy-api-reference.md)에서 제공하는 규격을 사용하여 직접 개발해야 합니다.
+이 서버는 Play Builder를 통해 Play를 만드는 과정에서 정의한 파라미터와 [Backend proxy API Reference](backend-proxy-api-reference)에서 제공하는 규격을 사용하여 직접 개발해야 합니다.
 
 NUGU 플랫폼에서는 Backend proxy를 구축할 수 있는 클라우드 환경을 제공하고 있지 않으며, Play를 개발하는 곳에서 직접 구축을 하거나 클라우드 서비스를 이용할 수 있습니다.
 
-![](../../../.gitbook/assets/backend-proxy-02.png)
+![](/assets/images/backend-proxy-02.png)
 
 위 그림에서 첫번째 단계와 두번째 단계는 Play Builder에서 설정하는 작업이기 때문에 여기서 추가로 설명하지 않습니다.
 
@@ -39,13 +39,13 @@ REST API URL 생성 규칙은 다음과 같습니다.
 
 각각의 정보를 참조하기 위한 Play Builder 화면은 아래와 같습니다.
 
-![](../../../.gitbook/assets/backend-proxy-03.png)
+![](/assets/images/backend-proxy-03.png)
 
-![](../../../.gitbook/assets/backend-proxy-04.png)
+![](/assets/images/backend-proxy-04.png)
 
 ## Request Body
 
-Request의 Body로 전달되는 JSON 포맷의 데이터는 [Backend proxy API Reference](backend-proxy-api-reference.md)를 참조합니다. 이 JSON 데이터는 임의의 필드가 추가 될 수 있으므로, 이에 대한 영향이 없도록 구현되어야 합니다. Request Body에 정의된 필드 중 Play Builder에 설정한 값들에 의해 결정되는 필드는 action.parameters 입니다.
+Request의 Body로 전달되는 JSON 포맷의 데이터는 [Backend proxy API Reference](backend-proxy-api-reference)를 참조합니다. 이 JSON 데이터는 임의의 필드가 추가 될 수 있으므로, 이에 대한 영향이 없도록 구현되어야 합니다. Request Body에 정의된 필드 중 Play Builder에 설정한 값들에 의해 결정되는 필드는 action.parameters 입니다.
 
 NUGU 플랫폼에서 Play Builder에 설정된 정보로부터 action.parameters 필드를 채우는 규칙은 다음과 같습니다.
 
@@ -57,7 +57,7 @@ NUGU 플랫폼에서 Play Builder에 설정된 정보로부터 action.parameters
 
 예를 들어 설명하면 아래와 같습니다.
 
-![](../../../.gitbook/assets/backend-proxy-05.png)
+![](/assets/images/backend-proxy-05.png)
 
 Backend Parameter의 경우 Backend proxy에서 처리한 결과를 가져오는 용도로 사용되기 때문에 Request Body에는 null을 갖게 됩니다.
 
@@ -100,12 +100,12 @@ Response에서 모든 값을 그대로 똑같이 포함하는 이유는 입출�
 
 ### resultCode
 
-![](../../../.gitbook/assets/backend-proxy-06.png)
+![](/assets/images/backend-proxy-06.png)
 
 "output" 필드 외에 "resultCode"가 정의되어 있습니다. 이 필드는 위 그림에서 설정한 Exception Code에 의해 결정됩니다.
 
 {% alerts style="info" %}
-[예외 상황 관리](../define-an-action/manage-exceptions.md)를 참고하세요.
+[예외 상황 관리](../define-an-action/manage-exceptions)를 참고하세요.
 {% endalerts %}
 
 Play Builder는 Backend proxy 호출 시 발생할 수 있는 다양한 예외 상황마다 적절히 대응할 수 있도록 설정할 수 있습니다.

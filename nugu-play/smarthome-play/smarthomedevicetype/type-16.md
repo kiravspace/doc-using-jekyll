@@ -52,5 +52,5 @@ Capability별 상세한 내용은 아래 리스트의 링크를 통해 확인하
 
 | Capability | Description | 예시발 |
 | :--- | :--- | :--- |
-| [StateCheck](../smarthomecapability/statecheck-interface.md) | 열림감지센서의 현재 상태를 조회하는 기능입니다. | "열림감지센서 열림상태 알려줘" |
+| [StateCheck](../smarthomecapability/statecheck-interface) | 열림감지센서의 현재 상태를 조회하는 기능입니다. | "열림감지센서 열림상태 알려줘" |
 

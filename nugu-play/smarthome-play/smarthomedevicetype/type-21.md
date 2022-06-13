@@ -79,7 +79,7 @@ Capability별 상세한 내용은 아래 리스트의 링크를 통해 확인하
 
 | Capability | Description | 예시발 |
 | :--- | :--- | :--- |
-| [PowerControl](../smarthomecapability/powercontrol-interface.md) | 조명 전원 제어 기능입니다. 전원을 켜고 끄며 동작을 제어하는 기능들로 구성되어 있습니다. | "조명 켜줘" |
-| [BrightnessControl](../smarthomecapability/brightnesscontrol-interface.md) | 조명 밝기 제어 기능입니다. 조명의 밝기를 1~100의 밝기 단계로 구분하여 제어하게 됩니다. | "조명 밝기 20으로 설정해줘" |
-| [ColorControl](../smarthomecapability/colorcontrol-interface.md) | 조명 색상 변경 제어 기능입니다. 설정 색상에 대한 상세한 정보는 SmartHomeAttribute : Color를 참조하시기 바랍니다. | "조명 색상 파란색으로 설정해줘" |
+| [PowerControl](../smarthomecapability/powercontrol-interface) | 조명 전원 제어 기능입니다. 전원을 켜고 끄며 동작을 제어하는 기능들로 구성되어 있습니다. | "조명 켜줘" |
+| [BrightnessControl](../smarthomecapability/brightnesscontrol-interface) | 조명 밝기 제어 기능입니다. 조명의 밝기를 1~100의 밝기 단계로 구분하여 제어하게 됩니다. | "조명 밝기 20으로 설정해줘" |
+| [ColorControl](../smarthomecapability/colorcontrol-interface) | 조명 색상 변경 제어 기능입니다. 설정 색상에 대한 상세한 정보는 SmartHomeAttribute : Color를 참조하시기 바랍니다. | "조명 색상 파란색으로 설정해줘" |
 

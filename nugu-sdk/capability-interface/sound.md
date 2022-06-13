@@ -19,7 +19,7 @@ description: 디바이스의 음원 파일 재생을 위한 규격
 Sound interface 규격에 따른 디바이스의 동작 제어는 SoundAgent 가 처리합니다.
 
 {% tabs %}
-{% tab title="Android" %}
+{% tabs::content title="Android" %}
 NuguAndroidClient instance 를 통해 SoundAgent instance 에 접근할 수 있습니다.
 
 {% code %}
@@ -39,9 +39,9 @@ NuguAndroidClient.Builder(...)
     .enableSound(MySoundProvider())
 ```
 {% endcode %}
-{% endtab %}
+{% endtabs::content %}
 
-{% tab title="iOS" %}
+{% tabs::content title="iOS" %}
 NuguClient instance 를 통해 SoundAgent instance 에 접근할 수 있습니다.
 
 {% code %}
@@ -49,9 +49,9 @@ NuguClient instance 를 통해 SoundAgent instance 에 접근할 수 있습니�
 let soundAgent = nuguClient.soundAgent
 ```
 {% endcode %}
-{% endtab %}
+{% endtabs::content %}
 
-{% tab title="Linux" %}
+{% tabs::content title="Linux" %}
 [CapabilityFactory::makeCapability](https://nugu-developers.github.io/nugu-linux/classNuguCapability_1_1CapabilityFactory.html#a46d96b1bc96903f02905c92ba8794bf6) 함수로 [SoundAgent](https://nugu-developers.github.io/nugu-linux/classNuguCapability_1_1ISoundHandler.html) 를 생성하고 [NuguClient](https://nugu-developers.github.io/nugu-linux/classNuguClientKit_1_1NuguClient.html) 에 추가해 주어야합니다.
 
 {% code %}
@@ -64,15 +64,15 @@ nugu_client->getCapabilityBuilder()
     ->construct();
 ```
 {% endcode %}
-{% endtab %}
+{% endtabs::content %}
 {% endtabs %}
 
 ### 재생
 
-디바이스 음원 재생이 [Beep](sound.md#beep) directive 로 요청될 수 있습니다.
+디바이스 음원 재생이 [Beep](sound#beep) directive 로 요청될 수 있습니다.
 
 {% tabs %}
-{% tab title="Android" %}
+{% tabs::content title="Android" %}
 SoundProvider 를 구현합니다.
 
 {% code %}
@@ -87,9 +87,9 @@ class MySoundProvider: SoundProvider {
 }
 ```
 {% endcode %}
-{% endtab %}
+{% endtabs::content %}
 
-{% tab title="iOS" %}
+{% tabs::content title="iOS" %}
 SoundAgentDelegate 를 추가합니다.
 
 {% code %}
@@ -102,9 +102,9 @@ class MySoundAgentDelegate: SoundAgentDelegate {
 soundAgent.delegate = MySoundAgentDelegate()
 ```
 {% endcode %}
-{% endtab %}
+{% endtabs::content %}
 
-{% tab title="Linux" %}
+{% tabs::content title="Linux" %}
 [ISoundListener](https://nugu-developers.github.io/nugu-linux/classNuguCapability_1_1ISoundListener.html) 를 추가합니다.
 
 {% code %}
@@ -122,7 +122,7 @@ auto sound_listener(std::make_shared<MySoundListener>());
 CapabilityFactory::makeCapability<SoundAgent, ISoundHandler>(sound_listener.get());
 ```
 {% endcode %}
-{% endtab %}
+{% endtabs::content %}
 {% endtabs %}
 
 ## Context

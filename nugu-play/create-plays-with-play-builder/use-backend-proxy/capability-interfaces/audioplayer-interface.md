@@ -25,7 +25,7 @@ AudioPlayer Interface는 사용자의 발화와 스트리밍 상태의 변경에
 
 Play는 스피커의 오디오 플레이어의 상태와 사용자의 발화에 따라 적절한 처리를 할 수 있도록 개발해야 합니다. 여기서는 AudioPlayer Interface에서 제공하는 Built-in Intent, Directive, Event에 대해 설명합니다.
 
-![](../../../../.gitbook/assets/audioplayer-interface-01.png)
+![](/assets/images/audioplayer-interface-01.png)
 
 | 상태(State) | 설명                                                                                                                                                                                               |
 | --------- |--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
@@ -40,7 +40,7 @@ Play는 스피커의 오디오 플레이어의 상태와 사용자의 발화에 
 Built-in Intent는 Play Builder에 Intent를 정의하지 않아도 NUGU 플랫폼에서 기본으로 제공하는 Intent입니다. Built-in Intent는 Play 생성 시 추가되며, 모든 Play에서 공통(필수)으로 사용되는 Universal Intent와 Capability Interface(AudioPlayer Interface)를 사용함으로 선택했을 때 추가되는 Control Intent로 구분됩니다.
 
 {% alerts style="info" %}
-Built-in Intent에 대한 자세한 내용은 [Built-in Intent](../../define-user-utterance-model/built-in-intents.md)를 참고하세요.
+Built-in Intent에 대한 자세한 내용은 [Built-in Intent](../../define-user-utterance-model/built-in-intents)를 참고하세요.
 {% endalerts %}
 
 ### 공통(필수) Intent
@@ -75,7 +75,7 @@ Play Builder에서 이 Intent 별로 Custom Action을 생성할 수 있는데, �
 {% alerts style="info" %}
 "BTS 노래 틀어줘"와 같이 Entity와 함께 발화하는 경우는 Built-in intent로 분석되지 않습니다. Entity와 함께 분석되어 처리해야 하는 경우, 직접 Custom Intent를 정의해야 합니다.
 
-Intents 등록에 대한 자세한 내용은 [User Utterance Model 정의하기(Intent & Entity)](../../define-user-utterance-model/)를 참고하세요.
+Intents 등록에 대한 자세한 내용은 [User Utterance Model 정의하기(Intent & Entity)](../../define-user-utterance-model)를 참고하세요.
 {% endalerts %}
 
 Play Builder에서 Action을 정의하지 않는 경우 Fallback Action에 등록한 문장이 응답으로 나오기 때문에 지원하지 않는 기능이라도 적절한 답변을 보내주는 것을 권장합니다.
@@ -119,7 +119,7 @@ Play Builder에서 Action을 정의하지 않는 경우 Fallback Action에 등�
 
 audioItem.stream.progressReport는 오디오의 시작 시간을 기준으로 절대 위치에 해당하는 시간에 이벤트를 발생시켜야 합니다. 아래의 그림처럼 Play Directive에 의해 시작하는 위치와 무관하게 시작을 기준으로 설정한 시간이 되는 경우 이벤트가 발생됩니다.
 
-![](../../../../.gitbook/assets/audioplayer-interface-02.png)
+![](/assets/images/audioplayer-interface-02.png)
 
 #### Stop Directive
 

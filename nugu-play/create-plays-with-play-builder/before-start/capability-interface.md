@@ -19,5 +19,5 @@
 디바이스가 명령을 수행하면 상태가 변경되는데, 이 상태의 변경을 Play에 알려주기 위해 사용됩니다.
 
 {% alerts style="info" %}
-Capability Interface의 자세한 사용법은 [Capability Interfaces](../use-backend-proxy/capability-interfaces/)를 참고하세요.
+Capability Interface의 자세한 사용법은 [Capability Interfaces](../use-backend-proxy/capability-interfaces)를 참고하세요.
 {% endalerts %}

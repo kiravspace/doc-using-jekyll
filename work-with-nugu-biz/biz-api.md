@@ -8,9 +8,9 @@ depth_order: 6
 
 정식판에서 제공하는 Biz 전용디바이스, Biz 사용자를 위한 API입니다. 다음과 같은 기능이 있습니다.
 
-* [Biz 사용자 API](api-enrolleduser/)
-* [BIZ 전용 디바이스 API](api-shareddevice/)
-* [API 발송 \(Announcement\)](api-announcement/)
+* [Biz 사용자 API](api-enrolleduser)
+* [BIZ 전용 디바이스 API](api-shareddevice)
+* [API 발송 \(Announcement\)](api-announcement)
 
 ## 2.Biz API 사용 권한
 

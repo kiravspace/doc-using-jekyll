@@ -11,7 +11,7 @@ description: >-
 
 > NUGU SDK를 더 자세히 알아보기 위해서는 각각의 플랫폼 별 페이지를 통해 확인하실 수 있습니다.
 
-![](../../.gitbook/assets/nugu-sdk-platform-01.png)
+![](/assets/images/nugu-sdk-platform-01.png)
 
 ## System Requirements
 
@@ -25,9 +25,9 @@ description: >-
 | Release | Maven | Cocoapods Carthage | APT repository |
 | Storage | Touch로만 wake up: 13MB Wake up word 1개: 14MB Wake up word 2개: 15MB | Touch로만 wake up: 14MB Wake up word 1개: 15MB Wake up word 2개: 16MB | Touch로만 wake up: 6MB Wake up word 1개: 7MB Wake up word 2개: 8MB |
 
-{% page-ref page="ios/" %}
+{% link url="/nugu-sdk/platform/ios" %}
 
-{% page-ref page="android/" %}
+{% link url="/nugu-sdk/platform/android" %}
 
-{% page-ref page="linux/" %}
+{% link url="/nugu-sdk/platform/linux" %}
 

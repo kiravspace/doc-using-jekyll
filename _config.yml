@@ -1,5 +1,4 @@
 plugins:
-  - jekyll-youtube
   - jekyll-spaceship
 
 defaults:
@@ -8,7 +7,6 @@ defaults:
     values:
       layout: "default"
       permalink: /:path/:basename
-      depth_order: 9999
   - scope:
       path: "README.md"
     values:
@@ -28,9 +26,28 @@ exclude:
   - "*.iml"
   - ".idea/"
 
+sass:
+  style: compressed
+
 ########################################
 
 jekyll-spaceship:
   processors:
     - table-processor
     - media-processor
+    - mathjax-processor
+    - polyfill-processor
+  mathjax-processor:
+    config:
+      options:
+        enableMenu: false
+
+########################################
+
+potion_config:
+  theme: proto
+  title: Developers | Guide
+  is_make_title: true
+  is_show_pagination: true
+  is_show_empty_to_child_pages: true
+########################################

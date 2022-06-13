@@ -26,7 +26,7 @@ Play 개발자와 Application 개발자는 Context, Directive, Event 의 data �
 Extension interface 규격에 따른 디바이스의 동작 제어는 ExtensionAgent 가 처리합니다.
 
 {% tabs %}
-{% tab title="Android" %}
+{% tabs::content title="Android" %}
 NuguAndroidClient instance 를 통해 ExtensionAgent instance 에 접근할 수 있습니다.
 
 {% code %}
@@ -46,9 +46,9 @@ NuguAndroidClient.Builder(...)
     .enableExtension(MyExtensionAgentClient())
 ```
 {% endcode %}
-{% endtab %}
+{% endtabs::content %}
 
-{% tab title="iOS" %}
+{% tabs::content title="iOS" %}
 NuguClient instance 를 통해 ExtensionAgent instance 에 접근할 수 있습니다.
 
 {% code %}
@@ -56,9 +56,9 @@ NuguClient instance 를 통해 ExtensionAgent instance 에 접근할 수 있습�
 let extensionAgent = nuguClient.extensionAgent
 ```
 {% endcode %}
-{% endtab %}
+{% endtabs::content %}
 
-{% tab title="Linux" %}
+{% tabs::content title="Linux" %}
 CapabilityFactory::makeCapability 함수로 ExtensionAgent 를 생성하고 NuguClient 에 추가해 주어야합니다.
 
 {% code %}
@@ -71,17 +71,17 @@ nugu_client->getCapabilityBuilder()
     ->construct();
 ```
 {% endcode %}
-{% endtab %}
+{% endtabs::content %}
 {% endtabs %}
 
 ### Context 구성 및 기능 실행
 
-Play 에서 알아야 하는 디바이스/Application 의 정보를 [Context](extension.md#context) 에 포함시켜 주어야 합니다.
+Play 에서 알아야 하는 디바이스/Application 의 정보를 [Context](extension#context) 에 포함시켜 주어야 합니다.
 
-특정 기능의 실행이 [Action](extension.md#action) directive 로 요청될 수 있습니다.
+특정 기능의 실행이 [Action](extension#action) directive 로 요청될 수 있습니다.
 
 {% tabs %}
-{% tab title="Android" %}
+{% tabs::content title="Android" %}
 ExtensionAgentInterface.Client 를 구현합니다.
 
 {% code %}
@@ -98,9 +98,9 @@ class MyExtensionAgentClient : ExtensionAgentInterface.Client {
 }
 ```
 {% endcode %}
-{% endtab %}
+{% endtabs::content %}
 
-{% tab title="iOS" %}
+{% tabs::content title="iOS" %}
 ExtensionAgentDelegate 를 추가합니다.
 
 {% code %}
@@ -117,9 +117,9 @@ class MyExtensionAgentDelegate: ExtensionAgentDelegate {
 extensionAgent.delegate = MyExtensionAgentDelegate()
 ```
 {% endcode %}
-{% endtab %}
+{% endtabs::content %}
 
-{% tab title="Linux" %}
+{% tabs::content title="Linux" %}
 IExtensionListener를 추가합니다.
 
 {% code %}
@@ -137,35 +137,35 @@ auto extension_listener(std::make_shared<ExtensionListener>());
 CapabilityFactory::makeCapability<ExtensionAgent, IExtensionHandler>(extension_listener.get());
 ```
 {% endcode %}
-{% endtab %}
+{% endtabs::content %}
 {% endtabs %}
 
 ### 기능 요청
 
-특정 기능 실행을 [CommandIssued](extension.md#commandissued) event 로 요청할 수 있습니다.
+특정 기능 실행을 [CommandIssued](extension#commandissued) event 로 요청할 수 있습니다.
 
 {% tabs %}
-{% tab title="Android" %}
+{% tabs::content title="Android" %}
 {% code %}
 ```text
 extensionAgent.issueCommand(playServiceId, data, callback)
 ```
 {% endcode %}
-{% endtab %}
+{% endtabs::content %}
 
-{% tab title="iOS" %}
+{% tabs::content title="iOS" %}
 {% code %}
 ```text
 extentionAgent.requestCommand(data: data, playServiceId: playServiceId)
 ```
 {% endcode %}
-{% endtab %}
+{% endtabs::content %}
 
-{% tab title="Linux" %}
+{% tabs::content title="Linux" %}
 ```text
 extension_handler->commandIssued(play_service_id, data)
 ```
-{% endtab %}
+{% endtabs::content %}
 {% endtabs %}
 
 ## Context

@@ -558,5 +558,5 @@ SetHumidityMin Directive Response parameter details
 
 ## Error & Exception
 
-해당 Capability/Directive에서 응답 시 사용할 수 있는 ErrorCode는 [SmartHomeError](../smarthomeerror.md)를 참조해주시기 바랍니다.
+해당 Capability/Directive에서 응답 시 사용할 수 있는 ErrorCode는 [SmartHomeError](../smarthomeerror)를 참조해주시기 바랍니다.
 

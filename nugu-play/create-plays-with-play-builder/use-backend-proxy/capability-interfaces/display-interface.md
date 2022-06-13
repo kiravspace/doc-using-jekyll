@@ -4,7 +4,7 @@ Display Interface를 사용하면 화면을 가진 디바이스에서 화면에 
 
 Display Interface를 사용하기 위해서는 우선 `General` > `기본 정보` 페이지의 Capability Interface에서 `Display 제어` 항목을 `ON`으로 설정해야 합니다.
 
-![](../../../../.gitbook/assets/display-interface-39.jpg)
+![](/assets/images/display-interface-39.jpg)
 
 {% alerts style="danger" %}
 Display Interface는 AudioPlayer를 위한 Display와 중첩하여 사용하지 않는 것을 권장합니다. 불가피한 경우, Display Interface의 우선순위를 높여서 사용하는 것을 권장합니다.
@@ -25,19 +25,19 @@ Display Interface는 AudioPlayer를 위한 Display와 중첩하여 사용하지 
 
 |    Type    |                           NU300                           | Btv                                                       |
 | :--------: | :-------------------------------------------------------: | --------------------------------------------------------- |
-|  FullText1 | ![](../../../../.gitbook/assets/display-interface-01.png) | ![](../../../../.gitbook/assets/display-interface-02.jpg) |
-|  FullText2 | ![](../../../../.gitbook/assets/display-interface-03.png) | ![](../../../../.gitbook/assets/display-interface-04.png) |
-| ImageText1 | ![](../../../../.gitbook/assets/display-interface-05.png) | ![](../../../../.gitbook/assets/display-interface-06.png) |
-| ImageText2 | ![](../../../../.gitbook/assets/display-interface-07.png) | ![](../../../../.gitbook/assets/display-interface-08.png) |
-| ImageText3 | ![](../../../../.gitbook/assets/display-interface-09.png) | ![](../../../../.gitbook/assets/display-interface-10.png) |
-| ImageText4 | ![](../../../../.gitbook/assets/display-interface-11.png) | ![](../../../../.gitbook/assets/display-interface-12.png) |
-|  TextList1 | ![](../../../../.gitbook/assets/display-interface-13.png) | ![](../../../../.gitbook/assets/display-interface-14.png) |
-|  TextList2 | ![](../../../../.gitbook/assets/display-interface-15.png) | ![](../../../../.gitbook/assets/display-interface-16.png) |
-|  TextList3 | ![](../../../../.gitbook/assets/display-interface-17.png) | ![](../../../../.gitbook/assets/display-interface-18.png) |
-|  TextList4 | ![](../../../../.gitbook/assets/display-interface-19.png) | ![](../../../../.gitbook/assets/display-interface-20.png) |
-| ImageList1 | ![](../../../../.gitbook/assets/display-interface-21.png) | ![](../../../../.gitbook/assets/display-interface-22.png) |
-| ImageList2 | ![](../../../../.gitbook/assets/display-interface-23.png) | ![](../../../../.gitbook/assets/display-interface-24.jpg) |
-| ImageList3 | ![](../../../../.gitbook/assets/display-interface-25.png) | ![](../../../../.gitbook/assets/display-interface-26.png) |
+|  FullText1 | ![](/assets/images/display-interface-01.png) | ![](/assets/images/display-interface-02.jpg) |
+|  FullText2 | ![](/assets/images/display-interface-03.png) | ![](/assets/images/display-interface-04.png) |
+| ImageText1 | ![](/assets/images/display-interface-05.png) | ![](/assets/images/display-interface-06.png) |
+| ImageText2 | ![](/assets/images/display-interface-07.png) | ![](/assets/images/display-interface-08.png) |
+| ImageText3 | ![](/assets/images/display-interface-09.png) | ![](/assets/images/display-interface-10.png) |
+| ImageText4 | ![](/assets/images/display-interface-11.png) | ![](/assets/images/display-interface-12.png) |
+|  TextList1 | ![](/assets/images/display-interface-13.png) | ![](/assets/images/display-interface-14.png) |
+|  TextList2 | ![](/assets/images/display-interface-15.png) | ![](/assets/images/display-interface-16.png) |
+|  TextList3 | ![](/assets/images/display-interface-17.png) | ![](/assets/images/display-interface-18.png) |
+|  TextList4 | ![](/assets/images/display-interface-19.png) | ![](/assets/images/display-interface-20.png) |
+| ImageList1 | ![](/assets/images/display-interface-21.png) | ![](/assets/images/display-interface-22.png) |
+| ImageList2 | ![](/assets/images/display-interface-23.png) | ![](/assets/images/display-interface-24.jpg) |
+| ImageList3 | ![](/assets/images/display-interface-25.png) | ![](/assets/images/display-interface-26.png) |
 
 ## Context
 
@@ -329,7 +329,7 @@ Display Interface에서는 크게 4종류의 Template을 제공하며, 화면을
 
 #### 샘플 이미지
 
-![](../../../../.gitbook/assets/display-interface-27.png)
+![](/assets/images/display-interface-27.png)
 
 ### FullText2
 
@@ -396,7 +396,7 @@ Display Interface에서는 크게 4종류의 Template을 제공하며, 화면을
 ```
 {% endcode %}
 
-![](../../../../.gitbook/assets/display-interface-28.png)
+![](/assets/images/display-interface-28.png)
 
 ### ImageText1
 
@@ -494,7 +494,7 @@ Display Interface에서는 크게 4종류의 Template을 제공하며, 화면을
 ```
 {% endcode %}
 
-![](../../../../.gitbook/assets/display-interface-29.png)
+![](/assets/images/display-interface-29.png)
 
 ### ImageText2
 
@@ -591,7 +591,7 @@ Display Interface에서는 크게 4종류의 Template을 제공하며, 화면을
 ```
 {% endcode %}
 
-![](../../../../.gitbook/assets/display-interface-30.png)
+![](/assets/images/display-interface-30.png)
 
 ### ImageText3
 
@@ -679,7 +679,7 @@ Display Interface에서는 크게 4종류의 Template을 제공하며, 화면을
 ```
 {% endcode %}
 
-![](../../../../.gitbook/assets/display-interface-31.png)
+![](/assets/images/display-interface-31.png)
 
 ### ImageText4
 
@@ -767,7 +767,7 @@ Display Interface에서는 크게 4종류의 Template을 제공하며, 화면을
 ```
 {% endcode %}
 
-![](../../../../.gitbook/assets/display-interface-32.png)
+![](/assets/images/display-interface-32.png)
 
 ### TextList1
 
@@ -1071,7 +1071,7 @@ Display Interface에서는 크게 4종류의 Template을 제공하며, 화면을
 ```
 {% endcode %}
 
-![](../../../../.gitbook/assets/display-interface-33.png)
+![](/assets/images/display-interface-33.png)
 
 ### TextList3
 
@@ -1198,7 +1198,7 @@ Display Interface에서는 크게 4종류의 Template을 제공하며, 화면을
 ```
 {% endcode %}
 
-![](../../../../.gitbook/assets/display-interface-34.png)
+![](/assets/images/display-interface-34.png)
 
 ### TextList4
 
@@ -1311,7 +1311,7 @@ Display Interface에서는 크게 4종류의 Template을 제공하며, 화면을
 ```
 {% endcode %}
 
-![](../../../../.gitbook/assets/display-interface-35.png)
+![](/assets/images/display-interface-35.png)
 
 ### ImageList1
 
@@ -1455,7 +1455,7 @@ Display Interface에서는 크게 4종류의 Template을 제공하며, 화면을
 ```
 {% endcode %}
 
-![](../../../../.gitbook/assets/display-interface-36.png)
+![](/assets/images/display-interface-36.png)
 
 ### ImageList2
 
@@ -1622,7 +1622,7 @@ Display Interface에서는 크게 4종류의 Template을 제공하며, 화면을
 ```
 {% endcode %}
 
-![](../../../../.gitbook/assets/display-interface-37.png)
+![](/assets/images/display-interface-37.png)
 
 ### ImageList3
 
@@ -1841,4 +1841,4 @@ Display Interface에서는 크게 4종류의 Template을 제공하며, 화면을
 ```
 {% endcode %}
 
-![](../../../../.gitbook/assets/display-interface-38.png)
+![](/assets/images/display-interface-38.png)

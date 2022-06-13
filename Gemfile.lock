@@ -39,8 +39,6 @@ GEM
       rainbow (~> 3.0)
     jekyll-watch (2.2.1)
       listen (~> 3.0)
-    jekyll-youtube (1.0.0)
-      jekyll
     kramdown (2.4.0)
       rexml
     kramdown-parser-gfm (1.1.0)
@@ -61,7 +59,7 @@ GEM
     rb-inotify (0.10.1)
       ffi (~> 1.0)
     rexml (3.2.5)
-    rouge (3.28.0)
+    rouge (3.29.0)
     safe_yaml (1.0.5)
     sassc (2.4.0)
       ffi (~> 1.9)
@@ -74,9 +72,9 @@ PLATFORMS
 
 DEPENDENCIES
   http_parser.rb (~> 0.6.0)
-  jekyll (~> 4.2.2)
-  jekyll-spaceship
-  jekyll-youtube
+  jekyll (= 4.2.2)
+  jekyll-spaceship (= 0.10.2)
+  nokogiri (= 1.13.6)
   tzinfo (~> 1.2)
   tzinfo-data
   wdm (~> 0.1.1)

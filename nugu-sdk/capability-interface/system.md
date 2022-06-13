@@ -22,7 +22,7 @@ description: 디바이스의 전원 및 네트워크 연결 상태를 관리하�
 System interface 규격에 따른 디바이스의 동작 제어는 SystemAgent 가 처리합니다.
 
 {% tabs %}
-{% tab title="Android" %}
+{% tabs::content title="Android" %}
 NuguAndroidClient instance 를 통해 SystemAgent instance 에 접근할 수 있습니다.
 
 {% code %}
@@ -30,9 +30,9 @@ NuguAndroidClient instance 를 통해 SystemAgent instance 에 접근할 수 있
 val systemAgent = nuguAndroidClient.systemAgent
 ```
 {% endcode %}
-{% endtab %}
+{% endtabs::content %}
 
-{% tab title="iOS" %}
+{% tabs::content title="iOS" %}
 NuguClient instance 를 통해 SystemAgent instance 에 접근할 수 있습니다.
 
 {% code %}
@@ -40,9 +40,9 @@ NuguClient instance 를 통해 SystemAgent instance 에 접근할 수 있습니�
 let systemAgent = nuguClient.systemAgent
 ```
 {% endcode %}
-{% endtab %}
+{% endtabs::content %}
 
-{% tab title="Linux" %}
+{% tabs::content title="Linux" %}
 [CapabilityFactory::makeCapability](https://nugu-developers.github.io/nugu-linux/classNuguCapability_1_1CapabilityFactory.html#a46d96b1bc96903f02905c92ba8794bf6) 함수로 [SystemAgent](https://nugu-developers.github.io/nugu-linux/classNuguCapability_1_1ISystemHandler.html) 를 생성하고 [NuguClient](https://nugu-developers.github.io/nugu-linux/classNuguClientKit_1_1NuguClient.html) 에 추가해 주어야합니다.
 
 {% code %}
@@ -55,7 +55,7 @@ nugu_client->getCapabilityBuilder()
     ->construct();
 ```
 {% endcode %}
-{% endtab %}
+{% endtabs::content %}
 {% endtabs %}
 
 ### 디바이스 전원 제어
@@ -67,7 +67,7 @@ iOS 는 지원하지 않습니다
 {% endalerts %}
 
 {% tabs %}
-{% tab title="Android" %}
+{% tabs::content title="Android" %}
 SystemAgentInterface.Listener 를 추가합니다.
 
 {% code %}
@@ -80,9 +80,9 @@ val listener = object: SystemAgentInterface.Listener {
 systemAgent.addListener(listener)
 ```
 {% endcode %}
-{% endtab %}
+{% endtabs::content %}
 
-{% tab title="Linux" %}
+{% tabs::content title="Linux" %}
 [ISystemListener](https://nugu-developers.github.io/nugu-linux/classNuguCapability_1_1ISystemListener.html) 를 추가합니다.
 
 {% code %}
@@ -102,7 +102,7 @@ auto system_listener(std::make_shared<MySystemListener>());
 CapabilityFactory::makeCapability<SystemAgent, ISystemHandler>(system_listener.get());
 ```
 {% endcode %}
-{% endtab %}
+{% endtabs::content %}
 {% endtabs %}
 
 ### 에러처리
@@ -112,7 +112,7 @@ NUGU 서버에서 에러가 발생할 경우 [Exception](system.md#exception) di
 사용자가 에러 상황을 인지할 수 있도록 Toast, Local TTS 등으로 안내해야합니다.
 
 {% tabs %}
-{% tab title="Android" %}
+{% tabs::content title="Android" %}
 SystemAgentInterface.Listener 를 추가합니다.
 
 {% code %}
@@ -125,9 +125,9 @@ val listener = object: SystemAgentInterface.Listener {
 systemAgent.addListener(listener)
 ```
 {% endcode %}
-{% endtab %}
+{% endtabs::content %}
 
-{% tab title="iOS" %}
+{% tabs::content title="iOS" %}
 SystemAgentDelegate 를 추가합니다.
 
 {% code %}
@@ -142,9 +142,9 @@ class MySystemAgentDelegate: SystemAgentDelegate {
 systemAgent.add(systemAgentDelegate: MySystemAgentDelegate())
 ```
 {% endcode %}
-{% endtab %}
+{% endtabs::content %}
 
-{% tab title="Linux" %}
+{% tabs::content title="Linux" %}
 [ISystemListener](https://nugu-developers.github.io/nugu-linux/classNuguCapability_1_1ISystemListener.html) 를 추가합니다.
 
 {% code %}
@@ -164,7 +164,7 @@ auto system_listener(std::make_shared<MySystemListener>());
 CapabilityFactory::makeCapability<SystemAgent, ISystemHandler>(system_listener.get());
 ```
 {% endcode %}
-{% endtab %}
+{% endtabs::content %}
 {% endtabs %}
 
 ### 디바이스 등록 해제
@@ -174,7 +174,7 @@ CapabilityFactory::makeCapability<SystemAgent, ISystemHandler>(system_listener.g
 Application 의 상황에 따라 NUGU 로그인 화면으로 이동하거나 NUGU Button 을 비활성화 해야합니다.
 
 {% tabs %}
-{% tab title="Android" %}
+{% tabs::content title="Android" %}
 SystemAgentInterface.Listener 를 추가합니다.
 
 {% code %}
@@ -187,9 +187,9 @@ val listener = object: SystemAgentInterface.Listener {
 systemAgent.addListener(listener)
 ```
 {% endcode %}
-{% endtab %}
+{% endtabs::content %}
 
-{% tab title="iOS" %}
+{% tabs::content title="iOS" %}
 SystemAgentDelegate 를 추가합니다.
 
 {% code %}
@@ -204,9 +204,9 @@ class MySystemAgentDelegate: SystemAgentDelegate {
 systemAgent.add(systemAgentDelegate: MySystemAgentDelegate())
 ```
 {% endcode %}
-{% endtab %}
+{% endtabs::content %}
 
-{% tab title="Linux" %}
+{% tabs::content title="Linux" %}
 [ISystemListener](https://nugu-developers.github.io/nugu-linux/classNuguCapability_1_1ISystemListener.html) 를 추가합니다.
 
 {% code %}
@@ -226,7 +226,7 @@ auto system_listener(std::make_shared<MySystemListener>());
 CapabilityFactory::makeCapability<SystemAgent, ISystemHandler>(system_listener.get());
 ```
 {% endcode %}
-{% endtab %}
+{% endtabs::content %}
 {% endtabs %}
 
 ## Context

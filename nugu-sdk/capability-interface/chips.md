@@ -21,7 +21,7 @@ description: 보이스 크롬에 노출되는 발화 가이드를 제공하기 �
 Chips interface 규격에 따른 디바이스의 동작 제어는 ChipsAgent 가 처리합니다.
 
 {% tabs %}
-{% tab title="Android" %}
+{% tabs::content title="Android" %}
 NuguAndroidClient instance 를 통해 ChipsAgent instance 에 접근할 수 있습니다.
 
 {% code %}
@@ -31,9 +31,9 @@ val chipsAgent = nuguAndroidClient.getAgent(ChipsAgent.NAMESPACE)
 {% endcode %}
 
 보이스 크롬 UI 구성을 위해 TTS interface, ASR interface, Chips interface, Session interface 를 병합해주는 DialogUXStateAggregator 를 제공합니다.
-{% endtab %}
+{% endtabs::content %}
 
-{% tab title="iOS" %}
+{% tabs::content title="iOS" %}
 NuguClient instance 를 통해 ChipsAgent instance 에 접근할 수 있습니다.
 
 {% code %}
@@ -51,9 +51,9 @@ NuguClient instance 를 통해 DialogStateAggregator instance 에 접근할 수 
 let dialogStateAggregator = nuguClient.dialogStateAggregator
 ```
 {% endcode %}
-{% endtab %}
+{% endtabs::content %}
 
-{% tab title="Linux" %}
+{% test::content title="Linux" %}
 CapabilityFactory::makeCapability 함수로 ChipsAgent 를 생성하고 NuguClient 에 추가해 주어야합니다.
 
 {% code %}
@@ -66,7 +66,7 @@ nugu_client->getCapabilityBuilder()
     ->construct();
 ```
 {% endcode %}
-{% endtab %}
+{% endtabs::content %}
 {% endtabs %}
 
 ### UI 구성
@@ -74,7 +74,7 @@ nugu_client->getCapabilityBuilder()
 보이스 크롬에 노출하기 위한 데이터는 Render directive 에 포함되어 전달됩니다.
 
 {% tabs %}
-{% tab title="Android" %}
+{% tabs::content title="Android" %}
 DialogUXStateAggregatorInterface.Listener 를 추가합니다.
 
 {% code %}
@@ -87,9 +87,9 @@ val listener = object: DialogUXStateAggregatorInterface.Listener {
 nuguAndroidClient.addDialogUXStateListener(listener)
 ```
 {% endcode %}
-{% endtab %}
+{% endtabs::content %}
 
-{% tab title="iOS" %}
+{% tabs::content title="iOS" %}
 DialogStateDelegate 를 추가합니다.
 
 {% code %}
@@ -102,9 +102,9 @@ class MyDialogStateDelegate: DialogStateDelegate {
 dialogStateAggregator.add(delegate: MyDialogStateDelegate())
 ```
 {% endcode %}
-{% endtab %}
+{% endtabs::content %}
 
-{% tab title="Linux" %}
+{% tabs::content title="Linux" %}
 IChipsListener를 추가합니다.
 
 {% code %}
@@ -122,7 +122,7 @@ auto chips_listener(std::make_shared<IChipsListener>());
 CapabilityFactory::makeCapability<ChipsAgent, IChipsHandler>(chips_listener.get());
 ```
 {% endcode %}
-{% endtab %}
+{% endtabs::content %}
 {% endtabs %}
 
 ## Context

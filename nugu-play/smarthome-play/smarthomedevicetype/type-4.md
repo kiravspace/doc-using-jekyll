@@ -54,5 +54,5 @@ Capability별 상세한 내용은 아래 리스트의 링크를 통해 확인하
 
 | Capability | Description | 예시발 |
 | :--- | :--- | :--- |
-| [AirQualityCheck](../smarthomecapability/airqualitycheck-interface.md) | 공기센서를 통한 공기상태 조회 기능입니다. | "공기센서에서 공기상태 조회해줘" |
+| [AirQualityCheck](../smarthomecapability/airqualitycheck-interface) | 공기센서를 통한 공기상태 조회 기능입니다. | "공기센서에서 공기상태 조회해줘" |
 

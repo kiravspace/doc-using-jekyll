@@ -54,7 +54,7 @@ SmartHomeDevice Attribute Parameters
 
 | Attribute | Description |
 | :--- | :--- |
-| supportedAirflowTypes | 해당 SmartHomeDevice가 지원하는 AirflowType의 명칭입니다. AirflowType은 NUGU스마트홈에서 지원하는 명칭 중 선택해서 응답할 수 있으며, 지원하는 AirflowType의 명칭은 [AirflowType](../smarthomeattribute.md#airflowtype)를 참조하시기 바랍니다. 지원하는 AirflowType은 각 Device별로 Array 형태로 복수개 전달할 수 있습니다. |
+| supportedAirflowTypes | 해당 SmartHomeDevice가 지원하는 AirflowType의 명칭입니다. AirflowType은 NUGU스마트홈에서 지원하는 명칭 중 선택해서 응답할 수 있으며, 지원하는 AirflowType의 명칭은 [AirflowType](../smarthomeattribute#airflowtype)를 참조하시기 바랍니다. 지원하는 AirflowType은 각 Device별로 Array 형태로 복수개 전달할 수 있습니다. |
 | customData | Discovery 시 SmartHomeServiceProvider가 응답할 수 있는 SmartHomeDevice의 부가정보입니다. customData는 해당 SmartHomeDevice의 제어요청 시 Request에 포함되어 전달됩니다. |
 | connectionStatus | 디바이스 연결상태. 현재 제어가 불가능한 상태의 디바이스인 경우 false 로 응답해야 합니다. |
 
@@ -692,7 +692,7 @@ SetAirflowMin Directive response parameter details
 
 ## Error & Exception
 
-해당 Capability/Directive에서 응답 시 사용할 수 있는 ErrorCode는 [SmartHomeError](../smarthomeerror.md)를 참조해주시기 바랍니다.
+해당 Capability/Directive에서 응답 시 사용할 수 있는 ErrorCode는 [SmartHomeError](../smarthomeerror)를 참조해주시기 바랍니다.
 
 Sample Error Response
 

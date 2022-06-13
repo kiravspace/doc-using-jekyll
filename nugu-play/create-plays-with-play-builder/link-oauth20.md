@@ -22,29 +22,29 @@ OAuth를 이용해 사용자 정보에 접근할 수 있고, 이를 통해 Play�
 
 다음 예는 깃허브(Github)의 OAuth 2.0 계정과 연동하는 방법을 나타낸 것입니다. 다른 소셜 계정도 비슷한 방식으로 연동이 가능합니다.
 
-* 다음의 1\~4 단계까지는 깃허브(Github)의 [Building OAuth Apps](https://developer.github.com/apps/building-oauth-apps/) 문서를 참고합니다.
+* 다음의 1\~4 단계까지는 깃허브(Github)의 [Building OAuth Apps](https://developer.github.com/apps/building-oauth-apps) 문서를 참고합니다.
 
 ### 1단계: OAuth App 생성하기
 
-깃허브(Github) 가이드 페이지 [Creating an OAuth App](https://developer.github.com/apps/building-oauth-apps/creating-an-oauth-app/)에서도 OAuth App 생성에 대한 내용을 확인할 수 있습니다.
+깃허브(Github) 가이드 페이지 [Creating an OAuth App](https://developer.github.com/apps/building-oauth-apps/creating-an-oauth-app)에서도 OAuth App 생성에 대한 내용을 확인할 수 있습니다.
 
 1.  Github App의 우측 상단 내 Profile 사진을 클릭하고 `Settings` > `Developers settings` > `OAuth Apps` > `Settings` 메뉴를 클릭합니다.
 
-    ![](../../.gitbook/assets/link-oauth20-01.png)
+    ![](/assets/images/link-oauth20-01.png)
 2. `New OAuth App` 버튼을 클릭하여 새로운 OAuth App을 만듭니다.
    *   최초 등록하는 경우, 버튼에는 `Register a new application`이라고 표시됩니다.
 
-       ![](../../.gitbook/assets/link-oauth20-02.png)
+       ![](/assets/images/link-oauth20-02.png)
 3. OAuth App 생성 화면에서 Application name, Homepage URL, Application description, Authorization callback URL을 입력한 후 `Register application`을 눌러 OAuth App을 생성을 완료합니다.
    *   Authorization callback URL에는 `https://developers.nugu.co.kr/app/callback.html`을 입력합니다.
 
-       ![](../../.gitbook/assets/link-oauth20-03.png)
+       ![](/assets/images/link-oauth20-03.png)
 
 ### 2단계: OAuth App 정보 확인하기
 
 1단계에서 등록한 OAuth App에서 Client ID와 Client Secret 정보를 확인합니다.
 
-![](../../.gitbook/assets/link-oauth20-04.png)
+![](/assets/images/link-oauth20-04.png)
 
 ### 3단계: OAuth URL 정보 확인하기
 
@@ -61,13 +61,13 @@ Github에서는 Access token 재발급이 필요없습니다. 하지만 다른 �
 
 OAuth Scope는 Access Token으로 사용할 수 있는 리소스의 허용 범위를 이야기한다. 이 값은 각 소셜 계정별로 정의하는 값이 다르므로 각 소셜 계정의 OAuth 개발 가이드를 참고하여 정해야 합니다.
 
-깃허브(Github) 가이드 페이지 [Understanding scopes for OAuth Apps](https://developer.github.com/apps/building-oauth-apps/understanding-scopes-for-oauth-apps/)에서도 관련 내용을 확인할 수 있습니다.
+깃허브(Github) 가이드 페이지 [Understanding scopes for OAuth Apps](https://developer.github.com/apps/building-oauth-apps/understanding-scopes-for-oauth-apps)에서도 관련 내용을 확인할 수 있습니다.
 
 ### 5단계: NUGU developers에서 OAuth 연동 정보 입력
 
 2단계부터 4단계에 걸쳐 확인한 정보를 `Developers` > `Play kit` > `Play 관` 메뉴에서 `Play 등록하기` 버튼을 클릭해 OAuth 계정 연동 정보를 입력합니다.
 
-![](../../.gitbook/assets/link-oauth20-05.png)
+![](/assets/images/link-oauth20-05.png)
 
 #### ① 로그인 URL
 3단계에서 확인한 URL을 입력합니다. ([https://github.com/login/oauth/authorize](https://github.com/login/oauth/authorize))
@@ -89,7 +89,7 @@ repo와 gist를 추가합니다.(최대 5개)
 위 1\~5 단계까지의 작업을 통해 Play 개발 시 사용할 OAuth Token이 준비되면, 이 Access token을 사용할 Backend proxy를 개발해야 합니다.
 
 {% alerts style="info" %}
-Backend proxy 개발에 대한 자세한 내용은 [Backend proxy에서 Access token 사용하기](link-oauth20.md#using-access-token)를 참고하세요.
+Backend proxy 개발에 대한 자세한 내용은 [Backend proxy에서 Access token 사용하기](link-oauth20#using-access-token)를 참고하세요.
 {% endalerts %}
 
 ## 자체 계정을 이용하여 OAuth 2.0 연동하기 <a href="build-your-own-oauth-server" id="build-your-own-oauth-server"></a>
@@ -127,7 +127,7 @@ OAuth 2.0 Serve는 인터넷의 기술 문서를 참고하여 구축할 수 있�
 
 ### OAuth Server 구현하기
 
-OAuth 관련 서적을 참고하거나 [https://oauth.net/code/](https://oauth.net/code/)와 같은 웹사이트에서 제공하는 라이브러리를 사용하여 OAuth Server를 구현할 수 있습니다.
+OAuth 관련 서적을 참고하거나 [https://oauth.net/code/](https://oauth.net/code)와 같은 웹사이트에서 제공하는 라이브러리를 사용하여 OAuth Server를 구현할 수 있습니다.
 
 ## Backend proxy에서 Access token 사용하기 <a href="using-access-token" id="using-access-token"></a>
 
@@ -220,13 +220,13 @@ Content-Length:
 ## OAuth 연동 테스트하기 <a href="test-oauth" id="test-oauth"></a>
 
 1. Play의 상태가 등록중, 심사대기, 심사반려, 심사중, 심사완료, 배포대기 중인 경우에 스피커에서 테스트가 가능합니다.
-    ![](../../.gitbook/assets/link-oauth20-06.png)
-1. [테스트하기](test-a-play.md)에서 '디바이스(스피커)에서 테스트하기' 항목을 참고하여 테스트 스피커를 추가합니다.
+    ![](/assets/images/link-oauth20-06.png)
+1. [테스트하기](test-a-play)에서 '디바이스(스피커)에서 테스트하기' 항목을 참고하여 테스트 스피커를 추가합니다.
 1. NUGU 앱에 접속하여 왼쪽 위의 햄버거 메뉴를 클릭한 후 NUGU play 항목에서 내가 만든 Play를 클릭합니다.
-    ![](../../.gitbook/assets/link-oauth20-07.png)
+    ![](/assets/images/link-oauth20-07.png)
 1. '계정 연동' 버튼을 클릭합니다. 계정 연동 후 스피커로 테스트합니다. NUGU 앱에서 계정 연동을 하고 스피커로 테스트 하면 accessToken을 받을 수 있습니다. (단, 플레이 등록 후 하루 후부터 스피커 테스트가 가능합니다.)
-    ![](../../.gitbook/assets/link-oauth20-08.png)
+    ![](/assets/images/link-oauth20-08.png)
 
 {% alerts style="info" %}
-Play를 등록하는 방법은 [Play 정보 등록](../play-registration-and-review/register-a-play.md)을 참고하세요.
+Play를 등록하는 방법은 [Play 정보 등록](../play-registration-and-review/register-a-play)을 참고하세요.
 {% endalerts %}

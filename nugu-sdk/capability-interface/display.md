@@ -26,7 +26,7 @@ description: Play 에서 전달하는 UI 요소를 화면에 구성하기 규격
 Display interface 규격에 따른 디바이스의 동작 제어는 DisplayAgent 가 처리합니다.
 
 {% tabs %}
-{% tab title="Android" %}
+{% tabs::content title="Android" %}
 NuguAndroidClient instance 를 통해 DisplayAgent instance 에 접근할 수 있습니다.
 
 {% code %}
@@ -42,9 +42,9 @@ AudioPlayer interface 와 Display interface 를 병합해주는 DisplayAggregato
 val displayAggregator = nuguAndroidClient.getDisplay()
 ```
 {% endcode %}
-{% endtab %}
+{% endtabs::content %}
 
-{% tab title="iOS" %}
+{% tabs::content title="iOS" %}
 NuguClient instance 를 통해 DisplayAgent instance 에 접근할 수 있습니다.
 
 {% code %}
@@ -52,9 +52,9 @@ NuguClient instance 를 통해 DisplayAgent instance 에 접근할 수 있습니
 let audioPlayerAgent = nuguClient.audioPlayerAgent
 ```
 {% endcode %}
-{% endtab %}
+{% endtabs::content %}
 
-{% tab title="Linux" %}
+{% tabs::content title="Linux" %}
 [CapabilityFactory::makeCapability](https://nugu-developers.github.io/nugu-linux/classNuguCapability_1_1CapabilityFactory.html#a46d96b1bc96903f02905c92ba8794bf6) 함수로 [DisplayAgent](https://nugu-developers.github.io/nugu-linux/classNuguCapability_1_1IDisplayHandler.html) 를 생성하고 [NuguClient](https://nugu-developers.github.io/nugu-linux/classNuguClientKit_1_1NuguClient.html) 에 추가해 주어야합니다.
 
 {% code %}
@@ -67,7 +67,7 @@ nugu_client->getCapabilityBuilder()
     ->construct();
 ```
 {% endcode %}
-{% endtab %}
+{% endtabs::content %}
 {% endtabs %}
 
 ### Context 구성
@@ -75,7 +75,7 @@ nugu_client->getCapabilityBuilder()
 [UI 제어](./#ui-1) 기능을 사용하기 위해서는 template 화면의 상태 정보를 [Context](./#context) 에 포함시켜 주어야 합니다.
 
 {% tabs %}
-{% tab title="Android" %}
+{% tabs::content title="Android" %}
 DisplayAggregatorInterface.Controller 를 추가합니다.
 
 {% code %}
@@ -95,9 +95,9 @@ val controller = object: DisplayAggregatorInterface.Controller {
 displayAggregator.displayCardRendered(templateId, controller)
 ```
 {% endcode %}
-{% endtab %}
+{% endtabs::content %}
 
-{% tab title="iOS" %}
+{% tabs::content title="iOS" %}
 DisplayAgentDelegate 를 추가합니다.
 
 {% code %}
@@ -112,7 +112,7 @@ class MyDisplayAgentDelegate: DisplayAgentDelegate {
 displayAgent.delegate = MyDisplayAgentDelegate()
 ```
 {% endcode %}
-{% endtab %}
+{% endtabs::content %}
 {% endtabs %}
 
 ### UI 구성 및 제어
@@ -124,7 +124,7 @@ Template 화면은 [Close](./#close) directive 또는 SDK 내부 timer 등에 �
 Template 의 focus 와 scroll 은 `사용자 발화` 에 따라 [ControlFocus](display-directive.md#controlfocus), [ControlScroll](display-directive.md#controlscroll) directive 로 제어될 수 있습니다.
 
 {% tabs %}
-{% tab title="Android" %}
+{% tabs::content title="Android" %}
 DisplayAggregatorInterface.Renderer 를 추가합니다.
 {% code %}
 ```text
@@ -157,9 +157,9 @@ val controller = object: DisplayAggregatorInterface.Controller {
 displayAggregator.displayCardRendered(templateId, controller)
 ```
 {% endcode %}
-{% endtab %}
+{% endtabs::content %}
 
-{% tab title="iOS" %}
+{% tabs::content title="iOS" %}
 DisplayAgentDelegate 를 추가합니다.
 
 {% code %}
@@ -182,9 +182,9 @@ class MyDisplayAgentDelegate: DisplayAgentDelegate {
 displayAgent.delegate = MyDisplayAgentDelegate()
 ```
 {% endcode %}
-{% endtab %}
+{% endtabs::content %}
 
-{% tab title="Linux" %}
+{% tabs::content title="Linux" %}
 [IDisplayListener](https://nugu-developers.github.io/nugu-linux/classNuguCapability_1_1IDisplayListener.html) 를 추가합니다.
 
 {% code %}
@@ -209,7 +209,7 @@ auto display_listener(std::make_shared<MyDisplayListener>());
 CapabilityFactory::makeCapability<DisplayAgent, IDisplayHandler>(display_listener.get());
 ```
 {% endcode %}
-{% endtab %}
+{% endtabs::content %}
 {% endtabs %}
 
 ### 사용자 인터렉션 처리
@@ -217,57 +217,57 @@ CapabilityFactory::makeCapability<DisplayAgent, IDisplayHandler>(display_listene
 Template 하위 항목 선택시 [ElementSelected](display-event.md#elementselected) event 가 전달됩니다.
 
 {% tabs %}
-{% tab title="Android" %}
+{% tabs::content title="Android" %}
 {% code %}
 ```text
 displayAggregator.setElementSelected(templateId, token, postback)
 ```
 {% endcode %}
-{% endtab %}
+{% endtabs::content %}
 
-{% tab title="iOS" %}
+{% tabs::content title="iOS" %}
 {% code %}
 ```text
 displayAgent.elementDidSelect(templateId: displayTemplate.templateId, token: token, postback: postback)
 ```
 {% endcode %}
-{% endtab %}
+{% endtabs::content %}
 
-{% tab title="Linux" %}
+{% tabs::content title="Linux" %}
 {% code %}
 ```
 display_handler->elementSelected(id, item_token, postback)
 ```
 {% endcode %}
-{% endtab %}
+{% endtabs::content %}
 {% endtabs %}
 
 Template 에 화면에 대한 사용자 interaction 발생시 SDK 로 notify 해주어야 내부 timer\(template 일정시간 노출 후 종료하기 위한\) 가 갱신됩니다.
 
 {% tabs %}
-{% tab title="Android" %}
+{% tabs::content title="Android" %}
 {% code %}
 ```text
 displayAggregator.notifyUserInteraction(templateId)
 ```
 {% endcode %}
-{% endtab %}
+{% endtabs::content %}
 
-{% tab title="iOS" %}
+{% tabs::content title="iOS" %}
 {% code %}
 ```text
 displayAgent.notifyUserInteraction()
 ```
 {% endcode %}
-{% endtab %}
+{% endtabs::content %}
 
-{% tab title="Linux" %}
+{% tabs::content title="Linux" %}
 {% code %}
 ```
 display_handler->refreshRenderingTimer(id)
 ```
 {% endcode %}
-{% endtab %}
+{% endtabs::content %}
 {% endtabs %}
 
 ## Context

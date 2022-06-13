@@ -52,10 +52,10 @@ ClientManager.getClient().setDisplayRenderer(templateRenderer)
 
 이제 Template 화면이 알아서 노출되고 클릭, 스크롤, 포커스 등 사용자 인터렉션이 자동으로 처리됩니다.
 
-## TemplateRenderer 사용 \(모든 템플릿 제거\)
+## TemplateRenderer 사용 (모든 템플릿 제거)
 
 TemplateRenderer를 등록하는 것만으로도 Template 노출, 업데이트, 제거는 물론 상호작용까지 알아서 처리됩니다.  
-다만 백키 클릭과 같이 TemplateRenderer가 알아챌 수 없는 이벤트로 모든 template을 제거하는 유즈케이스 대응을 위해 clearAll\(\) 메서드를 제공합니다.
+다만 백키 클릭과 같이 TemplateRenderer가 알아챌 수 없는 이벤트로 모든 template을 제거하는 유즈케이스 대응을 위해 clearAll() 메서드를 제공합니다.
 
 {% code %}
 ```kotlin

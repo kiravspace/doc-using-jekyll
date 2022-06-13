@@ -24,7 +24,7 @@ Linux 는 MediaPlayerAgent 를 지원하지 않습니다.
 {% endalerts %}
 
 {% tabs %}
-{% tab title="Android" %}
+{% tabs::content title="Android" %}
 NuguAndroidClient 생성시 MediaPlayerAgent 를 추가합니다.
 
 {% code %}
@@ -54,9 +54,9 @@ NuguAndroidClient instance 를 통해 MediaPlayerAgent instance 에 접근할 �
 val mediaPlayerAgent = nuguAndroidClient.mediaPlayerAgent
 ```
 {% endcode %}
-{% endtab %}
+{% endtabs::content %}
 
-{% tab title="iOS" %}
+{% tabs::content title="iOS" %}
 NuguClient instance 를 통해 MediaPlayerAgent instance 에 접근할 수 있습니다.
 
 {% code %}
@@ -64,7 +64,7 @@ NuguClient instance 를 통해 MediaPlayerAgent instance 에 접근할 수 있�
 let mediaPlayerAgent = nuguClient.mediaPlayerAgent
 ```
 {% endcode %}
-{% endtab %}
+{% endtabs::content %}
 {% endtabs %}
 
 ### Context 구성
@@ -72,7 +72,7 @@ let mediaPlayerAgent = nuguClient.mediaPlayerAgent
 앱에서 재생중인 음원에 대한 정보를 [Context](mediaplayer.md#context-1) 에 포함시켜 주어야 합니다.
 
 {% tabs %}
-{% tab title="Android" %}
+{% tabs::content title="Android" %}
 MediaPlayer 를 구현합니다.
 
 {% code %}
@@ -86,9 +86,9 @@ class MyMediaPlayer: MediaPlayer {
 }
 ```
 {% endcode %}
-{% endtab %}
+{% endtabs::content %}
 
-{% tab title="iOS" %}
+{% tabs::content title="iOS" %}
 MediaPlayerAgentDelegate를 추가합니다.
 
 {% code %}
@@ -103,7 +103,7 @@ class MyMediaPlayerAgentDelegate: MediaPlayerAgentDelegate {
 mediaPlayerAgent.delegate = MyMediaPlayerAgentDelegate()
 ```
 {% endcode %}
-{% endtab %}
+{% endtabs::content %}
 {% endtabs %}
 
 ### 제어 명령
@@ -111,7 +111,7 @@ mediaPlayerAgent.delegate = MyMediaPlayerAgentDelegate()
 `사용자 발화`에 의해 음악 [검색](mediaplayer.md#search)/[재생](mediaplayer.md#play)/[중지](mediaplayer.md#stop)/[다음](mediaplayer.md#next)/[이전](mediaplayer.md#previous)/[탐색](mediaplayer.md#move)/[일시정지](mediaplayer.md#pause)/[계속재생](mediaplayer.md#resume)/[다시재생](mediaplayer.md#rewind)/[반복](mediaplayer.md#toggle)/[즐겨찾기](mediaplayer.md#toggle)/[셔플](mediaplayer.md#toggle)/[재생목록 보기](mediaplayer.md#handleplaylist)/[가사 보기](mediaplayer.md#handlelyrics) 가 directive 로 요청될 수 있습니다.
 
 {% tabs %}
-{% tab title="Android" %}
+{% tabs::content title="Android" %}
 MediaPlayer 를 구현합니다.
 
 {% code %}
@@ -169,9 +169,9 @@ class MyMediaPlayer: MediaPlayer {
 }
 ```
 {% endcode %}
-{% endtab %}
+{% endtabs::content %}
 
-{% tab title="iOS" %}
+{% tabs::content title="iOS" %}
 MediaPlayerAgentDelegate를 추가합니다.
 
 {% code %}
@@ -230,7 +230,7 @@ class MyMediaPlayerAgentDelegate: MediaPlayerAgentDelegate {
 mediaPlayerAgent.delegate = MyMediaPlayerAgentDelegate()
 ```
 {% endcode %}
-{% endtab %}
+{% endtabs::content %}
 {% endtabs %}
 
 ### 재생중인 곡 정보 요청
@@ -238,7 +238,7 @@ mediaPlayerAgent.delegate = MyMediaPlayerAgentDelegate()
 재생중인 곡 정보가 [GetInfo](mediaplayer.md#getinfo) directive 로 요청될 수 있습니다.
 
 {% tabs %}
-{% tab title="Android" %}
+{% tabs::content title="Android" %}
 MediaPlayer 를 구현합니다.
 
 {% code %}
@@ -252,9 +252,9 @@ class MyMediaPlayer: MediaPlayer {
 }
 ```
 {% endcode %}
-{% endtab %}
+{% endtabs::content %}
 
-{% tab title="iOS" %}
+{% tabs::content title="iOS" %}
 MediaPlayerAgentDelegate를 추가합니다.
 
 {% code %}
@@ -269,7 +269,7 @@ class MyMediaPlayerAgentDelegate: MediaPlayerAgentDelegate {
 mediaPlayerAgent.delegate = MyMediaPlayerAgentDelegate()
 ```
 {% endcode %}
-{% endtab %}
+{% endtabs::content %}
 {% endtabs %}
 
 ## Context

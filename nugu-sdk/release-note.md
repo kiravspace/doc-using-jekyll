@@ -7,26 +7,26 @@ depth_order: 10
 ## Change Log
 
 {% alerts style="info" %}
-Android, iOS, Linux 의 자세한 변경사항은 [Github](source-code.md) 에서 확인하실 수 있습니다.
+Android, iOS, Linux 의 자세한 변경사항은 [Github](source-code) 에서 확인하실 수 있습니다.
 {% endalerts %}
 
 ### **2021-10-01**
 
-* [시작하기](platform/ios/start.md)(iOS)에 권장 버전 정보 추가
-* [테스트 환경 설정](platform/ios/testing\_sdk\_integration.md)(iOS) 가이드 주소값 수정
+* [시작하기](platform/ios/start)(iOS)에 권장 버전 정보 추가
+* [테스트 환경 설정](platform/ios/testing\_sdk\_integration)(iOS) 가이드 주소값 수정
 * [Platform 에 따른 Capability interface 지원 현황](capability-interface/#platform)(iOS) 수
 
 ### **2021-08-10**
 
-* [템플릿 내 누구버튼 컬러 변경](platform/android/nugu-user-interface.md#nugubutton)(Android) 가이드 추가
-* [시작하기](platform/ios/start.md)(iOS) 업데이트
-* iOS [구성요소](platform/ios/component.md) 다이어그램, 컴포넌트 설명 업데이트
+* [템플릿 내 누구버튼 컬러 변경](platform/android/nugu-user-interface#nugubutton)(Android) 가이드 추가
+* [시작하기](platform/ios/start)(iOS) 업데이트
+* iOS [구성요소](platform/ios/component) 다이어그램, 컴포넌트 설명 업데이트
 
 ### 2021-07-14
 
-* [시작하기](platform/ios/start.md)(iOS) 업데이트
-* [NUGU 서비스 관리 web server 연동](platform/ios/web-server.md)(iOS) 변경 사항 업데이트
-* [NUGU Display의 노출과 제어](platform/ios/nugu-display-template-server.md)(iOS) 변경 사항 업데이트
+* [시작하기](platform/ios/start)(iOS) 업데이트
+* [NUGU 서비스 관리 web server 연동](platform/ios/web-server)(iOS) 변경 사항 업데이트
+* [NUGU Display의 노출과 제어](platform/ios/nugu-display-template-server)(iOS) 변경 사항 업데이트
 * [NUGU 사용자 인터페이스](platform/ios/nugu.md)(iOS) 변경 사항 업데이트
 * [Dark Mode 지원](platform/ios/dark-mode.md)(iOS) 가이드 추가
 * [Dark Mode 지원](platform/android/dark-mode.md)(Android) 가이드 추가
@@ -40,7 +40,7 @@ Android, iOS, Linux 의 자세한 변경사항은 [Github](source-code.md) 에�
 
 * Capability interface - [ASR](capability-interface/asr.md) 1.6 업데이트
 * Capability interface - [Chips](capability-interface/chips.md) 1.2 업데이트
-* Capability interface - [Display](capability-interface/display/) 1.7 업데이트
+* Capability interface - [Display](capability-interface/display) 1.7 업데이트
 
 ### 2021-05-20
 
@@ -86,7 +86,7 @@ Android, iOS, Linux 의 자세한 변경사항은 [Github](source-code.md) 에�
 
 ### 2021-01-06
 
-* [Linux System Requirements](platform/) 지원 platform 업데이트
+* [Linux System Requirements](platform) 지원 platform 업데이트
 * [Linux 구성요소](platform/linux/component.md) 다이어그램, 컴포넌트 설명, 의존성 목록 업데이트
 * [Linux 시작하기](platform/linux/start.md) NUGU 음성인식 사용 example 업데이트
 * [Capability Interface - Extension](capability-interface/extension.md) Linux example 추가
@@ -95,7 +95,7 @@ Android, iOS, Linux 의 자세한 변경사항은 [Github](source-code.md) 에�
 ### 2021-01-04
 
 * [Android 구성요소](platform/android/intro\_components.md#undefined) 중 NuguUXKit 설명 업데이트
-* [NUGU Display의 노출과 제어](platform/android/nugu-display/)(Android) 가이드 추가
+* [NUGU Display의 노출과 제어](platform/android/nugu-display)(Android) 가이드 추가
 * [Display Template](sdk-design-guide/display-template.md)(UX) 가이드 추가
 
 ### 2020-12-29
@@ -113,7 +113,7 @@ Android, iOS, Linux 의 자세한 변경사항은 [Github](source-code.md) 에�
 ### 2020-12-14
 
 * [AudioPlayer interface](capability-interface/audioplayer.md) 1.4 -> 1.5 업데이트
-* [Display interface](capability-interface/display/) 누락된 directive json 추가
+* [Display interface](capability-interface/display) 누락된 directive json 추가
 * [ASR interface](capability-interface/asr.md) 1.3 -> 1.4 업데이트
 * [Text interface](capability-interface/text.md) 1.3 -> 1.5 업데이트
 * [MediaPlayer interface](capability-interface/mediaplayer.md) 1.1 추가 업데이트

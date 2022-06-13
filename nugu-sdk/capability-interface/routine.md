@@ -16,7 +16,7 @@ description: 루틴을 실행하기 위한 규격
 
 ## State Diagram
 
-![](../../.gitbook/assets/routine-01.png)
+![](/assets/images/routine-01.png)
 
 ## SDK Interface
 

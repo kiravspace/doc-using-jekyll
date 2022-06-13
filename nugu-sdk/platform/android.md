@@ -12,9 +12,9 @@ description: Android 환경에서 NUGU 서비스를 쉽게 사용할 수 있도�
 
 ## 지원하는 OS 버전
 
-NUGU SDK for Android는 Android Lollipop\(5.0\) 이상을 지원합니다.
+NUGU SDK for Android는 Android Lollipop(5.0) 이상을 지원합니다.
 
 {% alerts style="info" %}
-Android Kitkat\(4.4\)에서도 동작하지만 TLS v1.2를 사용하도록 설정이 필요합니다.
+Android Kitkat(4.4)에서도 동작하지만 TLS v1.2를 사용하도록 설정이 필요합니다.
 {% endalerts %}
 

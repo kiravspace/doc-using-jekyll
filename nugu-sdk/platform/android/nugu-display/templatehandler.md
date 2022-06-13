@@ -14,17 +14,17 @@ TemplateHandler는 `TemplateHandlerFactory`에서 생성합니다.
 
 ## TemplateHandler
 
-TemplateView \(이하 View로 표기\) 는 버튼이 클릭되거나, 보여지는 item list에 변화가 생길때 이를 응용레벨로 알려 처리되도록 합니다. 또한 Toast나 Activity의 노출을 요청할 수도 있습니다.  
+TemplateView (이하 View로 표기) 는 버튼이 클릭되거나, 보여지는 item list에 변화가 생길때 이를 응용레벨로 알려 처리되도록 합니다. 또한 Toast나 Activity의 노출을 요청할 수도 있습니다.  
 각 상황에 호출되는 메서드들은 아래와 같습니다.
 
 | Methods |
 | :--- |
-| **fun onElementSelected\(tokenId: String\)** View내 버튼 클릭시 호출된다. |
-| **fun onChipSelected\(text: String\)** View내 chip\(추천 명령어\) 클릭시 호출된다. |
-| **fun onCloseClicked\(\)** View내 닫기 버튼 클릭시 호출된다. |
-| **fun onCloseAllClicked\(\)** View내 홈 버튼 클릭시 호출된다. SDK에서는 노출중인 모든 템플릿을 종료한다. |
-| **fun onNuguButtonSelected\(\)** View내 누구 버튼 \(아리아 호출\) 클릭시 호출된다. |
-| **fun onPlayerCommand\(command: String, param: String = ""\)** 미디어 재생 관련 동작이 필요할때 호출된다. \(ex. View내 재생/일시정지 버튼 클릭\) |
+| **fun onElementSelected(tokenId: String)** View내 버튼 클릭시 호출된다. |
+| **fun onChipSelected(text: String)** View내 chip(추천 명령어) 클릭시 호출된다. |
+| **fun onCloseClicked()** View내 닫기 버튼 클릭시 호출된다. |
+| **fun onCloseAllClicked()** View내 홈 버튼 클릭시 호출된다. SDK에서는 노출중인 모든 템플릿을 종료한다. |
+| **fun onNuguButtonSelected()** View내 누구 버튼 (아리아 호출) 클릭시 호출된다. |
+| **fun onPlayerCommand(command: String, param: String = ""\)** 미디어 재생 관련 동작이 필요할때 호출된다. \(ex. View내 재생/일시정지 버튼 클릭\) |
 | **fun onContextChanged\(context: String\)** View의 display context 변경이 있을때 호출된다. \(ex. focus item 변화, visible item 리스트의 변화\) |
 | **fun showToast\(text: String\)** View에서 응용레벨로 Toast노출을 요청할때 호출된다. |
 | **fun showActivity\(className: String\)** View에서 응용레벨로 Activity 노출을 요청할때 호출된다. |

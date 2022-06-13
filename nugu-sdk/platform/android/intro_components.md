@@ -1,6 +1,6 @@
 # 구성요소
 
-![](../../../.gitbook/assets/intro-components-01.png)
+![](/assets/images/intro-components-01.png)
 
 ## 구성요소 목록
 
@@ -8,12 +8,12 @@
 NUGU SDK for Android 를 통한 개발을 위해서는 `NuguCore`, `NuguInterface`를 필수로 포함해야합니다.
 {% endalerts %}
 
-* NUGU Component\(Common\)
+* NUGU Component(Common)
   * `NuguCore` : NUGU 서비스 이용에 필요한 구성요소들의 기본 구현을 제공합니다.
   * `NuguInterface` : NUGU SDK를 구성하는 필수 요소에 대한 인터페이스와 데이터 타입 등을 제공합니다.
   * `NuguAgent` : NUGU SDK를 구성할 때 필요한 capability agent를 제공합니다.
   * `NuguClientKit` : NUGU서비스를 쉽게 개발할 수 있도록 도와주는 기능을 제공합니다.
-* NUGU Component\(Depends on platform\)
+* NUGU Component(Depends on platform)
   * `NuguAndroidHelper` : NUGU서비스를 안드로이드 플랫폼에서 쉽게 개발할 수 있도록 도와주는 기능을 제공합니다.
   * `NuguUXKit` :  NUGU의 디자인 가이드를 준수하는 UX 요소를 제공하고, Template 화면 노출 및 제어를 위한 도구를 제공합니다.
   * `NuguLoginKit` : NUGU의 로그인을 도와주는 기능을 제공합니다.

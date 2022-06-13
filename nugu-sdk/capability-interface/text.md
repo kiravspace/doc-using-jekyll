@@ -24,7 +24,7 @@ description: 텍스트 명령을 Play 로 전달하기 위한 규격
 Text interface 규격에 따른 디바이스의 동작 제어는 TextAgent 가 처리합니다.
 
 {% tabs %}
-{% tab title="Android" %}
+{% tabs::content title="Android" %}
 NuguAndroidClient instance 를 통해 TextAgent instance 에 접근할 수 있습니다.
 
 {% code %}
@@ -32,9 +32,9 @@ NuguAndroidClient instance 를 통해 TextAgent instance 에 접근할 수 있�
 val textAgent = nuguAndroidClient.textAgent
 ```
 {% endcode %}
-{% endtab %}
+{% endtabs::content %}
 
-{% tab title="iOS" %}
+{% tabs::content title="iOS" %}
 NuguClient instance 를 통해 TextAgent instance 에 접근할 수 있습니다.
 
 {% code %}
@@ -42,9 +42,9 @@ NuguClient instance 를 통해 TextAgent instance 에 접근할 수 있습니다
 let textAgent = nuguClient.textAgent
 ```
 {% endcode %}
-{% endtab %}
+{% endtabs::content %}
 
-{% tab title="Linux" %}
+{% tabs::content title="Linux" %}
 [CapabilityFactory::makeCapability](https://nugu-developers.github.io/nugu-linux/classNuguCapability_1_1CapabilityFactory.html#a46d96b1bc96903f02905c92ba8794bf6) 함수로 [TextAgent](https://nugu-developers.github.io/nugu-linux/classNuguCapability_1_1ITextHandler.html) 를 생성하고 [NuguClient](https://nugu-developers.github.io/nugu-linux/classNuguClientKit_1_1NuguClient.html) 에 추가해 주어야합니다.
 
 {% code %}
@@ -57,7 +57,7 @@ nugu_client->getCapabilityBuilder()
     ->construct();
 ```
 {% endcode %}
-{% endtab %}
+{% endtabs::content %}
 {% endtabs %}
 
 ### 텍스트 명령
@@ -65,27 +65,27 @@ nugu_client->getCapabilityBuilder()
 임의의 텍스트 명령을 [TextInput](text.md#textinput) event 로 요청할 수 있습니다.
 
 {% tabs %}
-{% tab title="Android" %}
+{% tabs::content title="Android" %}
 {% code %}
 ```text
 textAgent.requestTextInput(text)
 ```
 {% endcode %}
-{% endtab %}
+{% endtabs::content %}
 
-{% tab title="iOS" %}
+{% tabs::content title="iOS" %}
 {% code %}
 ```text
 textAgent.requestTextInput(text: textInput, requestType: .normal)
 ```
 {% endcode %}
-{% endtab %}
+{% endtabs::content %}
 
-{% tab title="Linux" %}
+{% tabs::content title="Linux" %}
 ```text
 text_handler->requestTextInput(text)
 ```
-{% endtab %}
+{% endtabs::content %}
 {% endtabs %}
 
 ## Context

@@ -4,7 +4,7 @@ depth_order: 4
 
 # 발화 옵션에서 UNIT 태그로 지원하는 단위
 
-문장 내 발화 옵션 태그 중 `텍스트 읽기` &gt; `단위 읽기` 태그에서 지원하는 단위의 목록은 다음과 같습니다.\([발화 옵션 사용하기](../nugu-play/create-plays-with-play-builder/define-an-action/use-responses/use-prompts.md#use-utterance-options)\)
+문장 내 발화 옵션 태그 중 `텍스트 읽기` &gt; `단위 읽기` 태그에서 지원하는 단위의 목록은 다음과 같습니다.\([발화 옵션 사용하기](../nugu-play/create-plays-with-play-builder/define-an-action/use-responses/use-prompts#use-utterance-options)\)
 
 | 읽는 방식 | 단위 |
 | :--- | :--- |

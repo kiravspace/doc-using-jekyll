@@ -24,7 +24,7 @@ iOS 는 BluetoothAgent 를 지원하지 않습니다.
 {% endalerts %}
 
 {% tabs %}
-{% tab title="Android" %}
+{% tabs::content title="Android" %}
 NuguAndroidClient instance 를 통해 BluetoothAgent instance 에 접근할 수 있습니다.
 
 {% code %}
@@ -44,9 +44,9 @@ NuguAndroidClient.Builder(...)
     .enableBluetooth(MyBluetoothProvider())
 ```
 {% endcode %}
-{% endtab %}
+{% endtabs::content %}
 
-{% tab title="Linux" %}
+{% tabs::content title="Linux" %}
 CapabilityFactory::makeCapability 함수로 BluetoothAgent 를 생성하고 NuguClient 에 추가해 주어야합니다.
 
 {% code %}
@@ -58,7 +58,7 @@ nugu_client->getCapabilityBuilder()
     ->add(bluetooth_handler.get())
 ```
 {% endcode %}
-{% endtab %}
+{% endtabs::content %}
 {% endtabs %}
 
 ### Context 구성
@@ -68,7 +68,7 @@ nugu_client->getCapabilityBuilder()
 [Android reference](https://github.com/nugu-developers/nugu-android/blob/master/nugu-agent/src/main/java/com/skt/nugu/sdk/agent/bluetooth/BluetoothProvider.kt#L21)
 
 {% tabs %}
-{% tab title="Android" %}
+{% tabs::content title="Android" %}
 BluetoothProvider 를 구현합니다.
 
 {% code %}
@@ -86,9 +86,9 @@ class MyBluetoothProvider: BluetoothProvider {
 }
 ```
 {% endcode %}
-{% endtab %}
+{% endtabs::content %}
 
-{% tab title="Linux" %}
+{% tabs::content title="Linux" %}
 IBluetoothListener를 추가합니다.
 
 {% code %}
@@ -105,7 +105,7 @@ public:
 auto bluetooth_listener(std::make_shared<BluetoothListener>());
 ```
 {% endcode %}
-{% endtab %}
+{% endtabs::content %}
 {% endtabs %}
 
 ### 블루투스 기기 제어
@@ -115,7 +115,7 @@ auto bluetooth_listener(std::make_shared<BluetoothListener>());
 디바이스와 연결된 블루투스 기기의 음원 재생이 [Play](bluetooth.md#play)/[Stop](bluetooth.md#stop)/[Pause](bluetooth.md#pause)/[Next](bluetooth.md#next)/[Previous](bluetooth.md#previous) directive 로 요청될 수 있습니다.
 
 {% tabs %}
-{% tab title="Android" %}
+{% tabs::content title="Android" %}
 제어 기능을 실행하려면 BluetoothAgentInterface.Listener 를 추가합니다.
 
 {% code %}
@@ -136,9 +136,9 @@ val listener = object: BluetoothAgentInterface.Listener {
 bluetoothAgent.setListener(listener)
 ```
 {% endcode %}
-{% endtab %}
+{% endtabs::content %}
 
-{% tab title="Linux" %}
+{% tabs::content title="Linux" %}
 IBluetoothListener를 추가합니다.
 
 {% code %}
@@ -161,7 +161,7 @@ auto bluetooth_listener(std::make_shared<BluetoothListener>());
 CapabilityFactory::makeCapability<BluetoothAgent, IBluetoothHandler>(bluetooth_listener.get());
 ```
 {% endcode %}
-{% endtab %}
+{% endtabs::content %}
 {% endtabs %}
 
 ## Context

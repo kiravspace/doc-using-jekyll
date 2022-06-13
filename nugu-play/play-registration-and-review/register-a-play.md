@@ -4,19 +4,19 @@
 
 1️. `Play 등록하기` 버튼을 클릭하세요. Play Builder에서 개발한 Play 리스트 팝업이 표시됩니다.
 
-![](../../.gitbook/assets/register-a-play-01.png)
+![](/assets/images/register-a-play-01.png)
 
 2️. 등록할 Play의 타입을 결정하고 `다음` 버튼을 클릭하여 Play의 Snapshot 버전을 선택하는 화면으로 이동합니다. 일반적인 Play는 Custom 타입이며, Play Builder에 smarthome play 타입으로 만들어진 Play는 Pre-Built-in입니다.
 
-![](../../.gitbook/assets/register-a-play-02.png)
+![](/assets/images/register-a-play-02.png)
 
 {% alerts style="info" %}
-Smarthome 타입의 경우 [Pre-built Play Builder로 스마트홈 Play 만들기](../smarthome-play/)를 참고하세요.
+Smarthome 타입의 경우 [Pre-built Play Builder로 스마트홈 Play 만들기](../smarthome-play)를 참고하세요.
 {% endalerts %}
 
 3️. 등록할 Snapshot 버전을 선택하고 확인 버튼을 클릭하여, Play 이름/ID 생성 화면으로 이동합니다.
 
-![](../../.gitbook/assets/register-a-play-03.png)
+![](/assets/images/register-a-play-03.png)
 
 4\. 사용자에게 노출될 Play 서비스명과, 고유한 Play ID를 생성합니다.&#x20;
 
@@ -24,23 +24,23 @@ Play 서비스명은 Play Builder에서의 Play Name과 다르게 Developers에�
 
 Play 서비스 ID는 개별 Play를 구분하는 고유ID이며, 한 번 저장한 후에는 변경이 불가능합니다. Play 서비스ID는 reverse domain name 표기 형태로 입력해야 하며, 다른 Play에서 이미 사용 중인 서비스ID는 등록할 수 없습니다. (입력 예 : com.example.myPlay)
 
-![](../../.gitbook/assets/register-a-play-04.png)
+![](/assets/images/register-a-play-04.png)
 
 Play 서비스명과 Play 서비스 ID를 입력하여 넘어가면,  배포를 위한 4단계의 정보 입력 화면이 생성됩니다. Play 정보 등록은 총 4단계이며, 1단계 기본 정보 입력 → 2단계 연동 정보 입력 → 3단계 배포/심사 정보 → 4단계 등록/심사 요청의 순서로 진행됩니다.
 
-![](../../.gitbook/assets/register-a-play-05.png)
+![](/assets/images/register-a-play-05.png)
 
 ## 기본 정보 <a href="basic-information" id="basic-information"></a>
 
 Play 기본 정보는 Play 관련 필수 정보로 아래의 내용들을 등록해야 합니다. 입력을 완료하면 `다음` 버튼을 클릭합니다.&#x20;
 
-![](../../.gitbook/assets/register-a-play-06.png)
+![](/assets/images/register-a-play-06.png)
 
 **① Play 공개 유형**\
 Play 타입은 Public Play와 Private Play로 구분됩니다. Play의 서비스 대상이 NUGU 전체 회원일 경우에는 Public Play를, Play 사용 권한을 부여 받은 특정인 또는 개인을 대상으로 할 경우에는 Private Play를 선택합니다. Play 타입은 심사 승인 이후에는 변경이 불가능하므로 신중하게 결정해야 합니다. Private Play 타입의 Play는 NUGU biz kit에서 사용합니다.
 
 **②  Play 호출 이름**\
-사용자가 Play를 시작하기 위해 부를 때 사용하는 이름입니다. 반드시 3자 이상의 한글로만 등록해야 하며, 가능하면 8자 이하로 기억하고 부르기 쉬운 단어를 사용하는 것이 좋습니다. Play 호출 이름은 Play 심사 항목이기 때문에 신청하신 이름을 그대로 사용할 수 있다고 보장하지 않습니다. 널리 쓰이는 일반적인 이름이나 타사명, 서비스에 해당하는 용어 또는 이와 유사한 호출 이름은 사용할 수 없기 때문에,심사를 하면서 운영자가 별도로 연락을 드릴 수도 있습니다. 효과적인 호출 이름을 등록할 수 있도록 먼저 \[[작성 가이드 보기](register-a-play.md#define-an-invocation-name)]를 읽어보신 후에 등록 절차를 진행해주시길 권장합니다.
+사용자가 Play를 시작하기 위해 부를 때 사용하는 이름입니다. 반드시 3자 이상의 한글로만 등록해야 하며, 가능하면 8자 이하로 기억하고 부르기 쉬운 단어를 사용하는 것이 좋습니다. Play 호출 이름은 Play 심사 항목이기 때문에 신청하신 이름을 그대로 사용할 수 있다고 보장하지 않습니다. 널리 쓰이는 일반적인 이름이나 타사명, 서비스에 해당하는 용어 또는 이와 유사한 호출 이름은 사용할 수 없기 때문에,심사를 하면서 운영자가 별도로 연락을 드릴 수도 있습니다. 효과적인 호출 이름을 등록할 수 있도록 먼저 \[[작성 가이드 보기](register-a-play#define-an-invocation-name)]를 읽어보신 후에 등록 절차를 진행해주시길 권장합니다.
 
 **③ Play 설명**\
 등록하고자 하는 Play에 대한 설명(서비스 설명)을 기재합니다. Play 심사 시 Play에 대해서 파악을 할 수 있는 영역이므로, 자신의 Play의 특징이나 서비스 콘셉트 등을 쉽게 파악할 수 있도록 작성해 주세요. 설명은 최대 200자까지 입력할 수 있습니다.
@@ -104,13 +104,13 @@ Play 호출 이름은 위 조건을 기준으로 사용 승인 심사를 진행�
 
 &#x20;사용자 계정 체계를 필요로 하지 않는 Play 서비스라면, \[미사용]을 선택하면 됩니다.
 
-![](../../.gitbook/assets/register-a-play-07.png)
+![](/assets/images/register-a-play-07.png)
 
 ** 계정 연동 여부(OAuth 연동 여부)**
 
-제공하려는 Play의 사용자 계정과 NUGU 사용자 계정의 연결이 필요할 경우, 계정 연동에서 \[사용]을 선택하고, 다음 정보를 등록합니다. 계정 연동에 대한 자세한 내용은 [\[계정 연동 가이드 보기\]](../create-plays-with-play-builder/link-oauth20.md#link-oauth20)를 참고하세요.
+제공하려는 Play의 사용자 계정과 NUGU 사용자 계정의 연결이 필요할 경우, 계정 연동에서 \[사용]을 선택하고, 다음 정보를 등록합니다. 계정 연동에 대한 자세한 내용은 [\[계정 연동 가이드 보기\]](../create-plays-with-play-builder/link-oauth20#link-oauth20)를 참고하세요.
 
-![](../../.gitbook/assets/register-a-play-08.png)
+![](/assets/images/register-a-play-08.png)
 
 
 
@@ -148,12 +148,12 @@ Play 심사 승인에 필요한 정보와 사용자에게 Play를 설명하기 �
 배포/심사 정보 등록 후 `심사 요청` 버튼을 클릭하면 자동으로 NUGU developers 운영자에게 Play가 심사가 요청됩니다.
 
 {% alerts style="info" %}
-심사 요청에 대한 자세한 내용은 [심사 요청](play-review.md#review-request) 페이지를 참고해주세요.
+심사 요청에 대한 자세한 내용은 [심사 요청](play-review#review-request) 페이지를 참고해주세요.
 {% endalerts %}
 
 ****
 
-![](../../.gitbook/assets/register-a-play-09.png)
+![](/assets/images/register-a-play-09.png)
 
 **① Play 사용 지역**\
 등록한 Play가 서비스될 지역을 선택하는 기능으로 국내에서만 Play를 제공할 수 있습니다.
@@ -177,7 +177,7 @@ Play 심사 승인에 필요한 정보와 사용자에게 Play를 설명하기 �
 
 ****
 
-![](../../.gitbook/assets/register-a-play-10.png)
+![](/assets/images/register-a-play-10.png)
 
 
 
@@ -201,7 +201,7 @@ NUGU App을 통해 사용자에게 제공될 Play에 대한 주요 안내 사항
 3. **대표 발화문**: 위 주요 기능에서 입력한 기능과 매칭되는 대표 발화문(음성 명령어)을 입력합니다. 기능당 1개씩만 입력할 수 있습니다.
 4. **주요 기능**: 해당 Play가 제공하는 대표 기능을 등록합니다.
 
-![](../../.gitbook/assets/register-a-play-11.png)
+![](/assets/images/register-a-play-11.png)
 
 
 
@@ -215,7 +215,7 @@ NUGU App과 Play Ground(스토어)를 통해 보여줄 Play 아이콘을 등록�
 2. **큰 아이콘**: 512 X 512 px 사이즈의 이미지 파일로 향후 확장되는 PoC에서 활용할 예정입니다.
 
 {% alerts style="info" %}
-아이콘 등록에 관한 사항은 [아이콘 등록](../../reference/register-icon.md)를 참고하세요.
+아이콘 등록에 관한 사항은 [아이콘 등록](../../reference/register-icon)를 참고하세요.
 {% endalerts %}
 
 {% alerts style="info" %}

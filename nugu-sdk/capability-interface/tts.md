@@ -22,7 +22,7 @@ description: 음성 합성 결과를 전달받기 위한 규격
 TTS interface 규격에 따른 디바이스의 동작 제어는 TTSAgent 가 처리합니다.
 
 {% tabs %}
-{% tab title="Android" %}
+{% tabs::content title="Android" %}
 NuguAndroidClient instance 를 통해 TTSAgent instance 에 접근할 수 있습니다.
 
 {% code %}
@@ -30,9 +30,9 @@ NuguAndroidClient instance 를 통해 TTSAgent instance 에 접근할 수 있습
 val ttsAgent = nuguAndroidClient.ttsAgent
 ```
 {% endcode %}
-{% endtab %}
+{% endtabs::content %}
 
-{% tab title="iOS" %}
+{% tabs::content title="iOS" %}
 NuguClient instance 를 통해 TTSAgent instance 에 접근할 수 있습니다.
 
 {% code %}
@@ -40,9 +40,9 @@ NuguClient instance 를 통해 TTSAgent instance 에 접근할 수 있습니다.
 let ttsAgent = nuguClient.ttsAgent
 ```
 {% endcode %}
-{% endtab %}
+{% endtabs::content %}
 
-{% tab title="Linux" %}
+{% tabs::content title="Linux" %}
 [CapabilityFactory::makeCapability](https://nugu-developers.github.io/nugu-linux/classNuguCapability_1_1CapabilityFactory.html#a46d96b1bc96903f02905c92ba8794bf6) 함수로 [TTSAgent](https://nugu-developers.github.io/nugu-linux/classNuguCapability_1_1ITTSHandler.html) 를 생성하고 [NuguClient](https://nugu-developers.github.io/nugu-linux/classNuguClientKit_1_1NuguClient.html) 에 추가해 주어야합니다.
 
 {% code %}
@@ -55,7 +55,7 @@ nugu_client->getCapabilityBuilder()
     ->construct();
 ```
 {% endcode %}
-{% endtab %}
+{% endtabs::content %}
 {% endtabs %}
 
 ### 재생 상태 정보
@@ -63,7 +63,7 @@ nugu_client->getCapabilityBuilder()
 [Speak](tts.md#speak) directive 로 전달된 음원에 대한 재생 상태를 모니터링 할 수 있습니다.
 
 {% tabs %}
-{% tab title="Android" %}
+{% tabs::content title="Android" %}
 TTSAgentInterface.Listener 를 추가합니다.
 
 {% code %}
@@ -78,9 +78,9 @@ val listener = object: TTSAgentInterface.Listener {
 ttsAgent.addListener(listener)
 ```
 {% endcode %}
-{% endtab %}
+{% endtabs::content %}
 
-{% tab title="iOS" %}
+{% tabs::content title="iOS" %}
 TTSAgentDelegate 를 추가합니다.
 
 {% code %}
@@ -95,9 +95,9 @@ class MyTTSAgentDelegate: TTSAgentDelegate {
 ttsAgent.add(delegate: MyTTSAgentDelegate())
 ```
 {% endcode %}
-{% endtab %}
+{% endtabs::content %}
 
-{% tab title="Linux" %}
+{% tabs::content title="Linux" %}
 [ITTSListener](https://nugu-developers.github.io/nugu-linux/classNuguCapability_1_1ITTSListener.html) 를 추가합니다.
 
 {% code %}
@@ -117,7 +117,7 @@ auto tts_listener(std::make_shared<MyTTSListener>());
 CapabilityFactory::makeCapability<TTSAgent, ITTSHandler>(tts_listener.get());
 ```
 {% endcode %}
-{% endtab %}
+{% endtabs::content %}
 {% endtabs %}
 
 ## Context

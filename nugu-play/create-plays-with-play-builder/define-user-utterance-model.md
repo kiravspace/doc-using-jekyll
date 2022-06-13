@@ -12,7 +12,7 @@ Intent를 만들고 수정하는 것은 좌측 메뉴의 `User Utterance Model` 
 
 1\) Play Builder 홈 화면에서 Intent를 추가할 Play를 클릭하여 선택한 후, `User Utterance Model` > `Custom Intent` > `Intent 추가` 버튼을 클릭합니다.
 
-![](../../../.gitbook/assets/define-user-utterance-model-01.png)
+![](/assets/images/define-user-utterance-model-01.png)
 
 2\) Intent Name 필드에 "날씨"와 관련한 Intent명을 먼저 정의합니다.
 
@@ -20,7 +20,7 @@ Intent를 만들고 수정하는 것은 좌측 메뉴의 `User Utterance Model` 
 * NUGU 플랫폼에서는 'ask.weather'와 같은 네이밍 규칙으로 작성하고 있습니다.
 * Intent Name 앞에는 NUGU를 사용할 수 없으며, 중복은 허용하지 않습니다.
 
-![](../../../.gitbook/assets/define-user-utterance-model-02.png)
+![](/assets/images/define-user-utterance-model-02.png)
 
 3\) 사용자 예상 발화를 Sentence 필드에 입력합니다.
 
@@ -29,22 +29,22 @@ Intent를 만들고 수정하는 것은 좌측 메뉴의 `User Utterance Model` 
 * Entity로 지정할 단어도 섞어가면서 예상 발화를 작성합니다.
 
 {% alerts style="info" %}
-예상 발화 작성에 대한 자세한 내용은 [예상 발화 작성 가이드라인](./) 및 [예상 발화 작성 가이드](how-to-write-customer-utterances.md)를 참고하세요.
+예상 발화 작성에 대한 자세한 내용은 [예상 발화 작성 가이드라인](./define-user-utterance-model/built-in-intents) 및 [예상 발화 작성 가이드](./define-user-utterance-model/how-to-write-customer-utterances)를 참고하세요.
 {% endalerts %}
 
-![](../../../.gitbook/assets/define-user-utterance-model-03.png)
+![](/assets/images/define-user-utterance-model-03.png)
 
 위 1) \~ 3)의 과정을 연속 이미지로 보면 다음과 같습니다.
 
-![](../../../.gitbook/assets/define-user-utterance-model-04.gif)
+![](/assets/images/define-user-utterance-model-04.gif)
 
 4\) 예상 발화 문장 중 Entity로 지정할 단어가 있다면 마우스로 해당 텍스트를 선택합니다. 텍스트가 선택되면 Entity Type을 지정할 수 있는 팝업창이 표시됩니다.
 
-![](../../../.gitbook/assets/define-user-utterance-model-05.png)
+![](/assets/images/define-user-utterance-model-05.png)
 
 5\) 이 팝업에서 적절한 Type을 클릭하면 자동으로 지정됩니다.
 
-![](../../../.gitbook/assets/define-user-utterance-model-06.png)
+![](/assets/images/define-user-utterance-model-06.png)
 
 그러나 현재는 '명동'이라는 Entity에 적합한 Type이 없으므로, 새로 만들어 보겠습니다.
 
@@ -52,21 +52,21 @@ Intent를 만들고 수정하는 것은 좌측 메뉴의 `User Utterance Model` 
 
 * 발화 문장을 입력한 후 `Enter` 키를 누르거나 입력 필드 이외 영역을 마우스 왼쪽 버튼으로 클릭하면 문장이 추가됩니다.
 
-![](../../../.gitbook/assets/define-user-utterance-model-07.png)
+![](/assets/images/define-user-utterance-model-07.png)
 
 이제 위의 Entity Type 목록에 'LOCATION'이 추가된 것을 볼 수 있습니다.
 
-![](../../../.gitbook/assets/define-user-utterance-model-08.png)
+![](/assets/images/define-user-utterance-model-08.png)
 
 7\) 이 Type을 클릭하여 선택하면 다음과 같이 Entity Type이 연결됩니다.
 
-![](../../../.gitbook/assets/define-user-utterance-model-09.png)
+![](/assets/images/define-user-utterance-model-09.png)
 
 8\) 같은 방법으로 예상 발화 문장을 입력하고 Entity Type을 연결한 후 `Play 저장` 버튼을 클릭하면 Custom Intent의 생성이 완료됩니다.
 
 위 4) \~ 8)의 과정을 연속 이미지로 보면 다음과 같습니다.
 
-![](../../../.gitbook/assets/define-user-utterance-model-10.gif)
+![](/assets/images/define-user-utterance-model-10.gif)
 
 그러나 아직은 'LOCATION'에 하나의 Entity만 있으므로 Entity를 더 추가하거나 다른 Type으로 변경해야 합니다.\
 이에 대한 자세한 내용은 아래의 [Custom Entity Type에 Entity 추가하기](./#custom-entity-type)에서 더 알아보도록 하겠습니다.
@@ -84,10 +84,10 @@ Intent를 더 추가하고 싶다면 계속 추가가 가능하며, 추가 가�
 {% alerts style="info" %}
 다음의 내용을 참고하세요.
 
-* [예상 발화 작성 가이드](how-to-write-customer-utterances.md)를 참고하세요.
+* [예상 발화 작성 가이드](how-to-write-customer-utterances)를 참고하세요.
 *   Play Builder에서는 예상 발화를 파일로 업로드할 수 있도록 지원하고 있습니다.
 
-    예상 발화 및 Entity 업로드 가이드와 Built-in Intent에 대한 자세한 내용은 [Built-in Intent](built-in-intents.md)를 참고하세요.
+    예상 발화 및 Entity 업로드 가이드와 Built-in Intent에 대한 자세한 내용은 [Built-in Intent](built-in-intents)를 참고하세요.
 {% endalerts %}
 
 ## Entity
@@ -102,13 +102,13 @@ Entity는 Type을 기준으로 생성하고 정의하며 Entity Type은 Custom�
 
 2\) Entity Type List에서 'LOCATION'이라는 Entity Type을 선택합니다.
 
-![](../../../.gitbook/assets/define-user-utterance-model-11.png)
+![](/assets/images/define-user-utterance-model-11.png)
 
 3\) 화면에 표시한 '대표값'에 있는 인풋박스를 통해 '교동', '역삼동', '면목동'을 입력합니다.
 
 * 텍스트를 입력한 후 `Enter` 키를 누르거나 입력 필드 이외 영역을 마우스 왼쪽 버튼으로 클릭하면 Entity가 등록됩니다.
 
-![](../../../.gitbook/assets/define-user-utterance-model-12.png)
+![](/assets/images/define-user-utterance-model-12.png)
 
 ### 동의어 Entity 추가하기 (Entity 정규화)
 
@@ -122,20 +122,20 @@ Entity는 Type을 기준으로 생성하고 정의하며 Entity Type은 Custom�
 
 * 텍스트를 입력한 후 `Enter` 키를 누르거나 입력 필드 이외 영역을 마우스 왼쪽 버튼으로 클릭하면 Entity가 등록됩니다.
 
-![](../../../.gitbook/assets/define-user-utterance-model-13.png)
+![](/assets/images/define-user-utterance-model-13.png)
 
 3\) 동의어 영역을 클릭하여 커서를 옮긴 뒤 동의어를 입력합니다.
 
 * '에스케이'는 실제 구단명이 아니지만 흔히 불리는 이름이므로 추가를 하는 것이 좋습니다.
 * 또한 애칭, 약어, 영문 이름 혹은 정확하지는 않지만 불릴 가능성이 있는 이름이 있다면 함께 Entity로 추가해 주는 것도 좋습니다.
 
-![](../../../.gitbook/assets/define-user-utterance-model-14.png)
+![](/assets/images/define-user-utterance-model-14.png)
 
 4\) Entity 입력을 완료한 후 `Play 저장` 버튼을 클릭하면 'CLUBNAME' Custom Entity Type의 생성이 완료됩니다.
 
 이렇게 Entity Type을 정의해 두면, 사용자가 '에스케이와이번스', '에스케이와이번즈', 'SK와이번스', 'SK와이번즈', 'SK', '에스케이', '스크' 중 하나를 발화했다고 분석되었을 때, Play Builder가 '에스케이와이번스'라는 정규화 처리된 대표값을 전달하게 됩니다. 이러한 정규화 과정은 Play를 만들 때 많은 수고를 덜어주게 됩니다.
 
-![](../../../.gitbook/assets/define-user-utterance-model-15.png)
+![](/assets/images/define-user-utterance-model-15.png)
 
 ### Built-in Entity Type
 
@@ -143,27 +143,27 @@ Built-in Entity는 NUGU play kit이 제공해 주는 Entity 목록으로서, 시
 
 `User Utterance Model` > `Built-in Entity Types`로 이동하면 전체 목록을 확인할 수 있습니다.
 
-![](../../../.gitbook/assets/define-user-utterance-model-16.png)
+![](/assets/images/define-user-utterance-model-16.png)
 
 Built-in Entity Type는 정책상 Type 내에 있는 Entity 목록 전체를 열거하지 않습니다.
 
 특정 텍스트가 어떤 Type의 Entity에 포함되어 있는지 검색하는 기능을 제공할 예정이며, 이 검색을 통해 '오늘'을 입력하면 'BID\_DT\_DAY'라는 검색 결과(반환값)를 얻을 수 있습니다.
 
-![](../../../.gitbook/assets/define-user-utterance-model-17.png)
+![](/assets/images/define-user-utterance-model-17.png)
 
 Built-in Entity Type도 Custom Entity Type과 마찬가지로 일부 Type에 대해 정규화(대표값-동의어 관계)를 제공하고 있습니다.(대푯값이 표준어이지만, '대표값'으로 표현하겠습니다.)
 
 정규화를 제공하는 Type은 리스트 우측의 '상세보기' 열에 녹색 아이콘()으로 표시가 되며, 해당 Type의 상세 화면으로 이동하여 확인할 수 있습니다.
 
-![](../../../.gitbook/assets/define-user-utterance-model-18.png)
+![](/assets/images/define-user-utterance-model-18.png)
 
 정규화 규칙을 제공하는 Type이라고 하더라도 상세 화면에서 보여지는 대표값이 해당 Type의 모든 Entity를 의미하는 것은 아닙니다.
 
-![](../../../.gitbook/assets/define-user-utterance-model-19.png)
+![](/assets/images/define-user-utterance-model-19.png)
 
 {% alerts style="info" %}
 함께 보면 좋은 도움말
 
-* [Intent의 예상 발화 문장을 잘 입력하는 방법](how-to-write-customer-utterances.md)
-* [AudioPlayer Interface 알아보기](../use-backend-proxy/capability-interfaces/audioplayer-interface.md)
+* [Intent의 예상 발화 문장을 잘 입력하는 방법](how-to-write-customer-utterances)
+* [AudioPlayer Interface 알아보기](../use-backend-proxy/capability-interfaces/audioplayer-interface)
 {% endalerts %}

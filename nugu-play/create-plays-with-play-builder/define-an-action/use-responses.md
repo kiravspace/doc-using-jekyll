@@ -4,7 +4,7 @@ Response는 사용자의 발화를 입력 받았을 때 Play가 내놓게 되는
 
 다음과 같이 Action Tree의 끝에 위치한 Action만 Response를 가질 수 있습니다.
 
-![](../../../../.gitbook/assets/use-branch-actions-04.png)
+![](/assets/images/use-branch-actions-04.png)
 
 Response는 Prompt와 Directive로 구분할 수 있습니다.
 
@@ -21,17 +21,17 @@ Prompt는 모든 Action이 가질 수 있는 유형의 Response이며, 필요에
 
 * 기본 상태의 Output 설정 화면
 
-![](../../../../.gitbook/assets/use-responses-01.png)
+![](/assets/images/use-responses-01.png)
 
 * Capability Interface를 하나 이상 `ON` 한 경우의 Output 설정 화면
 
-![](../../../../.gitbook/assets/use-responses-02.png)
+![](/assets/images/use-responses-02.png)
 
 다음 장에서 Prompt와 Directive 사용법에 대해 알아보도록 하겠습니다.
 
 {% alerts style="info" %}
 이 장과 함께 보면 좋은 도움말
 
-* [Prompt](use-prompts.md)
-* [Directive](use-directives.md)
+* [Prompt](use-prompts)
+* [Directive](use-directives)
 {% endalerts %}

@@ -1,9 +1,0 @@
-<li><a href={{ url }}>{{ title }}</a>
-    {% unless child_pages.empty? %}
-        <ul>
-            {% for page in child_pages %}
-                {{ page.render }}
-            {% endfor %}
-        </ul>
-    {% endunless %}
-</li>

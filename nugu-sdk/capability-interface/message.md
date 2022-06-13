@@ -23,7 +23,7 @@ description: 문자 확인 및 전송 기능 제어를 위한 규격
 MessageCall interface 규격에 따른 디바이스의 동작 제어는 MessageAgent 가 처리합니다.
 
 {% tabs %}
-{% tab title="Android" %}
+{% tabs::content title="Android" %}
 NuguAndroidClient instance 를 통해 MessageAgent instance 에 접근할 수 있습니다.
 
 {% code %}
@@ -43,9 +43,9 @@ NuguAndroidClient().Builder()
     .enableMessage(MyMessageClient())
 ```
 {% endcode %}
-{% endtab %}
+{% endtabs::content %}
 
-{% tab title="Linux" %}
+{% tabs::content title="Linux" %}
 [CapabilityFactory::makeCapability](https://nugu-developers.github.io/nugu-linux/classNuguCapability_1_1CapabilityFactory.html#a46d96b1bc96903f02905c92ba8794bf6) 함수로 [MessageAgent](https://nugu-developers.github.io/nugu-linux/classNuguCapability_1_1IMessageHandler.html) 를 생성하고 [NuguClient](https://nugu-developers.github.io/nugu-linux/classNuguClientKit_1_1NuguClient.html) 에 추가해 주어야합니다.
 
 {% code %}
@@ -58,7 +58,7 @@ nugu_client->getCapabilityBuilder()
     ->construct();
 ```
 {% endcode %}
-{% endtab %}
+{% endtabs::content %}
 {% endtabs %}
 
 ### Context 구성
@@ -66,7 +66,7 @@ nugu_client->getCapabilityBuilder()
 문자 기능과 관련된 상태 정보를 [Context](message.md#context) 에 포함시켜 주어야 합니다.
 
 {% tabs %}
-{% tab title="Android" %}
+{% tabs::content title="Android" %}
 MessageClient 를 구현합니다.
 
 {% code %}
@@ -80,7 +80,7 @@ class MyMessageClient: MessageClient {
 }
 ```
 {% endcode %}
-{% endtab %}
+{% endtabs::content %}
 {% endtabs %}
 
 ### 문자 전송
@@ -88,7 +88,7 @@ class MyMessageClient: MessageClient {
 문자 전송이 [SendCandidates](message.md#sendcandidates), [SendMessage](message.md#sendmessage) directive 로 요청될 수 있습니다.
 
 {% tabs %}
-{% tab title="Android" %}
+{% tabs::content title="Android" %}
 MessageClient 를 구현합니다.
 
 {% code %}
@@ -108,9 +108,9 @@ class MyMessageClient: MessageClient {
 }
 ```
 {% endcode %}
-{% endtab %}
+{% endtabs::content %}
 
-{% tab title="Linux" %}
+{% tabs::content title="Linux" %}
 [IMessageListener](https://nugu-developers.github.io/nugu-linux/classNuguCapability_1_1IMessageListener.html) 를 추가합니다.
 
 {% code %}
@@ -135,7 +135,7 @@ auto message_listener(std::make_shared<MyMessageListener>());
 CapabilityFactory::makeCapability<MessageAgent, IMessageHandler>(message_listener.get());
 ```
 {% endcode %}
-{% endtab %}
+{% endtabs::content %}
 {% endtabs %}
 
 ### 문자 읽기
@@ -143,7 +143,7 @@ CapabilityFactory::makeCapability<MessageAgent, IMessageHandler>(message_listene
 문자 읽기가 [GetMessage](message.md#getmessage), [ReadMessage](message.md#readmessage) directive 로 요청될 수 있습니다.
 
 {% tabs %}
-{% tab title="Android" %}
+{% tabs::content title="Android" %}
 MessageClient 를 구현합니다.
 
 {% code %}
@@ -159,9 +159,9 @@ class MyMessageClient: MessageClient {
 {% endcode %}
 
 문자 재생은 SDK 에서 실행됩니다.
-{% endtab %}
+{% endtabs::content %}
 
-{% tab title="Linux" %}
+{% tabs::content title="Linux" %}
 [IMessageListener](https://nugu-developers.github.io/nugu-linux/classNuguCapability_1_1IMessageListener.html) 를 추가합니다.
 
 {% code %}
@@ -181,7 +181,7 @@ auto message_listener(std::make_shared<MyMessageListener>());
 CapabilityFactory::makeCapability<MessageAgent, IMessageHandler>(message_listener.get());
 ```
 {% endcode %}
-{% endtab %}
+{% endtabs::content %}
 {% endtabs %}
 
 ### 재생 상태 모니터링
@@ -189,7 +189,7 @@ CapabilityFactory::makeCapability<MessageAgent, IMessageHandler>(message_listene
 [ReadMessage](message.md#readmessage) directive 로 전달된 문자에 대한 재생 상태를 모니터링 할 수 있습니다.
 
 {% tabs %}
-{% tab title="Android" %}
+{% tabs::content title="Android" %}
 MessageAgentInterface.OnPlaybackListener 를 추가합니다.
 
 {% code %}
@@ -200,7 +200,7 @@ val listener = object: MessageAgentInterface.OnPlaybackListener {
 messageAgent.addOnPlaybackListener(listener)
 ```
 {% endcode %}
-{% endtab %}
+{% endtabs::content %}
 {% endtabs %}
 
 ## Context

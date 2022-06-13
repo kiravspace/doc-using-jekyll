@@ -12,5 +12,5 @@
 | Device G/W에서 TTS 연동 실패 | 누구 서비스 중에 문제가 발생했어요. 잠시 후 다시 말씀해주세요. | device\_GW\_error\_006 |
 | Device G/W에서 PR 연동 실패 | 누구 서비스 중에 문제가 발생했어요. 잠시 후 다시 말씀해주세요. | device\_GW\_error\_006 |
 
-{% file src="../../.gitbook/assets/assets\_error-message.zip" %}
+{% file src="/assets/files/assets_error-message.zip" %}
 

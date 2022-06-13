@@ -19,7 +19,7 @@ description: 디바이스 위치 정보를 Play 로 전달하기 위한 규격
 Location interface 규격에 따른 디바이스의 동작 제어는 LocationAgent 가 처리합니다.
 
 {% tabs %}
-{% tab title="Android" %}
+{% tabs::content title="Android" %}
 NuguAndroidClient instance 를 통해 LocationAgent instance 에 접근할 수 있습니다.
 
 {% code %}
@@ -27,9 +27,9 @@ NuguAndroidClient instance 를 통해 LocationAgent instance 에 접근할 수 �
 val locationAgent = nuguAndroidClient.getAgent(LocationAgent.NAMESPACE)
 ```
 {% endcode %}
-{% endtab %}
+{% endtabs::content %}
 
-{% tab title="iOS" %}
+{% tabs::content title="iOS" %}
 NuguClient instance 를 통해 LocationAgent instance 에 접근할 수 있습니다.
 
 {% code %}
@@ -37,9 +37,9 @@ NuguClient instance 를 통해 LocationAgent instance 에 접근할 수 있습�
 let locationAgent = nuguClient.locationAgent
 ```
 {% endcode %}
-{% endtab %}
+{% endtabs::content %}
 
-{% tab title="Linux" %}
+{% tabs::content title="Linux" %}
 CapabilityFactory::makeCapability 함수로 LocationAgent 를 생성하고 NuguClient 에 추가해 주어야합니다.
 
 {% code %}
@@ -52,15 +52,15 @@ nugu_client->getCapabilityBuilder()
     ->construct();
 ```
 {% endcode %}
-{% endtab %}
+{% endtabs::content %}
 {% endtabs %}
 
 ### Context 구성
 
-Play 에서 위치 정보 기반의 정보를 제공 받기 위해서는 디바이스의 위치 정보를 [Context](location.md#context) 에 포함시켜 주어야 합니다.
+Play 에서 위치 정보 기반의 정보를 제공 받기 위해서는 디바이스의 위치 정보를 [Context](location#context) 에 포함시켜 주어야 합니다.
 
 {% tabs %}
-{% tab title="Android" %}
+{% tabs::content title="Android" %}
 LocationProvider 를 추가합니다.
 
 {% code %}
@@ -74,9 +74,9 @@ NuguAndroidClient.Builder(...)
     .enableLocation(provider)
 ```
 {% endcode %}
-{% endtab %}
+{% endtabs::content %}
 
-{% tab title="iOS" %}
+{% tabs::content title="iOS" %}
 LocationAgentDelegate 를 추가합니다.
 
 {% code %}
@@ -89,9 +89,9 @@ class MyLocationAgentDelegate: LocationAgentDelegate {
 locationAgent.delegate = MyLocationAgentDelegate()
 ```
 {% endcode %}
-{% endtab %}
+{% endtabs::content %}
 
-{% tab title="Linux" %}
+{% tabs::content title="Linux" %}
 ILocationListener를 추가합니다.
 
 {% code %}
@@ -108,7 +108,7 @@ public:
 auto location_listener(std::make_shared<LocationListener>());
 ```
 {% endcode %}
-{% endtab %}
+{% endtabs::content %}
 {% endtabs %}
 
 ## Context
