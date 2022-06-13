@@ -1,6 +1,8 @@
 module Jekyll
   module Potion
     class PagesTag < Liquid::Tag
+      require "_plugins/potion"
+
       include Jekyll::Potion::TagModule
 
       def render(page_context)

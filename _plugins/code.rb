@@ -1,6 +1,8 @@
 module Jekyll
   module Potion
     class CodeTag < Liquid::Block
+      require "_plugins/potion"
+
       include Jekyll::Potion::TagModule
 
       def initialize(tag_name, markup, options)
