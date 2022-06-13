@@ -18,14 +18,9 @@ module Jekyll
   end
 end
 
+require "#{__dir__}/lib/site.rb"
+require "#{__dir__}/lib/page.rb"
 require "#{__dir__}/lib/registry.rb"
 require "#{__dir__}/lib/tag_module.rb"
 require "#{__dir__}/lib/block.rb"
 require "#{__dir__}/lib/child.rb"
-
-Dir["#{__dir__}/lib/*.rb"].each do |f|
-  puts f
-  require f
-end
-
-# puts Jekyll::Potion::TagModule
