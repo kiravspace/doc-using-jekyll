@@ -3,6 +3,7 @@ module Jekyll
     class LinkTag < Liquid::Tag
       require "net/http"
       require "nokogiri"
+      require "potion"
 
       include Jekyll::Potion::TagModule
 

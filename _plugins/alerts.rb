@@ -1,6 +1,8 @@
 module Jekyll
   module Potion
     class AlertsTag < Liquid::Block
+      require "potion"
+
       include Jekyll::Potion::TagModule
 
       def initialize(tag_name, markup, options)
