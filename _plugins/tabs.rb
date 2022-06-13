@@ -1,7 +1,7 @@
 module Jekyll
   module Potion
     class TabsTag < Liquid::Block
-      include RootBlockModule
+      include Jekyll::Potion::RootBlockModule
 
       def initialize(tag_name, markup, options)
         super
@@ -32,7 +32,7 @@ module Jekyll
     end
 
     class TabContentTag < Liquid::Block
-      include ChildBlockModule
+      include Jekyll::Potion::ChildBlockModule
 
       def id_format
         "tab-content-#{options.line_number}"

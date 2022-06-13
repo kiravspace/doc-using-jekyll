@@ -1,7 +1,7 @@
 module Jekyll
   module Potion
     class ApiTag < Liquid::Block
-      include RootBlockModule
+      include Potion::RootBlockModule
 
       QUERY_CATEGORY = "query"
       BODY_CATEGORY = "body"
@@ -59,7 +59,7 @@ module Jekyll
     end
 
     class ApiDescriptionTag < Liquid::Block
-      include ChildBlockModule
+      include Jekyll::Potion::ChildBlockModule
 
       def render(page_context)
         render_from_custom_context(
@@ -72,7 +72,7 @@ module Jekyll
     end
 
     class ApiParameterTag < Liquid::Block
-      include ChildBlockModule
+      include Potion::ChildBlockModule
 
       def initialize(tag_name, markup, options)
         super
@@ -98,7 +98,7 @@ module Jekyll
     end
 
     class ApiResponseTag < Liquid::Block
-      include ChildBlockModule
+      include Jekyll::Potion::ChildBlockModule
 
       def initialize(tag_name, markup, options)
         super
