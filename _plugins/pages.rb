@@ -1,7 +1,7 @@
 module Jekyll
   module Potion
     class PagesTag < Liquid::Tag
-      include TagModule
+      include Jekyll::Potion::TagModule
 
       def render(page_context)
         page_context["class"] = params["class"]

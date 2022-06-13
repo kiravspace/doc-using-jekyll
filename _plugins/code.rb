@@ -1,7 +1,7 @@
 module Jekyll
   module Potion
     class CodeTag < Liquid::Block
-      include TagModule
+      include Jekyll::Potion::TagModule
 
       def initialize(tag_name, markup, options)
         super

@@ -1,10 +1,10 @@
 module Jekyll
   module Potion
     class LinkTag < Liquid::Tag
-      require 'net/http'
-      require 'nokogiri'
+      require "net/http"
+      require "nokogiri"
 
-      include TagModule
+      include Jekyll::Potion::TagModule
 
       HTTP_SCHEME = "http://".freeze
       HTTPS_SCHEME = "https://".freeze

@@ -332,7 +332,7 @@ module Jekyll
     end
 
     module RootBlockModule
-      include TagModule
+      include Jekyll::Potion::TagModule
 
       attr_accessor :children
 
@@ -376,7 +376,7 @@ module Jekyll
     end
 
     module ChildBlockModule
-      include TagModule
+      include Jekyll::Potion::TagModule
 
       MAX_DEPTH = 100
 
