@@ -336,7 +336,7 @@ module Jekyll
 
       attr_accessor :children
 
-      FullToken = /\A\{%\s*(\w+::\w+)\s*(.*?)%}\z/om
+      FULL_TOKEN = /\A\{%\s*(\w+::\w+)\s*(.*?)%}\z/om
 
       def initialize(tag_name, markup, options)
         @children = []
@@ -345,14 +345,14 @@ module Jekyll
 
       def parse(tokens)
         options.line_number = tokens.line_number
-        while token = tokens.shift
+        while (token = tokens.shift)
           next if token.empty?
 
           if token == end_tag_name
             return
           end
 
-          if token =~ FullToken
+          if token =~ FULL_TOKEN
             tag_name = $1
             markup = $2
 

@@ -1,8 +1,6 @@
 module Jekyll
   module Potion
     class FileTag < Liquid::Tag
-      require "_plugins/potion"
-
       include Jekyll::Potion::TagModule
 
       def initialize(tag_name, markup, options)

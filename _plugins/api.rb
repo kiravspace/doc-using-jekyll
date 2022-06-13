@@ -1,8 +1,6 @@
 module Jekyll
   module Potion
     class ApiTag < Liquid::Block
-      require "_plugins/potion"
-
       include RootBlockModule
 
       QUERY_CATEGORY = "query"

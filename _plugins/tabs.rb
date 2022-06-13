@@ -1,8 +1,6 @@
 module Jekyll
   module Potion
     class TabsTag < Liquid::Block
-      require "_plugins/potion"
-      
       include RootBlockModule
 
       def initialize(tag_name, markup, options)
