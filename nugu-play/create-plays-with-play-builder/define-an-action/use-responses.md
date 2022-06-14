@@ -32,6 +32,6 @@ Prompt는 모든 Action이 가질 수 있는 유형의 Response이며, 필요에
 {% alerts style="info" %}
 이 장과 함께 보면 좋은 도움말
 
-* [Prompt](use-prompts)
-* [Directive](use-directives)
+* [Prompt](./use-responses/use-prompts)
+* [Directive](./use-responses/use-directives)
 {% endalerts %}

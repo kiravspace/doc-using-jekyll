@@ -20,9 +20,9 @@
 ```
 {% endcode %}
 
-| parameter | type | mandatory | description |
-| :--- | :--- | :--- | :--- |
-| token | string | **Y** |  |
+| parameter | type   | mandatory | description |
+|:----------|:-------|:----------|:------------|
+| token     | string | **Y**     |             |
 
 ## CloseSucceeded
 
@@ -82,9 +82,9 @@
 ```
 {% endcode %}
 
-| parameter | type | mandatory | description |
-| :--- | :--- | :--- | :--- |
-| direction | string | N | PREVIOUS, NEXT |
+| parameter | type   | mandatory | description    |
+|:----------|:-------|:----------|:---------------|
+| direction | string | N         | PREVIOUS, NEXT |
 
 ## ControlFocusFailed
 
@@ -106,9 +106,9 @@
 ```
 {% endcode %}
 
-| parameter | type | mandatory | description |
-| :--- | :--- | :--- | :--- |
-| direction | string | N | PREVIOUS, NEXT |
+| parameter | type   | mandatory | description    |
+|:----------|:-------|:----------|:---------------|
+| direction | string | N         | PREVIOUS, NEXT |
 
 ## ControlScrollSucceeded
 
@@ -130,9 +130,9 @@
 ```
 {% endcode %}
 
-| parameter | type | mandatory | description |
-| :--- | :--- | :--- | :--- |
-| direction | string | N | PREVIOUS, NEXT |
+| parameter | type   | mandatory | description    |
+|:----------|:-------|:----------|:---------------|
+| direction | string | N         | PREVIOUS, NEXT |
 
 ## ControlScrollFailed
 
@@ -154,7 +154,7 @@
 ```
 {% endcode %}
 
-| parameter | type | mandatory | description |
-| :--- | :--- | :--- | :--- |
-| direction | string | N | PREVIOUS, NEXT |
+| parameter | type   | mandatory | description    |
+|:----------|:-------|:----------|:---------------|
+| direction | string | N         | PREVIOUS, NEXT |
 

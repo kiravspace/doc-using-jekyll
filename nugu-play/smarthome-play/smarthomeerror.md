@@ -74,7 +74,7 @@ Service Provider에 공통 exception으로 처리하고자 하는 경우 사용�
 
 ## Error List
 
-Device-level error 발생 시에는 error 원인에 맞는 error code를 응답해야 합니다. 이 때 error code에 따라 함께 응답해야 하는 부가정보\(error property\)가 있는 경우도 있습니다. 아래 NUGU 스마트홈을 통해 제공할 수 있는 error case별 code와 error property를 참조하시기 바랍니다.
+Device-level error 발생 시에는 error 원인에 맞는 error code를 응답해야 합니다. 이 때 error code에 따라 함께 응답해야 하는 부가정보(error property)가 있는 경우도 있습니다. 아래 NUGU 스마트홈을 통해 제공할 수 있는 error case별 code와 error property를 참조하시기 바랍니다.
 
 | Error Code | Error Property | description |
 | :--- | :--- | :--- |
@@ -94,7 +94,7 @@ Device-level error 발생 시에는 error 원인에 맞는 error code를 응답�
 | NotInAvailableMode | mode | SmartHomeDevice가 취소할 수 없는 모드를 취소요청한 경우입니다. 어떤 SmartHomeDevice와 특정 모델들은 다른 모드를 설정해야만 현재 모드를 해제할 수 있는 경우가 있습니다. 이 에러는 그런 모드를 갖는 SmartHomeDevice에 대해 모드 취소 제어가 인입될 경우를 지원합니다. |
 | SetTimeOutofRange | - | SmartHomeDevice에 종료예약 발화시간이 해당 기기의 지원범위 밖일 경우입니다. |
 | NotExistSetEndTime | - | SmartHomeDevice에 종료예약취소 요청이 인입되었으나 해당 기기에 설정된 종료예약이 없는 경우입니다. |
-| UnsupportedSetEndTime | - | 사용자가 요청한 종료예약시간이 미지원하는 시간 단위일 경우\(시간 분단위 등\)입니다. 어떤 스마트홈 기기 및 모델들은 특정 유형으로만 종료예약을 설정할 수 있습니다. 이 에러는 그런 스마트홈 기기 및 모델을 지원합니다. |
+| UnsupportedSetEndTime | - | 사용자가 요청한 종료예약시간이 미지원하는 시간 단위일 경우(시간 분단위 등)입니다. 어떤 스마트홈 기기 및 모델들은 특정 유형으로만 종료예약을 설정할 수 있습니다. 이 에러는 그런 스마트홈 기기 및 모델을 지원합니다. |
 | AlreadyCharging | - | 스마트홈 기기에 충전 요청이 인입되었으나 해당 스마트홈 기기가 이미 충전 중인 상태일 경우입니다. |
 | AlreadyStarting | - | 스마트홈 기기에 동작 명령을 내렸을 경우 해당 스마트홈 기기가 이미 동작 상태인 경우입니다. PowerControl Capability의 TurnOn Directive를 동작으로 사용하는 경우를 지원합니다. |
 | AlreadyStopped | - | 스마트홈 기기에 동작 중지 명령을 내렸을 경우 해당 스마트홈 기기가 이미 중지 상태인 경우입니다. PowerControl Capability의 TurnOff Directive를 동작 중지로 사용하는 경우를 지원합니다. |

@@ -10,14 +10,18 @@ Play에서 Capability Interface를 활용하는 방법에 대한 자세한 내�
 
 Capability Interface는 다음의 세 요소로 구성되어 있습니다.
 
-**Built-in Intent**\
-Built-in Intent는 자주 사용될 것으로 예상되거나 꼭 정의해야 하는 발화들을 미리 훈련시켜 제공하는 Intent입니다.\
+**Built-in Intent**
+
+Built-in Intent는 자주 사용될 것으로 예상되거나 꼭 정의해야 하는 발화들을 미리 훈련시켜 제공하는 Intent입니다.
+
 별도로 학습 문장을 등록하지 않아도 되도록 기본으로 제공되는 Intent이며, Action 정의(기능 정의) 시에 바로 사용할 수 있습니다.
 
-**Directive**\
+**Directive**
+
 Play가 디바이스의 특정 기능을 제어하기 위한 명령어입니다.
 
-**Event**\
+**Event**
+
 디바이스에서 특정 기능을 실행시키는 과정에서 디바이스의 상태가 변했을 때 Play로 전송됩니다.
 
 Built-in Intent, Directive, Event는 스피커와 Play 사이에서 다음과 같은 방향으로 전달됩니다.
@@ -31,7 +35,7 @@ Built-in Intent는 해당 디바이스 기능을 사용자가 발화를 통해 �
 Capability Interface를 선택할 때마다 사용할 수 있는 Built-in Intent들이 확장됩니다.
 
 {% alerts style="info" %}
-Built-in Intent에 대한 자세한 내용은 [Built-in Intent](../../define-user-utterance-model/built-in-intents)를 참고하세요.
+Built-in Intent에 대한 자세한 내용은 [Built-in Intent](../define-user-utterance-model/built-in-intents)를 참고하세요.
 {% endalerts %}
 
 ## Directive
@@ -40,7 +44,7 @@ Directive는 Action에 정의된 Response로 사용됩니다. Directive를 응�
 
 Play는 Backend proxy로부터 Directive를 넘겨받아 디바이스로 전달하게 됩니다. 따라서, Backend proxy에서는 각 Directive를 생성해서 요청이 올 때마다 전달을 해야 합니다.
 
-Directive 구현에 대한 자세한 내용은 은 [Backend proxy API Reference](../backend-proxy-api-reference)를 참고해 주세요.
+Directive 구현에 대한 자세한 내용은 은 [Backend proxy API Reference](backend-proxy-api-reference)를 참고해 주세요.
 
 ![](/assets/images/capability-interfaces-02.png)
 

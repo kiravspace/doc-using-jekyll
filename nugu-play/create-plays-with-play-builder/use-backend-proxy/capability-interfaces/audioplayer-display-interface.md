@@ -1,3 +1,7 @@
+---
+depth_order: 2
+---
+
 # AudioPlayer를 위한 Display Interface
 
 이 페이지에서는 AudioPlayer Interface를 사용할 때, 화면이 있는 디바이스에서 AudioPlayer 제어 화면을 제공할 때 사용하는 Display Interface를 안내합니다.
@@ -55,16 +59,16 @@ AudioPlayer를 위한 확장 Template의 타입은 두 가지이며, 타입에 �
 ```
 {% endcode %}
 
-| Parameter           | Type   | Required | Description                                                                 |
-| ------------------- | ------ | -------- | --------------------------------------------------------------------------- |
-| type                | string | Y        | <p>AudioPlayer template type</p><p> 1) AudioPlayer.Template1</p><p> 2) AudioPlayer.Template2</p> |
-| title.iconUrl       | string | N        | icon image url                                                              |
-| title.text          | string | Y        | title text                                                                  |
-| content.title       | string | Y        | content 영역의 title                                                           |
-| content.subtitle1   | string | Y        | subtitle1                                                                   |
-| content.subtitle2   | string | Y        | subtitle2                                                                   |
-| content.imageUrl    | string | Y        | image url                                                                   |
-| content.durationSec | string | N        | 오디오 콘텐츠의 길이로 단위는 초이며, 0보다 큰 값을 가질 경우 Progress Bar가 활성화됩니다.                  |
+| Parameter            | Type    | Required  | Description                                                                         |
+|----------------------|---------|-----------|-------------------------------------------------------------------------------------|
+| type                 | string  | Y         | AudioPlayer template type<br/>1) AudioPlayer.Template1<br/>2) AudioPlayer.Template2 |
+| title.iconUrl        | string  | N         | icon image url                                                                      |
+| title.text           | string  | Y         | title text                                                                          |
+| content.title        | string  | Y         | content 영역의 title                                                                   |
+| content.subtitle1    | string  | Y         | subtitle1                                                                           |
+| content.subtitle2    | string  | Y         | subtitle2                                                                           |
+| content.imageUrl     | string  | Y         | image url                                                                           |
+| content.durationSec  | string  | N         | 오디오 콘텐츠의 길이로 단위는 초이며, 0보다 큰 값을 가질 경우 Progress Bar가 활성화됩니다.                          |
 
 #### AudioPlayer.Template2
 
@@ -81,7 +85,7 @@ AudioPlayer를 위한 확장 Template의 타입은 두 가지이며, 타입에 �
         "text": "11월 8일 주요뉴스"
       },
       "content": {
-        "title": "문대통령 \"BTS 꿈/열정에 세계 젊은 이들 용기... 빌보드 1위 축하",
+        "title": "문대통령 \"BTS 꿈/열정에 세계 젊은 이들 용기... 빌보드 1위 축하\"",
         "subtitle": "T map을 위해 추가됨",
         "imageUrl": "https://nugu.sk.com/news_bg.jpg",
         "durationSec": "123"
@@ -92,15 +96,15 @@ AudioPlayer를 위한 확장 Template의 타입은 두 가지이며, 타입에 �
 ```
 {% endcode %}
 
-| Parameter           | Type   | Required | Description                                                                                                        |
-| ------------------- | ------ | -------- |--------------------------------------------------------------------------------------------------------------------|
-| type                | string | Y        | {::nomarkdown}<p>AudioPlayer template type</p><p> 1) AudioPlayer.Template1</p><p> 2) AudioPlayer.Template2</p>{:/} |
-| title.iconUrl       | string | N        | icon image url                                                                                                     |
-| title.text          | string | Y        | title text                                                                                                         |
-| content.title       | string | Y        | content 영역의 title                                                                                                  |
-| content.subtitle    | string | Y        | T map용 Template은 기본으로 title, subtitle만 제공                                                                          |
-| content.imageUrl    | string | Y        | image url                                                                                                          |
-| content.durationSec | string | N        | 오디오 콘텐츠의 길이로 단위는 초이며, 0보다 큰 값을 가질 경우 Progress Bar가 활성화됩니다.                                                         |
+| Parameter            | Type    | Required  | Description                                                                                                         |
+|----------------------|---------|-----------|---------------------------------------------------------------------------------------------------------------------|
+| type                 | string  | Y         | AudioPlayer template type<br/>1) AudioPlayer.Template1<br/>2) AudioPlayer.Template2                                 |
+| title.iconUrl        | string  | N         | icon image url                                                                                                      |
+| title.text           | string  | Y         | title text                                                                                                          |
+| content.title        | string  | Y         | content 영역의 title                                                                                                   |
+| content.subtitle     | string  | Y         | T map용 Template은 기본으로 title, subtitle만 제공                                                                           |
+| content.imageUrl     | string  | Y         | image url                                                                                                           |
+| content.durationSec  | string  | N         | 오디오 콘텐츠의 길이로 단위는 초이며, 0보다 큰 값을 가질 경우 Progress Bar가 활성화됩니다.                                                          |
 
 #### Template Type을 지정하지 않은 경우 (Default Template)
 
@@ -134,13 +138,13 @@ AudioPlayer를 위한 Template은 오디오 재생을 제어하는 버튼이 있
 ```
 {% endcode %}
 
-| Event                 | Description                 | Action 생성                                                                                                                                               |
-| --------------------- | --------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| NextCommandIssued     | next 버튼을 눌렀을 때 발생하는 이벤트     | NextCommandIssued 이벤트가 trigger인 Action을 정의해야 합니다.                                                                                                       |
-| PreviousCommandIssued | previous 버튼을 눌렸을 때 발생하는 이벤트 | PreviousCommandIssued 이벤트가 trigger인 Action을 정의해야 합니다.                                                                                                   |
-| PlayCommandIssued     | play 버튼을 눌렀을 때 발생하는 이벤트     | PlayCommandIssued 이벤트가 trigger인 Root Action 하위에 2개의 Branch Action을 만들어, AudioPlayer\_playerActivity가 PAUSED인 Branch와 STOPPED/FINISHED 인 경우를 구분해주어야 합니다. |
-| PauseCommandIssued    | pause 버튼을 눌렀을 때 발생하는 이벤트    | PauseCommandIssued 이벤트가 trigger인 Action을 정의해야 합니다.                                                                                                      |
-| StopCommandIssued     | stop 버튼을 눌렀을 때 발생하는 이벤트     | StopCommandIssued 이벤트가 trigger인 Action을 정의해야 합니다.                                                                                                       |
+| Event                  | Description                  | Action 생성                                                                                                                                                |
+|------------------------|------------------------------|----------------------------------------------------------------------------------------------------------------------------------------------------------|
+| NextCommandIssued      | next 버튼을 눌렀을 때 발생하는 이벤트      | NextCommandIssued 이벤트가 trigger인 Action을 정의해야 합니다.                                                                                                        |
+| PreviousCommandIssued  | previous 버튼을 눌렸을 때 발생하는 이벤트  | PreviousCommandIssued 이벤트가 trigger인 Action을 정의해야 합니다.                                                                                                    |
+| PlayCommandIssued      | play 버튼을 눌렀을 때 발생하는 이벤트      | PlayCommandIssued 이벤트가 trigger인 Root Action 하위에 2개의 Branch Action을 만들어, AudioPlayer_playerActivity가 PAUSED인 Branch와 STOPPED/FINISHED 인 경우를 구분해주어야 합니다.   |
+| PauseCommandIssued     | pause 버튼을 눌렀을 때 발생하는 이벤트     | PauseCommandIssued 이벤트가 trigger인 Action을 정의해야 합니다.                                                                                                       |
+| StopCommandIssued      | stop 버튼을 눌렀을 때 발생하는 이벤트      | StopCommandIssued 이벤트가 trigger인 Action을 정의해야 합니다.                                                                                                        |
 
 #### PlaybackFinished Event
 

@@ -6,7 +6,7 @@
 * Swift 5.1
 * iOS 12.0+ (v1.3.0 or more) iOS 10.0+ (less than v1.3.0)
 * macOS 10.15.0+ (v1.4.0 or more\) including mac catalyst
-* tvOS 13.0+ \(v1.4.0 or more\)
+* tvOS 13.0+ (v1.4.0 or more)
 
 {% alerts style="warning" %}
 iOS Nugu SDK 는 1.2.8 이상에서 다양한 인터페이스와 안정성을 보장합니다.   
@@ -157,7 +157,7 @@ NUGU 로그인은 **NUGU 회원 연동 방식**과 **NUGU 회원 미사용 방�
 
 {% alerts style="info" %}
 NUGU 서비스를 이용하기 위해서는 OAuth 2.0 인증이 필요합니다.  
-OAuth 2.0 API 는 [Authentication](../../authentication.md) 에서 확인이 가능합니다.
+OAuth 2.0 API 는 [Authentication](../../authentication) 에서 확인이 가능합니다.
 {% endalerts %}
 
 ### **NUGU 회원 연동 방식**으로 로그인
@@ -191,7 +191,7 @@ func application(_ app: UIApplication, open url: URL, options: [UIApplication.Op
 
 #### 인 앱 브라우저를 통해 로그인
 
-PoC 정보를 이용하여 다음과 같이 `OAuthManager`를 통해 값을 설정한 후에 인 앱 브라우저\(`SFSafariViewController`\)를 이용한 T아이 로그인을 시도합니다. 인증 절차가 모두 완료되면 결과를 Closure를 통해 받을 수 있습니다.
+PoC 정보를 이용하여 다음과 같이 `OAuthManager`를 통해 값을 설정한 후에 인 앱 브라우저(`SFSafariViewController`)를 이용한 T아이 로그인을 시도합니다. 인증 절차가 모두 완료되면 결과를 Closure를 통해 받을 수 있습니다.
 
 {% tabs %}
 {% tabs::content title="ViewController.swift" %}

@@ -40,14 +40,14 @@ Discovery Sample Response
 {% endcode %}
 
 {% alerts style="info" %}
-ChargeControl Capability 는 별도의 파라미터를 가지지 않습니다. 그러나 NUGU SmartHome Platform 에게 디바이스가 ChargeControl 을 지원한다는 것을 알리기 위해 충전기능을 지원하는 디바이스는 \(e.g. 로봇청소기\) supportedCapabilities 로 chargeControl 에 해당하는 빈 객체를 응답에 포함시켜야 합니다.
+ChargeControl Capability 는 별도의 파라미터를 가지지 않습니다. 그러나 NUGU SmartHome Platform 에게 디바이스가 ChargeControl 을 지원한다는 것을 알리기 위해 충전기능을 지원하는 디바이스는 (e.g. 로봇청소기) supportedCapabilities 로 chargeControl 에 해당하는 빈 객체를 응답에 포함시켜야 합니다.
 {% endalerts %}
 
 SmartHomeDevice Attribute Parameters
 
-| Attribute | Description |
-| :--- | :--- |
-| customData | Discovery 시 SmartHomeServiceProvider가 응답할 수 있는 SmartHomeDevice의 부가정보입니다. customData는 해당 SmartHomeDevice의 제어요청 시 Request에 포함되어 전달됩니다. |
+| Attribute  | Description                                                                                                                          |
+|:-----------|:-------------------------------------------------------------------------------------------------------------------------------------|
+| customData | Discovery 시 SmartHomeServiceProvider가 응답할 수 있는 SmartHomeDevice의 부가정보입니다.<br/>customData는 해당 SmartHomeDevice의 제어요청 시 Request에 포함되어 전달됩니다. |
 
 ## Directive
 
@@ -272,9 +272,9 @@ Sample Response
 
 CheckRemainingBattery Directive Response parameter details
 
-| parameter name | description | type |
-| :--- | :--- | :--- |
-| remainingBattery | SmartHomdeDevice의 잔여배터리량. %를 기준으로 응답해야 합니다. | integer |
+| parameter name   | description                                 | type    |
+|:-----------------|:--------------------------------------------|:--------|
+| remainingBattery | SmartHomdeDevice의 잔여배터리량.<br/>%를 기준으로 응답해야 합니다. | integer |
 
 ## Error & Exception
 

@@ -20,7 +20,7 @@ NUGU developers 운영자는 문제가 되는 Play를 발견하는 즉시 개발
 자신의 Play가 NUGU developers 운영자에 의해 직권 중지된 경우, “1:1 문의하기”를 통해 이의를 제기하면 Play 직권 중지의 해지 프로세스를 따라 재검토한 후 결과를 개발자의 연락처로 통보하게 됩니다.
 
 {% alerts style="danger" %}
-직권 중지 시 Play는 서비스 중지\(Disable\) 상태입니다. 개발자가 직접 재개\(Enable\)할 수 없으며, NUGU developers 운영자의 확인을 거쳐야 상태 변경이 가능합니다.
+직권 중지 시 Play는 서비스 중지(Disable) 상태입니다. 개발자가 직접 재개(Enable)할 수 없으며, NUGU developers 운영자의 확인을 거쳐야 상태 변경이 가능합니다.
 {% endalerts %}
 
 ## Play 직권 중지 해지 <a id="appealplay-suspension"></a>
@@ -29,5 +29,5 @@ NUGU developers 운영자의 직권으로 중지된 Play에 대해 개발자가 
 
 ## Play 직권 해지 <a id="play-cancellation"></a>
 
-NUGU developers 운영자 직권으로 서비스가 중지된 후 일정 기간 동안 이에 대한 이의 제기가 없을 때는 NUGU 플랫폼의 자원 효율화를 위해 해당 Play를 삭제할 수 있습니다. 이 과정을 Play 직권 해지라고 하며, 직권 해지된 Play에 대해서는 향후 운영 및 VOC 대응을 위한 최소한의 정보\(Play 서비스 이름, 삭제 사유, 개발사명 등\)만을 남기고 모든 정보는 삭제합니다. 이 Play 직권 해지 과정에서 해당 Play가 점유했던 호출 이름은 회수되며, 동일 호출 이름을 신청한 다른 Play에 재배정될 수 있습니다.
+NUGU developers 운영자 직권으로 서비스가 중지된 후 일정 기간 동안 이에 대한 이의 제기가 없을 때는 NUGU 플랫폼의 자원 효율화를 위해 해당 Play를 삭제할 수 있습니다. 이 과정을 Play 직권 해지라고 하며, 직권 해지된 Play에 대해서는 향후 운영 및 VOC 대응을 위한 최소한의 정보(Play 서비스 이름, 삭제 사유, 개발사명 등)만을 남기고 모든 정보는 삭제합니다. 이 Play 직권 해지 과정에서 해당 Play가 점유했던 호출 이름은 회수되며, 동일 호출 이름을 신청한 다른 Play에 재배정될 수 있습니다.
 

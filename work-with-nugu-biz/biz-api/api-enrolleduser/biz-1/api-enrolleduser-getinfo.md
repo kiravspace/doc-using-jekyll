@@ -6,7 +6,7 @@ depth_order: 5
 
 초대되어 퍼블리셔에 등록된 Biz 사용자 상세정보를 조회하는 기능입니다.
 
-## 1. URL <a id="Biz&#xC0AC;&#xC6A9;&#xC790;&#xC0C1;&#xC138;&#xC870;&#xD68C;v1-1.URL"></a>
+## 1. URL
 
 {% code %}
 ```text
@@ -14,22 +14,22 @@ depth_order: 5
 ```
 {% endcode %}
 
-## 2. Request <a id="Biz&#xC0AC;&#xC6A9;&#xC790;&#xC0C1;&#xC138;&#xC870;&#xD68C;v1-2.Request"></a>
+## 2. Request
 
-| 이름 | 유형 | 필수 | 설명 |
-| :--- | :--- | :--- | :--- |
-| Publisher-Token | Header | Y | 퍼블리셔가 보유한 토큰 |
-| userId | path | Y | Biz 사용자 ID |
+| 이름              | 유형     | 필수    | 설명           |
+|:----------------|:-------|:------|:-------------|
+| Publisher-Token | Header | Y     | 퍼블리셔가 보유한 토큰 |
+| userId          | path   | Y     | Biz 사용자 ID   |
 
-## 3. Response <a id="Biz&#xC0AC;&#xC6A9;&#xC790;&#xC0C1;&#xC138;&#xC870;&#xD68C;v1-3.Response"></a>
+## 3. Response
 
-### 3.1 Http Status <a id="Biz&#xC0AC;&#xC6A9;&#xC790;&#xC0C1;&#xC138;&#xC870;&#xD68C;v1-3.1HttpStatus"></a>
+### 3.1 Http Status
 
-| HTTP Status | 설명 |
-| :--- | :--- |
-| 200 | 정상 응답 |
-| 403 | 퍼블리셔 API Token이 유효하지 않을 경우의 응답 |
-| 404 | 대상 Biz 사용자를 찾을 수 없을 때 응답 |
+| HTTP Status | 설명                             |
+|:------------|:-------------------------------|
+| 200         | 정상 응답                          |
+| 403         | 퍼블리셔 API Token이 유효하지 않을 경우의 응답 |
+| 404         | 대상 Biz 사용자를 찾을 수 없을 때 응답       |
 
 ### 3.2 Body <a id="Biz&#xC0AC;&#xC6A9;&#xC790;&#xC0C1;&#xC138;&#xC870;&#xD68C;v1-3.2Body"></a>
 
@@ -67,27 +67,27 @@ depth_order: 5
 
 ### 3.3 설명 <a id="Biz&#xC0AC;&#xC6A9;&#xC790;&#xC0C1;&#xC138;&#xC870;&#xD68C;v1-3.3&#xC124;&#xBA85;"></a>
 
-| 이름 | 속성 | 설명 |
-| :--- | :--- | :--- |
-| id | string | Biz 사용자 ID |
-| name | string | Biz 사용자 이름 |
-| token | string | Biz 사용자 토큰 사용자 초대 유형이 PLAY일 경우 null |
-| email | string | Biz 사용자 이메일 |
-| alias | string | Biz 사용자 부가 정보 |
-| phone | string | Biz 사용자 핸드폰 번호\(-제외\) |
-| group | object | 속한 그룹 정보 |
-| group.id | string | 그룹 ID |
-| group.name | string | 그룹명 |
-| serviceType | enum | 사용자 초대 유형 SERVICE : 서비스 PLAY : play |
-| serviceAgreeYn | Y/N | 서비스 이용동의 여부 사용자 초대 유형이 PLAY일 경우 N |
-| serviceApiAgreeYn | Y/N | 서비스 API 수신동의 여부 사용자 초대 유형이 PLAY일 경우 N |
-| serviceApiAllowedDeviceCount | int | 서비스 API 수신 허용 기기 수 사용자 초대 유형이 PLAY일 경우 0 |
-| serviceAcceptedDateTime | string | 초대 승인일\(ISO-8601\) |
-| plays | array of object | 승인된 private play 목록 |
-| plays\[\].playServiceId | string | play service id |
-| plays\[\].token | string | play별 토큰 사용자 초대 유형이 SERVICE일 경우 token |
-| plays\[\].agreeYn | Y/N | play별 이용동의 여부 사용자 초대 유형이 SERVICE일 경우 Y |
-| plays\[\].apiAgreeYn | Y/N | play별 API 수신 동의 여부 사용자 초대 유형이 SERVICE일 경우 Y |
-| plays\[\].apiAllowedDeviceCount | int | play별 API 수신 허용 기기 수 사용자 초대 유형이 SERVICE일 경우 serviceApiAllowedDeviceCount |
-| plays\[\].acceptedDateTime | string | play별 초대 승인일\(ISO-8601\) 사용자 초대 유형이 SERVICE일 경우 serviceAcceptedDateTime |
+| 이름                              | 속성              | 설명                                                                           |
+|:--------------------------------|:----------------|:-----------------------------------------------------------------------------|
+| id                              | string          | Biz 사용자 ID                                                                   |
+| name                            | string          | Biz 사용자 이름                                                                   |
+| token                           | string          | Biz 사용자 토큰 사용자 초대 유형이 PLAY일 경우 null                                          |
+| email                           | string          | Biz 사용자 이메일                                                                  |
+| alias                           | string          | Biz 사용자 부가 정보                                                                |
+| phone                           | string          | Biz 사용자 핸드폰 번호(-제외)                                                          |
+| group                           | object          | 속한 그룹 정보                                                                     |
+| group.id                        | string          | 그룹 ID                                                                        |
+| group.name                      | string          | 그룹명                                                                          |
+| serviceType                     | enum            | 사용자 초대 유형<br/>SERVICE : 서비스<br/>PLAY : play                                  |
+| serviceAgreeYn                  | Y/N             | 서비스 이용동의 여부 사용자 초대 유형이 PLAY일 경우 N                                            |
+| serviceApiAgreeYn               | Y/N             | 서비스 API 수신동의 여부 사용자 초대 유형이 PLAY일 경우 N                                        |
+| serviceApiAllowedDeviceCount    | int             | 서비스 API 수신 허용 기기 수 사용자 초대 유형이 PLAY일 경우 0                                     |
+| serviceAcceptedDateTime         | string          | 초대 승인일(ISO-8601)                                                             |
+| plays                           | array of object | 승인된 private play 목록                                                          |
+| plays\[\].playServiceId         | string          | play service id                                                              |
+| plays\[\].token                 | string          | play별 토큰 사용자 초대 유형이 SERVICE일 경우 token                                        |
+| plays\[\].agreeYn               | Y/N             | play별 이용동의 여부 사용자 초대 유형이 SERVICE일 경우 Y                                       |
+| plays\[\].apiAgreeYn            | Y/N             | play별 API 수신 동의 여부 사용자 초대 유형이 SERVICE일 경우 Y                                  |
+| plays\[\].apiAllowedDeviceCount | int             | play별 API 수신 허용 기기 수 사용자 초대 유형이 SERVICE일 경우 serviceApiAllowedDeviceCount     |
+| plays\[\].acceptedDateTime      | string          | play별 초대 승인일(ISO-8601) 사용자 초대 유형이 SERVICE일 경우 serviceAcceptedDateTime        |
 

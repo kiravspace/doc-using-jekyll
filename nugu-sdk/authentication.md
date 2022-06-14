@@ -14,9 +14,9 @@ NUGU 플랫폼 인증은 [OAuth 2.0](https://tools.ietf.org/html/rfc6749)의 규
 
 `data` 파라미터를 사용하여 디바이스 일련번호를 전달 할 수 있습니다.
 
-> {"deviceSerialNumber":"DEVICE\_SERIAL\_NUMBER"}
+> {"deviceSerialNumber":"DEVICE_SERIAL_NUMBER"}
 >
-> %7B%22deviceSerialNumber%22%3A%22DEVICE\_SERIAL\_NUMBER%22%7D
+> %7B%22deviceSerialNumber%22%3A%22DEVICE_SERIAL_NUMBER%22%7D
 
 {% api base_url="https://api.host.domain" path="/v1/auth/oauth/authorize" method="get" summary="인증 요청 (Authorize Endpoint)" %}
 {% api::description %}

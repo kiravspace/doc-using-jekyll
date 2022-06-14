@@ -16,15 +16,13 @@ Common Action에서 X, X1, X2, X3를 만든 뒤, B2와 C3에서 이동할 액션
 
 1. `Custom Actions`의 화면 상단 탭에서 `Common Actions`으로 이동한 뒤, `Action 추가` 버튼을 누른 뒤, Action 생성 페이지를 열어 Common Action을 생성합니다.
 
-![](/assets/images/use-common-actions-03.gif)
+   ![](/assets/images/use-common-actions-03.gif)
+2. 일반 Action을 만듭니다.
 
-1. 일반 Action을 만듭니다.
+   ![](/assets/images/use-common-actions-04.png)
+3. Common Action과 연결할 Action(B2, C3)으로 이동하여, `Output 유형` > `Common Action`을 선택하고, 이동할 Common Action을 선택합니다.
 
-![](/assets/images/use-common-actions-04.png)
-
-1. Common Action과 연결할 Action(B2, C3)으로 이동하여, `Output 유형` > `Common Action`을 선택하고, 이동할 Common Action을 선택합니다.
-
-![](/assets/images/use-common-actions-05.gif)
+   ![](/assets/images/use-common-actions-05.gif)
 
 Common Action은 다른 액션과 같이 Parameter를 정의하여 사용할 수 있습니다. 다만, Trigger Intent가 없기 때문에, Utterance Parameter에서 Entity mapping 시, 모든 Intent의 Entity Type 리스트가 노출됩니다. Backend Parameter는 액션 내에서 정의하여 사용할 수 있고, `외부 연동 서버 설정` > `Global Parameter`에서 정의한 Global Parameter를 상속받아 사용할 수도 있습니다.
 

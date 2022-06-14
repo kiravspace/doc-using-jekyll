@@ -1,16 +1,16 @@
 # NUGU 사용자 인터페이스
 
-[SDK UX Guide](../../sdk-design-guide/voice-chrome.md) 을 준수하여 어플리케이션을 개발하는데 사용할 수 있는 레이아웃 객체와 UI 컨트롤 같은 UI 구성요소를 미리 빌드된 형태로 제공합니다.
+[SDK UX Guide](../../sdk-design-guide/voice-chrome) 을 준수하여 어플리케이션을 개발하는데 사용할 수 있는 레이아웃 객체와 UI 컨트롤 같은 UI 구성요소를 미리 빌드된 형태로 제공합니다.
 
 ## NuguVoiceChrome
 
 NUGU 서비스의 핵심 기능인 음성 인식을 표현하기 위한 View 입니다. 음성 인식의 단계를 Animation 으로 표현하며, 인식된 음성을 문자로 출력하고, 눌러서 음성 인식을 대신하는 `NuguChipsButton` 들을 노출합니다.
 
-| Methods |
-| :--- |
-| **func changeState(state: NuguVoiceChrome.State)** NuguVoiceChrome 의 상태(단계)와 animation 을 변경합니다. |
-| **func setChipsData(chipsData: [NuguChipsButton.NuguChipsButtonType], onChipsSelect: @escaping ((_ selectedChips: NuguChipsButton.NuguChipsButtonType) -&gt; Void))** NuguVoiceChrome 에 노출될 NuguChipsButton 을 설정합니다. |
-| **func setRecognizedText(text: String?\)** NuguVoiceChrome 에 출력될 인식 문구를 설정합니다. |
+| Methods                                                                                                                                                                                                                  |
+|:-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
+| **func changeState(state: NuguVoiceChrome.State)**<br/>NuguVoiceChrome 의 상태(단계)와 animation 을 변경합니다.                                                                                                                      |
+| **func setChipsData(chipsData: \[NuguChipsButton.NuguChipsButtonType\], onChipsSelect: @escaping ((_ selectedChips: NuguChipsButton.NuguChipsButtonType) -\> Void))**<br/>NuguVoiceChrome 에 노출될 NuguChipsButton 을 설정합니다. |
+| **func setRecognizedText(text: String?\)**<br/>NuguVoiceChrome 에 출력될 인식 문구를 설정합니다.                                                                                                                                       |
 
 ## VoiceChromePresenter
 
@@ -100,11 +100,11 @@ extension MainViewController: VoiceChromePresenterDelegate {
 
 `NuguButton`은 음성 인식을 시작하고, Wake up 감지 가능 상태를 표현하기 위해 제공되는 버튼입니다. `NuguButton`은 코드, IBOutlet 상관없이 생성하여 사용 가능합니다.
 
-| **Attributes** |
-| :--- |
-| **public** **var** nuguButtonType: NuguButtonType \(fab/button, blue/white 설정 가\) |
-| **public** **var** isActivated: Bool |
-| **public** **override** **var** isEnabled: Bool |
+| **Attributes**                                                                       |
+|:-------------------------------------------------------------------------------------|
+| **public** **var** nuguButtonType: NuguButtonType<br/>(fab/button, blue/white 설정 가능) |
+| **public** **var** isActivated: Bool                                                 |
+| **public** **override** **var** isEnabled: Bool                                      |
 
 {% code %}
 ```swift
@@ -128,6 +128,6 @@ func showToast(message: String?, bottomMargin: CGFloat? = nil, duration: Duratio
 {% endcode %}
 
 * message : `NuguToast` 에 표현될 텍스트입니다.
-* bottomMargin : 노출될 `NuguToast` 의 bottom margin 값입니다. \(default = 88.0\)
-* duration : `NuguToast` 를 노출할 시간 값이며, short = 4 / long = 7 으로 설정 가능합니다. \(Default = .short\)
+* bottomMargin : 노출될 `NuguToast` 의 bottom margin 값입니다. (default = 88.0)
+* duration : `NuguToast` 를 노출할 시간 값이며, short = 4 / long = 7 으로 설정 가능합니다. (Default = .short)
 

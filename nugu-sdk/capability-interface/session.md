@@ -8,9 +8,9 @@ description: Play 와 Client 간의 세션을 유지하기 위한 규격
 
 최신 버전은 1.0 입니다.
 
-| Version | Date | Description |
-| :--- | :--- | :--- |
-| 1.0 | 2020.06.05 | 규격 추가 |
+| Version | Date       | Description |
+|:--------|:-----------|:------------|
+| 1.0     | 2020.06.05 | 규격 추가       |
 
 ## SDK Interface
 
@@ -143,11 +143,11 @@ CapabilityFactory::makeCapability<SessionAgent, ISessionHandler>(session_listene
 ```
 {% endcode %}
 
-| parameter | type | mandatory | description |
-| :--- | :--- | :--- | :--- |
-| list | array | N | 현재 활성화 되어 있는 세션 리스트 |
-| list.sessionId | string | Y | - |
-| list.playServiceId | string | Y | - |
+| parameter          | type   | mandatory | description         |
+|:-------------------|:-------|:----------|:--------------------|
+| list               | array  | N         | 현재 활성화 되어 있는 세션 리스트 |
+| list.sessionId     | string | Y         | -                   |
+| list.playServiceId | string | Y         | -                   |
 
 ## Directives
 
@@ -171,7 +171,7 @@ CapabilityFactory::makeCapability<SessionAgent, ISessionHandler>(session_listene
 ```
 {% endcode %}
 
-| parameter | type | mandatory | description |
-| :--- | :--- | :--- | :--- |
-| sessionId | string | Y |  |
+| parameter | type   | mandatory | description |
+|:----------|:-------|:----------|:------------|
+| sessionId | string | Y         |             |
 

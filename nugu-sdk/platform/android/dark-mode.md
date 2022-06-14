@@ -21,7 +21,7 @@ ThemeManager는 NuguAndroidClient에서 얻을 수 있습니다.
 
 * **THEME.LIGHT (default)**    - 밝은 테마로 표시 
 * **THEME.DARK**                     - 어두운 테마로 표시
-* **THEME.SYSTEM**                - 시스템 설정 (설정 &gt; 디스플레이 &gt; 야간모드) on/off 에 따라 표시
+* **THEME.SYSTEM**                - 시스템 설정 (설정 \> 디스플레이 \> 야간모드) on/off 에 따라 표시
 
 
 

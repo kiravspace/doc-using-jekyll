@@ -47,11 +47,11 @@ Discovery Sample Response
 
 SmartHomeDevice Attribute Parameters
 
-| Attribute | Description |
-| :--- | :--- |
-| minTemperature | 해당 SmartHomeDevice가 지원하는 최저 자체 설정 온도입니다. |
-| maxTemperature | 해당 SmartHomeDevice가 지원하는 최고 자체 설정 온도입니다. |
-| customData | Discovery 시 SmartHomeServiceProvider가 응답할 수 있는 SmartHomeDevice의 부가정보입니다. customData는 해당 SmartHomeDevice의 제어요청 시 Request에 포함되어 전달됩니다. |
+| Attribute      | Description                                                                                                                          |
+|:---------------|:-------------------------------------------------------------------------------------------------------------------------------------|
+| minTemperature | 해당 SmartHomeDevice가 지원하는 최저 자체 설정 온도입니다.                                                                                             |
+| maxTemperature | 해당 SmartHomeDevice가 지원하는 최고 자체 설정 온도입니다.                                                                                             |
+| customData     | Discovery 시 SmartHomeServiceProvider가 응답할 수 있는 SmartHomeDevice의 부가정보입니다.<br/>customData는 해당 SmartHomeDevice의 제어요청 시 Request에 포함되어 전달됩니다. |
 
 ## Directive
 
@@ -127,9 +127,9 @@ Sample Response
 
 AskDeviceTemperature Directive Response parameter details
 
-| parameter name | description | type |
-| :--- | :--- | :--- |
-| temperatureLevel | SmartHomeDevice에 설정된 자체설정온도입니다. 사용자에게 설정온도로 안내됩니다. | double |
+| parameter name   | description                                        | type   |
+|:-----------------|:---------------------------------------------------|:-------|
+| temperatureLevel | SmartHomeDevice에 설정된 자체설정온도입니다.<br/>사용자에게 설정온도로 안내됩니다. | double |
 
 ### SetDeviceTemperature
 
@@ -185,8 +185,8 @@ Control Request 예시 (POST, /nugu/v1/capabilities/DeviceTemperatureControl/dir
 
 SetDeviceTemperature Directive Request parameter details
 
-| parameter name | description | type |
-| :--- | :--- | :--- |
+| parameter name   | description                                     | type   |
+|:-----------------|:------------------------------------------------|:-------|
 | temperatureLevel | 사용자가 SmartHomeDevice에 설정하고자 하는 자체설정온도의 발화정보입니다. | double |
 
 Sample Response
@@ -210,9 +210,9 @@ Sample Response
 
 SetDeviceTemperature Directive Response parameter details
 
-| parameter name | description | type |
-| :--- | :--- | :--- |
-| temperatureLevel | SmartHomeDevice를 설정한 이후의 자체설정온도입니다. 제어를 마친 이후의 온도로 응답해야 합니다. | double |
+| parameter name   | description                                                  | type   |
+|:-----------------|:-------------------------------------------------------------|:-------|
+| temperatureLevel | SmartHomeDevice를 설정한 이후의 자체설정온도입니다.<br/>제어를 마친 이후의 온도로 응답해야 합니다. | double |
 
 ## Error & Exception
 

@@ -47,12 +47,12 @@ Discovery Sample Response
 
 SmartHomeDevice Attribute Parameters
 
-| Attribute | Description |
-| :--- | :--- |
-| minHumidity | 해당 SmartHomeDevice가 지원하는 최저 자체 설정 습입니다. |
-| maxHumidity | 해당 SmartHomeDevice가 지원하는 최고 자체 설정 습입니다. |
-| humidityStep | 해당 SmartHomeDevice의 습 상승/하강 시의 기본 제어 단위입니다. 별도의 사용자 발화가 없을 시 해당 단위만큼 조절합니다. |
-| customData | Discovery 시 SmartHomeServiceProvider가 응답할 수 있는 SmartHomeDevice의 부가정보입니다. customData는 해당 SmartHomeDevice의 제어요청 시 Request에 포함되어 전달됩니다. |
+| Attribute    | Description                                                                                                                          |
+|:-------------|:-------------------------------------------------------------------------------------------------------------------------------------|
+| minHumidity  | 해당 SmartHomeDevice가 지원하는 최저 자체 설정 습도입니다.                                                                                             |
+| maxHumidity  | 해당 SmartHomeDevice가 지원하는 최고 자체 설정 습도입니다.                                                                                             |
+| humidityStep | 해당 SmartHomeDevice의 습도 상승/하강 시의 기본 제어 단위입니다.<br/>별도의 사용자 발화가 없을 시 해당 단위만큼 조절합니다.                                                     |
+| customData   | Discovery 시 SmartHomeServiceProvider가 응답할 수 있는 SmartHomeDevice의 부가정보입니다.<br/>customData는 해당 SmartHomeDevice의 제어요청 시 Request에 포함되어 전달됩니다. |
 
 ## Directive
 
@@ -132,9 +132,9 @@ Sample Response
 
 AskHumidity Directive Response parameter details
 
-| parameter name | description | type |
-| :--- | :--- | :--- |
-| currentHumidity | SmartHomeDevice에서 측정한 해당 공간의 실제 습도정보입니다. 사용자에게 실제습도로 안내됩니다. | double |
+| parameter name  | description                                                 | type   |
+|:----------------|:------------------------------------------------------------|:-------|
+| currentHumidity | SmartHomeDevice에서 측정한 해당 공간의 실제 습도정보입니다.<br/>사용자에게 실제습도로 안내됩니다. | double |
 
 ### SetHumidity
 
@@ -194,9 +194,9 @@ Control Request 예시 (POST, /nugu/v1/capabilities/HumidityControl/directives/S
 
 SetHumidity Directive Request parameter details
 
-| parameter name | description | type |
-| :--- | :--- | :--- |
-| humidityLevel | 사용자가 SmartHomeDevice에 설정하고자 하는 습도의 발화 정보입니다. %단위입니다. | double |
+| parameter name | description                                          | type   |
+|:---------------|:-----------------------------------------------------|:-------|
+| humidityLevel  | 사용자가 SmartHomeDevice에 설정하고자 하는 습도의 발화 정보입니다.<br/>%단위입니다. | double |
 
 Sample Response
 
@@ -219,9 +219,9 @@ Sample Response
 
 SetHumidity Directive Response parameter details
 
-| parameter name | description | type |
-| :--- | :--- | :--- |
-| humidityLevel | SmartHomeDevice를 설정한 이후의 설정습도입니다. 제어를 마친 이후의 습도로 응답해야 합니다. | double |
+| parameter name | description                                                | type   |
+|:---------------|:-----------------------------------------------------------|:-------|
+| humidityLevel  | SmartHomeDevice를 설정한 이후의 설정습도입니다.<br/>제어를 마친 이후의 습도로 응답해야 합니다. | double |
 
 ### IncreaseHumidity
 
@@ -281,9 +281,9 @@ Control Request 예시 (POST, /nugu/v1/capabilities/HumidityControl/directives/I
 
 IncreaseHumidity Directive request parameter details
 
-| parameter name | description | type |
-| :--- | :--- | :--- |
-| humidityDelta | 설정습도를 몇 % 올릴지에 대한 사용자 발화 정보입니다. 해당 정보가 없을 경우 \("parameters": null\) 5% 만큼 올리도록 설정합니다. | double |
+| parameter name | description                                                                           | type   |
+|:---------------|:--------------------------------------------------------------------------------------|:-------|
+| humidityDelta  | 설정습도를 몇 % 올릴지에 대한 사용자 발화 정보입니다.<br/>해당 정보가 없을 경우 ("parameters": null) 5% 만큼 올리도록 설정합니다. | double |
 
 Sample Response
 
@@ -306,9 +306,9 @@ Sample Response
 
 IncreaseHumidity Directive response parameter details
 
-| parameter name | description | type |
-| :--- | :--- | :--- |
-| humidityLevel | SmartHomeDevice를 설정한 이후의 설정습도입니다. 제어를 마친 이후의 습도로 응답해야 합니다. | double |
+| parameter name | description                                                | type   |
+|:---------------|:-----------------------------------------------------------|:-------|
+| humidityLevel  | SmartHomeDevice를 설정한 이후의 설정습도입니다.<br/>제어를 마친 이후의 습도로 응답해야 합니다. | double |
 
 ### DecreaseHumidity
 
@@ -368,9 +368,9 @@ Control Request 예시 (POST, /nugu/v1/capabilities/HumidityControl/directives/D
 
 DecreaseHumidity Directive request parameter details
 
-| parameter name | description | type |
-| :--- | :--- | :--- |
-| humidityDelta | 설정습도를 몇 % 올릴지에 대한 사용자 발화 정보입니다. 해당 정보가 없을 경우 \("parameters": null\) 5% 만큼 내리도록 설정합니다. | double |
+| parameter name | description                                                                             | type   |
+|:---------------|:----------------------------------------------------------------------------------------|:-------|
+| humidityDelta  | 설정습도를 몇 % 올릴지에 대한 사용자 발화 정보입니다.<br/>해당 정보가 없을 경우 ("parameters": null) 5% 만큼 내리도록 설정합니다. | double |
 
 Sample Response
 
@@ -393,9 +393,9 @@ Sample Response
 
 DecreaseHumidity Directive response parameter details
 
-| parameter name | description | type |
-| :--- | :--- | :--- |
-| humidityLevel | SmartHomeDevice를 설정한 이후의 설정습도입니다. 제어를 마친 이후의 습도로 응답해야 합니다. | double |
+| parameter name | description                                                | type   |
+|:---------------|:-----------------------------------------------------------|:-------|
+| humidityLevel  | SmartHomeDevice를 설정한 이후의 설정습도입니다.<br/>제어를 마친 이후의 습도로 응답해야 합니다. | double |
 
 ### SetHumidityMax
 
@@ -472,10 +472,10 @@ Sample Response
 
 SetHumidityMax Directive Response parameter details
 
-| parameter name | description | type |
-| :--- | :--- | :--- |
-| humidityLevel | SmartHomeDevice를 설정한 이후의 설정습도입니다. 제어를 마친 이후의 습도로 응답해야 합니다. | double |
-| maxHumidity | 해당 SmartHomeDevice가 지원하는 최고 습도입니다. | double |
+| parameter name | description                                                | type   |
+|:---------------|:-----------------------------------------------------------|:-------|
+| humidityLevel  | SmartHomeDevice를 설정한 이후의 설정습도입니다.<br/>제어를 마친 이후의 습도로 응답해야 합니다. | double |
+| maxHumidity    | 해당 SmartHomeDevice가 지원하는 최고 습도입니다.                         | double |
 
 ### SetHumidityMin
 
@@ -552,9 +552,9 @@ Sample Response
 
 SetHumidityMin Directive Response parameter details
 
-| parameter name | description | type |
-| :--- | :--- | :--- |
-| humidityLevel | SmartHomeDevice를 설정한 이후의 설정습도입니다. 제어를 마친 이후의 습도로 응답해야 합니다. | double |
+| parameter name | description                                                | type   |
+|:---------------|:-----------------------------------------------------------|:-------|
+| humidityLevel  | SmartHomeDevice를 설정한 이후의 설정습도입니다.<br/>제어를 마친 이후의 습도로 응답해야 합니다. | double |
 
 ## Error & Exception
 

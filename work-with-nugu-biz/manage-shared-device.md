@@ -29,64 +29,59 @@ NUGU 디바이스를 사무 공간, 호텔, 병원 등 다양한 공용 공간�
 
 사전 준비가 끝나면 다음으로 디바이스 그룹을 생성합니다.
 
-1️⃣`Developers Console` >`Biz kit` > `Biz 전용 디바이스 관리` 메뉴에서 `그룹 생성하기` 버튼을 클릭합니다.
+\1. `Developers Console` >`Biz kit` > `Biz 전용 디바이스 관리` 메뉴에서 `그룹 생성하기` 버튼을 클릭합니다.
 
-![](/assets/images/manage-shared-device-01.jpg)
+   ![](/assets/images/manage-shared-device-01.jpg)
+\2. 디바이스 그룹 생성 팝업에서 생성할 디바이스 그룹의 기본 정보(디바이스 그룹명, 디바이스 그룹 설명, 주소)를 입력하고 `생성` 버튼을 클릭하면 그룹이 생성됩니다.
+   * 특정 주소 정보가 필요한 서비스(예: 날씨)의 경우, 주소를 등록하면 등록한 주소지를 기준으로 서비스가 제공됩니다.
 
-2️⃣디바이스 그룹 생성 팝업에서 생성할 디바이스 그룹의 기본 정보(디바이스 그룹명, 디바이스 그룹 설명, 주소)를 입력하고 `생성` 버튼을 클릭하면 그룹이 생성됩니다.
+   ![](/assets/images/manage-shared-device-02.jpg)
 
-* 특정 주소 정보가 필요한 서비스(예: 날씨)의 경우, 주소를 등록하면 등록한 주소지를 기준으로 서비스가 제공됩니다.
+   * 디바이스 그룹 현황 리스트에 생성한 디바이스 그룹이 표시됩니다.
 
-![](/assets/images/manage-shared-device-02.jpg)
-
-* 디바이스 그룹 현황 리스트에 생성한 디바이스 그룹이 표시됩니다.
-
-![](/assets/images/manage-shared-device-03.jpg)
+   ![](/assets/images/manage-shared-device-03.jpg)
 
 ## Setup Tool 설치 및 디바이스 등록 <a href="installsetuptoolsandregistershareddevice" id="installsetuptoolsandregistershareddevice"></a>
 
 디바이스 그룹을 생성한 후에는 \[Setup Tool]을 설치하고 사용할 디바이스를 등록합니다.
 
-1️⃣`Developers Console` >`Biz kit` > `Biz 전용 디바이스 관리` 메뉴에서  `Setup Tool 다운로드` 버튼을 클릭하여 설치 파일을 내려받아 프로그램을 설치합니다.
+\1. `Developers Console` >`Biz kit` > `Biz 전용 디바이스 관리` 메뉴에서  `Setup Tool 다운로드` 버튼을 클릭하여 설치 파일을 내려받아 프로그램을 설치합니다.
 
-![](/assets/images/manage-shared-device-04.jpg)
+   ![](/assets/images/manage-shared-device-04.jpg)
 
 {% alerts style="info" %}
 디바이스 Setup Tool은 Window 7 이상에서만 사용할 수 있습니다. Mac에서는 이용할 수 없습니다.
 {% endalerts %}
+\2. Setup Tool 프로그램을 실행하고, 전용 디바이스를 등록할 디바이스 그룹명을 선택하고 `다음` 버튼을 클릭합니다.
 
-2️⃣ Setup Tool 프로그램을 실행하고, 전용 디바이스를 등록할 디바이스 그룹명을 선택하고 `다음` 버튼을 클릭합니다.
+   ![](/assets/images/manage-shared-device-05.png)
+\3. `디바이스 검색` 버튼을 클릭하여 전용 디바이스로 등록할 디바이스를 검색 및 선택한 후 `다음` 버튼을 클릭합니다. 체험판 회원의 경우 10대의 디바이스만 등록이 가능합니다.
 
-![](/assets/images/manage-shared-device-05.png)
-
-3️⃣`디바이스 검색` 버튼을 클릭하여 전용 디바이스로 등록할 디바이스를 검색 및 선택한 후 `다음` 버튼을 클릭합니다. 체험판 회원의 경우 10대의 디바이스만 등록이 가능합니다.
-
-![](/assets/images/manage-shared-device-06.png)
+   ![](/assets/images/manage-shared-device-06.png)
 
 {% alerts style="info" %}
 * 디바이스 검색 시 디바이스 등록 번호로 노출이 됩니다. 등록 번호는 스피커 제품 하단에 명시되어 있습니다. 단, NUGU mini(NU200) 디바이스는 “NU-110XXXX”형태의 번호가 등록번호입니다.
 * 디바이스가 검색되지 않으면 NUGU 디바이스가 설정 모드로 설정되어 있는지 다시 한번 확인하세요.
 {% endalerts %}
 
-4️⃣`Wi-Fi 검색` 버튼을 클릭하여 전용 디바이스에 등록하려는 Wi-Fi 네트워크를 선택한 후 `다음` 버튼을 클릭하여 네트워크를 설정합니다.
+\4. `Wi-Fi 검색` 버튼을 클릭하여 전용 디바이스에 등록하려는 Wi-Fi 네트워크를 선택한 후 `다음` 버튼을 클릭하여 네트워크를 설정합니다.
 
-![](/assets/images/manage-shared-device-07.png)
+   ![](/assets/images/manage-shared-device-07.png)
+\5. 네트워크 설정을 완료한 후 `다음` 버튼을 클릭하여 NUGU developers에 전용 디바이스로 등록을 요청합니다.
 
-5️⃣네트워크 설정을 완료한 후 `다음` 버튼을 클릭하여 NUGU developers에 전용 디바이스로 등록을 요청합니다.
-
-![](/assets/images/manage-shared-device-08.png)
+   ![](/assets/images/manage-shared-device-08.png)
 
 {% alerts style="info" %}
 보안 네트워크는 암호를 입력해야 합니다.
 {% endalerts %}
 
-5️⃣디바이스 상태가 디바이스 등록 완료로 모두 변경되면 `다음` 버튼을 클릭합니다.
+\6. 디바이스 상태가 디바이스 등록 완료로 모두 변경되면 `다음` 버튼을 클릭합니다.
 
-![](/assets/images/manage-shared-device-09.png)
+   ![](/assets/images/manage-shared-device-09.png)
 
-6️⃣디바이스 최종 등록 완료 메시지가 표시되면 `확인` 버튼을 클릭하여 작업을 종료합니다.
+\7. 디바이스 최종 등록 완료 메시지가 표시되면 `확인` 버튼을 클릭하여 작업을 종료합니다.
 
-![](/assets/images/manage-shared-device-10.png)
+   ![](/assets/images/manage-shared-device-10.png)
 
 {% alerts style="info" %}
 디바이스는 한 번에 최대 25대씩 등록할 수 있습니다. 체험판은 기 등록된 디바이스 포함 총 10대 까지 등록 가능합니다.
@@ -124,7 +119,7 @@ NUGU 디바이스를 사무 공간, 호텔, 병원 등 다양한 공용 공간�
 
 ![](/assets/images/manage-shared-device-14.png)
 
-3️⃣ 등록한 Private Play를 삭제하려면, 삭제할 Private Play를 선택하고 `- Play 삭제` 버튼을 클릭합니다.
+등록한 Private Play를 삭제하려면, 삭제할 Private Play를 선택하고 `- Play 삭제` 버튼을 클릭합니다.
 
 ![](/assets/images/manage-shared-device-15.png)
 
@@ -157,7 +152,7 @@ NUGU 디바이스를 사무 공간, 호텔, 병원 등 다양한 공용 공간�
 NUGU 디바이스를 전용 디바이스로 등록하면, 사용 제외 Play 설정과 관계없이 NUGU에서 제공되는 일부 서비스의 이용이 기본적으로 제한됩니다. 제한되는 서비스 항목은 다음과 같습니다.
 
 * 폰찾기
-* MY Q\&A
+* MY Q&A
 * 긴급 SOS
 * 도미노 피자
 * BBQ 치킨

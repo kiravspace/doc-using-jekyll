@@ -32,7 +32,7 @@ Action의 하위에 여러 개의 Branch Action을 만들 수도 있습니다. �
 
 Branch Action은 기본적으로 Root Action과 같으나, Trigger가 Intent가 아니라 조건(Precondition)이라는 차이점이 있습니다.
 
-위의 예처럼 '\~\~를 요청한 경우', '\~\~한 경우' 같이 조건이 Branch Action의 Trigger가 되며, 해당 조건이 만족했을 경우에만 그 Branch Action이 실행됩니다.
+위의 예처럼 '~~를 요청한 경우', '~~한 경우' 같이 조건이 Branch Action의 Trigger가 되며, 해당 조건이 만족했을 경우에만 그 Branch Action이 실행됩니다.
 
 조건이 만족하는지 여부는 상위 Action에서 하위 Action으로 내려오면서 차례로 판단이 이루어지며, 만족시키는 Action이 하나라도 있으면 해당 Action에서 정의한 응답(Response)가 실행되고 대화의 한 턴이 종료됩니다.
 
@@ -44,16 +44,17 @@ Branch Action은 기본적으로 Root Action과 같으나, Trigger가 Intent가 
 
 앞에서 만들어 둔 Intent인 'ask.weather'와 Action인 'answer.weather'를 가지고 Action Tree를 만드는 과정을 하나하나 알아보도록 하겠습니다.
 
-1. Play Builder 홈 화면에서 Action을 추가할 Play를 클릭하여 선택한 후, `Actions` > `Custom Actions`을 누릅니다.
-2. Acton List에서 `answer.weather`를 선택합니다.
+\1. Play Builder 홈 화면에서 Action을 추가할 Play를 클릭하여 선택한 후, `Actions` > `Custom Actions`을 누릅니다.
+
+\2. Acton List에서 `answer.weather`를 선택합니다.
 
 ![](/assets/images/use-branch-actions-07.png)
 
-1. 응답에 필요한 정보 가져오기 영역에서 다음과 같이 Parameter 및 Backend proxy 사용 옵션을 설정합니다.
+\3. 응답에 필요한 정보 가져오기 영역에서 다음과 같이 Parameter 및 Backend proxy 사용 옵션을 설정합니다.
 
 ![](/assets/images/use-branch-actions-08.png)
 
-* Parameter: 'day', 'location', 'day\_check'
+* Parameter: 'day', 'location', 'day_check'
 * Backend proxy 사용 여부 : 'ON'
 * Backend Parameter: 'status', 'resultcode'
 * Parameter 등록 및 설정 방법에 대한 자세한 내용은 [Parameter](use-parameters)를 참고하세요.
@@ -61,7 +62,7 @@ Branch Action은 기본적으로 Root Action과 같으나, Trigger가 Intent가 
 
 ![](/assets/images/use-branch-actions-09.png)
 
-1. Output 정의 영역의 Branch Action list 내에 위치한 입력 필드에 Branch명(하위 Action명)을 입력한 후 `Enter` 키를 누르거나 입력 필드 외 영역을 마우스 왼쪽 버튼을 클릭하여 Branch를 등록합니다.
+\4. Output 정의 영역의 Branch Action list 내에 위치한 입력 필드에 Branch명(하위 Action명)을 입력한 후 `Enter` 키를 누르거나 입력 필드 외 영역을 마우스 왼쪽 버튼을 클릭하여 Branch를 등록합니다.
 
 ![](/assets/images/use-branch-actions-10.png)
 
@@ -76,18 +77,18 @@ Branch Action은 기본적으로 Root Action과 같으나, Trigger가 Intent가 
 
 ## `a_w_location` Branch Action 추가
 
-1. Branch Action별로 구체적인 설정을 하기 위해 설정할 Branch의 항목 'a\_w\_location'의 편집 버튼을 클릭합니다.
+\1. Branch Action별로 구체적인 설정을 하기 위해 설정할 Branch의 항목 'a_w_location'의 편집 버튼을 클릭합니다.
 
 ![](/assets/images/use-branch-actions-12.png)
 
-1. 이동한 Branch Action 설정 화면의 Trigger 영역에서 조건(Condition)을 추가하기 위해 `+` > `Condition` 버튼을 클릭하면 하단에 셀렉트 박스(Select Box)가 표시됩니다.
+\2. 이동한 Branch Action 설정 화면의 Trigger 영역에서 조건(Condition)을 추가하기 위해 `+` > `Condition` 버튼을 클릭하면 하단에 셀렉트 박스(Select Box)가 표시됩니다.
 
 ![](/assets/images/use-branch-actions-13.png)
 
 * Branch Action의 Trigger는 Intent가 아닌 Precondition 속성으로 자동 선택됩니다.
 * Condition은 Trigger가 될 하나의 조건입니다.
 
-3 첫 번째 셀렉트 박스에서 **resultcode**를 선택하고, 두 번째 셀렉트 박스에서 **다음과 같을 경우**를 선택한 후, 우측에 생긴 박스에서 **String**을 선택 상태로 두고 '정상' 이라고 입력합니다.
+\3. 첫 번째 셀렉트 박스에서 **resultcode**를 선택하고, 두 번째 셀렉트 박스에서 **다음과 같을 경우**를 선택한 후, 우측에 생긴 박스에서 **String**을 선택 상태로 두고 '정상' 이라고 입력합니다.
 
 ![](/assets/images/use-branch-actions-14.png)
 
@@ -98,13 +99,13 @@ Branch Action은 기본적으로 Root Action과 같으나, Trigger가 Intent가 
 
 * 지금까지의 설정으로 첫 번째 Branch Action의 Trigger가 완성되었습니다.
 * 이 Action의 Precondition은 이제 두 개의 Single Condition이 AND 조건으로 묶인 Composite Condition이 되었습니다.
-*   이것의 의미는 'resultcode'라는 그릇 안에 '정상'이라는 값이 담겨 있으면서, 'location' Parameter가 존재하는 경우'를 말합니다.
+* 이것의 의미는 'resultcode'라는 그릇 안에 '정상'이라는 값이 담겨 있으면서, 'location' Parameter가 존재하는 경우'를 말합니다.
 
-    그림으로 나타내어 보면 다음과 같습니다.
+  그림으로 나타내어 보면 다음과 같습니다.
 
 ![](/assets/images/use-branch-actions-16.png)
 
-1. 이제 이 페이지의 Output 정의 영역에서 `Response` 버튼을 클릭하고, Prompt에 "의 날씨는 ."라고 입력합니다. 이제 첫 번째 'a.w.location' Action의 입력이 완료되었습니다.
+\4. 이제 이 페이지의 Output 정의 영역에서 `Response` 버튼을 클릭하고, Prompt에 "의 날씨는 ."라고 입력합니다. 이제 첫 번째 'a.w.location' Action의 입력이 완료되었습니다.
 
 ![](/assets/images/use-branch-actions-17.png)
 
@@ -114,46 +115,59 @@ Branch Action은 기본적으로 Root Action과 같으나, Trigger가 Intent가 
 
 이제부터는 "a.w.day"라는 Branch Action 하위에 또다른 Branch Action을 추가하는 방법에 대하여 설명합니다.
 
-1. 위 'a.w.location' 설정과 동일한 방법으로 다음 그림과 같이 'a.w.day'를 설정합니다.
+\1. 위 'a.w.location' 설정과 동일한 방법으로 다음 그림과 같이 'a.w.day'를 설정합니다.
 
 ![](/assets/images/use-branch-actions-18.png)
 
-1. Output 정의 영역에서 `Branch Action` 버튼을 클릭하여 Output 유형을 Branch로 선택합니다.
+\2. Output 정의 영역에서 `Branch Action` 버튼을 클릭하여 Output 유형을 Branch로 선택합니다.
 
 ![](/assets/images/use-branch-actions-19.png)
 
-1. Output 정의 영역의 Branch Action List 내에 위치한 입력 필드에 Branch명(하위 Action명)을 입력한 후 `Enter` 키를 눌러 Branch를 등록합니다.
-2. 다음과 같이 3개의 Branch를 새로 만듭니다.
+\3. Output 정의 영역의 Branch Action List 내에 위치한 입력 필드에 Branch명(하위 Action명)을 입력한 후 `Enter` 키를 눌러 Branch를 등록합니다.
+
+\4. 다음과 같이 3개의 Branch를 새로 만듭니다.
 
 ![](/assets/images/use-branch-actions-20.png)
 
-1. Branch 중 하나(예:a\_w\_d\_future)를 선택(V 표시)하여 "Default Branch"로 지정한 후, `Play 저장` 버튼을 클릭하여 지금까지 입력한 상황을 저장합니다.
-2. Branch Action 리스트의 상세 항목이 편집 상태로 변경됩니다.
+\5. Branch 중 하나(예:a_w_d_future)를 선택(V 표시)하여 "Default Branch"로 지정한 후, `Play 저장` 버튼을 클릭하여 지금까지 입력한 상황을 저장합니다.
+
+\6. Branch Action 리스트의 상세 항목이 편집 상태로 변경됩니다.
 
 ![](/assets/images/use-branch-actions-21.png)
 
-1. Branch Action별로 구체적인 설정을 하기 위해 설정할 Branch의 항목(예: a\_w\_d\_past)의 편집 버튼을 클릭합니다.
+\7. Branch Action별로 구체적인 설정을 하기 위해 설정할 Branch의 항목(예: a_w_d_past)의 편집 버튼을 클릭합니다.
 
 ![](/assets/images/use-branch-actions-22.png)
 
-1. "a\_w\_location" 설정과 동일한 방법으로 "a\_w\_day"의 각 Branch Action을 다음과 같이 정의합니다.
-2. a\_w\_d\_past
-   * Trigger : day\_check == 과거
+\8. "a_w_location" 설정과 동일한 방법으로 "a_w_day"의 각 Branch Action을 다음과 같이 정의합니다.
+
+\9. a_w_d_past
+
+   * Trigger : day_check == 과거
    * Response : 에는
-3. a\_w\_d\_present
-   * Trigger : day\_check == 현재
+
+\10. a_w_d_present
+
+   * Trigger : day_check == 현재
    * Response : 지금 밖은
-4. a\_w\_d\_future
+
+\11. a_w_d_future
+
    * Trigger : 자동입력
    * Response : 은
-5. 마지막으로, 남은 "a\_w\_only"와 "a\_w\_default" Branch Action을 동일한 방법으로 다음과 같이 정의합니다.
-6. a\_w\_only
+
+\12. 마지막으로, 남은 "a_w_only"와 "a_w_default" Branch Action을 동일한 방법으로 다음과 같이 정의합니다.
+
+\13. a_w_only
+
    * Trigger : == 정상
    * Response : 오늘은
-7. a\_w\_default
+
+\14. a_w_default
    * Trigger : 자동입력
    * Response : 제가 답할 수 없는 요청이에요
-8. 이로써 위에서 예로 든 구조의 Action Tree가 구성되었습니다. 이를 다시 그림으로 살펴보면 다음과 같습니다.
+
+\15. 이로써 위에서 예로 든 구조의 Action Tree가 구성되었습니다. 이를 다시 그림으로 살펴보면 다음과 같습니다.
 
 ![](/assets/images/use-branch-actions-23.png)
 

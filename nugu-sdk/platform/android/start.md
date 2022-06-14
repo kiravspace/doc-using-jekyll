@@ -5,7 +5,7 @@
 * Android 5.0(API level 21) 이상에서 지원합니다.
 
 {% alerts style="info" %}
-Android 4.4(API level 19\)에서도 동작하지만, TLS v1.2로 설정이 필요합니다.
+Android 4.4(API level 19)에서도 동작하지만, TLS v1.2로 설정이 필요합니다.
 {% endalerts %}
 
 ## Step 2: NUGU  SDK 설치하기
@@ -27,7 +27,7 @@ repositories {
 ### 의존성 추가하기
 
 어플리케이션 모듈의 build.gradle에, 전체 라이브러리를 사용하기 위해 아래 의존성을 추가합니다.  
-\(전체 라이브러리에 대한 의존성은 [여기](https://github.com/nugu-developers/nugu-android)를 참조\)
+(전체 라이브러리에 대한 의존성은 [여기](https://github.com/nugu-developers/nugu-android)를 참조)
 
 {% code %}
 ```groovy
@@ -66,7 +66,7 @@ Redirect URI는 `nugu.user.{client-id}://auth`로 설정하는 것을 권고합�
 
 #### 리소스에 정보 추가하기
 
-strings.xml 파일에 _nugu\_redirect\_scheme_, _nugu\_redirect\_host_를 추가합니다. 예를들어 redirectUri가 **"example://sample"** 라면 아래와 같이 추가합니다.
+strings.xml 파일에 _nugu_redirect_scheme_, _nugu_redirect_host_를 추가합니다. 예를들어 redirectUri가 **"example://sample"** 라면 아래와 같이 추가합니다.
 
 {% code %}
 ```xml
@@ -114,7 +114,7 @@ AndroidManifest.xml에 아래 필수 권한을 추가합니다.
 {% endcode %}
 
 {% alerts style="info" %}
-Manifest에 추가한 android.permission.RECORD\_AUDIO 권한은 런타임에 추가로 요청하여 획득해야 합니다.
+Manifest에 추가한 android.permission.RECORD_AUDIO 권한은 런타임에 추가로 요청하여 획득해야 합니다.
 {% endalerts %}
 
 ## Step 4: NUGU 로그인 추가
@@ -125,7 +125,7 @@ NUGU 로그인은 **NUGU 회원 연동 방식**과 **NUGU 회원 미사용 방�
 
 {% alerts style="info" %}
 NUGU 서비스를 이용하기 위해서는 OAuth 2.0 인증이 필요합니다.  
-OAuth 2.0 API 는 [Authentication](../../authentication.md) 에서 확인이 가능합니다.
+OAuth 2.0 API 는 [Authentication](../../authentication) 에서 확인이 가능합니다.
 {% endalerts %}
 
 ### **NUGU 회원 연동 방식**으로 로그인
@@ -136,7 +136,7 @@ NUGU 회원 연동 방식을 사용하기 위해서는 T아이디 연동이 필�
 
 #### 로그인 정보 설정
 
-기기별 고유식별자\(`deviceUniqueId`\)를 변경 가능합니다. \(이미 NuguOAuth.create 에서 설정 되어있다면 생략\)
+기기별 고유식별자(`deviceUniqueId`)를 변경 가능합니다. (이미 NuguOAuth.create 에서 설정 되어있다면 생략)
 
 {% code %}
 ```kotlin
@@ -187,7 +187,7 @@ authClient.loginSilentlyWithTid("{refresh-token}", object : NuguOAuthInterface.O
 
 #### 로그인 정보 설정
 
-기기별 고유식별자\(`deviceUniqueId`\)를 변경 가능합니다. \(이미 NuguOAuth.create 에서 설정 되어있다면 생략\)
+기기별 고유식별자(`deviceUniqueId`)를 변경 가능합니다. (이미 NuguOAuth.create 에서 설정 되어있다면 생략)
 
 {% code %}
 ```kotlin

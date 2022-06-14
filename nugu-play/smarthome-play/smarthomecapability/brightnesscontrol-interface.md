@@ -72,9 +72,9 @@ Discovery Sample Response
 
 SmarHomeDevice Attribute Parameters
 
-| Attribute | Description |
-| :--- | :--- |
-| customData | Discovery 시 SmartHomeServiceProvider가 응답할 수 있는 SmartHomeDevice의 부가정보입니다. customData는 해당 SmartHomeDevice의 제어요청 시 Request에 포함되어 전달됩니다. |
+| Attribute  | Description                                                                                                                          |
+|:-----------|:-------------------------------------------------------------------------------------------------------------------------------------|
+| customData | Discovery 시 SmartHomeServiceProvider가 응답할 수 있는 SmartHomeDevice의 부가정보입니다.<br/>customData는 해당 SmartHomeDevice의 제어요청 시 Request에 포함되어 전달됩니다. |
 
 ## Directive
 
@@ -138,9 +138,9 @@ Control Request 예시 (POST, /nugu/v1/capabilities/BrightnessControl/directives
 
 SetBrightness Directive Request parameter details
 
-| parameter name | description | type |
-| :--- | :--- | :--- |
-| brightnessLevel | 사용자가 SmartHomeDevice에 설정하고자 하는 밝기의 발화 정보입니다. 1부터 100까지 설정할 수 있습니다. | integer\(1~100\) |
+| parameter name  | description                                                        | type             |
+|:----------------|:-------------------------------------------------------------------|:-----------------|
+| brightnessLevel | 사용자가 SmartHomeDevice에 설정하고자 하는 밝기의 발화 정보입니다.<br/>1부터 100까지 설정할 수 있습니다. | integer(1~100) |
 
 Sample Response
 
@@ -172,9 +172,9 @@ Sample Response
 
 SetBrightness Directive Response parameter details
 
-| parameter name | description | type |
-| :--- | :--- | :--- |
-| brightnessLevel | SmartHomeDevice를 설정한 이후의 밝기정보입니다. 제어를 마친 이후의 밝기를 기준으로 응답해야 합니다. | integer\(1~100\) |
+| parameter name  | description                                                     | type           |
+|:----------------|:----------------------------------------------------------------|:---------------|
+| brightnessLevel | SmartHomeDevice를 설정한 이후의 밝기정보입니다.<br/>제어를 마친 이후의 밝기를 기준으로 응답해야 합니다. | integer(1~100) |
 
 ### IncreaseBrightness
 
@@ -237,9 +237,9 @@ Control Request 예시 (POST, /nugu/v1/capabilities/BrightnessControl/directives
 
 IncreaseTemperature Directive request parameter details
 
-| parameter name | description | type |
-| :--- | :--- | :--- |
-| brightnessDelta | 설정 밝기를 몇 단계 올릴지에 대한 사용자 발화 정보입니다. 해당 정보가 없을 경우 1단계를 올리도록 설정합니다. | integer\(1~100\) |
+| parameter name  | description                                                     | type           |
+|:----------------|:----------------------------------------------------------------|:---------------|
+| brightnessDelta | 설정 밝기를 몇 단계 올릴지에 대한 사용자 발화 정보입니다.<br/>해당 정보가 없을 경우 1단계를 올리도록 설정합니다. | integer(1~100) |
 
 Sample Response
 
@@ -271,9 +271,9 @@ Sample Response
 
 IncreaseBrightness Directive response parameter details
 
-| parameter name | description | type |
-| :--- | :--- | :--- |
-| brightnessLevel | SmartHomeDevice의 밝기를 조절한 이후의 설정 밝기입니다. 제어를 마친 이후의 밝기를 기준으로 응답해야 합니다. | integer\(1~100\) |
+| parameter name  | description                                                          | type           |
+|:----------------|:---------------------------------------------------------------------|:---------------|
+| brightnessLevel | SmartHomeDevice의 밝기를 조절한 이후의 설정 밝기입니다.<br/>제어를 마친 이후의 밝기를 기준으로 응답해야 합니다. | integer(1~100) |
 
 ### DecreaseBrightness
 
@@ -335,9 +335,9 @@ Control Request 예시 (POST, /nugu/v1/capabilities/BrightnessControl/directives
 
 DecreseBrightness Directive request parameter details
 
-| parameter name | description | type |
-| :--- | :--- | :--- |
-| brightnessDelta | 설정 밝기를 몇 단계 내릴지에 대한 사용자 발화 정보입니다. 해당 정보가 없을 경우 1단계를 내리도록 설정합니다. | integer\(1~100\) |
+| parameter name  | description                                                     | type           |
+|:----------------|:----------------------------------------------------------------|:---------------|
+| brightnessDelta | 설정 밝기를 몇 단계 내릴지에 대한 사용자 발화 정보입니다.<br/>해당 정보가 없을 경우 1단계를 내리도록 설정합니다. | integer(1~100) |
 
 Sample Response
 
@@ -369,9 +369,9 @@ Sample Response
 
 DecreaseBrightness Directive response parameter details
 
-| parameter name | description | type |
-| :--- | :--- | :--- |
-| brightnessLevel | SmartHomeDevice의 밝기를 조절한 이후의 설정 밝기입니다. 제어를 마친 이후의 밝기를 기준으로 응답해야 합니다. | integer\(1~100\) |
+| parameter name  | description                                                          | type           |
+|:----------------|:---------------------------------------------------------------------|:---------------|
+| brightnessLevel | SmartHomeDevice의 밝기를 조절한 이후의 설정 밝기입니다.<br/>제어를 마친 이후의 밝기를 기준으로 응답해야 합니다. | integer(1~100) |
 
 ### SetBrightnessMax
 
@@ -458,9 +458,9 @@ Sample Response
 
 SetBrightnessMax Directive Response parameter details
 
-| parameter name | description | type |
-| :--- | :--- | :--- |
-| brightnessLevel | SmartHomeDevice의 밝기를 조절한 이후의 설정 밝기입니다. 제어를 마친 이후의 밝기를 기준으로 응답해야 합니다. | integer\(100\) |
+| parameter name  | description                                                          | type         |
+|:----------------|:---------------------------------------------------------------------|:-------------|
+| brightnessLevel | SmartHomeDevice의 밝기를 조절한 이후의 설정 밝기입니다.<br/>제어를 마친 이후의 밝기를 기준으로 응답해야 합니다. | integer(100) |
 
 ### SetBrightnessMin
 
@@ -547,9 +547,9 @@ Sample Response
 
 SetBrightnessMin Directive Response parameter details
 
-| parameter name | description | type |
-| :--- | :--- | :--- |
-| brightnessLevel | SmartHomeDevice의 밝기를 조절한 이후의 설정 밝기입니다. 제어를 마친 이후의 밝기를 기준으로 응답해야 합니다. | integer |
+| parameter name  | description                                                          | type    |
+|:----------------|:---------------------------------------------------------------------|:--------|
+| brightnessLevel | SmartHomeDevice의 밝기를 조절한 이후의 설정 밝기입니다.<br/>제어를 마친 이후의 밝기를 기준으로 응답해야 합니다. | integer |
 
 ## Error & Exception
 

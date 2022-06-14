@@ -45,15 +45,15 @@ Discovery Sample Response
 {% alerts style="info" %}
 AirQualityCheck Capability 의 경우 Capability에 속한 파라미터가 없습니다.
 
-그러나 해당 디바이스가 공기 상태 질의가 가능한\(AirQualityCheck Capability 를 지원하는\) 디바이스라는 것을 NUGU SmartHome 플랫폼에 알려주기 위해서는 위의 응답 예시와 같이 빈 객체를 응답해야 합니다.
+그러나 해당 디바이스가 공기 상태 질의가 가능한(AirQualityCheck Capability 를 지원하는) 디바이스라는 것을 NUGU SmartHome 플랫폼에 알려주기 위해서는 위의 응답 예시와 같이 빈 객체를 응답해야 합니다.
 {% endalerts %}
 
 SmartHomeDevice Attribute parameters
 
-| Attribute | Description |
-| :--- | :--- |
-| customData | Discovery 시 SmartHomeServiceProvider가 응답할 수 있는 SmartHomeDevice의 부가정보입니다. customData는 해당 SmartHomeDevice의 제어요청 시 Request에 포함되어 전달됩니다. |
-| connectionStatus | 디바이스 연결상태. 현재 제어가 불가능한 상태의 디바이스인 경우 false 로 응답해야 합니다. |
+| Attribute        | Description                                                                                                                          |
+|:-----------------|:-------------------------------------------------------------------------------------------------------------------------------------|
+| customData       | Discovery 시 SmartHomeServiceProvider가 응답할 수 있는 SmartHomeDevice의 부가정보입니다.<br/>customData는 해당 SmartHomeDevice의 제어요청 시 Request에 포함되어 전달됩니다. |
+| connectionStatus | 디바이스 연결상태.<br/>현재 제어가 불가능한 상태의 디바이스인 경우 false 로 응답해야 합니다.                                                                                |
 
 ## Directive
 
@@ -144,9 +144,9 @@ Sample Response
 
 AskAirQuality Directive Response parameter details
 
-| parameter name | description | type |
-| :--- | :--- | :--- |
-| airQuality | SmartHomeDevice에서 측정한 주변 공기상태정보입니다. 1부터 10까지의 단계로 응답할 수 있으며 숫자가 작을수록 공기질이 좋은 상태입니다. | 1~10 |
+| parameter name | description                                                                         | type  |
+|:---------------|:------------------------------------------------------------------------------------|:------|
+| airQuality     | SmartHomeDevice에서 측정한 주변 공기상태정보입니다.<br/>1부터 10까지의 단계로 응답할 수 있으며 숫자가 작을수록 공기질이 좋은 상태입니다. | 1~10  |
 
 ## Error & Exception
 

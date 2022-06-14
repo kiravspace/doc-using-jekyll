@@ -214,9 +214,9 @@ Sample Response
 
 AskPowerTarget Directive Response parameter details
 
-| parameter name | description | type |
-| :--- | :--- | :--- |
-| targetPowerConsumption | SmartHomeDevice에 설정된 목표 전력 사용량 값. kW 단위로 응답해야 합니다. | double |
+| parameter name         | description                                        | type   |
+|:-----------------------|:---------------------------------------------------|:-------|
+| targetPowerConsumption | SmartHomeDevice에 설정된 목표 전력 사용량 값.<br/>kW 단위로 응답해야 합니다. | double |
 
 ## Error & Exception
 

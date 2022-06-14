@@ -8,11 +8,11 @@ description: 디바이스의 볼륨을 제어하기 위한 규격
 
 최신 버전은 1.2 입니다.
 
-| Version | Date | Description |
-| :--- | :--- | :--- |
-| 1.0 | 2020.03.13 | 규격 추가 |
-| 1.1 | 2020.06.22 | Context 의 volumes.name 목록 변경 |
-| 1.2 | 2020.06.26 | Context 에 defaultVolumeLevel 필드 추가 Context 의 volumnes 에 group 필드 추가 |
+| Version | Date       | Description                                                             |
+|:--------|:-----------|:------------------------------------------------------------------------|
+| 1.0     | 2020.03.13 | 규격 추가                                                                   |
+| 1.1     | 2020.06.22 | Context 의 volumes.name 목록 변경                                            |
+| 1.2     | 2020.06.26 | Context 에 defaultVolumeLevel 필드 추가<br/>Context 의 volumnes 에 group 필드 추가 |
 
 ## SDK Interface
 
@@ -83,7 +83,7 @@ nugu_client->getCapabilityBuilder()
 
 ### Context 구성
 
-Play 에서 디바이스의 볼륨을 제어하기 위해서는 디바이스의 볼륨 정보를 [Context](location.md#context) 에 포함시켜 주어야 합니다.
+Play 에서 디바이스의 볼륨을 제어하기 위해서는 디바이스의 볼륨 정보를 [Context](location#context) 에 포함시켜 주어야 합니다.
 
 {% tabs %}
 {% tabs::content title="Android" %}
@@ -113,9 +113,9 @@ speaker_handler->setSpeakerInfo(speakers)
 
 ### 볼륨 제어
 
-디바이스의 볼륨 제어가 [SetVolume](speaker.md#setvolume) directive 로 요청될 수 있습니다.
+디바이스의 볼륨 제어가 [SetVolume](speaker#setvolume) directive 로 요청될 수 있습니다.
 
-디바이스의 볼륨 음소거 제어가 [SetMute](speaker.md#setmute) directive 로 요청될 수 있습니다.
+디바이스의 볼륨 음소거 제어가 [SetMute](speaker#setmute) directive 로 요청될 수 있습니다.
 
 {% tabs %}
 {% tabs::content title="Android" %}
@@ -188,17 +188,17 @@ CapabilityFactory::makeCapability<SpeakerAgent, ISpeakerHandler>(speaker_listene
 ```
 {% endcode %}
 
-| parameter | type | mandatory | description |
-| :--- | :--- | :--- | :--- |
-| volumes | array of object | N | 볼륨 조절 불가한 경우는 전달하지 않음 |
-| volumes.name | string | Y | NUGU\(MUSIC+VOICE\_COMMAND\), MUSIC, RINGTONE, CALL, NOTIFICATION, ALARM, VOICE\_COMMAND, NAVIGATION, SYSTEM\_SOUND Reference: [https://source.android.com/devices/audio/attributes\#contexts](https://source.android.com/devices/audio/attributes#contexts) |
-| volumes.group | string | N | volume의 group 값으로 영문자와 숫자를 이용하여 구성할 수 있음.\(Play에서는 group 값을 mapping하여 TTS를 만들 때 사용할 수 있음\) grouping 되어 있지 않은 경우는 전달하지 않음 Reference: [https://source.android.com/devices/automotive/audio\#volume-and-groups](https://source.android.com/devices/automotive/audio#volume-and-groups) |
-| volumes.volume | long | N | 현재 설정된 볼륨 볼륨 조절 불가한 경우는 전달하지 않음 |
-| volumes.minVolume | long | N | 설정 가능한 최대 볼륨 볼륨 조절 불가한 경우는 전달하지 않음 |
-| volumes.maxVolume | long | N | 설정 가능한 최소 볼륨 볼륨 조절 불가한 경우는 전달하지 않음 |
-| volumes.defaultVolumeStep | long | N | 기본 볼륨 단계 볼륨 조절 불가한 경우는 전달하지 않음 |
-| volumnes.defaultVolumeLevel | long | N | 기본 볼륨 값 볼륨 조절 불가한 경우는 전달하지 않음 version 1.2 이전에서는 전달하지 않음 |
-| volumes.muted | boolean | N | 음소거 상태 음소거 설정이 불가한 경우는 전달하지 않음 |
+| parameter                   | type            | mandatory | description                                                                                                                                                                                                                                                                         |
+|:----------------------------|:----------------|:----------|:------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
+| volumes                     | array of object | N         | 볼륨 조절 불가한 경우는 전달하지 않음                                                                                                                                                                                                                                                               |
+| volumes.name                | string          | Y         | NUGU(MUSIC+VOICE_COMMAND)<br/>MUSIC<br/>RINGTONE<br/>CALL<br/>NOTIFICATION<br/>ALARM<br/>VOICE_COMMAND<br/>NAVIGATION<br/>SYSTEM_SOUND<br/>Reference: [https://source.android.com/devices/audio/attributes\#contexts](https://source.android.com/devices/audio/attributes#contexts) |
+| volumes.group               | string          | N         | volume의 group 값으로 영문자와 숫자를 이용하여 구성할 수 있음.(Play에서는 group 값을 mapping하여 TTS를 만들 때 사용할 수 있음) grouping 되어 있지 않은 경우는 전달하지 않음 Reference: [https://source.android.com/devices/automotive/audio\#volume-and-groups](https://source.android.com/devices/automotive/audio#volume-and-groups)   |
+| volumes.volume              | long            | N         | 현재 설정된 볼륨 볼륨 조절 불가한 경우는 전달하지 않음                                                                                                                                                                                                                                                     |
+| volumes.minVolume           | long            | N         | 설정 가능한 최대 볼륨 볼륨 조절 불가한 경우는 전달하지 않음                                                                                                                                                                                                                                                  |
+| volumes.maxVolume           | long            | N         | 설정 가능한 최소 볼륨 볼륨 조절 불가한 경우는 전달하지 않음                                                                                                                                                                                                                                                  |
+| volumes.defaultVolumeStep   | long            | N         | 기본 볼륨 단계 볼륨 조절 불가한 경우는 전달하지 않음                                                                                                                                                                                                                                                      |
+| volumnes.defaultVolumeLevel | long            | N         | 기본 볼륨 값 볼륨 조절 불가한 경우는 전달하지 않음 version 1.2 이전에서는 전달하지 않음                                                                                                                                                                                                                             |
+| volumes.muted               | boolean         | N         | 음소거 상태 음소거 설정이 불가한 경우는 전달하지 않음                                                                                                                                                                                                                                                      |
 
 ## Directive
 
@@ -228,11 +228,11 @@ CapabilityFactory::makeCapability<SpeakerAgent, ISpeakerHandler>(speaker_listene
 ```
 {% endcode %}
 
-| parameter | type | mandatory | description |
-| :--- | :--- | :--- | :--- |
-| name | string | Y | Context 참조 |
-| rate | string | N | SLOW, FAST  - SLOW: 점진적으로 변경 \(max 값으로 설정하는 시나리오에서 사용\)  - FAST : 바로 변경 |
-| volume | long | Y | 설정할 volume |
+| parameter | type   | mandatory | description                                                                 |
+|:----------|:-------|:----------|:----------------------------------------------------------------------------|
+| name      | string | Y         | Context 참조                                                                  |
+| rate      | string | N         | SLOW, FAST<br/>- SLOW: 점진적으로 변경 (max 값으로 설정하는 시나리오에서 사용)<br/>- FAST : 바로 변경 |
+| volume    | long   | Y         | 설정할 volume                                                                  |
 
 ### SetMute
 
@@ -260,10 +260,10 @@ CapabilityFactory::makeCapability<SpeakerAgent, ISpeakerHandler>(speaker_listene
 ```
 {% endcode %}
 
-| parameter | type | mandatory | description |
-| :--- | :--- | :--- | :--- |
-| name | string | Y | Context 참조 |
-| mute | boolean | Y | true / false |
+| parameter | type    | mandatory | description  |
+|:----------|:--------|:----------|:-------------|
+| name      | string  | Y         | Context 참조   |
+| mute      | boolean | Y         | true / false |
 
 ## Event
 

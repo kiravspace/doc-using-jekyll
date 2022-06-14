@@ -14,7 +14,7 @@ depth_order: 6
 
 ### 2. 스마트홈 Play 등록, 테스트 가이드 추가
 
-* Play 정보 등록 (smarthome play) 내용 추가 : [자세히 알아보기](broken-reference)
+* Play 정보 등록 (smarthome play) 내용 추가 : [자세히 알아보기](./smarthome-play)
 
 ## Version 2.0.0
 
@@ -30,7 +30,7 @@ depth_order: 6
 
 ### 1. 새로운 기능
 
-* Fallback 시, 사용자 발화를 Backend proxy에서 분석할 수 있도록 \_UNRESOLVED\_ Entity 제공 : [자세히 알아보기](broken-reference)
+* Fallback 시, 사용자 발화를 Backend proxy에서 분석할 수 있도록 \_UNRESOLVED\_ Entity 제공
 
 ### 2. 향상/변경된 기능
 
@@ -171,7 +171,7 @@ depth_order: 6
 
 ### 3. 버그 수정
 
-* Entity Type의 BID\_QT에 숫자 보강
+* Entity Type의 BID_QT에 숫자 보강
 * Utterance parameter에 mapping할 Entity 사라지는 현상 수정
 
 ## Version 1.1.0
@@ -189,7 +189,7 @@ depth_order: 6
 
 *   Entity value 및 동의어 입력 시 특수기호 허용 제외
 
-    \_ (Underbar)
+    _ (Underbar)
 * Entity value 및 동의어 입력 시 띄어쓰기 허용
 
 ### 3. 버그 수정

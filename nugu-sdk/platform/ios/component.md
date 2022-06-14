@@ -30,17 +30,17 @@ NUGU SDK for iOS 를 통한 개발을 위해서는 `NuguCore`, `NuguAgents` Fram
 
 ### NUGU & Vendor Components
 
-| 이름                                                                                                                                                                                                                                                                                                                                                                                     | 주소                                                                                                   |
-| -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------- |
-| <p><code>NuguCore</code><br><code>NuguAgents</code></p><p><code>NuguUtils</code><br><code>NuguClientKit</code><br><code>NuguLoginKit</code><br><code>NuguServiceKit</code><br><code>NuguUIKit</code><br><code>KeenSense</code></p><p><code>JadeMarble</code></p><p><code>SilverTray</code></p><p><code>OpusSDK</code></p><p><code>TycheSDK</code></p><p><code>NuguObjcUtils</code></p> | [https://github.com/nugu-developers/nugu-ios](https://github.com/nugu-developers/nugu-ios)           |
-| `NattyLog`                                                                                                                                                                                                                                                                                                                                                                             | [https://github.com/nugu-developers/natty-log-ios](https://github.com/nugu-developers/natty-log-ios) |
+| 이름                                                                                                                                                                                                                              | 주소                                                                                                    |
+|---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|-------------------------------------------------------------------------------------------------------|
+| `NuguCore`<br/>`NuguAgents`<br/>`NuguUtils`<br/>`NuguClientKit`<br/>`NuguLoginKit`<br/>`NuguServiceKit`<br/>`NuguUIKit`<br/>`KeenSense`<br/>`JadeMarble`<br/>`SilverTray`<br/>`OpusSDK`<br/>`TycheSDK`<br/>`NuguObjcUtils`      | [https://github.com/nugu-developers/nugu-ios](https://github.com/nugu-developers/nugu-ios)            |
+| `NattyLog`                                                                                                                                                                                                                      | [https://github.com/nugu-developers/natty-log-ios](https://github.com/nugu-developers/natty-log-ios)  |
 
 ### External
 
-| 이름           | 주소                                                                           |
-| ------------ | ---------------------------------------------------------------------------- |
-| `RxSwift`    | [https://github.com/ReactiveX/RxSwift](https://github.com/ReactiveX/RxSwift) |
-| `Lottie-iOS` | [https://github.com/airbnb/lottie-ios](https://github.com/airbnb/lottie-ios) |
+| 이름            | 주소                                                                            |
+|---------------|-------------------------------------------------------------------------------|
+| `RxSwift`     | [https://github.com/ReactiveX/RxSwift](https://github.com/ReactiveX/RxSwift)  |
+| `Lottie-iOS`  | [https://github.com/airbnb/lottie-ios](https://github.com/airbnb/lottie-ios)  |
 
 ## CocoaPods
 

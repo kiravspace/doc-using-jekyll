@@ -62,7 +62,7 @@ nugu_client->getCapabilityBuilder()
 
 ### Context 구성
 
-디바이스 배터리 정보를 [Context](battery.md#context) 에 포함시켜 주어야 합니다.
+디바이스 배터리 정보를 [Context](battery#context) 에 포함시켜 주어야 합니다.
 
 {% tabs %}
 {% tabs::content title="Android" %}
@@ -120,6 +120,6 @@ auto battery_listener(std::make_shared<BatteryListener>());
 
 | parameter        | type    | mandatory | description                                        |
 | ---------------- | ------- | --------- | -------------------------------------------------- |
-| level            | Long    | Y         | 배터리 잔량(0 \~ 100)                                   |
+| level            | Long    | Y         | 배터리 잔량(0 ~ 100)                                   |
 | charging         | boolean | Y         | 충전 여부                                              |
 | approximateLevel | boolean | N         | 배터리 잔량의 근사치 여부 ( 일부 디바이스의 경우 정확한 배터리 잔량을 측정할 수 없음) |

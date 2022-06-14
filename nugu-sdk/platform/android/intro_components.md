@@ -27,8 +27,8 @@ NUGU SDK for Android 를 통한 개발을 위해서는 `NuguCore`, `NuguInterfac
 
 ### NUGU
 
-| 이름 | 주소 |
-| :--- | :--- |
+| 이름             | 주소                                                                                                 |
+|:---------------|:---------------------------------------------------------------------------------------------------|
 | `nugu-android` | [https://github.com/nugu-developers/nugu-android](https://github.com/nugu-developers/nugu-android) |
 
 ## Download

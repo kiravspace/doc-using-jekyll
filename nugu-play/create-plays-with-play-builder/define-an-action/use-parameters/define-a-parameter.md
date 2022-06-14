@@ -29,7 +29,7 @@ Parameter의 사용 방법을 알아보기 위해, 다음과 같이 사용자에
 * 영자, 숫자, 특수문자인 언더바(`_`), 하이픈(`-`)만 사용하여 40자 이내에서 작성할 수 있으며, Play 내에서 같은 이름을 중복해서 등록할 수 없습니다.
 * 이번 예에서는 '오늘'과 같이 특정일을 담을 Parameter와 '면목동'과 같이 지역을 담을 Parameter를 담을 2개의 Utterance Parameter를 만듭니다.
 * Parameter명을 각각 'day'와 'location'으로 지정합니다.
-* 추가한 Parameter 우측 Mapping 항목의 `Entity mapping을 위해 이곳을 클릭하세요.` 버튼을 클릭한 후 Entity mapping 창에서 'day' Parameter에는 '오늘'이 담겨 있는 'BID\_DT\_DAY'를, 'location' Parameter에는 'LOC\_DONG' Entity Type를 각각 매핑합니다.
+* 추가한 Parameter 우측 Mapping 항목의 `Entity mapping을 위해 이곳을 클릭하세요.` 버튼을 클릭한 후 Entity mapping 창에서 'day' Parameter에는 '오늘'이 담겨 있는 'BID_DT_DAY'를, 'location' Parameter에는 'LOC_DONG' Entity Type를 각각 매핑합니다.
 
 ![](/assets/images/define-a-parameter-04.gif)
 

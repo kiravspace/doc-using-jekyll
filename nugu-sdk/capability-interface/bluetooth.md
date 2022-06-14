@@ -63,7 +63,7 @@ nugu_client->getCapabilityBuilder()
 
 ### Context 구성
 
-디바이스의 블루투스 상태를 [Context](speaker.md#context) 에 포함시켜 주어야 합니다.
+디바이스의 블루투스 상태를 [Context](speaker#context) 에 포함시켜 주어야 합니다.
 
 [Android reference](https://github.com/nugu-developers/nugu-android/blob/master/nugu-agent/src/main/java/com/skt/nugu/sdk/agent/bluetooth/BluetoothProvider.kt#L21)
 
@@ -110,9 +110,9 @@ auto bluetooth_listener(std::make_shared<BluetoothListener>());
 
 ### 블루투스 기기 제어
 
-디바이스의 블루투스 기기 제어가 [StartDiscoverableMode](bluetooth.md#startdiscoverablemode)/[FinishDiscoverableMode](bluetooth.md#finishdiscoverablemode) directive 로 요청될 수 있습니다.
+디바이스의 블루투스 기기 제어가 [StartDiscoverableMode](bluetooth#startdiscoverablemode)/[FinishDiscoverableMode](bluetooth#finishdiscoverablemode) directive 로 요청될 수 있습니다.
 
-디바이스와 연결된 블루투스 기기의 음원 재생이 [Play](bluetooth.md#play)/[Stop](bluetooth.md#stop)/[Pause](bluetooth.md#pause)/[Next](bluetooth.md#next)/[Previous](bluetooth.md#previous) directive 로 요청될 수 있습니다.
+디바이스와 연결된 블루투스 기기의 음원 재생이 [Play](bluetooth#play)/[Stop](bluetooth#stop)/[Pause](bluetooth#pause)/[Next](bluetooth#next)/[Previous](bluetooth#previous) directive 로 요청될 수 있습니다.
 
 {% tabs %}
 {% tabs::content title="Android" %}
@@ -191,18 +191,18 @@ CapabilityFactory::makeCapability<BluetoothAgent, IBluetoothHandler>(bluetooth_l
 ```
 {% endcode %}
 
-| parameter              | type   | mandatory | description                                                                                                                                                                                                                                                                                                                                                                                                                                                                             |
-| ---------------------- | ------ | --------- | --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| device                 | object | Y         | 디바이스의 블루투스 정보                                                                                                                                                                                                                                                                                                                                                                                                                                                                           |
-| device.name            | string | Y         | TTS로 읽어줄 때 사용가능한 필드 예: NUGU\_123456                                                                                                                                                                                                                                                                                                                                                                                                                                                     |
-| device.status          | string | Y         | ON / OFF                                                                                                                                                                                                                                                                                                                                                                                                                                                                                |
-| device.profile         | list   | N         | Pairing된 bluetooth device가 있을 경우 지원하는 profile의 목록 해당 목록은 지원하는 profile이 있을 경우 명시됨                                                                                                                                                                                                                                                                                                                                                                                                        |
-| device.profile.name    | string | N         | Pairing된 bluetooth device가 있을 경우 해당 device의 지원 profile의 이름을 나타냄 아래는 현재 확인된 profile list이며, 해당 device에서 사용하는 profile은 추가될 수 있음 - **HSP** : Headset Profile(전화 수발신을 위한 profile) - **A2DP** : Advanced Audio Distribution Profile(오디오 재생 profile) - **PBAP** : Phone Book Access Profile(Pairing된 device의 연락처를 수집할 수 있는 profile) - **MAP** : Message Access Profile(문자 수발신을 위한 profile) - **PAN** : Personal Area Networking(블루투스 테더링 profile) Profile 이름은 bluetooth.com에 명시된 profile의 약자임 |
-| device.profile.enabled | string | N         | Pairing된 bluetooth device가 있을 경우 해당 device의 지원 profile의 사용 여부를 나타냄 (TRUE/FALSE)                                                                                                                                                                                                                                                                                                                                                                                                         |
-| activeDevice           | object | N         | 연결된 블루투스 기기 정보                                                                                                                                                                                                                                                                                                                                                                                                                                                                          |
-| activeDevice.id        | string | N         | ID(pairedDevices 목록 중 하나이어야 함)                                                                                                                                                                                                                                                                                                                                                                                                                                                          |
-| activeDevice.name      | string | N         | -                                                                                                                                                                                                                                                                                                                                                                                                                                                                                       |
-| activeDevice.streaming | string | Y         | streaming 상태 (INACTIVE/ACTIVE/PAUSED/UNUSABLE)                                                                                                                                                                                                                                                                                                                                                                                                                                          |
+| parameter               | type    | mandatory  | description                                                                                                                                                                                                                                                                                                                                                                                                                                                                              |
+|-------------------------|---------|------------|------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
+| device                  | object  | Y          | 디바이스의 블루투스 정보                                                                                                                                                                                                                                                                                                                                                                                                                                                                            |
+| device.name             | string  | Y          | TTS로 읽어줄 때 사용가능한 필드 예: NUGU_123456                                                                                                                                                                                                                                                                                                                                                                                                                                                       |
+| device.status           | string  | Y          | ON / OFF                                                                                                                                                                                                                                                                                                                                                                                                                                                                                 |
+| device.profile          | list    | N          | Pairing된 bluetooth device가 있을 경우 지원하는 profile의 목록 해당 목록은 지원하는 profile이 있을 경우 명시됨                                                                                                                                                                                                                                                                                                                                                                                                         |
+| device.profile.name     | string  | N          | Pairing된 bluetooth device가 있을 경우 해당 device의 지원 profile의 이름을 나타냄 아래는 현재 확인된 profile list이며, 해당 device에서 사용하는 profile은 추가될 수 있음 - **HSP** : Headset Profile(전화 수발신을 위한 profile) - **A2DP** : Advanced Audio Distribution Profile(오디오 재생 profile) - **PBAP** : Phone Book Access Profile(Pairing된 device의 연락처를 수집할 수 있는 profile) - **MAP** : Message Access Profile(문자 수발신을 위한 profile) - **PAN** : Personal Area Networking(블루투스 테더링 profile) Profile 이름은 bluetooth.com에 명시된 profile의 약자임  |
+| device.profile.enabled  | string  | N          | Pairing된 bluetooth device가 있을 경우 해당 device의 지원 profile의 사용 여부를 나타냄 (TRUE/FALSE)                                                                                                                                                                                                                                                                                                                                                                                                          |
+| activeDevice            | object  | N          | 연결된 블루투스 기기 정보                                                                                                                                                                                                                                                                                                                                                                                                                                                                           |
+| activeDevice.id         | string  | N          | ID(pairedDevices 목록 중 하나이어야 함)                                                                                                                                                                                                                                                                                                                                                                                                                                                           |
+| activeDevice.name       | string  | N          | -                                                                                                                                                                                                                                                                                                                                                                                                                                                                                        |
+| activeDevice.streaming  | string  | Y          | streaming 상태 (INACTIVE/ACTIVE/PAUSED/UNUSABLE)                                                                                                                                                                                                                                                                                                                                                                                                                                           |
 
 ## Directive
 
@@ -228,9 +228,9 @@ Discoverable mode 활성화 요청입니다.
 ```
 {% endcode %}
 
-| parameter         | type | mandatory | description                                 |
-| ----------------- | ---- | --------- | ------------------------------------------- |
-| durationInSeconds | long | N         | Discoverable mode 를 지속할 시간(필드가 없는 경우 상시 모드) |
+| parameter          | type  | mandatory  | description                                  |
+|--------------------|-------|------------|----------------------------------------------|
+| durationInSeconds  | long  | N          | Discoverable mode 를 지속할 시간(필드가 없는 경우 상시 모드)  |
 
 ### FinishDiscoverableMode
 
@@ -380,9 +380,9 @@ Discoverable mode 비활성화 요청입니다.
 ```
 {% endcode %}
 
-| parameter        | type    | mandatory | description      |
-| ---------------- | ------- | --------- | ---------------- |
-| hasPairedDevices | boolean | Y         | paired device 유무 |
+| parameter         | type     | mandatory  | description       |
+|-------------------|----------|------------|-------------------|
+| hasPairedDevices  | boolean  | Y          | paired device 유무  |
 
 ### StartDiscoverableModeFailed
 
@@ -406,9 +406,9 @@ Discoverable mode 비활성화 요청입니다.
 ```
 {% endcode %}
 
-| parameter        | type    | mandatory | description      |
-| ---------------- | ------- | --------- | ---------------- |
-| hasPairedDevices | boolean | Y         | paired device 유무 |
+| parameter         | type     | mandatory  | description       |
+|-------------------|----------|------------|-------------------|
+| hasPairedDevices  | boolean  | Y          | paired device 유무  |
 
 ### FinishDiscoverableModeSucceeded
 

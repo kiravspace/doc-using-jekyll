@@ -12,10 +12,10 @@ Universal, Control Intent은 하나의 유형일 뿐이며, 사용자가 정의�
 
 Play 생성과 함께 추가되는 Universal Intent는 다음과 같습니다.
 
-| 유형               | Intent             | 대표 예상 발화                              | Action 정의 필수 여부 |
-| ---------------- | ------------------ | ------------------------------------- | --------------- |
-| Universal Intent | NUGU.INTENT.stop   | 그만, 종료, 멈춰, 스톱, 정지, 중지                | 필수              |
-|                  | NUGU.INTENT.rewind | 다시, 다시 틀어줘, 다시 들려줘, 다시 시작, 처음으로, 처음부터 | 필수              |
+| 유형                | Intent              | 대표 예상 발화                               | Action 정의 필수 여부  |
+|-------------------|---------------------|----------------------------------------|------------------|
+| Universal Intent  | NUGU.INTENT.stop    | 그만, 종료, 멈춰, 스톱, 정지, 중지                 | 필수               |
+|                   | NUGU.INTENT.rewind  | 다시, 다시 틀어줘, 다시 들려줘, 다시 시작, 처음으로, 처음부터  | 필수               |
 
 Play를 빌드하기 위해서는 Universal Intent을 처리할 Action이 반드시 존재해야 합니다. Universal Intent를 trigger로 설정한 Action을 생성하지 않은 경우, Built-in Action이 자동 추가되며 Play를 생성할 때 입력한 기본응답을 통해 자동 정의됩니다.
 
@@ -31,23 +31,23 @@ Capability Interface 사용 설정에 대한 자세한 내용은 [AudioPlayer In
 
 Capability Interface는 현재 AudioPlayer에서 사용하며, 이 Capability Interface를 선택하여 추가할 수 있는 Control Intent는 다음과 같습니다.
 
-| 유형                               | Intent                       | 대표 예상 발화                                    | Action 정의 필수 여부 |
-|----------------------------------| ---------------------------- | ------------------------------------------- | --------------- |
-| Control Intent<br/>(AudioPlayer) | NUGU.INTENT.stop             | 그만, 종료, 멈춰, 스톱, 정지, 중지                      | 필수              |
-| ^^                               | NUGU.INTENT.play             | 틀어줘, 들려줘, 재생, 플레이                           | 필수              |
-| ^^                               | NUGU.INTENT.pause            | 일시정지, 잠깐 멈춰                                 | 필수              |
-| ^^                               | NUGU.INTENT.resume           | 계속 틀어줘, 이어서 틀어줘, 일시정지 해제, 일시정지 풀어줘          | 필수              |
-| ^^                               | NUGU.INTENT.next             | 다음, 넘겨, 넥스트, 다음 것                           |                 |
-| ^^                               | NUGU.INTENT.previous         | 이전, 이전 것                                    |                 |
-| ^^                               | NUGU.INTENT.forward          | 앞으로                                         |                 |
-| ^^                               | NUGU.INTENT.backward         | 뒤로                                          |                 |
-| ^^                               | NUGU.INTENT.random           | 셔플, 랜덤, 무작위                                 |                 |
-| ^^                               | NUGU.INTENT.cancel.random    | 셔플해제, 랜덤 해제, 무작위 취소                         |                 |
-| ^^                               | NUGU.INTENT.repeat           | 반복해줘, 반복, 무한 반복, 계속 반복, 반복 켜줘, 반복해서 들려줘     |                 |
-| ^^                               | NUGU.INTENT.cancel.repeat    | 반복 해제, 반복 취소, 반복 종료, 반복 꺼줘, 반복 그만           |                 |
-| ^^                               | NUGU.INTENT.rewind           | 다시, 다시 틀어줘, 다시 들려줘, 다시 시작, 처음으로, 처음부터       |                 |
-| ^^                               | NUGU.INTENT.ask.content.info | 이거 뭐야, 뭔지 알려줘                               |                 |
-| ^^                               | NUGU.INTENT.another          | 다른 것, 이거 말고, 그거 말고, 그거 말고 다른 거, 딴거, 다른거 틀어줘 |                 |
+| 유형                                | Intent                        | 대표 예상 발화                                     | Action 정의 필수 여부  |
+|-----------------------------------|-------------------------------|----------------------------------------------|------------------|
+| Control Intent<br/>(AudioPlayer)  | NUGU.INTENT.stop              | 그만, 종료, 멈춰, 스톱, 정지, 중지                       | 필수               |
+| ^^                                | NUGU.INTENT.play              | 틀어줘, 들려줘, 재생, 플레이                            | 필수               |
+| ^^                                | NUGU.INTENT.pause             | 일시정지, 잠깐 멈춰                                  | 필수               |
+| ^^                                | NUGU.INTENT.resume            | 계속 틀어줘, 이어서 틀어줘, 일시정지 해제, 일시정지 풀어줘           | 필수               |
+| ^^                                | NUGU.INTENT.next              | 다음, 넘겨, 넥스트, 다음 것                            |                  |
+| ^^                                | NUGU.INTENT.previous          | 이전, 이전 것                                     |                  |
+| ^^                                | NUGU.INTENT.forward           | 앞으로                                          |                  |
+| ^^                                | NUGU.INTENT.backward          | 뒤로                                           |                  |
+| ^^                                | NUGU.INTENT.random            | 셔플, 랜덤, 무작위                                  |                  |
+| ^^                                | NUGU.INTENT.cancel.random     | 셔플해제, 랜덤 해제, 무작위 취소                          |                  |
+| ^^                                | NUGU.INTENT.repeat            | 반복해줘, 반복, 무한 반복, 계속 반복, 반복 켜줘, 반복해서 들려줘      |                  |
+| ^^                                | NUGU.INTENT.cancel.repeat     | 반복 해제, 반복 취소, 반복 종료, 반복 꺼줘, 반복 그만            |                  |
+| ^^                                | NUGU.INTENT.rewind            | 다시, 다시 틀어줘, 다시 들려줘, 다시 시작, 처음으로, 처음부터        |                  |
+| ^^                                | NUGU.INTENT.ask.content.info  | 이거 뭐야, 뭔지 알려줘                                |                  |
+| ^^                                | NUGU.INTENT.another           | 다른 것, 이거 말고, 그거 말고, 그거 말고 다른 거, 딴거, 다른거 틀어줘  |                  |
 
 이 Control Intent는 Custom Action을 정의할 때 Trigger로 사용할 수 있으며, play, pause, resume은 필수로 Action을 정의해야 합니다.
 

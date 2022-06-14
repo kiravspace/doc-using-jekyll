@@ -27,11 +27,11 @@ Biz 사용자를 대상으로 Announcement 등 API를 발송할 때, 제휴사 �
 
 ### 2.1 Request <a href="#biz-apitoken-v1-2.1request" id="biz-apitoken-v1-2.1request"></a>
 
-| 이름          | 유형          | 속성     | 필수 | 설명                                                     |
-| ----------- | ----------- | ------ | -- | ------------------------------------------------------ |
-| status      | query param | string | Y  | Developers에서 사용자를 식별하는 키값으로서 전달된 값을 바꾸어서는 안된다.         |
-| callBackUrl | query param | string | Y  | 인증을 마친후 생성한 Biz 사용자 API Token과 status를 전달할 URL         |
-| email       | query param | string | Y  | Developers에서 초대한 사용자 이메일을 식별하는 키값으로서 전달된 값을 변경해서는 안된다. |
+| 이름           | 유형           | 속성      | 필수  | 설명                                                     |
+|--------------|--------------|---------|-----| ------------------------------------------------------- |
+| status       | query param  | string  | Y   | Developers에서 사용자를 식별하는 키값으로서 전달된 값을 바꾸어서는 안된다.         |
+| callBackUrl  | query param  | string  | Y   | 인증을 마친후 생성한 Biz 사용자 API Token과 status를 전달할 URL         |
+| email        | query param  | string  | Y   | Developers에서 초대한 사용자 이메일을 식별하는 키값으로서 전달된 값을 변경해서는 안된다. |
 
 ### 2.2 Response <a href="#biz-apitoken-v1-2.2response" id="biz-apitoken-v1-2.2response"></a>
 
@@ -42,11 +42,11 @@ Biz 사용자를 대상으로 Announcement 등 API를 발송할 때, 제휴사 �
 
 ### 3.1 Request <a href="#biz-apitoken-v1-2.1request.1" id="biz-apitoken-v1-2.1request.1"></a>
 
-| 이름           | 유형          | 속성     | 필수 | 설명                                                           |
-| ------------ | ----------- | ------ | -- | ------------------------------------------------------------ |
-| status       | query param | string | Y  | Developers에서 사용자를 식별하는 키값으로서 인증 요청에 전달된 값을 바꾸어서는 안된다.        |
-| userApiToken | query param | string | Y  | 인증을 마친후 생성한 Biz 사용자 API Token                                |
-| confirmUrl   | query param | string |    | 사용자가 정상적인 초대행위를 마친 경우 제휴사에 성공결과를 전달하기 위한 URL 없을 경우 전송하지 않는다. |
+| 이름            | 유형           | 속성      | 필수  | 설명                                                           |
+|---------------|--------------|---------|-----| ------------------------------------------------------------- |
+| status        | query param  | string  | Y   | Developers에서 사용자를 식별하는 키값으로서 인증 요청에 전달된 값을 바꾸어서는 안된다.        |
+| userApiToken  | query param  | string  | Y   | 인증을 마친후 생성한 Biz 사용자 API Token                                |
+| confirmUrl    | query param  | string  |     | 사용자가 정상적인 초대행위를 마친 경우 제휴사에 성공결과를 전달하기 위한 URL 없을 경우 전송하지 않는다. |
 
 ### 3.2 Response <a href="#biz-apitoken-v1-2.2response.1" id="biz-apitoken-v1-2.2response.1"></a>
 
@@ -69,7 +69,7 @@ Biz 사용자를 대상으로 Announcement 등 API를 발송할 때, 제휴사 �
 ```
 {% endcode %}
 
-| 이름           | 유형   | 속성     | 필수 | 설명                                                              |
-| ------------ | ---- | ------ | -- | --------------------------------------------------------------- |
-| userApiToken | body | string | Y  | 진행중인 Biz 사용자 API Token                                          |
-| resultCode   | body | enum   | Y  | OK : 사용자 생성 완료 CONFLICT : 생성한 Biz Api Token이 다른 Biz 사용자에 중복된 경우 |
+| 이름             | 유형     | 속성       | 필수   | 설명                                                                |
+|----------------|--------|----------|------|-------------------------------------------------------------------|
+| userApiToken   | body   | string   | Y    | 진행중인 Biz 사용자 API Token                                            |
+| resultCode     | body   | enum     | Y    | OK : 사용자 생성 완료 CONFLICT : 생성한 Biz Api Token이 다른 Biz 사용자에 중복된 경우   |

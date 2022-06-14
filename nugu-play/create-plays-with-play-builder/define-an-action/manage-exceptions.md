@@ -7,16 +7,16 @@ Play가 동작하는 과정에서 정상적인 응답을 하지 못하는 경우
 ## 예외 상황 등록 방법
 
 1. 외부 연동 서버(Backend proxy)의 URL을 입력합니다.
-   *   http:// 또는 https://를 함께 입력해야 합니다.
+   * http:// 또는 https://를 함께 입력해야 합니다.
 
        ![](/assets/images/manage-exceptions-01.png)
-2. Backend proxy 사용 여부를 \`ON으로 설정합니다.
+2. Backend proxy 사용 여부를 ON으로 설정합니다.
 3. 예외 처리 영역에서 Exception Code를 작성하고 \[Enter] 키를 누릅니다.
 4. Exception Prompt 필드에 응답할 Prompt를 입력한 후 \[Enter] 키를 누릅니다.
-   *   Exception Code 하나당 Exception Prompt는 총 2개까지 입력 가능합니다.
-
-       입력창에 처음 입력하는 Prompt의 유형은 종료 Prompt로, 두번째로 입력하는 Prompt는 대기 Prompt로 자동 설정됩니다.
-   *   예외 상황의 Prompt는 스택으로 구성되어, LIFO(Last In First Out)로 동작합니다.
+   * Exception Code 하나당 Exception Prompt는 총 2개까지 입력 가능합니다.
+     
+     입력창에 처음 입력하는 Prompt의 유형은 종료 Prompt로, 두번째로 입력하는 Prompt는 대기 Prompt로 자동 설정됩니다.
+   * 예외 상황의 Prompt는 스택으로 구성되어, LIFO(Last In First Out)로 동작합니다.
 
        ![](/assets/images/manage-exceptions-02.gif)
 

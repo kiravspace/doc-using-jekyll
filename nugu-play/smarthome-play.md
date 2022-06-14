@@ -41,7 +41,7 @@ Play의 기본정보 입력을 마친 후 빌드/History 메뉴를 통해 Play�
 
 ![빌드](/assets/images/smarthome-play-03.png)
 
-SmartHome Play의 빌드를 마친 후 NUGU developers의 관리 > Play등록 메뉴에서 Play등록하기를 통해 Play를 등록 및 심사 요청해야 합니다.&#x20;
+SmartHome Play의 빌드를 마친 후 NUGU developers의 관리 > Play등록 메뉴에서 Play등록하기를 통해 Play를 등록 및 심사 요청해야 합니다.
 
 Play타입을 Smarthome으로 선택하면 Play Builder를 통해 제작한 SmartHome Play의 리스트를 불러올 수 있습니다. SmartHome Play의 심사 프로세스는 Custom Play와 동일하지만 Play 심사를 위한 등록 정보는 일부 차이가 있습니다.
 

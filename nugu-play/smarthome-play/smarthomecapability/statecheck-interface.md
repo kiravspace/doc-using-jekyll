@@ -44,9 +44,9 @@ Discovery Sample Response
 
 SmartHomeDevice Attribute Parameters
 
-| Attribute | Description |
-| :--- | :--- |
-| customData | Discovery 시 SmartHomeServiceProvider가 응답할 수 있는 SmartHomeDevice의 부가정보입니다. customData는 해당 SmartHomeDevice의 제어요청 시 Request에 포함되어 전달됩니다. |
+| Attribute  | Description                                                                                                                          |
+|:-----------|:-------------------------------------------------------------------------------------------------------------------------------------|
+| customData | Discovery 시 SmartHomeServiceProvider가 응답할 수 있는 SmartHomeDevice의 부가정보입니다.<br/>customData는 해당 SmartHomeDevice의 제어요청 시 Request에 포함되어 전달됩니다. |
 
 ## Directive
 
@@ -131,9 +131,9 @@ Sample Response
 
 AskState Directive Response parameter details
 
-| parameter name | description | type |
-| :--- | :--- | :--- |
-|  | AskState Directive에 응답할 parameter들은 SmartHomeDeviceType에 따라 다릅니다. 상세한 정보는 SmartHomeAttribute : DeviceStatus를 참조해주세요. | string |
+| parameter name | description                                                                                                          | type   |
+|:---------------|:---------------------------------------------------------------------------------------------------------------------|:-------|
+|                | AskState Directive에 응답할 parameter들은 SmartHomeDeviceType에 따라 다릅니다.<br/>상세한 정보는 SmartHomeAttribute : DeviceStatus를 참조해주세요. | string |
 
 ### AskOpenState
 
@@ -212,9 +212,9 @@ Sample Response
 
 AskOpenState Directive Response parameter details
 
-| parameter name | description | type |
-| :--- | :--- | :--- |
-| openState | SmartHomeDevice의 열림상태\(open, close로 구분\) | string |
+| parameter name | description                              | type   |
+|:---------------|:-----------------------------------------|:-------|
+| openState      | SmartHomeDevice의 열림상태(open, close로 구분) | string |
 
 ## Error & Exception
 

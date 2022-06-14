@@ -44,9 +44,9 @@ Discovery Sample Response
 
 SmartHomeDevice Attribute Parameters
 
-| Attribute | Description |
-| :--- | :--- |
-| customData | Discovery 시 SmartHomeServiceProvider가 응답할 수 있는 SmartHomeDevice의 부가정보입니다. customData는 해당 SmartHomeDevice의 제어요청 시 Request에 포함되어 전달됩니다. |
+| Attribute  | Description                                                                                                                          |
+|:-----------|:-------------------------------------------------------------------------------------------------------------------------------------|
+| customData | Discovery 시 SmartHomeServiceProvider가 응답할 수 있는 SmartHomeDevice의 부가정보입니다.<br/>customData는 해당 SmartHomeDevice의 제어요청 시 Request에 포함되어 전달됩니다. |
 
 ## Directive
 
@@ -112,9 +112,9 @@ Control Request 예시 (POST, /nugu/v1/capabilities/SetTimeControl/directives/Se
 
 SetEndTime Directive Request parameter details
 
-| parameter name | description | type |
-| :--- | :--- | :--- |
-| dateTime | SmartHomeDevice에 설정하고자 하는 종료예약의 시간정보입니다. | string |
+| parameter name | description                              | type   |
+|:---------------|:-----------------------------------------|:-------|
+| dateTime       | SmartHomeDevice에 설정하고자 하는 종료예약의 시간정보입니다. | string |
 
 Sample Response
 

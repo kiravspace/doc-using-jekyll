@@ -84,5 +84,3 @@ Private Play 사용자는 언제든지 NUGU App에서 Private Play 이용 권한
 
 만약, 권한 재부여를 원할 경우에는 서비스 관리자가 NUGU developers를 통해 다시 초대장을 발송해야 합니다.
 {% endalerts %}
-
-## &#x20;<a href="manage-invitation-history" id="manage-invitation-history"></a>

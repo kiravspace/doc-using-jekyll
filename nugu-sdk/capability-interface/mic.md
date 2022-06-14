@@ -8,9 +8,9 @@ description: 디바이스의 마이크를 제어하기 위한 규격
 
 최신 버전은 1.0 입니다.
 
-| Version | Date | Description |
-| :--- | :--- | :--- |
-| 1.0 | 2020.03.02 | 규격 추가 |
+| Version | Date       | Description |
+|:--------|:-----------|:------------|
+| 1.0     | 2020.03.02 | 규격 추가       |
 
 ## SDK Interface
 
@@ -141,9 +141,9 @@ CapabilityFactory::makeCapability<MicAgent, IMicHandler>(mic_listener.get());
 ```
 {% endcode %}
 
-| parameter | type | mandatory | description |
-| :--- | :--- | :--- | :--- |
-| micStatus | string | Y | ON / OFF |
+| parameter | type   | mandatory | description |
+|:----------|:-------|:----------|:------------|
+| micStatus | string | Y         | ON / OFF    |
 
 ## Directive
 
@@ -167,6 +167,6 @@ CapabilityFactory::makeCapability<MicAgent, IMicHandler>(mic_listener.get());
 ```
 {% endcode %}
 
-| parameter | type | mandatory | description |
-| :--- | :--- | :--- | :--- |
-| status | string | Y | ON / OFF |
+| parameter | type   | mandatory | description |
+|:----------|:-------|:----------|:------------|
+| status    | string | Y         | ON / OFF    |

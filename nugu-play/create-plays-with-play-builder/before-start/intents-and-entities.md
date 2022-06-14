@@ -41,8 +41,7 @@ Entity는 필요한 경우에만 정의하는 선택 요소이지만, 정의한 
 
 예를 들어, '명동', '남포동', '역삼동'과 같은 개체들은 '동 이름'을 나타내며, 이것을 Entity Type이라고 부릅니다. 또한 발화 문장에서의 역할(목적지, 경유지, 위치 등)을 Entity Role이라고 합니다.
 
-**Entity Type**은 특정 Entity들의 집합 또는 그 범주를 의미하며,\
-**Entity Role**은 특정 Entity의 발화 문장에서의 역할을 의미합니다.
+**Entity Type**은 특정 Entity들의 집합 또는 그 범주를 의미하며, **Entity Role**은 특정 Entity의 발화 문장에서의 역할을 의미합니다.
 
 ![](/assets/images/intents-and-entities-01.png)
 
@@ -60,10 +59,10 @@ Entity Type은 Built-in Entity Type과 Custom Entity type으로 구분됩니다.
 
 발화 문장에서 Entity가 특정 역할을 수행한다면, 이를 구분하여 Entity Role을 별도로 정의합니다. "서울에서 부산까지 항공편 예약해줘"라는 발화 문장에서, '서울'과 '부산'은 도시를 나타내는 동일한 Entity Type이지만, 서로 다른 역할(출발지, 목적지)을 수행하고 있으며, 이는 명확히 구분되어야 정상적으로 기능을 수행할 수 있습니다. 이 경우에는 '서울'은 출발지, '부산'은 목적지라는 역할(Role)을 구분하여 지정해야 합니다.
 
-| 사용자 발화             | Intent      | Entity Text | Entity Type | Entity Role          |
-| ------------------ | ----------- | ----------- | ----------- | -------------------- |
-| 서울에서 부산까지 항공편 예약해줘 | book.flight | 서울          | CITY        | POINT\_OF\_DEPARTURE |
-|                    |             | 부산          | CITY        | DESTINATION          |
+| 사용자 발화               | Intent        | Entity Text   | Entity Type   | Entity Role            |
+|----------------------|---------------|---------------|---------------|------------------------|
+| 서울에서 부산까지 항공편 예약해줘   | book.flight   | 서울            | CITY          | POINT_OF_DEPARTURE     |
+|                      |               | 부산            | CITY          | DESTINATION            |
 
 ## 예제를 통해 Intent와 Entity 알아보기
 

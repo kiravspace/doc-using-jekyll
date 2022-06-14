@@ -8,10 +8,10 @@ description: 정의되지 않은 기능을 수행하기 위한 규격
 
 최신 버전은 1.1 입니다.
 
-| Version | Date | Description |
-| :--- | :--- | :--- |
-| 1.0 | 2019.11.24 | 규격 추가 |
-| 1.1 | 2020.01.08 | CommandIssued event 추 |
+| Version | Date       | Description           |
+|:--------|:-----------|:----------------------|
+| 1.0     | 2019.11.24 | 규격 추가                 |
+| 1.1     | 2020.01.08 | CommandIssued event 추 |
 
 ## Precondition
 
@@ -181,9 +181,9 @@ extension_handler->commandIssued(play_service_id, data)
 ```
 {% endcode %}
 
-| parameter | type | mandatory | description |
-| :--- | :--- | :--- | :--- |
-| data | object | N | 임의의 JSON object |
+| parameter | type   | mandatory | description     |
+|:----------|:-------|:----------|:----------------|
+| data      | object | N         | 임의의 JSON object |
 
 ## Directive
 
@@ -207,9 +207,9 @@ extension_handler->commandIssued(play_service_id, data)
 ```
 {% endcode %}
 
-| parameter | type | mandatory | description |
-| :--- | :--- | :--- | :--- |
-| data | object | Y | 임의의 JSON object |
+| parameter | type   | mandatory | description     |
+|:----------|:-------|:----------|:----------------|
+| data      | object | Y         | 임의의 JSON object |
 
 ## Event
 
@@ -271,6 +271,6 @@ extension_handler->commandIssued(play_service_id, data)
 ```
 {% endcode %}
 
-| parameter | type | mandatory | description |
-| :--- | :--- | :--- | :--- |
-| data | object | Y | 임의의 JSON object |
+| parameter | type   | mandatory | description     |
+|:----------|:-------|:----------|:----------------|
+| data      | object | Y         | 임의의 JSON object |

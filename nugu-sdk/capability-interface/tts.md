@@ -60,7 +60,7 @@ nugu_client->getCapabilityBuilder()
 
 ### 재생 상태 정보
 
-[Speak](tts.md#speak) directive 로 전달된 음원에 대한 재생 상태를 모니터링 할 수 있습니다.
+[Speak](tts#speak) directive 로 전달된 음원에 대한 재생 상태를 모니터링 할 수 있습니다.
 
 {% tabs %}
 {% tabs::content title="Android" %}
@@ -135,11 +135,11 @@ CapabilityFactory::makeCapability<TTSAgent, ITTSHandler>(tts_listener.get());
 ```
 {% endcode %}
 
-| parameter | type | mandatory | description |
-| :--- | :--- | :--- | :--- |
-| ttsActivity | string | Y | TTS 재생 상태 **IDLE**, **PLAYING**, **PAUSED**, **FINISHED**, **STOPPED**   - IDLE인 경우는 최초 전원을 켰을 때만 가능하고 이후에는 나올 수 없음 |
-| engine | string | N | Device 에서 사용하는 음성합성 engine 을 명시 NUGU 음성합성 engine 을 사용하는 경우 "skt" \(값을 채우지 않으면 default "skt"\) |
-| token | string | N | 현재 재생중인 TTS 의 token |
+| parameter   | type   | mandatory | description                                                                                                                         |
+|:------------|:-------|:----------|:------------------------------------------------------------------------------------------------------------------------------------|
+| ttsActivity | string | Y         | TTS 재생 상태<br/>**IDLE**<br/>**PLAYING**<br/>**PAUSED**<br/>**FINISHED**<br/>**STOPPED**<br/>IDLE인 경우는 최초 전원을 켰을 때만 가능하고 이후에는 나올 수 없음 |
+| engine      | string | N         | Device 에서 사용하는 음성합성 engine 을 명시 NUGU 음성합성 engine 을 사용하는 경우 "skt" (값을 채우지 않으면 default "skt")                                         |
+| token       | string | N         | 현재 재생중인 TTS 의 token                                                                                                                 |
 
 ## Directive
 
@@ -168,12 +168,12 @@ CapabilityFactory::makeCapability<TTSAgent, ITTSHandler>(tts_listener.get());
 ```
 {% endcode %}
 
-| parameter | type | mandatory | description |
-| :--- | :--- | :--- | :--- |
-| sourceType | string | N | URL or ATTACHMENT\(default 는 ATTACHMENT\) |
-| format | string | Y | **TEXT** or **SKML** |
-| text | string | Y | tts text |
-| token | string | Y | 현재 TTS를 식별하기 위한 unique string |
+| parameter  | type   | mandatory | description                             |
+|:-----------|:-------|:----------|:----------------------------------------|
+| sourceType | string | N         | URL or ATTACHMENT(default 는 ATTACHMENT) |
+| format     | string | Y         | **TEXT** or **SKML**                    |
+| text       | string | Y         | tts text                                |
+| token      | string | Y         | 현재 TTS를 식별하기 위한 unique string           |
 
 ### Stop
 
@@ -218,9 +218,9 @@ CapabilityFactory::makeCapability<TTSAgent, ITTSHandler>(tts_listener.get());
 ```
 {% endcode %}
 
-| parameter | type | mandatory | description |
-| :--- | :--- | :--- | :--- |
-| token | string | Y | TTS.Speak 디렉티브에서 설정한 token 값 |
+| parameter | type   | mandatory | description                  |
+|:----------|:-------|:----------|:-----------------------------|
+| token     | string | Y         | TTS.Speak 디렉티브에서 설정한 token 값 |
 
 ### SpeechFinished
 
@@ -242,9 +242,9 @@ CapabilityFactory::makeCapability<TTSAgent, ITTSHandler>(tts_listener.get());
 ```
 {% endcode %}
 
-| parameter | type | mandatory | description |
-| :--- | :--- | :--- | :--- |
-| token | string | Y | TTS.Speak 디렉티브에서 설정한 token 값 |
+| parameter | type   | mandatory | description                  |
+|:----------|:-------|:----------|:-----------------------------|
+| token     | string | Y         | TTS.Speak 디렉티브에서 설정한 token 값 |
 
 ### SpeechStopped
 
@@ -266,7 +266,7 @@ CapabilityFactory::makeCapability<TTSAgent, ITTSHandler>(tts_listener.get());
 ```
 {% endcode %}
 
-| parameter | type | mandatory | description |
-| :--- | :--- | :--- | :--- |
-| token | string | Y | TTS.Speak 디렉티브에서 설정한 token 값 |
+| parameter | type   | mandatory | description                  |
+|:----------|:-------|:----------|:-----------------------------|
+| token     | string | Y         | TTS.Speak 디렉티브에서 설정한 token 값 |
 

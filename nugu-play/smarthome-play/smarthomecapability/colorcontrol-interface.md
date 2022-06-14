@@ -71,10 +71,10 @@ Discovery Sample Response
 
 SmartHomeDevice Attribute Parameters
 
-| Attribute | Description |
-| :--- | :--- |
-| supportedColorTypes | 해당 SmartHomeDevice가 지원하는 ColorType의 명칭입니다. Discovery시의 ColorType은 지원한는 Color의 영문명을 사용하고, 지원하는 ColorTypes는 각 Device별로 Array 형태로 복수개 전달할 수 있습니다. |
-| customData | Discovery 시 SmartHomeServiceProvider가 응답할 수 있는 SmartHomeDevice의 부가정보입니다. customData는 해당 SmartHomeDevice의 제어요청 시 Request에 포함되어 전달됩니다. |
+| Attribute           | Description                                                                                                                                    |
+|:--------------------|:-----------------------------------------------------------------------------------------------------------------------------------------------|
+| supportedColorTypes | 해당 SmartHomeDevice가 지원하는 ColorType의 명칭입니다.<br/>Discovery시의 ColorType은 지원한는 Color의 영문명을 사용하고, 지원하는 ColorTypes는 각 Device별로 Array 형태로 복수개 전달할 수 있습니다. |
+| customData          | Discovery 시 SmartHomeServiceProvider가 응답할 수 있는 SmartHomeDevice의 부가정보입니다.<br/>customData는 해당 SmartHomeDevice의 제어요청 시 Request에 포함되어 전달됩니다.           |
 
 ## Directive
 
@@ -140,9 +140,9 @@ Control Request 예시 (POST, /nugu/v1/capabilities/ColorControl/directives/Chan
 
 ChangeColor Directive Request parameter details
 
-| parameter name | description | type |
-| :--- | :--- | :--- |
-| colorType | 사용자가 SmartHomeDevice에 설정하고자 하는 색상 정보입니다. RGB값으로 구성됩니다. e.g\) 노란색: \#ffff00 | string |
+| parameter name | description                                                                | type   |
+|:---------------|:---------------------------------------------------------------------------|:-------|
+| colorType      | 사용자가 SmartHomeDevice에 설정하고자 하는 색상 정보입니다.<br/>RGB값으로 구성됩니다. e.g) 노란색: #ffff00 | string |
 
 Sample Response
 

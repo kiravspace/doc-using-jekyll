@@ -50,12 +50,12 @@ Discovery Sample Response
 
 SmartHomeDevice Attribute Parameters
 
-| Attribute | Description |
-| :--- | :--- |
-| minTemperature | 해당 SmartHomeDevice가 지원하는 최저 섭씨 온도입니다. |
-| maxTemperature | 해당 SmartHomeDevice가 지원하는 최고 섭씨 온도입니다. |
-| temperatureStep | 해당 SmartHomeDevice의 온도 상승/하강 시의 기본 제어 단위입니다. 별도의 사용자 발화가 없을 시 해당 단위만큼 조절합니다. |
-| customData | Discovery 시 SmartHomeServiceProvider가 응답할 수 있는 SmartHomeDevice의 부가정보입니다. customData는 해당 SmartHomeDevice의 제어요청 시 Request에 포함되어 전달됩니다. |
+| Attribute       | Description                                                                                                                          |
+|:----------------|:-------------------------------------------------------------------------------------------------------------------------------------|
+| minTemperature  | 해당 SmartHomeDevice가 지원하는 최저 섭씨 온도입니다.                                                                                                |
+| maxTemperature  | 해당 SmartHomeDevice가 지원하는 최고 섭씨 온도입니다.                                                                                                |
+| temperatureStep | 해당 SmartHomeDevice의 온도 상승/하강 시의 기본 제어 단위입니다.<br/>별도의 사용자 발화가 없을 시 해당 단위만큼 조절합니다.                                                         |
+| customData      | Discovery 시 SmartHomeServiceProvider가 응답할 수 있는 SmartHomeDevice의 부가정보입니다.<br/>customData는 해당 SmartHomeDevice의 제어요청 시 Request에 포함되어 전달됩니다. |
 
 ## Directive
 
@@ -139,10 +139,10 @@ Sample Response
 
 AskTemperature Directive Response parameter details
 
-| parameter name | description | type |
-| :--- | :--- | :--- |
-| currentTemperature | SmartHomeDevice에서 측정한 해당 공간의 실제 온도정보입니다. 사용자에게 실제온도로 안내됩니다. | double |
-| temperatureLevel | SmartHomeDevice에 설정된 온도정보입니다. 사용자에게 설정온도로 안내됩니다. | double |
+| parameter name     | description                                                 | type   |
+|:-------------------|:------------------------------------------------------------|:-------|
+| currentTemperature | SmartHomeDevice에서 측정한 해당 공간의 실제 온도정보입니다.<br/>사용자에게 실제온도로 안내됩니다. | double |
+| temperatureLevel   | SmartHomeDevice에 설정된 온도정보입니다.<br/>사용자에게 설정온도로 안내됩니다.            | double |
 
 ### SetTemperature
 
@@ -204,8 +204,8 @@ Control Request 예시 (POST, /nugu/v1/capabilities/TemperatureControl/directive
 
 SetTemperature Directive Request parameter details
 
-| parameter name | description | type |
-| :--- | :--- | :--- |
+| parameter name   | description                                  | type   |
+|:-----------------|:---------------------------------------------|:-------|
 | temperatureLevel | 사용자가 SmartHomeDevice에 설정하고자 하는 온도의 발화 정보입니다. | double |
 
 Sample Response
@@ -229,9 +229,9 @@ Sample Response
 
 SetTemperature Directive Response parameter details
 
-| parameter name | description | type |
-| :--- | :--- | :--- |
-| temperatureLevel | SmartHomeDevice를 설정한 이후의 설정온도입니다. 제어를 마친 이후의 온도로 응답해야 합니다. | double |
+| parameter name   | description                                                | type   |
+|:-----------------|:-----------------------------------------------------------|:-------|
+| temperatureLevel | SmartHomeDevice를 설정한 이후의 설정온도입니다.<br/>제어를 마친 이후의 온도로 응답해야 합니다. | double |
 
 ### IncreaseTemperature
 
@@ -293,9 +293,9 @@ Control Request 예시 (POST, /nugu/v1/capabilities/TemperatureControl/directive
 
 IncreaseTemperature Directive request parameter details
 
-| parameter name | description | type |
-| :--- | :--- | :--- |
-| temperatureDelta | 설정온도를 몇 도\(섭씨\) 올릴지에 대한 사용자 발화 정보입니다. 해당 정보가 없을 경우에는 1도 만큼 올리도록 설정합니다. | double |
+| parameter name   | description                                                            | type   |
+|:-----------------|:-----------------------------------------------------------------------|:-------|
+| temperatureDelta | 설정온도를 몇 도(섭씨) 올릴지에 대한 사용자 발화 정보입니다.<br/>해당 정보가 없을 경우에는 1도 만큼 올리도록 설정합니다. | double |
 
 Sample Response
 
@@ -318,9 +318,9 @@ Sample Response
 
 IncreaseTemperature Directive response parameter details
 
-| parameter name | description | type |
-| :--- | :--- | :--- |
-| temperatureLevel | SmartHomeDevice를 설정한 이후의 설정온도입니다. 제어를 마친 이후의 온도로 응답해야 합니다. | double |
+| parameter name   | description                                                | type   |
+|:-----------------|:-----------------------------------------------------------|:-------|
+| temperatureLevel | SmartHomeDevice를 설정한 이후의 설정온도입니다.<br/>제어를 마친 이후의 온도로 응답해야 합니다. | double |
 
 ### DecreaseTemperature
 
@@ -382,9 +382,9 @@ Control Request 예시 (POST, /nugu/v1/capabilities/TemperatureControl/directive
 
 DecreaseTemperature Directive request parameter details
 
-| parameter name | description | type |
-| :--- | :--- | :--- |
-| temperatureDelta | 설정온도를 몇 도\(섭씨\) 내릴지에 대한 사용자 발화 정보입니다. 해당 정보가 없을 경우에는 1도 만큼 내리도록 설정합니다. | double |
+| parameter name   | description                                                          | type   |
+|:-----------------|:---------------------------------------------------------------------|:-------|
+| temperatureDelta | 설정온도를 몇 도(섭씨) 내릴지에 대한 사용자 발화 정보입니다.<br/>해당 정보가 없을 경우에는 1도 만큼 내리도록 설정합니다. | double |
 
 Sample Response
 
@@ -407,9 +407,9 @@ Sample Response
 
 DecreaseTemperature Directive response parameter details
 
-| parameter name | description | type |
-| :--- | :--- | :--- |
-| temperatureLevel | SmartHomeDevice를 설정한 이후의 설정온도입니다. 제어를 마친 이후의 온도로 응답해야 합니다. | double |
+| parameter name   | description                                                | type   |
+|:-----------------|:-----------------------------------------------------------|:-------|
+| temperatureLevel | SmartHomeDevice를 설정한 이후의 설정온도입니다.<br/>제어를 마친 이후의 온도로 응답해야 합니다. | double |
 
 ### SetTemperatureMax
 
@@ -488,9 +488,9 @@ Sample Response
 
 SetTemperatureMax Directive Response parameter details
 
-| parameter name | description | type |
-| :--- | :--- | :--- |
-| temperatureLevel | SmartHomeDevice를 설정한 이후의 설정온도입니다. 제어를 마친 이후의 온도로 응답해야 합니다. | double |
+| parameter name   | description                                                | type   |
+|:-----------------|:-----------------------------------------------------------|:-------|
+| temperatureLevel | SmartHomeDevice를 설정한 이후의 설정온도입니다.<br/>제어를 마친 이후의 온도로 응답해야 합니다. | double |
 
 ### SetTemperatureMin
 
@@ -569,9 +569,9 @@ Sample Response
 
 SetTemperatureMin Directive Response parameter details
 
-| parameter name | description | type |
-| :--- | :--- | :--- |
-| temperatureLevel | SmartHomeDevice를 설정한 이후의 설정온도입니다. 제어를 마친 이후의 온도로 응답해야 합니다. | double |
+| parameter name   | description                                                | type   |
+|:-----------------|:-----------------------------------------------------------|:-------|
+| temperatureLevel | SmartHomeDevice를 설정한 이후의 설정온도입니다.<br/>제어를 마친 이후의 온도로 응답해야 합니다. | double |
 
 ## Error & Exception
 

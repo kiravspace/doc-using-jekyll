@@ -70,6 +70,6 @@ override fun onBackPressed() {
 ```
 {% endcode %}
 
-SampleApp의 MainActivity에서의 사용예시입니다.  
-백키 이벤트가 발생했을때 template이 노출상태라면 template을 제거하고, 아니면 activity를 종료하는 케이스에 사용될 수 있습니다.
+SampleApp의 MainActivity에서의 사용예시입니다.
 
+백키 이벤트가 발생했을때 template이 노출상태라면 template을 제거하고, 아니면 activity를 종료하는 케이스에 사용될 수 있습니다.

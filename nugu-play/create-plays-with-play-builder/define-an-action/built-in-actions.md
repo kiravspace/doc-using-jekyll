@@ -16,7 +16,7 @@ Built-in Action은 다음과 같습니다.
 
 (1) 기기 대기(IDLE) 상태에서 '아리아 XXX 시작'과 같이 Play 호출이름(Invocation name)과 NUGU.INTENT.open을 함께 발화하거나,
 
-(2) 기기 대기(IDLE) 상태에서 '아리아 XXX에서 \~\~ 해줘' 와 같이 Play 호출이름과 해당 Play 내의 Custom Intent를 함께 발화하여 Play로 진입하게 되었을 때 동작하는 Action입니다.
+(2) 기기 대기(IDLE) 상태에서 '아리아 XXX에서 ~~ 해줘' 와 같이 Play 호출이름과 해당 Play 내의 Custom Intent를 함께 발화하여 Play로 진입하게 되었을 때 동작하는 Action입니다.
 
 ![](/assets/images/built-in-actions-02.png)
 
@@ -51,7 +51,7 @@ Built-in Action은 다음과 같습니다.
 ![](/assets/images/built-in-actions-07.png)
 
 {% alerts style="info" %}
-&#x20;prompt 대신 [Common Action](use-common-actions)을 선택하여, 적절한 Directive를 사용하거나, Backend Proxy와 연계한 액션으로 처리도 가능합니다.
+prompt 대신 [Common Action](use-common-actions)을 선택하여, 적절한 Directive를 사용하거나, Backend Proxy와 연계한 액션으로 처리도 가능합니다.
 {% endalerts %}
 
 

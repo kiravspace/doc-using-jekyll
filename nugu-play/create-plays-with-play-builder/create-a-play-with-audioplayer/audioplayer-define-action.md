@@ -8,9 +8,9 @@ AudioPlayer Interface를 지원하는 Play는 다음의 세 경우에 대해 Act
 
 위 세 경우는 단순히 Action만 정의해서는 안 되고, 스피커의 AudioPlayer 동작 상태에 따라 적절한 처리를 해주어야 합니다.
 
-스피커는 오디오 재생과 관련하여 `IDLE`, `PLAYING`, `PAUSED`, `STOPPED`, `FINISHED`의 5 가지 상태\(state\)를 가지기 때문에, Custom Intent, Built-in Intent, AudioPlayer Event에 대한 Action을 정의할 때 스피커의 상태에 따라 다른 동작을 정의해야 합니다.
+스피커는 오디오 재생과 관련하여 `IDLE`, `PLAYING`, `PAUSED`, `STOPPED`, `FINISHED`의 5 가지 상태(state)를 가지기 때문에, Custom Intent, Built-in Intent, AudioPlayer Event에 대한 Action을 정의할 때 스피커의 상태에 따라 다른 동작을 정의해야 합니다.
 
-예를 들어 사용자가 "아리아, 일시 정지"라고 발화를 했을 때 스피커가 일시 정지\(`PAUSED`\) 상태일 때는 아무 동작도 수행을 하지 않도록 처리하고, 재생\(`PLAYING`\) 상태일 때만 `AudioPlayer.Pause` Directive를 전송하도록 구현할 수 있습니다.
+예를 들어 사용자가 "아리아, 일시 정지"라고 발화를 했을 때 스피커가 일시 정지(`PAUSED`) 상태일 때는 아무 동작도 수행을 하지 않도록 처리하고, 재생(`PLAYING`) 상태일 때만 `AudioPlayer.Pause` Directive를 전송하도록 구현할 수 있습니다.
 
 따라서 Custom Intent, Build-in Intent, AudioPlayer Event에 대한 Action을 정의할 때는 각 Action 내에서 스피커의 상태에 따라 구현을 달리해야 할 수 있기 때문에 매우 많은 조합에 대한 처리를 해주어야 합니다.
 

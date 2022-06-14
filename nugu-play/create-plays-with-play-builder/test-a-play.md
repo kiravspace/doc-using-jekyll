@@ -15,12 +15,11 @@ NUGU 디바이스(스피커)와 연동하여 진행하는 테스트는 실제 �
 2. 단축키 Ctrl+D (Mac에서는 ⌘ Command + D) 를 눌러 실행할 수 있습니다.
 3. Play Builder 내에서의 테스트는 사용자의 실제 발화를 어떻게 분석할지 확인할 수 있으며, 이 분석 결과를 바탕으로 실제로 의도한 대로 Prompt가 나가게 되는지도 확인할 수 있습니다.
 
-![](/assets/images/test-a-play-01.gif)
+   ![](/assets/images/test-a-play-01.gif)
+4. 분석 결과를 확인하려면 입력 문장 바로 아래의 `NLU 분석 결과 열기`를 클릭합니다. 입력한 문장 아래 분석 결과가 표시됩니다.
+5. 분석 결과 표시를 닫으려면 `NLU 분석 결과 닫기`를 클릭합니다.
 
-1. 분석 결과를 확인하려면 입력 문장 바로 아래의 `NLU 분석 결과 열기`를 클릭합니다. 입력한 문장 아래 분석 결과가 표시됩니다.
-2. 분석 결과 표시를 닫으려면 `NLU 분석 결과 닫기`를 클릭합니다.
-
-![](/assets/images/test-a-play-02.png)
+   ![](/assets/images/test-a-play-02.png)
 
 NLU 분석 결과는 문장을 직접 입력하여 학습시킨 Custom Intent에 대해서만 분석이 되며, 이 Custom Intent를 Trigger로 사용하는 Custom Action에 대해 응답 중 Prompt가 어떻게 나가게 되는지 확인할 수 있습니다.
 
@@ -89,12 +88,11 @@ NUGU 디바이스 테스트는 음성인식 학습 등의 사유로 Play 및 테
 * 테스트 기기는 최대 10대까지 등록할 수 있습니다.
 {% endalerts %}
 
-`1.Developers Console` > `Play Kit`에서 Play가 등록완료 상태가 된 경우, 하단의 디바이스 등록 버튼을 통해 계정에 연결된 기기를 테스트 기기로 등록 할 수 있습니다.
+1. `Developers Console` > `Play Kit`에서 Play가 등록완료 상태가 된 경우, 하단의 디바이스 등록 버튼을 통해 계정에 연결된 기기를 테스트 기기로 등록 할 수 있습니다.
 
-![](/assets/images/test2.png)
+   ![](/assets/images/test2.png)
+2. 다른 방법으로는 `Developers Console` > `Account `> `회원 정보 관리`에서 하단의 디바이스 등록 버튼을 통해 계정에 연결된 기기를 테스트 기기로 등록 할 수 있습니다.
 
-2\. 다른 방법으로는 `Developers Console` > `Account `> `회원 정보 관리`에서 하단의 디바이스 등록 버튼을 통해 계정에 연결된 기기를 테스트 기기로 등록 할 수 있습니다.
-
-![](/assets/images/test3.png)
+   ![](/assets/images/test3.png)
 
 테스트 기기 등록이 완료되면 테스트 기기 등록 메뉴의 등록된 기기 목록에 등록된 디바이스가 표시됩니다. NUGU 디바이스 테스트를 중지하려면, 등록된 디바이스 우측의 `-` 버튼을 클릭하여 디바이스를 삭제합니다.

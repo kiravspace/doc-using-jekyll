@@ -5,7 +5,7 @@
 Backend proxy는 응답을 생성하기 위해 필요한 정보를 외부로부터 가져와야 하는 경우 사용하는 서버입니다.
 
 {% alerts style="info" %}
-개발에 대한 자세한 내용은 [외부 연동 서버\(Backend proxy\)](use-backend-proxy)를 참고하세요.
+개발에 대한 자세한 내용은 [외부 연동 서버(Backend proxy)](use-backend-proxy)를 참고하세요.
 {% endalerts %}
 
 ![](/assets/images/create-a-play-using-backend-proxy-01.png)
@@ -23,7 +23,7 @@ Backend proxy는 위 그림과 같이 다음의 경우에 사용합니다.
 {% alerts style="info" %}
 사용자가 말한 날짜가 무슨 요일인지 판단
 
-사용자로부터 2개의 Entity를 받아서 처리해야 할 때, 2개의 Entity의 정합성을 체크하는 경우\(2월 31일의 날씨 알려줘, 일본의 뉴욕 시간 알려줘\)
+사용자로부터 2개의 Entity를 받아서 처리해야 할 때, 2개의 Entity의 정합성을 체크하는 경우(2월 31일의 날씨 알려줘, 일본의 뉴욕 시간 알려줘)
 {% endalerts %}
 
 1. 서버에서 연산하여 결과를 제공할 수 있는 경우
@@ -47,10 +47,10 @@ Backend proxy는 위 그림과 같이 다음의 경우에 사용합니다.
 {% endalerts %}
 
 {% alerts style="info" %}
-Backend Parameter, 예외 상황 관리, Capability Interface\(Directive\)와 관련한 자세한 내용은 다음 링크 페이지를 참고하세요.
+Backend Parameter, 예외 상황 관리, Capability Interface(Directive)와 관련한 자세한 내용은 다음 링크 페이지를 참고하세요.
 
 * **Parameter**: [Parameter 사용하기](./define-an-action/use-parameters)
-* **Capability Interface\(Directive\)**: [AudioPlayer Interface 지원하는 Play 만들기](./create-a-play-with-audioplayer)
+* **Capability Interface(Directive)**: [AudioPlayer Interface 지원하는 Play 만들기](./create-a-play-with-audioplayer)
 * **예외 상황**: [예외 상황 관리](./define-an-action/manage-exceptions)
 {% endalerts %}
 
@@ -67,7 +67,7 @@ Backend proxy를 사용하기 위해서는 다음과 같은 순서로 진행을 
 3. Play 개발자는 Backend proxy 개발자와 다음 사항을 공유해야 합니다.
    * 어떤 Utterance Parameter를 정의하였고, 해당 Utterance Parameter는 어떠한 값들이 전달이 될 것인지 전달해야 합니다. Entity를 정규화 한다면 대표값이 Utterance Parameter에 담겨서 전달이 될 것이므로 해당 대표값을 안내해야 합니다. 
    * 정의한 Backend Parameter에 어떤 값이 담기기를 기대하는지 안내해야 합니다. 
-   * Play를 만들면서, 예외 상황을 처리해야 한다면 예외 상황 관리에 등록을 하고, 이를 Exception Code로 요청해야 합니다. \(예 : 서버 장애,  잘못된 사용자의 요청 등\) 
+   * Play를 만들면서, 예외 상황을 처리해야 한다면 예외 상황 관리에 등록을 하고, 이를 Exception Code로 요청해야 합니다. (예 : 서버 장애,  잘못된 사용자의 요청 등) 
      * 예외 처리에 대한 자세한 내용은 [예외  상황 관리](define-an-action/manage-exceptions)를 참고하세요.
    * Capability Interface를 사용하는 경우 어떤 Intent에서 어떻게 Directive를 내보낼 것인지 논의합니다.  
 4. Backend proxy과 연결할 Action에서 `Backend proxy 사용 여부`를 On으로 설정합니다.

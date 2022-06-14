@@ -8,9 +8,9 @@ description: 디바이스의 음원 파일 재생을 위한 규격
 
 최신 버전은 1.0 입니다.
 
-| Version | Date | Description |
-| :--- | :--- | :--- |
-| 1.0 | 2020.04.01 | 규격 추가 |
+| Version | Date       | Description |
+|:--------|:-----------|:------------|
+| 1.0     | 2020.04.01 | 규격 추가       |
 
 ## SDK Interface
 
@@ -161,9 +161,9 @@ Beep 유형의 음원 재생 요청입니다.
 ```
 {% endcode %}
 
-| parameter | type | mandatory | description |
-| :--- | :--- | :--- | :--- |
-| beepName | string | Y | RESPONSE\_FAIL: Play 응답 실패 |
+| parameter | type   | mandatory | description               |
+|:----------|:-------|:----------|:--------------------------|
+| beepName  | string | Y         | RESPONSE_FAIL: Play 응답 실패 |
 
 ## Event
 

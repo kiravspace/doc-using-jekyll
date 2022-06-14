@@ -8,7 +8,7 @@ description: Template 유지 정책의 커스텀
 
 예를들어 응답 TTS재생이 종료되면 일정시간 후 연관된 Template은 자동으로 제거됩니다. 또한 미디어 플레이어 Template의 경우, 새로운 미디어 플레이 요청이 들어왔을때 기존의 모든 Template을 제거한후 노출됩니다.
 
-이런 기본 정책과 다른 자신만의 유지정책을 가지려면 _**_`DisplayAggregatorInterface.Renderer`를 직접 구현하여 `NuguAndroidClient` 객체에 [displayRenderer로 등록](https://developers-doc.nugu.co.kr/nugu-sdk/platform/android/nugu-display#templaterenderer-1)하면 됩니다.
+이런 기본 정책과 다른 자신만의 유지정책을 가지려면 `**DisplayAggregatorInterface.Renderer`를 직접 구현하여 `NuguAndroidClient` 객체에 [displayRenderer로 등록](https://developers-doc.nugu.co.kr/nugu-sdk/platform/android/nugu-display#templaterenderer-1)하면 됩니다.
 
 ## Renderer 구현
 
@@ -47,16 +47,16 @@ fun displayCardCleared(templateId: String)
 ```
 {% endcode %}
 
-* **displayCardRendered\(\)** : Template 화면 노출이 완료됐을때 호출해야 합니다. 사용자가 화면을 보며 인터렉션할 수 있음을 의미합니다. 
-* **displayCardRenderFailed\(\)** : Template 화면 노출을 시도했으나 실패했을 경우 호출해야 합니다.
-* **displayCardCleared\(\)** : Template 화면이 제거되면 호출해야 합니다.
+* **displayCardRendered()** : Template 화면 노출이 완료됐을때 호출해야 합니다. 사용자가 화면을 보며 인터렉션할 수 있음을 의미합니다. 
+* **displayCardRenderFailed()** : Template 화면 노출을 시도했으나 실패했을 경우 호출해야 합니다.
+* **displayCardCleared()** : Template 화면이 제거되면 호출해야 합니다.
 
 {% alerts style="warning" %}
-DisplayAggregatorInterface.Renderer의 render\(\)함수에서 처리결과로 true를 리턴했다면, 이후 반드시 displayCardRenderer\(\) 혹은 displayCardRenderFailed\(\)를 호출해야 합니다.
+DisplayAggregatorInterface.Renderer의 render()함수에서 처리결과로 true를 리턴했다면, 이후 반드시 displayCardRenderer() 혹은 displayCardRenderFailed()를 호출해야 합니다.
 {% endalerts %}
 
 {% alerts style="warning" %}
-displayCardRendered\(\)가 호출되지 않은 템플릿에 대해 displayCardCleared\(\)가 호출되어서는 안됩니다.  
-렌더링이 완료되지 않은 Template이 제거된 경우에는 displayCardRenderFailed\(\)를 호출해야 합니다.
+displayCardRendered()가 호출되지 않은 템플릿에 대해 displayCardCleared()가 호출되어서는 안됩니다.  
+렌더링이 완료되지 않은 Template이 제거된 경우에는 displayCardRenderFailed()를 호출해야 합니다.
 {% endalerts %}
 

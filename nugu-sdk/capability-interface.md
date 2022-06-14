@@ -58,15 +58,15 @@ Capability Agent 의 현재 상태를 의미하는 데이터로 Event 와 함께
 ```
 {% endcode %}
 
-| parameter                  | type            | mandatory | description                       |
-| -------------------------- | --------------- | --------- | --------------------------------- |
-| supportedIntefacaces       | map             | Y         | Capability interface 의 Context 정보 |
-| supportedIntefacaces.key   | string          | N         | Capability interface 의 이름         |
-| supportedIntefacaces.value | Object          | N         | Capability interface 의 Context    |
-| client                     | map             | Y         | 클라이언트의 컨텍스트 정보                    |
-| client.os                  | string          | N         | Android, iOS, Linux               |
-| client.wakeupWord          | string          | N         | 아리아, 팅커벨 클라이언트에 설정된 wakeup word   |
-| client.playStack           | array of string | N         | 클라이언트에서 실행중인 playServiceId 목록     |
+| parameter                   | type             | mandatory  | description                        |
+|-----------------------------|------------------|------------|------------------------------------|
+| supportedIntefacaces        | map              | Y          | Capability interface 의 Context 정보  |
+| supportedIntefacaces.key    | string           | N          | Capability interface 의 이름          |
+| supportedIntefacaces.value  | Object           | N          | Capability interface 의 Context     |
+| client                      | map              | Y          | 클라이언트의 컨텍스트 정보                     |
+| client.os                   | string           | N          | Android, iOS, Linux                |
+| client.wakeupWord           | string           | N          | 아리아, 팅커벨 클라이언트에 설정된 wakeup word    |
+| client.playStack            | array of string  | N          | 클라이언트에서 실행중인 playServiceId 목록      |
 
 ### supportedInterfaces 전송 규칙
 
@@ -80,26 +80,26 @@ Capability Agent 의 현재 상태를 의미하는 데이터로 Event 와 함께
 
 2022-01-12 기준
 
-| Capability interface | Description           | Android | iOS                           | Linux       |
-| -------------------- | --------------------- | ------- | ----------------------------- | ----------- |
-| AudioPlayer          | 음악 재생                 | 지원      | 지원                            | 지원          |
-| Display              | UI template data 제공   | 지원      | 지원                            | 지원          |
-| System               | 디바이스 전원 제어 네트워크 연결 제어 | 지원      | 일부지원(디바이스 전원 제어는 플랫폼 특성상 미지원) | 지원          |
-| TTS                  | TTS 재생                | 지원      | 지원                            | 지원          |
-| ASR                  | 사용자 음성 인식             | 지원      | 지원                            | 지원          |
-| Text                 | 텍스트 명령 수행             | 지원      | 지원                            | 지원          |
-| Location             | 위치 정보 수집              | 지원      | 지원                            | 지원          |
-| Extension            | 확장 기능 수행              | 지원      | 지원                            | 지원          |
-| Speaker              | 볼륨 제어                 | 지원      | 플랫폼 특성상 미지원                   | 지원          |
-| Bluetooth            | 블루투스 제어               | 지원      | 플랫폼 특성상 미지원                   | 지원          |
-| Mic                  | 마이크 장치 제어             | 지원      | 플랫폼 특성상 미지원                   | 지원          |
-| Screen               | 디스플레이 장치 제어           | 지원      | 플랫폼 특성상 미지원                   | 플랫폼 특성상 미지원 |
-| Battery              | 배터리 정보 수집             | 지원      | 추후 지원 예정                      | 지원          |
-| Sound                | Beep 음 재생             | 지원      | 지원                            | 지원          |
-| Chips                | 발화 가이드 제공             | 지원      | 지원                            | 지원          |
-| Session              | 음성 인식 세션 제어           | 지원      | 지원                            | 지원          |
-| PhoneCall            | 통화 기능 제어              | 지원      | 지원                            | 지원          |
-| Message              | 문자 기능 제어              | 지원      | 지원                            | 지원          |
-| MediaPlayer          | 음악 앱 제어               | 지원      | 지원                            | 미지원         |
-| Routine              | 루틴 실행                 | 지원      | 지원                            | 지원          |
-| Utility              | Directive 실행 순서 제어    | 지원      | 지원                            | 지원          |
+| Capability interface  | Description            | Android  | iOS                            | Linux        |
+|-----------------------|------------------------|----------|--------------------------------|--------------|
+| AudioPlayer           | 음악 재생                  | 지원       | 지원                             | 지원           |
+| Display               | UI template data 제공    | 지원       | 지원                             | 지원           |
+| System                | 디바이스 전원 제어 네트워크 연결 제어  | 지원       | 일부지원(디바이스 전원 제어는 플랫폼 특성상 미지원)  | 지원           |
+| TTS                   | TTS 재생                 | 지원       | 지원                             | 지원           |
+| ASR                   | 사용자 음성 인식              | 지원       | 지원                             | 지원           |
+| Text                  | 텍스트 명령 수행              | 지원       | 지원                             | 지원           |
+| Location              | 위치 정보 수집               | 지원       | 지원                             | 지원           |
+| Extension             | 확장 기능 수행               | 지원       | 지원                             | 지원           |
+| Speaker               | 볼륨 제어                  | 지원       | 플랫폼 특성상 미지원                    | 지원           |
+| Bluetooth             | 블루투스 제어                | 지원       | 플랫폼 특성상 미지원                    | 지원           |
+| Mic                   | 마이크 장치 제어              | 지원       | 플랫폼 특성상 미지원                    | 지원           |
+| Screen                | 디스플레이 장치 제어            | 지원       | 플랫폼 특성상 미지원                    | 플랫폼 특성상 미지원  |
+| Battery               | 배터리 정보 수집              | 지원       | 추후 지원 예정                       | 지원           |
+| Sound                 | Beep 음 재생              | 지원       | 지원                             | 지원           |
+| Chips                 | 발화 가이드 제공              | 지원       | 지원                             | 지원           |
+| Session               | 음성 인식 세션 제어            | 지원       | 지원                             | 지원           |
+| PhoneCall             | 통화 기능 제어               | 지원       | 지원                             | 지원           |
+| Message               | 문자 기능 제어               | 지원       | 지원                             | 지원           |
+| MediaPlayer           | 음악 앱 제어                | 지원       | 지원                             | 미지원          |
+| Routine               | 루틴 실행                  | 지원       | 지원                             | 지원           |
+| Utility               | Directive 실행 순서 제어     | 지원       | 지원                             | 지원           |

@@ -8,12 +8,12 @@ description: 디바이스의 전원 및 네트워크 연결 상태를 관리하�
 
 최신 버전은 1.3 입니다.
 
-| Version | Date | Description |
-| :--- | :--- | :--- |
-| 1.0 | 2019.12.05 | 규격 추가 |
-| 1.1 | 2020.03.20 | System.Revoke, System.Noop directive 추가 |
-| 1.2 | 2020.06.05 | System.Revoke directive 에 WITHDRAWN\_USER 추가 |
-| 1.3 | 2020.08.27 | System.ResetConnection 추가 |
+| Version | Date       | Description                                 |
+|:--------|:-----------|:--------------------------------------------|
+| 1.0     | 2019.12.05 | 규격 추가                                       |
+| 1.1     | 2020.03.20 | System.Revoke, System.Noop directive 추가     |
+| 1.2     | 2020.06.05 | System.Revoke directive 에 WITHDRAWN_USER 추가 |
+| 1.3     | 2020.08.27 | System.ResetConnection 추가                   |
 
 ## SDK Interface
 
@@ -60,7 +60,7 @@ nugu_client->getCapabilityBuilder()
 
 ### 디바이스 전원 제어
 
-`사용자 발화` 에 따라 [TurnOff](system.md#turnoff) directive 로 디바이스 전원을 제어할 수 있습니다.
+`사용자 발화` 에 따라 [TurnOff](system#turnoff) directive 로 디바이스 전원을 제어할 수 있습니다.
 
 {% alerts style="warning" %}
 iOS 는 지원하지 않습니다
@@ -107,7 +107,7 @@ CapabilityFactory::makeCapability<SystemAgent, ISystemHandler>(system_listener.g
 
 ### 에러처리
 
-NUGU 서버에서 에러가 발생할 경우 [Exception](system.md#exception) directive 로 error code가 전달됩니다.
+NUGU 서버에서 에러가 발생할 경우 [Exception](system#exception) directive 로 error code가 전달됩니다.
 
 사용자가 에러 상황을 인지할 수 있도록 Toast, Local TTS 등으로 안내해야합니다.
 
@@ -169,7 +169,7 @@ CapabilityFactory::makeCapability<SystemAgent, ISystemHandler>(system_listener.g
 
 ### 디바이스 등록 해제
 
-누구 서버에서 디바이스가 등록 해제되면 [Revoke](system.md#revoke) directive 로 reason 이 전달됩니다.
+누구 서버에서 디바이스가 등록 해제되면 [Revoke](system#revoke) directive 로 reason 이 전달됩니다.
 
 Application 의 상황에 따라 NUGU 로그인 화면으로 이동하거나 NUGU Button 을 비활성화 해야합니다.
 
@@ -299,15 +299,15 @@ Connection-oriented 디바이스에서만 사용
 ```
 {% endcode %}
 
-| parameter | type | mandatory | description |
-| :--- | :--- | :--- | :--- |
-| protocol | String | Y | H2\_GRPC : grpc over http2 H2 : http2 |
-| hostname | String | Y | domain |
-| address | String | Y | deprecated ip or domain |
-| port | Int | Y | port |
-| retryCountLimit | Int | Y | retry\_count\_limit까지 요청 한 후 다음 server로 접속 시도 |
-| connectionTimeout | Int | Y | milliseconds |
-| charge | String | N | NORMAL : 일반적인 통신 요금 과금 \(default\) FREE : 무과금 포트를 이용하여 device gateway에 접속해서 TTS.SpeechPlay Event를 통해 음성 합성 |
+| parameter         | type   | mandatory | description                                                                                                  |
+|:------------------|:-------|:----------|:-------------------------------------------------------------------------------------------------------------|
+| protocol          | String | Y         | H2_GRPC : grpc over<br/>http2 H2 : http2                                                                     |
+| hostname          | String | Y         | domain                                                                                                       |
+| address           | String | Y         | deprecated ip or domain                                                                                      |
+| port              | Int    | Y         | port                                                                                                         |
+| retryCountLimit   | Int    | Y         | retry_count_limit까지 요청 한 후 다음 server로 접속 시도                                                                  |
+| connectionTimeout | Int    | Y         | milliseconds                                                                                                 |
+| charge            | String | N         | NORMAL : 일반적인 통신 요금 과금 (default)<br/>FREE : 무과금 포트를 이용하여 device gateway에 접속해서 TTS.SpeechPlay Event를 통해 음성 합성 |
 
 ### TurnOff
 
@@ -369,18 +369,18 @@ Connection-oriented 디바이스에서만 사용
 ```
 {% endcode %}
 
-| parameter | type | mandatory | description |
-| :--- | :--- | :--- | :--- |
-| code | string | Y | 서버에서 발생 |
-| description | string | N | 에러에 대한 설명 |
+| parameter   | type   | mandatory | description |
+|:------------|:-------|:----------|:------------|
+| code        | string | Y         | 서버에서 발생     |
+| description | string | N         | 에러에 대한 설명   |
 
-| code | description |
-| :--- | :--- |
-| UNAUTHORIZED\_REQUEST\_EXCEPTION | 접속시 인증 에러 • jwt 토큰이 유효하지 않거나 header에 토큰이 없는 경우    - grpc : System.Exception\(UNAUTHORIZED\_REQUEST\_EXCEPTION\)을 내리고 연결 끊음    - h2 : 403 에러 • play router에서 토큰이 유효하지 않아서 실패 • jwt 토큰은 유효하지만 디바이스 연결 직후 habilis를 조회해서 토큰이 유효하지 않은 것이 확인 |
-| ASR\_RECOGNIZING\_EXCEPTION | 음성 인식 에러 |
-| PLAY\_ROUTER\_PROCESSING\_EXCEPTION | Play router 에러 • Fallback Play 연동 실패 • Client 로직 오류\(잘못된 규격으로 요청\) |
-| TTS\_SPEAKING\_EXCEPTION | 음성 합성 에러 |
-| INTERNAL\_SERVICE\_EXCEPTION | 기타 알 수 없는 에러 |
+| code                             | description                                                                                                                                                                                                                                |
+|:---------------------------------|:-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
+| UNAUTHORIZED_REQUEST_EXCEPTION   | 접속시 인증 에러<br/>jwt 토큰이 유효하지 않거나 header에 토큰이 없는 경우<br/>- grpc : System.Exception(UNAUTHORIZED_REQUEST_EXCEPTION)을 내리고 연결 끊음<br/>- h2 : 403 에러<br/>play router에서 토큰이 유효하지 않아서 실패<br/>jwt 토큰은 유효하지만 디바이스 연결 직후 habilis를 조회해서 토큰이 유효하지 않은 것이 확인 |
+| ASR_RECOGNIZING_EXCEPTION        | 음성 인식 에러                                                                                                                                                                                                                                   |
+| PLAY_ROUTER_PROCESSING_EXCEPTION | Play router 에러<br/>Fallback Play 연동 실패<br/>Client 로직 오류(잘못된 규격으로 요청)                                                                                                                                                                       |
+| TTS_SPEAKING_EXCEPTION           | 음성 합성 에러                                                                                                                                                                                                                                   |
+| INTERNAL_SERVICE_EXCEPTION       | 기타 알 수 없는 에러                                                                                                                                                                                                                               |
 
 ### NoDirectives
 
@@ -422,13 +422,13 @@ NUGU 서버에서 디바이스가 등록 해제되면 전달됩니다.
 ```
 {% endcode %}
 
-| parameter | type | mandatory | description |
-| :--- | :--- | :--- | :--- |
-| reason | string | Y | 디바이스가 등록 해제된 원인 |
+| parameter | type   | mandatory | description     |
+|:----------|:-------|:----------|:----------------|
+| reason    | string | Y         | 디바이스가 등록 해제된 원인 |
 
-| reason | description |
-| :--- | :--- |
-| REVOKED\_DEVICE | NUGU 모바일 앱에서 디바이스 연결 해제 |
+| reason         | description             |
+|:---------------|:------------------------|
+| REVOKED_DEVICE | NUGU 모바일 앱에서 디바이스 연결 해제 |
 
 ### Noop
 
@@ -475,9 +475,9 @@ Connection-oriented 디바이스에서만 사용
 ```
 {% endcode %}
 
-| parameter | type | mandatory | description |
-| :--- | :--- | :--- | :--- |
-| description | String | N | 서버에서 정보를 남기기 위한 단순 로깅 용도 |
+| parameter   | type   | mandatory | description              |
+|:------------|:-------|:----------|:-------------------------|
+| description | String | N         | 서버에서 정보를 남기기 위한 단순 로깅 용도 |
 
 ## Events
 
@@ -525,9 +525,9 @@ Connection-oriented 디바이스에서만 사용
 ```
 {% endcode %}
 
-| parameter | type | mandatory | description |
-| :--- | :--- | :--- | :--- |
-| inactiveTimeInSeconds | long | Y |  |
+| parameter             | type  | mandatory | description |
+|:----------------------|:------|:----------|:------------|
+| inactiveTimeInSeconds | long  | Y         |             |
 
 ### Disconnect
 

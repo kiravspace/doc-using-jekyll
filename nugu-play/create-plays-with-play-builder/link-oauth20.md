@@ -9,8 +9,10 @@ Play Builder를 NUGU 스피커를 통해 훌륭한 서비스를 만들 수 있�
 
 ## OAuth란?
 
-> OAuth는 인터넷 사용자들이 비밀번호를 제공하지 않고 다른 웹사이트 상의 자신들의 정보에 대해 웹사이트나 애플리케이션의 접근 권한을 부여할 수 있는 공통적인 수단으로서 사용되는, 접근 위임을 위한 개방형 표준이다.\
-> 이 매커니즘은 여러 기업들에 의해 사용되는데, 이를테면 아마존, 구글, 페이스북, 마이크로소프트, 트위터가 있으며 사용자들이 타사 애플리케이션이나 웹사이트의 계정에 관한 정보를 공유할 수 있게 허용한다.\
+> OAuth는 인터넷 사용자들이 비밀번호를 제공하지 않고 다른 웹사이트 상의 자신들의 정보에 대해 웹사이트나 애플리케이션의 접근 권한을 부여할 수 있는 공통적인 수단으로서 사용되는, 접근 위임을 위한 개방형 표준이다.
+> 
+> 이 매커니즘은 여러 기업들에 의해 사용되는데, 이를테면 아마존, 구글, 페이스북, 마이크로소프트, 트위터가 있으며 사용자들이 타사 애플리케이션이나 웹사이트의 계정에 관한 정보를 공유할 수 있게 허용한다.
+> 
 > 출처: [Wikipedia](https://ko.wikipedia.org/wiki/OAuth)
 
 OAuth를 이용해 사용자 정보에 접근할 수 있고, 이를 통해 Play의 기능을 확장할 수 있습니다. NUGU developers에서는 OAuth 2.0 연동을 지원하며 다음의 방식으로 이용할 수 있습니다.
@@ -22,7 +24,7 @@ OAuth를 이용해 사용자 정보에 접근할 수 있고, 이를 통해 Play�
 
 다음 예는 깃허브(Github)의 OAuth 2.0 계정과 연동하는 방법을 나타낸 것입니다. 다른 소셜 계정도 비슷한 방식으로 연동이 가능합니다.
 
-* 다음의 1\~4 단계까지는 깃허브(Github)의 [Building OAuth Apps](https://developer.github.com/apps/building-oauth-apps) 문서를 참고합니다.
+* 다음의 1~4 단계까지는 깃허브(Github)의 [Building OAuth Apps](https://developer.github.com/apps/building-oauth-apps) 문서를 참고합니다.
 
 ### 1단계: OAuth App 생성하기
 
@@ -32,13 +34,13 @@ OAuth를 이용해 사용자 정보에 접근할 수 있고, 이를 통해 Play�
 
     ![](/assets/images/link-oauth20-01.png)
 2. `New OAuth App` 버튼을 클릭하여 새로운 OAuth App을 만듭니다.
-   *   최초 등록하는 경우, 버튼에는 `Register a new application`이라고 표시됩니다.
+   * 최초 등록하는 경우, 버튼에는 `Register a new application`이라고 표시됩니다.
 
-       ![](/assets/images/link-oauth20-02.png)
+     ![](/assets/images/link-oauth20-02.png)
 3. OAuth App 생성 화면에서 Application name, Homepage URL, Application description, Authorization callback URL을 입력한 후 `Register application`을 눌러 OAuth App을 생성을 완료합니다.
-   *   Authorization callback URL에는 `https://developers.nugu.co.kr/app/callback.html`을 입력합니다.
+   * Authorization callback URL에는 `https://developers.nugu.co.kr/app/callback.html`을 입력합니다.
 
-       ![](/assets/images/link-oauth20-03.png)
+     ![](/assets/images/link-oauth20-03.png)
 
 ### 2단계: OAuth App 정보 확인하기
 
@@ -51,7 +53,7 @@ OAuth를 이용해 사용자 정보에 접근할 수 있고, 이를 통해 Play�
 깃허브(Github) 가이드 페이지 [Authorizing OAuth Apps](https://developer.github.com/apps/building-oauth-apps/authorizing-oauth-apps/#web-application-flow)에서도 OAuth 연동에 필요한 URL 관련 내용을 확인할 수 있습니다.
 
 * 로그인 URL : [https://github.com/login/oauth/authorize](https://github.com/login/oauth/authorize)
-* Access token URL : [https://github.com/login/oauth/access\_token](https://github.com/login/oauth/access\_token)
+* Access token URL : [https://github.com/login/oauth/access_token](https://github.com/login/oauth/access_token)
 
 {% alerts style="info" %}
 Github에서는 Access token 재발급이 필요없습니다. 하지만 다른 소셜 계정에서는 Access Token 재발급이 필요할 수 있습니다. 이 경우 소셜 계정의 OAuth 개발 가이드에서 OAuth token 재발급 URL을 확인하면 됩니다.
@@ -79,14 +81,14 @@ OAuth Scope는 Access Token으로 사용할 수 있는 리소스의 허용 범�
 repo와 gist를 추가합니다.(최대 5개)
 
 #### ④ Access token URL
-3단계에서 확인한 URL을 입력합니다.([https://github.com/login/oauth/access\_token](https://github.com/login/oauth/access\_token))
+3단계에서 확인한 URL을 입력합니다.([https://github.com/login/oauth/access_token](https://github.com/login/oauth/access_token))
 
 #### ⑤ 클라이언트 secret
 2단계에서 확인한 클라이언트 Secret을 입력합니다. 예) 12bf7a85698496fd87e6cb6703914617fb693ce0)
 
 ### 6단계: Backend proxy 개발하기
 
-위 1\~5 단계까지의 작업을 통해 Play 개발 시 사용할 OAuth Token이 준비되면, 이 Access token을 사용할 Backend proxy를 개발해야 합니다.
+위 1~5 단계까지의 작업을 통해 Play 개발 시 사용할 OAuth Token이 준비되면, 이 Access token을 사용할 Backend proxy를 개발해야 합니다.
 
 {% alerts style="info" %}
 Backend proxy 개발에 대한 자세한 내용은 [Backend proxy에서 Access token 사용하기](link-oauth20#using-access-token)를 참고하세요.
@@ -105,16 +107,16 @@ OAuth 2.0 Serve는 인터넷의 기술 문서를 참고하여 구축할 수 있�
 
 `Developers` > `Play kit` > `Play 관`  메뉴에서 `Play 등록하기` 버튼을 클릭해 OAuth 계정 연동 정보를 입력합니다.
 
-\*(별표) 표시는 필수 제공해야 하는 내용입니다.
+*(별표) 표시는 필수 제공해야 하는 내용입니다.
 
-| 항목                   | 설명                                                                                      | 예시                                      |
-| -------------------- | --------------------------------------------------------------------------------------- | --------------------------------------- |
-| 로그인 URL\*            | 사용자가 로그인하기 위해 이동(redirect)되어야 하는 URL입니다.                                                | `https://your-domain/login?querystring` |
-| 클라이언트 ID\*           | 토큰을 요청할 때 사용하는 클라이언트 ID입니다.                                                             | `caDRl3WOuL5myqfHW3bjTIzGRJsVVMGP`      |
-| 권한 범위                | Access Toke Scope이 있는 경우 입력합니다. 자세한 내용은 OAuth 2.0 문서의 Access Token Scope 참고하세요.         | `repo, gist`                            |
-| Access token URL\*   | Access Token을 발급 받을 수 있는 URL을 입력합니다. 자세한 내용은 OAuth 2.0 문서의 Access Token Request를 참고하세요. | `https://your-domian/access-token`      |
-| Access token 재발급 URL | Refresh token을 발급받기 위한 URL입니다. 자세한 내용은 OAuth 2.0 문서의 Refreshing an Access Token를 참고하세요. | `https://your-domain/refresh-token`     |
-| 클라이언트 secret\*       | 토큰을 요청할 때 클라이언트ID와 함께 사용하는 값입니다.                                                        | `CigogRESYHuSzTTa`                      |
+| 항목                     | 설명                                                                                          | 예시                                       |
+|------------------------|---------------------------------------------------------------------------------------------|------------------------------------------|
+| 로그인 URL*               | 사용자가 로그인하기 위해 이동(redirect)되어야 하는 URL입니다.                                                    | `https://your-domain/login?querystring`  |
+| 클라이언트 ID*              | 토큰을 요청할 때 사용하는 클라이언트 ID입니다.                                                                 | `caDRl3WOuL5myqfHW3bjTIzGRJsVVMGP`       |
+| 권한 범위                  | Access Toke Scope이 있는 경우 입력합니다.<br/>자세한 내용은 OAuth 2.0 문서의 Access Token Scope 참고하세요.         | `repo, gist`                             |
+| Access token URL*      | Access Token을 발급 받을 수 있는 URL을 입력합니다.<br/>자세한 내용은 OAuth 2.0 문서의 Access Token Request를 참고하세요. | `https://your-domian/access-token`       |
+| Access token 재발급 URL   | Refresh token을 발급받기 위한 URL입니다.<br/>자세한 내용은 OAuth 2.0 문서의 Refreshing an Access Token를 참고하세요. | `https://your-domain/refresh-token`      |
+| 클라이언트 secret*          | 토큰을 요청할 때 클라이언트ID와 함께 사용하는 값입니다.                                                            | `CigogRESYHuSzTTa`                       |
 
 ### Redirect URL (Callback URL) 설정하기
 
@@ -220,12 +222,12 @@ Content-Length:
 ## OAuth 연동 테스트하기 <a href="test-oauth" id="test-oauth"></a>
 
 1. Play의 상태가 등록중, 심사대기, 심사반려, 심사중, 심사완료, 배포대기 중인 경우에 스피커에서 테스트가 가능합니다.
-    ![](/assets/images/link-oauth20-06.png)
-1. [테스트하기](test-a-play)에서 '디바이스(스피커)에서 테스트하기' 항목을 참고하여 테스트 스피커를 추가합니다.
-1. NUGU 앱에 접속하여 왼쪽 위의 햄버거 메뉴를 클릭한 후 NUGU play 항목에서 내가 만든 Play를 클릭합니다.
-    ![](/assets/images/link-oauth20-07.png)
-1. '계정 연동' 버튼을 클릭합니다. 계정 연동 후 스피커로 테스트합니다. NUGU 앱에서 계정 연동을 하고 스피커로 테스트 하면 accessToken을 받을 수 있습니다. (단, 플레이 등록 후 하루 후부터 스피커 테스트가 가능합니다.)
-    ![](/assets/images/link-oauth20-08.png)
+   ![](/assets/images/link-oauth20-06.png)
+2. [테스트하기](test-a-play)에서 '디바이스(스피커)에서 테스트하기' 항목을 참고하여 테스트 스피커를 추가합니다.
+3. NUGU 앱에 접속하여 왼쪽 위의 햄버거 메뉴를 클릭한 후 NUGU play 항목에서 내가 만든 Play를 클릭합니다.
+   ![](/assets/images/link-oauth20-07.png)
+4. '계정 연동' 버튼을 클릭합니다. 계정 연동 후 스피커로 테스트합니다. NUGU 앱에서 계정 연동을 하고 스피커로 테스트 하면 accessToken을 받을 수 있습니다. (단, 플레이 등록 후 하루 후부터 스피커 테스트가 가능합니다.)
+   ![](/assets/images/link-oauth20-08.png)
 
 {% alerts style="info" %}
 Play를 등록하는 방법은 [Play 정보 등록](../play-registration-and-review/register-a-play)을 참고하세요.

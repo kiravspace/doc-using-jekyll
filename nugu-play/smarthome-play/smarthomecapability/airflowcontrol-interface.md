@@ -52,11 +52,11 @@ Discovery Sample Response
 
 SmartHomeDevice Attribute Parameters
 
-| Attribute | Description |
-| :--- | :--- |
-| supportedAirflowTypes | 해당 SmartHomeDevice가 지원하는 AirflowType의 명칭입니다. AirflowType은 NUGU스마트홈에서 지원하는 명칭 중 선택해서 응답할 수 있으며, 지원하는 AirflowType의 명칭은 [AirflowType](../smarthomeattribute#airflowtype)를 참조하시기 바랍니다. 지원하는 AirflowType은 각 Device별로 Array 형태로 복수개 전달할 수 있습니다. |
-| customData | Discovery 시 SmartHomeServiceProvider가 응답할 수 있는 SmartHomeDevice의 부가정보입니다. customData는 해당 SmartHomeDevice의 제어요청 시 Request에 포함되어 전달됩니다. |
-| connectionStatus | 디바이스 연결상태. 현재 제어가 불가능한 상태의 디바이스인 경우 false 로 응답해야 합니다. |
+| Attribute             | Description                                                                                                                                                                                                                               |
+|:----------------------|:------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
+| supportedAirflowTypes | 해당 SmartHomeDevice가 지원하는 AirflowType의 명칭입니다.<br/>AirflowType은 NUGU스마트홈에서 지원하는 명칭 중 선택해서 응답할 수 있으며, 지원하는 AirflowType의 명칭은 [AirflowType](../smarthomeattribute#airflowtype)를 참조하시기 바랍니다.<br/>지원하는 AirflowType은 각 Device별로 Array 형태로 복수개 전달할 수 있습니다. |
+| customData            | Discovery 시 SmartHomeServiceProvider가 응답할 수 있는 SmartHomeDevice의 부가정보입니다.<br/>customData는 해당 SmartHomeDevice의 제어요청 시 Request에 포함되어 전달됩니다.                                                                                                      |
+| connectionStatus      | 디바이스 연결상태.<br/>현재 제어가 불가능한 상태의 디바이스인 경우 false 로 응답해야 합니다.                                                                                                                                                                                     |
 
 ## Directive
 
@@ -64,7 +64,7 @@ NUGU SmartHome AirflowControl Capability는 풍량을 조회하는 AskAirflow, �
 
 ### SetAirflow
 
-**Directive 정**  
+**Directive 정보**  
 SmartHomeDevice의 풍량을 사용자가 발화한 특정 풍량으로 설정한다.  
 Capability : AirflowControl  
 Directive : SetAirflow
@@ -129,10 +129,10 @@ Control Request 예시 (POST, /nugu/v1/capabilities/AirflowControl/directives/Se
 
 SetAirflow Directive Request parameter details
 
-| parameter name | description | type |
-| :--- | :--- | :--- |
-| airflowType | 설정하고자 하는 airflowType의 사용자 발화 정보. 해당 parameter의 value는 Device Discovery 당시 Response한 supprtedAirflowTypes 중 하나로 요청됩니다. | string |
-| rawAirflowType | 사용자가 실제 발화한 AirflowType. 정규화 되지 않은 값 | string |
+| parameter name | description                                                                                                           | type   |
+|:---------------|:----------------------------------------------------------------------------------------------------------------------|:-------|
+| airflowType    | 설정하고자 하는 airflowType의 사용자 발화 정보.<br/>해당 parameter의 value는 Device Discovery 당시 Response한 supprtedAirflowTypes 중 하나로 요청됩니다. | string |
+| rawAirflowType | 사용자가 실제 발화한 AirflowType.<br/>정규화 되지 않은 값                                                                                  | string |
 
 Sample Response
 
@@ -164,9 +164,9 @@ Sample Response
 
 SetAirflow Directive Response parameter details
 
-| parameter name | description | type |
-| :--- | :--- | :--- |
-| airflowType | 설정한 후에 SmartHomeDevice의 airflowType. 해당 parameter의 value로 사용자에게 안내됩니다. | string |
+| parameter name | description                                                            | type   |
+|:---------------|:-----------------------------------------------------------------------|:-------|
+| airflowType    | 설정한 후에 SmartHomeDevice의 airflowType.<br/>해당 parameter의 value로 사용자에게 안내됩니다. | string |
 
 ### AskAirflow
 
@@ -271,9 +271,9 @@ Sample Response
 
 AskAirflow Directive Response parameter details
 
-| parameter name | description | type |
-| :--- | :--- | :--- |
-| airflowType | 현재 설정되어 있는 SmartHomeDevice의 airflowType정보. 해당 parameter의 value로 사용자에게 안내됩니다. | string |
+| parameter name | description                                                                  | type   |
+|:---------------|:-----------------------------------------------------------------------------|:-------|
+| airflowType    | 현재 설정되어 있는 SmartHomeDevice의 airflowType정보.<br/>해당 parameter의 value로 사용자에게 안내됩니다. | string |
 
 ### IncreaseAirflow
 
@@ -338,9 +338,9 @@ Control Request 예시 (POST, /nugu/v1/capabilities/AirflowControl/directives/In
 
 IncreaseAirflow Directive request parameter details
 
-| parameter name | description | type |
-| :--- | :--- | :--- |
-|  | 별도의 파라미터는 없고, 1단계씩 올려야 합니다. n 단계 올리는 스펙은 추후 지원 예정입니다. |  |
+| parameter name | description                                           | type  |
+|:---------------|:------------------------------------------------------|:------|
+|                | 별도의 파라미터는 없고, 1단계씩 올려야 합니다.<br/>n 단계 올리는 스펙은 추후 지원 예정입니다. |       |
 
 Sample Response
 
@@ -383,9 +383,9 @@ Sample Response
 
 IncreaseAirflow Directive response parameter details
 
-| parameter name | description | type |
-| :--- | :--- | :--- |
-| airflowType | Airflow 증가 후 최종 설정된 SmartHomeDevice의 AirflowType. 해당 parameter의 value로 사용자에게 안내됩니다. | string |
+| parameter name | description                                                                         | type   |
+|:---------------|:------------------------------------------------------------------------------------|:-------|
+| airflowType    | Airflow 증가 후 최종 설정된 SmartHomeDevice의 AirflowType.<br/>해당 parameter의 value로 사용자에게 안내됩니다. | string |
 
 ### DecreaseAirflow
 
@@ -450,9 +450,9 @@ Control Request 예시 (POST, /nugu/v1/capabilities/AirflowControl/directives/De
 
 DecreaseAirflow Directive request parameter details
 
-| parameter name | description | type |
-| :--- | :--- | :--- |
-|  | 별도의 파라미터는 없 1단계씩 내려야 합니다. n 단계 내리는 스펙은 추후 지원 예정입니다. |  |
+| parameter name | description                                         | type  |
+|:---------------|:----------------------------------------------------|:------|
+|                | 별도의 파라미터는 없 1단계씩 내려야 합니다.<br/>n 단계 내리는 스펙은 추후 지원 예정입니다. |       |
 
 Sample Response
 
@@ -474,9 +474,9 @@ Sample Response
 
 DecreaseAirflow Directive response parameter details
 
-| parameter name | description | type |
-| :--- | :--- | :--- |
-| airflowType | Airflow 감소 후 최종 설정된 SmartHomeDevice의 AirflowType | string |
+| parameter name | description                                      | type   |
+|:---------------|:-------------------------------------------------|:-------|
+| airflowType    | Airflow 감소 후 최종 설정된 SmartHomeDevice의 AirflowType | string |
 
 ### SetAirflowMax
 
@@ -580,8 +580,8 @@ Sample Response
 
 SetAirflowMax Directive Response parameter details
 
-| parameter name | description | type |
-| :--- | :--- | :--- |
+| parameter name | description                                       | type   |
+| :--- |:--------------------------------------------------|:-------|
 | airflowType | Airflow 감소 후 최종 설정 된 SmartHomeDevice의 AirflowType | string |
 
 ### SetAirflowMin
@@ -686,9 +686,9 @@ Sample Response
 
 SetAirflowMin Directive response parameter details
 
-| parameter name | description | type |
-| :--- | :--- | :--- |
-| airflowType | 설정한 후에 SmartHomeDevice의 airflowType. 해당 parameter의 value로 사용자에게 안내됩니다. | string |
+| parameter name | description                                                            | type   |
+|:---------------|:-----------------------------------------------------------------------|:-------|
+| airflowType    | 설정한 후에 SmartHomeDevice의 airflowType.<br/>해당 parameter의 value로 사용자에게 안내됩니다. | string |
 
 ## Error & Exception
 
