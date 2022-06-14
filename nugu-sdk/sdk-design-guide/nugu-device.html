@@ -10,7 +10,6 @@
 <script type="text/javascript" src="/assets/js/jquery-ui.js"></script>
 <script type="text/javascript" src="/assets/js/main.js"></script>
 
-<script>MathJax={"tex":{"inlineMath":[["$","$"],["\\(","\\)"]],"displayMath":[["$$","$$"],["\\[","\\]"]]},"svg":{"fontCache":"global"},"options":{"enableMenu":false}}</script><script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script><script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
 </head>
 <body>
 <header>
@@ -62,7 +61,7 @@
     
         <li>
             <div class="nav_link fold ">
-                <a href="/nugu-play/nugu-ux/voice-interaction-design" class="nav_href">사용자 발화\(User Utterance\) 예상 하기</a>
+                <a href="/nugu-play/nugu-ux/voice-interaction-design" class="nav_href">사용자 발화(User Utterance) 예상 하기</a>
                 <span class="nav_unfold">+</span>
                 <span class="nav_fold">-</span>
             </div>
@@ -429,7 +428,7 @@
     
         <li>
             <div class="nav_link fold ">
-                <a href="/nugu-play/create-plays-with-play-builder/hello-aria/create-an-action-and-an-answer" class="nav_href">3) Action 만들고 응답 등록하기</a>
+                <a href="/nugu-play/create-plays-with-play-builder/hello-aria/create-an-intent-and-custom-utterances" class="nav_href">2) Intent 만들고 예상 발화 등록하기</a>
                 <span class="nav_unfold">+</span>
                 <span class="nav_fold">-</span>
             </div>
@@ -438,7 +437,7 @@
     
         <li>
             <div class="nav_link fold ">
-                <a href="/nugu-play/create-plays-with-play-builder/hello-aria/create-an-intent-and-custom-utterances" class="nav_href">2) Intent 만들고 예상 발화 등록하기</a>
+                <a href="/nugu-play/create-plays-with-play-builder/hello-aria/create-an-action-and-an-answer" class="nav_href">3) Action 만들고 응답 등록하기</a>
                 <span class="nav_unfold">+</span>
                 <span class="nav_fold">-</span>
             </div>
@@ -550,7 +549,7 @@
     
         <li>
             <div class="nav_link fold ">
-                <a href="/nugu-play/create-plays-with-play-builder/use-backend-proxy/capability-interfaces/audioplayer-display-interface" class="nav_href">AudioPlayer를 위한 Display Interface</a>
+                <a href="/nugu-play/create-plays-with-play-builder/use-backend-proxy/capability-interfaces/audioplayer-interface" class="nav_href">AudioPlayer Interface</a>
                 <span class="nav_unfold">+</span>
                 <span class="nav_fold">-</span>
             </div>
@@ -559,7 +558,7 @@
     
         <li>
             <div class="nav_link fold ">
-                <a href="/nugu-play/create-plays-with-play-builder/use-backend-proxy/capability-interfaces/audioplayer-interface" class="nav_href">AudioPlayer Interface</a>
+                <a href="/nugu-play/create-plays-with-play-builder/use-backend-proxy/capability-interfaces/audioplayer-display-interface" class="nav_href">AudioPlayer를 위한 Display Interface</a>
                 <span class="nav_unfold">+</span>
                 <span class="nav_fold">-</span>
             </div>
@@ -1379,7 +1378,7 @@
     
         <li>
             <div class="nav_link fold  has_child ">
-                <a href="/work-with-nugu-biz/biz-api/api-announcement" class="nav_href">API 발송 \(Announcement\)</a>
+                <a href="/work-with-nugu-biz/biz-api/api-announcement" class="nav_href">API 발송 (Announcement)</a>
                 <span class="nav_unfold">+</span>
                 <span class="nav_fold">-</span>
             </div>
@@ -2180,7 +2179,7 @@
   <tbody>
     <tr>
       <td><strong>음소거</strong></td>
-      <td>기기의 소리가 출력되지 않는 상태입니다.음소거 상태일 때는 Prompt나 사운드, 비프음을 볼륨 레벨 0으로 출력합니다.단, alert형 안내(알람 울림, 타이머 울림, Notification 울림, 전화벨 울림)가 실행될 때는 음소거 상태일지라로 원래 음량으로 실행됩니다.</td>
+      <td>기기의 소리가 출력되지 않는 상태입니다.<br>음소거 상태일 때는 Prompt나 사운드, 비프음을 볼륨 레벨 0으로 출력합니다.<br>단, alert형 안내(알람 울림, 타이머 울림, Notification 울림, 전화벨 울림)가 실행될 때는 음소거 상태일지라로 원래 음량으로 실행됩니다.</td>
     </tr>
     <tr>
       <td><strong>마이크 켜짐/꺼짐</strong></td>
@@ -2200,7 +2199,7 @@
     </tr>
     <tr>
       <td><strong>네트워크 미연결</strong></td>
-      <td>기기가 네트워크에 연결되지 않은 상태를 말합니다.이 상태에서는 wake up시 곧바로 네트워크가 연결되어 있지 않음을 알려주는 Prompt를 제공합니다.</td>
+      <td>기기가 네트워크에 연결되지 않은 상태를 말합니다.<br>이 상태에서는 wake up시 곧바로 네트워크가 연결되어 있지 않음을 알려주는 Prompt를 제공합니다.</td>
     </tr>
   </tbody>
 </table>
@@ -2223,15 +2222,15 @@
   <tbody>
     <tr>
       <td><strong>호출 버튼</strong></td>
-      <td>• 호출어를 말하는 것과 동일하게, listening-passive 상태가 되도록 합니다.• 마이크가 꺼져 있는 상태에서 wake-up 버튼을 누를 경우, 마이크가 켜지고 listening - passive 상태로 변경됩니다. 한번 마이크가 켜지면 해당 상태는 유지됩니다.</td>
+      <td>• 호출어를 말하는 것과 동일하게, listening-passive 상태가 되도록 합니다.<br>• 마이크가 꺼져 있는 상태에서 wake-up 버튼을 누를 경우, 마이크가 켜지고 listening - passive 상태로 변경됩니다. 한번 마이크가 켜지면 해당 상태는 유지됩니다.</td>
     </tr>
     <tr>
       <td><strong>마이크 버튼</strong></td>
-      <td>• 기기의 마이크를 끄거나 켭니다.• 마이크가 꺼진 상태 (microphone off) 상태에서 호출어를 발화하여도 기기가 wake up되지 않습니다.</td>
+      <td>• 기기의 마이크를 끄거나 켭니다.<br>• 마이크가 꺼진 상태 (microphone off) 상태에서 호출어를 발화하여도 기기가 wake up되지 않습니다.</td>
     </tr>
     <tr>
       <td><strong>볼륨 조절 버튼</strong></td>
-      <td>• 볼륨 조절 버튼은 증가 버튼과 감소 버튼이 각각 제공되며, 한 번 누를 때마다 음량을 증감합니다.• 길게 누르면 연속적으로 음량을 증가 또는 감소시킵니다.• 이 버튼이 동작될 때는 증감된 음량이 어느 정도인지를 사용자가 알 수 있도록 소리 피드백이 제공됩니다.</td>
+      <td>• 볼륨 조절 버튼은 증가 버튼과 감소 버튼이 각각 제공되며, 한 번 누를 때마다 음량을 증감합니다.<br>• 길게 누르면 연속적으로 음량을 증가 또는 감소시킵니다.<br>• 이 버튼이 동작될 때는 증감된 음량이 어느 정도인지를 사용자가 알 수 있도록 소리 피드백이 제공됩니다.</td>
     </tr>
     <tr>
       <td><strong>음소거 버튼</strong></td>
@@ -2354,7 +2353,7 @@
   <tbody>
     <tr>
       <td>부팅 완료 후 Welcome Prompt 직전</td>
-      <td>• On/Off 설정 없으며 항상 소리를 제공• 기기별로 설정 가능</td>
+      <td>• On/Off 설정 없으며 항상 소리를 제공<br>• 기기별로 설정 가능</td>
     </tr>
   </tbody>
 </table>
@@ -2375,7 +2374,7 @@
   <tbody>
     <tr>
       <td>Wake up 성공 시</td>
-      <td>• 애플리케이션에서 On/Off 설정을 제공• 기본 값은 ON• 기기별로 설정 가능</td>
+      <td>• 애플리케이션에서 On/Off 설정을 제공<br>• 기본 값은 ON<br>• 기기별로 설정 가능</td>
     </tr>
   </tbody>
 </table>
@@ -2402,7 +2401,7 @@
   <tbody>
     <tr>
       <td>Wake up 후 발화 인식 성공 시</td>
-      <td>• 애플리케이션에서 On/Off 설정을 제공• 기기별로 설정 가능</td>
+      <td>• 애플리케이션에서 On/Off 설정을 제공<br>• 기기별로 설정 가능</td>
     </tr>
   </tbody>
 </table>
@@ -2422,8 +2421,8 @@
   </thead>
   <tbody>
     <tr>
-      <td>• 잡음 인식 시• 1음절 발화 인식 시 (일부 1음절 발화는 화이트 리스트로 관리, 인식 가능)• 블랙 리스트로 관리되는 발화를 실행하여 OOD 처리되는 경우• 호출 버튼을 눌러 진입된 listening 상태에서 사용자 발화가 없어 타임아웃 된 경우• Slot-filling을 위한 listening 상태에서 사용자 발화가 없어 타임아웃 된 경우• 호출 버튼을 눌러 listening 상태가 해제된 경우</td>
-      <td>• App에서 On/Off 설정을 제공• 기본 값은 ON• 기기별로 설정 가능</td>
+      <td>• 잡음 인식 시<br>• 1음절 발화 인식 시 (일부 1음절 발화는 화이트 리스트로 관리, 인식 가능)<br>• 블랙 리스트로 관리되는 발화를 실행하여 OOD 처리되는 경우<br>• 호출 버튼을 눌러 진입된 listening 상태에서 사용자 발화가 없어 타임아웃 된 경우<br>• Slot-filling을 위한 listening 상태에서 사용자 발화가 없어 타임아웃 된 경우<br>• 호출 버튼을 눌러 listening 상태가 해제된 경우</td>
+      <td>• App에서 On/Off 설정을 제공<br>• 기본 값은 ON<br>• 기기별로 설정 가능</td>
     </tr>
   </tbody>
 </table>
@@ -2450,7 +2449,7 @@
   <tbody>
     <tr>
       <td>전원을 끌 경우</td>
-      <td>• On/Off 설정 없으며 항상 소리를 제공• 기기별로 설정 가능</td>
+      <td>• On/Off 설정 없으며 항상 소리를 제공<br>• 기기별로 설정 가능</td>
     </tr>
   </tbody>
 </table>
@@ -2494,18 +2493,12 @@
 <table>
   <thead>
     <tr>
-      <th> </th>
-      <th> </th>
-      <th> </th>
+      <th>사용자 발화</th>
+      <th>사용자 발화에 의한 동작</th>
+      <th>하드웨어 버튼 조작에 의한 동작</th>
     </tr>
   </thead>
   <tbody>
-    <tr>
-      <td>사용자 발화</td>
-      <td>사용자 발화에 의한 동작</td>
-      <td>하드웨어 버튼 조작에 의한 동작 <em>**</em>
-</td>
-    </tr>
     <tr>
       <td>볼륨을 높일</td>
       <td>볼륨 제어음 재생 O</td>

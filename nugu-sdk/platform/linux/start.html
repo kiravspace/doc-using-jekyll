@@ -10,7 +10,6 @@
 <script type="text/javascript" src="/assets/js/jquery-ui.js"></script>
 <script type="text/javascript" src="/assets/js/main.js"></script>
 
-<script>MathJax={"tex":{"inlineMath":[["$","$"],["\\(","\\)"]],"displayMath":[["$$","$$"],["\\[","\\]"]]},"svg":{"fontCache":"global"},"options":{"enableMenu":false}}</script><script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script><script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
 </head>
 <body>
 <header>
@@ -62,7 +61,7 @@
     
         <li>
             <div class="nav_link fold ">
-                <a href="/nugu-play/nugu-ux/voice-interaction-design" class="nav_href">사용자 발화\(User Utterance\) 예상 하기</a>
+                <a href="/nugu-play/nugu-ux/voice-interaction-design" class="nav_href">사용자 발화(User Utterance) 예상 하기</a>
                 <span class="nav_unfold">+</span>
                 <span class="nav_fold">-</span>
             </div>
@@ -429,7 +428,7 @@
     
         <li>
             <div class="nav_link fold ">
-                <a href="/nugu-play/create-plays-with-play-builder/hello-aria/create-an-action-and-an-answer" class="nav_href">3) Action 만들고 응답 등록하기</a>
+                <a href="/nugu-play/create-plays-with-play-builder/hello-aria/create-an-intent-and-custom-utterances" class="nav_href">2) Intent 만들고 예상 발화 등록하기</a>
                 <span class="nav_unfold">+</span>
                 <span class="nav_fold">-</span>
             </div>
@@ -438,7 +437,7 @@
     
         <li>
             <div class="nav_link fold ">
-                <a href="/nugu-play/create-plays-with-play-builder/hello-aria/create-an-intent-and-custom-utterances" class="nav_href">2) Intent 만들고 예상 발화 등록하기</a>
+                <a href="/nugu-play/create-plays-with-play-builder/hello-aria/create-an-action-and-an-answer" class="nav_href">3) Action 만들고 응답 등록하기</a>
                 <span class="nav_unfold">+</span>
                 <span class="nav_fold">-</span>
             </div>
@@ -550,7 +549,7 @@
     
         <li>
             <div class="nav_link fold ">
-                <a href="/nugu-play/create-plays-with-play-builder/use-backend-proxy/capability-interfaces/audioplayer-display-interface" class="nav_href">AudioPlayer를 위한 Display Interface</a>
+                <a href="/nugu-play/create-plays-with-play-builder/use-backend-proxy/capability-interfaces/audioplayer-interface" class="nav_href">AudioPlayer Interface</a>
                 <span class="nav_unfold">+</span>
                 <span class="nav_fold">-</span>
             </div>
@@ -559,7 +558,7 @@
     
         <li>
             <div class="nav_link fold ">
-                <a href="/nugu-play/create-plays-with-play-builder/use-backend-proxy/capability-interfaces/audioplayer-interface" class="nav_href">AudioPlayer Interface</a>
+                <a href="/nugu-play/create-plays-with-play-builder/use-backend-proxy/capability-interfaces/audioplayer-display-interface" class="nav_href">AudioPlayer를 위한 Display Interface</a>
                 <span class="nav_unfold">+</span>
                 <span class="nav_fold">-</span>
             </div>
@@ -1379,7 +1378,7 @@
     
         <li>
             <div class="nav_link fold  has_child ">
-                <a href="/work-with-nugu-biz/biz-api/api-announcement" class="nav_href">API 발송 \(Announcement\)</a>
+                <a href="/work-with-nugu-biz/biz-api/api-announcement" class="nav_href">API 발송 (Announcement)</a>
                 <span class="nav_unfold">+</span>
                 <span class="nav_fold">-</span>
             </div>
@@ -2268,20 +2267,20 @@ deb http://ppa.launchpad.net/nugulinux/sdk/ubuntu xenial main
   <tbody>
     <tr>
       <td style="text-align: left"><code class="language-plaintext highlighter-rouge">libnugu</code></td>
-      <td style="text-align: left">NUGU SDK 동작에 필요한 패키지 - shared library(<code class="language-plaintext highlighter-rouge">*.so.{version}</code> files)</td>
+      <td style="text-align: left">NUGU SDK 동작에 필요한 패키지<br>- shared library(<code class="language-plaintext highlighter-rouge">*.so.{version}</code> files)</td>
     </tr>
     <tr>
       <td style="text-align: left"><code class="language-plaintext highlighter-rouge">libnugu-plugins-default</code></td>
-      <td style="text-align: left">기본 제공 플러그인 모음 패키지 - <code class="language-plaintext highlighter-rouge">gstreamer.so</code>, <code class="language-plaintext highlighter-rouge">opus.so</code>, <code class="language-plaintext highlighter-rouge">portaudio.so</code> 등</td>
+      <td style="text-align: left">기본 제공 플러그인 모음 패키지<br>- <code class="language-plaintext highlighter-rouge">gstreamer.so</code>, <code class="language-plaintext highlighter-rouge">opus.so</code>, <code class="language-plaintext highlighter-rouge">portaudio.so</code> 등</td>
     </tr>
     <tr>
       <td style="text-align: left"><code class="language-plaintext highlighter-rouge">libnugu-dev</code></td>
-      <td style="text-align: left">빌드에 필요한 패키지 - header files, pkg-config(<code class="language-plaintext highlighter-rouge">nugu.pc</code>) 및 <code class="language-plaintext highlighter-rouge">libnugu.so</code>
+      <td style="text-align: left">빌드에 필요한 패키지<br>- header files, pkg-config(<code class="language-plaintext highlighter-rouge">nugu.pc</code>) 및 <code class="language-plaintext highlighter-rouge">libnugu.so</code>
 </td>
     </tr>
     <tr>
       <td style="text-align: left"><code class="language-plaintext highlighter-rouge">libnugu-examples</code></td>
-      <td style="text-align: left">예제 프로그램 패키지 - 콘솔 기반의 예제 프로그램, OAuth2 클라이언트 예제</td>
+      <td style="text-align: left">예제 프로그램 패키지<br>- 콘솔 기반의 예제 프로그램, OAuth2 클라이언트 예제</td>
     </tr>
   </tbody>
 </table>

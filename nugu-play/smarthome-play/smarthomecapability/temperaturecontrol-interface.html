@@ -10,7 +10,6 @@
 <script type="text/javascript" src="/assets/js/jquery-ui.js"></script>
 <script type="text/javascript" src="/assets/js/main.js"></script>
 
-<script>MathJax={"tex":{"inlineMath":[["$","$"],["\\(","\\)"]],"displayMath":[["$$","$$"],["\\[","\\]"]]},"svg":{"fontCache":"global"},"options":{"enableMenu":false}}</script><script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script><script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
 </head>
 <body>
 <header>
@@ -62,7 +61,7 @@
     
         <li>
             <div class="nav_link fold ">
-                <a href="/nugu-play/nugu-ux/voice-interaction-design" class="nav_href">사용자 발화\(User Utterance\) 예상 하기</a>
+                <a href="/nugu-play/nugu-ux/voice-interaction-design" class="nav_href">사용자 발화(User Utterance) 예상 하기</a>
                 <span class="nav_unfold">+</span>
                 <span class="nav_fold">-</span>
             </div>
@@ -429,7 +428,7 @@
     
         <li>
             <div class="nav_link fold ">
-                <a href="/nugu-play/create-plays-with-play-builder/hello-aria/create-an-action-and-an-answer" class="nav_href">3) Action 만들고 응답 등록하기</a>
+                <a href="/nugu-play/create-plays-with-play-builder/hello-aria/create-an-intent-and-custom-utterances" class="nav_href">2) Intent 만들고 예상 발화 등록하기</a>
                 <span class="nav_unfold">+</span>
                 <span class="nav_fold">-</span>
             </div>
@@ -438,7 +437,7 @@
     
         <li>
             <div class="nav_link fold ">
-                <a href="/nugu-play/create-plays-with-play-builder/hello-aria/create-an-intent-and-custom-utterances" class="nav_href">2) Intent 만들고 예상 발화 등록하기</a>
+                <a href="/nugu-play/create-plays-with-play-builder/hello-aria/create-an-action-and-an-answer" class="nav_href">3) Action 만들고 응답 등록하기</a>
                 <span class="nav_unfold">+</span>
                 <span class="nav_fold">-</span>
             </div>
@@ -550,7 +549,7 @@
     
         <li>
             <div class="nav_link fold ">
-                <a href="/nugu-play/create-plays-with-play-builder/use-backend-proxy/capability-interfaces/audioplayer-display-interface" class="nav_href">AudioPlayer를 위한 Display Interface</a>
+                <a href="/nugu-play/create-plays-with-play-builder/use-backend-proxy/capability-interfaces/audioplayer-interface" class="nav_href">AudioPlayer Interface</a>
                 <span class="nav_unfold">+</span>
                 <span class="nav_fold">-</span>
             </div>
@@ -559,7 +558,7 @@
     
         <li>
             <div class="nav_link fold ">
-                <a href="/nugu-play/create-plays-with-play-builder/use-backend-proxy/capability-interfaces/audioplayer-interface" class="nav_href">AudioPlayer Interface</a>
+                <a href="/nugu-play/create-plays-with-play-builder/use-backend-proxy/capability-interfaces/audioplayer-display-interface" class="nav_href">AudioPlayer를 위한 Display Interface</a>
                 <span class="nav_unfold">+</span>
                 <span class="nav_fold">-</span>
             </div>
@@ -1379,7 +1378,7 @@
     
         <li>
             <div class="nav_link fold  has_child ">
-                <a href="/work-with-nugu-biz/biz-api/api-announcement" class="nav_href">API 발송 \(Announcement\)</a>
+                <a href="/work-with-nugu-biz/biz-api/api-announcement" class="nav_href">API 발송 (Announcement)</a>
                 <span class="nav_unfold">+</span>
                 <span class="nav_fold">-</span>
             </div>
@@ -2270,11 +2269,11 @@
     </tr>
     <tr>
       <td style="text-align: left">temperatureStep</td>
-      <td style="text-align: left">해당 SmartHomeDevice의 온도 상승/하강 시의 기본 제어 단위입니다. 별도의 사용자 발화가 없을 시 해당 단위만큼 조절합니다.</td>
+      <td style="text-align: left">해당 SmartHomeDevice의 온도 상승/하강 시의 기본 제어 단위입니다.<br>별도의 사용자 발화가 없을 시 해당 단위만큼 조절합니다.</td>
     </tr>
     <tr>
       <td style="text-align: left">customData</td>
-      <td style="text-align: left">Discovery 시 SmartHomeServiceProvider가 응답할 수 있는 SmartHomeDevice의 부가정보입니다. customData는 해당 SmartHomeDevice의 제어요청 시 Request에 포함되어 전달됩니다.</td>
+      <td style="text-align: left">Discovery 시 SmartHomeServiceProvider가 응답할 수 있는 SmartHomeDevice의 부가정보입니다.<br>customData는 해당 SmartHomeDevice의 제어요청 시 Request에 포함되어 전달됩니다.</td>
     </tr>
   </tbody>
 </table>
@@ -2432,12 +2431,12 @@ Directive : AskTemperature</p>
   <tbody>
     <tr>
       <td style="text-align: left">currentTemperature</td>
-      <td style="text-align: left">SmartHomeDevice에서 측정한 해당 공간의 실제 온도정보입니다. 사용자에게 실제온도로 안내됩니다.</td>
+      <td style="text-align: left">SmartHomeDevice에서 측정한 해당 공간의 실제 온도정보입니다.<br>사용자에게 실제온도로 안내됩니다.</td>
       <td style="text-align: left">double</td>
     </tr>
     <tr>
       <td style="text-align: left">temperatureLevel</td>
-      <td style="text-align: left">SmartHomeDevice에 설정된 온도정보입니다. 사용자에게 설정온도로 안내됩니다.</td>
+      <td style="text-align: left">SmartHomeDevice에 설정된 온도정보입니다.<br>사용자에게 설정온도로 안내됩니다.</td>
       <td style="text-align: left">double</td>
     </tr>
   </tbody>
@@ -2613,7 +2612,7 @@ Directive : SetTemperature</p>
   <tbody>
     <tr>
       <td style="text-align: left">temperatureLevel</td>
-      <td style="text-align: left">SmartHomeDevice를 설정한 이후의 설정온도입니다. 제어를 마친 이후의 온도로 응답해야 합니다.</td>
+      <td style="text-align: left">SmartHomeDevice를 설정한 이후의 설정온도입니다.<br>제어를 마친 이후의 온도로 응답해야 합니다.</td>
       <td style="text-align: left">double</td>
     </tr>
   </tbody>
@@ -2734,7 +2733,7 @@ Directive : IncreaseTemperature</p>
   <tbody>
     <tr>
       <td style="text-align: left">temperatureDelta</td>
-      <td style="text-align: left">설정온도를 몇 도(섭씨) 올릴지에 대한 사용자 발화 정보입니다. 해당 정보가 없을 경우에는 1도 만큼 올리도록 설정합니다.</td>
+      <td style="text-align: left">설정온도를 몇 도(섭씨) 올릴지에 대한 사용자 발화 정보입니다.<br>해당 정보가 없을 경우에는 1도 만큼 올리도록 설정합니다.</td>
       <td style="text-align: left">double</td>
     </tr>
   </tbody>
@@ -2789,7 +2788,7 @@ Directive : IncreaseTemperature</p>
   <tbody>
     <tr>
       <td style="text-align: left">temperatureLevel</td>
-      <td style="text-align: left">SmartHomeDevice를 설정한 이후의 설정온도입니다. 제어를 마친 이후의 온도로 응답해야 합니다.</td>
+      <td style="text-align: left">SmartHomeDevice를 설정한 이후의 설정온도입니다.<br>제어를 마친 이후의 온도로 응답해야 합니다.</td>
       <td style="text-align: left">double</td>
     </tr>
   </tbody>
@@ -2910,7 +2909,7 @@ Directive : DecreaseTemperature</p>
   <tbody>
     <tr>
       <td style="text-align: left">temperatureDelta</td>
-      <td style="text-align: left">설정온도를 몇 도(섭씨) 내릴지에 대한 사용자 발화 정보입니다. 해당 정보가 없을 경우에는 1도 만큼 내리도록 설정합니다.</td>
+      <td style="text-align: left">설정온도를 몇 도(섭씨) 내릴지에 대한 사용자 발화 정보입니다.<br>해당 정보가 없을 경우에는 1도 만큼 내리도록 설정합니다.</td>
       <td style="text-align: left">double</td>
     </tr>
   </tbody>
@@ -2965,7 +2964,7 @@ Directive : DecreaseTemperature</p>
   <tbody>
     <tr>
       <td style="text-align: left">temperatureLevel</td>
-      <td style="text-align: left">SmartHomeDevice를 설정한 이후의 설정온도입니다. 제어를 마친 이후의 온도로 응답해야 합니다.</td>
+      <td style="text-align: left">SmartHomeDevice를 설정한 이후의 설정온도입니다.<br>제어를 마친 이후의 온도로 응답해야 합니다.</td>
       <td style="text-align: left">double</td>
     </tr>
   </tbody>
@@ -3118,7 +3117,7 @@ Directive : SetTemperatureMax</p>
   <tbody>
     <tr>
       <td style="text-align: left">temperatureLevel</td>
-      <td style="text-align: left">SmartHomeDevice를 설정한 이후의 설정온도입니다. 제어를 마친 이후의 온도로 응답해야 합니다.</td>
+      <td style="text-align: left">SmartHomeDevice를 설정한 이후의 설정온도입니다.<br>제어를 마친 이후의 온도로 응답해야 합니다.</td>
       <td style="text-align: left">double</td>
     </tr>
   </tbody>
@@ -3271,7 +3270,7 @@ Directive : SetTemperatureMin</p>
   <tbody>
     <tr>
       <td style="text-align: left">temperatureLevel</td>
-      <td style="text-align: left">SmartHomeDevice를 설정한 이후의 설정온도입니다. 제어를 마친 이후의 온도로 응답해야 합니다.</td>
+      <td style="text-align: left">SmartHomeDevice를 설정한 이후의 설정온도입니다.<br>제어를 마친 이후의 온도로 응답해야 합니다.</td>
       <td style="text-align: left">double</td>
     </tr>
   </tbody>

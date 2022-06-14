@@ -10,7 +10,6 @@
 <script type="text/javascript" src="/assets/js/jquery-ui.js"></script>
 <script type="text/javascript" src="/assets/js/main.js"></script>
 
-<script>MathJax={"tex":{"inlineMath":[["$","$"],["\\(","\\)"]],"displayMath":[["$$","$$"],["\\[","\\]"]]},"svg":{"fontCache":"global"},"options":{"enableMenu":false}}</script><script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script><script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
 </head>
 <body>
 <header>
@@ -62,7 +61,7 @@
     
         <li>
             <div class="nav_link fold ">
-                <a href="/nugu-play/nugu-ux/voice-interaction-design" class="nav_href">사용자 발화\(User Utterance\) 예상 하기</a>
+                <a href="/nugu-play/nugu-ux/voice-interaction-design" class="nav_href">사용자 발화(User Utterance) 예상 하기</a>
                 <span class="nav_unfold">+</span>
                 <span class="nav_fold">-</span>
             </div>
@@ -429,7 +428,7 @@
     
         <li>
             <div class="nav_link fold ">
-                <a href="/nugu-play/create-plays-with-play-builder/hello-aria/create-an-action-and-an-answer" class="nav_href">3) Action 만들고 응답 등록하기</a>
+                <a href="/nugu-play/create-plays-with-play-builder/hello-aria/create-an-intent-and-custom-utterances" class="nav_href">2) Intent 만들고 예상 발화 등록하기</a>
                 <span class="nav_unfold">+</span>
                 <span class="nav_fold">-</span>
             </div>
@@ -438,7 +437,7 @@
     
         <li>
             <div class="nav_link fold ">
-                <a href="/nugu-play/create-plays-with-play-builder/hello-aria/create-an-intent-and-custom-utterances" class="nav_href">2) Intent 만들고 예상 발화 등록하기</a>
+                <a href="/nugu-play/create-plays-with-play-builder/hello-aria/create-an-action-and-an-answer" class="nav_href">3) Action 만들고 응답 등록하기</a>
                 <span class="nav_unfold">+</span>
                 <span class="nav_fold">-</span>
             </div>
@@ -550,7 +549,7 @@
     
         <li>
             <div class="nav_link fold ">
-                <a href="/nugu-play/create-plays-with-play-builder/use-backend-proxy/capability-interfaces/audioplayer-display-interface" class="nav_href">AudioPlayer를 위한 Display Interface</a>
+                <a href="/nugu-play/create-plays-with-play-builder/use-backend-proxy/capability-interfaces/audioplayer-interface" class="nav_href">AudioPlayer Interface</a>
                 <span class="nav_unfold">+</span>
                 <span class="nav_fold">-</span>
             </div>
@@ -559,7 +558,7 @@
     
         <li>
             <div class="nav_link fold ">
-                <a href="/nugu-play/create-plays-with-play-builder/use-backend-proxy/capability-interfaces/audioplayer-interface" class="nav_href">AudioPlayer Interface</a>
+                <a href="/nugu-play/create-plays-with-play-builder/use-backend-proxy/capability-interfaces/audioplayer-display-interface" class="nav_href">AudioPlayer를 위한 Display Interface</a>
                 <span class="nav_unfold">+</span>
                 <span class="nav_fold">-</span>
             </div>
@@ -1379,7 +1378,7 @@
     
         <li>
             <div class="nav_link fold  has_child ">
-                <a href="/work-with-nugu-biz/biz-api/api-announcement" class="nav_href">API 발송 \(Announcement\)</a>
+                <a href="/work-with-nugu-biz/biz-api/api-announcement" class="nav_href">API 발송 (Announcement)</a>
                 <span class="nav_unfold">+</span>
                 <span class="nav_fold">-</span>
             </div>
@@ -2185,7 +2184,7 @@
     <tr>
       <td style="text-align: left">1.1</td>
       <td style="text-align: left">2020.11.13</td>
-      <td style="text-align: left">Context 의 actions 에 postDelayInMilliseconds 추가 Start directive 의 actions 에 postDelayInMilliseconds 추가</td>
+      <td style="text-align: left">Context 의 actions 에 postDelayInMilliseconds 추가<br>Start directive 의 actions 에 postDelayInMilliseconds 추가</td>
     </tr>
     <tr>
       <td style="text-align: left">1.2</td>
@@ -2265,14 +2264,14 @@
       <td style="text-align: left">token</td>
       <td style="text-align: left">string</td>
       <td style="text-align: left">N</td>
-      <td style="text-align: left">Routine.Play Directive에서 전달한 루틴을 식별하기 위한 unique한 string 연속된 루틴 간에 동일한 token을 전달하지 않도록 주의</td>
+      <td style="text-align: left">Routine.Play Directive에서 전달한 루틴을 식별하기 위한 unique한 string<br>연속된 루틴 간에 동일한 token을 전달하지 않도록 주의</td>
     </tr>
     <tr>
       <td style="text-align: left">routineActivity</td>
       <td style="text-align: left">string</td>
       <td style="text-align: left">Y</td>
       <td style="text-align: left">
-<em><strong>IDLE</strong> - 루틴을 한번도 실행하지 않은 경우</em>  <strong>PLAYING</strong> - 루틴이 실행되고 있는 경우  <em><strong>INTERRUPTED</strong> - 루틴이 어떤 이유로든 중단된 경우</em>  <strong>FINISHED</strong> - 마지막 액션까지 정상적으로 실행이 종료된 경우  <em>*STOPPED</em> - 끝까지 실행하지 못하고 종료된 경우</td>
+<strong>IDLE</strong> : 루틴을 한번도 실행하지 않은 경우<br><strong>PLAYING</strong> : 루틴이 실행되고 있는 경우<br><strong>INTERRUPTED</strong> : 루틴이 어떤 이유로든 중단된 경우<br><strong>FINISHED</strong> : 마지막 액션까지 정상적으로 실행이 종료된 경우  <em>*STOPPED</em> - 끝까지 실행하지 못하고 종료된 경우</td>
     </tr>
     <tr>
       <td style="text-align: left">currentAction</td>
@@ -2372,40 +2371,40 @@
       <td style="text-align: left">루틴을 구성하는 Action을 포함하는 list</td>
     </tr>
     <tr>
-      <td style="text-align: left">actions. type</td>
+      <td style="text-align: left">actions.type</td>
       <td style="text-align: left">string</td>
       <td style="text-align: left">Y</td>
-      <td style="text-align: left">전송하는 Event Type  <em><strong>TEXT</strong> - Text.TextInput으로 “text” 파라미터 전송</em>  <strong>DATA</strong> - Routine.ActionTriggered Event로 data를 전송</td>
+      <td style="text-align: left">전송하는 Event Type<br><strong>TEXT</strong> : Text.TextInput으로 “text” 파라미터 전송<br><strong>DATA</strong> : Routine.ActionTriggered Event로 data를 전송</td>
     </tr>
     <tr>
-      <td style="text-align: left">actions. text</td>
+      <td style="text-align: left">actions.text</td>
       <td style="text-align: left">string</td>
       <td style="text-align: left">N</td>
       <td style="text-align: left">type 이 TEXT 일 때 필수 값 Action을 실행하기 위한 발화</td>
     </tr>
     <tr>
-      <td style="text-align: left">actions. data</td>
+      <td style="text-align: left">actions.data</td>
       <td style="text-align: left">object</td>
       <td style="text-align: left">N</td>
       <td style="text-align: left">type 이 DATA 일 때 필수 값 ActionTriggered Event를 전송할때 함께 전송하는 데이터 ActionTriggered Event의 “data” 파라미터에 이 object를 그대로 복사해서 전송</td>
     </tr>
     <tr>
-      <td style="text-align: left">actions. playServiceId</td>
+      <td style="text-align: left">actions.playServiceId</td>
       <td style="text-align: left">string</td>
       <td style="text-align: left">N</td>
-      <td style="text-align: left">text 또는 event를 실행하는 Play Service Id TEXT는 이 값이 없으면 라우팅 로직대로 라우팅</td>
+      <td style="text-align: left">text 또는 event를 실행하는 Play Service Id<br>TEXT는 이 값이 없으면 라우팅 로직대로 라우팅</td>
     </tr>
     <tr>
-      <td style="text-align: left">actions. token</td>
+      <td style="text-align: left">actions.token</td>
       <td style="text-align: left">string</td>
       <td style="text-align: left">N</td>
       <td style="text-align: left">Text.TextInput event 의 “token” parameter 로 전달해야 함</td>
     </tr>
     <tr>
-      <td style="text-align: left">actions. postDelayInMilliseconds</td>
+      <td style="text-align: left">actions.postDelayInMilliseconds</td>
       <td style="text-align: left">long</td>
       <td style="text-align: left">N</td>
-      <td style="text-align: left">해당 Action 의 ActionTriggered event 요청으로 전달받은 모든 directive 를 실행한 후 다음 Action 의 ActionTriggered event 를 요청하기 전까지 강제로 설정하는 delay 시간  <em>단위 - msec</em>  default - 0 (delay가 없음)</td>
+      <td style="text-align: left">해당 Action 의 ActionTriggered event 요청으로 전달받은 모든 directive 를 실행한 후 다음 Action 의 ActionTriggered event 를 요청하기 전까지 강제로 설정하는 delay 시간<br>단위 : msec<br>default : 0 (delay가 없음)</td>
     </tr>
   </tbody>
 </table>

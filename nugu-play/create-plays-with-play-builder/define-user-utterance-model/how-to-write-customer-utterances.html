@@ -10,7 +10,6 @@
 <script type="text/javascript" src="/assets/js/jquery-ui.js"></script>
 <script type="text/javascript" src="/assets/js/main.js"></script>
 
-<script>MathJax={"tex":{"inlineMath":[["$","$"],["\\(","\\)"]],"displayMath":[["$$","$$"],["\\[","\\]"]]},"svg":{"fontCache":"global"},"options":{"enableMenu":false}}</script><script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script><script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
 </head>
 <body>
 <header>
@@ -62,7 +61,7 @@
     
         <li>
             <div class="nav_link fold ">
-                <a href="/nugu-play/nugu-ux/voice-interaction-design" class="nav_href">사용자 발화\(User Utterance\) 예상 하기</a>
+                <a href="/nugu-play/nugu-ux/voice-interaction-design" class="nav_href">사용자 발화(User Utterance) 예상 하기</a>
                 <span class="nav_unfold">+</span>
                 <span class="nav_fold">-</span>
             </div>
@@ -429,7 +428,7 @@
     
         <li>
             <div class="nav_link fold ">
-                <a href="/nugu-play/create-plays-with-play-builder/hello-aria/create-an-action-and-an-answer" class="nav_href">3) Action 만들고 응답 등록하기</a>
+                <a href="/nugu-play/create-plays-with-play-builder/hello-aria/create-an-intent-and-custom-utterances" class="nav_href">2) Intent 만들고 예상 발화 등록하기</a>
                 <span class="nav_unfold">+</span>
                 <span class="nav_fold">-</span>
             </div>
@@ -438,7 +437,7 @@
     
         <li>
             <div class="nav_link fold ">
-                <a href="/nugu-play/create-plays-with-play-builder/hello-aria/create-an-intent-and-custom-utterances" class="nav_href">2) Intent 만들고 예상 발화 등록하기</a>
+                <a href="/nugu-play/create-plays-with-play-builder/hello-aria/create-an-action-and-an-answer" class="nav_href">3) Action 만들고 응답 등록하기</a>
                 <span class="nav_unfold">+</span>
                 <span class="nav_fold">-</span>
             </div>
@@ -550,7 +549,7 @@
     
         <li>
             <div class="nav_link fold ">
-                <a href="/nugu-play/create-plays-with-play-builder/use-backend-proxy/capability-interfaces/audioplayer-display-interface" class="nav_href">AudioPlayer를 위한 Display Interface</a>
+                <a href="/nugu-play/create-plays-with-play-builder/use-backend-proxy/capability-interfaces/audioplayer-interface" class="nav_href">AudioPlayer Interface</a>
                 <span class="nav_unfold">+</span>
                 <span class="nav_fold">-</span>
             </div>
@@ -559,7 +558,7 @@
     
         <li>
             <div class="nav_link fold ">
-                <a href="/nugu-play/create-plays-with-play-builder/use-backend-proxy/capability-interfaces/audioplayer-interface" class="nav_href">AudioPlayer Interface</a>
+                <a href="/nugu-play/create-plays-with-play-builder/use-backend-proxy/capability-interfaces/audioplayer-display-interface" class="nav_href">AudioPlayer를 위한 Display Interface</a>
                 <span class="nav_unfold">+</span>
                 <span class="nav_fold">-</span>
             </div>
@@ -1379,7 +1378,7 @@
     
         <li>
             <div class="nav_link fold  has_child ">
-                <a href="/work-with-nugu-biz/biz-api/api-announcement" class="nav_href">API 발송 \(Announcement\)</a>
+                <a href="/work-with-nugu-biz/biz-api/api-announcement" class="nav_href">API 발송 (Announcement)</a>
                 <span class="nav_unfold">+</span>
                 <span class="nav_fold">-</span>
             </div>
@@ -2210,9 +2209,7 @@
 
 <p>다음과 같은 규칙도 참고해주세요.</p>
 
-<ol>
-  <li>호출어(Wake-up word)나 Play 호출 이름은 제외하고 입력합니다.</li>
-</ol>
+<p>⁣1. 호출어(Wake-up word)나 Play 호출 이름은 제외하고 입력합니다.</p>
 
 <p>Wake-up word인 ‘아리아’, ‘팅커벨’ 과 각 Play의 호출이름(Invocation name) 예상 발화 내에서 제외하고 입력해야 합니다.</p>
 
@@ -2222,9 +2219,7 @@
 
 </div>
 
-<ol>
-  <li>영단어는 가능하다면 한글 표기로, 외래어 표기법에 따라 작성해주세요.</li>
-</ol>
+<p>⁣2. 영단어는 가능하다면 한글 표기로, 외래어 표기법에 따라 작성해주세요.</p>
 
 <div class="alerts info">
     
@@ -2232,9 +2227,7 @@
 
 </div>
 
-<ol>
-  <li>알파벳으로 읽히는 경우는 영문으로 작성해주세요. 영문 알파벳은 대소문자를 구분할 필요가 없습니다.</li>
-</ol>
+<p>⁣3. 알파벳으로 읽히는 경우는 영문으로 작성해주세요. 영문 알파벳은 대소문자를 구분할 필요가 없습니다.</p>
 
 <div class="alerts info">
     
@@ -2243,21 +2236,18 @@ WWW (O) / 더블유더블유더블유 (X)</p>
 
 </div>
 
-<ol>
-  <li>NLU 엔진에서 해석하여 응답하는 기호는 다음과 같습니다.
-    <ul>
-      <li>? : 문형을 분석하는 데 참고합니다.</li>
-      <li>’ : 생략된 글자나 숫자가 있을 때 사용하는 영문의 어포스트로피(apostrophe)입니다(he’s, who’d). 한글의 따옴표는 허용 기호에 포함되지 않습니다.</li>
-      <li>
-        <ul>
-          <li>: 주소나 전화번호 등에서 ‘에’, ‘다시’ 등으로 사용되는 하이픈(hyphen)입니다.</li>
-        </ul>
-      </li>
-      <li>&amp; : ‘Ampersand’도 허용되며, C&amp;C, M&amp;C 등의 단어에서 ‘앤’, ‘앤드’로 분석됩니다.</li>
-      <li>허용 기호에 포함되지 않는 기호는 삭제됩니다.</li>
-    </ul>
-  </li>
-</ol>
+<p>⁣4. NLU 엔진에서 해석하여 응답하는 기호는 다음과 같습니다.</p>
+<ul>
+  <li>
+<code class="language-plaintext highlighter-rouge">?</code> : 문형을 분석하는 데 참고합니다.</li>
+  <li>
+<code class="language-plaintext highlighter-rouge">'</code> : 생략된 글자나 숫자가 있을 때 사용하는 영문의 어포스트로피(apostrophe)입니다(he’s, who’d). 한글의 따옴표는 허용 기호에 포함되지 않습니다.</li>
+  <li>
+<code class="language-plaintext highlighter-rouge">*</code> : 주소나 전화번호 등에서 ‘에’, ‘다시’ 등으로 사용되는 하이픈(hyphen)입니다.</li>
+  <li>
+<code class="language-plaintext highlighter-rouge">&amp;</code> : ‘Ampersand’도 허용되며, C&amp;C, M&amp;C 등의 단어에서 ‘앤’, ‘앤드’로 분석됩니다.</li>
+  <li>허용 기호에 포함되지 않는 기호는 삭제됩니다.</li>
+</ul>
 
 <h2 id="예제를-통해-알아보기">예제를 통해 알아보기</h2>
 

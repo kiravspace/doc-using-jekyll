@@ -10,7 +10,6 @@
 <script type="text/javascript" src="/assets/js/jquery-ui.js"></script>
 <script type="text/javascript" src="/assets/js/main.js"></script>
 
-<script>MathJax={"tex":{"inlineMath":[["$","$"],["\\(","\\)"]],"displayMath":[["$$","$$"],["\\[","\\]"]]},"svg":{"fontCache":"global"},"options":{"enableMenu":false}}</script><script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script><script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
 </head>
 <body>
 <header>
@@ -62,7 +61,7 @@
     
         <li>
             <div class="nav_link fold ">
-                <a href="/nugu-play/nugu-ux/voice-interaction-design" class="nav_href">사용자 발화\(User Utterance\) 예상 하기</a>
+                <a href="/nugu-play/nugu-ux/voice-interaction-design" class="nav_href">사용자 발화(User Utterance) 예상 하기</a>
                 <span class="nav_unfold">+</span>
                 <span class="nav_fold">-</span>
             </div>
@@ -429,7 +428,7 @@
     
         <li>
             <div class="nav_link fold ">
-                <a href="/nugu-play/create-plays-with-play-builder/hello-aria/create-an-action-and-an-answer" class="nav_href">3) Action 만들고 응답 등록하기</a>
+                <a href="/nugu-play/create-plays-with-play-builder/hello-aria/create-an-intent-and-custom-utterances" class="nav_href">2) Intent 만들고 예상 발화 등록하기</a>
                 <span class="nav_unfold">+</span>
                 <span class="nav_fold">-</span>
             </div>
@@ -438,7 +437,7 @@
     
         <li>
             <div class="nav_link fold ">
-                <a href="/nugu-play/create-plays-with-play-builder/hello-aria/create-an-intent-and-custom-utterances" class="nav_href">2) Intent 만들고 예상 발화 등록하기</a>
+                <a href="/nugu-play/create-plays-with-play-builder/hello-aria/create-an-action-and-an-answer" class="nav_href">3) Action 만들고 응답 등록하기</a>
                 <span class="nav_unfold">+</span>
                 <span class="nav_fold">-</span>
             </div>
@@ -550,7 +549,7 @@
     
         <li>
             <div class="nav_link fold ">
-                <a href="/nugu-play/create-plays-with-play-builder/use-backend-proxy/capability-interfaces/audioplayer-display-interface" class="nav_href">AudioPlayer를 위한 Display Interface</a>
+                <a href="/nugu-play/create-plays-with-play-builder/use-backend-proxy/capability-interfaces/audioplayer-interface" class="nav_href">AudioPlayer Interface</a>
                 <span class="nav_unfold">+</span>
                 <span class="nav_fold">-</span>
             </div>
@@ -559,7 +558,7 @@
     
         <li>
             <div class="nav_link fold ">
-                <a href="/nugu-play/create-plays-with-play-builder/use-backend-proxy/capability-interfaces/audioplayer-interface" class="nav_href">AudioPlayer Interface</a>
+                <a href="/nugu-play/create-plays-with-play-builder/use-backend-proxy/capability-interfaces/audioplayer-display-interface" class="nav_href">AudioPlayer를 위한 Display Interface</a>
                 <span class="nav_unfold">+</span>
                 <span class="nav_fold">-</span>
             </div>
@@ -1379,7 +1378,7 @@
     
         <li>
             <div class="nav_link fold  has_child ">
-                <a href="/work-with-nugu-biz/biz-api/api-announcement" class="nav_href">API 발송 \(Announcement\)</a>
+                <a href="/work-with-nugu-biz/biz-api/api-announcement" class="nav_href">API 발송 (Announcement)</a>
                 <span class="nav_unfold">+</span>
                 <span class="nav_fold">-</span>
             </div>
@@ -2190,7 +2189,7 @@
     <tr>
       <td style="text-align: left">1.2</td>
       <td style="text-align: left">2020.11.02</td>
-      <td style="text-align: left">Context 에 searchScene 추가 SendCandidates directive 에 searchScene 추가 SendCandidates directive 의 clientSearchTargetList 삭제 Context 에 recipient 추가 MakeCallSucceeded event 추가</td>
+      <td style="text-align: left">Context 에 searchScene 추가<br>SendCandidates directive 에 searchScene 추가<br>SendCandidates directive 의 clientSearchTargetList 삭제<br>Context 에 recipient 추가<br>MakeCallSucceeded event 추가</td>
     </tr>
   </tbody>
 </table>
@@ -2331,7 +2330,7 @@ nugu_client-&gt;getCapabilityBuilder()
 
 <h3 id="context-구성">Context 구성</h3>
 
-<p>통화 상태 정보를 <a href="phonecall.md#context">Context</a> 에 포함시켜 주어야 합니다.</p>
+<p>통화 상태 정보를 <a href="phonecall#context">Context</a> 에 포함시켜 주어야 합니다.</p>
 
 <div id="tabs-86" class="tabs">
     <ul>
@@ -2408,7 +2407,7 @@ phoneCallAgent.delegate = self
 
 <h3 id="발신">발신</h3>
 
-<p>전화 발신이 <a href="phonecall.md#sendcandidates">SendCandidates</a>, <a href="phonecall.md#makecall">MakeCall</a> directive 로 요청될 수 있습니다.</p>
+<p>전화 발신이 <a href="phonecall#sendcandidates">SendCandidates</a>, <a href="phonecall#makecall">MakeCall</a> directive 로 요청될 수 있습니다.</p>
 
 <div id="tabs-125" class="tabs">
     <ul>
@@ -2561,7 +2560,7 @@ CapabilityFactory::makeCapability&lt;PhoneCallAgent, IPhoneCallHandler&gt;(phone
 
 <h3 id="수신">수신</h3>
 
-<p>수신 전화에 대한 수락이 <a href="phonecall.md#acceptcall">AcceptCall</a> directive 로 거절이 <a href="phonecall.md#endcall">EndCall</a> directive 로 요청될 수 있습니다.</p>
+<p>수신 전화에 대한 수락이 <a href="phonecall#acceptcall">AcceptCall</a> directive 로 거절이 <a href="phonecall#endcall">EndCall</a> directive 로 요청될 수 있습니다.</p>
 
 <div class="alerts info">
     
@@ -2733,7 +2732,7 @@ CapabilityFactory::makeCapability&lt;PhoneCallAgent, IPhoneCallHandler&gt;(phone
       <td style="text-align: left">string</td>
       <td style="text-align: left">Y</td>
       <td style="text-align: left">
-<strong>IDLE</strong>, <strong>OUTGOING</strong>, <strong>INCOMING</strong>, <strong>ESTABLISHED</strong>
+<strong>IDLE</strong><br><strong>OUTGOING</strong><br><strong>INCOMING</strong><br><strong>ESTABLISHED</strong>
 </td>
     </tr>
     <tr>
@@ -2746,7 +2745,7 @@ CapabilityFactory::makeCapability&lt;PhoneCallAgent, IPhoneCallHandler&gt;(phone
       <td style="text-align: left">template.intent</td>
       <td style="text-align: left">string</td>
       <td style="text-align: left">N</td>
-      <td style="text-align: left">candidates의 용도  - <strong>CALL</strong> : 전화걸어줘  - <strong>SEARCH</strong> : 찾아줘  - <strong>HISTORY</strong> : 최근 통화 목록  - <strong>REDIAL</strong> : 재발신  - <strong>MISSED</strong> : 부재중통화  - <strong>NONE</strong>
+      <td style="text-align: left">candidates의 용도<br>- <strong>CALL</strong> : 전화걸어줘<br>- <strong>SEARCH</strong> : 찾아줘<br>- <strong>HISTORY</strong> : 최근 통화 목록<br>- <strong>REDIAL</strong> : 재발신<br>- <strong>MISSED</strong> : 부재중통화<br>- <strong>NONE</strong>
 </td>
     </tr>
     <tr>
@@ -2754,7 +2753,7 @@ CapabilityFactory::makeCapability&lt;PhoneCallAgent, IPhoneCallHandler&gt;(phone
       <td style="text-align: left">string</td>
       <td style="text-align: left">N</td>
       <td style="text-align: left">
-<strong>NORMAL</strong> : 일반 전화 <strong>SPEAKER</strong> : 스피커폰 <strong>VIDEO</strong> : 비디오콜 <strong>CALLAR</strong> : 콜라</td>
+<strong>NORMAL</strong> : 일반 전화<br><strong>SPEAKER</strong> : 스피커폰<br><strong>VIDEO</strong> : 비디오콜<br><strong>CALLAR</strong> : 콜라</td>
     </tr>
     <tr>
       <td style="text-align: left">template.recipientIntended</td>
@@ -2816,7 +2815,7 @@ CapabilityFactory::makeCapability&lt;PhoneCallAgent, IPhoneCallHandler&gt;(phone
       <td style="text-align: left">recipient.isRecentMissed</td>
       <td style="text-align: left">string</td>
       <td style="text-align: left">N</td>
-      <td style="text-align: left">통화 상대방과의 가장 최근 통화가 부재중 통화인지 여부  - <strong>TRUE</strong> : 수신 중인 전화번호의 가장 최근 수신 이력이 있지만 못받은 경우  - <strong>FALSE</strong> : 수신 중인 전화번호의 수신 이력이 없거나, 있는데 부재중 통화가 아닌 경우</td>
+      <td style="text-align: left">통화 상대방과의 가장 최근 통화가 부재중 통화인지 여부<br>- <strong>TRUE</strong> : 수신 중인 전화번호의 가장 최근 수신 이력이 있지만 못받은 경우<br>- <strong>FALSE</strong> : 수신 중인 전화번호의 수신 이력이 없거나, 있는데 부재중 통화가 아닌 경우</td>
     </tr>
   </tbody>
 </table>
@@ -2907,7 +2906,7 @@ CapabilityFactory::makeCapability&lt;PhoneCallAgent, IPhoneCallHandler&gt;(phone
       <td style="text-align: left">type</td>
       <td style="text-align: left">string</td>
       <td style="text-align: left">Y</td>
-      <td style="text-align: left">recipient candidates의 타입  - <strong>CONTACT</strong> : 연락처 검색  - <strong>EXCHANGE</strong> : exchange 검색  - <strong>T114</strong> : T114 검색  - <strong>NONE</strong> : 특정 카테고리에 속하지 않음</td>
+      <td style="text-align: left">recipient candidates의 타입<br>- <strong>CONTACT</strong> : 연락처 검색<br>- <strong>EXCHANGE</strong> : exchange 검색<br>- <strong>T114</strong> : T114 검색<br>- <strong>NONE</strong> : 특정 카테고리에 속하지 않음</td>
     </tr>
     <tr>
       <td style="text-align: left">profileImgUrl</td>
@@ -2982,7 +2981,7 @@ CapabilityFactory::makeCapability&lt;PhoneCallAgent, IPhoneCallHandler&gt;(phone
       <td style="text-align: left">
 <ul>
   <li>
-<strong>OUT</strong> : 발신 통화 (Outgoing call) - <strong>OUT_CANCELED</strong> : 발신 연결 안 됨 (Outgoing call canceled) - <strong>IN</strong> : 수신 통화 (Incoming call) - <strong>REJECTED</strong> : 수신 거절 (Rejected call) - <strong>MISSED</strong> : 부재중 통화 (Missed call) - <strong>VOICE_MESSAGE</strong> : 음성 메시지 (Voice message) - <strong>BLOCKED</strong> : 수신 차단 (Blocked)</li>
+<strong>OUT</strong> : 발신 통화 (Outgoing call)<br>- <strong>OUT_CANCELED</strong> : 발신 연결 안 됨 (Outgoing call canceled)<br>- <strong>IN</strong> : 수신 통화 (Incoming call)<br>- <strong>REJECTED</strong> : 수신 거절 (Rejected call)<br>- <strong>MISSED</strong> : 부재중 통화 (Missed call)<br>- <strong>VOICE_MESSAGE</strong> : 음성 메시지 (Voice message)<br>- <strong>BLOCKED</strong> : 수신 차단 (Blocked)</li>
 </ul>
 </td>
     </tr>
@@ -2993,7 +2992,7 @@ CapabilityFactory::makeCapability&lt;PhoneCallAgent, IPhoneCallHandler&gt;(phone
       <td style="text-align: left">
 <ul>
   <li>
-<strong>NORMAL</strong> : 일반통화 - <strong>VIDEO</strong> : 영상통화 - <strong>CALLAR</strong> : 콜라 영상통화 - <strong>GROUP</strong> : 그룹통화 - <strong>VOICE_MESSAGE</strong> : 음성 메시지 (Voice message)</li>
+<strong>NORMAL</strong> : 일반통화<br>- <strong>VIDEO</strong> : 영상통화<br>- <strong>CALLAR</strong> : 콜라 영상통화<br>- <strong>GROUP</strong> : 그룹통화<br>- <strong>VOICE_MESSAGE</strong> : 음성 메시지 (Voice message)</li>
 </ul>
 </td>
     </tr>
@@ -3064,7 +3063,7 @@ CapabilityFactory::makeCapability&lt;PhoneCallAgent, IPhoneCallHandler&gt;(phone
       <td style="text-align: left">string</td>
       <td style="text-align: left">N</td>
       <td style="text-align: left">
-<strong>MOBILE</strong> <strong>COMPANY</strong> <strong>HOME</strong> <strong>USER_DEFINED</strong> : 사용자가 지정한 값도 필요할지 검토 필요</td>
+<strong>MOBILE</strong><br><strong>COMPANY</strong><br><strong>HOME</strong><br><strong>USER_DEFINED</strong> : 사용자가 지정한 값도 필요할지 검토 필요</td>
     </tr>
     <tr>
       <td style="text-align: left">number</td>
@@ -3144,7 +3143,7 @@ CapabilityFactory::makeCapability&lt;PhoneCallAgent, IPhoneCallHandler&gt;(phone
       <td style="text-align: left">string</td>
       <td style="text-align: left">Y</td>
       <td style="text-align: left">
-<strong>CALL</strong> : 전화걸어줘 <strong>SEARCH</strong> : 찾아줘 <strong>HISTORY</strong> : 최근 통화 목록 <strong>REDIAL</strong> : 재발신 <strong>MISSED</strong> : 부재중통화 <strong>NONE</strong>
+<strong>CALL</strong> : 전화걸어줘<br><strong>SEARCH</strong> : 찾아줘<br><strong>HISTORY</strong> : 최근 통화 목록<br><strong>REDIAL</strong> : 재발신<br><strong>MISSED</strong> : 부재중통화<br><strong>NONE</strong>
 </td>
     </tr>
     <tr>
@@ -3170,13 +3169,13 @@ CapabilityFactory::makeCapability&lt;PhoneCallAgent, IPhoneCallHandler&gt;(phone
       <td style="text-align: left">string</td>
       <td style="text-align: left">N</td>
       <td style="text-align: left">
-<strong>NORMAL</strong> : 일반 전화 <strong>SPEAKER</strong> : 스피커폰 <strong>VIDEO</strong> : 비디오콜 <strong>CALLAR</strong> : 콜라</td>
+<strong>NORMAL</strong> : 일반 전화<br><strong>SPEAKER</strong> : 스피커폰<br><strong>VIDEO</strong> : 비디오콜<br><strong>CALLAR</strong> : 콜라</td>
     </tr>
     <tr>
       <td style="text-align: left">searchScene</td>
       <td style="text-align: left">string</td>
       <td style="text-align: left">N</td>
-      <td style="text-align: left">검색 대상과 화면을 정의하기 위해 추가 enum은 아니며 임의의 string이 올 수 있음 → 확장 가능성이 높아서 string으로 정의 (아래에 추가되는 값들은 여러 poc에서 공유해서 사용하는 값으로 추가 시 아래의 리스트를 계속 확장 가능)  - <strong>DEFAULT</strong> : 기본 검색 로직  - <strong>T114ONLY</strong> : T114 검색결과만 노출되는 검색 로직  - <strong>T114INCLUDE</strong> : T114 검색결과를 항상 포함하는 검색 로직  - <strong>T114DIRECT</strong> : 긴급전화</td>
+      <td style="text-align: left">검색 대상과 화면을 정의하기 위해 추가 enum은 아니며 임의의 string이 올 수 있음 → 확장 가능성이 높아서 string으로 정의 (아래에 추가되는 값들은 여러 poc에서 공유해서 사용하는 값으로 추가 시 아래의 리스트를 계속 확장 가능<br>- <strong>DEFAULT</strong> : 기본 검색 로직<br>- <strong>T114ONLY</strong> : T114 검색결과만 노출되는 검색 로직<br>- <strong>T114INCLUDE</strong> : T114 검색결과를 항상 포함하는 검색 로직<br>- <strong>T114DIRECT</strong> : 긴급전화</td>
     </tr>
     <tr>
       <td style="text-align: left">candidates</td>
@@ -3249,7 +3248,7 @@ CapabilityFactory::makeCapability&lt;PhoneCallAgent, IPhoneCallHandler&gt;(phone
       <td style="text-align: left">string</td>
       <td style="text-align: left">Y</td>
       <td style="text-align: left">
-<strong>NORMAL</strong> : 일반 전화 <strong>SPEAKER</strong> : 스피커폰 <strong>VIDEO</strong> : 비디오콜 <strong>CALLAR</strong> : 콜라</td>
+<strong>NORMAL</strong> : 일반 전화<br><strong>SPEAKER</strong> : 스피커폰<br><strong>VIDEO</strong> : 비디오콜<br><strong>CALLAR</strong> : 콜라</td>
     </tr>
   </tbody>
 </table>
@@ -3393,7 +3392,7 @@ CapabilityFactory::makeCapability&lt;PhoneCallAgent, IPhoneCallHandler&gt;(phone
 
 <ul>
   <li>검색 결과 리스트가 화면에 보여지는 경우 보내는 Event</li>
-  <li>Parameter 들은 <a href="phonecall.md#context">Context</a> 를 통해 전송되며, 검색 결과가 없는 경우에도 empty 로 전송해야 함.</li>
+  <li>Parameter 들은 <a href="phonecall#context">Context</a> 를 통해 전송되며, 검색 결과가 없는 경우에도 empty 로 전송해야 함.</li>
 </ul>
 
 <div class="code">
@@ -3504,7 +3503,7 @@ CapabilityFactory::makeCapability&lt;PhoneCallAgent, IPhoneCallHandler&gt;(phone
       <td style="text-align: left">caller.token</td>
       <td style="text-align: left">string</td>
       <td style="text-align: left">Y</td>
-      <td style="text-align: left">전화를 건 상대방인 식별하기 위한 unique 값 CallArrived Event 후에 응답을 보낼때 해당 Event를 발생시킨 caller를 unique하게 구분하기 위해 SDK에서 생성하는 token 값</td>
+      <td style="text-align: left">전화를 건 상대방인 식별하기 위한 unique 값<br>CallArrived Event 후에 응답을 보낼때 해당 Event를 발생시킨 caller를 unique하게 구분하기 위해 SDK에서 생성하는 token 값</td>
     </tr>
     <tr>
       <td style="text-align: left">caller.isMobile</td>
@@ -3516,7 +3515,7 @@ CapabilityFactory::makeCapability&lt;PhoneCallAgent, IPhoneCallHandler&gt;(phone
       <td style="text-align: left">caller.isRecentMissed</td>
       <td style="text-align: left">string</td>
       <td style="text-align: left">Y</td>
-      <td style="text-align: left">가장 최근 통화가 부재중 통화인지 여부  - TRUE : 수신 중인 전화번호의 가장 최근 수신 이력이 있지만 못받은 경우  - FALSE : 수신 중인 전화번호의 수신 이력이 없거나, 있는데 부재중 통화가 아닌 경우</td>
+      <td style="text-align: left">가장 최근 통화가 부재중 통화인지 여부<br>- TRUE : 수신 중인 전화번호의 가장 최근 수신 이력이 있지만 못받은 경우<br>- FALSE : 수신 중인 전화번호의 수신 이력이 없거나, 있는데 부재중 통화가 아닌 경우</td>
     </tr>
   </tbody>
 </table>
@@ -3662,14 +3661,14 @@ CapabilityFactory::makeCapability&lt;PhoneCallAgent, IPhoneCallHandler&gt;(phone
       <td style="text-align: left">string</td>
       <td style="text-align: left">Y</td>
       <td style="text-align: left">
-<strong>NO_SYSTEM_PERMISSION</strong> : 권한없음 <strong>CALL_TYPE_NOT_SUPPORTED</strong> : 해당 callType 을 지원하지 않음</td>
+<strong>NO_SYSTEM_PERMISSION</strong> : 권한없음<br><strong>CALL_TYPE_NOT_SUPPORTED</strong> : 해당 callType 을 지원하지 않음</td>
     </tr>
     <tr>
       <td style="text-align: left">callType</td>
       <td style="text-align: left">string</td>
       <td style="text-align: left">Y</td>
       <td style="text-align: left">
-<strong>NORMAL</strong> : 일반 전화 <strong>SPEAKER</strong> : 스피커폰 <strong>VIDEO</strong> : 비디오콜 <strong>CALLAR</strong> : 콜라</td>
+<strong>NORMAL</strong> : 일반 전화<br><strong>SPEAKER</strong> : 스피커폰<br><strong>VIDEO</strong> : 비디오콜<br><strong>CALLAR</strong> : 콜라</td>
     </tr>
   </tbody>
 </table>

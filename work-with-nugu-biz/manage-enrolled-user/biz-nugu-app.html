@@ -10,7 +10,6 @@
 <script type="text/javascript" src="/assets/js/jquery-ui.js"></script>
 <script type="text/javascript" src="/assets/js/main.js"></script>
 
-<script>MathJax={"tex":{"inlineMath":[["$","$"],["\\(","\\)"]],"displayMath":[["$$","$$"],["\\[","\\]"]]},"svg":{"fontCache":"global"},"options":{"enableMenu":false}}</script><script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script><script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
 </head>
 <body>
 <header>
@@ -62,7 +61,7 @@
     
         <li>
             <div class="nav_link fold ">
-                <a href="/nugu-play/nugu-ux/voice-interaction-design" class="nav_href">사용자 발화\(User Utterance\) 예상 하기</a>
+                <a href="/nugu-play/nugu-ux/voice-interaction-design" class="nav_href">사용자 발화(User Utterance) 예상 하기</a>
                 <span class="nav_unfold">+</span>
                 <span class="nav_fold">-</span>
             </div>
@@ -429,7 +428,7 @@
     
         <li>
             <div class="nav_link fold ">
-                <a href="/nugu-play/create-plays-with-play-builder/hello-aria/create-an-action-and-an-answer" class="nav_href">3) Action 만들고 응답 등록하기</a>
+                <a href="/nugu-play/create-plays-with-play-builder/hello-aria/create-an-intent-and-custom-utterances" class="nav_href">2) Intent 만들고 예상 발화 등록하기</a>
                 <span class="nav_unfold">+</span>
                 <span class="nav_fold">-</span>
             </div>
@@ -438,7 +437,7 @@
     
         <li>
             <div class="nav_link fold ">
-                <a href="/nugu-play/create-plays-with-play-builder/hello-aria/create-an-intent-and-custom-utterances" class="nav_href">2) Intent 만들고 예상 발화 등록하기</a>
+                <a href="/nugu-play/create-plays-with-play-builder/hello-aria/create-an-action-and-an-answer" class="nav_href">3) Action 만들고 응답 등록하기</a>
                 <span class="nav_unfold">+</span>
                 <span class="nav_fold">-</span>
             </div>
@@ -550,7 +549,7 @@
     
         <li>
             <div class="nav_link fold ">
-                <a href="/nugu-play/create-plays-with-play-builder/use-backend-proxy/capability-interfaces/audioplayer-display-interface" class="nav_href">AudioPlayer를 위한 Display Interface</a>
+                <a href="/nugu-play/create-plays-with-play-builder/use-backend-proxy/capability-interfaces/audioplayer-interface" class="nav_href">AudioPlayer Interface</a>
                 <span class="nav_unfold">+</span>
                 <span class="nav_fold">-</span>
             </div>
@@ -559,7 +558,7 @@
     
         <li>
             <div class="nav_link fold ">
-                <a href="/nugu-play/create-plays-with-play-builder/use-backend-proxy/capability-interfaces/audioplayer-interface" class="nav_href">AudioPlayer Interface</a>
+                <a href="/nugu-play/create-plays-with-play-builder/use-backend-proxy/capability-interfaces/audioplayer-display-interface" class="nav_href">AudioPlayer를 위한 Display Interface</a>
                 <span class="nav_unfold">+</span>
                 <span class="nav_fold">-</span>
             </div>
@@ -1379,7 +1378,7 @@
     
         <li>
             <div class="nav_link fold  has_child ">
-                <a href="/work-with-nugu-biz/biz-api/api-announcement" class="nav_href">API 발송 \(Announcement\)</a>
+                <a href="/work-with-nugu-biz/biz-api/api-announcement" class="nav_href">API 발송 (Announcement)</a>
                 <span class="nav_unfold">+</span>
                 <span class="nav_fold">-</span>
             </div>
@@ -2186,11 +2185,16 @@
 
 <p>체험판에서는 Private Play 단위로 초대하여, 해당 Private Play에 대한 사용권한을 사용자에게 부여할 수 있습니다. 초대 받아 등록된 Biz 사용자는, NUGU APP의 Biz 사용자 설정 메뉴에서 Private Play 리스트의 확인과 사용 여부를 변경 할 수 있습니다.</p>
 
-<p>1️⃣ Biz 사용자 설정에 진입하면, 해당 유저가 TID 인증을 통해 수락했던 Private Play 목록이 표시됩니다.</p>
+<ol>
+  <li>
+    <p>Biz 사용자 설정에 진입하면, 해당 유저가 TID 인증을 통해 수락했던 Private Play 목록이 표시됩니다.</p>
 
-<p><img src="/assets/images/app%EC%B2%B4%ED%97%98%ED%8C%901.jpg" alt=""></p>
-
-<p>2️⃣ 초대 수락했던 Private Play에 대한 사용 동의 철회가 가능합니다. 동의 철회 즉시, 해당 Play를 사용할 수 없습니다.</p>
+    <p><img src="/assets/images/app%EC%B2%B4%ED%97%98%ED%8C%901.jpg" alt=""></p>
+  </li>
+  <li>
+    <p>초대 수락했던 Private Play에 대한 사용 동의 철회가 가능합니다. 동의 철회 즉시, 해당 Play를 사용할 수 없습니다.</p>
+  </li>
+</ol>
 
 <p><img src="/assets/images/app%EC%B2%B4%ED%97%98%ED%8C%902.jpg" alt=""></p>
 
@@ -2198,19 +2202,25 @@
 
 <p>정식판에서는 유저를 Biz Service 단위로 초대하여 보유한 Play와 Announcement등 Biz API를 발송 할 수 있습니다. 등록된 Biz 사용자는, NUGU APP의 Biz 사용자 설정 메뉴에서 Biz Service의 사용 여부의 변경과, Biz API를 수신 동의 및 수신 받을 기기를 지정, 변경 할 수 있습니다.</p>
 
-<p>1️⃣ Biz 사용자 설정에 진입하면, 해당 유저가 TID 인증을 통해 수락했던 Biz Service 목록이 표시됩니다.</p>
+<ol>
+  <li>
+    <p>Biz 사용자 설정에 진입하면, 해당 유저가 TID 인증을 통해 수락했던 Biz Service 목록이 표시됩니다.</p>
 
-<p><img src="/assets/images/app%EC%A0%95%EC%8B%9D%ED%8C%901.jpg" alt=""></p>
+    <p><img src="/assets/images/app%EC%A0%95%EC%8B%9D%ED%8C%901.jpg" alt=""></p>
+  </li>
+  <li>
+    <p>초대 수락했던 Biz Service에 대한 사용 동의 철회가 가능합니다. 동의 철회 즉시, Biz Service에서 제공 하는 Play를 사용할 수 없고 발송하는 API를 받지 않게 됩니다.</p>
 
-<p>2️⃣ 초대 수락했던 Biz Service에 대한 사용 동의 철회가 가능합니다. 동의 철회 즉시, Biz Service에서 제공 하는 Play를 사용할 수 없고 발송하는 API를 받지 않게 됩니다.</p>
+    <p><img src="/assets/images/app%EC%A0%95%EC%8B%9D%ED%8C%902.jpg" alt=""></p>
+  </li>
+  <li>
+    <p>초대 시 설정했던 Biz API의 수신 동의와, 수신 대상 디바이스의 설정을 변경할 수 있습니다. Announcement API 발송에 대한 수신을 원치 않거나, 대상 디바이스를 변경하고 싶은 경우 해당 메뉴에서 수정 할 수 있습니다.</p>
 
-<p><img src="/assets/images/app%EC%A0%95%EC%8B%9D%ED%8C%902.jpg" alt=""></p>
+    <p><img src="/assets/images/app%EC%A0%95%EC%8B%9D%ED%8C%903.jpg" alt=""></p>
 
-<p>3️⃣ 초대 시 설정했던 Biz API의 수신 동의와, 수신 대상 디바이스의 설정을 변경할 수 있습니다. Announcement API 발송에 대한 수신을 원치 않거나, 대상 디바이스를 변경하고 싶은 경우 해당 메뉴에서 수정 할 수 있습니다.</p>
-
-<p><img src="/assets/images/app%EC%A0%95%EC%8B%9D%ED%8C%903.jpg" alt=""></p>
-
-<p><img src="/assets/images/app%EC%A0%95%EC%8B%9D%ED%8C%904.jpg" alt=""></p>
+    <p><img src="/assets/images/app%EC%A0%95%EC%8B%9D%ED%8C%904.jpg" alt=""></p>
+  </li>
+</ol>
 
         
 

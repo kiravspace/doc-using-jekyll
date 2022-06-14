@@ -10,7 +10,6 @@
 <script type="text/javascript" src="/assets/js/jquery-ui.js"></script>
 <script type="text/javascript" src="/assets/js/main.js"></script>
 
-<script>MathJax={"tex":{"inlineMath":[["$","$"],["\\(","\\)"]],"displayMath":[["$$","$$"],["\\[","\\]"]]},"svg":{"fontCache":"global"},"options":{"enableMenu":false}}</script><script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script><script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
 </head>
 <body>
 <header>
@@ -62,7 +61,7 @@
     
         <li>
             <div class="nav_link fold ">
-                <a href="/nugu-play/nugu-ux/voice-interaction-design" class="nav_href">사용자 발화\(User Utterance\) 예상 하기</a>
+                <a href="/nugu-play/nugu-ux/voice-interaction-design" class="nav_href">사용자 발화(User Utterance) 예상 하기</a>
                 <span class="nav_unfold">+</span>
                 <span class="nav_fold">-</span>
             </div>
@@ -429,7 +428,7 @@
     
         <li>
             <div class="nav_link fold ">
-                <a href="/nugu-play/create-plays-with-play-builder/hello-aria/create-an-action-and-an-answer" class="nav_href">3) Action 만들고 응답 등록하기</a>
+                <a href="/nugu-play/create-plays-with-play-builder/hello-aria/create-an-intent-and-custom-utterances" class="nav_href">2) Intent 만들고 예상 발화 등록하기</a>
                 <span class="nav_unfold">+</span>
                 <span class="nav_fold">-</span>
             </div>
@@ -438,7 +437,7 @@
     
         <li>
             <div class="nav_link fold ">
-                <a href="/nugu-play/create-plays-with-play-builder/hello-aria/create-an-intent-and-custom-utterances" class="nav_href">2) Intent 만들고 예상 발화 등록하기</a>
+                <a href="/nugu-play/create-plays-with-play-builder/hello-aria/create-an-action-and-an-answer" class="nav_href">3) Action 만들고 응답 등록하기</a>
                 <span class="nav_unfold">+</span>
                 <span class="nav_fold">-</span>
             </div>
@@ -550,7 +549,7 @@
     
         <li>
             <div class="nav_link fold ">
-                <a href="/nugu-play/create-plays-with-play-builder/use-backend-proxy/capability-interfaces/audioplayer-display-interface" class="nav_href">AudioPlayer를 위한 Display Interface</a>
+                <a href="/nugu-play/create-plays-with-play-builder/use-backend-proxy/capability-interfaces/audioplayer-interface" class="nav_href">AudioPlayer Interface</a>
                 <span class="nav_unfold">+</span>
                 <span class="nav_fold">-</span>
             </div>
@@ -559,7 +558,7 @@
     
         <li>
             <div class="nav_link fold ">
-                <a href="/nugu-play/create-plays-with-play-builder/use-backend-proxy/capability-interfaces/audioplayer-interface" class="nav_href">AudioPlayer Interface</a>
+                <a href="/nugu-play/create-plays-with-play-builder/use-backend-proxy/capability-interfaces/audioplayer-display-interface" class="nav_href">AudioPlayer를 위한 Display Interface</a>
                 <span class="nav_unfold">+</span>
                 <span class="nav_fold">-</span>
             </div>
@@ -1379,7 +1378,7 @@
     
         <li>
             <div class="nav_link fold  has_child ">
-                <a href="/work-with-nugu-biz/biz-api/api-announcement" class="nav_href">API 발송 \(Announcement\)</a>
+                <a href="/work-with-nugu-biz/biz-api/api-announcement" class="nav_href">API 발송 (Announcement)</a>
                 <span class="nav_unfold">+</span>
                 <span class="nav_fold">-</span>
             </div>
@@ -2164,7 +2163,7 @@
         
     </div>
     <div class="content">
-        <p><a href="../../sdk-design-guide/voice-chrome.md">SDK UX Guide</a> 을 준수하여 어플리케이션을 개발하는데 사용할 수 있는 레이아웃 객체와 UI 컨트롤 같은 UI 구성요소를 미리 빌드된 형태로 제공합니다.</p>
+        <p><a href="../../sdk-design-guide/voice-chrome">SDK UX Guide</a> 을 준수하여 어플리케이션을 개발하는데 사용할 수 있는 레이아웃 객체와 UI 컨트롤 같은 UI 구성요소를 미리 빌드된 형태로 제공합니다.</p>
 
 <h2 id="nuguvoicechrome">NuguVoiceChrome</h2>
 
@@ -2179,15 +2178,15 @@
   <tbody>
     <tr>
       <td style="text-align: left">
-<strong>func changeState(state: NuguVoiceChrome.State)</strong> NuguVoiceChrome 의 상태(단계)와 animation 을 변경합니다.</td>
+<strong>func changeState(state: NuguVoiceChrome.State)</strong><br>NuguVoiceChrome 의 상태(단계)와 animation 을 변경합니다.</td>
     </tr>
     <tr>
       <td style="text-align: left">
-<strong>func setChipsData(chipsData: [NuguChipsButton.NuguChipsButtonType], onChipsSelect: @escaping ((_ selectedChips: NuguChipsButton.NuguChipsButtonType) -&gt; Void))</strong> NuguVoiceChrome 에 노출될 NuguChipsButton 을 설정합니다.</td>
+<strong>func setChipsData(chipsData: [NuguChipsButton.NuguChipsButtonType], onChipsSelect: @escaping ((_ selectedChips: NuguChipsButton.NuguChipsButtonType) -&gt; Void))</strong><br>NuguVoiceChrome 에 노출될 NuguChipsButton 을 설정합니다.</td>
     </tr>
     <tr>
       <td style="text-align: left">
-<strong>func setRecognizedText(text: String?)</strong> NuguVoiceChrome 에 출력될 인식 문구를 설정합니다.</td>
+<strong>func setRecognizedText(text: String?)</strong><br>NuguVoiceChrome 에 출력될 인식 문구를 설정합니다.</td>
     </tr>
   </tbody>
 </table>
@@ -2370,7 +2369,7 @@
   <tbody>
     <tr>
       <td style="text-align: left">
-<strong>public</strong> <strong>var</strong> nuguButtonType: NuguButtonType (fab/button, blue/white 설정 가)</td>
+<strong>public</strong> <strong>var</strong> nuguButtonType: NuguButtonType<br>(fab/button, blue/white 설정 가능)</td>
     </tr>
     <tr>
       <td style="text-align: left">

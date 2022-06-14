@@ -10,7 +10,6 @@
 <script type="text/javascript" src="/assets/js/jquery-ui.js"></script>
 <script type="text/javascript" src="/assets/js/main.js"></script>
 
-<script>MathJax={"tex":{"inlineMath":[["$","$"],["\\(","\\)"]],"displayMath":[["$$","$$"],["\\[","\\]"]]},"svg":{"fontCache":"global"},"options":{"enableMenu":false}}</script><script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script><script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
 </head>
 <body>
 <header>
@@ -62,7 +61,7 @@
     
         <li>
             <div class="nav_link fold ">
-                <a href="/nugu-play/nugu-ux/voice-interaction-design" class="nav_href">사용자 발화\(User Utterance\) 예상 하기</a>
+                <a href="/nugu-play/nugu-ux/voice-interaction-design" class="nav_href">사용자 발화(User Utterance) 예상 하기</a>
                 <span class="nav_unfold">+</span>
                 <span class="nav_fold">-</span>
             </div>
@@ -429,7 +428,7 @@
     
         <li>
             <div class="nav_link fold ">
-                <a href="/nugu-play/create-plays-with-play-builder/hello-aria/create-an-action-and-an-answer" class="nav_href">3) Action 만들고 응답 등록하기</a>
+                <a href="/nugu-play/create-plays-with-play-builder/hello-aria/create-an-intent-and-custom-utterances" class="nav_href">2) Intent 만들고 예상 발화 등록하기</a>
                 <span class="nav_unfold">+</span>
                 <span class="nav_fold">-</span>
             </div>
@@ -438,7 +437,7 @@
     
         <li>
             <div class="nav_link fold ">
-                <a href="/nugu-play/create-plays-with-play-builder/hello-aria/create-an-intent-and-custom-utterances" class="nav_href">2) Intent 만들고 예상 발화 등록하기</a>
+                <a href="/nugu-play/create-plays-with-play-builder/hello-aria/create-an-action-and-an-answer" class="nav_href">3) Action 만들고 응답 등록하기</a>
                 <span class="nav_unfold">+</span>
                 <span class="nav_fold">-</span>
             </div>
@@ -550,7 +549,7 @@
     
         <li>
             <div class="nav_link fold ">
-                <a href="/nugu-play/create-plays-with-play-builder/use-backend-proxy/capability-interfaces/audioplayer-display-interface" class="nav_href">AudioPlayer를 위한 Display Interface</a>
+                <a href="/nugu-play/create-plays-with-play-builder/use-backend-proxy/capability-interfaces/audioplayer-interface" class="nav_href">AudioPlayer Interface</a>
                 <span class="nav_unfold">+</span>
                 <span class="nav_fold">-</span>
             </div>
@@ -559,7 +558,7 @@
     
         <li>
             <div class="nav_link fold ">
-                <a href="/nugu-play/create-plays-with-play-builder/use-backend-proxy/capability-interfaces/audioplayer-interface" class="nav_href">AudioPlayer Interface</a>
+                <a href="/nugu-play/create-plays-with-play-builder/use-backend-proxy/capability-interfaces/audioplayer-display-interface" class="nav_href">AudioPlayer를 위한 Display Interface</a>
                 <span class="nav_unfold">+</span>
                 <span class="nav_fold">-</span>
             </div>
@@ -1379,7 +1378,7 @@
     
         <li>
             <div class="nav_link fold  has_child ">
-                <a href="/work-with-nugu-biz/biz-api/api-announcement" class="nav_href">API 발송 \(Announcement\)</a>
+                <a href="/work-with-nugu-biz/biz-api/api-announcement" class="nav_href">API 발송 (Announcement)</a>
                 <span class="nav_unfold">+</span>
                 <span class="nav_fold">-</span>
             </div>
@@ -2185,7 +2184,7 @@
     <tr>
       <td style="text-align: left">1.1</td>
       <td style="text-align: left">2020.10.29</td>
-      <td style="text-align: left">Song.category: SIMILAR 추가 PlayFailed event(errorCode) : noSimilarSong 추가 HandlePlaylist, HandleLyrics directive 추가 HandlePlaylistSucceeded, HandlePlaylistFailed, HandleLyricsSucceeded, HandleLyricsFailed event 추가 PlaySuspended event 의 issueCode 에 excludeSong 추가</td>
+      <td style="text-align: left">Song.category: SIMILAR 추가<br>PlayFailed event(errorCode) : noSimilarSong 추가<br>HandlePlaylist, HandleLyrics directive 추가<br>HandlePlaylistSucceeded, HandlePlaylistFailed, HandleLyricsSucceeded, HandleLyricsFailed event 추가<br>PlaySuspended event 의 issueCode 에 excludeSong 추가</td>
     </tr>
   </tbody>
 </table>
@@ -2294,7 +2293,7 @@ NuguClient instance 를 통해 MediaPlayerAgent instance 에 접근할 수 있�
 
 <h3 id="context-구성">Context 구성</h3>
 
-<p>앱에서 재생중인 음원에 대한 정보를 <a href="mediaplayer.md#context-1">Context</a> 에 포함시켜 주어야 합니다.</p>
+<p>앱에서 재생중인 음원에 대한 정보를 <a href="mediaplayer#context-1">Context</a> 에 포함시켜 주어야 합니다.</p>
 
 <div id="tabs-68" class="tabs">
     <ul>
@@ -2371,7 +2370,7 @@ mediaPlayerAgent.delegate = MyMediaPlayerAgentDelegate()
 
 <h3 id="제어-명령">제어 명령</h3>
 
-<p><code class="language-plaintext highlighter-rouge">사용자 발화</code>에 의해 음악 <a href="mediaplayer.md#search">검색</a>/<a href="mediaplayer.md#play">재생</a>/<a href="mediaplayer.md#stop">중지</a>/<a href="mediaplayer.md#next">다음</a>/<a href="mediaplayer.md#previous">이전</a>/<a href="mediaplayer.md#move">탐색</a>/<a href="mediaplayer.md#pause">일시정지</a>/<a href="mediaplayer.md#resume">계속재생</a>/<a href="mediaplayer.md#rewind">다시재생</a>/<a href="mediaplayer.md#toggle">반복</a>/<a href="mediaplayer.md#toggle">즐겨찾기</a>/<a href="mediaplayer.md#toggle">셔플</a>/<a href="mediaplayer.md#handleplaylist">재생목록 보기</a>/<a href="mediaplayer.md#handlelyrics">가사 보기</a> 가 directive 로 요청될 수 있습니다.</p>
+<p><code class="language-plaintext highlighter-rouge">사용자 발화</code>에 의해 음악 <a href="mediaplayer#search">검색</a>/<a href="mediaplayer#play">재생</a>/<a href="mediaplayer#stop">중지</a>/<a href="mediaplayer#next">다음</a>/<a href="mediaplayer#previous">이전</a>/<a href="mediaplayer#move">탐색</a>/<a href="mediaplayer#pause">일시정지</a>/<a href="mediaplayer#resume">계속재생</a>/<a href="mediaplayer#rewind">다시재생</a>/<a href="mediaplayer#toggle">반복</a>/<a href="mediaplayer#toggle">즐겨찾기</a>/<a href="mediaplayer#toggle">셔플</a>/<a href="mediaplayer#handleplaylist">재생목록 보기</a>/<a href="mediaplayer#handlelyrics">가사 보기</a> 가 directive 로 요청될 수 있습니다.</p>
 
 <div id="tabs-107" class="tabs">
     <ul>
@@ -2624,7 +2623,7 @@ mediaPlayerAgent.delegate = MyMediaPlayerAgentDelegate()
 
 <h3 id="재생중인-곡-정보-요청">재생중인 곡 정보 요청</h3>
 
-<p>재생중인 곡 정보가 <a href="mediaplayer.md#getinfo">GetInfo</a> directive 로 요청될 수 있습니다.</p>
+<p>재생중인 곡 정보가 <a href="mediaplayer#getinfo">GetInfo</a> directive 로 요청될 수 있습니다.</p>
 
 <div id="tabs-234" class="tabs">
     <ul>
@@ -2772,14 +2771,14 @@ mediaPlayerAgent.delegate = MyMediaPlayerAgentDelegate()
       <td style="text-align: left">Y</td>
       <td style="text-align: left">Y</td>
       <td style="text-align: left">
-<strong>(임의의 String으로 SDK에서 enum 처리하면 안됨)</strong>  - <strong>NOT_RUNNING</strong>  - <strong>NORMAL</strong> : 정상 상태 디폴트  - <strong>…</strong> : 지정된 에러코드</td>
+<strong>(임의의 String으로 SDK에서 enum 처리하면 안됨)</strong><br>- <strong>NOT_RUNNING</strong><br>- <strong>NORMAL</strong> : 정상 상태 디폴트<br>- <strong>…</strong> : 지정된 에러코드</td>
     </tr>
     <tr>
       <td style="text-align: left">playerActivity</td>
       <td style="text-align: left">string</td>
       <td style="text-align: left">Y</td>
       <td style="text-align: left">Y</td>
-      <td style="text-align: left">앱의 현재 재생 상태  - <strong>STOPPED</strong>  - <strong>PLAYING</strong>  - <strong>PAUSED</strong>
+      <td style="text-align: left">앱의 현재 재생 상태<br>- <strong>STOPPED</strong><br>- <strong>PLAYING</strong><br>- <strong>PAUSED</strong>
 </td>
     </tr>
     <tr>
@@ -2822,7 +2821,7 @@ mediaPlayerAgent.delegate = MyMediaPlayerAgentDelegate()
       <td style="text-align: left">string</td>
       <td style="text-align: left">Y</td>
       <td style="text-align: left">N</td>
-      <td style="text-align: left">현재 재생 리스트의 타입  - <strong>CHART</strong> : 차트 리스트 재생 중  - <strong>PLAYLIST</strong> : 사용자 저장 플레이리스트 재생 중  - <strong>THEMELIST</strong> : 테마리스트의 경우  - <strong>DEFAULT</strong> : 위에 해당 사항이 없는 경우</td>
+      <td style="text-align: left">현재 재생 리스트의 타입<br>- <strong>CHART</strong> : 차트 리스트 재생 중<br>- <strong>PLAYLIST</strong> : 사용자 저장 플레이리스트 재생 중<br>- <strong>THEMELIST</strong> : 테마리스트의 경우<br>- <strong>DEFAULT</strong> : 위에 해당 사항이 없는 경우</td>
     </tr>
     <tr>
       <td style="text-align: left">playlist.name</td>
@@ -2857,7 +2856,7 @@ mediaPlayerAgent.delegate = MyMediaPlayerAgentDelegate()
       <td style="text-align: left">object</td>
       <td style="text-align: left">N</td>
       <td style="text-align: left">N</td>
-      <td style="text-align: left">Toggle Directive에서 지원하는 기능의 상태 정보 repeat, shuffle 중 지원하는 기능만 포함해야 함 (포함되지 않은 파라미터는 Play에서 미지원으로 판단) 모두 지원하지 않으면 toggle 파라미터가 없어야 함</td>
+      <td style="text-align: left">Toggle Directive에서 지원하는 기능의 상태 정보 repeat, shuffle 중 지원하는 기능만 포함해야 함 (포함되지 않은 파라미터는 Play에서 미지원으로 판단)<br>모두 지원하지 않으면 toggle 파라미터가 없어야 함</td>
     </tr>
     <tr>
       <td style="text-align: left">toggle.repeat</td>
@@ -2865,7 +2864,7 @@ mediaPlayerAgent.delegate = MyMediaPlayerAgentDelegate()
       <td style="text-align: left">N</td>
       <td style="text-align: left">N</td>
       <td style="text-align: left">
-<strong>ALL</strong> : 전체 반복 <strong>ONE</strong> : 한곡 반복 <strong>NONE</strong> : 반복 없음</td>
+<strong>ALL</strong> : 전체 반복<br><strong>ONE</strong> : 한곡 반복<br><strong>NONE</strong> : 반복 없음</td>
     </tr>
     <tr>
       <td style="text-align: left">toggle.shuffle</td>
@@ -2928,7 +2927,7 @@ mediaPlayerAgent.delegate = MyMediaPlayerAgentDelegate()
       <td style="text-align: left">string</td>
       <td style="text-align: left">Y</td>
       <td style="text-align: left">
-<strong>(임의의 String으로 SDK에서 enum 처리하면 안됨)</strong>  - <strong>NONE</strong>  - <strong>RECOMMEND</strong>  - <strong>POPULAR</strong>  - <strong>NEW</strong>  - <strong>CHART</strong>  - <strong>RECENT_PLAYED</strong>  - <strong>FAVORITE</strong>  - <strong>LIKE_SONG</strong>  - <strong>LIKE_ALBUM</strong>  - <strong>LIKE_ARTIST</strong>  - <strong>LIKE_THEME</strong>  - <strong>PLAYLIST</strong>  - <strong>NOWPLAYING</strong>  - <strong>SIMILAR</strong>
+<strong>(임의의 String으로 SDK에서 enum 처리하면 안됨)</strong><br>- <strong>NONE</strong><br>- <strong>RECOMMEND</strong><br>- <strong>POPULAR</strong><br>- <strong>NEW</strong><br>- <strong>CHART</strong><br>- <strong>RECENT_PLAYED</strong><br>- <strong>FAVORITE</strong><br>- <strong>LIKE_SONG</strong><br>- <strong>LIKE_ALBUM</strong><br>- <strong>LIKE_ARTIST</strong><br>- <strong>LIKE_THEME</strong><br>- <strong>PLAYLIST</strong><br>- <strong>NOWPLAYING</strong><br>- <strong>SIMILAR</strong>
 </td>
     </tr>
     <tr>
@@ -3052,13 +3051,13 @@ mediaPlayerAgent.delegate = MyMediaPlayerAgentDelegate()
       <td style="text-align: left">token</td>
       <td style="text-align: left">string</td>
       <td style="text-align: left">Y</td>
-      <td style="text-align: left">전달하는 Directive를 식별하기 위한 unique string 결과 이벤트에 이 token을 그대로 전달해주어야 함</td>
+      <td style="text-align: left">전달하는 Directive를 식별하기 위한 unique string<br>결과 이벤트에 이 token을 그대로 전달해주어야 함</td>
     </tr>
     <tr>
       <td style="text-align: left">action</td>
       <td style="text-align: left">string</td>
       <td style="text-align: left">Y</td>
-      <td style="text-align: left">앱의 동작 가능 여부를 모를 수 있기 때문에 상태를 파악하고 실행하는 동작을 구분하기 위해 정의  - <strong>CHECK</strong> : 최초 호출 시  - <strong>EXECUTE</strong> : suspended를 통해 상태가 확인되고 난 후 다시 요청하는 경우</td>
+      <td style="text-align: left">앱의 동작 가능 여부를 모를 수 있기 때문에 상태를 파악하고 실행하는 동작을 구분하기 위해 정의<br>- <strong>CHECK</strong> : 최초 호출 시<br>- <strong>EXECUTE</strong> : suspended를 통해 상태가 확인되고 난 후 다시 요청하는 경우</td>
     </tr>
     <tr>
       <td style="text-align: left">asrText</td>
@@ -3076,14 +3075,14 @@ mediaPlayerAgent.delegate = MyMediaPlayerAgentDelegate()
       <td style="text-align: left">toggle</td>
       <td style="text-align: left">object</td>
       <td style="text-align: left">N</td>
-      <td style="text-align: left">repeat, shuffle 중 지원하는 기능만 포함해야 함 (포함되지 않은 파라미터는 Play에서 미지원으로 판단) 모두 지원하지 않으면 toggle 파라미터가 없어야 함</td>
+      <td style="text-align: left">repeat, shuffle 중 지원하는 기능만 포함해야 함 (포함되지 않은 파라미터는 Play에서 미지원으로 판단)<br>모두 지원하지 않으면 toggle 파라미터가 없어야 함</td>
     </tr>
     <tr>
       <td style="text-align: left">toggle.repeat</td>
       <td style="text-align: left">string</td>
       <td style="text-align: left">N</td>
       <td style="text-align: left">
-<strong>ALL</strong> : 전체 반복 <strong>ONE</strong> : 한곡 반복 <strong>NONE</strong> : 반복 없음</td>
+<strong>ALL</strong> : 전체 반복<br><strong>ONE</strong> : 한곡 반복<br><strong>NONE</strong> : 반복 없음</td>
     </tr>
     <tr>
       <td style="text-align: left">toggle.shuffle</td>
@@ -3267,13 +3266,13 @@ mediaPlayerAgent.delegate = MyMediaPlayerAgentDelegate()
       <td style="text-align: left">token</td>
       <td style="text-align: left">string</td>
       <td style="text-align: left">Y</td>
-      <td style="text-align: left">전달하는 Directive를 식별하기 위한 unique string 결과 이벤트에 이 token을 그대로 전달해주어야 함</td>
+      <td style="text-align: left">전달하는 Directive를 식별하기 위한 unique string<br>결과 이벤트에 이 token을 그대로 전달해주어야 함</td>
     </tr>
     <tr>
       <td style="text-align: left">action</td>
       <td style="text-align: left">string</td>
       <td style="text-align: left">Y</td>
-      <td style="text-align: left">앱의 동작 가능 여부를 모를 수 있기 때문에 상태를 파악하고 실행하는 동작을 구분하기 위해 정의  - <strong>CHECK</strong> : 최초 호출 시  - <strong>EXECUTE</strong> : suspended를 통해 상태가 확인되고 난 후 다시 요청하는 경우</td>
+      <td style="text-align: left">앱의 동작 가능 여부를 모를 수 있기 때문에 상태를 파악하고 실행하는 동작을 구분하기 위해 정의<br>- <strong>CHECK</strong> : 최초 호출 시<br>- <strong>EXECUTE</strong> : suspended를 통해 상태가 확인되고 난 후 다시 요청하는 경우</td>
     </tr>
     <tr>
       <td style="text-align: left">target</td>
@@ -3350,13 +3349,13 @@ mediaPlayerAgent.delegate = MyMediaPlayerAgentDelegate()
       <td style="text-align: left">token</td>
       <td style="text-align: left">string</td>
       <td style="text-align: left">Y</td>
-      <td style="text-align: left">전달하는 Directive를 식별하기 위한 unique string 결과 이벤트에 이 token을 그대로 전달해주어야 함</td>
+      <td style="text-align: left">전달하는 Directive를 식별하기 위한 unique string<br>결과 이벤트에 이 token을 그대로 전달해주어야 함</td>
     </tr>
     <tr>
       <td style="text-align: left">action</td>
       <td style="text-align: left">string</td>
       <td style="text-align: left">Y</td>
-      <td style="text-align: left">앱의 동작 가능 여부를 모를 수 있기 때문에 상태를 파악하고 실행하는 동작을 구분하기 위해 정의  - <strong>CHECK</strong> : 최초 호출 시  - <strong>EXECUTE</strong> : suspended를 통해 상태가 확인되고 난 후 다시 요청하는 경우</td>
+      <td style="text-align: left">앱의 동작 가능 여부를 모를 수 있기 때문에 상태를 파악하고 실행하는 동작을 구분하기 위해 정의<br>- <strong>CHECK</strong> : 최초 호출 시<br>- <strong>EXECUTE</strong> : suspended를 통해 상태가 확인되고 난 후 다시 요청하는 경우</td>
     </tr>
     <tr>
       <td style="text-align: left">target</td>
@@ -3496,7 +3495,7 @@ mediaPlayerAgent.delegate = MyMediaPlayerAgentDelegate()
       <td style="text-align: left">token</td>
       <td style="text-align: left">string</td>
       <td style="text-align: left">Y</td>
-      <td style="text-align: left">전달하는 Directive를 식별하기 위한 unique string 결과 이벤트에 이 token을 그대로 전달해주어야 함</td>
+      <td style="text-align: left">전달하는 Directive를 식별하기 위한 unique string<br>결과 이벤트에 이 token을 그대로 전달해주어야 함</td>
     </tr>
   </tbody>
 </table>
@@ -3553,7 +3552,7 @@ mediaPlayerAgent.delegate = MyMediaPlayerAgentDelegate()
       <td style="text-align: left">token</td>
       <td style="text-align: left">string</td>
       <td style="text-align: left">Y</td>
-      <td style="text-align: left">전달하는 Directive를 식별하기 위한 unique string 결과 이벤트에 이 token을 그대로 전달해주어야 함</td>
+      <td style="text-align: left">전달하는 Directive를 식별하기 위한 unique string<br>결과 이벤트에 이 token을 그대로 전달해주어야 함</td>
     </tr>
   </tbody>
 </table>
@@ -3610,7 +3609,7 @@ mediaPlayerAgent.delegate = MyMediaPlayerAgentDelegate()
       <td style="text-align: left">token</td>
       <td style="text-align: left">string</td>
       <td style="text-align: left">Y</td>
-      <td style="text-align: left">전달하는 Directive를 식별하기 위한 unique string 결과 이벤트에 이 token을 그대로 전달해주어야 함</td>
+      <td style="text-align: left">전달하는 Directive를 식별하기 위한 unique string<br>결과 이벤트에 이 token을 그대로 전달해주어야 함</td>
     </tr>
   </tbody>
 </table>
@@ -3679,20 +3678,20 @@ mediaPlayerAgent.delegate = MyMediaPlayerAgentDelegate()
       <td style="text-align: left">playServiceId</td>
       <td style="text-align: left">string</td>
       <td style="text-align: left">Y</td>
-      <td style="text-align: left">Directive 를 전달한 Play 정보. PlayRouter가 생성하기 때문에 NPK 규격에는 포함되지 않음.</td>
+      <td style="text-align: left">Directive 를 전달한 Play 정보.<br>PlayRouter가 생성하기 때문에 NPK 규격에는 포함되지 않음.</td>
     </tr>
     <tr>
       <td style="text-align: left">token</td>
       <td style="text-align: left">string</td>
       <td style="text-align: left">Y</td>
-      <td style="text-align: left">전달하는 Directive를 식별하기 위한 unique string 결과 이벤트에 이 token을 그대로 전달해주어야 함</td>
+      <td style="text-align: left">전달하는 Directive를 식별하기 위한 unique string<br>결과 이벤트에 이 token을 그대로 전달해주어야 함</td>
     </tr>
     <tr>
       <td style="text-align: left">repeat</td>
       <td style="text-align: left">string</td>
       <td style="text-align: left">N</td>
       <td style="text-align: left">
-<strong>ALL</strong> : 전체 반복 <strong>ONE</strong> : 한곡 반복 <strong>NONE</strong> : 반복 없음</td>
+<strong>ALL</strong> : 전체 반복<br><strong>ONE</strong> : 한곡 반복<br><strong>NONE</strong> : 반복 없음</td>
     </tr>
     <tr>
       <td style="text-align: left">like</td>
@@ -3761,7 +3760,7 @@ mediaPlayerAgent.delegate = MyMediaPlayerAgentDelegate()
       <td style="text-align: left">token</td>
       <td style="text-align: left">string</td>
       <td style="text-align: left">Y</td>
-      <td style="text-align: left">전달하는 Directive를 식별하기 위한 unique string 결과 이벤트에 이 token을 그대로 전달해주어야 함</td>
+      <td style="text-align: left">전달하는 Directive를 식별하기 위한 unique string<br>결과 이벤트에 이 token을 그대로 전달해주어야 함</td>
     </tr>
   </tbody>
 </table>
@@ -3821,7 +3820,7 @@ mediaPlayerAgent.delegate = MyMediaPlayerAgentDelegate()
       <td style="text-align: left">string</td>
       <td style="text-align: left">Y</td>
       <td style="text-align: left">
-<strong>(임의의 String으로 SDK에서 enum 처리하면 안됨)</strong> Playlist 제어 동작  - <strong>SHOW</strong>
+<strong>(임의의 String으로 SDK에서 enum 처리하면 안됨)</strong><br>Playlist 제어 동작<br>- <strong>SHOW</strong>
 </td>
     </tr>
     <tr>
@@ -3829,7 +3828,7 @@ mediaPlayerAgent.delegate = MyMediaPlayerAgentDelegate()
       <td style="text-align: left">string</td>
       <td style="text-align: left">N</td>
       <td style="text-align: left">
-<strong>(임의의 String으로 SDK에서 enum 처리하면 안됨)</strong> 특정 Playlist 지정</td>
+<strong>(임의의 String으로 SDK에서 enum 처리하면 안됨)</strong><br>특정 Playlist 지정</td>
     </tr>
   </tbody>
 </table>
@@ -3887,7 +3886,7 @@ mediaPlayerAgent.delegate = MyMediaPlayerAgentDelegate()
       <td style="text-align: left">string</td>
       <td style="text-align: left">Y</td>
       <td style="text-align: left">
-<strong>(임의의 String으로 SDK에서 enum 처리하면 안됨)</strong> Playlist 제어 동작  - <strong>SHOW</strong>  - <strong>HIDE</strong>
+<strong>(임의의 String으로 SDK에서 enum 처리하면 안됨)</strong><br>Playlist 제어 동작<br>- <strong>SHOW</strong><br>- <strong>HIDE</strong>
 </td>
     </tr>
   </tbody>
@@ -4057,7 +4056,7 @@ mediaPlayerAgent.delegate = MyMediaPlayerAgentDelegate()
       <td style="text-align: left">string</td>
       <td style="text-align: left">N</td>
       <td style="text-align: left">
-<strong>(임의의 String으로 SDK에서 enum 처리하면 안됨)</strong>  - 재생을 수행하지만, 아래와 같은 특수 동작 및 prompt를 분기하는 경우   • <strong>onlyAdult</strong> : 첫곡이 ‘성인 인증’이 필요한 음악으로, &gt; skip하여 재생   • <strong>disable</strong> : 첫곡이 서비스가 중지된 곡 &gt; skip하여 재생   • <strong>notAllowed</strong> : 첫 곡이 제공사 사정으로 재생할 수 없음. &gt; skip하여 재생   • <strong>onlyPreview</strong> : 첫 곡이 권리사 요청으로 미리듣기만 가능한 음악 &gt; 미리듣기만 재생   • <strong>noRecentPlayed</strong> : 최근들은 곡 요청시, 최근들은 이력이 없어서 실시간 차트로 대안 재생하는 경우   • <strong>noFavoritePlayed</strong> : 많이 들은 곡 요청시, 많이들은 이력이 없어서 실시간 차트로 대안 재생하는 경우   • <strong>excludeSong</strong>: 첫 곡이 안듣기 설정한 곡이어서 skip 하여 재생</td>
+<strong>(임의의 String으로 SDK에서 enum 처리하면 안됨)</strong><br>- 재생을 수행하지만, 아래와 같은 특수 동작 및 prompt를 분기하는 경우<br>• <strong>onlyAdult</strong> : 첫곡이 ‘성인 인증’이 필요한 음악으로, &gt; skip하여 재생<br>• <strong>disable</strong> : 첫곡이 서비스가 중지된 곡 &gt; skip하여 재생<br>• <strong>notAllowed</strong> : 첫 곡이 제공사 사정으로 재생할 수 없음. &gt; skip하여 재생<br>• <strong>onlyPreview</strong> : 첫 곡이 권리사 요청으로 미리듣기만 가능한 음악 &gt; 미리듣기만 재생<br>• <strong>noRecentPlayed</strong> : 최근들은 곡 요청시, 최근들은 이력이 없어서 실시간 차트로 대안 재생하는 경우<br>• <strong>noFavoritePlayed</strong> : 많이 들은 곡 요청시, 많이들은 이력이 없어서 실시간 차트로 대안 재생하는 경우<br>• <strong>excludeSong</strong>: 첫 곡이 안듣기 설정한 곡이어서 skip 하여 재생</td>
     </tr>
     <tr>
       <td style="text-align: left">data</td>
@@ -4129,7 +4128,7 @@ mediaPlayerAgent.delegate = MyMediaPlayerAgentDelegate()
       <td style="text-align: left">string</td>
       <td style="text-align: left">Y</td>
       <td style="text-align: left">
-<strong>(임의의 String으로 SDK에서 enum 처리하면 안됨)</strong> 실패 원인을 의미하며, 여기에 전달하는 string 값을 기반으로 응답 TTS 생성   - <strong>noPlaylist</strong> : 재생 가능 플레이리스트 없음   - <strong>toBeReleased</strong> : 음악이 발매될 예정, 현재는 미발매 상태   - <strong>searchFailed</strong> : 검색 실패, 메타상에 없음   - <strong>disableAll</strong> : 재생 목록에 재생가능 상태 음원이 없음   - <strong>noLikeSong</strong> : 좋아요한 곡이 없음   - <strong>noNowlist</strong> : 현재재생목록 요청했으나 목록에 곡없음   - <strong>noLikeAlbum</strong> : 좋아요한 앨범 없음   - <strong>noLikeTheme</strong> : 좋아요한 테마 없음   - <strong>noLikeArtist</strong> : 좋아요한 가수없음   - <strong>multiPlayingStop</strong> : 멀티 디바이스 중복 재생으로 인한 autonext 시 재생 중단 발생 시   - <strong>requireLogin</strong> : 로그인 기능이 필수인 동작이나, 비로그인상태로 인한 실패   - <strong>appInternalServerError</strong> : CP의 내부 서버 연동간의 이슈로 응답실패 발생 시   - <strong>noSimilarSong</strong> : 유사곡(SIMILAR) 요청 시, 유사곡이 없는, 지원하지 않는 곡일 경우</td>
+<strong>(임의의 String으로 SDK에서 enum 처리하면 안됨)</strong><br>실패 원인을 의미하며, 여기에 전달하는 string 값을 기반으로 응답 TTS 생성<br>- <strong>noPlaylist</strong> : 재생 가능 플레이리스트 없음<br>- <strong>toBeReleased</strong> : 음악이 발매될 예정, 현재는 미발매 상태<br>- <strong>searchFailed</strong> : 검색 실패, 메타상에 없음<br>- <strong>disableAll</strong> : 재생 목록에 재생가능 상태 음원이 없음<br>- <strong>noLikeSong</strong> : 좋아요한 곡이 없음<br>- <strong>noNowlist</strong> : 현재재생목록 요청했으나 목록에 곡없음<br>- <strong>noLikeAlbum</strong> : 좋아요한 앨범 없음<br>- <strong>noLikeTheme</strong> : 좋아요한 테마 없음<br>- <strong>noLikeArtist</strong> : 좋아요한 가수없음<br>- <strong>multiPlayingStop</strong> : 멀티 디바이스 중복 재생으로 인한 autonext 시 재생 중단 발생 시<br>- <strong>requireLogin</strong> : 로그인 기능이 필수인 동작이나, 비로그인상태로 인한 실패<br>- <strong>appInternalServerError</strong> : CP의 내부 서버 연동간의 이슈로 응답실패 발생 시<br>- <strong>noSimilarSong</strong> : 유사곡(SIMILAR) 요청 시, 유사곡이 없는, 지원하지 않는 곡일 경우</td>
     </tr>
   </tbody>
 </table>
@@ -4252,7 +4251,7 @@ mediaPlayerAgent.delegate = MyMediaPlayerAgentDelegate()
       <td style="text-align: left">string</td>
       <td style="text-align: left">Y</td>
       <td style="text-align: left">
-<strong>(임의의 String으로 SDK에서 enum 처리하면 안됨)</strong> 실패 원인을 의미하며, 여기에 전달하는 string 값을 기반으로 응답 TTS 생성  - <strong>appInternalServerError</strong> : CP의 내부 서버 연동간의 이슈로 응답실패 발생 시</td>
+<strong>(임의의 String으로 SDK에서 enum 처리하면 안됨)</strong><br>실패 원인을 의미하며, 여기에 전달하는 string 값을 기반으로 응답 TTS 생성<br>- <strong>appInternalServerError</strong> : CP의 내부 서버 연동간의 이슈로 응답실패 발생 시</td>
     </tr>
   </tbody>
 </table>
@@ -4383,7 +4382,7 @@ mediaPlayerAgent.delegate = MyMediaPlayerAgentDelegate()
       <td style="text-align: left">string</td>
       <td style="text-align: left">Y</td>
       <td style="text-align: left">
-<strong>(임의의 String으로 SDK에서 enum 처리하면 안됨)</strong> 실패 원인을 의미하며, 여기에 전달하는 string 값을 기반으로 응답 TTS 생성  - <strong>appInternalServerError</strong> : CP의 내부 서버 연동간의 이슈로 응답실패 발생 시</td>
+<strong>(임의의 String으로 SDK에서 enum 처리하면 안됨)</strong><br>실패 원인을 의미하며, 여기에 전달하는 string 값을 기반으로 응답 TTS 생성<br>- <strong>appInternalServerError</strong> : CP의 내부 서버 연동간의 이슈로 응답실패 발생 시</td>
     </tr>
   </tbody>
 </table>
@@ -4532,7 +4531,7 @@ mediaPlayerAgent.delegate = MyMediaPlayerAgentDelegate()
       <td style="text-align: left">string</td>
       <td style="text-align: left">Y</td>
       <td style="text-align: left">
-<strong>PLAYLIST</strong> : 플레이리스트 이동 성공한 경우 <strong>TRACK</strong> : 트랙 이동 성공한 경우</td>
+<strong>PLAYLIST</strong> : 플레이리스트 이동 성공한 경우<br><strong>TRACK</strong> : 트랙 이동 성공한 경우</td>
     </tr>
     <tr>
       <td style="text-align: left">playlist</td>
@@ -4622,7 +4621,7 @@ mediaPlayerAgent.delegate = MyMediaPlayerAgentDelegate()
       <td style="text-align: left">string</td>
       <td style="text-align: left">Y</td>
       <td style="text-align: left">
-<strong>(임의의 String으로 SDK에서 enum 처리하면 안됨)</strong> 실패 원인을 의미하며, 여기에 전달하는 string 값을 기반으로 응답 TTS 생성  - <strong>noPreviousPlaylist</strong> : 다음 플레이리스트 요청 시, 재생 가능한 플레이리스트가 없는 경우  - <strong>noPreviousTrack</strong> : 다음 곡 요청 시, 재생 가능한 다음곡이 없는 경우,  - <strong>noTargetSong</strong> : 플레이어에 재생가능한 곡이 없는 대기상태  - <strong>appInternalServerError</strong> : CP의 내부 서버 연동간의 이슈로 응답실패 발생 시</td>
+<strong>(임의의 String으로 SDK에서 enum 처리하면 안됨)</strong><br>실패 원인을 의미하며, 여기에 전달하는 string 값을 기반으로 응답 TTS 생성<br>- <strong>noPreviousPlaylist</strong> : 다음 플레이리스트 요청 시, 재생 가능한 플레이리스트가 없는 경우<br>- <strong>noPreviousTrack</strong> : 다음 곡 요청 시, 재생 가능한 다음곡이 없는 경우,<br>- <strong>noTargetSong</strong> : 플레이어에 재생가능한 곡이 없는 대기상태<br>- <strong>appInternalServerError</strong> : CP의 내부 서버 연동간의 이슈로 응답실패 발생 시</td>
     </tr>
   </tbody>
 </table>
@@ -4771,7 +4770,7 @@ mediaPlayerAgent.delegate = MyMediaPlayerAgentDelegate()
       <td style="text-align: left">string</td>
       <td style="text-align: left">Y</td>
       <td style="text-align: left">
-<strong>PLAYLIST</strong> : 플레이리스트 이동 성공한 경우 <strong>TRACK</strong> : 트랙 이동 성공한 경우</td>
+<strong>PLAYLIST</strong> : 플레이리스트 이동 성공한 경우<br><strong>TRACK</strong> : 트랙 이동 성공한 경우</td>
     </tr>
     <tr>
       <td style="text-align: left">playlist</td>
@@ -4861,7 +4860,7 @@ mediaPlayerAgent.delegate = MyMediaPlayerAgentDelegate()
       <td style="text-align: left">string</td>
       <td style="text-align: left">Y</td>
       <td style="text-align: left">
-<strong>(임의의 String으로 SDK에서 enum 처리하면 안됨)</strong> 실패 원인을 의미하며, 여기에 전달하는 string 값을 기반으로 응답 TTS 생성  - <strong>noNextPlaylist</strong> : 다음 플레이리스트 요청 시, 재생 가능한 플레이리스트가 없는 경우  - <strong>noNextTrack</strong> : 다음 곡 요청 시, 재생 가능한 다음곡이 없는 경우,  - <strong>noTargetSong</strong> : 플레이어에 재생가능한 곡이 없는 대기상태  - <strong>appInternalServerError</strong> : CP의 내부 서버 연동간의 이슈로 응답실패 발생 시</td>
+<strong>(임의의 String으로 SDK에서 enum 처리하면 안됨)</strong><br>실패 원인을 의미하며, 여기에 전달하는 string 값을 기반으로 응답 TTS 생성<br>- <strong>noNextPlaylist</strong> : 다음 플레이리스트 요청 시, 재생 가능한 플레이리스트가 없는 경우<br>- <strong>noNextTrack</strong> : 다음 곡 요청 시, 재생 가능한 다음곡이 없는 경우,<br>- <strong>noTargetSong</strong> : 플레이어에 재생가능한 곡이 없는 대기상태<br>- <strong>appInternalServerError</strong> : CP의 내부 서버 연동간의 이슈로 응답실패 발생 시</td>
     </tr>
   </tbody>
 </table>
@@ -4992,7 +4991,7 @@ mediaPlayerAgent.delegate = MyMediaPlayerAgentDelegate()
       <td style="text-align: left">string</td>
       <td style="text-align: left">Y</td>
       <td style="text-align: left">
-<strong>(임의의 String으로 SDK에서 enum 처리하면 안됨)</strong> 실패 원인을 의미하며, 여기에 전달하는 string 값을 기반으로 응답 TTS 생성  - <strong>appInternalServerError</strong> : CP의 내부 서버 연동간의 이슈로 응답실패 발생 시</td>
+<strong>(임의의 String으로 SDK에서 enum 처리하면 안됨)</strong><br>실패 원인을 의미하며, 여기에 전달하는 string 값을 기반으로 응답 TTS 생성<br>- <strong>appInternalServerError</strong> : CP의 내부 서버 연동간의 이슈로 응답실패 발생 시</td>
     </tr>
   </tbody>
 </table>
@@ -5123,7 +5122,7 @@ mediaPlayerAgent.delegate = MyMediaPlayerAgentDelegate()
       <td style="text-align: left">string</td>
       <td style="text-align: left">Y</td>
       <td style="text-align: left">
-<strong>(임의의 String으로 SDK에서 enum 처리하면 안됨)</strong> 실패 원인을 의미하며, 여기에 전달하는 string 값을 기반으로 응답 TTS 생성  - <strong>appInternalServerError</strong> : CP의 내부 서버 연동간의 이슈로 응답실패 발생 시  - <strong>noTargetSong</strong> : 플레이어에 재생가능한 곡이 없는 대기상태</td>
+<strong>(임의의 String으로 SDK에서 enum 처리하면 안됨)</strong><br>실패 원인을 의미하며, 여기에 전달하는 string 값을 기반으로 응답 TTS 생성<br>- <strong>appInternalServerError</strong> : CP의 내부 서버 연동간의 이슈로 응답실패 발생 시<br>- <strong>noTargetSong</strong> : 플레이어에 재생가능한 곡이 없는 대기상태</td>
     </tr>
   </tbody>
 </table>
@@ -5254,7 +5253,7 @@ mediaPlayerAgent.delegate = MyMediaPlayerAgentDelegate()
       <td style="text-align: left">string</td>
       <td style="text-align: left">Y</td>
       <td style="text-align: left">
-<strong>(임의의 String으로 SDK에서 enum 처리하면 안됨)</strong> 실패 원인을 의미하며, 여기에 전달하는 string 값을 기반으로 응답 TTS 생성  - <strong>appInternalServerError</strong> : CP의 내부 서버 연동간의 이슈로 응답실패 발생 시  - <strong>noTargetSong</strong> : 플레이어에 재생가능한 곡이 없는 대기상태</td>
+<strong>(임의의 String으로 SDK에서 enum 처리하면 안됨)</strong><br>실패 원인을 의미하며, 여기에 전달하는 string 값을 기반으로 응답 TTS 생성<br>- <strong>appInternalServerError</strong> : CP의 내부 서버 연동간의 이슈로 응답실패 발생 시<br>- <strong>noTargetSong</strong> : 플레이어에 재생가능한 곡이 없는 대기상태</td>
     </tr>
   </tbody>
 </table>
@@ -5385,7 +5384,7 @@ mediaPlayerAgent.delegate = MyMediaPlayerAgentDelegate()
       <td style="text-align: left">string</td>
       <td style="text-align: left">Y</td>
       <td style="text-align: left">
-<strong>(임의의 String으로 SDK에서 enum 처리하면 안됨)</strong> 실패 원인을 의미하며, 여기에 전달하는 string 값을 기반으로 응답 TTS 생성  - <strong>appInternalServerError</strong> : CP의 내부 서버 연동간의 이슈로 응답실패 발생 시  - <strong>noTargetSong</strong> : 플레이어에 재생가능한 곡이 없는 대기상태</td>
+<strong>(임의의 String으로 SDK에서 enum 처리하면 안됨)</strong><br>실패 원인을 의미하며, 여기에 전달하는 string 값을 기반으로 응답 TTS 생성<br>- <strong>appInternalServerError</strong> : CP의 내부 서버 연동간의 이슈로 응답실패 발생 시<br>- <strong>noTargetSong</strong> : 플레이어에 재생가능한 곡이 없는 대기상태</td>
     </tr>
   </tbody>
 </table>
@@ -5450,7 +5449,7 @@ mediaPlayerAgent.delegate = MyMediaPlayerAgentDelegate()
       <td style="text-align: left">message</td>
       <td style="text-align: left">string</td>
       <td style="text-align: left">Y</td>
-      <td style="text-align: left">임의의 string으로 특정 정보를 전달하여 Play에서 활용하고자 하는 경우 사용 가능  - <strong>shuffleOn</strong> : 셔플 on  - <strong>shuffleOff</strong> : 셔플 off  - <strong>repeatSongOn</strong> : 곡 반복 on  - <strong>repeatAllOn</strong> : 전체 반복 on  - <strong>repeatOff</strong> : 반복 해제  - <strong>addLikeSong</strong> : 좋아요 추가 성공  - <strong>removeLikeSong</strong> : 좋아요 제거 성공</td>
+      <td style="text-align: left">임의의 string으로 특정 정보를 전달하여 Play에서 활용하고자 하는 경우 사용 가능<br>- <strong>shuffleOn</strong> : 셔플 on<br>- <strong>shuffleOff</strong> : 셔플 off<br>- <strong>repeatSongOn</strong> : 곡 반복 on<br>- <strong>repeatAllOn</strong> : 전체 반복 on<br>- <strong>repeatOff</strong> : 반복 해제<br>- <strong>addLikeSong</strong> : 좋아요 추가 성공<br>- <strong>removeLikeSong</strong> : 좋아요 제거 성공</td>
     </tr>
   </tbody>
 </table>
@@ -5516,7 +5515,7 @@ mediaPlayerAgent.delegate = MyMediaPlayerAgentDelegate()
       <td style="text-align: left">string</td>
       <td style="text-align: left">N</td>
       <td style="text-align: left">
-<strong>(임의의 String으로 SDK에서 enum 처리하면 안됨)</strong> 실패 원인을 의미하며, 여기에 전달하는 string 값을 기반으로 응답 TTS 생성  - <strong>addLikeAlreadySong</strong> : 이미 좋아요한 곡을 좋아요 추가  - <strong>addLikeExceedSong</strong> : 좋아요 최대등록 수량 초과  - <strong>removeLikeNoSong</strong> : 좋아요 상태가 아닌 곡 좋아요 해제 시도  - <strong>noTargetSong</strong> : 플레이어에 재생가능한 곡이 없는 대기상태  - <strong>requireLogin</strong> : 로그인 기능이 필수인 동작이나, 비로그인상태로 인한 실패  - <strong>appInternalServerError</strong> : CP의 내부 서버 연동간의 이슈로 응답실패 발생 시</td>
+<strong>(임의의 String으로 SDK에서 enum 처리하면 안됨)</strong><br>실패 원인을 의미하며, 여기에 전달하는 string 값을 기반으로 응답 TTS 생성<br>- <strong>addLikeAlreadySong</strong> : 이미 좋아요한 곡을 좋아요 추가<br>- <strong>addLikeExceedSong</strong> : 좋아요 최대등록 수량 초과<br>- <strong>removeLikeNoSong</strong> : 좋아요 상태가 아닌 곡 좋아요 해제 시도<br>- <strong>noTargetSong</strong> : 플레이어에 재생가능한 곡이 없는 대기상태<br>- <strong>requireLogin</strong> : 로그인 기능이 필수인 동작이나, 비로그인상태로 인한 실패<br>- <strong>appInternalServerError</strong> : CP의 내부 서버 연동간의 이슈로 응답실패 발생 시</td>
     </tr>
   </tbody>
 </table>
@@ -5657,7 +5656,7 @@ mediaPlayerAgent.delegate = MyMediaPlayerAgentDelegate()
       <td style="text-align: left">string</td>
       <td style="text-align: left">N</td>
       <td style="text-align: left">
-<strong>(임의의 String으로 SDK에서 enum 처리하면 안됨)</strong> 실패 원인을 의미하며, 여기에 전달하는 string 값을 기반으로 응답 TTS 생성  - <strong>appInternalServerError</strong> : CP의 내부 서버 연동간의 이슈로 응답실패 발생 시</td>
+<strong>(임의의 String으로 SDK에서 enum 처리하면 안됨)</strong><br>실패 원인을 의미하며, 여기에 전달하는 string 값을 기반으로 응답 TTS 생성<br>- <strong>appInternalServerError</strong> : CP의 내부 서버 연동간의 이슈로 응답실패 발생 시</td>
     </tr>
   </tbody>
 </table>
@@ -5751,7 +5750,7 @@ mediaPlayerAgent.delegate = MyMediaPlayerAgentDelegate()
       <td style="text-align: left">string</td>
       <td style="text-align: left">N</td>
       <td style="text-align: left">
-<strong>(임의의 String으로 SDK에서 enum 처리하면 안됨)</strong> 실패 원인을 의미하며, 여기에 전달하는 string 값을 기반으로 응답 TTS 생성  - <strong>appInternalServerError</strong> : CP의 내부 서버 연동간의 이슈로 응답실패 발생 시</td>
+<strong>(임의의 String으로 SDK에서 enum 처리하면 안됨)</strong><br>실패 원인을 의미하며, 여기에 전달하는 string 값을 기반으로 응답 TTS 생성<br>- <strong>appInternalServerError</strong> : CP의 내부 서버 연동간의 이슈로 응답실패 발생 시</td>
     </tr>
   </tbody>
 </table>
@@ -5845,7 +5844,7 @@ mediaPlayerAgent.delegate = MyMediaPlayerAgentDelegate()
       <td style="text-align: left">string</td>
       <td style="text-align: left">N</td>
       <td style="text-align: left">
-<strong>(임의의 String으로 SDK에서 enum 처리하면 안됨)</strong> 실패 원인을 의미하며, 여기에 전달하는 string 값을 기반으로 응답 TTS 생성  - <strong>appInternalServerError</strong> : CP의 내부 서버 연동간의 이슈로 응답실패 발생 시</td>
+<strong>(임의의 String으로 SDK에서 enum 처리하면 안됨)</strong><br>실패 원인을 의미하며, 여기에 전달하는 string 값을 기반으로 응답 TTS 생성<br>- <strong>appInternalServerError</strong> : CP의 내부 서버 연동간의 이슈로 응답실패 발생 시</td>
     </tr>
   </tbody>
 </table>

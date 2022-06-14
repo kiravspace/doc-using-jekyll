@@ -10,7 +10,6 @@
 <script type="text/javascript" src="/assets/js/jquery-ui.js"></script>
 <script type="text/javascript" src="/assets/js/main.js"></script>
 
-<script>MathJax={"tex":{"inlineMath":[["$","$"],["\\(","\\)"]],"displayMath":[["$$","$$"],["\\[","\\]"]]},"svg":{"fontCache":"global"},"options":{"enableMenu":false}}</script><script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script><script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
 </head>
 <body>
 <header>
@@ -62,7 +61,7 @@
     
         <li>
             <div class="nav_link fold ">
-                <a href="/nugu-play/nugu-ux/voice-interaction-design" class="nav_href">사용자 발화\(User Utterance\) 예상 하기</a>
+                <a href="/nugu-play/nugu-ux/voice-interaction-design" class="nav_href">사용자 발화(User Utterance) 예상 하기</a>
                 <span class="nav_unfold">+</span>
                 <span class="nav_fold">-</span>
             </div>
@@ -429,7 +428,7 @@
     
         <li>
             <div class="nav_link fold ">
-                <a href="/nugu-play/create-plays-with-play-builder/hello-aria/create-an-action-and-an-answer" class="nav_href">3) Action 만들고 응답 등록하기</a>
+                <a href="/nugu-play/create-plays-with-play-builder/hello-aria/create-an-intent-and-custom-utterances" class="nav_href">2) Intent 만들고 예상 발화 등록하기</a>
                 <span class="nav_unfold">+</span>
                 <span class="nav_fold">-</span>
             </div>
@@ -438,7 +437,7 @@
     
         <li>
             <div class="nav_link fold ">
-                <a href="/nugu-play/create-plays-with-play-builder/hello-aria/create-an-intent-and-custom-utterances" class="nav_href">2) Intent 만들고 예상 발화 등록하기</a>
+                <a href="/nugu-play/create-plays-with-play-builder/hello-aria/create-an-action-and-an-answer" class="nav_href">3) Action 만들고 응답 등록하기</a>
                 <span class="nav_unfold">+</span>
                 <span class="nav_fold">-</span>
             </div>
@@ -550,7 +549,7 @@
     
         <li>
             <div class="nav_link fold ">
-                <a href="/nugu-play/create-plays-with-play-builder/use-backend-proxy/capability-interfaces/audioplayer-display-interface" class="nav_href">AudioPlayer를 위한 Display Interface</a>
+                <a href="/nugu-play/create-plays-with-play-builder/use-backend-proxy/capability-interfaces/audioplayer-interface" class="nav_href">AudioPlayer Interface</a>
                 <span class="nav_unfold">+</span>
                 <span class="nav_fold">-</span>
             </div>
@@ -559,7 +558,7 @@
     
         <li>
             <div class="nav_link fold ">
-                <a href="/nugu-play/create-plays-with-play-builder/use-backend-proxy/capability-interfaces/audioplayer-interface" class="nav_href">AudioPlayer Interface</a>
+                <a href="/nugu-play/create-plays-with-play-builder/use-backend-proxy/capability-interfaces/audioplayer-display-interface" class="nav_href">AudioPlayer를 위한 Display Interface</a>
                 <span class="nav_unfold">+</span>
                 <span class="nav_fold">-</span>
             </div>
@@ -1379,7 +1378,7 @@
     
         <li>
             <div class="nav_link fold  has_child ">
-                <a href="/work-with-nugu-biz/biz-api/api-announcement" class="nav_href">API 발송 \(Announcement\)</a>
+                <a href="/work-with-nugu-biz/biz-api/api-announcement" class="nav_href">API 발송 (Announcement)</a>
                 <span class="nav_unfold">+</span>
                 <span class="nav_fold">-</span>
             </div>
@@ -2179,31 +2178,18 @@
   <tbody>
     <tr>
       <td>NLG Translator</td>
-      <td>
-<ul>
-  <li>정해진 규칙에 의해 값을 변환해 줍니다. - 1이 들어오면 ‘a’로, 2가 들어오면 ‘b’로 변환시킬 수 있습니다.</li>
-</ul>
-</td>
-      <td>
-<blockquote>
-
-</blockquote>
-</td>
+      <td>정해진 규칙에 의해 값을 변환해 줍니다.<br>1이 들어오면 ‘a’로, 2가 들어오면 ‘b’로 변환시킬 수 있습니다.</td>
+      <td>&gt;</td>
     </tr>
     <tr>
       <td>NLG Normalizer</td>
-      <td>
-<ul>
-  <li>정해진 규칙에 의해 값을 변환해 줍니다. - 한번에 여러 가지 값을 일괄 변경할 수 있습니다. - 1,2,3이 들어오면 ‘a’로, 3,4,5,6,7이 들어오면 ‘b’로 변환할 수 있습니다.</li>
-</ul>
-</td>
+      <td>정해진 규칙에 의해 값을 변환해 줍니다.<br>한번에 여러 가지 값을 일괄 변경할 수 있습니다.<br>1,2,3이 들어오면 ‘a’로, 3,4,5,6,7이 들어오면 ‘b’로 변환할 수 있습니다.</td>
       <td>=</td>
     </tr>
     <tr>
       <td>NLG Function</td>
       <td>정해진 규칙에 맞게 형식값을 변환합니다.</td>
-      <td style="text-align: left">
-</td>
+      <td>\:</td>
     </tr>
   </tbody>
 </table>
@@ -2211,11 +2197,11 @@
 <h2 id="nlg-translator-">NLG Translator <a href="nlg-translator" id="nlg-translator"></a>
 </h2>
 
-<p>날씨를 안내할 때, “오늘 날씨는 ``” 같이, 외부(기상 정보 제공 서버)에서 날씨 상태값을 체크한 뒤, 외부 연동 서버(Backend proxy)에서 “맑겠습니다.”, “눈이 올 예정입니다”와 같이 Prompt의 일부를 처리하는 것도 가능합니다.</p>
+<p>날씨를 안내할 때, “오늘 날씨는 <code class="language-plaintext highlighter-rouge">{{status}}</code>” 같이, 외부(기상 정보 제공 서버)에서 날씨 상태값을 체크한 뒤, 외부 연동 서버(Backend proxy)에서 “맑겠습니다.”, “눈이 올 예정입니다”와 같이 Prompt의 일부를 처리하는 것도 가능합니다.</p>
 
 <p>그러나 이렇게 Play를 만들 경우, 최종적으로 나갈 Prompt의 내용을 Play Builder에서 모두 확인하기 어렵고, Backend proxy에서도 별도로 관리를 해야 합니다. 즉, 문장 하나를 수정 하려고 해도 외부 연동 서버 개발자가 함께 Prompt 수정해야 하기 때문에 수시로 응답을 바꿔가며 Play를 운영하기가 어려워집니다.</p>
 
-<p>이럴 때, Parameter ``에는 날씨 상태를 나타내는 코드를 담고, 이 Paraemeter에 NLG Translator를 사용하여 각 코드 별 응답을 입력하여 처리하면, 조금 더 유연한 대응이 가능해집니다.</p>
+<p>이럴 때, Parameter <code class="language-plaintext highlighter-rouge">{{status}}</code>에는 날씨 상태를 나타내는 코드를 담고, 이 Paraemeter에 NLG Translator를 사용하여 각 코드 별 응답을 입력하여 처리하면, 조금 더 유연한 대응이 가능해집니다.</p>
 
 <p>NLG Translator를 입력하는 방법은 다음과 같습니다.</p>
 
@@ -2251,22 +2237,22 @@ Parameter 의 끝의 기호 <code class="language-plaintext highlighter-rouge">}
 <p>NLG Normalizer는 Translator와 기능이 유사하지만, 가장 큰 차이점은 여러 개의 Source를 하나의 Target으로 변경해 준다는 점입니다.</p>
 
 <ol>
-  <li>Play Builder 홈 화면에서 NLG Normalizer를 추가할 Play를 클릭하여 선택한 후 <code class="language-plaintext highlighter-rouge">Response Filters</code> &gt; <code class="language-plaintext highlighter-rouge">NLG Normalizer</code> &gt; <code class="language-plaintext highlighter-rouge">+NLG Normalizer 추가</code>를 클릭합니다.</li>
+  <li>
+    <p>Play Builder 홈 화면에서 NLG Normalizer를 추가할 Play를 클릭하여 선택한 후 <code class="language-plaintext highlighter-rouge">Response Filters</code> &gt; <code class="language-plaintext highlighter-rouge">NLG Normalizer</code> &gt; <code class="language-plaintext highlighter-rouge">+NLG Normalizer 추가</code>를 클릭합니다.</p>
+
+    <p><img src="/assets/images/define-response-filters-04.png" alt=""></p>
+  </li>
+  <li>
+    <p>Normalizer의 Filter명을 입력하고, 변경 전의 값을 Source에, 바뀔 값을 Target에 각각 입력한 후 <code class="language-plaintext highlighter-rouge">Enter</code> 키를 누르거나 입력 필드 이외 영역에 마우스 왼쪽 버튼을 클릭합니다.</p>
+
+    <p><img src="/assets/images/define-response-filters-05.png" alt=""></p>
+  </li>
+  <li>
+    <p>NLG Normalizer의 자동 완성 기능으로 적용하기 위한 기호는 = 이며, 사용 방법은 NLG Translator와 같습니다.</p>
+
+    <p><img src="/assets/images/define-response-filters-06.gif" alt=""></p>
+  </li>
 </ol>
-
-<p><img src="/assets/images/define-response-filters-04.png" alt=""></p>
-
-<ol>
-  <li>Normalizer의 Filter명을 입력하고, 변경 전의 값을 Source에, 바뀔 값을 Target에 각각 입력한 후 <code class="language-plaintext highlighter-rouge">Enter</code> 키를 누르거나 입력 필드 이외 영역에 마우스 왼쪽 버튼을 클릭합니다.</li>
-</ol>
-
-<p><img src="/assets/images/define-response-filters-05.png" alt=""></p>
-
-<ol>
-  <li>NLG Normalizer의 자동 완성 기능으로 적용하기 위한 기호는 = 이며, 사용 방법은 NLG Translator와 같습니다.</li>
-</ol>
-
-<p><img src="/assets/images/define-response-filters-06.gif" alt=""></p>
 
 <h2 id="nlg-function-">NLG Function <a href="nlg-function" id="nlg-function"></a>
 </h2>

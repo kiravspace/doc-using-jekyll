@@ -10,7 +10,6 @@
 <script type="text/javascript" src="/assets/js/jquery-ui.js"></script>
 <script type="text/javascript" src="/assets/js/main.js"></script>
 
-<script>MathJax={"tex":{"inlineMath":[["$","$"],["\\(","\\)"]],"displayMath":[["$$","$$"],["\\[","\\]"]]},"svg":{"fontCache":"global"},"options":{"enableMenu":false}}</script><script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script><script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
 </head>
 <body>
 <header>
@@ -62,7 +61,7 @@
     
         <li>
             <div class="nav_link fold ">
-                <a href="/nugu-play/nugu-ux/voice-interaction-design" class="nav_href">사용자 발화\(User Utterance\) 예상 하기</a>
+                <a href="/nugu-play/nugu-ux/voice-interaction-design" class="nav_href">사용자 발화(User Utterance) 예상 하기</a>
                 <span class="nav_unfold">+</span>
                 <span class="nav_fold">-</span>
             </div>
@@ -429,7 +428,7 @@
     
         <li>
             <div class="nav_link fold ">
-                <a href="/nugu-play/create-plays-with-play-builder/hello-aria/create-an-action-and-an-answer" class="nav_href">3) Action 만들고 응답 등록하기</a>
+                <a href="/nugu-play/create-plays-with-play-builder/hello-aria/create-an-intent-and-custom-utterances" class="nav_href">2) Intent 만들고 예상 발화 등록하기</a>
                 <span class="nav_unfold">+</span>
                 <span class="nav_fold">-</span>
             </div>
@@ -438,7 +437,7 @@
     
         <li>
             <div class="nav_link fold ">
-                <a href="/nugu-play/create-plays-with-play-builder/hello-aria/create-an-intent-and-custom-utterances" class="nav_href">2) Intent 만들고 예상 발화 등록하기</a>
+                <a href="/nugu-play/create-plays-with-play-builder/hello-aria/create-an-action-and-an-answer" class="nav_href">3) Action 만들고 응답 등록하기</a>
                 <span class="nav_unfold">+</span>
                 <span class="nav_fold">-</span>
             </div>
@@ -550,7 +549,7 @@
     
         <li>
             <div class="nav_link fold ">
-                <a href="/nugu-play/create-plays-with-play-builder/use-backend-proxy/capability-interfaces/audioplayer-display-interface" class="nav_href">AudioPlayer를 위한 Display Interface</a>
+                <a href="/nugu-play/create-plays-with-play-builder/use-backend-proxy/capability-interfaces/audioplayer-interface" class="nav_href">AudioPlayer Interface</a>
                 <span class="nav_unfold">+</span>
                 <span class="nav_fold">-</span>
             </div>
@@ -559,7 +558,7 @@
     
         <li>
             <div class="nav_link fold ">
-                <a href="/nugu-play/create-plays-with-play-builder/use-backend-proxy/capability-interfaces/audioplayer-interface" class="nav_href">AudioPlayer Interface</a>
+                <a href="/nugu-play/create-plays-with-play-builder/use-backend-proxy/capability-interfaces/audioplayer-display-interface" class="nav_href">AudioPlayer를 위한 Display Interface</a>
                 <span class="nav_unfold">+</span>
                 <span class="nav_fold">-</span>
             </div>
@@ -1379,7 +1378,7 @@
     
         <li>
             <div class="nav_link fold  has_child ">
-                <a href="/work-with-nugu-biz/biz-api/api-announcement" class="nav_href">API 발송 \(Announcement\)</a>
+                <a href="/work-with-nugu-biz/biz-api/api-announcement" class="nav_href">API 발송 (Announcement)</a>
                 <span class="nav_unfold">+</span>
                 <span class="nav_fold">-</span>
             </div>
@@ -2186,47 +2185,47 @@
   <tbody>
     <tr>
       <td style="text-align: left">
-<strong>fun onElementSelected(tokenId: String)</strong> View내 버튼 클릭시 호출된다.</td>
+<strong>fun onElementSelected(tokenId: String)</strong><br>View내 버튼 클릭시 호출된다.</td>
     </tr>
     <tr>
       <td style="text-align: left">
-<strong>fun onChipSelected(text: String)</strong> View내 chip(추천 명령어) 클릭시 호출된다.</td>
+<strong>fun onChipSelected(text: String)</strong><br>View내 chip(추천 명령어) 클릭시 호출된다.</td>
     </tr>
     <tr>
       <td style="text-align: left">
-<strong>fun onCloseClicked()</strong> View내 닫기 버튼 클릭시 호출된다.</td>
+<strong>fun onCloseClicked()</strong><br>View내 닫기 버튼 클릭시 호출된다.</td>
     </tr>
     <tr>
       <td style="text-align: left">
-<strong>fun onCloseAllClicked()</strong> View내 홈 버튼 클릭시 호출된다. SDK에서는 노출중인 모든 템플릿을 종료한다.</td>
+<strong>fun onCloseAllClicked()</strong><br>View내 홈 버튼 클릭시 호출된다. SDK에서는 노출중인 모든 템플릿을 종료한다.</td>
     </tr>
     <tr>
       <td style="text-align: left">
-<strong>fun onNuguButtonSelected()</strong> View내 누구 버튼 (아리아 호출) 클릭시 호출된다.</td>
+<strong>fun onNuguButtonSelected()</strong><br>View내 누구 버튼 (아리아 호출) 클릭시 호출된다.</td>
     </tr>
     <tr>
       <td style="text-align: left">
-<strong>fun onPlayerCommand(command: String, param: String = “”)</strong> 미디어 재생 관련 동작이 필요할때 호출된다. (ex. View내 재생/일시정지 버튼 클릭)</td>
+<strong>fun onPlayerCommand(command: String, param: String = “”)</strong><br>미디어 재생 관련 동작이 필요할때 호출된다. (ex. View내 재생/일시정지 버튼 클릭)</td>
     </tr>
     <tr>
       <td style="text-align: left">
-<strong>fun onContextChanged(context: String)</strong> View의 display context 변경이 있을때 호출된다. (ex. focus item 변화, visible item 리스트의 변화)</td>
+<strong>fun onContextChanged(context: String)</strong><br>View의 display context 변경이 있을때 호출된다. (ex. focus item 변화, visible item 리스트의 변화)</td>
     </tr>
     <tr>
       <td style="text-align: left">
-<strong>fun showToast(text: String)</strong> View에서 응용레벨로 Toast노출을 요청할때 호출된다.</td>
+<strong>fun showToast(text: String)</strong><br>View에서 응용레벨로 Toast노출을 요청할때 호출된다.</td>
     </tr>
     <tr>
       <td style="text-align: left">
-<strong>fun showActivity(className: String)</strong> View에서 응용레벨로 Activity 노출을 요청할때 호출된다.</td>
+<strong>fun showActivity(className: String)</strong><br>View에서 응용레벨로 Activity 노출을 요청할때 호출된다.</td>
     </tr>
     <tr>
       <td style="text-align: left">
-<strong>fun playTTS(text: String)</strong> View에서 응용레벨로 TTS 재생을 요청할때 호출된다.</td>
+<strong>fun playTTS(text: String)</strong><br>View에서 응용레벨로 TTS 재생을 요청할때 호출된다.</td>
     </tr>
     <tr>
       <td style="text-align: left">
-<strong>fun setClientListener(listener: ClientListener)</strong> handler에 ClientListener를 설정한다.</td>
+<strong>fun setClientListener(listener: ClientListener)</strong><br>handler에 ClientListener를 설정한다.</td>
     </tr>
   </tbody>
 </table>
@@ -2244,31 +2243,31 @@
   <tbody>
     <tr>
       <td style="text-align: left">
-<strong>fun onMediaStateChanged(activity: AudioPlayerAgentInterface.State, currentTimeMs: Long, currentProgress: Float)</strong> 미디어 재생 상태 변경시 호출된다.</td>
+<strong>fun onMediaStateChanged(activity: AudioPlayerAgentInterface.State, currentTimeMs: Long, currentProgress: Float)</strong><br>미디어 재생 상태 변경시 호출된다.</td>
     </tr>
     <tr>
       <td style="text-align: left">
-<strong>fun onMediaDurationRetrieved(durationMs: Long)</strong> 미디어의 재생시간이 구해졌을때 호출된다.</td>
+<strong>fun onMediaDurationRetrieved(durationMs: Long)</strong><br>미디어의 재생시간이 구해졌을때 호출된다.</td>
     </tr>
     <tr>
       <td style="text-align: left">
-<strong>fun onMediaProgressChanged(progress: Float, currentTimeMs: Long)</strong> 미디어의 재생경과 업데이트시 호출된다.</td>
+<strong>fun onMediaProgressChanged(progress: Float, currentTimeMs: Long)</strong><br>미디어의 재생경과 업데이트시 호출된다.</td>
     </tr>
     <tr>
       <td style="text-align: left">
-<strong>fun controlFocus(direction: Direction): Boolean</strong> View에 focus 이동을 요청한다.</td>
+<strong>fun controlFocus(direction: Direction): Boolean</strong><br>View에 focus 이동을 요청한다.</td>
     </tr>
     <tr>
       <td style="text-align: left">
-<strong>fun controlScroll(direction: Direction): Boolean</strong> View에 scroll 을 요청한다.</td>
+<strong>fun controlScroll(direction: Direction): Boolean</strong><br>View에 scroll 을 요청한다.</td>
     </tr>
     <tr>
       <td style="text-align: left">
-<strong>fun getFocusedItemToken(): String?</strong> View내에 현재 focusing 중인 아이템의 토큰정보를 요구한다.</td>
+<strong>fun getFocusedItemToken(): String?</strong><br>View내에 현재 focusing 중인 아이템의 토큰정보를 요구한다.</td>
     </tr>
     <tr>
       <td style="text-align: left">
-<strong>fun getVisibleTokenList(): List?</strong> View내에 현재 visible한 아이템 리스트정보를 요구한다.</td>
+<strong>fun getVisibleTokenList(): List?</strong><br>View내에 현재 visible한 아이템 리스트정보를 요구한다.</td>
     </tr>
   </tbody>
 </table>

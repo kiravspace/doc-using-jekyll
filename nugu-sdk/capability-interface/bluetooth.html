@@ -10,7 +10,6 @@
 <script type="text/javascript" src="/assets/js/jquery-ui.js"></script>
 <script type="text/javascript" src="/assets/js/main.js"></script>
 
-<script>MathJax={"tex":{"inlineMath":[["$","$"],["\\(","\\)"]],"displayMath":[["$$","$$"],["\\[","\\]"]]},"svg":{"fontCache":"global"},"options":{"enableMenu":false}}</script><script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script><script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
 </head>
 <body>
 <header>
@@ -62,7 +61,7 @@
     
         <li>
             <div class="nav_link fold ">
-                <a href="/nugu-play/nugu-ux/voice-interaction-design" class="nav_href">사용자 발화\(User Utterance\) 예상 하기</a>
+                <a href="/nugu-play/nugu-ux/voice-interaction-design" class="nav_href">사용자 발화(User Utterance) 예상 하기</a>
                 <span class="nav_unfold">+</span>
                 <span class="nav_fold">-</span>
             </div>
@@ -429,7 +428,7 @@
     
         <li>
             <div class="nav_link fold ">
-                <a href="/nugu-play/create-plays-with-play-builder/hello-aria/create-an-action-and-an-answer" class="nav_href">3) Action 만들고 응답 등록하기</a>
+                <a href="/nugu-play/create-plays-with-play-builder/hello-aria/create-an-intent-and-custom-utterances" class="nav_href">2) Intent 만들고 예상 발화 등록하기</a>
                 <span class="nav_unfold">+</span>
                 <span class="nav_fold">-</span>
             </div>
@@ -438,7 +437,7 @@
     
         <li>
             <div class="nav_link fold ">
-                <a href="/nugu-play/create-plays-with-play-builder/hello-aria/create-an-intent-and-custom-utterances" class="nav_href">2) Intent 만들고 예상 발화 등록하기</a>
+                <a href="/nugu-play/create-plays-with-play-builder/hello-aria/create-an-action-and-an-answer" class="nav_href">3) Action 만들고 응답 등록하기</a>
                 <span class="nav_unfold">+</span>
                 <span class="nav_fold">-</span>
             </div>
@@ -550,7 +549,7 @@
     
         <li>
             <div class="nav_link fold ">
-                <a href="/nugu-play/create-plays-with-play-builder/use-backend-proxy/capability-interfaces/audioplayer-display-interface" class="nav_href">AudioPlayer를 위한 Display Interface</a>
+                <a href="/nugu-play/create-plays-with-play-builder/use-backend-proxy/capability-interfaces/audioplayer-interface" class="nav_href">AudioPlayer Interface</a>
                 <span class="nav_unfold">+</span>
                 <span class="nav_fold">-</span>
             </div>
@@ -559,7 +558,7 @@
     
         <li>
             <div class="nav_link fold ">
-                <a href="/nugu-play/create-plays-with-play-builder/use-backend-proxy/capability-interfaces/audioplayer-interface" class="nav_href">AudioPlayer Interface</a>
+                <a href="/nugu-play/create-plays-with-play-builder/use-backend-proxy/capability-interfaces/audioplayer-display-interface" class="nav_href">AudioPlayer를 위한 Display Interface</a>
                 <span class="nav_unfold">+</span>
                 <span class="nav_fold">-</span>
             </div>
@@ -1379,7 +1378,7 @@
     
         <li>
             <div class="nav_link fold  has_child ">
-                <a href="/work-with-nugu-biz/biz-api/api-announcement" class="nav_href">API 발송 \(Announcement\)</a>
+                <a href="/work-with-nugu-biz/biz-api/api-announcement" class="nav_href">API 발송 (Announcement)</a>
                 <span class="nav_unfold">+</span>
                 <span class="nav_fold">-</span>
             </div>
@@ -2282,7 +2281,7 @@ nugu_client-&gt;getCapabilityBuilder()
 
 <h3 id="context-구성">Context 구성</h3>
 
-<p>디바이스의 블루투스 상태를 <a href="speaker.md#context">Context</a> 에 포함시켜 주어야 합니다.</p>
+<p>디바이스의 블루투스 상태를 <a href="speaker#context">Context</a> 에 포함시켜 주어야 합니다.</p>
 
 <p><a href="https://github.com/nugu-developers/nugu-android/blob/master/nugu-agent/src/main/java/com/skt/nugu/sdk/agent/bluetooth/BluetoothProvider.kt#L21">Android reference</a></p>
 
@@ -2373,9 +2372,9 @@ auto bluetooth_listener(std::make_shared&lt;BluetoothListener&gt;());
 
 <h3 id="블루투스-기기-제어">블루투스 기기 제어</h3>
 
-<p>디바이스의 블루투스 기기 제어가 <a href="bluetooth.md#startdiscoverablemode">StartDiscoverableMode</a>/<a href="bluetooth.md#finishdiscoverablemode">FinishDiscoverableMode</a> directive 로 요청될 수 있습니다.</p>
+<p>디바이스의 블루투스 기기 제어가 <a href="bluetooth#startdiscoverablemode">StartDiscoverableMode</a>/<a href="bluetooth#finishdiscoverablemode">FinishDiscoverableMode</a> directive 로 요청될 수 있습니다.</p>
 
-<p>디바이스와 연결된 블루투스 기기의 음원 재생이 <a href="bluetooth.md#play">Play</a>/<a href="bluetooth.md#stop">Stop</a>/<a href="bluetooth.md#pause">Pause</a>/<a href="bluetooth.md#next">Next</a>/<a href="bluetooth.md#previous">Previous</a> directive 로 요청될 수 있습니다.</p>
+<p>디바이스와 연결된 블루투스 기기의 음원 재생이 <a href="bluetooth#play">Play</a>/<a href="bluetooth#stop">Stop</a>/<a href="bluetooth#pause">Pause</a>/<a href="bluetooth#next">Next</a>/<a href="bluetooth#previous">Previous</a> directive 로 요청될 수 있습니다.</p>
 
 <div id="tabs-111" class="tabs">
     <ul>

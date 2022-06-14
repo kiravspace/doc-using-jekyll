@@ -10,7 +10,6 @@
 <script type="text/javascript" src="/assets/js/jquery-ui.js"></script>
 <script type="text/javascript" src="/assets/js/main.js"></script>
 
-<script>MathJax={"tex":{"inlineMath":[["$","$"],["\\(","\\)"]],"displayMath":[["$$","$$"],["\\[","\\]"]]},"svg":{"fontCache":"global"},"options":{"enableMenu":false}}</script><script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script><script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
 </head>
 <body>
 <header>
@@ -62,7 +61,7 @@
     
         <li>
             <div class="nav_link fold ">
-                <a href="/nugu-play/nugu-ux/voice-interaction-design" class="nav_href">사용자 발화\(User Utterance\) 예상 하기</a>
+                <a href="/nugu-play/nugu-ux/voice-interaction-design" class="nav_href">사용자 발화(User Utterance) 예상 하기</a>
                 <span class="nav_unfold">+</span>
                 <span class="nav_fold">-</span>
             </div>
@@ -429,7 +428,7 @@
     
         <li>
             <div class="nav_link fold ">
-                <a href="/nugu-play/create-plays-with-play-builder/hello-aria/create-an-action-and-an-answer" class="nav_href">3) Action 만들고 응답 등록하기</a>
+                <a href="/nugu-play/create-plays-with-play-builder/hello-aria/create-an-intent-and-custom-utterances" class="nav_href">2) Intent 만들고 예상 발화 등록하기</a>
                 <span class="nav_unfold">+</span>
                 <span class="nav_fold">-</span>
             </div>
@@ -438,7 +437,7 @@
     
         <li>
             <div class="nav_link fold ">
-                <a href="/nugu-play/create-plays-with-play-builder/hello-aria/create-an-intent-and-custom-utterances" class="nav_href">2) Intent 만들고 예상 발화 등록하기</a>
+                <a href="/nugu-play/create-plays-with-play-builder/hello-aria/create-an-action-and-an-answer" class="nav_href">3) Action 만들고 응답 등록하기</a>
                 <span class="nav_unfold">+</span>
                 <span class="nav_fold">-</span>
             </div>
@@ -550,7 +549,7 @@
     
         <li>
             <div class="nav_link fold ">
-                <a href="/nugu-play/create-plays-with-play-builder/use-backend-proxy/capability-interfaces/audioplayer-display-interface" class="nav_href">AudioPlayer를 위한 Display Interface</a>
+                <a href="/nugu-play/create-plays-with-play-builder/use-backend-proxy/capability-interfaces/audioplayer-interface" class="nav_href">AudioPlayer Interface</a>
                 <span class="nav_unfold">+</span>
                 <span class="nav_fold">-</span>
             </div>
@@ -559,7 +558,7 @@
     
         <li>
             <div class="nav_link fold ">
-                <a href="/nugu-play/create-plays-with-play-builder/use-backend-proxy/capability-interfaces/audioplayer-interface" class="nav_href">AudioPlayer Interface</a>
+                <a href="/nugu-play/create-plays-with-play-builder/use-backend-proxy/capability-interfaces/audioplayer-display-interface" class="nav_href">AudioPlayer를 위한 Display Interface</a>
                 <span class="nav_unfold">+</span>
                 <span class="nav_fold">-</span>
             </div>
@@ -1379,7 +1378,7 @@
     
         <li>
             <div class="nav_link fold  has_child ">
-                <a href="/work-with-nugu-biz/biz-api/api-announcement" class="nav_href">API 발송 \(Announcement\)</a>
+                <a href="/work-with-nugu-biz/biz-api/api-announcement" class="nav_href">API 발송 (Announcement)</a>
                 <span class="nav_unfold">+</span>
                 <span class="nav_fold">-</span>
             </div>
@@ -2176,9 +2175,11 @@
 <h2 id="oauth란">OAuth란?</h2>
 
 <blockquote>
-  <p>OAuth는 인터넷 사용자들이 비밀번호를 제공하지 않고 다른 웹사이트 상의 자신들의 정보에 대해 웹사이트나 애플리케이션의 접근 권한을 부여할 수 있는 공통적인 수단으로서 사용되는, 접근 위임을 위한 개방형 표준이다.<br>
-이 매커니즘은 여러 기업들에 의해 사용되는데, 이를테면 아마존, 구글, 페이스북, 마이크로소프트, 트위터가 있으며 사용자들이 타사 애플리케이션이나 웹사이트의 계정에 관한 정보를 공유할 수 있게 허용한다.<br>
-출처: <a href="https://ko.wikipedia.org/wiki/OAuth">Wikipedia</a></p>
+  <p>OAuth는 인터넷 사용자들이 비밀번호를 제공하지 않고 다른 웹사이트 상의 자신들의 정보에 대해 웹사이트나 애플리케이션의 접근 권한을 부여할 수 있는 공통적인 수단으로서 사용되는, 접근 위임을 위한 개방형 표준이다.</p>
+
+  <p>이 매커니즘은 여러 기업들에 의해 사용되는데, 이를테면 아마존, 구글, 페이스북, 마이크로소프트, 트위터가 있으며 사용자들이 타사 애플리케이션이나 웹사이트의 계정에 관한 정보를 공유할 수 있게 허용한다.</p>
+
+  <p>출처: <a href="https://ko.wikipedia.org/wiki/OAuth">Wikipedia</a></p>
 </blockquote>
 
 <p>OAuth를 이용해 사용자 정보에 접근할 수 있고, 이를 통해 Play의 기능을 확장할 수 있습니다. NUGU developers에서는 OAuth 2.0 연동을 지원하며 다음의 방식으로 이용할 수 있습니다.</p>
@@ -2241,7 +2242,7 @@
 <ul>
   <li>로그인 URL : <a href="https://github.com/login/oauth/authorize">https://github.com/login/oauth/authorize</a>
 </li>
-  <li>Access token URL : <a href="https://github.com/login/oauth/access%5C_token">https://github.com/login/oauth/access_token</a>
+  <li>Access token URL : <a href="https://github.com/login/oauth/access_token">https://github.com/login/oauth/access_token</a>
 </li>
 </ul>
 
@@ -2273,7 +2274,7 @@
 <p>repo와 gist를 추가합니다.(최대 5개)</p>
 
 <h4 id="-access-token-url">④ Access token URL</h4>
-<p>3단계에서 확인한 URL을 입력합니다.(<a href="https://github.com/login/oauth/access%5C_token">https://github.com/login/oauth/access_token</a>)</p>
+<p>3단계에서 확인한 URL을 입력합니다.(<a href="https://github.com/login/oauth/access_token">https://github.com/login/oauth/access_token</a>)</p>
 
 <h4 id="-클라이언트-secret">⑤ 클라이언트 secret</h4>
 <p>2단계에서 확인한 클라이언트 Secret을 입력합니다. 예) 12bf7a85698496fd87e6cb6703914617fb693ce0)</p>
@@ -2329,17 +2330,17 @@
     </tr>
     <tr>
       <td>권한 범위</td>
-      <td>Access Toke Scope이 있는 경우 입력합니다. 자세한 내용은 OAuth 2.0 문서의 Access Token Scope 참고하세요.</td>
+      <td>Access Toke Scope이 있는 경우 입력합니다.<br>자세한 내용은 OAuth 2.0 문서의 Access Token Scope 참고하세요.</td>
       <td><code class="language-plaintext highlighter-rouge">repo, gist</code></td>
     </tr>
     <tr>
       <td>Access token URL*</td>
-      <td>Access Token을 발급 받을 수 있는 URL을 입력합니다. 자세한 내용은 OAuth 2.0 문서의 Access Token Request를 참고하세요.</td>
+      <td>Access Token을 발급 받을 수 있는 URL을 입력합니다.<br>자세한 내용은 OAuth 2.0 문서의 Access Token Request를 참고하세요.</td>
       <td><code class="language-plaintext highlighter-rouge">https://your-domian/access-token</code></td>
     </tr>
     <tr>
       <td>Access token 재발급 URL</td>
-      <td>Refresh token을 발급받기 위한 URL입니다. 자세한 내용은 OAuth 2.0 문서의 Refreshing an Access Token를 참고하세요.</td>
+      <td>Refresh token을 발급받기 위한 URL입니다.<br>자세한 내용은 OAuth 2.0 문서의 Refreshing an Access Token를 참고하세요.</td>
       <td><code class="language-plaintext highlighter-rouge">https://your-domain/refresh-token</code></td>
     </tr>
     <tr>
@@ -2537,15 +2538,15 @@ Content-Length:
 
 <ol>
   <li>Play의 상태가 등록중, 심사대기, 심사반려, 심사중, 심사완료, 배포대기 중인 경우에 스피커에서 테스트가 가능합니다.
- <img src="/assets/images/link-oauth20-06.png" alt="">
+<img src="/assets/images/link-oauth20-06.png" alt="">
 </li>
   <li>
 <a href="test-a-play">테스트하기</a>에서 ‘디바이스(스피커)에서 테스트하기’ 항목을 참고하여 테스트 스피커를 추가합니다.</li>
   <li>NUGU 앱에 접속하여 왼쪽 위의 햄버거 메뉴를 클릭한 후 NUGU play 항목에서 내가 만든 Play를 클릭합니다.
- <img src="/assets/images/link-oauth20-07.png" alt="">
+<img src="/assets/images/link-oauth20-07.png" alt="">
 </li>
   <li>‘계정 연동’ 버튼을 클릭합니다. 계정 연동 후 스피커로 테스트합니다. NUGU 앱에서 계정 연동을 하고 스피커로 테스트 하면 accessToken을 받을 수 있습니다. (단, 플레이 등록 후 하루 후부터 스피커 테스트가 가능합니다.)
- <img src="/assets/images/link-oauth20-08.png" alt="">
+<img src="/assets/images/link-oauth20-08.png" alt="">
 </li>
 </ol>
 

@@ -10,7 +10,6 @@
 <script type="text/javascript" src="/assets/js/jquery-ui.js"></script>
 <script type="text/javascript" src="/assets/js/main.js"></script>
 
-<script>MathJax={"tex":{"inlineMath":[["$","$"],["\\(","\\)"]],"displayMath":[["$$","$$"],["\\[","\\]"]]},"svg":{"fontCache":"global"},"options":{"enableMenu":false}}</script><script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script><script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
 </head>
 <body>
 <header>
@@ -62,7 +61,7 @@
     
         <li>
             <div class="nav_link fold ">
-                <a href="/nugu-play/nugu-ux/voice-interaction-design" class="nav_href">사용자 발화\(User Utterance\) 예상 하기</a>
+                <a href="/nugu-play/nugu-ux/voice-interaction-design" class="nav_href">사용자 발화(User Utterance) 예상 하기</a>
                 <span class="nav_unfold">+</span>
                 <span class="nav_fold">-</span>
             </div>
@@ -429,7 +428,7 @@
     
         <li>
             <div class="nav_link fold ">
-                <a href="/nugu-play/create-plays-with-play-builder/hello-aria/create-an-action-and-an-answer" class="nav_href">3) Action 만들고 응답 등록하기</a>
+                <a href="/nugu-play/create-plays-with-play-builder/hello-aria/create-an-intent-and-custom-utterances" class="nav_href">2) Intent 만들고 예상 발화 등록하기</a>
                 <span class="nav_unfold">+</span>
                 <span class="nav_fold">-</span>
             </div>
@@ -438,7 +437,7 @@
     
         <li>
             <div class="nav_link fold ">
-                <a href="/nugu-play/create-plays-with-play-builder/hello-aria/create-an-intent-and-custom-utterances" class="nav_href">2) Intent 만들고 예상 발화 등록하기</a>
+                <a href="/nugu-play/create-plays-with-play-builder/hello-aria/create-an-action-and-an-answer" class="nav_href">3) Action 만들고 응답 등록하기</a>
                 <span class="nav_unfold">+</span>
                 <span class="nav_fold">-</span>
             </div>
@@ -550,7 +549,7 @@
     
         <li>
             <div class="nav_link fold ">
-                <a href="/nugu-play/create-plays-with-play-builder/use-backend-proxy/capability-interfaces/audioplayer-display-interface" class="nav_href">AudioPlayer를 위한 Display Interface</a>
+                <a href="/nugu-play/create-plays-with-play-builder/use-backend-proxy/capability-interfaces/audioplayer-interface" class="nav_href">AudioPlayer Interface</a>
                 <span class="nav_unfold">+</span>
                 <span class="nav_fold">-</span>
             </div>
@@ -559,7 +558,7 @@
     
         <li>
             <div class="nav_link fold ">
-                <a href="/nugu-play/create-plays-with-play-builder/use-backend-proxy/capability-interfaces/audioplayer-interface" class="nav_href">AudioPlayer Interface</a>
+                <a href="/nugu-play/create-plays-with-play-builder/use-backend-proxy/capability-interfaces/audioplayer-display-interface" class="nav_href">AudioPlayer를 위한 Display Interface</a>
                 <span class="nav_unfold">+</span>
                 <span class="nav_fold">-</span>
             </div>
@@ -1379,7 +1378,7 @@
     
         <li>
             <div class="nav_link fold  has_child ">
-                <a href="/work-with-nugu-biz/biz-api/api-announcement" class="nav_href">API 발송 \(Announcement\)</a>
+                <a href="/work-with-nugu-biz/biz-api/api-announcement" class="nav_href">API 발송 (Announcement)</a>
                 <span class="nav_unfold">+</span>
                 <span class="nav_fold">-</span>
             </div>
@@ -2185,7 +2184,7 @@
     <tr>
       <td style="text-align: left">1.1</td>
       <td style="text-align: left">2020.04.29</td>
-      <td style="text-align: left">Recognize directive 에 wakeup, timeout 필드 추가 Recognize directive, ExpechSpeech event 에 asrContext 필 추가</td>
+      <td style="text-align: left">Recognize directive 에 wakeup, timeout 필드 추가<br>Recognize directive, ExpechSpeech event 에 asrContext 필드 추가</td>
     </tr>
     <tr>
       <td style="text-align: left">1.2</td>
@@ -2443,7 +2442,7 @@ nugu_client-&gt;getCapabilityBuilder()
 
 <h3 id="음성-인식-요청">음성 인식 요청</h3>
 
-<p><code class="language-plaintext highlighter-rouge">아리아</code> 발화 또는 NUGU Button 선택 시 <a href="asr.md#recognize">Recognize</a> event 를 전달하여 음성인식을 시작할 수 있습니다.</p>
+<p><code class="language-plaintext highlighter-rouge">아리아</code> 발화 또는 NUGU Button 선택 시 <a href="asr#recognize">Recognize</a> event 를 전달하여 음성인식을 시작할 수 있습니다.</p>
 
 <div id="tabs-139" class="tabs">
     <ul>
@@ -2512,7 +2511,7 @@ asrAgent.startRecognition(initiator: .user)
 
 <p>음성인식에 대한 진행 상태를 모니터링 할 수 있습니다.</p>
 
-<p>음성인식에 대한 STT(SpeechToText) 결과가 <a href="asr.md#notifyresult">NotifyResult</a> directive 로 전달됩니다.</p>
+<p>음성인식에 대한 STT(SpeechToText) 결과가 <a href="asr#notifyresult">NotifyResult</a> directive 로 전달됩니다.</p>
 
 <div id="tabs-172" class="tabs">
     <ul>
@@ -2702,7 +2701,7 @@ CapabilityFactory::makeCapability&lt;ASRAgent, IASRHandler&gt;(asr_listener.get(
 
 <h3 id="음성-인식-중단">음성 인식 중단</h3>
 
-<p>사용자가 음성 인식 중단 요청을 <a href="asr.md#stoprecognize">StopRecognize</a> event 로 전달할 수 있습니다.</p>
+<p>사용자가 음성 인식 중단 요청을 <a href="asr#stoprecognize">StopRecognize</a> event 로 전달할 수 있습니다.</p>
 
 <div id="tabs-268" class="tabs">
     <ul>
@@ -2807,20 +2806,19 @@ CapabilityFactory::makeCapability&lt;ASRAgent, IASRHandler&gt;(asr_listener.get(
       <td style="text-align: left">engine</td>
       <td style="text-align: left">string</td>
       <td style="text-align: left">N</td>
-      <td style="text-align: left">Device 에서 사용하는 음성인식 engine 을 명시 NUGU 음성인식 engine 을 사용하는 경우 “skt” (값을 채우지 않으면 default “skt”)</td>
+      <td style="text-align: left">Device 에서 사용하는 음성인식 engine 을 명시 NUGU 음성인식 engine 을 사용하는 경우 “skt”(값을 채우지 않으면 default “skt”)</td>
     </tr>
     <tr>
       <td style="text-align: left">state</td>
       <td style="text-align: left">string</td>
       <td style="text-align: left">Y</td>
-      <td style="text-align: left">IDLE, EXPECTING_SPEECH, LISTENING, RECOGNIZING, BUSY <a href="asr.md#state-diagram">State Diagram</a> 참고</td>
+      <td style="text-align: left">IDLE<br>EXPECTING_SPEECH<br>LISTENING<br>RECOGNIZING<br>BUSY<br><a href="asr#state-diagram">State Diagram</a> 참고</td>
     </tr>
     <tr>
       <td style="text-align: left">initiator</td>
       <td style="text-align: left">string</td>
       <td style="text-align: left">N</td>
-      <td style="text-align: left">
-<strong>WAKE_UP_WORD, PRESS_AND_HOLD, TAP, EXPECT_SPEECH, EARSET</strong> 마이크 오픈이 어떻게 트리거되었는지  <em><strong>WAKE_UP_WORD</strong> - 사용자 발화로 Wakeup</em>  <strong>PRESS_AND_HOLD</strong> - PTT 방식으로 Wakeup  <em><strong>TAP</strong> - NUGU 버튼 등에 의해서 Wakeup</em>  <strong>EXPECT_SPEECH</strong> - ASR.ExpectSpeech  <em>*EARSET</em> - 이어셋 VoiceCommand 등을 통해 Wakeup</td>
+      <td style="text-align: left">마이크 오픈이 어떻게 트리거되었는지<br>- WAKE_UP_WORD : 사용자 발화로 Wakeup<br>- PRESS_AND_HOLD : PTT 방식으로 Wakeup<br>- TAP : NUGU 버튼 등에 의해서 Wakeup<br>- EXPECT_SPEECH : ASR.ExpectSpeech<br>- EARSET : 이어셋 VoiceCommand 등을 통해 Wakeup</td>
     </tr>
   </tbody>
 </table>
@@ -2908,14 +2906,14 @@ CapabilityFactory::makeCapability&lt;ASRAgent, IASRHandler&gt;(asr_listener.get(
       <td style="text-align: left">string</td>
       <td style="text-align: left">N</td>
       <td style="text-align: left">
-<strong>Y</strong> : 회신받아야 하는 경우 <strong>N</strong> : 마이크만 열고 싶은경우 default : N</td>
+<strong>Y</strong> : 회신받아야 하는 경우<br><strong>N</strong> : 마이크만 열고 싶은경우<br>default : N</td>
     </tr>
     <tr>
       <td style="text-align: left">property</td>
       <td style="text-align: left">string</td>
       <td style="text-align: left">N</td>
       <td style="text-align: left">
-<strong>NORMAL</strong> : 일반 발화를 입력으로 받음 <strong>DICTATION</strong> : dictation 서버로 라우팅하여 처리 필드가 없는 경우 default 값은 NORMAL</td>
+<strong>NORMAL</strong> : 일반 발화를 입력으로 받음<br><strong>DICTATION</strong> : dictation 서버로 라우팅하여 처리 필드가 없는 경우<br>default 값은 NORMAL</td>
     </tr>
     <tr>
       <td style="text-align: left">domainTypes</td>
@@ -2957,13 +2955,13 @@ CapabilityFactory::makeCapability&lt;ASRAgent, IASRHandler&gt;(asr_listener.get(
       <td style="text-align: left">epd</td>
       <td style="text-align: left">object</td>
       <td style="text-align: left">N</td>
-      <td style="text-align: left">End Point Detection 관련 정보 없으면 device의 default 값을 사용 하위의 3개 파라미터도 optional이기 때문에 존재하는 파라미터만 업데이트하고, 없는 파라미터는 device의 default 값을 사용</td>
+      <td style="text-align: left">End Point Detection 관련 정보 없으면 device의 default 값을 사용<br>하위의 3개 파라미터도 optional이기 때문에 존재하는 파라미터만 업데이트하고, 없는 파라미터는 device의 default 값을 사용</td>
     </tr>
     <tr>
       <td style="text-align: left">epd.timeoutMilliseconds</td>
       <td style="text-align: left">long</td>
       <td style="text-align: left">N</td>
-      <td style="text-align: left">Wake up 후 종료까지 대기 시간 (단위: msec) <strong>이 값은 위의 timeoutInMilliseconds와는 다른 epd 전용값</strong>
+      <td style="text-align: left">Wake up 후 종료까지 대기 시간 (단위: msec)<br><strong>이 값은 위의 timeoutInMilliseconds와는 다른 epd 전용값</strong>
 </td>
     </tr>
     <tr>
@@ -2982,7 +2980,7 @@ CapabilityFactory::makeCapability&lt;ASRAgent, IASRHandler&gt;(asr_listener.get(
       <td style="text-align: left">listenTimeoutFailBeep</td>
       <td style="text-align: left">boolean</td>
       <td style="text-align: left">N</td>
-      <td style="text-align: left">Listening timeout 발생시 beep 재생 여부 (default 값은 true)</td>
+      <td style="text-align: left">Listening timeout 발생시 beep 재생 여부<br>default 값은 true</td>
     </tr>
   </tbody>
 </table>
@@ -3058,7 +3056,7 @@ CapabilityFactory::makeCapability&lt;ASRAgent, IASRHandler&gt;(asr_listener.get(
       <td style="text-align: left">string</td>
       <td style="text-align: left">Y</td>
       <td style="text-align: left">
-<strong>PARTIAL</strong> : 사용자 발화의 일부분 <strong>COMPLETE</strong> : 사용자 발화의 전체 문장 <strong>NONE</strong> : 음성 인식 결과 없음 <strong>ERROR</strong> : Error 발생 <strong>SOS</strong> : SOS(Start of Speech) <strong>EOS</strong> : EOS(End of Speech) <strong>FA</strong> : Wakeup False Acceptance</td>
+<strong>PARTIAL</strong> : 사용자 발화의 일부분<br><strong>COMPLETE</strong> : 사용자 발화의 전체 문장<br><strong>NONE</strong> : 음성 인식 결과 없음<br><strong>ERROR</strong> : Error 발생<br><strong>SOS</strong> : SOS(Start of Speech)<br><strong>EOS</strong> : EOS(End of Speech)<br><strong>FA</strong> : Wakeup False Acceptance</td>
     </tr>
   </tbody>
 </table>
@@ -3256,27 +3254,27 @@ CapabilityFactory::makeCapability&lt;ASRAgent, IASRHandler&gt;(asr_listener.get(
       <td style="text-align: left">string</td>
       <td style="text-align: left">N</td>
       <td style="text-align: left">
-<strong>KOR</strong>, <strong>ENG</strong>, <strong>JPN</strong>, <strong>CHN</strong>, … default 값은 KOR</td>
+<strong>KOR</strong>, <strong>ENG</strong>, <strong>JPN</strong>, <strong>CHN</strong>, …<br>default 값은 KOR</td>
     </tr>
     <tr>
       <td style="text-align: left">endpointing</td>
       <td style="text-align: left">string</td>
       <td style="text-align: left">Y</td>
       <td style="text-align: left">
-<strong>CLIENT</strong> : 클라이언트 EPD(EndPointDetector) 사용 <strong>SERVER</strong> : 서버 EPD 사용</td>
+<strong>CLIENT</strong> : 클라이언트 EPD(EndPointDetector) 사용<br><strong>SERVER</strong> : 서버 EPD 사용</td>
     </tr>
     <tr>
       <td style="text-align: left">encoding</td>
       <td style="text-align: left">string</td>
       <td style="text-align: left">N</td>
       <td style="text-align: left">
-<strong>PARTIAL</strong> : 사용자 발화의 일부분 <strong>COMPLETE</strong> : 사용자 발화의 전체 문장 (default)</td>
+<strong>PARTIAL</strong> : 사용자 발화의 일부분<br><strong>COMPLETE</strong> : 사용자 발화의 전체 문장 (default)</td>
     </tr>
     <tr>
       <td style="text-align: left">wakeup</td>
       <td style="text-align: left">object</td>
       <td style="text-align: left">N</td>
-      <td style="text-align: left">서버 EPD 사용시 필수 값. wakeup을 포함해서 서버에 전달하는 경우 포함 wakeup 정보를 전달하는 경우 포함 (전달하는 pcm에 wakeup이 포함되지 않더라도 필요한 경우 전달)</td>
+      <td style="text-align: left">서버 EPD 사용시 필수 값.<br>wakeup을 포함해서 서버에 전달하는 경우 포함<br>wakeup 정보를 전달하는 경우 포함 (전달하는 pcm에 wakeup이 포함되지 않더라도 필요한 경우 전달)</td>
     </tr>
     <tr>
       <td style="text-align: left">wakeup.word</td>
@@ -3291,29 +3289,29 @@ CapabilityFactory::makeCapability&lt;ASRAgent, IASRHandler&gt;(asr_listener.get(
       <td style="text-align: left">전송하는 stream에서 wakeup word에 대한 boundary 정보</td>
     </tr>
     <tr>
-      <td style="text-align: left">wakeup.boundary. start</td>
+      <td style="text-align: left">wakeup.boundary.start</td>
       <td style="text-align: left">long</td>
       <td style="text-align: left">Y</td>
-      <td style="text-align: left">wakeup module 에서 얻은 milliseconds 를 sample count 로 변환해서 전송해야 함. sample count for start time</td>
+      <td style="text-align: left">wakeup module 에서 얻은 milliseconds 를 sample count 로 변환해서 전송해야 함.<br>sample count for start time</td>
     </tr>
     <tr>
-      <td style="text-align: left">wakeup.boundary. end</td>
+      <td style="text-align: left">wakeup.boundary.end</td>
       <td style="text-align: left">long</td>
       <td style="text-align: left">Y</td>
-      <td style="text-align: left">wakeup module 에서 얻은 milliseconds 를 sample count 로 변환해서 전송해야 함. sample count for end time</td>
+      <td style="text-align: left">wakeup module 에서 얻은 milliseconds 를 sample count 로 변환해서 전송해야 함.<br>sample count for end time</td>
     </tr>
     <tr>
-      <td style="text-align: left">wakeup.boundary. detection</td>
+      <td style="text-align: left">wakeup.boundary.detection</td>
       <td style="text-align: left">long</td>
       <td style="text-align: left">Y</td>
-      <td style="text-align: left">wakeup module 에서 얻은 milliseconds 를 sample count 로 변환해서 전송해야 함. sample count for detection time</td>
+      <td style="text-align: left">wakeup module 에서 얻은 milliseconds 를 sample count 로 변환해서 전송해야 함.<br>sample count for detection time</td>
     </tr>
     <tr>
-      <td style="text-align: left">wakeup.boundary. metric</td>
+      <td style="text-align: left">wakeup.boundary.metric</td>
       <td style="text-align: left">string</td>
       <td style="text-align: left">N</td>
       <td style="text-align: left">
-<strong>sample(default)</strong> / <strong>byte</strong> / <strong>frame</strong> / <strong>time</strong> 현재 sample 만 지원되며, 추후 byte / frame / time 속성 지원 예정</td>
+<strong>sample(default)</strong> / <strong>byte</strong> / <strong>frame</strong> / <strong>time</strong><br>현재 sample 만 지원되며, 추후 byte / frame / time 속성 지원 예정</td>
     </tr>
     <tr>
       <td style="text-align: left">wakeup.power</td>

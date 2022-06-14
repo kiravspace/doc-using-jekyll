@@ -10,7 +10,6 @@
 <script type="text/javascript" src="/assets/js/jquery-ui.js"></script>
 <script type="text/javascript" src="/assets/js/main.js"></script>
 
-<script>MathJax={"tex":{"inlineMath":[["$","$"],["\\(","\\)"]],"displayMath":[["$$","$$"],["\\[","\\]"]]},"svg":{"fontCache":"global"},"options":{"enableMenu":false}}</script><script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script><script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
 </head>
 <body>
 <header>
@@ -62,7 +61,7 @@
     
         <li>
             <div class="nav_link fold ">
-                <a href="/nugu-play/nugu-ux/voice-interaction-design" class="nav_href">사용자 발화\(User Utterance\) 예상 하기</a>
+                <a href="/nugu-play/nugu-ux/voice-interaction-design" class="nav_href">사용자 발화(User Utterance) 예상 하기</a>
                 <span class="nav_unfold">+</span>
                 <span class="nav_fold">-</span>
             </div>
@@ -429,7 +428,7 @@
     
         <li>
             <div class="nav_link fold ">
-                <a href="/nugu-play/create-plays-with-play-builder/hello-aria/create-an-action-and-an-answer" class="nav_href">3) Action 만들고 응답 등록하기</a>
+                <a href="/nugu-play/create-plays-with-play-builder/hello-aria/create-an-intent-and-custom-utterances" class="nav_href">2) Intent 만들고 예상 발화 등록하기</a>
                 <span class="nav_unfold">+</span>
                 <span class="nav_fold">-</span>
             </div>
@@ -438,7 +437,7 @@
     
         <li>
             <div class="nav_link fold ">
-                <a href="/nugu-play/create-plays-with-play-builder/hello-aria/create-an-intent-and-custom-utterances" class="nav_href">2) Intent 만들고 예상 발화 등록하기</a>
+                <a href="/nugu-play/create-plays-with-play-builder/hello-aria/create-an-action-and-an-answer" class="nav_href">3) Action 만들고 응답 등록하기</a>
                 <span class="nav_unfold">+</span>
                 <span class="nav_fold">-</span>
             </div>
@@ -550,7 +549,7 @@
     
         <li>
             <div class="nav_link fold ">
-                <a href="/nugu-play/create-plays-with-play-builder/use-backend-proxy/capability-interfaces/audioplayer-display-interface" class="nav_href">AudioPlayer를 위한 Display Interface</a>
+                <a href="/nugu-play/create-plays-with-play-builder/use-backend-proxy/capability-interfaces/audioplayer-interface" class="nav_href">AudioPlayer Interface</a>
                 <span class="nav_unfold">+</span>
                 <span class="nav_fold">-</span>
             </div>
@@ -559,7 +558,7 @@
     
         <li>
             <div class="nav_link fold ">
-                <a href="/nugu-play/create-plays-with-play-builder/use-backend-proxy/capability-interfaces/audioplayer-interface" class="nav_href">AudioPlayer Interface</a>
+                <a href="/nugu-play/create-plays-with-play-builder/use-backend-proxy/capability-interfaces/audioplayer-display-interface" class="nav_href">AudioPlayer를 위한 Display Interface</a>
                 <span class="nav_unfold">+</span>
                 <span class="nav_fold">-</span>
             </div>
@@ -1379,7 +1378,7 @@
     
         <li>
             <div class="nav_link fold  has_child ">
-                <a href="/work-with-nugu-biz/biz-api/api-announcement" class="nav_href">API 발송 \(Announcement\)</a>
+                <a href="/work-with-nugu-biz/biz-api/api-announcement" class="nav_href">API 발송 (Announcement)</a>
                 <span class="nav_unfold">+</span>
                 <span class="nav_fold">-</span>
             </div>
@@ -2182,7 +2181,7 @@
     </tr>
     <tr>
       <td style="text-align: left">Play Builder</td>
-      <td style="text-align: left">Play를 만드는 도구로, 개발자가 아니어도 자신만의 Play를 만들 수 있도록 도와줍니다. 사용자의 발화를 이해하는 User Utterance Model, 이를 기반으로 기능을 수행하는 Action을 조합하여 하나의 완결된 Play를 만듭니다.</td>
+      <td style="text-align: left">Play를 만드는 도구로, 개발자가 아니어도 자신만의 Play를 만들 수 있도록 도와줍니다.<br>사용자의 발화를 이해하는 User Utterance Model, 이를 기반으로 기능을 수행하는 Action을 조합하여 하나의 완결된 Play를 만듭니다.</td>
     </tr>
     <tr>
       <td style="text-align: left">Intent</td>
@@ -2194,7 +2193,7 @@
     </tr>
     <tr>
       <td style="text-align: left">Built-in Intent</td>
-      <td style="text-align: left">NUGU Platform에서 미리 만들어 훈련시켜둔 Intent 입니다. Custom Intent와 동일한 방법으로 Action에서 사용할 수 있습니다.</td>
+      <td style="text-align: left">NUGU Platform에서 미리 만들어 훈련시켜둔 Intent 입니다.<br>Custom Intent와 동일한 방법으로 Action에서 사용할 수 있습니다.</td>
     </tr>
     <tr>
       <td style="text-align: left">Entity</td>
@@ -2202,15 +2201,15 @@
     </tr>
     <tr>
       <td style="text-align: left">Play 호출 이름</td>
-      <td style="text-align: left">Play 호출 이름은 사용자가 Play를 호출하기 위해 발화하는 고유한 이름을 말합니다. 사용자가 Play 호출 이름을 발화하면 해당 Play의 세션으로 진입하여 해당 Play의 기능을 사용할 수 있게 됩니다. 자세한 내용은 <a href="nugu-play/play-registration-and-review/register-a-play#define-an-invocation-name">호출 이름 정의하기</a>를 참고해야 합니다.</td>
+      <td style="text-align: left">Play 호출 이름은 사용자가 Play를 호출하기 위해 발화하는 고유한 이름을 말합니다.<br>사용자가 Play 호출 이름을 발화하면 해당 Play의 세션으로 진입하여 해당 Play의 기능을 사용할 수 있게 됩니다.<br>자세한 내용은 <a href="nugu-play/play-registration-and-review/register-a-play#define-an-invocation-name">호출 이름 정의하기</a>를 참고해야 합니다.</td>
     </tr>
     <tr>
       <td style="text-align: left">Public Play</td>
-      <td style="text-align: left">심사를 통해 배포되면, 모두가 사용할 수 있는 Play입니다. 추후 공개 예정인 스토어에 Play가 등록되면 NUGU 사용자가 선택할 수 있습니다. 스토어가 공개되기 전까지는 선택 과정 없이 바로 사용할 수 있습니다.</td>
+      <td style="text-align: left">심사를 통해 배포되면, 모두가 사용할 수 있는 Play입니다.<br>추후 공개 예정인 스토어에 Play가 등록되면 NUGU 사용자가 선택할 수 있습니다.<br>스토어가 공개되기 전까지는 선택 과정 없이 바로 사용할 수 있습니다.</td>
     </tr>
     <tr>
       <td style="text-align: left">Private Play</td>
-      <td style="text-align: left">등록된 디바이스 혹은 초대된 사용자만 사용할 수 있는 Play입니다. 예를 들어, 회사 내에서만 혹은 가족/친구끼리만 사용하는 Play로도 활용할 수 있습니다. 특정 디바이스를 등록하거나 제한된 사용자만 초대하는 것은 NUGU biz에서 설정할 수 있습니다.</td>
+      <td style="text-align: left">등록된 디바이스 혹은 초대된 사용자만 사용할 수 있는 Play입니다.<br>예를 들어, 회사 내에서만 혹은 가족/친구끼리만 사용하는 Play로도 활용할 수 있습니다.<br>특정 디바이스를 등록하거나 제한된 사용자만 초대하는 것은 NUGU biz에서 설정할 수 있습니다.</td>
     </tr>
     <tr>
       <td style="text-align: left">Backend proxy</td>

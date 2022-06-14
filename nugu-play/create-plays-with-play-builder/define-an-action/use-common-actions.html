@@ -10,7 +10,6 @@
 <script type="text/javascript" src="/assets/js/jquery-ui.js"></script>
 <script type="text/javascript" src="/assets/js/main.js"></script>
 
-<script>MathJax={"tex":{"inlineMath":[["$","$"],["\\(","\\)"]],"displayMath":[["$$","$$"],["\\[","\\]"]]},"svg":{"fontCache":"global"},"options":{"enableMenu":false}}</script><script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script><script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
 </head>
 <body>
 <header>
@@ -62,7 +61,7 @@
     
         <li>
             <div class="nav_link fold ">
-                <a href="/nugu-play/nugu-ux/voice-interaction-design" class="nav_href">사용자 발화\(User Utterance\) 예상 하기</a>
+                <a href="/nugu-play/nugu-ux/voice-interaction-design" class="nav_href">사용자 발화(User Utterance) 예상 하기</a>
                 <span class="nav_unfold">+</span>
                 <span class="nav_fold">-</span>
             </div>
@@ -429,7 +428,7 @@
     
         <li>
             <div class="nav_link fold ">
-                <a href="/nugu-play/create-plays-with-play-builder/hello-aria/create-an-action-and-an-answer" class="nav_href">3) Action 만들고 응답 등록하기</a>
+                <a href="/nugu-play/create-plays-with-play-builder/hello-aria/create-an-intent-and-custom-utterances" class="nav_href">2) Intent 만들고 예상 발화 등록하기</a>
                 <span class="nav_unfold">+</span>
                 <span class="nav_fold">-</span>
             </div>
@@ -438,7 +437,7 @@
     
         <li>
             <div class="nav_link fold ">
-                <a href="/nugu-play/create-plays-with-play-builder/hello-aria/create-an-intent-and-custom-utterances" class="nav_href">2) Intent 만들고 예상 발화 등록하기</a>
+                <a href="/nugu-play/create-plays-with-play-builder/hello-aria/create-an-action-and-an-answer" class="nav_href">3) Action 만들고 응답 등록하기</a>
                 <span class="nav_unfold">+</span>
                 <span class="nav_fold">-</span>
             </div>
@@ -550,7 +549,7 @@
     
         <li>
             <div class="nav_link fold ">
-                <a href="/nugu-play/create-plays-with-play-builder/use-backend-proxy/capability-interfaces/audioplayer-display-interface" class="nav_href">AudioPlayer를 위한 Display Interface</a>
+                <a href="/nugu-play/create-plays-with-play-builder/use-backend-proxy/capability-interfaces/audioplayer-interface" class="nav_href">AudioPlayer Interface</a>
                 <span class="nav_unfold">+</span>
                 <span class="nav_fold">-</span>
             </div>
@@ -559,7 +558,7 @@
     
         <li>
             <div class="nav_link fold ">
-                <a href="/nugu-play/create-plays-with-play-builder/use-backend-proxy/capability-interfaces/audioplayer-interface" class="nav_href">AudioPlayer Interface</a>
+                <a href="/nugu-play/create-plays-with-play-builder/use-backend-proxy/capability-interfaces/audioplayer-display-interface" class="nav_href">AudioPlayer를 위한 Display Interface</a>
                 <span class="nav_unfold">+</span>
                 <span class="nav_fold">-</span>
             </div>
@@ -1379,7 +1378,7 @@
     
         <li>
             <div class="nav_link fold  has_child ">
-                <a href="/work-with-nugu-biz/biz-api/api-announcement" class="nav_href">API 발송 \(Announcement\)</a>
+                <a href="/work-with-nugu-biz/biz-api/api-announcement" class="nav_href">API 발송 (Announcement)</a>
                 <span class="nav_unfold">+</span>
                 <span class="nav_fold">-</span>
             </div>
@@ -2180,22 +2179,21 @@
 
 <ol>
   <li>
-<code class="language-plaintext highlighter-rouge">Custom Actions</code>의 화면 상단 탭에서 <code class="language-plaintext highlighter-rouge">Common Actions</code>으로 이동한 뒤, <code class="language-plaintext highlighter-rouge">Action 추가</code> 버튼을 누른 뒤, Action 생성 페이지를 열어 Common Action을 생성합니다.</li>
+    <p><code class="language-plaintext highlighter-rouge">Custom Actions</code>의 화면 상단 탭에서 <code class="language-plaintext highlighter-rouge">Common Actions</code>으로 이동한 뒤, <code class="language-plaintext highlighter-rouge">Action 추가</code> 버튼을 누른 뒤, Action 생성 페이지를 열어 Common Action을 생성합니다.</p>
+
+    <p><img src="/assets/images/use-common-actions-03.gif" alt=""></p>
+  </li>
+  <li>
+    <p>일반 Action을 만듭니다.</p>
+
+    <p><img src="/assets/images/use-common-actions-04.png" alt=""></p>
+  </li>
+  <li>
+    <p>Common Action과 연결할 Action(B2, C3)으로 이동하여, <code class="language-plaintext highlighter-rouge">Output 유형</code> &gt; <code class="language-plaintext highlighter-rouge">Common Action</code>을 선택하고, 이동할 Common Action을 선택합니다.</p>
+
+    <p><img src="/assets/images/use-common-actions-05.gif" alt=""></p>
+  </li>
 </ol>
-
-<p><img src="/assets/images/use-common-actions-03.gif" alt=""></p>
-
-<ol>
-  <li>일반 Action을 만듭니다.</li>
-</ol>
-
-<p><img src="/assets/images/use-common-actions-04.png" alt=""></p>
-
-<ol>
-  <li>Common Action과 연결할 Action(B2, C3)으로 이동하여, <code class="language-plaintext highlighter-rouge">Output 유형</code> &gt; <code class="language-plaintext highlighter-rouge">Common Action</code>을 선택하고, 이동할 Common Action을 선택합니다.</li>
-</ol>
-
-<p><img src="/assets/images/use-common-actions-05.gif" alt=""></p>
 
 <p>Common Action은 다른 액션과 같이 Parameter를 정의하여 사용할 수 있습니다. 다만, Trigger Intent가 없기 때문에, Utterance Parameter에서 Entity mapping 시, 모든 Intent의 Entity Type 리스트가 노출됩니다. Backend Parameter는 액션 내에서 정의하여 사용할 수 있고, <code class="language-plaintext highlighter-rouge">외부 연동 서버 설정</code> &gt; <code class="language-plaintext highlighter-rouge">Global Parameter</code>에서 정의한 Global Parameter를 상속받아 사용할 수도 있습니다.</p>
 

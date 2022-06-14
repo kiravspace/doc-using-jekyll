@@ -10,7 +10,6 @@
 <script type="text/javascript" src="/assets/js/jquery-ui.js"></script>
 <script type="text/javascript" src="/assets/js/main.js"></script>
 
-<script>MathJax={"tex":{"inlineMath":[["$","$"],["\\(","\\)"]],"displayMath":[["$$","$$"],["\\[","\\]"]]},"svg":{"fontCache":"global"},"options":{"enableMenu":false}}</script><script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script><script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
 </head>
 <body>
 <header>
@@ -62,7 +61,7 @@
     
         <li>
             <div class="nav_link fold ">
-                <a href="/nugu-play/nugu-ux/voice-interaction-design" class="nav_href">사용자 발화\(User Utterance\) 예상 하기</a>
+                <a href="/nugu-play/nugu-ux/voice-interaction-design" class="nav_href">사용자 발화(User Utterance) 예상 하기</a>
                 <span class="nav_unfold">+</span>
                 <span class="nav_fold">-</span>
             </div>
@@ -429,7 +428,7 @@
     
         <li>
             <div class="nav_link fold ">
-                <a href="/nugu-play/create-plays-with-play-builder/hello-aria/create-an-action-and-an-answer" class="nav_href">3) Action 만들고 응답 등록하기</a>
+                <a href="/nugu-play/create-plays-with-play-builder/hello-aria/create-an-intent-and-custom-utterances" class="nav_href">2) Intent 만들고 예상 발화 등록하기</a>
                 <span class="nav_unfold">+</span>
                 <span class="nav_fold">-</span>
             </div>
@@ -438,7 +437,7 @@
     
         <li>
             <div class="nav_link fold ">
-                <a href="/nugu-play/create-plays-with-play-builder/hello-aria/create-an-intent-and-custom-utterances" class="nav_href">2) Intent 만들고 예상 발화 등록하기</a>
+                <a href="/nugu-play/create-plays-with-play-builder/hello-aria/create-an-action-and-an-answer" class="nav_href">3) Action 만들고 응답 등록하기</a>
                 <span class="nav_unfold">+</span>
                 <span class="nav_fold">-</span>
             </div>
@@ -550,7 +549,7 @@
     
         <li>
             <div class="nav_link fold ">
-                <a href="/nugu-play/create-plays-with-play-builder/use-backend-proxy/capability-interfaces/audioplayer-display-interface" class="nav_href">AudioPlayer를 위한 Display Interface</a>
+                <a href="/nugu-play/create-plays-with-play-builder/use-backend-proxy/capability-interfaces/audioplayer-interface" class="nav_href">AudioPlayer Interface</a>
                 <span class="nav_unfold">+</span>
                 <span class="nav_fold">-</span>
             </div>
@@ -559,7 +558,7 @@
     
         <li>
             <div class="nav_link fold ">
-                <a href="/nugu-play/create-plays-with-play-builder/use-backend-proxy/capability-interfaces/audioplayer-interface" class="nav_href">AudioPlayer Interface</a>
+                <a href="/nugu-play/create-plays-with-play-builder/use-backend-proxy/capability-interfaces/audioplayer-display-interface" class="nav_href">AudioPlayer를 위한 Display Interface</a>
                 <span class="nav_unfold">+</span>
                 <span class="nav_fold">-</span>
             </div>
@@ -1379,7 +1378,7 @@
     
         <li>
             <div class="nav_link fold  has_child ">
-                <a href="/work-with-nugu-biz/biz-api/api-announcement" class="nav_href">API 발송 \(Announcement\)</a>
+                <a href="/work-with-nugu-biz/biz-api/api-announcement" class="nav_href">API 발송 (Announcement)</a>
                 <span class="nav_unfold">+</span>
                 <span class="nav_fold">-</span>
             </div>
@@ -2190,7 +2189,7 @@
     <tr>
       <td style="text-align: left">1.2</td>
       <td style="text-align: left">2020.06.05</td>
-      <td style="text-align: left">TextInput event 의 sessionId 필드 삭제 TextInput event 의 asrContext 에 playServiceId 필드 추가</td>
+      <td style="text-align: left">TextInput event 의 sessionId 필드 삭제<br>TextInput event 의 asrContext 에 playServiceId 필드 추가</td>
     </tr>
     <tr>
       <td style="text-align: left">1.3</td>
@@ -2295,7 +2294,7 @@ nugu_client-&gt;getCapabilityBuilder()
 
 <h3 id="텍스트-명령">텍스트 명령</h3>
 
-<p>임의의 텍스트 명령을 <a href="text.md#textinput">TextInput</a> event 로 요청할 수 있습니다.</p>
+<p>임의의 텍스트 명령을 <a href="text#textinput">TextInput</a> event 로 요청할 수 있습니다.</p>
 
 <div id="tabs-61" class="tabs">
     <ul>
@@ -2443,7 +2442,7 @@ text_handler-&gt;requestTextInput(text)
       <td style="text-align: left">playServiceId</td>
       <td style="text-align: left">string</td>
       <td style="text-align: left">N</td>
-      <td style="text-align: left">값이 존재하면 TextInput의 playServiceId 값을 설정하는데 사용 ASR.ExpectSpeech 보다 우선하여 동작 함. (TextSource 에 playServiceId 가 있는 경우 ASR.ExpecSpeech 에서 받은 playServiceId, domainTypes, asrContext 를 TextInput 으로 전달하지 않음)</td>
+      <td style="text-align: left">값이 존재하면 TextInput의 playServiceId 값을 설정하는데 사용 ASR.ExpectSpeech 보다 우선하여 동작 함.<br>(TextSource 에 playServiceId 가 있는 경우 ASR.ExpecSpeech 에서 받은 playServiceId, domainTypes, asrContext 를 TextInput 으로 전달하지 않음)</td>
     </tr>
   </tbody>
 </table>
@@ -2524,7 +2523,7 @@ text_handler-&gt;requestTextInput(text)
       <td style="text-align: left">targetPlayServiceId</td>
       <td style="text-align: left">string</td>
       <td style="text-align: left">N</td>
-      <td style="text-align: left">값이 존재하면 TextInput의 playServiceId 값을 설정하는데 사용 명확히 라우팅되어야 하는 Play를 지정하는 경우에 사용되고, 지정하지 않으면 라우팅 로직에 의해 라우팅 ASR.ExpectSpeech 보다 우선하여 동작 함. (TextRedirect에 targetPlayServiceId가 있는 경우 ASR.ExpecSpeech 에서 받은 playServiceId, domainTypes, asrContext 를 TextInput 으로 전달하지 않음)</td>
+      <td style="text-align: left">값이 존재하면 TextInput의 playServiceId 값을 설정하는데 사용 명확히 라우팅되어야 하는 Play를 지정하는 경우에 사용되고, 지정하지 않으면 라우팅 로직에 의해 라우팅 ASR.ExpectSpeech 보다 우선하여 동작 함.<br>(TextRedirect에 targetPlayServiceId가 있는 경우 ASR.ExpecSpeech 에서 받은 playServiceId, domainTypes, asrContext 를 TextInput 으로 전달하지 않음)</td>
     </tr>
   </tbody>
 </table>
@@ -2615,7 +2614,7 @@ text_handler-&gt;requestTextInput(text)
       <td style="text-align: left">token</td>
       <td style="text-align: left">string</td>
       <td style="text-align: left">N</td>
-      <td style="text-align: left">TextSource에 의해 생성된 이벤트인 경우 TextSource의 token을 그대로 사용 Chips interface, Display interface, Routine interface 에 의해 생성된 이벤트의 경우 해당 directive 에서 전달받은 token 을 사용 디바이스에서 생성된 text는 임의의 값을 갖거나 필드를 갖지 않아도 됨</td>
+      <td style="text-align: left">TextSource에 의해 생성된 이벤트인 경우 TextSource의 token을 그대로 사용<br>Chips interface, Display interface, Routine interface 에 의해 생성된 이벤트의 경우 해당 directive 에서 전달받은 token 을 사용<br>디바이스에서 생성된 text는 임의의 값을 갖거나 필드를 갖지 않아도 됨</td>
     </tr>
     <tr>
       <td style="text-align: left">playServiceId</td>

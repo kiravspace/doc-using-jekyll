@@ -10,7 +10,6 @@
 <script type="text/javascript" src="/assets/js/jquery-ui.js"></script>
 <script type="text/javascript" src="/assets/js/main.js"></script>
 
-<script>MathJax={"tex":{"inlineMath":[["$","$"],["\\(","\\)"]],"displayMath":[["$$","$$"],["\\[","\\]"]]},"svg":{"fontCache":"global"},"options":{"enableMenu":false}}</script><script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script><script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
 </head>
 <body>
 <header>
@@ -62,7 +61,7 @@
     
         <li>
             <div class="nav_link fold ">
-                <a href="/nugu-play/nugu-ux/voice-interaction-design" class="nav_href">사용자 발화\(User Utterance\) 예상 하기</a>
+                <a href="/nugu-play/nugu-ux/voice-interaction-design" class="nav_href">사용자 발화(User Utterance) 예상 하기</a>
                 <span class="nav_unfold">+</span>
                 <span class="nav_fold">-</span>
             </div>
@@ -429,7 +428,7 @@
     
         <li>
             <div class="nav_link fold ">
-                <a href="/nugu-play/create-plays-with-play-builder/hello-aria/create-an-action-and-an-answer" class="nav_href">3) Action 만들고 응답 등록하기</a>
+                <a href="/nugu-play/create-plays-with-play-builder/hello-aria/create-an-intent-and-custom-utterances" class="nav_href">2) Intent 만들고 예상 발화 등록하기</a>
                 <span class="nav_unfold">+</span>
                 <span class="nav_fold">-</span>
             </div>
@@ -438,7 +437,7 @@
     
         <li>
             <div class="nav_link fold ">
-                <a href="/nugu-play/create-plays-with-play-builder/hello-aria/create-an-intent-and-custom-utterances" class="nav_href">2) Intent 만들고 예상 발화 등록하기</a>
+                <a href="/nugu-play/create-plays-with-play-builder/hello-aria/create-an-action-and-an-answer" class="nav_href">3) Action 만들고 응답 등록하기</a>
                 <span class="nav_unfold">+</span>
                 <span class="nav_fold">-</span>
             </div>
@@ -550,7 +549,7 @@
     
         <li>
             <div class="nav_link fold ">
-                <a href="/nugu-play/create-plays-with-play-builder/use-backend-proxy/capability-interfaces/audioplayer-display-interface" class="nav_href">AudioPlayer를 위한 Display Interface</a>
+                <a href="/nugu-play/create-plays-with-play-builder/use-backend-proxy/capability-interfaces/audioplayer-interface" class="nav_href">AudioPlayer Interface</a>
                 <span class="nav_unfold">+</span>
                 <span class="nav_fold">-</span>
             </div>
@@ -559,7 +558,7 @@
     
         <li>
             <div class="nav_link fold ">
-                <a href="/nugu-play/create-plays-with-play-builder/use-backend-proxy/capability-interfaces/audioplayer-interface" class="nav_href">AudioPlayer Interface</a>
+                <a href="/nugu-play/create-plays-with-play-builder/use-backend-proxy/capability-interfaces/audioplayer-display-interface" class="nav_href">AudioPlayer를 위한 Display Interface</a>
                 <span class="nav_unfold">+</span>
                 <span class="nav_fold">-</span>
             </div>
@@ -1379,7 +1378,7 @@
     
         <li>
             <div class="nav_link fold  has_child ">
-                <a href="/work-with-nugu-biz/biz-api/api-announcement" class="nav_href">API 발송 \(Announcement\)</a>
+                <a href="/work-with-nugu-biz/biz-api/api-announcement" class="nav_href">API 발송 (Announcement)</a>
                 <span class="nav_unfold">+</span>
                 <span class="nav_fold">-</span>
             </div>
@@ -2190,7 +2189,7 @@
     <tr>
       <td style="text-align: left">1.2</td>
       <td style="text-align: left">2021.05.31</td>
-      <td style="text-align: left">Render directive 의 chips.type 에 NUDGE 추가 Render directive 의 target 에 LISTEN, SPEAKING 추가</td>
+      <td style="text-align: left">Render directive 의 chips.type 에 NUDGE 추가<br>Render directive 의 target 에 LISTEN, SPEAKING 추가</td>
     </tr>
   </tbody>
 </table>
@@ -2469,7 +2468,7 @@ CapabilityFactory::makeCapability&lt;ChipsAgent, IChipsHandler&gt;(chips_listene
       <td style="text-align: left">string</td>
       <td style="text-align: left">Y</td>
       <td style="text-align: left">
-<strong>DM</strong>  - ASR.ExpectSpeech, Session.Set 와 같이 전달되는 발화가이드 <strong>LISTEN</strong>  - Session.Set 없이 ASR.ExpectSpeech 발생 시 LISTEN 을 사용 <strong>SPEAKING</strong> - TTS.Speak 와 함께 제공되는 발화 가이드</td>
+<strong>DM</strong> : ASR.ExpectSpeech, Session.Set 와 같이 전달되는 발화가이드<br><strong>LISTEN</strong> : Session.Set 없이 ASR.ExpectSpeech 발생 시 LISTEN 을 사용<br><strong>SPEAKING</strong> : TTS.Speak 와 함께 제공되는 발화 가이드</td>
     </tr>
     <tr>
       <td style="text-align: left">chips</td>
@@ -2482,13 +2481,13 @@ CapabilityFactory::makeCapability&lt;ChipsAgent, IChipsHandler&gt;(chips_listene
       <td style="text-align: left">string</td>
       <td style="text-align: left">Y</td>
       <td style="text-align: left">
-<strong>ACTION</strong> : 보이스크롬 가이드의 ‘액션버튼’으로 기능 단위의 동작 처리를 위한 발화 가이드. <strong>GENERAL</strong> : 기본 발화 가이드 <strong>NUDGE</strong> : 넛지 발화 가이드</td>
+<strong>ACTION</strong> : 보이스크롬 가이드의 ‘액션버튼’으로 기능 단위의 동작 처리를 위한 발화 가이드.<br><strong>GENERAL</strong> : 기본 발화 가이드<br><strong>NUDGE</strong> : 넛지 발화 가이드</td>
     </tr>
     <tr>
       <td style="text-align: left">chips.text</td>
       <td style="text-align: left">string</td>
       <td style="text-align: left">Y</td>
-      <td style="text-align: left">버튼 텍스트  - Text.TextInput event 를 보내기 위한 텍스트 명령 문자열</td>
+      <td style="text-align: left">버튼 텍스트<br>- Text.TextInput event 를 보내기 위한 텍스트 명령 문자열</td>
     </tr>
     <tr>
       <td style="text-align: left">chips.token</td>

@@ -10,7 +10,6 @@
 <script type="text/javascript" src="/assets/js/jquery-ui.js"></script>
 <script type="text/javascript" src="/assets/js/main.js"></script>
 
-<script>MathJax={"tex":{"inlineMath":[["$","$"],["\\(","\\)"]],"displayMath":[["$$","$$"],["\\[","\\]"]]},"svg":{"fontCache":"global"},"options":{"enableMenu":false}}</script><script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script><script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
 </head>
 <body>
 <header>
@@ -62,7 +61,7 @@
     
         <li>
             <div class="nav_link fold ">
-                <a href="/nugu-play/nugu-ux/voice-interaction-design" class="nav_href">사용자 발화\(User Utterance\) 예상 하기</a>
+                <a href="/nugu-play/nugu-ux/voice-interaction-design" class="nav_href">사용자 발화(User Utterance) 예상 하기</a>
                 <span class="nav_unfold">+</span>
                 <span class="nav_fold">-</span>
             </div>
@@ -429,7 +428,7 @@
     
         <li>
             <div class="nav_link fold ">
-                <a href="/nugu-play/create-plays-with-play-builder/hello-aria/create-an-action-and-an-answer" class="nav_href">3) Action 만들고 응답 등록하기</a>
+                <a href="/nugu-play/create-plays-with-play-builder/hello-aria/create-an-intent-and-custom-utterances" class="nav_href">2) Intent 만들고 예상 발화 등록하기</a>
                 <span class="nav_unfold">+</span>
                 <span class="nav_fold">-</span>
             </div>
@@ -438,7 +437,7 @@
     
         <li>
             <div class="nav_link fold ">
-                <a href="/nugu-play/create-plays-with-play-builder/hello-aria/create-an-intent-and-custom-utterances" class="nav_href">2) Intent 만들고 예상 발화 등록하기</a>
+                <a href="/nugu-play/create-plays-with-play-builder/hello-aria/create-an-action-and-an-answer" class="nav_href">3) Action 만들고 응답 등록하기</a>
                 <span class="nav_unfold">+</span>
                 <span class="nav_fold">-</span>
             </div>
@@ -550,7 +549,7 @@
     
         <li>
             <div class="nav_link fold ">
-                <a href="/nugu-play/create-plays-with-play-builder/use-backend-proxy/capability-interfaces/audioplayer-display-interface" class="nav_href">AudioPlayer를 위한 Display Interface</a>
+                <a href="/nugu-play/create-plays-with-play-builder/use-backend-proxy/capability-interfaces/audioplayer-interface" class="nav_href">AudioPlayer Interface</a>
                 <span class="nav_unfold">+</span>
                 <span class="nav_fold">-</span>
             </div>
@@ -559,7 +558,7 @@
     
         <li>
             <div class="nav_link fold ">
-                <a href="/nugu-play/create-plays-with-play-builder/use-backend-proxy/capability-interfaces/audioplayer-interface" class="nav_href">AudioPlayer Interface</a>
+                <a href="/nugu-play/create-plays-with-play-builder/use-backend-proxy/capability-interfaces/audioplayer-display-interface" class="nav_href">AudioPlayer를 위한 Display Interface</a>
                 <span class="nav_unfold">+</span>
                 <span class="nav_fold">-</span>
             </div>
@@ -1379,7 +1378,7 @@
     
         <li>
             <div class="nav_link fold  has_child ">
-                <a href="/work-with-nugu-biz/biz-api/api-announcement" class="nav_href">API 발송 \(Announcement\)</a>
+                <a href="/work-with-nugu-biz/biz-api/api-announcement" class="nav_href">API 발송 (Announcement)</a>
                 <span class="nav_unfold">+</span>
                 <span class="nav_fold">-</span>
             </div>
@@ -2329,7 +2328,7 @@ Authorization: token TOKEN_STRING
       <td style="text-align: left">action.parameters</td>
       <td style="text-align: left">string</td>
       <td style="text-align: left">Y</td>
-      <td style="text-align: left">Action에서 설정된 파라미터로 Play Builder에서 설정한 내용을 포함합니다. (단, 값이 null인 경우 요청에서 제외됩니다. 요청에서 생략되었더라도 Backend parameter를 응답 값으로 포함해야 합니다.)     KEY - Play Builder에서 Action 내에 정의한 parameter 이름    type - 사용자 발화에서 분석된 Entity인 경우 Play Builder에서 설정한 Entity의 타입  value - 파라미터의 값으로 string 타입</td>
+      <td style="text-align: left">Action에서 설정된 파라미터로 Play Builder에서 설정한 내용을 포함합니다.<br> (단, 값이 null인 경우 요청에서 제외됩니다. 요청에서 생략되었더라도 Backend parameter를 응답 값으로 포함해야 합니다.)<br>     KEY - Play Builder에서 Action 내에 정의한 parameter 이름<br>    type - 사용자 발화에서 분석된 Entity인 경우 Play Builder에서 설정한 Entity의 타입<br>  value - 파라미터의 값으로 string 타입</td>
     </tr>
     <tr>
       <td style="text-align: left">event</td>
@@ -2490,19 +2489,20 @@ Authorization: token TOKEN_STRING
       <td style="text-align: left">playerActivity</td>
       <td style="text-align: left">string</td>
       <td style="text-align: left">Y</td>
-      <td style="text-align: left">스피커의 오디오 플레이어 상태값을 나타냅니다.**IDLE**, **PLAYING**, **PAUSED**, **STOPPED**, **FINISHED**, **BUFFER_UNDERRUN**</td>
+      <td style="text-align: left">스피커의 오디오 플레이어 상태값을 나타냅니다.<br><strong>IDLE</strong>, <strong>PLAYING</strong>, <strong>PAUSED</strong>, <strong>STOPPED</strong>, <strong>FINISHED</strong>, <strong>BUFFER_UNDERRUN</strong>
+</td>
     </tr>
     <tr>
       <td style="text-align: left">token</td>
       <td style="text-align: left">string</td>
       <td style="text-align: left">N</td>
-      <td style="text-align: left">현재 재생 중인 곡의 token 값입니다.AudioPlayer.Play Directive 전송 시 스트리밍 URL과 함께 전송되는 token 값 재생 중인 곡이 있는 경우에만 token이 존재</td>
+      <td style="text-align: left">현재 재생 중인 곡의 token 값입니다.<br>AudioPlayer.Play Directive 전송 시 스트리밍 URL과 함께 전송되는 token 값 재생 중인 곡이 있는 경우에만 token이 존재</td>
     </tr>
     <tr>
       <td style="text-align: left">offsetInMilliseconds</td>
       <td style="text-align: left">long</td>
       <td style="text-align: left">Y</td>
-      <td style="text-align: left">현재 재생 중인 위치 (msec)를 나타냅니다.재생 중인 곡이 없을 경우 기본 값은 0</td>
+      <td style="text-align: left">현재 재생 중인 위치 (msec)를 나타냅니다.<br>재생 중인 곡이 없을 경우 기본 값은 0</td>
     </tr>
   </tbody>
 </table>
@@ -2597,19 +2597,20 @@ Authorization: token TOKEN_STRING
       <td style="text-align: left">resultCode</td>
       <td style="text-align: left">string</td>
       <td style="text-align: left">Y</td>
-      <td style="text-align: left">**OK** : 성공인 경우 사용하는 값으로 다른 값을 전송하면 성공이 아닌 것으로 처리하기 때문에 주의해야 합니다.성공이 아닌 경우는 PlayBuider의 <code class="language-plaintext highlighter-rouge">General &gt; 기본정보</code> 페이지의 예외 처리 또는 <code class="language-plaintext highlighter-rouge">Action &gt; Custom Actions &gt; 선택한 Action</code>의 예외 처리에서 설정된 Result Code(Exception Code)값 전송합니다.</td>
+      <td style="text-align: left">
+<strong>OK</strong> : 성공인 경우 사용하는 값으로 다른 값을 전송하면 성공이 아닌 것으로 처리하기 때문에 주의해야 합니다.<br>성공이 아닌 경우는 PlayBuider의 <code class="language-plaintext highlighter-rouge">General</code> &gt; <code class="language-plaintext highlighter-rouge">기본정보</code> 페이지의 예외 처리 또는 <code class="language-plaintext highlighter-rouge">Action</code> &gt; <code class="language-plaintext highlighter-rouge">Custom Actions</code> &gt; <code class="language-plaintext highlighter-rouge">선택한 Action</code>의 예외 처리에서 설정된 Result Code(Exception Code)값 전송합니다.</td>
     </tr>
     <tr>
       <td style="text-align: left">output</td>
       <td style="text-align: left">json</td>
       <td style="text-align: left">Y</td>
-      <td style="text-align: left">Request에서 전송한 action.parameters의 KEY:VALUE를 처리한 결과를 전송합니다.Request의 모든 KEY:VALUE가 동일하게 나와야 합니다.VALUE는 Request의 값과 같거나 다를 수 있습니다.변경되지 않은 VALUE들은 Request의 값을 그대로 써주어야 합니다.  - **KEY** : Request의 action.parameters에 정의된 KEY  - **VALUE** : backend proxy에서 처리한 결과</td>
+      <td style="text-align: left">Request에서 전송한 action.parameters의 KEY:VALUE를 처리한 결과를 전송합니다.<br>Request의 모든 KEY:VALUE가 동일하게 나와야 합니다.<br>VALUE는 Request의 값과 같거나 다를 수 있습니다.<br>변경되지 않은 VALUE들은 Request의 값을 그대로 써주어야 합니다.<br>  - <strong>KEY</strong> : Request의 action.parameters에 정의된 KEY<br>  - <strong>VALUE</strong> : backend proxy에서 처리한 결과</td>
     </tr>
     <tr>
       <td style="text-align: left">directives</td>
       <td style="text-align: left">json</td>
       <td style="text-align: left">N</td>
-      <td style="text-align: left">특정 Capability Interface를 지원하는 Play에서 Directive를 전송하는 경우에 이 필드를 통해 전송합니다.각 Capability Interface의 Directive 포맷은 해당 Capability Interface 규격을 참조합니다.</td>
+      <td style="text-align: left">특정 Capability Interface를 지원하는 Play에서 Directive를 전송하는 경우에 이 필드를 통해 전송합니다.<br>각 Capability Interface의 Directive 포맷은 해당 Capability Interface 규격을 참조합니다.</td>
     </tr>
   </tbody>
 </table>

@@ -10,7 +10,6 @@
 <script type="text/javascript" src="/assets/js/jquery-ui.js"></script>
 <script type="text/javascript" src="/assets/js/main.js"></script>
 
-<script>MathJax={"tex":{"inlineMath":[["$","$"],["\\(","\\)"]],"displayMath":[["$$","$$"],["\\[","\\]"]]},"svg":{"fontCache":"global"},"options":{"enableMenu":false}}</script><script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script><script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
 </head>
 <body>
 <header>
@@ -62,7 +61,7 @@
     
         <li>
             <div class="nav_link fold ">
-                <a href="/nugu-play/nugu-ux/voice-interaction-design" class="nav_href">사용자 발화\(User Utterance\) 예상 하기</a>
+                <a href="/nugu-play/nugu-ux/voice-interaction-design" class="nav_href">사용자 발화(User Utterance) 예상 하기</a>
                 <span class="nav_unfold">+</span>
                 <span class="nav_fold">-</span>
             </div>
@@ -429,7 +428,7 @@
     
         <li>
             <div class="nav_link fold ">
-                <a href="/nugu-play/create-plays-with-play-builder/hello-aria/create-an-action-and-an-answer" class="nav_href">3) Action 만들고 응답 등록하기</a>
+                <a href="/nugu-play/create-plays-with-play-builder/hello-aria/create-an-intent-and-custom-utterances" class="nav_href">2) Intent 만들고 예상 발화 등록하기</a>
                 <span class="nav_unfold">+</span>
                 <span class="nav_fold">-</span>
             </div>
@@ -438,7 +437,7 @@
     
         <li>
             <div class="nav_link fold ">
-                <a href="/nugu-play/create-plays-with-play-builder/hello-aria/create-an-intent-and-custom-utterances" class="nav_href">2) Intent 만들고 예상 발화 등록하기</a>
+                <a href="/nugu-play/create-plays-with-play-builder/hello-aria/create-an-action-and-an-answer" class="nav_href">3) Action 만들고 응답 등록하기</a>
                 <span class="nav_unfold">+</span>
                 <span class="nav_fold">-</span>
             </div>
@@ -550,7 +549,7 @@
     
         <li>
             <div class="nav_link fold ">
-                <a href="/nugu-play/create-plays-with-play-builder/use-backend-proxy/capability-interfaces/audioplayer-display-interface" class="nav_href">AudioPlayer를 위한 Display Interface</a>
+                <a href="/nugu-play/create-plays-with-play-builder/use-backend-proxy/capability-interfaces/audioplayer-interface" class="nav_href">AudioPlayer Interface</a>
                 <span class="nav_unfold">+</span>
                 <span class="nav_fold">-</span>
             </div>
@@ -559,7 +558,7 @@
     
         <li>
             <div class="nav_link fold ">
-                <a href="/nugu-play/create-plays-with-play-builder/use-backend-proxy/capability-interfaces/audioplayer-interface" class="nav_href">AudioPlayer Interface</a>
+                <a href="/nugu-play/create-plays-with-play-builder/use-backend-proxy/capability-interfaces/audioplayer-display-interface" class="nav_href">AudioPlayer를 위한 Display Interface</a>
                 <span class="nav_unfold">+</span>
                 <span class="nav_fold">-</span>
             </div>
@@ -1379,7 +1378,7 @@
     
         <li>
             <div class="nav_link fold  has_child ">
-                <a href="/work-with-nugu-biz/biz-api/api-announcement" class="nav_href">API 발송 \(Announcement\)</a>
+                <a href="/work-with-nugu-biz/biz-api/api-announcement" class="nav_href">API 발송 (Announcement)</a>
                 <span class="nav_unfold">+</span>
                 <span class="nav_fold">-</span>
             </div>
@@ -2176,15 +2175,19 @@
 
 <p>Capability Interface는 다음의 세 요소로 구성되어 있습니다.</p>
 
-<p><strong>Built-in Intent</strong><br>
-Built-in Intent는 자주 사용될 것으로 예상되거나 꼭 정의해야 하는 발화들을 미리 훈련시켜 제공하는 Intent입니다.<br>
-별도로 학습 문장을 등록하지 않아도 되도록 기본으로 제공되는 Intent이며, Action 정의(기능 정의) 시에 바로 사용할 수 있습니다.</p>
+<p><strong>Built-in Intent</strong></p>
 
-<p><strong>Directive</strong><br>
-Play가 디바이스의 특정 기능을 제어하기 위한 명령어입니다.</p>
+<p>Built-in Intent는 자주 사용될 것으로 예상되거나 꼭 정의해야 하는 발화들을 미리 훈련시켜 제공하는 Intent입니다.</p>
 
-<p><strong>Event</strong><br>
-디바이스에서 특정 기능을 실행시키는 과정에서 디바이스의 상태가 변했을 때 Play로 전송됩니다.</p>
+<p>별도로 학습 문장을 등록하지 않아도 되도록 기본으로 제공되는 Intent이며, Action 정의(기능 정의) 시에 바로 사용할 수 있습니다.</p>
+
+<p><strong>Directive</strong></p>
+
+<p>Play가 디바이스의 특정 기능을 제어하기 위한 명령어입니다.</p>
+
+<p><strong>Event</strong></p>
+
+<p>디바이스에서 특정 기능을 실행시키는 과정에서 디바이스의 상태가 변했을 때 Play로 전송됩니다.</p>
 
 <p>Built-in Intent, Directive, Event는 스피커와 Play 사이에서 다음과 같은 방향으로 전달됩니다.</p>
 
@@ -2198,7 +2201,7 @@ Play가 디바이스의 특정 기능을 제어하기 위한 명령어입니다.
 
 <div class="alerts info">
     
-<p>Built-in Intent에 대한 자세한 내용은 <a href="../../define-user-utterance-model/built-in-intents">Built-in Intent</a>를 참고하세요.</p>
+<p>Built-in Intent에 대한 자세한 내용은 <a href="../define-user-utterance-model/built-in-intents">Built-in Intent</a>를 참고하세요.</p>
 
 </div>
 
@@ -2208,7 +2211,7 @@ Play가 디바이스의 특정 기능을 제어하기 위한 명령어입니다.
 
 <p>Play는 Backend proxy로부터 Directive를 넘겨받아 디바이스로 전달하게 됩니다. 따라서, Backend proxy에서는 각 Directive를 생성해서 요청이 올 때마다 전달을 해야 합니다.</p>
 
-<p>Directive 구현에 대한 자세한 내용은 은 <a href="../backend-proxy-api-reference">Backend proxy API Reference</a>를 참고해 주세요.</p>
+<p>Directive 구현에 대한 자세한 내용은 은 <a href="backend-proxy-api-reference">Backend proxy API Reference</a>를 참고해 주세요.</p>
 
 <p><img src="/assets/images/capability-interfaces-02.png" alt=""></p>
 
@@ -2254,10 +2257,10 @@ Play가 디바이스의 특정 기능을 제어하기 위한 명령어입니다.
     </a>
     
     
-    <a href="/nugu-play/create-plays-with-play-builder/use-backend-proxy/capability-interfaces/audioplayer-display-interface">
+    <a href="/nugu-play/create-plays-with-play-builder/use-backend-proxy/capability-interfaces/audioplayer-interface">
         <div class="block right">
             <div class="content">
-                <div class="title">AudioPlayer를 위한 Display Interface</div>
+                <div class="title">AudioPlayer Interface</div>
                 <div class="description"></div>
             </div>
             <div class="thumb"></div>

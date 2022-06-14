@@ -10,7 +10,6 @@
 <script type="text/javascript" src="/assets/js/jquery-ui.js"></script>
 <script type="text/javascript" src="/assets/js/main.js"></script>
 
-<script>MathJax={"tex":{"inlineMath":[["$","$"],["\\(","\\)"]],"displayMath":[["$$","$$"],["\\[","\\]"]]},"svg":{"fontCache":"global"},"options":{"enableMenu":false}}</script><script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script><script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
 </head>
 <body>
 <header>
@@ -62,7 +61,7 @@
     
         <li>
             <div class="nav_link fold ">
-                <a href="/nugu-play/nugu-ux/voice-interaction-design" class="nav_href">사용자 발화\(User Utterance\) 예상 하기</a>
+                <a href="/nugu-play/nugu-ux/voice-interaction-design" class="nav_href">사용자 발화(User Utterance) 예상 하기</a>
                 <span class="nav_unfold">+</span>
                 <span class="nav_fold">-</span>
             </div>
@@ -429,7 +428,7 @@
     
         <li>
             <div class="nav_link fold ">
-                <a href="/nugu-play/create-plays-with-play-builder/hello-aria/create-an-action-and-an-answer" class="nav_href">3) Action 만들고 응답 등록하기</a>
+                <a href="/nugu-play/create-plays-with-play-builder/hello-aria/create-an-intent-and-custom-utterances" class="nav_href">2) Intent 만들고 예상 발화 등록하기</a>
                 <span class="nav_unfold">+</span>
                 <span class="nav_fold">-</span>
             </div>
@@ -438,7 +437,7 @@
     
         <li>
             <div class="nav_link fold ">
-                <a href="/nugu-play/create-plays-with-play-builder/hello-aria/create-an-intent-and-custom-utterances" class="nav_href">2) Intent 만들고 예상 발화 등록하기</a>
+                <a href="/nugu-play/create-plays-with-play-builder/hello-aria/create-an-action-and-an-answer" class="nav_href">3) Action 만들고 응답 등록하기</a>
                 <span class="nav_unfold">+</span>
                 <span class="nav_fold">-</span>
             </div>
@@ -550,7 +549,7 @@
     
         <li>
             <div class="nav_link fold ">
-                <a href="/nugu-play/create-plays-with-play-builder/use-backend-proxy/capability-interfaces/audioplayer-display-interface" class="nav_href">AudioPlayer를 위한 Display Interface</a>
+                <a href="/nugu-play/create-plays-with-play-builder/use-backend-proxy/capability-interfaces/audioplayer-interface" class="nav_href">AudioPlayer Interface</a>
                 <span class="nav_unfold">+</span>
                 <span class="nav_fold">-</span>
             </div>
@@ -559,7 +558,7 @@
     
         <li>
             <div class="nav_link fold ">
-                <a href="/nugu-play/create-plays-with-play-builder/use-backend-proxy/capability-interfaces/audioplayer-interface" class="nav_href">AudioPlayer Interface</a>
+                <a href="/nugu-play/create-plays-with-play-builder/use-backend-proxy/capability-interfaces/audioplayer-display-interface" class="nav_href">AudioPlayer를 위한 Display Interface</a>
                 <span class="nav_unfold">+</span>
                 <span class="nav_fold">-</span>
             </div>
@@ -1379,7 +1378,7 @@
     
         <li>
             <div class="nav_link fold  has_child ">
-                <a href="/work-with-nugu-biz/biz-api/api-announcement" class="nav_href">API 발송 \(Announcement\)</a>
+                <a href="/work-with-nugu-biz/biz-api/api-announcement" class="nav_href">API 발송 (Announcement)</a>
                 <span class="nav_unfold">+</span>
                 <span class="nav_fold">-</span>
             </div>
@@ -2186,23 +2185,10 @@
       <td> </td>
     </tr>
     <tr>
-      <td rowspan="2">Parameter
-<br>
-</td>
-      <td rowspan="2"> 
-<br>
-</td>
-      <td>{{}}와 같은 형태로 사용하며, Parameter에 담긴 값을 텍스트로 변형하여 발화합니다.</td>
-      <td rowspan="2">
-<code class="language-plaintext highlighter-rouge">{{</code>
-<br>
-</td>
-    </tr>
-    <tr>
-      
-      
-      <td>Parameter 사용법에 대한 자세한 내용은 <a href="../use-parameters">Parameter 사용하기</a>를 참고하세요.</td>
-      
+      <td>Parameter</td>
+      <td> </td>
+      <td>{{}}와 같은 형태로 사용하며, Parameter에 담긴 값을 텍스트로 변형하여 발화합니다.<br>Parameter 사용법에 대한 자세한 내용은 <a href="../use-parameters">Parameter 사용하기</a>를 참고하세요.</td>
+      <td>{{</td>
     </tr>
     <tr>
       <td rowspan="3">Response Filter
@@ -2210,64 +2196,31 @@
 </td>
       <td>NLG Translator</td>
       <td>Parameter와 항상 결합하여 사용되며, 단독으로 쓰일 수 없습니다.</td>
-      <td><code class="language-plaintext highlighter-rouge">&gt;</code></td>
+      <td>&gt;</td>
     </tr>
     <tr>
       
       <td>NLG Normalizer</td>
       <td>Parameter에 담겨 있는 값이 Filter의 Source와 100% 일치할 경우에만 동작합니다.</td>
-      <td><code class="language-plaintext highlighter-rouge">=</code></td>
+      <td>=</td>
     </tr>
     <tr>
       
       <td>NLG Function</td>
       <td>Response Filter에 대한 자세한 내용은 <a href="../../define-response-filters">Response Filter</a>를 참고하세요.</td>
-      <td style="text-align: left">
-</td>
+      <td>:</td>
     </tr>
     <tr>
-      <td rowspan="3">조사
-<br><br>
-</td>
-      <td rowspan="3"> 
-<br><br>
-</td>
-      <td>‘을/를’과 같이 앞 음절에 따라 조사가 바뀌는 경우에 자동으로 변환하여 발화합니다.</td>
-      <td rowspan="3">
-<code class="language-plaintext highlighter-rouge">/</code>
-<br><br>
-</td>
+      <td>조사</td>
+      <td> </td>
+      <td>‘을/를’과 같이 앞 음절에 따라 조사가 바뀌는 경우에 자동으로 변환하여 발화합니다.<br>조사 자동 변환은 Parameter와 함께 사용될 때만 동작합니다.<br>조사 처리에 대한 자세한 내용은 <a href="use-prompts#process-postpositions">조사 처리하기</a>를 참고하세요.</td>
+      <td>/</td>
     </tr>
     <tr>
-      
-      
-      <td>조사 자동 변환은 Parameter와 함께 사용될 때만 동작합니다.</td>
-      
-    </tr>
-    <tr>
-      
-      
-      <td>조사 처리에 대한 자세한 내용은 <a href="use-prompts#process-postpositions">조사 처리하기</a>를 참고하세요.</td>
-      
-    </tr>
-    <tr>
-      <td rowspan="2">SKML 태그
-<br>
-</td>
-      <td rowspan="2"> 
-<br>
-</td>
-      <td>TTS 엔진이 텍스트 혹은 Parameter의 값을 SKML 태그에 따라 발화합니다.</td>
-      <td rowspan="2">
-<code class="language-plaintext highlighter-rouge">&lt;</code>
-<br>
-</td>
-    </tr>
-    <tr>
-      
-      
-      <td>SKML 태그 사용 대한 자세한 내용은 <a href="use-prompts#use-utterance-options">발화 옵션 사용하기</a>를 참고하세요.</td>
-      
+      <td>SKML 태그</td>
+      <td> </td>
+      <td>TTS 엔진이 텍스트 혹은 Parameter의 값을 SKML 태그에 따라 발화합니다.<br>SKML 태그 사용 대한 자세한 내용은 <a href="use-prompts#use-utterance-options">발화 옵션 사용하기</a>를 참고하세요.</td>
+      <td>&lt;</td>
     </tr>
   </tbody>
 </table>
@@ -2425,11 +2378,11 @@
 
 <h4 id="전체-발화-옵션-변경하기">전체 발화 옵션 변경하기</h4>
 
-<p>1) Play 내 모든 prompt의 발화 옵션을 변경하고 싶다면 <code class="language-plaintext highlighter-rouge">General</code> &gt; <code class="language-plaintext highlighter-rouge">기본정보</code> 로 이동 합니다.</p>
+<p>⁣1. Play 내 모든 prompt의 발화 옵션을 변경하고 싶다면 <code class="language-plaintext highlighter-rouge">General</code> &gt; <code class="language-plaintext highlighter-rouge">기본정보</code> 로 이동 합니다.</p>
 
 <p><img src="/assets/images/use-prompts-04.png" alt=""></p>
 
-<p>2) 기본 정보 페이지의 Prompt 발화 옵션에서 발화속도, 음 높낮이, 문장 사이의 묵음 길이, 끊어읽기 뒤 묵음 길이를 설정한 후 <code class="language-plaintext highlighter-rouge">발화옵션 적용하기</code> 버튼을 클릭합니다. 이 값을 변경하면 변경한 순간 이후부터 만드는 Prompt부터 적용됩니다.</p>
+<p>⁣2. 기본 정보 페이지의 Prompt 발화 옵션에서 발화속도, 음 높낮이, 문장 사이의 묵음 길이, 끊어읽기 뒤 묵음 길이를 설정한 후 <code class="language-plaintext highlighter-rouge">발화옵션 적용하기</code> 버튼을 클릭합니다. 이 값을 변경하면 변경한 순간 이후부터 만드는 Prompt부터 적용됩니다.</p>
 
 <p><img src="/assets/images/use-prompts-05.png" alt=""></p>
 
@@ -2445,11 +2398,11 @@
 
 <p>문장별로 발화 옵션을 조절할 수 있습니다.</p>
 
-<p>1) Play Builder 홈 화면에서 모든 Prompt의 발화 옵션을 변경할 Play를 클릭하여 선택한 후 <code class="language-plaintext highlighter-rouge">Actions</code> &gt; <code class="language-plaintext highlighter-rouge">Custom Actions</code> 페이지에서 발화 옵션을 설정할 문장이 있는 Action을 선택합니다.</p>
+<p>⁣1. Play Builder 홈 화면에서 모든 Prompt의 발화 옵션을 변경할 Play를 클릭하여 선택한 후 <code class="language-plaintext highlighter-rouge">Actions</code> &gt; <code class="language-plaintext highlighter-rouge">Custom Actions</code> 페이지에서 발화 옵션을 설정할 문장이 있는 Action을 선택합니다.</p>
 
 <p><img src="/assets/images/use-prompts-06.png" alt=""></p>
 
-<p>2) Output 정의 영역에서 발화 옵션을 변경할 Prompt의 우측 버튼을 클릭하여 옵션을 설정한 후 [Play 저장] 버튼을 클릭합니다.</p>
+<p>⁣2. Output 정의 영역에서 발화 옵션을 변경할 Prompt의 우측 버튼을 클릭하여 옵션을 설정한 후 [Play 저장] 버튼을 클릭합니다.</p>
 
 <ul>
   <li>변경 가능한 옵션은 전체 발화 옵션과 같습니다.</li>
@@ -2511,7 +2464,7 @@
 <br><br><br><br><br>
 </td>
       <td>가장 길게 끊어읽기</td>
-      <td>가장 길게 끊어읽습니다.<br>예) 오늘은 비가<code class="language-plaintext highlighter-rouge">&lt;break type="sentence"/&gt;</code> 옵니다.</td>
+      <td>가장 길게 끊어읽습니다.<br>예) 오늘은 비가 <code class="language-plaintext highlighter-rouge">&lt;break type="sentence"/&gt;</code> 옵니다.</td>
       <td>sentence</td>
       <td>-</td>
     </tr>
@@ -2585,7 +2538,7 @@
       <td rowspan="2">날짜 읽기
 <br>
 </td>
-      <td rowspan="2">‘이천십팔년 삼월 구일’과 같이 날짜로 읽습니다.<br>‘삼월 구일’과 같이 특정 날짜로 읽거나, ‘삼월 구일에서 사월 십일’과 같이 범위로 읽는 것을 지원합니다.
+      <td rowspan="2">‘이천십팔년 삼월 구일’과 같이 날짜로 읽습니다.<br>‘삼월 구일’과 같이 특정 날짜로 읽거나,<br>‘삼월 구일에서 사월 십일’과 같이 범위로 읽는 것을 지원합니다.
 <br>
 </td>
       <td rowspan="2">date
@@ -2607,7 +2560,7 @@
       <td rowspan="2">시간 읽기
 <br>
 </td>
-      <td rowspan="2">‘열한시 삽십분 사십오초’와 같이 시간으로 읽습니다.<br>‘hh시 mm분 ss초, hh시 mm분’과 같이 특정 시간으로 읽거나 ‘hh시 mm분 ss초에서 hh시 mm분 ss초’, ‘hh시 mm분에서 hh시 mm분’처럼 범위로 읽는 것을 지원합니다.
+      <td rowspan="2">‘열한시 삽십분 사십오초’와 같이 시간으로 읽습니다.<br>‘hh시 mm분 ss초, hh시 mm분’과 같이 특정 시간으로 읽거나<br>‘hh시 mm분 ss초에서 hh시 mm분 ss초’,<br>‘hh시 mm분에서 hh시 mm분’처럼 범위로 읽는 것을 지원합니다.
 <br>
 </td>
       <td rowspan="2">time

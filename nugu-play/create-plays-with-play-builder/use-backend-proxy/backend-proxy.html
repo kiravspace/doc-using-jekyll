@@ -10,7 +10,6 @@
 <script type="text/javascript" src="/assets/js/jquery-ui.js"></script>
 <script type="text/javascript" src="/assets/js/main.js"></script>
 
-<script>MathJax={"tex":{"inlineMath":[["$","$"],["\\(","\\)"]],"displayMath":[["$$","$$"],["\\[","\\]"]]},"svg":{"fontCache":"global"},"options":{"enableMenu":false}}</script><script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script><script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
 </head>
 <body>
 <header>
@@ -62,7 +61,7 @@
     
         <li>
             <div class="nav_link fold ">
-                <a href="/nugu-play/nugu-ux/voice-interaction-design" class="nav_href">사용자 발화\(User Utterance\) 예상 하기</a>
+                <a href="/nugu-play/nugu-ux/voice-interaction-design" class="nav_href">사용자 발화(User Utterance) 예상 하기</a>
                 <span class="nav_unfold">+</span>
                 <span class="nav_fold">-</span>
             </div>
@@ -429,7 +428,7 @@
     
         <li>
             <div class="nav_link fold ">
-                <a href="/nugu-play/create-plays-with-play-builder/hello-aria/create-an-action-and-an-answer" class="nav_href">3) Action 만들고 응답 등록하기</a>
+                <a href="/nugu-play/create-plays-with-play-builder/hello-aria/create-an-intent-and-custom-utterances" class="nav_href">2) Intent 만들고 예상 발화 등록하기</a>
                 <span class="nav_unfold">+</span>
                 <span class="nav_fold">-</span>
             </div>
@@ -438,7 +437,7 @@
     
         <li>
             <div class="nav_link fold ">
-                <a href="/nugu-play/create-plays-with-play-builder/hello-aria/create-an-intent-and-custom-utterances" class="nav_href">2) Intent 만들고 예상 발화 등록하기</a>
+                <a href="/nugu-play/create-plays-with-play-builder/hello-aria/create-an-action-and-an-answer" class="nav_href">3) Action 만들고 응답 등록하기</a>
                 <span class="nav_unfold">+</span>
                 <span class="nav_fold">-</span>
             </div>
@@ -550,7 +549,7 @@
     
         <li>
             <div class="nav_link fold ">
-                <a href="/nugu-play/create-plays-with-play-builder/use-backend-proxy/capability-interfaces/audioplayer-display-interface" class="nav_href">AudioPlayer를 위한 Display Interface</a>
+                <a href="/nugu-play/create-plays-with-play-builder/use-backend-proxy/capability-interfaces/audioplayer-interface" class="nav_href">AudioPlayer Interface</a>
                 <span class="nav_unfold">+</span>
                 <span class="nav_fold">-</span>
             </div>
@@ -559,7 +558,7 @@
     
         <li>
             <div class="nav_link fold ">
-                <a href="/nugu-play/create-plays-with-play-builder/use-backend-proxy/capability-interfaces/audioplayer-interface" class="nav_href">AudioPlayer Interface</a>
+                <a href="/nugu-play/create-plays-with-play-builder/use-backend-proxy/capability-interfaces/audioplayer-display-interface" class="nav_href">AudioPlayer를 위한 Display Interface</a>
                 <span class="nav_unfold">+</span>
                 <span class="nav_fold">-</span>
             </div>
@@ -1379,7 +1378,7 @@
     
         <li>
             <div class="nav_link fold  has_child ">
-                <a href="/work-with-nugu-biz/biz-api/api-announcement" class="nav_href">API 발송 \(Announcement\)</a>
+                <a href="/work-with-nugu-biz/biz-api/api-announcement" class="nav_href">API 발송 (Announcement)</a>
                 <span class="nav_unfold">+</span>
                 <span class="nav_fold">-</span>
             </div>
@@ -2192,11 +2191,11 @@
   <tbody>
     <tr>
       <td>Action 이름</td>
-      <td>Backend proxy에서 처리해야 하는 요청을 구분하는 데 사용됩니다.어떠한 Action이 Backend proxy를 호출했는지 확인할 수 있습니다.</td>
+      <td>Backend proxy에서 처리해야 하는 요청을 구분하는 데 사용됩니다.<br>어떠한 Action이 Backend proxy를 호출했는지 확인할 수 있습니다.</td>
     </tr>
     <tr>
       <td>Parameters</td>
-      <td>Play에서 정의된 Parameter들이 전달됩니다.Utterance Parameter에는 Play 사용자의 실제 발화에 담긴 Entity 혹은 그 Entity가 정규화된 값이 "value"로 전달됩니다.Backend Parameter는 "value"를 담아서 Play로 전달하게 될 Parameter이며 value는 "null"로 전달됩니다.Utterance/Backend Parameter를 구분할 수 없으므로, Play에서 어떻게 정의를 했는지 파악한 후 구현해야 합니다.</td>
+      <td>Play에서 정의된 Parameter들이 전달됩니다.<br>Utterance Parameter에는 Play 사용자의 실제 발화에 담긴 Entity 혹은 그 Entity가 정규화된 값이 “value”로 전달됩니다.<br>Backend Parameter는 “value”를 담아서 Play로 전달하게 될 Parameter이며 value는 “null”로 전달됩니다.<br>Utterance/Backend Parameter를 구분할 수 없으므로, Play에서 어떻게 정의를 했는지 파악한 후 구현해야 합니다.</td>
     </tr>
     <tr>
       <td>Context 정보</td>
@@ -2247,15 +2246,15 @@
   <tbody>
     <tr>
       <td>KEY</td>
-      <td>Play Builder의 "응답에 필요한 정보 가져오기" 화면에서 다음의 두 위치에 설정된 모든 파라미터가 포함되어야 합니다. Utterance Parameter의 Parameter Name Backend Parameter의 Parameter Name</td>
+      <td>Play Builder의 “응답에 필요한 정보 가져오기” 화면에서 다음의 두 위치에 설정된 모든 파라미터가 포함되어야 합니다.<br> Utterance Parameter의 Parameter Name<br> Backend Parameter의 Parameter Name</td>
     </tr>
     <tr>
       <td>type</td>
-      <td>Utterance Parameter에만 적용되며, Play Builder의 Entity Mapping에 설정된 값 중 ":" 앞의 값만 전송합니다.Backend Parameter의 경우에는 Entity Mapping을 설정하지 않기 때문에 이 필드는 사용되지 않습니다.</td>
+      <td>Utterance Parameter에만 적용되며, Play Builder의 Entity Mapping에 설정된 값 중 “:” 앞의 값만 전송합니다.<br>Backend Parameter의 경우에는 Entity Mapping을 설정하지 않기 때문에 이 필드는 사용되지 않습니다.</td>
     </tr>
     <tr>
       <td>value</td>
-      <td>실제 해당 파라미터에 할당된 값을 전송합니다.Utterance Parameter의 경우 필수가 체크되지 않은 파라미터는 값이 있을 수도 있고 없을 수도 있습니다.Backend Parameter의 경우에도 Backend proxy가 몇 번 호출되느냐에 따라 값이 있을 수도 있고 없을 수도 있습니다.</td>
+      <td>실제 해당 파라미터에 할당된 값을 전송합니다.<br>Utterance Parameter의 경우 필수가 체크되지 않은 파라미터는 값이 있을 수도 있고 없을 수도 있습니다.<br>Backend Parameter의 경우에도 Backend proxy가 몇 번 호출되느냐에 따라 값이 있을 수도 있고 없을 수도 있습니다.</td>
     </tr>
   </tbody>
 </table>

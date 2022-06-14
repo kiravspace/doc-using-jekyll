@@ -10,7 +10,6 @@
 <script type="text/javascript" src="/assets/js/jquery-ui.js"></script>
 <script type="text/javascript" src="/assets/js/main.js"></script>
 
-<script>MathJax={"tex":{"inlineMath":[["$","$"],["\\(","\\)"]],"displayMath":[["$$","$$"],["\\[","\\]"]]},"svg":{"fontCache":"global"},"options":{"enableMenu":false}}</script><script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script><script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
 </head>
 <body>
 <header>
@@ -62,7 +61,7 @@
     
         <li>
             <div class="nav_link fold ">
-                <a href="/nugu-play/nugu-ux/voice-interaction-design" class="nav_href">사용자 발화\(User Utterance\) 예상 하기</a>
+                <a href="/nugu-play/nugu-ux/voice-interaction-design" class="nav_href">사용자 발화(User Utterance) 예상 하기</a>
                 <span class="nav_unfold">+</span>
                 <span class="nav_fold">-</span>
             </div>
@@ -429,7 +428,7 @@
     
         <li>
             <div class="nav_link fold ">
-                <a href="/nugu-play/create-plays-with-play-builder/hello-aria/create-an-action-and-an-answer" class="nav_href">3) Action 만들고 응답 등록하기</a>
+                <a href="/nugu-play/create-plays-with-play-builder/hello-aria/create-an-intent-and-custom-utterances" class="nav_href">2) Intent 만들고 예상 발화 등록하기</a>
                 <span class="nav_unfold">+</span>
                 <span class="nav_fold">-</span>
             </div>
@@ -438,7 +437,7 @@
     
         <li>
             <div class="nav_link fold ">
-                <a href="/nugu-play/create-plays-with-play-builder/hello-aria/create-an-intent-and-custom-utterances" class="nav_href">2) Intent 만들고 예상 발화 등록하기</a>
+                <a href="/nugu-play/create-plays-with-play-builder/hello-aria/create-an-action-and-an-answer" class="nav_href">3) Action 만들고 응답 등록하기</a>
                 <span class="nav_unfold">+</span>
                 <span class="nav_fold">-</span>
             </div>
@@ -550,7 +549,7 @@
     
         <li>
             <div class="nav_link fold ">
-                <a href="/nugu-play/create-plays-with-play-builder/use-backend-proxy/capability-interfaces/audioplayer-display-interface" class="nav_href">AudioPlayer를 위한 Display Interface</a>
+                <a href="/nugu-play/create-plays-with-play-builder/use-backend-proxy/capability-interfaces/audioplayer-interface" class="nav_href">AudioPlayer Interface</a>
                 <span class="nav_unfold">+</span>
                 <span class="nav_fold">-</span>
             </div>
@@ -559,7 +558,7 @@
     
         <li>
             <div class="nav_link fold ">
-                <a href="/nugu-play/create-plays-with-play-builder/use-backend-proxy/capability-interfaces/audioplayer-interface" class="nav_href">AudioPlayer Interface</a>
+                <a href="/nugu-play/create-plays-with-play-builder/use-backend-proxy/capability-interfaces/audioplayer-display-interface" class="nav_href">AudioPlayer를 위한 Display Interface</a>
                 <span class="nav_unfold">+</span>
                 <span class="nav_fold">-</span>
             </div>
@@ -1379,7 +1378,7 @@
     
         <li>
             <div class="nav_link fold  has_child ">
-                <a href="/work-with-nugu-biz/biz-api/api-announcement" class="nav_href">API 발송 \(Announcement\)</a>
+                <a href="/work-with-nugu-biz/biz-api/api-announcement" class="nav_href">API 발송 (Announcement)</a>
                 <span class="nav_unfold">+</span>
                 <span class="nav_fold">-</span>
             </div>
@@ -2180,17 +2179,18 @@ NUGU 디바이스(스피커)와 연동하여 진행하는 테스트는 실제 �
 <ol>
   <li>Play Builder 우측 상단에 있는 <code class="language-plaintext highlighter-rouge">테스트</code> 버튼을 클릭하여 실행한 채팅창에 발화 내용을 입력한 후 버튼을 클릭합니다.(예: 날씨 알려줘)</li>
   <li>단축키 Ctrl+D (Mac에서는 ⌘ Command + D) 를 눌러 실행할 수 있습니다.</li>
-  <li>Play Builder 내에서의 테스트는 사용자의 실제 발화를 어떻게 분석할지 확인할 수 있으며, 이 분석 결과를 바탕으로 실제로 의도한 대로 Prompt가 나가게 되는지도 확인할 수 있습니다.</li>
-</ol>
+  <li>
+    <p>Play Builder 내에서의 테스트는 사용자의 실제 발화를 어떻게 분석할지 확인할 수 있으며, 이 분석 결과를 바탕으로 실제로 의도한 대로 Prompt가 나가게 되는지도 확인할 수 있습니다.</p>
 
-<p><img src="/assets/images/test-a-play-01.gif" alt=""></p>
-
-<ol>
+    <p><img src="/assets/images/test-a-play-01.gif" alt=""></p>
+  </li>
   <li>분석 결과를 확인하려면 입력 문장 바로 아래의 <code class="language-plaintext highlighter-rouge">NLU 분석 결과 열기</code>를 클릭합니다. 입력한 문장 아래 분석 결과가 표시됩니다.</li>
-  <li>분석 결과 표시를 닫으려면 <code class="language-plaintext highlighter-rouge">NLU 분석 결과 닫기</code>를 클릭합니다.</li>
-</ol>
+  <li>
+    <p>분석 결과 표시를 닫으려면 <code class="language-plaintext highlighter-rouge">NLU 분석 결과 닫기</code>를 클릭합니다.</p>
 
-<p><img src="/assets/images/test-a-play-02.png" alt=""></p>
+    <p><img src="/assets/images/test-a-play-02.png" alt=""></p>
+  </li>
+</ol>
 
 <p>NLU 분석 결과는 문장을 직접 입력하여 학습시킨 Custom Intent에 대해서만 분석이 되며, 이 Custom Intent를 Trigger로 사용하는 Custom Action에 대해 응답 중 Prompt가 어떻게 나가게 되는지 확인할 수 있습니다.</p>
 
@@ -2272,13 +2272,18 @@ NUGU 디바이스(스피커)와 연동하여 진행하는 테스트는 실제 �
 
 </div>
 
-<p><code class="language-plaintext highlighter-rouge">1.Developers Console</code> &gt; <code class="language-plaintext highlighter-rouge">Play Kit</code>에서 Play가 등록완료 상태가 된 경우, 하단의 디바이스 등록 버튼을 통해 계정에 연결된 기기를 테스트 기기로 등록 할 수 있습니다.</p>
+<ol>
+  <li>
+    <p><code class="language-plaintext highlighter-rouge">Developers Console</code> &gt; <code class="language-plaintext highlighter-rouge">Play Kit</code>에서 Play가 등록완료 상태가 된 경우, 하단의 디바이스 등록 버튼을 통해 계정에 연결된 기기를 테스트 기기로 등록 할 수 있습니다.</p>
 
-<p><img src="/assets/images/test2.png" alt=""></p>
+    <p><img src="/assets/images/test2.png" alt=""></p>
+  </li>
+  <li>
+    <p>다른 방법으로는 <code class="language-plaintext highlighter-rouge">Developers Console</code> &gt; <code class="language-plaintext highlighter-rouge">Account </code>&gt; <code class="language-plaintext highlighter-rouge">회원 정보 관리</code>에서 하단의 디바이스 등록 버튼을 통해 계정에 연결된 기기를 테스트 기기로 등록 할 수 있습니다.</p>
 
-<p>2. 다른 방법으로는 <code class="language-plaintext highlighter-rouge">Developers Console</code> &gt; <code class="language-plaintext highlighter-rouge">Account </code>&gt; <code class="language-plaintext highlighter-rouge">회원 정보 관리</code>에서 하단의 디바이스 등록 버튼을 통해 계정에 연결된 기기를 테스트 기기로 등록 할 수 있습니다.</p>
-
-<p><img src="/assets/images/test3.png" alt=""></p>
+    <p><img src="/assets/images/test3.png" alt=""></p>
+  </li>
+</ol>
 
 <p>테스트 기기 등록이 완료되면 테스트 기기 등록 메뉴의 등록된 기기 목록에 등록된 디바이스가 표시됩니다. NUGU 디바이스 테스트를 중지하려면, 등록된 디바이스 우측의 <code class="language-plaintext highlighter-rouge">-</code> 버튼을 클릭하여 디바이스를 삭제합니다.</p>
 

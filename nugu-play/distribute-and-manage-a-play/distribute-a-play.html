@@ -10,7 +10,6 @@
 <script type="text/javascript" src="/assets/js/jquery-ui.js"></script>
 <script type="text/javascript" src="/assets/js/main.js"></script>
 
-<script>MathJax={"tex":{"inlineMath":[["$","$"],["\\(","\\)"]],"displayMath":[["$$","$$"],["\\[","\\]"]]},"svg":{"fontCache":"global"},"options":{"enableMenu":false}}</script><script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script><script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
 </head>
 <body>
 <header>
@@ -62,7 +61,7 @@
     
         <li>
             <div class="nav_link fold ">
-                <a href="/nugu-play/nugu-ux/voice-interaction-design" class="nav_href">사용자 발화\(User Utterance\) 예상 하기</a>
+                <a href="/nugu-play/nugu-ux/voice-interaction-design" class="nav_href">사용자 발화(User Utterance) 예상 하기</a>
                 <span class="nav_unfold">+</span>
                 <span class="nav_fold">-</span>
             </div>
@@ -429,7 +428,7 @@
     
         <li>
             <div class="nav_link fold ">
-                <a href="/nugu-play/create-plays-with-play-builder/hello-aria/create-an-action-and-an-answer" class="nav_href">3) Action 만들고 응답 등록하기</a>
+                <a href="/nugu-play/create-plays-with-play-builder/hello-aria/create-an-intent-and-custom-utterances" class="nav_href">2) Intent 만들고 예상 발화 등록하기</a>
                 <span class="nav_unfold">+</span>
                 <span class="nav_fold">-</span>
             </div>
@@ -438,7 +437,7 @@
     
         <li>
             <div class="nav_link fold ">
-                <a href="/nugu-play/create-plays-with-play-builder/hello-aria/create-an-intent-and-custom-utterances" class="nav_href">2) Intent 만들고 예상 발화 등록하기</a>
+                <a href="/nugu-play/create-plays-with-play-builder/hello-aria/create-an-action-and-an-answer" class="nav_href">3) Action 만들고 응답 등록하기</a>
                 <span class="nav_unfold">+</span>
                 <span class="nav_fold">-</span>
             </div>
@@ -550,7 +549,7 @@
     
         <li>
             <div class="nav_link fold ">
-                <a href="/nugu-play/create-plays-with-play-builder/use-backend-proxy/capability-interfaces/audioplayer-display-interface" class="nav_href">AudioPlayer를 위한 Display Interface</a>
+                <a href="/nugu-play/create-plays-with-play-builder/use-backend-proxy/capability-interfaces/audioplayer-interface" class="nav_href">AudioPlayer Interface</a>
                 <span class="nav_unfold">+</span>
                 <span class="nav_fold">-</span>
             </div>
@@ -559,7 +558,7 @@
     
         <li>
             <div class="nav_link fold ">
-                <a href="/nugu-play/create-plays-with-play-builder/use-backend-proxy/capability-interfaces/audioplayer-interface" class="nav_href">AudioPlayer Interface</a>
+                <a href="/nugu-play/create-plays-with-play-builder/use-backend-proxy/capability-interfaces/audioplayer-display-interface" class="nav_href">AudioPlayer를 위한 Display Interface</a>
                 <span class="nav_unfold">+</span>
                 <span class="nav_fold">-</span>
             </div>
@@ -1379,7 +1378,7 @@
     
         <li>
             <div class="nav_link fold  has_child ">
-                <a href="/work-with-nugu-biz/biz-api/api-announcement" class="nav_href">API 발송 \(Announcement\)</a>
+                <a href="/work-with-nugu-biz/biz-api/api-announcement" class="nav_href">API 발송 (Announcement)</a>
                 <span class="nav_unfold">+</span>
                 <span class="nav_fold">-</span>
             </div>
@@ -2176,7 +2175,7 @@
     
 <p>기본적으로 이용 가능 기기는 “NUGU”, “NUGU mini”, “NUGU candle”이며, 사전 요청 또는 내부 결정에 따라 추가적인 검증을 거쳐 “T전화”, “NUGU nemo”, “Tmap”, “Btv” 등 NUGU플랫폼이 적용된 다른 기기에도 적용이 가능합니다.</p>
 
-<p>요청 방법 : <code class="language-plaintext highlighter-rouge">Support &gt; 문의사항 (개발)</code></p>
+<p>요청 방법 : <code class="language-plaintext highlighter-rouge">Support</code> &gt; <code class="language-plaintext highlighter-rouge">문의사항 (개발)</code></p>
 
 </div>
 
@@ -2197,32 +2196,36 @@ Play 동작에 이상이 있거나, 내부 사정에 따라 배포가 어려운 
 
 <p>Play의 심사 승인이 완료되면 Play 등록 현황 리스트에 <code class="language-plaintext highlighter-rouge">배포요청</code> 버튼이 생성됩니다. 이 버튼을 이용하여 배포를 신청할 수 있습니다.</p>
 
-<p>1️⃣ <code class="language-plaintext highlighter-rouge">Developers</code> &gt; <code class="language-plaintext highlighter-rouge">Play kit</code> &gt; <code class="language-plaintext highlighter-rouge">관리</code> 페이지에서 배포 신청할 Play의 [배포요청] 버튼을 클릭합니다.</p>
+<ol>
+  <li>
+    <p><code class="language-plaintext highlighter-rouge">Developers</code> &gt; <code class="language-plaintext highlighter-rouge">Play kit</code> &gt; <code class="language-plaintext highlighter-rouge">관리</code> 페이지에서 배포 신청할 Play의 [배포요청] 버튼을 클릭합니다.</p>
 
-<p><img src="/assets/images/simsabepo.png" alt=""></p>
-
-<p>2️⃣ 배포요청 팝업창에서 내용을 확인 한 후 <code class="language-plaintext highlighter-rouge">확인</code> 버튼을 클릭하면 배포 요청이 완료됩니다. 배포희망일이 별도로 존재하면 <code class="language-plaintext highlighter-rouge">Support</code> &gt; <code class="language-plaintext highlighter-rouge">문의사항</code> (관리) 를 통해 요청 할 수 있습니다.</p>
-
-<p>배포요청 완료 후 운영자가 배포일을 지정하면 Play 개발자의 메일로 배포 완료 안내 메일이 발송 됩니다.</p>
-
-<p>3️⃣ 배포 완료되면 해당 Play는 <strong>서비스 중</strong> 상태가 됩니다.</p>
-
-<p>배포 대기는 배포 신청을 한 상태에서 배포일이 도래하지 않았을 경우를 말하며, 이 경우에는 배포 신청을 취소할 수가 있습니다. 자세한 내용은 <a href="distribute-a-play#distribution-requestcancellation">배포 신청 취소</a>를 참고하세요.</p>
+    <p><img src="/assets/images/simsabepo.png" alt=""></p>
+  </li>
+  <li>배포요청 팝업창에서 내용을 확인 한 후 <code class="language-plaintext highlighter-rouge">확인</code> 버튼을 클릭하면 배포 요청이 완료됩니다. 배포희망일이 별도로 존재하면 <code class="language-plaintext highlighter-rouge">Support</code> &gt; <code class="language-plaintext highlighter-rouge">문의사항</code> (관리) 를 통해 요청 할 수 있습니다.
+배포요청 완료 후 운영자가 배포일을 지정하면 Play 개발자의 메일로 배포 완료 안내 메일이 발송 됩니다.</li>
+  <li>배포 완료되면 해당 Play는 <strong>서비스 중</strong> 상태가 됩니다.
+배포 대기는 배포 신청을 한 상태에서 배포일이 도래하지 않았을 경우를 말하며, 이 경우에는 배포 신청을 취소할 수가 있습니다. 자세한 내용은 <a href="distribute-a-play#distribution-requestcancellation">배포 신청 취소</a>를 참고하세요.</li>
+</ol>
 
 <h2 id="배포-신청-취소-">배포 신청 취소 <a href="distribution-requestcancellation" id="distribution-requestcancellation"></a>
 </h2>
 
 <p>Play 배포 대기 상태(지정한 배포일이 아직 도래하지 않은 상태)에서는 언제든지 배포 신청을 취소할 수 있습니다.</p>
 
-<p>1️⃣ <code class="language-plaintext highlighter-rouge">Developers</code> &gt; <code class="language-plaintext highlighter-rouge">Play kit</code> &gt; <code class="language-plaintext highlighter-rouge">관리</code> 페이지에서 배포 신청을 취소할 Play의 <code class="language-plaintext highlighter-rouge">배포취소</code> 버튼을 클릭합니다.</p>
+<ol>
+  <li>
+    <p><code class="language-plaintext highlighter-rouge">Developers</code> &gt; <code class="language-plaintext highlighter-rouge">Play kit</code> &gt; <code class="language-plaintext highlighter-rouge">관리</code> 페이지에서 배포 신청을 취소할 Play의 <code class="language-plaintext highlighter-rouge">배포취소</code> 버튼을 클릭합니다.</p>
 
-<p><img src="/assets/images/distribute-a-play-02.png" alt=""></p>
+    <p><img src="/assets/images/distribute-a-play-02.png" alt=""></p>
+  </li>
+  <li>배포 취소 확인 팝업창에서 <code class="language-plaintext highlighter-rouge">확인</code> 버튼을 클릭하면 배포 신청이 취소됩니다.</li>
+  <li>
+    <p>배포 취소가 완료되면 해당 Play는 <code class="language-plaintext highlighter-rouge">배포대기</code>에서 <code class="language-plaintext highlighter-rouge">심사완료</code> 상태로 변경되고, <code class="language-plaintext highlighter-rouge">배포요청</code> 버튼이 생성됩니다.</p>
 
-<p>2️⃣ 배포 취소 확인 팝업창에서 <code class="language-plaintext highlighter-rouge">확인</code> 버튼을 클릭하면 배포 신청이 취소됩니다.</p>
-
-<p>3️⃣ 배포 취소가 완료되면 해당 Play는 <code class="language-plaintext highlighter-rouge">배포대기</code>에서 <code class="language-plaintext highlighter-rouge">심사완료</code> 상태로 변경되고, <code class="language-plaintext highlighter-rouge">배포요청</code> 버튼이 생성됩니다.</p>
-
-<p><img src="/assets/images/distribute-a-play-03.png" alt=""></p>
+    <p><img src="/assets/images/distribute-a-play-03.png" alt=""></p>
+  </li>
+</ol>
 
         
 

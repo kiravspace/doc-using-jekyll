@@ -10,7 +10,6 @@
 <script type="text/javascript" src="/assets/js/jquery-ui.js"></script>
 <script type="text/javascript" src="/assets/js/main.js"></script>
 
-<script>MathJax={"tex":{"inlineMath":[["$","$"],["\\(","\\)"]],"displayMath":[["$$","$$"],["\\[","\\]"]]},"svg":{"fontCache":"global"},"options":{"enableMenu":false}}</script><script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script><script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
 </head>
 <body>
 <header>
@@ -62,7 +61,7 @@
     
         <li>
             <div class="nav_link fold ">
-                <a href="/nugu-play/nugu-ux/voice-interaction-design" class="nav_href">사용자 발화\(User Utterance\) 예상 하기</a>
+                <a href="/nugu-play/nugu-ux/voice-interaction-design" class="nav_href">사용자 발화(User Utterance) 예상 하기</a>
                 <span class="nav_unfold">+</span>
                 <span class="nav_fold">-</span>
             </div>
@@ -429,7 +428,7 @@
     
         <li>
             <div class="nav_link fold ">
-                <a href="/nugu-play/create-plays-with-play-builder/hello-aria/create-an-action-and-an-answer" class="nav_href">3) Action 만들고 응답 등록하기</a>
+                <a href="/nugu-play/create-plays-with-play-builder/hello-aria/create-an-intent-and-custom-utterances" class="nav_href">2) Intent 만들고 예상 발화 등록하기</a>
                 <span class="nav_unfold">+</span>
                 <span class="nav_fold">-</span>
             </div>
@@ -438,7 +437,7 @@
     
         <li>
             <div class="nav_link fold ">
-                <a href="/nugu-play/create-plays-with-play-builder/hello-aria/create-an-intent-and-custom-utterances" class="nav_href">2) Intent 만들고 예상 발화 등록하기</a>
+                <a href="/nugu-play/create-plays-with-play-builder/hello-aria/create-an-action-and-an-answer" class="nav_href">3) Action 만들고 응답 등록하기</a>
                 <span class="nav_unfold">+</span>
                 <span class="nav_fold">-</span>
             </div>
@@ -550,7 +549,7 @@
     
         <li>
             <div class="nav_link fold ">
-                <a href="/nugu-play/create-plays-with-play-builder/use-backend-proxy/capability-interfaces/audioplayer-display-interface" class="nav_href">AudioPlayer를 위한 Display Interface</a>
+                <a href="/nugu-play/create-plays-with-play-builder/use-backend-proxy/capability-interfaces/audioplayer-interface" class="nav_href">AudioPlayer Interface</a>
                 <span class="nav_unfold">+</span>
                 <span class="nav_fold">-</span>
             </div>
@@ -559,7 +558,7 @@
     
         <li>
             <div class="nav_link fold ">
-                <a href="/nugu-play/create-plays-with-play-builder/use-backend-proxy/capability-interfaces/audioplayer-interface" class="nav_href">AudioPlayer Interface</a>
+                <a href="/nugu-play/create-plays-with-play-builder/use-backend-proxy/capability-interfaces/audioplayer-display-interface" class="nav_href">AudioPlayer를 위한 Display Interface</a>
                 <span class="nav_unfold">+</span>
                 <span class="nav_fold">-</span>
             </div>
@@ -1379,7 +1378,7 @@
     
         <li>
             <div class="nav_link fold  has_child ">
-                <a href="/work-with-nugu-biz/biz-api/api-announcement" class="nav_href">API 발송 \(Announcement\)</a>
+                <a href="/work-with-nugu-biz/biz-api/api-announcement" class="nav_href">API 발송 (Announcement)</a>
                 <span class="nav_unfold">+</span>
                 <span class="nav_fold">-</span>
             </div>
@@ -2186,31 +2185,15 @@
     <tr>
       <td>HLS (Http Live Streaming)</td>
       <td>mp3</td>
-      <td>
-<blockquote>
-  <p>= 44.1KHz</p>
-</blockquote>
-</td>
-      <td>
-<blockquote>
-  <p>= 128kbps</p>
-</blockquote>
-</td>
+      <td>&gt;= 44.1KHz</td>
+      <td>&gt;= 128kbps</td>
       <td>-</td>
     </tr>
     <tr>
       <td>MP4 over HTTP</td>
       <td>AAC</td>
-      <td>
-<blockquote>
-  <p>= 44.1KHz</p>
-</blockquote>
-</td>
-      <td>
-<blockquote>
-  <p>= 96kbps</p>
-</blockquote>
-</td>
+      <td>&gt;= 44.1KHz</td>
+      <td>&gt;= 96kbps</td>
       <td>초기 버퍼링 시간을 줄이기 위해 moov atom을 파일의 앞쪽으로 이동시킨 MP4 파일을 권장합니다.</td>
     </tr>
   </tbody>
@@ -2242,7 +2225,7 @@
   <tbody>
     <tr>
       <td>IDLE</td>
-      <td>최초 전원이 켜지면 IDLE 상태로 진입합니다.이후 재생이 한번이라도 시작되면 전원이 꺼질 때까지 IDLE 상태가 될 수 없습니다.</td>
+      <td>최초 전원이 켜지면 IDLE 상태로 진입합니다.<br>이후 재생이 한번이라도 시작되면 전원이 꺼질 때까지 IDLE 상태가 될 수 없습니다.</td>
     </tr>
     <tr>
       <td>PLAYING</td>
@@ -2254,11 +2237,11 @@
     </tr>
     <tr>
       <td>PAUSED</td>
-      <td>PAUSED 상태가 되는 경우는 다음 두 경우입니다.1. Pause Directive를 받아 일시 정지 상태2. 오디오 재생 중에 사용자 발화가 들어오면 자동으로 PAUSED상태가 되고, 해당 발화의 처리가 끝나고 오디오 재생이 이어지는 경우에는 PLAYING 상태로 돌아감</td>
+      <td>PAUSED 상태가 되는 경우는 다음 두 경우입니다.<br>1. Pause Directive를 받아 일시 정지 상태<br>2. 오디오 재생 중에 사용자 발화가 들어오면 자동으로 PAUSED상태가 되고, 해당 발화의 처리가 끝나고 오디오 재생이 이어지는 경우에는 PLAYING 상태로 돌아감</td>
     </tr>
     <tr>
       <td>FINISHED</td>
-      <td>정상적으로 끝까지 재생을 마치면 FINISHED 상태가 됩니다.만약, 다음 곡이 버퍼되어 있으면 FINISHED 상태가 되었다가 바로 PLAYING상태로 바뀝니다.</td>
+      <td>정상적으로 끝까지 재생을 마치면 FINISHED 상태가 됩니다.<br>만약, 다음 곡이 버퍼되어 있으면 FINISHED 상태가 되었다가 바로 PLAYING상태로 바뀝니다.</td>
     </tr>
   </tbody>
 </table>
@@ -2285,22 +2268,24 @@
   </thead>
   <tbody>
     <tr>
-      <td>Universal Intent</td>
+      <td rowspan="4">Universal Intent
+<br><br><br>
+</td>
       <td>NUGU.INTENT.play</td>
       <td>틀어줘, 들려줘, 재생, 플레이</td>
     </tr>
     <tr>
-      <td> </td>
+      
       <td>NUGU.INTENT.stop</td>
       <td>그만, 종료, 멈춰, 스톱, 정지, 중지</td>
     </tr>
     <tr>
-      <td> </td>
+      
       <td>NUGU.INTENT.pause</td>
       <td>일시정지, 잠깐 멈춰</td>
     </tr>
     <tr>
-      <td> </td>
+      
       <td>NUGU.INTENT.resume</td>
       <td>계속 틀어줘, 이어서 틀어줘, 일시정지 해제, 일시정지 풀어줘</td>
     </tr>
@@ -2319,57 +2304,59 @@
   </thead>
   <tbody>
     <tr>
-      <td>Control Intent</td>
+      <td rowspan="11">Control Intent<br>(AudioPlayer)
+<br><br><br><br><br><br><br><br><br><br>
+</td>
       <td>NUGU.INTENT.next</td>
       <td>다음, 넘겨, 넥스트, 다음 것</td>
     </tr>
     <tr>
-      <td>(AudioPlayer)</td>
+      
       <td>NUGU.INTENT.previous</td>
       <td>이전, 이전 것</td>
     </tr>
     <tr>
-      <td> </td>
+      
       <td>NUGU.INTENT.forward</td>
       <td>앞으로</td>
     </tr>
     <tr>
-      <td> </td>
+      
       <td>NUGU.INTENT.backward</td>
       <td>뒤로</td>
     </tr>
     <tr>
-      <td> </td>
+      
       <td>NUGU.INTENT.random</td>
       <td>셔플, 랜덤, 무작위</td>
     </tr>
     <tr>
-      <td> </td>
+      
       <td>NUGU.INTENT.cancel.random</td>
       <td>셔플해제, 랜덤 해제, 무작위 취소</td>
     </tr>
     <tr>
-      <td> </td>
+      
       <td>NUGU.INTENT.repeat</td>
       <td>반복해줘, 반복, 무한 반복, 계속 반복, 반복 켜줘, 반복해서 들려줘</td>
     </tr>
     <tr>
-      <td> </td>
+      
       <td>NUGU.INTENT.cancel.repeat</td>
       <td>반복 해제, 반복 취소, 반복 종료, 반복 꺼줘, 반복 그만</td>
     </tr>
     <tr>
-      <td> </td>
+      
       <td>NUGU.INTENT.rewind</td>
       <td>다시, 다시 틀어줘, 다시 들려줘, 다시 시작, 처음으로, 처음부터</td>
     </tr>
     <tr>
-      <td> </td>
+      
       <td>NUGU.INTENT.ask.content.info</td>
       <td>이거 뭐야, 뭔지 알려줘</td>
     </tr>
     <tr>
-      <td> </td>
+      
       <td>NUGU.INTENT.another</td>
       <td>다른 것, 이거 말고, 그거 말고, 그거 말고 다른 거, 딴거, 다른거 틀어줘</td>
     </tr>
@@ -2458,25 +2445,25 @@
       <td>offsetInMilliseconds</td>
       <td>long</td>
       <td>Y</td>
-      <td>재생을 어느 offset\(위치)에서 시작할지 설정합니다.값이 '0'이면 처음부터 재생합니다.</td>
+      <td>재생을 어느 offset(위치)에서 시작할지 설정합니다.<br>값이 ‘0’이면 처음부터 재생합니다.</td>
     </tr>
     <tr>
       <td>progressReportDelayInMilliseconds</td>
       <td>long</td>
       <td>N</td>
-      <td>재생을 시작해서 지정된 시간 뒤에 한 번 progressReportDelayElapsed 이벤트가 발생합니다. (offsetInMilliseconds 값과는 상관없이 콘텐츠 시작 시간을 기준으로 한 절대값을 의미합니다.)</td>
+      <td>재생을 시작해서 지정된 시간 뒤에 한 번 progressReportDelayElapsed 이벤트가 발생합니다.<br>(offsetInMilliseconds 값과는 상관없이 콘텐츠 시작 시간을 기준으로 한 절대값을 의미합니다.)</td>
     </tr>
     <tr>
       <td>progressReportIntervalInMilliseconds</td>
       <td>long</td>
       <td>N</td>
-      <td>재생을 시작해서 지정된 주기마다 progressReportIntervalElapsed 이벤트가 발생합니다. (offsetInMilliseconds 값과는 상관없이 콘텐츠 시작 시간을 기준으로 한 절대값을 의미합니다.)</td>
+      <td>재생을 시작해서 지정된 주기마다 progressReportIntervalElapsed 이벤트가 발생합니다.<br>(offsetInMilliseconds 값과는 상관없이 콘텐츠 시작 시간을 기준으로 한 절대값을 의미합니다.)</td>
     </tr>
     <tr>
       <td>token</td>
       <td>string</td>
       <td>Y</td>
-      <td>현재 stream을 나타내는 token입니다.token은 재생할 오디오 콘텐츠 별로 고유해야 합니다.</td>
+      <td>현재 stream을 나타내는 token입니다.<br>token은 재생할 오디오 콘텐츠 별로 고유해야 합니다.</td>
     </tr>
     <tr>
       <td>expectedPreviousToken</td>
@@ -2726,7 +2713,7 @@
       <td>error.type</td>
       <td>string</td>
       <td>Y</td>
-      <td>에러 유형을 표시합니다.MEDIA\_ERROR\_UNKNOWN: 알 수 없는 오류MEDIA\_ERROR\_INVALID\_REQUEST: 서버가 잘못된 요청으로 인식MEDIA\_ERROR\_SERVICE\_UNAVAILABLE: 서비스에 연결할 수 없음MEDIA\_ERROR\_INTERNAL\_SERVER\_ERROR: 서버가 요청을 수락했으나 처리할 수 없음MEDIA\_ERROR\_INTERNAL\_DEVICE\_ERROR: 디바이스 내부 오류</td>
+      <td>에러 유형을 표시합니다.<br>MEDIA_ERROR_UNKNOWN: 알 수 없는 오류<br>MEDIA_ERROR_INVALID_REQUEST: 서버가 잘못된 요청으로 인식<br>MEDIA_ERROR_SERVICE_UNAVAILABLE: 서비스에 연결할 수 없음<br>MEDIA_ERROR_INTERNAL_SERVER_ERROR: 서버가 요청을 수락했으나 처리할 수 없음<br>MEDIA_ERROR_INTERNAL_DEVICE_ERROR: 디바이스 내부 오류</td>
     </tr>
     <tr>
       <td>error.message</td>
@@ -2750,7 +2737,7 @@
       <td>currentPlaybackState.playActivity</td>
       <td>string</td>
       <td>Y</td>
-      <td>Player의 상태를 나타냅니다.PLAYING, PAUSED, FINISHED, BUFFER\_UNDERRUN, IDLE</td>
+      <td>Player의 상태를 나타냅니다.<br>PLAYING, PAUSED, FINISHED, BUFFER_UNDERRUN, IDLE</td>
     </tr>
   </tbody>
 </table>
@@ -2866,21 +2853,21 @@
     
 <div class="pagination">
     
-    <a href="/nugu-play/create-plays-with-play-builder/use-backend-proxy/capability-interfaces/audioplayer-display-interface">
+    <a href="/nugu-play/create-plays-with-play-builder/use-backend-proxy/capability-interfaces">
         <div class="block left">
             <div class="thumb"></div>
             <div class="content">
-                <div class="title">AudioPlayer를 위한 Display Interface</div>
+                <div class="title">Capability Interfaces</div>
                 <div class="description"></div>
             </div>
         </div>
     </a>
     
     
-    <a href="/nugu-play/create-plays-with-play-builder/use-backend-proxy/capability-interfaces/display-interface">
+    <a href="/nugu-play/create-plays-with-play-builder/use-backend-proxy/capability-interfaces/audioplayer-display-interface">
         <div class="block right">
             <div class="content">
-                <div class="title">Display Interface</div>
+                <div class="title">AudioPlayer를 위한 Display Interface</div>
                 <div class="description"></div>
             </div>
             <div class="thumb"></div>

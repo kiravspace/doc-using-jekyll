@@ -10,7 +10,6 @@
 <script type="text/javascript" src="/assets/js/jquery-ui.js"></script>
 <script type="text/javascript" src="/assets/js/main.js"></script>
 
-<script>MathJax={"tex":{"inlineMath":[["$","$"],["\\(","\\)"]],"displayMath":[["$$","$$"],["\\[","\\]"]]},"svg":{"fontCache":"global"},"options":{"enableMenu":false}}</script><script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script><script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
 </head>
 <body>
 <header>
@@ -62,7 +61,7 @@
     
         <li>
             <div class="nav_link fold ">
-                <a href="/nugu-play/nugu-ux/voice-interaction-design" class="nav_href">사용자 발화\(User Utterance\) 예상 하기</a>
+                <a href="/nugu-play/nugu-ux/voice-interaction-design" class="nav_href">사용자 발화(User Utterance) 예상 하기</a>
                 <span class="nav_unfold">+</span>
                 <span class="nav_fold">-</span>
             </div>
@@ -429,7 +428,7 @@
     
         <li>
             <div class="nav_link fold ">
-                <a href="/nugu-play/create-plays-with-play-builder/hello-aria/create-an-action-and-an-answer" class="nav_href">3) Action 만들고 응답 등록하기</a>
+                <a href="/nugu-play/create-plays-with-play-builder/hello-aria/create-an-intent-and-custom-utterances" class="nav_href">2) Intent 만들고 예상 발화 등록하기</a>
                 <span class="nav_unfold">+</span>
                 <span class="nav_fold">-</span>
             </div>
@@ -438,7 +437,7 @@
     
         <li>
             <div class="nav_link fold ">
-                <a href="/nugu-play/create-plays-with-play-builder/hello-aria/create-an-intent-and-custom-utterances" class="nav_href">2) Intent 만들고 예상 발화 등록하기</a>
+                <a href="/nugu-play/create-plays-with-play-builder/hello-aria/create-an-action-and-an-answer" class="nav_href">3) Action 만들고 응답 등록하기</a>
                 <span class="nav_unfold">+</span>
                 <span class="nav_fold">-</span>
             </div>
@@ -550,7 +549,7 @@
     
         <li>
             <div class="nav_link fold ">
-                <a href="/nugu-play/create-plays-with-play-builder/use-backend-proxy/capability-interfaces/audioplayer-display-interface" class="nav_href">AudioPlayer를 위한 Display Interface</a>
+                <a href="/nugu-play/create-plays-with-play-builder/use-backend-proxy/capability-interfaces/audioplayer-interface" class="nav_href">AudioPlayer Interface</a>
                 <span class="nav_unfold">+</span>
                 <span class="nav_fold">-</span>
             </div>
@@ -559,7 +558,7 @@
     
         <li>
             <div class="nav_link fold ">
-                <a href="/nugu-play/create-plays-with-play-builder/use-backend-proxy/capability-interfaces/audioplayer-interface" class="nav_href">AudioPlayer Interface</a>
+                <a href="/nugu-play/create-plays-with-play-builder/use-backend-proxy/capability-interfaces/audioplayer-display-interface" class="nav_href">AudioPlayer를 위한 Display Interface</a>
                 <span class="nav_unfold">+</span>
                 <span class="nav_fold">-</span>
             </div>
@@ -1379,7 +1378,7 @@
     
         <li>
             <div class="nav_link fold  has_child ">
-                <a href="/work-with-nugu-biz/biz-api/api-announcement" class="nav_href">API 발송 \(Announcement\)</a>
+                <a href="/work-with-nugu-biz/biz-api/api-announcement" class="nav_href">API 발송 (Announcement)</a>
                 <span class="nav_unfold">+</span>
                 <span class="nav_fold">-</span>
             </div>
@@ -2497,8 +2496,8 @@
       <td>ImageObject</td>
       <td>N</td>
       <td>subText 왼쪽에 노출될 서브아이콘</td>
-      <td>위치 : subText 왼쪽 size : 36 x 36dp</td>
-      <td>위치 : subText 왼쪽 size : 30 x 30dp</td>
+      <td>위치 : subText 왼쪽 <br>size : 36 x 36dp</td>
+      <td>위치 : subText 왼쪽 <br>size : 30 x 30dp</td>
     </tr>
     <tr>
       <td>button</td>
@@ -2585,7 +2584,7 @@
       <td>size</td>
       <td>string</td>
       <td>N</td>
-      <td>X\_SMALL, SMALL, MEDIUM, LARGE, X\_LARGE화면 크기별 최적화를 위해 size 정보를 넣는 것을 권장합니다.</td>
+      <td>X_SMALL, SMALL, MEDIUM, LARGE, X_LARGE<br>화면 크기별 최적화를 위해 size 정보를 넣는 것을 권장합니다.</td>
     </tr>
     <tr>
       <td>sources</td>
@@ -2686,44 +2685,16 @@
       <td>-</td>
     </tr>
     <tr>
-      <td rowspan="2">color
-<br>
-</td>
-      <td rowspan="2">string
-<br>
-</td>
-      <td rowspan="2">N
-<br>
-</td>
-      <td rowspan="2">hex color code
-<br>
-default : #000000</td>
+      <td>color</td>
+      <td>string</td>
+      <td>N</td>
+      <td>hex color code<br>default : #000000</td>
     </tr>
     <tr>
-      
-      
-      
-      
-    </tr>
-    <tr>
-      <td rowspan="2">opacity
-<br>
-</td>
-      <td rowspan="2">number
-<br>
-</td>
-      <td rowspan="2">N
-<br>
-</td>
-      <td rowspan="2">NU300에만 유효
-<br>
-default : 0.7</td>
-    </tr>
-    <tr>
-      
-      
-      
-      
+      <td>opacity</td>
+      <td>number</td>
+      <td>N</td>
+      <td>NU300에만 유효<br>default : 0.7</td>
     </tr>
   </tbody>
 </table>
@@ -2768,7 +2739,7 @@ default : 0.7</td>
       <td>style</td>
       <td>json</td>
       <td>N</td>
-      <td>기본적으로는 상위 스타일(directive 등)을 따르며, FullText1, 2의 body text에만 적용 가능.CSS 속성은 모두 가능하며, 다음의 값들을 가질 수 있다.<code>text-align</code> : left, center, right&lt;/p&gt;&lt;p&gt;<code>opacity</code> : 0 ~ 1&lt;/p&gt;&lt;p&gt;<code>display</code> : block, inline, none&lt;/p&gt;&lt;p&gt;<code>margin</code> : 10px&lt;/p&gt;&lt;p&gt;예) <code>{ \"text-align\":\"center\", \"display\": \"block\"}</code>
+      <td>기본적으로는 상위 스타일(directive 등)을 따르며, FullText1, 2의 body text에만 적용 가능.<br>CSS 속성은 모두 가능하며, 다음의 값들을 가질 수 있다.<br><code class="language-plaintext highlighter-rouge">text-align</code> : left, center, right<br><code class="language-plaintext highlighter-rouge">opacity</code> : 0 ~ 1<br><code class="language-plaintext highlighter-rouge">display</code> : block, inline, none<br><code class="language-plaintext highlighter-rouge">margin</code> : 10px<br>예) <code class="language-plaintext highlighter-rouge">{ "text-align":"center", "display": "block"}</code>
 </td>
     </tr>
     <tr>
@@ -2919,7 +2890,7 @@ default : 0.7</td>
       <td>string</td>
       <td>N</td>
       <td>
-<strong>SHORT(default)</strong>, <strong>MID</strong>, <strong>LONG</strong>, <strong>LONGEST</strong>- <strong>SHORT</strong> : 7sec- <strong>MID</strong> : 15sec- <strong>LONG</strong> : 30sec- <strong>LONGEST</strong> : 10min</td>
+<strong>SHORT(default)</strong>, <strong>MID</strong>, <strong>LONG</strong>, <strong>LONGEST</strong><br>- <strong>SHORT</strong> : 7sec<br>- <strong>MID</strong> : 15sec<br>- <strong>LONG</strong> : 30sec<br>- <strong>LONGEST</strong> : 10min</td>
     </tr>
     <tr>
       <td>title</td>
@@ -2937,13 +2908,13 @@ default : 0.7</td>
       <td>content.header</td>
       <td>TextObject</td>
       <td>N</td>
-      <td>본문 제목- 줄바꿈 가능 (‘\n’)</td>
+      <td>본문 제목<br>- 줄바꿈 가능 (‘\n’)</td>
     </tr>
     <tr>
       <td>content.body</td>
       <td>TextObject</td>
       <td>Y</td>
-      <td>본문 내용- 줄바꿈 가능 (‘\n’)- Scrollable (스크롤이 불가능한 디바이스[일부 Btv]에서는 최대 4줄까지만 표현)</td>
+      <td>본문 내용<br>- 줄바꿈 가능 (‘\n’)<br>- Scrollable (스크롤이 불가능한 디바이스[일부 Btv]에서는 최대 4줄까지만 표현)</td>
     </tr>
     <tr>
       <td>content.footer</td>
@@ -3133,7 +3104,7 @@ default : 0.7</td>
       <td>string</td>
       <td>N</td>
       <td>
-<strong>SHORT(default)</strong>, <strong>MID</strong>, <strong>LONG</strong>, <strong>LONGEST</strong>- <strong>SHORT</strong> : 7sec- <strong>MID</strong> : 15sec- <strong>LONG</strong> : 30sec- <strong>LONGEST</strong> : 10min</td>
+<strong>SHORT(default)</strong>, <strong>MID</strong>, <strong>LONG</strong>, <strong>LONGEST</strong><br>- <strong>SHORT</strong> : 7sec<br>- <strong>MID</strong> : 15sec<br>- <strong>LONG</strong> : 30sec<br>- <strong>LONGEST</strong> : 10min</td>
     </tr>
     <tr>
       <td>title</td>
@@ -3151,7 +3122,7 @@ default : 0.7</td>
       <td>content.body</td>
       <td>TextObject</td>
       <td>Y</td>
-      <td>본문 내용- 줄바꿈 가능 (‘\n’)- 최대 4줄까지 표현 (넘는 문자는 … 처리)</td>
+      <td>본문 내용<br>- 줄바꿈 가능 (‘\n’)<br>- 최대 4줄까지 표현 (넘는 문자는 … 처리)</td>
     </tr>
     <tr>
       <td>content.footer</td>
@@ -3309,7 +3280,7 @@ default : 0.7</td>
       <td>string</td>
       <td>N</td>
       <td>
-<strong>SHORT(default)</strong>, <strong>MID</strong>, <strong>LONG</strong>, <strong>LONGEST</strong>- <strong>SHORT</strong> : 7sec- <strong>MID</strong> : 15sec- <strong>LONG</strong> : 30sec- <strong>LONGEST</strong> : 10min</td>
+<strong>SHORT(default)</strong>, <strong>MID</strong>, <strong>LONG</strong>, <strong>LONGEST</strong><br>- <strong>SHORT</strong> : 7sec<br>- <strong>MID</strong> : 15sec<br>- <strong>LONG</strong> : 30sec<br>- <strong>LONGEST</strong> : 10min</td>
     </tr>
     <tr>
       <td>title</td>
@@ -3339,7 +3310,7 @@ default : 0.7</td>
       <td>content.header</td>
       <td>TextObject</td>
       <td>Y</td>
-      <td>본문 제목- 줄바꿈 가능 (‘\n’)- 최대 3줄까지 표현 (넘는 문자는 … 처리)</td>
+      <td>본문 제목<br>- 줄바꿈 가능 (‘\n’)<br>- 최대 3줄까지 표현 (넘는 문자는 … 처리)</td>
     </tr>
     <tr>
       <td>content.body</td>
@@ -3351,7 +3322,7 @@ default : 0.7</td>
       <td>content.footer</td>
       <td>TextObject</td>
       <td>N</td>
-      <td>보조 설명- 줄바꿈 가능 (‘\n’)- 최대 2줄까지 표현 (넘는 문자는 … 처리)</td>
+      <td>보조 설명<br>- 줄바꿈 가능 (‘\n’)<br>- 최대 2줄까지 표현 (넘는 문자는 … 처리)</td>
     </tr>
   </tbody>
 </table>
@@ -3551,7 +3522,7 @@ default : 0.7</td>
       <td>string</td>
       <td>N</td>
       <td>
-<strong>SHORT(default)</strong>, <strong>MID</strong>, <strong>LONG</strong>, <strong>LONGEST</strong>- <strong>SHORT</strong> : 7sec- <strong>MID</strong> : 15sec- <strong>LONG</strong> : 30sec- <strong>LONGEST</strong> : 10min</td>
+<strong>SHORT(default)</strong>, <strong>MID</strong>, <strong>LONG</strong>, <strong>LONGEST</strong><br>- <strong>SHORT</strong> : 7sec<br>- <strong>MID</strong> : 15sec<br>- <strong>LONG</strong> : 30sec<br>- <strong>LONGEST</strong> : 10min</td>
     </tr>
     <tr>
       <td>title</td>
@@ -3587,13 +3558,13 @@ default : 0.7</td>
       <td>content.body</td>
       <td>TextObject</td>
       <td>Y</td>
-      <td>본문 내용- 줄바꿈 가능 (‘\n’)- 최대 6줄까지 표현 (넘는 문자는 … 처리)</td>
+      <td>본문 내용<br>- 줄바꿈 가능 (‘\n’)<br>- 최대 6줄까지 표현 (넘는 문자는 … 처리)</td>
     </tr>
     <tr>
       <td>content.footer</td>
       <td>TextObject</td>
       <td>N</td>
-      <td>보조 설명- 줄바꿈 가능 (‘\n’)- 최대 2줄까지 표현 (넘는 문자는 … 처리)</td>
+      <td>보조 설명<br>- 줄바꿈 가능 (‘\n’)<br>- 최대 2줄까지 표현 (넘는 문자는 … 처리)</td>
     </tr>
   </tbody>
 </table>
@@ -3793,7 +3764,7 @@ default : 0.7</td>
       <td>string</td>
       <td>N</td>
       <td>
-<strong>SHORT(default)</strong>, <strong>MID</strong>, <strong>LONG</strong>, <strong>LONGEST</strong>- <strong>SHORT</strong> : 7sec- <strong>MID</strong> : 15sec- <strong>LONG</strong> : 30sec- <strong>LONGEST</strong> : 10min</td>
+<strong>SHORT(default)</strong>, <strong>MID</strong>, <strong>LONG</strong>, <strong>LONGEST</strong><br>- <strong>SHORT</strong> : 7sec<br>- <strong>MID</strong> : 15sec<br>- <strong>LONG</strong> : 30sec<br>- <strong>LONGEST</strong> : 10min</td>
     </tr>
     <tr>
       <td>title</td>
@@ -3823,13 +3794,13 @@ default : 0.7</td>
       <td>content.body</td>
       <td>TextObject</td>
       <td>N</td>
-      <td>본문 내용- 줄바꿈 가능 (‘\n’)- Scrollable (스크롤이 불가능한 디바이스[일부 Btv]에서는 최대 4줄까지만 표현)</td>
+      <td>본문 내용<br>- 줄바꿈 가능 (‘\n’)<br>- Scrollable (스크롤이 불가능한 디바이스[일부 Btv]에서는 최대 4줄까지만 표현)</td>
     </tr>
     <tr>
       <td>content.footer</td>
       <td>TextObject</td>
       <td>N</td>
-      <td>보조설명- 최대 1줄까지 표현 (넘는 문자는 … 처리)</td>
+      <td>보조설명<br>- 최대 1줄까지 표현 (넘는 문자는 … 처리)</td>
     </tr>
   </tbody>
 </table>
@@ -4013,7 +3984,7 @@ default : 0.7</td>
       <td>string</td>
       <td>N</td>
       <td>
-<strong>SHORT(default)</strong>, <strong>MID</strong>, <strong>LONG</strong>, <strong>LONGEST</strong>- <strong>SHORT</strong> : 7sec- <strong>MID</strong> : 15sec- <strong>LONG</strong> : 30sec- <strong>LONGEST</strong> : 10min</td>
+<strong>SHORT(default)</strong>, <strong>MID</strong>, <strong>LONG</strong>, <strong>LONGEST</strong><br>- <strong>SHORT</strong> : 7sec<br>- <strong>MID</strong> : 15sec<br>- <strong>LONG</strong> : 30sec<br>- <strong>LONGEST</strong> : 10min</td>
     </tr>
     <tr>
       <td>title</td>
@@ -4037,19 +4008,19 @@ default : 0.7</td>
       <td>content.header</td>
       <td>TextObject</td>
       <td>Y</td>
-      <td>본문 제목- 최대 1줄까지 표현 (넘는 문자는 … 처리)</td>
+      <td>본문 제목<br>- 최대 1줄까지 표현 (넘는 문자는 … 처리)</td>
     </tr>
     <tr>
       <td>content.body</td>
       <td>TextObject</td>
       <td>Y</td>
-      <td>본문 내용- 최대 1줄까지 표현 (넘는 문자는 … 처리)</td>
+      <td>본문 내용<br>- 최대 1줄까지 표현 (넘는 문자는 … 처리)</td>
     </tr>
     <tr>
       <td>content.footer</td>
       <td>TextObject</td>
       <td>N</td>
-      <td>보조설명- 최대 1줄까지 표현 (넘는 문자는 … 처리)</td>
+      <td>보조설명<br>- 최대 1줄까지 표현 (넘는 문자는 … 처리)</td>
     </tr>
   </tbody>
 </table>
@@ -4251,7 +4222,7 @@ default : 0.7</td>
       <td>string</td>
       <td>N</td>
       <td>
-<strong>SHORT(default)</strong>, <strong>MID</strong>, <strong>LONG</strong>, <strong>LONGEST</strong>- <strong>SHORT</strong> : 7sec- <strong>MID</strong> : 15sec- <strong>LONG</strong> : 30sec- <strong>LONGEST</strong> : 10min</td>
+<strong>SHORT(default)</strong>, <strong>MID</strong>, <strong>LONG</strong>, <strong>LONGEST</strong><br>- <strong>SHORT</strong> : 7sec<br>- <strong>MID</strong> : 15sec<br>- <strong>LONG</strong> : 30sec<br>- <strong>LONGEST</strong> : 10min</td>
     </tr>
     <tr>
       <td>title</td>
@@ -4269,7 +4240,7 @@ default : 0.7</td>
       <td>badgeNumber</td>
       <td>bool</td>
       <td>N</td>
-      <td>사용자가 숫자(순서)를 발화하여 item을 선택하도록 badge를 표시할지 여부 (true - 표시함, false - 표시하지 않음)default - false</td>
+      <td>사용자가 숫자(순서)를 발화하여 item을 선택하도록 badge를 표시할지 여부 (true - 표시함, false - 표시하지 않음)<br>default - false</td>
     </tr>
     <tr>
       <td>listItems</td>
@@ -4287,19 +4258,19 @@ default : 0.7</td>
       <td>listItems.header</td>
       <td>TextObject</td>
       <td>Y</td>
-      <td>본문 제목- 최대 1줄까지 표현 (넘는 문자는 … 처리)</td>
+      <td>본문 제목<br>- 최대 1줄까지 표현 (넘는 문자는 … 처리)</td>
     </tr>
     <tr>
       <td>listItems.body</td>
       <td>TextObject</td>
       <td>Y</td>
-      <td>본문 내용- 최대 1줄까지 표현 (넘는 문자는 … 처리)</td>
+      <td>본문 내용<br>- 최대 1줄까지 표현 (넘는 문자는 … 처리)</td>
     </tr>
     <tr>
       <td>listItems.footer</td>
       <td>TextObject</td>
       <td>N</td>
-      <td>보조설명- 최대 1줄까지 표현 (넘는 문자는 … 처리)</td>
+      <td>보조설명<br>- 최대 1줄까지 표현 (넘는 문자는 … 처리)</td>
     </tr>
   </tbody>
 </table>
@@ -4581,7 +4552,7 @@ default : 0.7</td>
       <td>string</td>
       <td>N</td>
       <td>
-<strong>SHORT(default)</strong>, <strong>MID</strong>, <strong>LONG</strong>, <strong>LONGEST</strong>- <strong>SHORT</strong> : 7sec- <strong>MID</strong> : 15sec- <strong>LONG</strong> : 30sec- <strong>LONGEST</strong> : 10min</td>
+<strong>SHORT(default)</strong>, <strong>MID</strong>, <strong>LONG</strong>, <strong>LONGEST</strong><br>- <strong>SHORT</strong> : 7sec<br>- <strong>MID</strong> : 15sec<br>- <strong>LONG</strong> : 30sec<br>- <strong>LONGEST</strong> : 10min</td>
     </tr>
     <tr>
       <td>title</td>
@@ -4599,7 +4570,7 @@ default : 0.7</td>
       <td>badgeNumber</td>
       <td>bool</td>
       <td>N</td>
-      <td>사용자가 숫자(순서)를 발화하여 item을 선택하도록 badge를 표시할지 여부 (true - 표시함, false - 표시하지 않음)default - false</td>
+      <td>사용자가 숫자(순서)를 발화하여 item을 선택하도록 badge를 표시할지 여부 (true - 표시함, false - 표시하지 않음)<br>default - false</td>
     </tr>
     <tr>
       <td>listItems</td>
@@ -4623,19 +4594,19 @@ default : 0.7</td>
       <td>listItems.header</td>
       <td>TextObject</td>
       <td>Y</td>
-      <td>본문 제목- 최대 1줄까지 표현 (넘는 문자는 … 처리)</td>
+      <td>본문 제목<br>- 최대 1줄까지 표현 (넘는 문자는 … 처리)</td>
     </tr>
     <tr>
       <td>listItems.body</td>
       <td>TextObject</td>
       <td>Y</td>
-      <td>본문 내용- 최대 1줄까지 표현 (넘는 문자는 … 처리)</td>
+      <td>본문 내용<br>- 최대 1줄까지 표현 (넘는 문자는 … 처리)</td>
     </tr>
     <tr>
       <td>listItems.footer</td>
       <td>TextObject</td>
       <td>N</td>
-      <td>보조설명- 최대 1줄까지 표현 (넘는 문자는 … 처리)</td>
+      <td>보조설명<br>- 최대 1줄까지 표현 (넘는 문자는 … 처리)</td>
     </tr>
   </tbody>
 </table>
@@ -4975,7 +4946,7 @@ default : 0.7</td>
       <td>string</td>
       <td>N</td>
       <td>
-<strong>SHORT(default)</strong>, <strong>MID</strong>, <strong>LONG</strong>, <strong>LONGEST</strong>- <strong>SHORT</strong> : 7sec- <strong>MID</strong> : 15sec- <strong>LONG</strong> : 30sec- <strong>LONGEST</strong> : 10min</td>
+<strong>SHORT(default)</strong>, <strong>MID</strong>, <strong>LONG</strong>, <strong>LONGEST</strong><br>- <strong>SHORT</strong> : 7sec<br>- <strong>MID</strong> : 15sec<br>- <strong>LONG</strong> : 30sec<br>- <strong>LONGEST</strong> : 10min</td>
     </tr>
     <tr>
       <td>title</td>
@@ -4993,7 +4964,7 @@ default : 0.7</td>
       <td>badgeNumber</td>
       <td>bool</td>
       <td>N</td>
-      <td>사용자가 숫자(순서)를 발화하여 item을 선택하도록 badge를 표시할지 여부 (true - 표시함, false - 표시하지 않음)default - false</td>
+      <td>사용자가 숫자(순서)를 발화하여 item을 선택하도록 badge를 표시할지 여부 (true - 표시함, false - 표시하지 않음)<br>default - false</td>
     </tr>
     <tr>
       <td>listItems</td>
@@ -5017,25 +4988,25 @@ default : 0.7</td>
       <td>listItems.header</td>
       <td>TextObject</td>
       <td>Y</td>
-      <td>본문 제목- 최대 1줄까지 표현 (넘는 문자는 … 처리)</td>
+      <td>본문 제목<br>- 최대 1줄까지 표현 (넘는 문자는 … 처리)</td>
     </tr>
     <tr>
       <td>listItems.body</td>
       <td>array of TextObject</td>
       <td>Y</td>
-      <td>본문 내용- 줄바꿈 허용 / 최대 4줄 - footer 정의 시 3줄 제한 (footer객체는 빈객체({})로도 정의가 되어 있으면 3줄로 제한됨)</td>
+      <td>본문 내용<br>- 줄바꿈 허용 / 최대 4줄 - footer 정의 시 3줄 제한 (footer객체는 빈객체({})로도 정의가 되어 있으면 3줄로 제한됨)</td>
     </tr>
     <tr>
       <td>listItems.footer</td>
       <td>TextObject</td>
       <td>N</td>
-      <td>보조설명- 최대 1줄까지 표현 (넘는 문자는 … 처리)</td>
+      <td>보조설명<br>- 최대 1줄까지 표현 (넘는 문자는 … 처리)</td>
     </tr>
     <tr>
       <td>caption</td>
       <td>TextObject</td>
       <td>N</td>
-      <td>전체 리스트 아이템들에 대한 보조설명- 텍스트 길이 : 최대 2줄(단말에 따라 1줄)</td>
+      <td>전체 리스트 아이템들에 대한 보조설명<br>- 텍스트 길이 : 최대 2줄(단말에 따라 1줄)</td>
     </tr>
   </tbody>
 </table>
@@ -5265,7 +5236,7 @@ default : 0.7</td>
       <td>string</td>
       <td>N</td>
       <td>
-<strong>SHORT(default)</strong>, <strong>MID</strong>, <strong>LONG</strong>, <strong>LONGEST</strong>- <strong>SHORT</strong> : 7sec- <strong>MID</strong> : 15sec- <strong>LONG</strong> : 30sec- <strong>LONGEST</strong> : 10min</td>
+<strong>SHORT(default)</strong>, <strong>MID</strong>, <strong>LONG</strong>, <strong>LONGEST</strong><br>- <strong>SHORT</strong> : 7sec<br>- <strong>MID</strong> : 15sec<br>- <strong>LONG</strong> : 30sec<br>- <strong>LONGEST</strong> : 10min</td>
     </tr>
     <tr>
       <td>title</td>
@@ -5289,19 +5260,19 @@ default : 0.7</td>
       <td>listItems.header</td>
       <td>TextObject</td>
       <td>Y</td>
-      <td>본문 제목- 최대 1줄까지 표현 (넘는 문자는 … 처리)</td>
+      <td>본문 제목<br>- 최대 1줄까지 표현 (넘는 문자는 … 처리)</td>
     </tr>
     <tr>
       <td>listItems.body</td>
       <td>array of TextObject</td>
       <td>Y</td>
-      <td>List 아이템의 본문 내용- 최대 1줄까지 표현 (넘는 문자는 … 처리)</td>
+      <td>List 아이템의 본문 내용<br>- 최대 1줄까지 표현 (넘는 문자는 … 처리)</td>
     </tr>
     <tr>
       <td>listItems.button</td>
       <td>ButtonObject</td>
       <td>N</td>
-      <td>List 아이템의 버튼- body가 2줄인 경우에 최적화 되어 있음</td>
+      <td>List 아이템의 버튼<br>- body가 2줄인 경우에 최적화 되어 있음</td>
     </tr>
   </tbody>
 </table>
@@ -5553,7 +5524,7 @@ default : 0.7</td>
       <td>string</td>
       <td>N</td>
       <td>
-<strong>SHORT(default)</strong>, <strong>MID</strong>, <strong>LONG</strong>, <strong>LONGEST</strong>- <strong>SHORT</strong> : 7sec- <strong>MID</strong> : 15sec- <strong>LONG</strong> : 30sec- <strong>LONGEST</strong> : 10min</td>
+<strong>SHORT(default)</strong>, <strong>MID</strong>, <strong>LONG</strong>, <strong>LONGEST</strong><br>- <strong>SHORT</strong> : 7sec<br>- <strong>MID</strong> : 15sec<br>- <strong>LONG</strong> : 30sec<br>- <strong>LONGEST</strong> : 10min</td>
     </tr>
     <tr>
       <td>title</td>
@@ -5571,13 +5542,13 @@ default : 0.7</td>
       <td>badgeNumber</td>
       <td>bool</td>
       <td>N</td>
-      <td>사용자가 숫자(순서)를 발화하여 item을 선택하도록 badge를 표시할지 여부 (true - 표시함, false - 표시하지 않음)default - false</td>
+      <td>사용자가 숫자(순서)를 발화하여 item을 선택하도록 badge를 표시할지 여부 (true - 표시함, false - 표시하지 않음)<br>default - false</td>
     </tr>
     <tr>
       <td>badgeNumberStyle</td>
       <td>json</td>
       <td>N</td>
-      <td>아래와 같은 Json으로 badge style 정의<code>{\"background\": \"#f0f\", \"color\": \"red\", \"border-radius\": \"10px\"}</code>- background : Container의 color- color : Badge font color- border-radius : radius</td>
+      <td>아래와 같은 Json으로 badge style 정의<br><code class="language-plaintext highlighter-rouge">{"background": "#f0f", "color": "red", "border-radius": "10px"}</code><br>- background : Container의 color<br>- color : Badge font color<br>- border-radius : radius</td>
     </tr>
     <tr>
       <td>listItems</td>
@@ -5601,13 +5572,13 @@ default : 0.7</td>
       <td>listItems.header</td>
       <td>TextObject</td>
       <td>Y</td>
-      <td>본문 제목- 최대 1줄까지 표현 (넘는 문자는 … 처리)</td>
+      <td>본문 제목<br>- 최대 1줄까지 표현 (넘는 문자는 … 처리)</td>
     </tr>
     <tr>
       <td>listItems.footer</td>
       <td>TextObject</td>
       <td>N</td>
-      <td>보조설명- 최대 1줄까지 표현 (넘는 문자는 … 처리)</td>
+      <td>보조설명<br>- 최대 1줄까지 표현 (넘는 문자는 … 처리)</td>
     </tr>
   </tbody>
 </table>
@@ -5911,7 +5882,7 @@ default : 0.7</td>
       <td>string</td>
       <td>N</td>
       <td>
-<strong>SHORT(default)</strong>, <strong>MID</strong>, <strong>LONG</strong>, <strong>LONGEST</strong>- <strong>SHORT</strong> : 7sec- <strong>MID</strong> : 15sec- <strong>LONG</strong> : 30sec- <strong>LONGEST</strong> : 10min</td>
+<strong>SHORT(default)</strong>, <strong>MID</strong>, <strong>LONG</strong>, <strong>LONGEST</strong><br>- <strong>SHORT</strong> : 7sec<br>- <strong>MID</strong> : 15sec<br>- <strong>LONG</strong> : 30sec<br>- <strong>LONGEST</strong> : 10min</td>
     </tr>
     <tr>
       <td>title</td>
@@ -5929,13 +5900,13 @@ default : 0.7</td>
       <td>badgeNumber</td>
       <td>bool</td>
       <td>N</td>
-      <td>사용자가 숫자(순서)를 발화하여 item을 선택하도록 badge를 표시할지 여부 (true - 표시함, false - 표시하지 않음)default - false</td>
+      <td>사용자가 숫자(순서)를 발화하여 item을 선택하도록 badge를 표시할지 여부 (true - 표시함, false - 표시하지 않음)<br>default - false</td>
     </tr>
     <tr>
       <td>badgeNumberStyle</td>
       <td>json</td>
       <td>N</td>
-      <td>아래와 같은 Json으로 badge style 정의<code>{\"background\": \"#f0f\", \"color\": \"red\", \"border-radius\": \"10px\"}</code>- background : Container의 color- color : Badge font color- border-radius : radius</td>
+      <td>아래와 같은 Json으로 badge style 정의<br><code class="language-plaintext highlighter-rouge">{"background": "#f0f", "color": "red", "border-radius": "10px"}</code><br>- background : Container의 color<br>- color : Badge font color<br>- border-radius : radius</td>
     </tr>
     <tr>
       <td>listItems</td>
@@ -5965,13 +5936,13 @@ default : 0.7</td>
       <td>listItems.header</td>
       <td>TextObject</td>
       <td>Y</td>
-      <td>본문 제목- 최대 1줄까지 표현 (넘는 문자는 … 처리)</td>
+      <td>본문 제목<br>- 최대 1줄까지 표현 (넘는 문자는 … 처리)</td>
     </tr>
     <tr>
       <td>listItems.footer</td>
       <td>TextObject</td>
       <td>N</td>
-      <td>보조설명- 최대 1줄까지 표현 (넘는 문자는 … 처리)</td>
+      <td>보조설명<br>- 최대 1줄까지 표현 (넘는 문자는 … 처리)</td>
     </tr>
   </tbody>
 </table>
@@ -6275,7 +6246,7 @@ default : 0.7</td>
       <td>string</td>
       <td>N</td>
       <td>
-<strong>SHORT(default)</strong>, <strong>MID</strong>, <strong>LONG</strong>, <strong>LONGEST</strong>- <strong>SHORT</strong> : 7sec- <strong>MID</strong> : 15sec- <strong>LONG</strong> : 30sec- <strong>LONGEST</strong> : 10min</td>
+<strong>SHORT(default)</strong>, <strong>MID</strong>, <strong>LONG</strong>, <strong>LONGEST</strong><br>- <strong>SHORT</strong> : 7sec<br>- <strong>MID</strong> : 15sec<br>- <strong>LONG</strong> : 30sec<br>- <strong>LONGEST</strong> : 10min</td>
     </tr>
     <tr>
       <td>title</td>
@@ -6305,19 +6276,19 @@ default : 0.7</td>
       <td>listItems.header</td>
       <td>TextObject</td>
       <td>Y</td>
-      <td>List 제목- 최대 1줄까지 표현 (넘는 문자는 … 처리)</td>
+      <td>List 제목<br>- 최대 1줄까지 표현 (넘는 문자는 … 처리)</td>
     </tr>
     <tr>
       <td>listItems.image</td>
       <td>ImageObject</td>
       <td>Y</td>
-      <td>List 이미지- 리스트 제목 좌측에 위치하는 이미지</td>
+      <td>List 이미지<br>- 리스트 제목 좌측에 위치하는 이미지</td>
     </tr>
     <tr>
       <td>listItems.icon</td>
       <td>TextObject</td>
       <td>N</td>
-      <td>icon 이미지- 리스트 제목 우측에 위치하는 new 등의 배지</td>
+      <td>icon 이미지<br>- 리스트 제목 우측에 위치하는 new 등의 배지</td>
     </tr>
   </tbody>
 </table>
@@ -6683,11 +6654,11 @@ default : 0.7</td>
     
 <div class="pagination">
     
-    <a href="/nugu-play/create-plays-with-play-builder/use-backend-proxy/capability-interfaces/audioplayer-interface">
+    <a href="/nugu-play/create-plays-with-play-builder/use-backend-proxy/capability-interfaces/audioplayer-display-interface">
         <div class="block left">
             <div class="thumb"></div>
             <div class="content">
-                <div class="title">AudioPlayer Interface</div>
+                <div class="title">AudioPlayer를 위한 Display Interface</div>
                 <div class="description"></div>
             </div>
         </div>

@@ -10,7 +10,6 @@
 <script type="text/javascript" src="/assets/js/jquery-ui.js"></script>
 <script type="text/javascript" src="/assets/js/main.js"></script>
 
-<script>MathJax={"tex":{"inlineMath":[["$","$"],["\\(","\\)"]],"displayMath":[["$$","$$"],["\\[","\\]"]]},"svg":{"fontCache":"global"},"options":{"enableMenu":false}}</script><script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script><script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
 </head>
 <body>
 <header>
@@ -62,7 +61,7 @@
     
         <li>
             <div class="nav_link fold ">
-                <a href="/nugu-play/nugu-ux/voice-interaction-design" class="nav_href">사용자 발화\(User Utterance\) 예상 하기</a>
+                <a href="/nugu-play/nugu-ux/voice-interaction-design" class="nav_href">사용자 발화(User Utterance) 예상 하기</a>
                 <span class="nav_unfold">+</span>
                 <span class="nav_fold">-</span>
             </div>
@@ -429,7 +428,7 @@
     
         <li>
             <div class="nav_link fold ">
-                <a href="/nugu-play/create-plays-with-play-builder/hello-aria/create-an-action-and-an-answer" class="nav_href">3) Action 만들고 응답 등록하기</a>
+                <a href="/nugu-play/create-plays-with-play-builder/hello-aria/create-an-intent-and-custom-utterances" class="nav_href">2) Intent 만들고 예상 발화 등록하기</a>
                 <span class="nav_unfold">+</span>
                 <span class="nav_fold">-</span>
             </div>
@@ -438,7 +437,7 @@
     
         <li>
             <div class="nav_link fold ">
-                <a href="/nugu-play/create-plays-with-play-builder/hello-aria/create-an-intent-and-custom-utterances" class="nav_href">2) Intent 만들고 예상 발화 등록하기</a>
+                <a href="/nugu-play/create-plays-with-play-builder/hello-aria/create-an-action-and-an-answer" class="nav_href">3) Action 만들고 응답 등록하기</a>
                 <span class="nav_unfold">+</span>
                 <span class="nav_fold">-</span>
             </div>
@@ -550,7 +549,7 @@
     
         <li>
             <div class="nav_link fold ">
-                <a href="/nugu-play/create-plays-with-play-builder/use-backend-proxy/capability-interfaces/audioplayer-display-interface" class="nav_href">AudioPlayer를 위한 Display Interface</a>
+                <a href="/nugu-play/create-plays-with-play-builder/use-backend-proxy/capability-interfaces/audioplayer-interface" class="nav_href">AudioPlayer Interface</a>
                 <span class="nav_unfold">+</span>
                 <span class="nav_fold">-</span>
             </div>
@@ -559,7 +558,7 @@
     
         <li>
             <div class="nav_link fold ">
-                <a href="/nugu-play/create-plays-with-play-builder/use-backend-proxy/capability-interfaces/audioplayer-interface" class="nav_href">AudioPlayer Interface</a>
+                <a href="/nugu-play/create-plays-with-play-builder/use-backend-proxy/capability-interfaces/audioplayer-display-interface" class="nav_href">AudioPlayer를 위한 Display Interface</a>
                 <span class="nav_unfold">+</span>
                 <span class="nav_fold">-</span>
             </div>
@@ -1379,7 +1378,7 @@
     
         <li>
             <div class="nav_link fold  has_child ">
-                <a href="/work-with-nugu-biz/biz-api/api-announcement" class="nav_href">API 발송 \(Announcement\)</a>
+                <a href="/work-with-nugu-biz/biz-api/api-announcement" class="nav_href">API 발송 (Announcement)</a>
                 <span class="nav_unfold">+</span>
                 <span class="nav_fold">-</span>
             </div>
@@ -2185,7 +2184,7 @@
     <tr>
       <td style="text-align: left">1.1</td>
       <td style="text-align: left">2020.07.13</td>
-      <td style="text-align: left">Context 의 template 에 info 필드 추</td>
+      <td style="text-align: left">Context 의 template 에 info 필드 추가</td>
     </tr>
     <tr>
       <td style="text-align: left">1.2</td>
@@ -2195,12 +2194,12 @@
     <tr>
       <td style="text-align: left">1.3</td>
       <td style="text-align: left">2020.11.02</td>
-      <td style="text-align: left">SendCandidates directive 에 searchScene 필드 추가 Context 에 searchScene 필드 추가</td>
+      <td style="text-align: left">SendCandidates directive 에 searchScene 필드 추가<br>Context 에 searchScene 필드 추가</td>
     </tr>
     <tr>
       <td style="text-align: left">1.4</td>
       <td style="text-align: left">2021.01.19</td>
-      <td style="text-align: left">Context 에 messageToSend 필드 추가 SendCandidates directive 에 messageToSend 필드 추가</td>
+      <td style="text-align: left">Context 에 messageToSend 필드 추가<br>SendCandidates directive 에 messageToSend 필드 추가</td>
     </tr>
   </tbody>
 </table>
@@ -2293,7 +2292,7 @@ nugu_client-&gt;getCapabilityBuilder()
 
 <h3 id="context-구성">Context 구성</h3>
 
-<p>문자 기능과 관련된 상태 정보를 <a href="message.md#context">Context</a> 에 포함시켜 주어야 합니다.</p>
+<p>문자 기능과 관련된 상태 정보를 <a href="message#context">Context</a> 에 포함시켜 주어야 합니다.</p>
 
 <div id="tabs-62" class="tabs">
     <ul>
@@ -2336,7 +2335,7 @@ MessageClient 를 구현합니다.
 
 <h3 id="문자-전송">문자 전송</h3>
 
-<p>문자 전송이 <a href="message.md#sendcandidates">SendCandidates</a>, <a href="message.md#sendmessage">SendMessage</a> directive 로 요청될 수 있습니다.</p>
+<p>문자 전송이 <a href="message#sendcandidates">SendCandidates</a>, <a href="message#sendmessage">SendMessage</a> directive 로 요청될 수 있습니다.</p>
 
 <div id="tabs-84" class="tabs">
     <ul>
@@ -2445,7 +2444,7 @@ CapabilityFactory::makeCapability&lt;MessageAgent, IMessageHandler&gt;(message_l
 
 <h3 id="문자-읽기">문자 읽기</h3>
 
-<p>문자 읽기가 <a href="message.md#getmessage">GetMessage</a>, <a href="message.md#readmessage">ReadMessage</a> directive 로 요청될 수 있습니다.</p>
+<p>문자 읽기가 <a href="message#getmessage">GetMessage</a>, <a href="message#readmessage">ReadMessage</a> directive 로 요청될 수 있습니다.</p>
 
 <div id="tabs-139" class="tabs">
     <ul>
@@ -2534,7 +2533,7 @@ CapabilityFactory::makeCapability&lt;MessageAgent, IMessageHandler&gt;(message_l
 
 <h3 id="재생-상태-모니터링">재생 상태 모니터링</h3>
 
-<p><a href="message.md#readmessage">ReadMessage</a> directive 로 전달된 문자에 대한 재생 상태를 모니터링 할 수 있습니다.</p>
+<p><a href="message#readmessage">ReadMessage</a> directive 로 전달된 문자에 대한 재생 상태를 모니터링 할 수 있습니다.</p>
 
 <div id="tabs-185" class="tabs">
     <ul>
@@ -2635,7 +2634,7 @@ messageAgent.addOnPlaybackListener(listener)
       <td style="text-align: left">readActivity</td>
       <td style="text-align: left">string</td>
       <td style="text-align: left">Y</td>
-      <td style="text-align: left">이전 발화가 재생 상태를 전달 <strong>IDLE</strong>, <strong>PLAYING</strong>, <strong>PAUSED</strong>, <strong>FINISHED</strong>, <strong>STOPPED</strong>  - IDLE인 경우는 최초 전원을 켰을 때만 가능하고 이후에는 나올 수 없음</td>
+      <td style="text-align: left">이전 발화가 재생 상태를 전달<br><strong>IDLE</strong><br><strong>PLAYING</strong><br><strong>PAUSED</strong><br><strong>FINISHED</strong><br><strong>STOPPED</strong><br>- IDLE인 경우는 최초 전원을 켰을 때만 가능하고 이후에는 나올 수 없음</td>
     </tr>
     <tr>
       <td style="text-align: left">token</td>
@@ -2647,59 +2646,59 @@ messageAgent.addOnPlaybackListener(listener)
       <td style="text-align: left">template</td>
       <td style="text-align: left">object</td>
       <td style="text-align: left">N</td>
-      <td style="text-align: left">context 유지 정책과 동일하게 관리되어야 함 → Play Stack에 현재 Play가 가장 위에 있는 동안은 보내주어야 함  - 화면에 template이 디스플레이 되는 동안   - 앱에서 화면을 그리는 경우 앱이 정확한 시점 파악 가능  - 화면이 없는 경우는 DM 및 TTS 종료 후 7초   - DM이 유지되는 동안은 SDK로부터 대화 세션 유지 상황을 피드백 받아 전달 대표적인 경우는 위의 두 경우와 같으며 자세한 구현은 context 관리 정책 참조</td>
+      <td style="text-align: left">context 유지 정책과 동일하게 관리되어야 함 → Play Stack에 현재 Play가 가장 위에 있는 동안은 보내주어야 함<br>- 화면에 template이 디스플레이 되는 동안<br>- 앱에서 화면을 그리는 경우 앱이 정확한 시점 파악 가능<br>- 화면이 없는 경우는 DM 및 TTS 종료 후 7초<br>- DM이 유지되는 동안은 SDK로부터 대화 세션 유지 상황을 피드백 받아 전달 대표적인 경우는 위의 두 경우와 같으며 자세한 구현은 context 관리 정책 참조</td>
     </tr>
     <tr>
-      <td style="text-align: left">template. info</td>
+      <td style="text-align: left">template.info</td>
       <td style="text-align: left">string</td>
       <td style="text-align: left">N</td>
-      <td style="text-align: left">현재 template에 포함된 데이터가 어떤 정보를 담고 있는지 식별하기 위한 값  - <strong>PHONE_BOOK</strong> : 주소록 조회 결과를 포함  - <strong>MESSAGE</strong> : 수신된 Message 정보를 포함</td>
+      <td style="text-align: left">현재 template에 포함된 데이터가 어떤 정보를 담고 있는지 식별하기 위한 값<br>- <strong>PHONE_BOOK</strong> : 주소록 조회 결과를 포함<br>- <strong>MESSAGE</strong> : 수신된 Message 정보를 포함</td>
     </tr>
     <tr>
-      <td style="text-align: left">template. recipientIntended</td>
+      <td style="text-align: left">template.recipientIntended</td>
       <td style="text-align: left">object</td>
       <td style="text-align: left">N</td>
       <td style="text-align: left">발화에서 분석된 recipient 정보</td>
     </tr>
     <tr>
-      <td style="text-align: left">template. recipientIntended.name</td>
+      <td style="text-align: left">template.recipientIntended.name</td>
       <td style="text-align: left">string</td>
       <td style="text-align: left">N</td>
       <td style="text-align: left">검색에 요청할때 사용된 상대방 이름 (NLU 분석으로 나온 이름)</td>
     </tr>
     <tr>
-      <td style="text-align: left">template. recipientIntended.label</td>
+      <td style="text-align: left">template.recipientIntended.label</td>
       <td style="text-align: left">string</td>
       <td style="text-align: left">N</td>
       <td style="text-align: left">집, 회사 등을 구분하기 위한 라벨</td>
     </tr>
     <tr>
-      <td style="text-align: left">template. searchScene</td>
+      <td style="text-align: left">template.searchScene</td>
       <td style="text-align: left">string</td>
       <td style="text-align: left">N</td>
-      <td style="text-align: left">검색 대상과 화면을 정의하기 위해 추가  - <strong>DEFAULT</strong> : 기본 검색 로직  - <strong>T114DIRECT</strong> : 긴급전화</td>
+      <td style="text-align: left">검색 대상과 화면을 정의하기 위해 추가<br>- <strong>DEFAULT</strong> : 기본 검색 로직<br>- <strong>T114DIRECT</strong> : 긴급전화</td>
     </tr>
     <tr>
-      <td style="text-align: left">template. candidates</td>
+      <td style="text-align: left">template.candidates</td>
       <td style="text-align: left">array of <a href="./#contact">Contact</a>
 </td>
       <td style="text-align: left">N</td>
       <td style="text-align: left">화면에 검색 결과 리스트를 디스플레이하는 중에만 context에 추가</td>
     </tr>
     <tr>
-      <td style="text-align: left">template. messageToSend</td>
+      <td style="text-align: left">template.messageToSend</td>
       <td style="text-align: left">object</td>
       <td style="text-align: left">N</td>
       <td style="text-align: left">발신용으로 사용할 메세지 SendCandidates의 같은 파라미터를 통해 전달받은 MSG_BODY를 그대로 반환</td>
     </tr>
     <tr>
-      <td style="text-align: left">template. messageToSend. text</td>
+      <td style="text-align: left">template.messageToSend.text</td>
       <td style="text-align: left">string</td>
       <td style="text-align: left">Y</td>
       <td style="text-align: left">본문</td>
     </tr>
     <tr>
-      <td style="text-align: left">template. messageToSend. type</td>
+      <td style="text-align: left">template.messageToSend.type</td>
       <td style="text-align: left">string</td>
       <td style="text-align: left">N</td>
       <td style="text-align: left">메세지의 타입</td>
@@ -2771,7 +2770,7 @@ messageAgent.addOnPlaybackListener(listener)
       <td style="text-align: left">type</td>
       <td style="text-align: left">string</td>
       <td style="text-align: left">N</td>
-      <td style="text-align: left">recipient candidates의 타입  - <strong>CONTACT</strong> : 연락처 검색  - <strong>EXCHANGE</strong> : exchange 검색  - <strong>T114</strong> : T114 검색  - <strong>NONE</strong> : 특정 카테고리에 속하지 않음  - <strong>EMERGENCY</strong> : 긴급 재난, 안전 안내 문자의 경우 “안전 안내 문자”로 TTS 나갈 예정</td>
+      <td style="text-align: left">recipient candidates의 타입<br>- <strong>CONTACT</strong> : 연락처 검색<br>- <strong>EXCHANGE</strong> : exchange 검색<br>- <strong>T114</strong> : T114 검색<br>- <strong>NONE</strong> : 특정 카테고리에 속하지 않음<br>- <strong>EMERGENCY</strong> : 긴급 재난, 안전 안내 문자의 경우 “안전 안내 문자”로 TTS 나갈 예정</td>
     </tr>
     <tr>
       <td style="text-align: left">number</td>
@@ -2784,7 +2783,7 @@ messageAgent.addOnPlaybackListener(listener)
       <td style="text-align: left">string</td>
       <td style="text-align: left">N</td>
       <td style="text-align: left">
-<strong>MOBILE</strong> <strong>COMPANY</strong> <strong>HOME</strong> <strong>USER_DEFINED</strong>
+<strong>MOBILE</strong><br><strong>COMPANY</strong><br><strong>HOME</strong><br><strong>USER_DEFINED</strong>
 </td>
     </tr>
     <tr>
@@ -2809,7 +2808,7 @@ messageAgent.addOnPlaybackListener(listener)
       <td style="text-align: left">message.type</td>
       <td style="text-align: left">string</td>
       <td style="text-align: left">Y</td>
-      <td style="text-align: left">메세지의 타입  - <strong>SMS</strong>  - <strong>MMS</strong>
+      <td style="text-align: left">메세지의 타입<br>- <strong>SMS</strong><br>- <strong>MMS</strong>
 </td>
     </tr>
     <tr>
@@ -2822,7 +2821,7 @@ messageAgent.addOnPlaybackListener(listener)
       <td style="text-align: left">numInMessageHistory</td>
       <td style="text-align: left">string</td>
       <td style="text-align: left">N</td>
-      <td style="text-align: left">문자 수신 내역에 존재하는 건수 0, 1, 2, … 값을 string 형태로 받음</td>
+      <td style="text-align: left">문자 수신 내역에 존재하는 건수<br>0, 1, 2, … 값을 string 형태로 받음</td>
     </tr>
     <tr>
       <td style="text-align: left">token</td>
@@ -2912,7 +2911,7 @@ messageAgent.addOnPlaybackListener(listener)
       <td style="text-align: left">string</td>
       <td style="text-align: left">N</td>
       <td style="text-align: left">
-<strong>SEND</strong> : 문자보내줘 <strong>READ</strong> : 문자읽어줘</td>
+<strong>SEND</strong> : 문자보내줘<br><strong>READ</strong> : 문자읽어줘</td>
     </tr>
     <tr>
       <td style="text-align: left">recipientIntended</td>
@@ -2921,13 +2920,13 @@ messageAgent.addOnPlaybackListener(listener)
       <td style="text-align: left">발화에서 분석된 recipient 정보</td>
     </tr>
     <tr>
-      <td style="text-align: left">recipientIntended. name</td>
+      <td style="text-align: left">recipientIntended.name</td>
       <td style="text-align: left">string</td>
       <td style="text-align: left">N</td>
       <td style="text-align: left">검색에 요청할때 사용된 상대방 이름 (NLU 분석으로 나온 이름)</td>
     </tr>
     <tr>
-      <td style="text-align: left">recipientIntended. label</td>
+      <td style="text-align: left">recipientIntended.label</td>
       <td style="text-align: left">string</td>
       <td style="text-align: left">N</td>
       <td style="text-align: left">집, 회사 등을 구분하기 위한 라벨</td>
@@ -2936,7 +2935,7 @@ messageAgent.addOnPlaybackListener(listener)
       <td style="text-align: left">searchScene</td>
       <td style="text-align: left">string</td>
       <td style="text-align: left">N</td>
-      <td style="text-align: left">검색 대상과 화면을 정의하기 위해 추가  - <strong>DEFAULT</strong> : 기본 검색 로직  - <strong>T114DIRECT</strong> : 긴급전화</td>
+      <td style="text-align: left">검색 대상과 화면을 정의하기 위해 추가<br>- <strong>DEFAULT</strong> : 기본 검색 로직<br>- <strong>T114DIRECT</strong> : 긴급전화</td>
     </tr>
     <tr>
       <td style="text-align: left">candidates</td>
@@ -2946,19 +2945,19 @@ messageAgent.addOnPlaybackListener(listener)
       <td style="text-align: left">candidates가 없으면 이 항목이 없어야 함</td>
     </tr>
     <tr>
-      <td style="text-align: left">template. messageToSend</td>
+      <td style="text-align: left">template.messageToSend</td>
       <td style="text-align: left">object</td>
       <td style="text-align: left">N</td>
       <td style="text-align: left">발신용으로 사용할 메세지 SendCandidates의 같은 파라미터를 통해 전달받은 MSG_BODY를 그대로 반환</td>
     </tr>
     <tr>
-      <td style="text-align: left">template. messageToSend. text</td>
+      <td style="text-align: left">template.messageToSend.text</td>
       <td style="text-align: left">string</td>
       <td style="text-align: left">Y</td>
       <td style="text-align: left">본문</td>
     </tr>
     <tr>
-      <td style="text-align: left">template. messageToSend. type</td>
+      <td style="text-align: left">template.messageToSend.type</td>
       <td style="text-align: left">string</td>
       <td style="text-align: left">N</td>
       <td style="text-align: left">메세지의 타입</td>
@@ -3016,7 +3015,7 @@ messageAgent.addOnPlaybackListener(listener)
   <tbody>
     <tr>
       <td style="text-align: left">recipient</td>
-      <td style="text-align: left"><a href="message.md#contact">Contact</a></td>
+      <td style="text-align: left"><a href="message#contact">Contact</a></td>
       <td style="text-align: left">Y</td>
       <td style="text-align: left"> </td>
     </tr>
@@ -3083,16 +3082,16 @@ messageAgent.addOnPlaybackListener(listener)
       <td style="text-align: left">recipientIntended</td>
       <td style="text-align: left">object</td>
       <td style="text-align: left">N</td>
-      <td style="text-align: left">발화에서 분석된 recipient 정보 optional 파라미터로 포함되지 않으면 전체 문자를 보내줘야 함 항목이 존재할 경우 SendCandidates와 동일하게 조건에 맞는 대상자의 문자리스트만 GetMessageSucceeded로 전달하고 항목이 없을 경우 전체 문자리스트를 GetMessageSucceeded로 전달해야함.</td>
+      <td style="text-align: left">발화에서 분석된 recipient 정보<br>optional 파라미터로 포함되지 않으면 전체 문자를 보내줘야 함<br>항목이 존재할 경우 SendCandidates와 동일하게 조건에 맞는 대상자의 문자리스트만 GetMessageSucceeded로 전달하고 항목이 없을 경우 전체 문자리스트를 GetMessageSucceeded로 전달해야함.</td>
     </tr>
     <tr>
-      <td style="text-align: left">recipientIntended. name</td>
+      <td style="text-align: left">recipientIntended.name</td>
       <td style="text-align: left">string</td>
       <td style="text-align: left">N</td>
       <td style="text-align: left">검색에 요청할때 사용된 상대방 이름 (NLU 분석으로 나온 이름)</td>
     </tr>
     <tr>
-      <td style="text-align: left">recipientIntended. label</td>
+      <td style="text-align: left">recipientIntended.label</td>
       <td style="text-align: left">string</td>
       <td style="text-align: left">N</td>
       <td style="text-align: left">집, 회사 등을 구분하기 위한 라벨</td>
@@ -3161,7 +3160,7 @@ messageAgent.addOnPlaybackListener(listener)
       <td style="text-align: left">receivedTime</td>
       <td style="text-align: left">string</td>
       <td style="text-align: left">N</td>
-      <td style="text-align: left">Application에서 읽은 메시지를 처리하기 위한 timeStamp timeStamp 값은 디바이스에서 문자 메시지의 (수신한) 시간값(LONG)으로 GetMessageSucceeded 의 candidates (문자 메시지 리스트) 의 time 값 Application은 해당 시간값 이후에 수신된 문자 메시지를 GetMessageSucceeded 응답데이터로 전달한다.</td>
+      <td style="text-align: left">Application에서 읽은 메시지를 처리하기 위한 timeStamp<br>timeStamp 값은 디바이스에서 문자 메시지의 (수신한) 시간값(LONG)으로 GetMessageSucceeded 의 candidates (문자 메시지 리스트) 의 time 값<br>Application은 해당 시간값 이후에 수신된 문자 메시지를 GetMessageSucceeded 응답데이터로 전달한다.</td>
     </tr>
     <tr>
       <td style="text-align: left">token</td>
@@ -3265,7 +3264,7 @@ messageAgent.addOnPlaybackListener(listener)
   <tbody>
     <tr>
       <td style="text-align: left">recipient</td>
-      <td style="text-align: left"><a href="message.md#contact">Contact</a></td>
+      <td style="text-align: left"><a href="message#contact">Contact</a></td>
       <td style="text-align: left">Y</td>
       <td style="text-align: left"> </td>
     </tr>

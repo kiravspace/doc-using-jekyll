@@ -10,7 +10,6 @@
 <script type="text/javascript" src="/assets/js/jquery-ui.js"></script>
 <script type="text/javascript" src="/assets/js/main.js"></script>
 
-<script>MathJax={"tex":{"inlineMath":[["$","$"],["\\(","\\)"]],"displayMath":[["$$","$$"],["\\[","\\]"]]},"svg":{"fontCache":"global"},"options":{"enableMenu":false}}</script><script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script><script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
 </head>
 <body>
 <header>
@@ -62,7 +61,7 @@
     
         <li>
             <div class="nav_link fold ">
-                <a href="/nugu-play/nugu-ux/voice-interaction-design" class="nav_href">사용자 발화\(User Utterance\) 예상 하기</a>
+                <a href="/nugu-play/nugu-ux/voice-interaction-design" class="nav_href">사용자 발화(User Utterance) 예상 하기</a>
                 <span class="nav_unfold">+</span>
                 <span class="nav_fold">-</span>
             </div>
@@ -429,7 +428,7 @@
     
         <li>
             <div class="nav_link fold ">
-                <a href="/nugu-play/create-plays-with-play-builder/hello-aria/create-an-action-and-an-answer" class="nav_href">3) Action 만들고 응답 등록하기</a>
+                <a href="/nugu-play/create-plays-with-play-builder/hello-aria/create-an-intent-and-custom-utterances" class="nav_href">2) Intent 만들고 예상 발화 등록하기</a>
                 <span class="nav_unfold">+</span>
                 <span class="nav_fold">-</span>
             </div>
@@ -438,7 +437,7 @@
     
         <li>
             <div class="nav_link fold ">
-                <a href="/nugu-play/create-plays-with-play-builder/hello-aria/create-an-intent-and-custom-utterances" class="nav_href">2) Intent 만들고 예상 발화 등록하기</a>
+                <a href="/nugu-play/create-plays-with-play-builder/hello-aria/create-an-action-and-an-answer" class="nav_href">3) Action 만들고 응답 등록하기</a>
                 <span class="nav_unfold">+</span>
                 <span class="nav_fold">-</span>
             </div>
@@ -550,7 +549,7 @@
     
         <li>
             <div class="nav_link fold ">
-                <a href="/nugu-play/create-plays-with-play-builder/use-backend-proxy/capability-interfaces/audioplayer-display-interface" class="nav_href">AudioPlayer를 위한 Display Interface</a>
+                <a href="/nugu-play/create-plays-with-play-builder/use-backend-proxy/capability-interfaces/audioplayer-interface" class="nav_href">AudioPlayer Interface</a>
                 <span class="nav_unfold">+</span>
                 <span class="nav_fold">-</span>
             </div>
@@ -559,7 +558,7 @@
     
         <li>
             <div class="nav_link fold ">
-                <a href="/nugu-play/create-plays-with-play-builder/use-backend-proxy/capability-interfaces/audioplayer-interface" class="nav_href">AudioPlayer Interface</a>
+                <a href="/nugu-play/create-plays-with-play-builder/use-backend-proxy/capability-interfaces/audioplayer-display-interface" class="nav_href">AudioPlayer를 위한 Display Interface</a>
                 <span class="nav_unfold">+</span>
                 <span class="nav_fold">-</span>
             </div>
@@ -1379,7 +1378,7 @@
     
         <li>
             <div class="nav_link fold  has_child ">
-                <a href="/work-with-nugu-biz/biz-api/api-announcement" class="nav_href">API 발송 \(Announcement\)</a>
+                <a href="/work-with-nugu-biz/biz-api/api-announcement" class="nav_href">API 발송 (Announcement)</a>
                 <span class="nav_unfold">+</span>
                 <span class="nav_fold">-</span>
             </div>
@@ -2166,20 +2165,17 @@
     <div class="content">
         <h2 id="sdk에서-제공하는-nuguandroidclient-클래스를-이용하여-테스트-환경을-변경하는-방법을-소개합니다">SDK에서 제공하는 <code class="language-plaintext highlighter-rouge">NuguAndroidClient</code> 클래스를 이용하여 테스트 환경을 변경하는 방법을 소개합니다.</h2>
 
-<ol>
-  <li>
-<code class="language-plaintext highlighter-rouge">transportFactory</code>에 <code class="language-plaintext highlighter-rouge">GrpcTransportFactory</code>를 생성합니다.</li>
-  <li>
-    <p><code class="language-plaintext highlighter-rouge">NuguServerInfo</code>의 builder 이용하여<code class="language-plaintext highlighter-rouge">DeviceGW</code> 값은 환경에 맞게 주소를 변경합니다. 아래 심사용과 테스트용 주소가 준비되어 있습니다.</p>
+<p>⁣1. <code class="language-plaintext highlighter-rouge">transportFactory</code>에 <code class="language-plaintext highlighter-rouge">GrpcTransportFactory</code>를 생성합니다.
+⁣2. <code class="language-plaintext highlighter-rouge">NuguServerInfo</code>의 builder 이용하여<code class="language-plaintext highlighter-rouge">DeviceGW</code> 값은 환경에 맞게 주소를 변경합니다. 아래 심사용과 테스트용 주소가 준비되어 있습니다.</p>
 
-    <ul>
-      <li>심사용 : <code class="language-plaintext highlighter-rouge">review-dggprc.sktnugu.com</code>
-</li>
-      <li>테스트용 : <code class="language-plaintext highlighter-rouge">test-dggprc.sktnugu.com</code>
-</li>
-    </ul>
-  </li>
-</ol>
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code><table class="rouge-table"><tbody><tr>
+<td class="rouge-gutter gl"><pre class="lineno">1
+2
+</pre></td>
+<td class="rouge-code"><pre>* 심사용 : `review-dggprc.sktnugu.com` 
+* 테스트용 : `test-dggprc.sktnugu.com`
+</pre></td>
+</tr></tbody></table></code></pre></div></div>
 
 <div class="code">
     <div class="code_title"></div>
@@ -2190,24 +2186,18 @@
 3
 4
 5
-6
-7
 </pre></td>
-<td class="rouge-code"><pre>```
-val transport = GrpcTransportFactory(
+<td class="rouge-code"><pre>val transport = GrpcTransportFactory(
     NuguServerInfo.Builder()
         .deviceGW("review-dggprc.sktnugu.com")
         .build()
 )
-```
 </pre></td>
 </tr></tbody></table></code></pre></div></div>
 </div>
 </div>
 
-<ol>
-  <li>마지막으로 <code class="language-plaintext highlighter-rouge">NuguAndroidClient</code>를 생성하면 모든 설정이 완료 됩니다.</li>
-</ol>
+<p>⁣3. 마지막으로 <code class="language-plaintext highlighter-rouge">NuguAndroidClient</code>를 생성하면 모든 설정이 완료 됩니다.</p>
 
 <div class="code">
     <div class="code_title"></div>
@@ -2227,13 +2217,13 @@ val transport = GrpcTransportFactory(
 <td class="rouge-code"><pre><span class="k">import</span> <span class="nn">com.skt.nugu.sdk.client.port.transport.grpc2.GrpcTransportFactory</span>
 <span class="k">import</span> <span class="nn">com.skt.nugu.sdk.client.port.transport.grpc2.NuguServerInfo</span>
 
-        <span class="c1">// Create NuguAndroidClient</span>
-        <span class="n">client</span> <span class="p">=</span> <span class="nc">NuguAndroidClient</span><span class="p">.</span><span class="nc">Builder</span><span class="p">(</span>
-            <span class="n">context</span><span class="p">,</span>
-            <span class="nc">NuguOAuth</span><span class="p">.</span><span class="nf">create</span><span class="p">(</span><span class="n">options</span><span class="p">),</span>
-            <span class="n">audioSourceManager</span>
-        <span class="p">).</span><span class="nf">transportFactory</span><span class="p">(</span><span class="n">transport</span><span class="p">)</span>
-       <span class="p">.</span><span class="nf">build</span><span class="p">()</span>
+       <span class="c1">// Create NuguAndroidClient</span>
+       <span class="n">client</span> <span class="p">=</span> <span class="nc">NuguAndroidClient</span><span class="p">.</span><span class="nc">Builder</span><span class="p">(</span>
+           <span class="n">context</span><span class="p">,</span>
+           <span class="nc">NuguOAuth</span><span class="p">.</span><span class="nf">create</span><span class="p">(</span><span class="n">options</span><span class="p">),</span>
+           <span class="n">audioSourceManager</span>
+       <span class="p">).</span><span class="nf">transportFactory</span><span class="p">(</span><span class="n">transport</span><span class="p">)</span>
+      <span class="p">.</span><span class="nf">build</span><span class="p">()</span>
 </pre></td>
 </tr></tbody></table></code></pre></div></div>
 </div>

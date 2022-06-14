@@ -10,7 +10,6 @@
 <script type="text/javascript" src="/assets/js/jquery-ui.js"></script>
 <script type="text/javascript" src="/assets/js/main.js"></script>
 
-<script>MathJax={"tex":{"inlineMath":[["$","$"],["\\(","\\)"]],"displayMath":[["$$","$$"],["\\[","\\]"]]},"svg":{"fontCache":"global"},"options":{"enableMenu":false}}</script><script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script><script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
 </head>
 <body>
 <header>
@@ -62,7 +61,7 @@
     
         <li>
             <div class="nav_link fold ">
-                <a href="/nugu-play/nugu-ux/voice-interaction-design" class="nav_href">사용자 발화\(User Utterance\) 예상 하기</a>
+                <a href="/nugu-play/nugu-ux/voice-interaction-design" class="nav_href">사용자 발화(User Utterance) 예상 하기</a>
                 <span class="nav_unfold">+</span>
                 <span class="nav_fold">-</span>
             </div>
@@ -429,7 +428,7 @@
     
         <li>
             <div class="nav_link fold ">
-                <a href="/nugu-play/create-plays-with-play-builder/hello-aria/create-an-action-and-an-answer" class="nav_href">3) Action 만들고 응답 등록하기</a>
+                <a href="/nugu-play/create-plays-with-play-builder/hello-aria/create-an-intent-and-custom-utterances" class="nav_href">2) Intent 만들고 예상 발화 등록하기</a>
                 <span class="nav_unfold">+</span>
                 <span class="nav_fold">-</span>
             </div>
@@ -438,7 +437,7 @@
     
         <li>
             <div class="nav_link fold ">
-                <a href="/nugu-play/create-plays-with-play-builder/hello-aria/create-an-intent-and-custom-utterances" class="nav_href">2) Intent 만들고 예상 발화 등록하기</a>
+                <a href="/nugu-play/create-plays-with-play-builder/hello-aria/create-an-action-and-an-answer" class="nav_href">3) Action 만들고 응답 등록하기</a>
                 <span class="nav_unfold">+</span>
                 <span class="nav_fold">-</span>
             </div>
@@ -550,7 +549,7 @@
     
         <li>
             <div class="nav_link fold ">
-                <a href="/nugu-play/create-plays-with-play-builder/use-backend-proxy/capability-interfaces/audioplayer-display-interface" class="nav_href">AudioPlayer를 위한 Display Interface</a>
+                <a href="/nugu-play/create-plays-with-play-builder/use-backend-proxy/capability-interfaces/audioplayer-interface" class="nav_href">AudioPlayer Interface</a>
                 <span class="nav_unfold">+</span>
                 <span class="nav_fold">-</span>
             </div>
@@ -559,7 +558,7 @@
     
         <li>
             <div class="nav_link fold ">
-                <a href="/nugu-play/create-plays-with-play-builder/use-backend-proxy/capability-interfaces/audioplayer-interface" class="nav_href">AudioPlayer Interface</a>
+                <a href="/nugu-play/create-plays-with-play-builder/use-backend-proxy/capability-interfaces/audioplayer-display-interface" class="nav_href">AudioPlayer를 위한 Display Interface</a>
                 <span class="nav_unfold">+</span>
                 <span class="nav_fold">-</span>
             </div>
@@ -1379,7 +1378,7 @@
     
         <li>
             <div class="nav_link fold  has_child ">
-                <a href="/work-with-nugu-biz/biz-api/api-announcement" class="nav_href">API 발송 \(Announcement\)</a>
+                <a href="/work-with-nugu-biz/biz-api/api-announcement" class="nav_href">API 발송 (Announcement)</a>
                 <span class="nav_unfold">+</span>
                 <span class="nav_fold">-</span>
             </div>
@@ -2190,7 +2189,7 @@
     <tr>
       <td style="text-align: left">1.2</td>
       <td style="text-align: left">2020.06.26</td>
-      <td style="text-align: left">Context 에 defaultVolumeLevel 필드 추가 Context 의 volumnes 에 group 필드 추가</td>
+      <td style="text-align: left">Context 에 defaultVolumeLevel 필드 추가<br>Context 의 volumnes 에 group 필드 추가</td>
     </tr>
   </tbody>
 </table>
@@ -2323,7 +2322,7 @@ nugu_client-&gt;getCapabilityBuilder()
 
 <h3 id="context-구성">Context 구성</h3>
 
-<p>Play 에서 디바이스의 볼륨을 제어하기 위해서는 디바이스의 볼륨 정보를 <a href="location.md#context">Context</a> 에 포함시켜 주어야 합니다.</p>
+<p>Play 에서 디바이스의 볼륨을 제어하기 위해서는 디바이스의 볼륨 정보를 <a href="location#context">Context</a> 에 포함시켜 주어야 합니다.</p>
 
 <div id="tabs-82" class="tabs">
     <ul>
@@ -2382,9 +2381,9 @@ nugu_client-&gt;getCapabilityBuilder()
 
 <h3 id="볼륨-제어">볼륨 제어</h3>
 
-<p>디바이스의 볼륨 제어가 <a href="speaker.md#setvolume">SetVolume</a> directive 로 요청될 수 있습니다.</p>
+<p>디바이스의 볼륨 제어가 <a href="speaker#setvolume">SetVolume</a> directive 로 요청될 수 있습니다.</p>
 
-<p>디바이스의 볼륨 음소거 제어가 <a href="speaker.md#setmute">SetMute</a> directive 로 요청될 수 있습니다.</p>
+<p>디바이스의 볼륨 음소거 제어가 <a href="speaker#setmute">SetMute</a> directive 로 요청될 수 있습니다.</p>
 
 <div id="tabs-114" class="tabs">
     <ul>
@@ -2549,7 +2548,7 @@ CapabilityFactory::makeCapability&lt;SpeakerAgent, ISpeakerHandler&gt;(speaker_l
       <td style="text-align: left">volumes.name</td>
       <td style="text-align: left">string</td>
       <td style="text-align: left">Y</td>
-      <td style="text-align: left">NUGU(MUSIC+VOICE_COMMAND), MUSIC, RINGTONE, CALL, NOTIFICATION, ALARM, VOICE_COMMAND, NAVIGATION, SYSTEM_SOUND Reference: <a href="https://source.android.com/devices/audio/attributes#contexts">https://source.android.com/devices/audio/attributes#contexts</a>
+      <td style="text-align: left">NUGU(MUSIC+VOICE_COMMAND)<br>MUSIC<br>RINGTONE<br>CALL<br>NOTIFICATION<br>ALARM<br>VOICE_COMMAND<br>NAVIGATION<br>SYSTEM_SOUND<br>Reference: <a href="https://source.android.com/devices/audio/attributes#contexts">https://source.android.com/devices/audio/attributes#contexts</a>
 </td>
     </tr>
     <tr>
@@ -2670,7 +2669,7 @@ CapabilityFactory::makeCapability&lt;SpeakerAgent, ISpeakerHandler&gt;(speaker_l
       <td style="text-align: left">rate</td>
       <td style="text-align: left">string</td>
       <td style="text-align: left">N</td>
-      <td style="text-align: left">SLOW, FAST  - SLOW: 점진적으로 변경 (max 값으로 설정하는 시나리오에서 사용)  - FAST : 바로 변경</td>
+      <td style="text-align: left">SLOW, FAST<br>- SLOW: 점진적으로 변경 (max 값으로 설정하는 시나리오에서 사용)<br>- FAST : 바로 변경</td>
     </tr>
     <tr>
       <td style="text-align: left">volume</td>

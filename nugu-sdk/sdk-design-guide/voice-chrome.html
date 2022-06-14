@@ -10,7 +10,6 @@
 <script type="text/javascript" src="/assets/js/jquery-ui.js"></script>
 <script type="text/javascript" src="/assets/js/main.js"></script>
 
-<script>MathJax={"tex":{"inlineMath":[["$","$"],["\\(","\\)"]],"displayMath":[["$$","$$"],["\\[","\\]"]]},"svg":{"fontCache":"global"},"options":{"enableMenu":false}}</script><script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script><script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
 </head>
 <body>
 <header>
@@ -62,7 +61,7 @@
     
         <li>
             <div class="nav_link fold ">
-                <a href="/nugu-play/nugu-ux/voice-interaction-design" class="nav_href">사용자 발화\(User Utterance\) 예상 하기</a>
+                <a href="/nugu-play/nugu-ux/voice-interaction-design" class="nav_href">사용자 발화(User Utterance) 예상 하기</a>
                 <span class="nav_unfold">+</span>
                 <span class="nav_fold">-</span>
             </div>
@@ -429,7 +428,7 @@
     
         <li>
             <div class="nav_link fold ">
-                <a href="/nugu-play/create-plays-with-play-builder/hello-aria/create-an-action-and-an-answer" class="nav_href">3) Action 만들고 응답 등록하기</a>
+                <a href="/nugu-play/create-plays-with-play-builder/hello-aria/create-an-intent-and-custom-utterances" class="nav_href">2) Intent 만들고 예상 발화 등록하기</a>
                 <span class="nav_unfold">+</span>
                 <span class="nav_fold">-</span>
             </div>
@@ -438,7 +437,7 @@
     
         <li>
             <div class="nav_link fold ">
-                <a href="/nugu-play/create-plays-with-play-builder/hello-aria/create-an-intent-and-custom-utterances" class="nav_href">2) Intent 만들고 예상 발화 등록하기</a>
+                <a href="/nugu-play/create-plays-with-play-builder/hello-aria/create-an-action-and-an-answer" class="nav_href">3) Action 만들고 응답 등록하기</a>
                 <span class="nav_unfold">+</span>
                 <span class="nav_fold">-</span>
             </div>
@@ -550,7 +549,7 @@
     
         <li>
             <div class="nav_link fold ">
-                <a href="/nugu-play/create-plays-with-play-builder/use-backend-proxy/capability-interfaces/audioplayer-display-interface" class="nav_href">AudioPlayer를 위한 Display Interface</a>
+                <a href="/nugu-play/create-plays-with-play-builder/use-backend-proxy/capability-interfaces/audioplayer-interface" class="nav_href">AudioPlayer Interface</a>
                 <span class="nav_unfold">+</span>
                 <span class="nav_fold">-</span>
             </div>
@@ -559,7 +558,7 @@
     
         <li>
             <div class="nav_link fold ">
-                <a href="/nugu-play/create-plays-with-play-builder/use-backend-proxy/capability-interfaces/audioplayer-interface" class="nav_href">AudioPlayer Interface</a>
+                <a href="/nugu-play/create-plays-with-play-builder/use-backend-proxy/capability-interfaces/audioplayer-display-interface" class="nav_href">AudioPlayer를 위한 Display Interface</a>
                 <span class="nav_unfold">+</span>
                 <span class="nav_fold">-</span>
             </div>
@@ -1379,7 +1378,7 @@
     
         <li>
             <div class="nav_link fold  has_child ">
-                <a href="/work-with-nugu-biz/biz-api/api-announcement" class="nav_href">API 발송 \(Announcement\)</a>
+                <a href="/work-with-nugu-biz/biz-api/api-announcement" class="nav_href">API 발송 (Announcement)</a>
                 <span class="nav_unfold">+</span>
                 <span class="nav_fold">-</span>
             </div>
@@ -2199,25 +2198,23 @@ Voice Chrome 외에 디스플레이 기능을 추가하기 위해 LED를 사용�
 
 <h2 id="nugu-voice-chrome-상태"><strong>NUGU Voice Chrome 상태</strong></h2>
 
-<p>NUGU Voice Chrome은 구분된 상태에 따라 표현이 달라집니다.<br>
-Idle 상태는 ‘<strong>NUGU Voice Button</strong>‘을 사용하고, 나머지 상태는 그래픽 애니메이션으로 표현합니다.<br>
-상태 그래픽은 ‘<strong>Chrome Indicator</strong>‘라고 말합니다.<br>
-기기에 Wake-up 버튼이 탑재해 있을 경우 NUGU Voice Button은 미노출도 허용합니다.</p>
+<p>NUGU Voice Chrome은 구분된 상태에 따라 표현이 달라집니다.</p>
+
+<p>Idle 상태는 ‘<strong>NUGU Voice Button</strong>‘을 사용하고, 나머지 상태는 그래픽 애니메이션으로 표현합니다.</p>
+
+<p>상태 그래픽은 ‘<strong>Chrome Indicator</strong>‘라고 말합니다.</p>
+
+<p>기기에 Wake-up 버튼이 탑재해 있을 경우 NUGU Voice Button은 미노출도 허용합니다.</p>
 
 <table>
   <thead>
     <tr>
-      <th> </th>
-      <th> </th>
-      <th> </th>
+      <th>상태</th>
+      <th>동작</th>
+      <th>설명</th>
     </tr>
   </thead>
   <tbody>
-    <tr>
-      <td><strong>상태</strong></td>
-      <td><strong>동작</strong></td>
-      <td><strong>설명</strong></td>
-    </tr>
     <tr>
       <td><strong>Idle</strong></td>
       <td><img src="/assets/images/voice-chrome-03.png" alt=""></td>
@@ -2261,8 +2258,9 @@ Idle 상태는 ‘<strong>NUGU Voice Button</strong>‘을 사용하고, 나머�
 
 <h2 id="nugu-voice-button"><strong>NUGU Voice Button</strong></h2>
 
-<p>NUGU Voice Button은 음성 입력이 가능한 대기 상태를 나타내는 버튼입니다.<br>
-BLUE / WHITE 컬러타입 중 한 가지를 선택 적용할 수 있습니다.</p>
+<p>NUGU Voice Button은 음성 입력이 가능한 대기 상태를 나타내는 버튼입니다.</p>
+
+<p>BLUE / WHITE 컬러타입 중 한 가지를 선택 적용할 수 있습니다.</p>
 
 <p><img src="/assets/images/voice-chrome-08.png" alt="(좌) BLUE / (우) WHITE"></p>
 
@@ -2277,15 +2275,15 @@ BLUE / WHITE 컬러타입 중 한 가지를 선택 적용할 수 있습니다.</
   <li>NUGU Voice Button이 콘텐츠 중첩 없이 독립된 영역을 확보하고 있는 경우 <strong>Button 사용</strong> (검색창 옆 권장)</li>
 </ul>
 
-<div id="tabs-53" class="tabs">
+<div id="tabs-56" class="tabs">
     <ul>
         
-            <li data-content-id="tab-content-54" class="tab_title">FAB</li>
+            <li data-content-id="tab-content-57" class="tab_title">FAB</li>
         
-            <li data-content-id="tab-content-64" class="tab_title">Button</li>
+            <li data-content-id="tab-content-67" class="tab_title">Button</li>
         
     </ul>
-    <div id="tab-content-54" class="tab_content">
+    <div id="tab-content-57" class="tab_content">
     
 (1) **FAB**을 눌러 보이스크롬을 호출하면 FAB 버튼은 사라집니다.
 
@@ -2296,7 +2294,7 @@ BLUE / WHITE 컬러타입 중 한 가지를 선택 적용할 수 있습니다.</
 ![(좌) Scroll down / (우) Scroll up (세로 스크롤이 있는 디바이스에 적용 가능)](/assets/images/voice-chrome-11.png)
 
 </div>
-<div id="tab-content-64" class="tab_content">
+<div id="tab-content-67" class="tab_content">
     
 (2) **Button**을 눌러 Voice Chrome을 호출하면, Toggle Button 버튼으로 상태가 변경됩니다.
 

@@ -10,7 +10,6 @@
 <script type="text/javascript" src="/assets/js/jquery-ui.js"></script>
 <script type="text/javascript" src="/assets/js/main.js"></script>
 
-<script>MathJax={"tex":{"inlineMath":[["$","$"],["\\(","\\)"]],"displayMath":[["$$","$$"],["\\[","\\]"]]},"svg":{"fontCache":"global"},"options":{"enableMenu":false}}</script><script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script><script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
 </head>
 <body>
 <header>
@@ -62,7 +61,7 @@
     
         <li>
             <div class="nav_link fold ">
-                <a href="/nugu-play/nugu-ux/voice-interaction-design" class="nav_href">사용자 발화\(User Utterance\) 예상 하기</a>
+                <a href="/nugu-play/nugu-ux/voice-interaction-design" class="nav_href">사용자 발화(User Utterance) 예상 하기</a>
                 <span class="nav_unfold">+</span>
                 <span class="nav_fold">-</span>
             </div>
@@ -429,7 +428,7 @@
     
         <li>
             <div class="nav_link fold ">
-                <a href="/nugu-play/create-plays-with-play-builder/hello-aria/create-an-action-and-an-answer" class="nav_href">3) Action 만들고 응답 등록하기</a>
+                <a href="/nugu-play/create-plays-with-play-builder/hello-aria/create-an-intent-and-custom-utterances" class="nav_href">2) Intent 만들고 예상 발화 등록하기</a>
                 <span class="nav_unfold">+</span>
                 <span class="nav_fold">-</span>
             </div>
@@ -438,7 +437,7 @@
     
         <li>
             <div class="nav_link fold ">
-                <a href="/nugu-play/create-plays-with-play-builder/hello-aria/create-an-intent-and-custom-utterances" class="nav_href">2) Intent 만들고 예상 발화 등록하기</a>
+                <a href="/nugu-play/create-plays-with-play-builder/hello-aria/create-an-action-and-an-answer" class="nav_href">3) Action 만들고 응답 등록하기</a>
                 <span class="nav_unfold">+</span>
                 <span class="nav_fold">-</span>
             </div>
@@ -550,7 +549,7 @@
     
         <li>
             <div class="nav_link fold ">
-                <a href="/nugu-play/create-plays-with-play-builder/use-backend-proxy/capability-interfaces/audioplayer-display-interface" class="nav_href">AudioPlayer를 위한 Display Interface</a>
+                <a href="/nugu-play/create-plays-with-play-builder/use-backend-proxy/capability-interfaces/audioplayer-interface" class="nav_href">AudioPlayer Interface</a>
                 <span class="nav_unfold">+</span>
                 <span class="nav_fold">-</span>
             </div>
@@ -559,7 +558,7 @@
     
         <li>
             <div class="nav_link fold ">
-                <a href="/nugu-play/create-plays-with-play-builder/use-backend-proxy/capability-interfaces/audioplayer-interface" class="nav_href">AudioPlayer Interface</a>
+                <a href="/nugu-play/create-plays-with-play-builder/use-backend-proxy/capability-interfaces/audioplayer-display-interface" class="nav_href">AudioPlayer를 위한 Display Interface</a>
                 <span class="nav_unfold">+</span>
                 <span class="nav_fold">-</span>
             </div>
@@ -1379,7 +1378,7 @@
     
         <li>
             <div class="nav_link fold  has_child ">
-                <a href="/work-with-nugu-biz/biz-api/api-announcement" class="nav_href">API 발송 \(Announcement\)</a>
+                <a href="/work-with-nugu-biz/biz-api/api-announcement" class="nav_href">API 발송 (Announcement)</a>
                 <span class="nav_unfold">+</span>
                 <span class="nav_fold">-</span>
             </div>
@@ -2171,13 +2170,18 @@
 
 <p>Play가 배포되면 Play는 상용 서비스 상태가 되며, Play 등록 현황 리스트에 업데이트 버전을 등록할 수 있도록 <code class="language-plaintext highlighter-rouge">업데이트</code> 버튼이 생성됩니다. 이 버튼을 클릭하여 Play의 업데이트 버전을 등록할 수 있습니다.</p>
 
-<p>1️⃣ <code class="language-plaintext highlighter-rouge">Developers</code> &gt; <code class="language-plaintext highlighter-rouge">Play kit</code> &gt; <code class="language-plaintext highlighter-rouge">Play 관리 </code>페이지의 서비스중 Play에, Play Builder에서 서비스중 버전 이후의 새로운 빌드를 생성한 경우, <code class="language-plaintext highlighter-rouge">업데이트</code> 버튼이 생성되며, 클릭 할 수 있습니다.</p>
+<ol>
+  <li>
+    <p><code class="language-plaintext highlighter-rouge">Developers</code> &gt; <code class="language-plaintext highlighter-rouge">Play kit</code> &gt; <code class="language-plaintext highlighter-rouge">Play 관리 </code>페이지의 서비스중 Play에, Play Builder에서 서비스중 버전 이후의 새로운 빌드를 생성한 경우, <code class="language-plaintext highlighter-rouge">업데이트</code> 버튼이 생성되며, 클릭 할 수 있습니다.</p>
 
-<p><img src="broken-reference" alt=""></p>
+    <p><img src="/assets/images/PlayManage2_1.png" alt=""></p>
+  </li>
+  <li>
+    <p>Snapshot 버전 리스트에서 등록할 버전을 선택하고 <code class="language-plaintext highlighter-rouge">확인</code> 버튼을 클릭합니다.</p>
 
-<p>2️⃣ Snapshot 버전 리스트에서 등록할 버전을 선택하고 <code class="language-plaintext highlighter-rouge">확인</code> 버튼을 클릭합니다.</p>
-
-<p><img src="broken-reference" alt=""></p>
+    <p><img src="/assets/images/version.jpg" alt=""></p>
+  </li>
+</ol>
 
 <p>이후의 업데이트 절차는 Play 등록 방법과 동일합니다. 업데이트 등록이 완료되면 업데이트 버전에 대한 심사/배포 프로세스가 진행됩니다.</p>
 

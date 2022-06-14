@@ -10,7 +10,6 @@
 <script type="text/javascript" src="/assets/js/jquery-ui.js"></script>
 <script type="text/javascript" src="/assets/js/main.js"></script>
 
-<script>MathJax={"tex":{"inlineMath":[["$","$"],["\\(","\\)"]],"displayMath":[["$$","$$"],["\\[","\\]"]]},"svg":{"fontCache":"global"},"options":{"enableMenu":false}}</script><script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script><script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
 </head>
 <body>
 <header>
@@ -62,7 +61,7 @@
     
         <li>
             <div class="nav_link fold ">
-                <a href="/nugu-play/nugu-ux/voice-interaction-design" class="nav_href">사용자 발화\(User Utterance\) 예상 하기</a>
+                <a href="/nugu-play/nugu-ux/voice-interaction-design" class="nav_href">사용자 발화(User Utterance) 예상 하기</a>
                 <span class="nav_unfold">+</span>
                 <span class="nav_fold">-</span>
             </div>
@@ -429,7 +428,7 @@
     
         <li>
             <div class="nav_link fold ">
-                <a href="/nugu-play/create-plays-with-play-builder/hello-aria/create-an-action-and-an-answer" class="nav_href">3) Action 만들고 응답 등록하기</a>
+                <a href="/nugu-play/create-plays-with-play-builder/hello-aria/create-an-intent-and-custom-utterances" class="nav_href">2) Intent 만들고 예상 발화 등록하기</a>
                 <span class="nav_unfold">+</span>
                 <span class="nav_fold">-</span>
             </div>
@@ -438,7 +437,7 @@
     
         <li>
             <div class="nav_link fold ">
-                <a href="/nugu-play/create-plays-with-play-builder/hello-aria/create-an-intent-and-custom-utterances" class="nav_href">2) Intent 만들고 예상 발화 등록하기</a>
+                <a href="/nugu-play/create-plays-with-play-builder/hello-aria/create-an-action-and-an-answer" class="nav_href">3) Action 만들고 응답 등록하기</a>
                 <span class="nav_unfold">+</span>
                 <span class="nav_fold">-</span>
             </div>
@@ -550,7 +549,7 @@
     
         <li>
             <div class="nav_link fold ">
-                <a href="/nugu-play/create-plays-with-play-builder/use-backend-proxy/capability-interfaces/audioplayer-display-interface" class="nav_href">AudioPlayer를 위한 Display Interface</a>
+                <a href="/nugu-play/create-plays-with-play-builder/use-backend-proxy/capability-interfaces/audioplayer-interface" class="nav_href">AudioPlayer Interface</a>
                 <span class="nav_unfold">+</span>
                 <span class="nav_fold">-</span>
             </div>
@@ -559,7 +558,7 @@
     
         <li>
             <div class="nav_link fold ">
-                <a href="/nugu-play/create-plays-with-play-builder/use-backend-proxy/capability-interfaces/audioplayer-interface" class="nav_href">AudioPlayer Interface</a>
+                <a href="/nugu-play/create-plays-with-play-builder/use-backend-proxy/capability-interfaces/audioplayer-display-interface" class="nav_href">AudioPlayer를 위한 Display Interface</a>
                 <span class="nav_unfold">+</span>
                 <span class="nav_fold">-</span>
             </div>
@@ -1379,7 +1378,7 @@
     
         <li>
             <div class="nav_link fold  has_child ">
-                <a href="/work-with-nugu-biz/biz-api/api-announcement" class="nav_href">API 발송 \(Announcement\)</a>
+                <a href="/work-with-nugu-biz/biz-api/api-announcement" class="nav_href">API 발송 (Announcement)</a>
                 <span class="nav_unfold">+</span>
                 <span class="nav_fold">-</span>
             </div>
@@ -2285,7 +2284,7 @@ nugu_client-&gt;getCapabilityBuilder()
 
 <h3 id="디바이스-전원-제어">디바이스 전원 제어</h3>
 
-<p><code class="language-plaintext highlighter-rouge">사용자 발화</code> 에 따라 <a href="system.md#turnoff">TurnOff</a> directive 로 디바이스 전원을 제어할 수 있습니다.</p>
+<p><code class="language-plaintext highlighter-rouge">사용자 발화</code> 에 따라 <a href="system#turnoff">TurnOff</a> directive 로 디바이스 전원을 제어할 수 있습니다.</p>
 
 <div class="alerts warning">
     
@@ -2376,7 +2375,7 @@ CapabilityFactory::makeCapability&lt;SystemAgent, ISystemHandler&gt;(system_list
 
 <h3 id="에러처리">에러처리</h3>
 
-<p>NUGU 서버에서 에러가 발생할 경우 <a href="system.md#exception">Exception</a> directive 로 error code가 전달됩니다.</p>
+<p>NUGU 서버에서 에러가 발생할 경우 <a href="system#exception">Exception</a> directive 로 error code가 전달됩니다.</p>
 
 <p>사용자가 에러 상황을 인지할 수 있도록 Toast, Local TTS 등으로 안내해야합니다.</p>
 
@@ -2497,7 +2496,7 @@ CapabilityFactory::makeCapability&lt;SystemAgent, ISystemHandler&gt;(system_list
 
 <h3 id="디바이스-등록-해제">디바이스 등록 해제</h3>
 
-<p>누구 서버에서 디바이스가 등록 해제되면 <a href="system.md#revoke">Revoke</a> directive 로 reason 이 전달됩니다.</p>
+<p>누구 서버에서 디바이스가 등록 해제되면 <a href="system#revoke">Revoke</a> directive 로 reason 이 전달됩니다.</p>
 
 <p>Application 의 상황에 따라 NUGU 로그인 화면으로 이동하거나 NUGU Button 을 비활성화 해야합니다.</p>
 
@@ -2755,7 +2754,7 @@ CapabilityFactory::makeCapability&lt;SystemAgent, ISystemHandler&gt;(system_list
       <td style="text-align: left">protocol</td>
       <td style="text-align: left">String</td>
       <td style="text-align: left">Y</td>
-      <td style="text-align: left">H2_GRPC : grpc over http2 H2 : http2</td>
+      <td style="text-align: left">H2_GRPC : grpc over<br>http2 H2 : http2</td>
     </tr>
     <tr>
       <td style="text-align: left">hostname</td>
@@ -2791,7 +2790,7 @@ CapabilityFactory::makeCapability&lt;SystemAgent, ISystemHandler&gt;(system_list
       <td style="text-align: left">charge</td>
       <td style="text-align: left">String</td>
       <td style="text-align: left">N</td>
-      <td style="text-align: left">NORMAL : 일반적인 통신 요금 과금 (default) FREE : 무과금 포트를 이용하여 device gateway에 접속해서 TTS.SpeechPlay Event를 통해 음성 합성</td>
+      <td style="text-align: left">NORMAL : 일반적인 통신 요금 과금 (default)<br>FREE : 무과금 포트를 이용하여 device gateway에 접속해서 TTS.SpeechPlay Event를 통해 음성 합성</td>
     </tr>
   </tbody>
 </table>
@@ -2943,7 +2942,7 @@ CapabilityFactory::makeCapability&lt;SystemAgent, ISystemHandler&gt;(system_list
   <tbody>
     <tr>
       <td style="text-align: left">UNAUTHORIZED_REQUEST_EXCEPTION</td>
-      <td style="text-align: left">접속시 인증 에러 • jwt 토큰이 유효하지 않거나 header에 토큰이 없는 경우    - grpc : System.Exception(UNAUTHORIZED_REQUEST_EXCEPTION)을 내리고 연결 끊음    - h2 : 403 에러 • play router에서 토큰이 유효하지 않아서 실패 • jwt 토큰은 유효하지만 디바이스 연결 직후 habilis를 조회해서 토큰이 유효하지 않은 것이 확인</td>
+      <td style="text-align: left">접속시 인증 에러<br>jwt 토큰이 유효하지 않거나 header에 토큰이 없는 경우<br>- grpc : System.Exception(UNAUTHORIZED_REQUEST_EXCEPTION)을 내리고 연결 끊음<br>- h2 : 403 에러<br>play router에서 토큰이 유효하지 않아서 실패<br>jwt 토큰은 유효하지만 디바이스 연결 직후 habilis를 조회해서 토큰이 유효하지 않은 것이 확인</td>
     </tr>
     <tr>
       <td style="text-align: left">ASR_RECOGNIZING_EXCEPTION</td>
@@ -2951,7 +2950,7 @@ CapabilityFactory::makeCapability&lt;SystemAgent, ISystemHandler&gt;(system_list
     </tr>
     <tr>
       <td style="text-align: left">PLAY_ROUTER_PROCESSING_EXCEPTION</td>
-      <td style="text-align: left">Play router 에러 • Fallback Play 연동 실패 • Client 로직 오류(잘못된 규격으로 요청)</td>
+      <td style="text-align: left">Play router 에러<br>Fallback Play 연동 실패<br>Client 로직 오류(잘못된 규격으로 요청)</td>
     </tr>
     <tr>
       <td style="text-align: left">TTS_SPEAKING_EXCEPTION</td>

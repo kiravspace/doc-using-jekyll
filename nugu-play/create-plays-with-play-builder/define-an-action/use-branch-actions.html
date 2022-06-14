@@ -10,7 +10,6 @@
 <script type="text/javascript" src="/assets/js/jquery-ui.js"></script>
 <script type="text/javascript" src="/assets/js/main.js"></script>
 
-<script>MathJax={"tex":{"inlineMath":[["$","$"],["\\(","\\)"]],"displayMath":[["$$","$$"],["\\[","\\]"]]},"svg":{"fontCache":"global"},"options":{"enableMenu":false}}</script><script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script><script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
 </head>
 <body>
 <header>
@@ -62,7 +61,7 @@
     
         <li>
             <div class="nav_link fold ">
-                <a href="/nugu-play/nugu-ux/voice-interaction-design" class="nav_href">사용자 발화\(User Utterance\) 예상 하기</a>
+                <a href="/nugu-play/nugu-ux/voice-interaction-design" class="nav_href">사용자 발화(User Utterance) 예상 하기</a>
                 <span class="nav_unfold">+</span>
                 <span class="nav_fold">-</span>
             </div>
@@ -429,7 +428,7 @@
     
         <li>
             <div class="nav_link fold ">
-                <a href="/nugu-play/create-plays-with-play-builder/hello-aria/create-an-action-and-an-answer" class="nav_href">3) Action 만들고 응답 등록하기</a>
+                <a href="/nugu-play/create-plays-with-play-builder/hello-aria/create-an-intent-and-custom-utterances" class="nav_href">2) Intent 만들고 예상 발화 등록하기</a>
                 <span class="nav_unfold">+</span>
                 <span class="nav_fold">-</span>
             </div>
@@ -438,7 +437,7 @@
     
         <li>
             <div class="nav_link fold ">
-                <a href="/nugu-play/create-plays-with-play-builder/hello-aria/create-an-intent-and-custom-utterances" class="nav_href">2) Intent 만들고 예상 발화 등록하기</a>
+                <a href="/nugu-play/create-plays-with-play-builder/hello-aria/create-an-action-and-an-answer" class="nav_href">3) Action 만들고 응답 등록하기</a>
                 <span class="nav_unfold">+</span>
                 <span class="nav_fold">-</span>
             </div>
@@ -550,7 +549,7 @@
     
         <li>
             <div class="nav_link fold ">
-                <a href="/nugu-play/create-plays-with-play-builder/use-backend-proxy/capability-interfaces/audioplayer-display-interface" class="nav_href">AudioPlayer를 위한 Display Interface</a>
+                <a href="/nugu-play/create-plays-with-play-builder/use-backend-proxy/capability-interfaces/audioplayer-interface" class="nav_href">AudioPlayer Interface</a>
                 <span class="nav_unfold">+</span>
                 <span class="nav_fold">-</span>
             </div>
@@ -559,7 +558,7 @@
     
         <li>
             <div class="nav_link fold ">
-                <a href="/nugu-play/create-plays-with-play-builder/use-backend-proxy/capability-interfaces/audioplayer-interface" class="nav_href">AudioPlayer Interface</a>
+                <a href="/nugu-play/create-plays-with-play-builder/use-backend-proxy/capability-interfaces/audioplayer-display-interface" class="nav_href">AudioPlayer를 위한 Display Interface</a>
                 <span class="nav_unfold">+</span>
                 <span class="nav_fold">-</span>
             </div>
@@ -1379,7 +1378,7 @@
     
         <li>
             <div class="nav_link fold  has_child ">
-                <a href="/work-with-nugu-biz/biz-api/api-announcement" class="nav_href">API 발송 \(Announcement\)</a>
+                <a href="/work-with-nugu-biz/biz-api/api-announcement" class="nav_href">API 발송 (Announcement)</a>
                 <span class="nav_unfold">+</span>
                 <span class="nav_fold">-</span>
             </div>
@@ -2196,7 +2195,7 @@
 
 <p>Branch Action은 기본적으로 Root Action과 같으나, Trigger가 Intent가 아니라 조건(Precondition)이라는 차이점이 있습니다.</p>
 
-<p>위의 예처럼 ‘~~를 요청한 경우’, ‘~~한 경우’ 같이 조건이 Branch Action의 Trigger가 되며, 해당 조건이 만족했을 경우에만 그 Branch Action이 실행됩니다.</p>
+<p>위의 예처럼 ‘<del>를 요청한 경우’, ‘</del>한 경우’ 같이 조건이 Branch Action의 Trigger가 되며, 해당 조건이 만족했을 경우에만 그 Branch Action이 실행됩니다.</p>
 
 <p>조건이 만족하는지 여부는 상위 Action에서 하위 Action으로 내려오면서 차례로 판단이 이루어지며, 만족시키는 Action이 하나라도 있으면 해당 Action에서 정의한 응답(Response)가 실행되고 대화의 한 턴이 종료됩니다.</p>
 
@@ -2208,16 +2207,13 @@
 
 <p>앞에서 만들어 둔 Intent인 ‘ask.weather’와 Action인 ‘answer.weather’를 가지고 Action Tree를 만드는 과정을 하나하나 알아보도록 하겠습니다.</p>
 
-<ol>
-  <li>Play Builder 홈 화면에서 Action을 추가할 Play를 클릭하여 선택한 후, <code class="language-plaintext highlighter-rouge">Actions</code> &gt; <code class="language-plaintext highlighter-rouge">Custom Actions</code>을 누릅니다.</li>
-  <li>Acton List에서 <code class="language-plaintext highlighter-rouge">answer.weather</code>를 선택합니다.</li>
-</ol>
+<p>⁣1. Play Builder 홈 화면에서 Action을 추가할 Play를 클릭하여 선택한 후, <code class="language-plaintext highlighter-rouge">Actions</code> &gt; <code class="language-plaintext highlighter-rouge">Custom Actions</code>을 누릅니다.</p>
+
+<p>⁣2. Acton List에서 <code class="language-plaintext highlighter-rouge">answer.weather</code>를 선택합니다.</p>
 
 <p><img src="/assets/images/use-branch-actions-07.png" alt=""></p>
 
-<ol>
-  <li>응답에 필요한 정보 가져오기 영역에서 다음과 같이 Parameter 및 Backend proxy 사용 옵션을 설정합니다.</li>
-</ol>
+<p>⁣3. 응답에 필요한 정보 가져오기 영역에서 다음과 같이 Parameter 및 Backend proxy 사용 옵션을 설정합니다.</p>
 
 <p><img src="/assets/images/use-branch-actions-08.png" alt=""></p>
 
@@ -2231,9 +2227,7 @@
 
 <p><img src="/assets/images/use-branch-actions-09.png" alt=""></p>
 
-<ol>
-  <li>Output 정의 영역의 Branch Action list 내에 위치한 입력 필드에 Branch명(하위 Action명)을 입력한 후 <code class="language-plaintext highlighter-rouge">Enter</code> 키를 누르거나 입력 필드 외 영역을 마우스 왼쪽 버튼을 클릭하여 Branch를 등록합니다.</li>
-</ol>
+<p>⁣4. Output 정의 영역의 Branch Action list 내에 위치한 입력 필드에 Branch명(하위 Action명)을 입력한 후 <code class="language-plaintext highlighter-rouge">Enter</code> 키를 누르거나 입력 필드 외 영역을 마우스 왼쪽 버튼을 클릭하여 Branch를 등록합니다.</p>
 
 <p><img src="/assets/images/use-branch-actions-10.png" alt=""></p>
 
@@ -2252,15 +2246,11 @@
 <h2 id="a_w_location-branch-action-추가">
 <code class="language-plaintext highlighter-rouge">a_w_location</code> Branch Action 추가</h2>
 
-<ol>
-  <li>Branch Action별로 구체적인 설정을 하기 위해 설정할 Branch의 항목 ‘a_w_location’의 편집 버튼을 클릭합니다.</li>
-</ol>
+<p>⁣1. Branch Action별로 구체적인 설정을 하기 위해 설정할 Branch의 항목 ‘a_w_location’의 편집 버튼을 클릭합니다.</p>
 
 <p><img src="/assets/images/use-branch-actions-12.png" alt=""></p>
 
-<ol>
-  <li>이동한 Branch Action 설정 화면의 Trigger 영역에서 조건(Condition)을 추가하기 위해 <code class="language-plaintext highlighter-rouge">+</code> &gt; <code class="language-plaintext highlighter-rouge">Condition</code> 버튼을 클릭하면 하단에 셀렉트 박스(Select Box)가 표시됩니다.</li>
-</ol>
+<p>⁣2. 이동한 Branch Action 설정 화면의 Trigger 영역에서 조건(Condition)을 추가하기 위해 <code class="language-plaintext highlighter-rouge">+</code> &gt; <code class="language-plaintext highlighter-rouge">Condition</code> 버튼을 클릭하면 하단에 셀렉트 박스(Select Box)가 표시됩니다.</p>
 
 <p><img src="/assets/images/use-branch-actions-13.png" alt=""></p>
 
@@ -2269,7 +2259,7 @@
   <li>Condition은 Trigger가 될 하나의 조건입니다.</li>
 </ul>
 
-<p>3 첫 번째 셀렉트 박스에서 <strong>resultcode</strong>를 선택하고, 두 번째 셀렉트 박스에서 <strong>다음과 같을 경우</strong>를 선택한 후, 우측에 생긴 박스에서 <strong>String</strong>을 선택 상태로 두고 ‘정상’ 이라고 입력합니다.</p>
+<p>⁣3. 첫 번째 셀렉트 박스에서 <strong>resultcode</strong>를 선택하고, 두 번째 셀렉트 박스에서 <strong>다음과 같을 경우</strong>를 선택한 후, 우측에 생긴 박스에서 <strong>String</strong>을 선택 상태로 두고 ‘정상’ 이라고 입력합니다.</p>
 
 <p><img src="/assets/images/use-branch-actions-14.png" alt=""></p>
 
@@ -2293,9 +2283,7 @@
 
 <p><img src="/assets/images/use-branch-actions-16.png" alt=""></p>
 
-<ol>
-  <li>이제 이 페이지의 Output 정의 영역에서 <code class="language-plaintext highlighter-rouge">Response</code> 버튼을 클릭하고, Prompt에 “의 날씨는 .”라고 입력합니다. 이제 첫 번째 ‘a.w.location’ Action의 입력이 완료되었습니다.</li>
-</ol>
+<p>⁣4. 이제 이 페이지의 Output 정의 영역에서 <code class="language-plaintext highlighter-rouge">Response</code> 버튼을 클릭하고, Prompt에 “의 날씨는 .”라고 입력합니다. 이제 첫 번째 ‘a.w.location’ Action의 입력이 완료되었습니다.</p>
 
 <p><img src="/assets/images/use-branch-actions-17.png" alt=""></p>
 
@@ -2308,73 +2296,69 @@
 
 <p>이제부터는 “a.w.day”라는 Branch Action 하위에 또다른 Branch Action을 추가하는 방법에 대하여 설명합니다.</p>
 
-<ol>
-  <li>위 ‘a.w.location’ 설정과 동일한 방법으로 다음 그림과 같이 ‘a.w.day’를 설정합니다.</li>
-</ol>
+<p>⁣1. 위 ‘a.w.location’ 설정과 동일한 방법으로 다음 그림과 같이 ‘a.w.day’를 설정합니다.</p>
 
 <p><img src="/assets/images/use-branch-actions-18.png" alt=""></p>
 
-<ol>
-  <li>Output 정의 영역에서 <code class="language-plaintext highlighter-rouge">Branch Action</code> 버튼을 클릭하여 Output 유형을 Branch로 선택합니다.</li>
-</ol>
+<p>⁣2. Output 정의 영역에서 <code class="language-plaintext highlighter-rouge">Branch Action</code> 버튼을 클릭하여 Output 유형을 Branch로 선택합니다.</p>
 
 <p><img src="/assets/images/use-branch-actions-19.png" alt=""></p>
 
-<ol>
-  <li>Output 정의 영역의 Branch Action List 내에 위치한 입력 필드에 Branch명(하위 Action명)을 입력한 후 <code class="language-plaintext highlighter-rouge">Enter</code> 키를 눌러 Branch를 등록합니다.</li>
-  <li>다음과 같이 3개의 Branch를 새로 만듭니다.</li>
-</ol>
+<p>⁣3. Output 정의 영역의 Branch Action List 내에 위치한 입력 필드에 Branch명(하위 Action명)을 입력한 후 <code class="language-plaintext highlighter-rouge">Enter</code> 키를 눌러 Branch를 등록합니다.</p>
+
+<p>⁣4. 다음과 같이 3개의 Branch를 새로 만듭니다.</p>
 
 <p><img src="/assets/images/use-branch-actions-20.png" alt=""></p>
 
-<ol>
-  <li>Branch 중 하나(예:a_w_d_future)를 선택(V 표시)하여 “Default Branch”로 지정한 후, <code class="language-plaintext highlighter-rouge">Play 저장</code> 버튼을 클릭하여 지금까지 입력한 상황을 저장합니다.</li>
-  <li>Branch Action 리스트의 상세 항목이 편집 상태로 변경됩니다.</li>
-</ol>
+<p>⁣5. Branch 중 하나(예:a_w_d_future)를 선택(V 표시)하여 “Default Branch”로 지정한 후, <code class="language-plaintext highlighter-rouge">Play 저장</code> 버튼을 클릭하여 지금까지 입력한 상황을 저장합니다.</p>
+
+<p>⁣6. Branch Action 리스트의 상세 항목이 편집 상태로 변경됩니다.</p>
 
 <p><img src="/assets/images/use-branch-actions-21.png" alt=""></p>
 
-<ol>
-  <li>Branch Action별로 구체적인 설정을 하기 위해 설정할 Branch의 항목(예: a_w_d_past)의 편집 버튼을 클릭합니다.</li>
-</ol>
+<p>⁣7. Branch Action별로 구체적인 설정을 하기 위해 설정할 Branch의 항목(예: a_w_d_past)의 편집 버튼을 클릭합니다.</p>
 
 <p><img src="/assets/images/use-branch-actions-22.png" alt=""></p>
 
-<ol>
-  <li>“a_w_location” 설정과 동일한 방법으로 “a_w_day”의 각 Branch Action을 다음과 같이 정의합니다.</li>
-  <li>a_w_d_past
-    <ul>
-      <li>Trigger : day_check == 과거</li>
-      <li>Response : 에는</li>
-    </ul>
-  </li>
-  <li>a_w_d_present
-    <ul>
-      <li>Trigger : day_check == 현재</li>
-      <li>Response : 지금 밖은</li>
-    </ul>
-  </li>
-  <li>a_w_d_future
-    <ul>
-      <li>Trigger : 자동입력</li>
-      <li>Response : 은</li>
-    </ul>
-  </li>
-  <li>마지막으로, 남은 “a_w_only”와 “a_w_default” Branch Action을 동일한 방법으로 다음과 같이 정의합니다.</li>
-  <li>a_w_only
-    <ul>
-      <li>Trigger : == 정상</li>
-      <li>Response : 오늘은</li>
-    </ul>
-  </li>
-  <li>a_w_default
-    <ul>
-      <li>Trigger : 자동입력</li>
-      <li>Response : 제가 답할 수 없는 요청이에요</li>
-    </ul>
-  </li>
-  <li>이로써 위에서 예로 든 구조의 Action Tree가 구성되었습니다. 이를 다시 그림으로 살펴보면 다음과 같습니다.</li>
-</ol>
+<p>⁣8. “a_w_location” 설정과 동일한 방법으로 “a_w_day”의 각 Branch Action을 다음과 같이 정의합니다.</p>
+
+<p>⁣9. a_w_d_past</p>
+
+<ul>
+  <li>Trigger : day_check == 과거</li>
+  <li>Response : 에는</li>
+</ul>
+
+<p>⁣10. a_w_d_present</p>
+
+<ul>
+  <li>Trigger : day_check == 현재</li>
+  <li>Response : 지금 밖은</li>
+</ul>
+
+<p>⁣11. a_w_d_future</p>
+
+<ul>
+  <li>Trigger : 자동입력</li>
+  <li>Response : 은</li>
+</ul>
+
+<p>⁣12. 마지막으로, 남은 “a_w_only”와 “a_w_default” Branch Action을 동일한 방법으로 다음과 같이 정의합니다.</p>
+
+<p>⁣13. a_w_only</p>
+
+<ul>
+  <li>Trigger : == 정상</li>
+  <li>Response : 오늘은</li>
+</ul>
+
+<p>⁣14. a_w_default</p>
+<ul>
+  <li>Trigger : 자동입력</li>
+  <li>Response : 제가 답할 수 없는 요청이에요</li>
+</ul>
+
+<p>⁣15. 이로써 위에서 예로 든 구조의 Action Tree가 구성되었습니다. 이를 다시 그림으로 살펴보면 다음과 같습니다.</p>
 
 <p><img src="/assets/images/use-branch-actions-23.png" alt=""></p>
 
