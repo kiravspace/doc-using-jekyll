@@ -21,9 +21,9 @@ Biz 사용자 그룹 정보를 상세 확인 할 수 있는 기능입니다.
 | Publisher-Token | Header | Y     | 퍼블리셔가 보유한 토큰                          |
 | groupId         | path   | Y     | 그룹 ID or unmappedUser(그룹에 속하지 않은 사용자) |
 
-## 3. Response <a id="Biz&#xC0AC;&#xC6A9;&#xC790;&#xADF8;&#xB8F9;&#xC0C1;&#xC138;&#xC870;&#xD68C;v1-3.Response"></a>
+## 3. Response
 
-### 3.1 Http Status <a id="Biz&#xC0AC;&#xC6A9;&#xC790;&#xADF8;&#xB8F9;&#xC0C1;&#xC138;&#xC870;&#xD68C;v1-3.1HttpStatus"></a>
+### 3.1 Http Status
 
 | HTTP Status | 설명                             |
 |:------------|:-------------------------------|
@@ -31,7 +31,7 @@ Biz 사용자 그룹 정보를 상세 확인 할 수 있는 기능입니다.
 | 403         | 퍼블리셔 API Token이 유효하지 않을 경우의 응답 |
 | 404         | 대상 그룹을 찾을 수 없을 때 응답            |
 
-### 3.2 Body <a id="Biz&#xC0AC;&#xC6A9;&#xC790;&#xADF8;&#xB8F9;&#xC0C1;&#xC138;&#xC870;&#xD68C;v1-3.2Body"></a>
+### 3.2 Body
 
 {% code %}
 ```json
@@ -58,7 +58,7 @@ Biz 사용자 그룹 정보를 상세 확인 할 수 있는 기능입니다.
 ```
 {% endcode %}
 
-### 3.3 설명 <a id="Biz&#xC0AC;&#xC6A9;&#xC790;&#xADF8;&#xB8F9;&#xC0C1;&#xC138;&#xC870;&#xD68C;v1-3.3&#xC124;&#xBA85;"></a>
+### 3.3 설명
 
 | 이름                         | 속성              | 설명                                                      |
 |:---------------------------|:----------------|:--------------------------------------------------------|

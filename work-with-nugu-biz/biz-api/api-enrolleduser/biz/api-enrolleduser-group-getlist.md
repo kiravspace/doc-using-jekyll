@@ -22,16 +22,16 @@ depth_order: 4
 | page            | query param |       | default : 1  |
 | pageSize        | query param |       | default : 20 |
 
-## 3. Response <a id="Biz&#xC0AC;&#xC6A9;&#xC790;&#xADF8;&#xB8F9;&#xBAA9;&#xB85D;&#xC870;&#xD68C;v1-3.Response"></a>
+## 3. Response
 
-### 3.1 Http Status <a id="Biz&#xC0AC;&#xC6A9;&#xC790;&#xADF8;&#xB8F9;&#xBAA9;&#xB85D;&#xC870;&#xD68C;v1-3.1HttpStatus"></a>
+### 3.1 Http Status
 
 | HTTP Status | 설명                             |
 |:------------|:-------------------------------|
 | 200         | 정상 응답                          |
 | 403         | 퍼블리셔 API Token이 유효하지 않을 경우의 응답 |
 
-### 3.2 Body <a id="Biz&#xC0AC;&#xC6A9;&#xC790;&#xADF8;&#xB8F9;&#xBAA9;&#xB85D;&#xC870;&#xD68C;v1-3.2Body"></a>
+### 3.2 Body
 
 {% code %}
 ```json
@@ -54,7 +54,7 @@ depth_order: 4
 ```
 {% endcode %}
 
-### 3.3 설명 <a id="Biz&#xC0AC;&#xC6A9;&#xC790;&#xADF8;&#xB8F9;&#xBAA9;&#xB85D;&#xC870;&#xD68C;v1-3.3&#xC124;&#xBA85;"></a>
+### 3.3 설명
 
 | 이름                         | 속성              | 설명                      |
 |:---------------------------|:----------------|:------------------------|

@@ -21,9 +21,9 @@ depth_order: 3
 | Publisher-Token | Header | Y     | 퍼블리셔가 보유한 토큰   |
 | groupId         | path   | Y     | 삭제하고자 하는 그룹 ID |
 
-## 3. Response <a id="Biz&#xC0AC;&#xC6A9;&#xC790;&#xADF8;&#xB8F9;&#xC0AD;&#xC81C;v1-3.Response"></a>
+## 3. Response
 
-### 3.1 HTTP Status <a id="Biz&#xC0AC;&#xC6A9;&#xC790;&#xADF8;&#xB8F9;&#xC0AD;&#xC81C;v1-3.1HTTPStatus"></a>
+### 3.1 HTTP Status
 
 | HTTP Status | 설명                                              |
 |:------------|:------------------------------------------------|

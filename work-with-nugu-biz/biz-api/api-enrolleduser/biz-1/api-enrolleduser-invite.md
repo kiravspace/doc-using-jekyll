@@ -54,9 +54,9 @@ Biz 사용자를 등록하기 위해, 초대 메일을 발송하는 기능입니
 | users\[\].phone      | body   | string          | 12      | Y      | 초대한 사용자의 전화번호                                                           |
 | users\[\].alias      | body   | string          | 100     |        | 초대한 사용자의 Alias                                                          |
 
-## 3. Response <a id="Biz&#xC0AC;&#xC6A9;&#xC790;&#xCD08;&#xB300;v1-3Response"></a>
+## 3. Response
 
-### 3.1 HTTP Status <a id="Biz&#xC0AC;&#xC6A9;&#xC790;&#xCD08;&#xB300;v1-3.1HTTPStatus"></a>
+### 3.1 HTTP Status
 
 | HTTP Status | errorCode  | 설명                                               |
 |:------------|:-----------|:-------------------------------------------------|
