@@ -16,7 +16,7 @@ module Jekyll
       def render(page_context)
         render_from_custom_context(
           page_context,
-          ->(context) do
+          ->(context, _) do
             context["tabs_id"] = id
 
             tabs = []
@@ -45,9 +45,9 @@ module Jekyll
       def render(page_context)
         render_from_custom_context(
           page_context,
-          ->(context) do
+          ->(context, converter) do
             context["tab_id"] = id
-            context["tab_body"] = @body.render(page_context)
+            context["tab_body"] = converter.convert(@body.render(page_context))
           end
         )
       end

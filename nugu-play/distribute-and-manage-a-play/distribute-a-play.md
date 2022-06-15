@@ -1,3 +1,7 @@
+---
+depth_order: 1
+---
+
 # Play 배포
 
 Play 심사 승인이 완료된 Play는 배포 설정 기능을 통해 Play 배포요청을 해야 NUGU 서비스 제공이 가능합니다.

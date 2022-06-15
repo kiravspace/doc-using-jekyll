@@ -44,52 +44,17 @@ module Jekyll
         }
       end
 
-      def convert_body(context, body)
-        if @context.nil?
-          init_render(context)
-        end
-        find_converter.convert(body)
-      end
-
-      def find_converter
-        if @context.nil?
-          init_render(context)
-        end
-        @site.find_converter_instance(::Jekyll::Converters::Markdown)
-      end
-
-      def template_render
-        if @context.nil?
-          init_render(context)
-        end
-        @template.render(@context)
-      end
-
-      def init_render(context)
-        @context = context
-        @site = context.registers[:site]
-        @template = Liquid::Template.parse(
-          File.read("#{Dir.pwd}#{TEMPLATE_PATH}/#{@site.data["potion"].theme_path}/#{@template_name}.liquid")
-        )
-      end
-
-      def default_render(context)
-        if @context.nil?
-          init_render(context)
-        end
-        template_render
-      end
-
       def render_from_custom_context(page_context, customizer)
         site = page_context.registers[:site]
         page = page_context.registers[:page]
+        converter = site.find_converter_instance(::Jekyll::Converters::Markdown)
         context = {
           "site" => site,
           "page" => page,
           "site_potion" => site.data[DATA_KEY],
           "page_potion" => page[DATA_KEY]
         }
-        customizer.call(context)
+        customizer.call(context, converter)
         template = Liquid::Template.parse(
           File.read("#{Dir.pwd}#{TEMPLATE_PATH}/#{site.data["potion"].theme_path}/#{template_name}.liquid")
         )
@@ -102,10 +67,6 @@ module Jekyll
           File.read("#{Dir.pwd}#{TEMPLATE_PATH}/#{site.data["potion"].theme_path}/#{template_name}.liquid")
         )
         template.render(page_context)
-      end
-
-      def body_to_string(context, body)
-        context["site"].find_converter_instance(::Jekyll::Converters::Markdown).convert(body)
       end
     end
   end

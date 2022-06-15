@@ -1,3 +1,7 @@
+---
+depth_order: 5
+---
+
 # NUGU Inside
 
 ## **NUGU inside 마크**
@@ -14,11 +18,11 @@ NUGU inside 마크는 NUGU의 기술이 탑재되었음을 직접적으로 알�
 
 ## **NUGU inside 색상**
 
-| Color                                                                                            | RGB                      | CMYK            | Pantone  |
-|--------------------------------------------------------------------------------------------------|--------------------------|-----------------|----------|
-| ![](/assets/images/voice-chrome-01.png) NUGU Blue                                                | 0,158, 255 (#009DFF)     | 85, 21, 0, 0    | 2925C    |
-| ![](/assets/images/nugu-inside-03.png) Black                                                     | 34, 34, 34 (#222222)     | 75, 68, 67, 90  |          |
-| ![](/assets/images/nugu-inside-04.png) White                                                     | 255, 255, 255 (#FFFFFF)  | 0, 0, 0, 0      |          |
+| Color                                             | RGB                      | CMYK            | Pantone  |
+|---------------------------------------------------|--------------------------|-----------------|----------|
+| ![](/assets/images/voice-chrome-01.png) NUGU Blue | 0,158, 255 (#009DFF)     | 85, 21, 0, 0    | 2925C    |
+| ![](/assets/images/nugu-inside-03.png) Black      | 34, 34, 34 (#222222)     | 75, 68, 67, 90  |          |
+| ![](/assets/images/nugu-inside-04.png) White      | 255, 255, 255 (#FFFFFF)  | 0, 0, 0, 0      |          |
 
 ## **NUGU inside 배경색상**
 

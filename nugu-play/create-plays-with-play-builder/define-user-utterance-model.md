@@ -1,3 +1,7 @@
+---
+depth_order: 4
+---
+
 # User Utterance Model 정의하기 (Intent & Entity)
 
 ![](https://www.youtube.com/watch?v=eoIn2K9P2Yo)

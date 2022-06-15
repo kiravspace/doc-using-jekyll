@@ -1,4 +1,5 @@
 ---
+depth_order: 2
 description: Play 에서 전달하는 UI 요소를 화면에 구성하기 규격
 ---
 

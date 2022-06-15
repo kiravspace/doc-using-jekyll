@@ -66,13 +66,11 @@ SmartHome Play의 동작을 위해서는 SmartHomeServiceProvider의 SmartHomeDe
 
 Discovery Request Sample
 
-{% code %}
-```
-Discovery Request 예시 (POST, /nugu/v1/devices)
-
+{% code title="Discovery Request 예시 (POST, /nugu/v1/devices)"%}
+```json
 {
-    "userIdentifier": "t6Pv9PLAEmYZilNiloUUnZbVDjXgvUCzwpWY1tPq" (optional, e.g. hue whitelist identifier),
-    "token": "7KOdwPQdJPZf4KYsjtHdqz3e8fKd"
+  "userIdentifier": "t6Pv9PLAEmYZilNiloUUnZbVDjXgvUCzwpWY1tPq (optional, e.g. hue whitelist identifier)",
+  "token": "7KOdwPQdJPZf4KYsjtHdqz3e8fKd"
 }
 ```
 {% endcode %}
@@ -82,29 +80,31 @@ Discovery Response Sample
 {% code title="Discovery Response 예시"%}
 ```json
 {
-    "devices": [{
-        "id": "D1234567",
-        "type": "AIR_CONDITIONER",
-        "modelName": "example model name",
-        "friendlyNameSuggestion": "거실",
-        "manufacturer": "example manufacturer",
-        "supportedCapabilities": {
-            "airflowControl": {
-              "supportedAirflowTypes": [ "강", "강풍", "미풍", "수면", "약", "약풍", "자동", "자동풍" ]
-            },
-            "airQualityCheck": {},
-            "endTimeControl": {},
-            "modeControl": {
-              "supportedModes": ["무풍모드", "냉방모드", "수면모드" ]
-            },
-            "powerControl": {},
-            "temperatureControl": {}
+  "devices": [
+    {
+      "id": "D1234567",
+      "type": "AIR_CONDITIONER",
+      "modelName": "example model name",
+      "friendlyNameSuggestion": "거실",
+      "manufacturer": "example manufacturer",
+      "supportedCapabilities": {
+        "airflowControl": {
+          "supportedAirflowTypes": ["강", "강풍", "미풍", "수면", "약", "약풍", "자동", "자동풍"]
         },
-        "customData": {
-            ...
+        "airQualityCheck": {},
+        "endTimeControl": {},
+        "modeControl": {
+          "supportedModes": ["무풍모드", "냉방모드", "수면모드"]
         },
-        "connectionStatus": true
-    }]
+        "powerControl": {},
+        "temperatureControl": {}
+      },
+      "customData": {
+        ...
+      },
+      "connectionStatus": true
+    }
+  ]
 }
 ```
 {% endcode %}
@@ -115,39 +115,36 @@ NUGU스마트홈에 등록된 SmartHomeDevice에 제어 요청이 올 경우 NUG
 
 Control Request Sample
 
-{% code %}
-```scheme
-Control Request 예시 (POST, /nugu/v1/capabilities/{Capability}/directives/{Directive})
-
-
+{% code title="Control Request 예시 (POST, /nugu/v1/capabilities/{Capability}/directives/{Directive})"%}
+```json
 {
-    "version": 1,
-    "requestId": "2019071712638a4378649347bdb21643127a0f6d83",
-    "action": {
-        "command": {
-          "smartHomeCapability": "TemperatureControl",
-          "smartHomeDirective": "SetTemperature",
-          "parameters": {
-            "temperatureLevel": 22
-          }
-        },
-        "smartHomeDevices": [
-          {
-            "id": "D83077224431",
-            "type": "에어컨",
-            "model": null,
-            "friendlyName": "거실",
-            "customData" : {}
-          }
-        ]
+  "version": 1,
+  "requestId": "2019071712638a4378649347bdb21643127a0f6d83",
+  "action": {
+    "command": {
+      "smartHomeCapability": "TemperatureControl",
+      "smartHomeDirective": "SetTemperature",
+      "parameters": {
+        "temperatureLevel": 22
+      }
     },
-    "context": {
-        "session": {
-            "id": "a5a250af-48f7-4ceb-b099-ea6753afa570",
-            "accessToken": "DUMMY_ACCESS_TOKEN",
-            "userIdentifier": "SERVICE_PROVIDER_USER_ID (optional, e.g. Hue whitelist Identifier)"
-        }
+    "smartHomeDevices": [
+      {
+        "id": "D83077224431",
+        "type": "에어컨",
+        "model": null,
+        "friendlyName": "거실",
+        "customData": {}
+      }
+    ]
+  },
+  "context": {
+    "session": {
+      "id": "a5a250af-48f7-4ceb-b099-ea6753afa570",
+      "accessToken": "DUMMY_ACCESS_TOKEN",
+      "userIdentifier": "SERVICE_PROVIDER_USER_ID (optional, e.g. Hue whitelist Identifier)"
     }
+  }
 }
 ```
 {% endcode %}
@@ -157,9 +154,9 @@ Control Response Sample
 {% code title="Control Response 예시" %}
 ```json
 {
-    "resultCode": "OK" <-- 에러일 경우 에러코드 응답,
-    "requestId": "2019071712638a4378649347bdb21643127a0f6d83", <-- request로 받은 값을 그대로 응답
-    "parameters": {} <-- directive 마다 필요한 property 채워서 응답.
+  "resultCode": "OK", <-- 에러일 경우 에러코드 응답
+  "requestId": "2019071712638a4378649347bdb21643127a0f6d83", <-- request로 받은 값을 그대로 응답
+  "parameters": {} <-- directive 마다 필요한 property 채워서 응답.
 }
 ```
 {% endcode %}

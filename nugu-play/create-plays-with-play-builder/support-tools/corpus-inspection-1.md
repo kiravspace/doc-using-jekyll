@@ -1,3 +1,7 @@
+---
+depth_order: 1
+---
+
 # 훈련 데이터 검증
 
 User Utterance Model은 Play가 사용자의 말을 이해할 수 있도록 훈련된 모델입니다. Play 별로 생성되는 이 모델은 `User Utterance Model` > `Intent`에서 입력한 예상 발화와 해당 발화에 태깅한 Entity 정보에 의해 훈련됩니다. 이 훈련 데이터가 잘못 구성된 경우 Play는 엉뚱한 응답을 하거나, 사용자의 발화를 처리하지 못하게 됩니다.

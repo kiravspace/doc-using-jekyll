@@ -1,3 +1,7 @@
+---
+depth_order: 3
+---
+
 # Play 관리
 
 배포된 Play의 정보 확인 및 서비스 중지, 재개, 삭제 등 상태 관리는 `Developers Console` > `Play kit` > `Play 관리`  메뉴 기능을 통해 확인하거나 설정할 수 있습니다.

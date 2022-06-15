@@ -1,3 +1,7 @@
+---
+depth_order: 4
+---
+
 # Biz 사용자(Enrolled user) 정보 수신 연동
 
 Private Play에 한하여, [Biz 사용자 관리](../../../work-with-nugu-biz/manage-enrolled-user)를 통해 초대, 등록된 Biz 사용자 (Enrolled User) 정보를 Backend proxy에서 확인 할 수 있습니다. 연동규격에서 제공하는 사용자 정보는 다음과 같습니다.

@@ -1,3 +1,7 @@
+---
+depth_order: 9
+---
+
 # AudioPlayer Interface 지원하는 Play 만들기
 
 AudioPlayer Interface를 사용하여 Play를 만들 경우, NUGU SDK에 연결된 디바이스에서 스트리밍을 통해 음악을 재생할 수 있습니다.

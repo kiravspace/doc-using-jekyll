@@ -1,3 +1,7 @@
+---
+depth_order: 1
+---
+
 # Play 정보 등록
 
 개발 완료된 Play는 `Developers Console` > `Play kit` > `Play 관리` > `Play 등록` 버튼을 통해 Play를 등록하고 관련 정보를 입력해야 합니다.

@@ -1,5 +1,5 @@
 <div id="{{ tabs_id }}" class="tabs">
-    <ul>
+    <ul class="tabs_title">
         {% for tab in tabs %}
             <li data-content-id="{{ tab.tab_id }}" class="tab_title">{{ tab.title }}</li>
         {% endfor %}

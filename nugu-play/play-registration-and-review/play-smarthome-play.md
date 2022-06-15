@@ -1,3 +1,7 @@
+---
+depth_order: 2
+---
+
 # Play 정보 등록 (smarthome play)
 
 Custom Play가 아닌, Pre-built Play로 만들어진 스마트홈 Play에 대한 등록 방식입니다.

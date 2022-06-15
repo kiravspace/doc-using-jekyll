@@ -1,3 +1,7 @@
+---
+depth_order: 1
+---
+
 # AirflowControl Interface
 
 NUGU 스마트홈 AirflowControl Capability Interface는 NUGU 스마트홈에 등록된 SmartHomeDevice의 풍량제어방식에 대한 설명입니다. 특정 풍량을 설정하거나 풍량 단계를 상향, 하향 조정하는 등의 Directive들로 구성되어 있으며 팬 및 풍량, 풍속을 제어할 수 있는 기능이 있는 모든 SmartHomeDevice를 지원합니다.

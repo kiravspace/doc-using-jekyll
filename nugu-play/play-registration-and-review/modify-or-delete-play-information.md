@@ -1,3 +1,7 @@
+---
+depth_order: 3
+---
+
 # Play 정보 수정 및 삭제
 
 저장한 Play 정보는 Play 심사를 시작하기 전까지는 언제든지 수정, 삭제할 수 있으며, `Developers Console` > `Play kit` > `Play 관리` > `Play 삭제` 버튼으로 진행할 수 있습니다.

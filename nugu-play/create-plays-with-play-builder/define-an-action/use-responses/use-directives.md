@@ -1,3 +1,7 @@
+---
+depth_order: 2
+---
+
 # Directive 사용하기
 
 Action의 Response는 사용자의 요청/질문 등에 답을 하는 Prompt와 디바이스를 제어하는 Directive로 구분할 수 있습니다. Directive는 오디오 파일을 재생시키거나 멈추게 하는 명령어로 Backend proxy가 Capability Interface를 지원해야만 사용할 수 있습니다. 현재 제공되는 Interface는 AudioPlayer만 있습니다.

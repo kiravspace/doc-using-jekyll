@@ -1,4 +1,5 @@
 ---
+depth_order: 5
 description: 음성인식 결과를 Play 로 전달하기 위한 규격
 ---
 

@@ -1,3 +1,7 @@
+---
+depth_order: 5
+---
+
 # NUGU Display의 노출과 제어
 
 NUGU 서비스에서 UI Display 를 담당하는 `DisplayAgent` 는 Display 의 동작, life cycle 을 `DisplayAgentDelegate` 를 통해 전달하고 있습니다. 사용자는 `DisplayAgentDelegate` 를 받아, 직접 DisplayView 를 그려줄 수도 있으나, `NuguUIKit` 은 사용자의 편의성을 위해 간단히 생성, 설정, 노출 가능한 `NuguDisplayWebView` 를 제공하고 있습니다. Template server 에 접속하여 Display 웹뷰를 내려받아 노출하는 `NuguDisplayWebView` 를 사용하는 방법은 크게 두가지가 있습니다.

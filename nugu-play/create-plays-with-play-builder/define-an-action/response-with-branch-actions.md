@@ -1,3 +1,7 @@
+---
+depth_order: 5
+---
+
 # Response + Branch Action (멀티턴 대화)
 
 지금까지는 Response 혹은 Branch Action만을 이용하여 대화를 구성하는 법을 알아보았습니다. 이렇게 만들어진 Play는 싱글턴의 대화만을 구성할 수 있습니다. Action Tree를 복잡하게 구성하여도 Tree의 끝 Action만 Response를 갖기 때문에 결국은 싱글턴의 대화만 이루어지며, 세션 안에서 여러 번의 싱글턴 대화를 반복할 뿐 기존 대화의 컨텍스트를 이어갈 수는 없습니다.

@@ -1,3 +1,7 @@
+---
+depth_order: 11
+---
+
 # SetTimeControl Interface
 
 NUGU스마트홈 SetTimeControl Capability Interface는 NUGU 스마트홈에 등록된 SmartHomeDevice의 제어시간설정방식에 대한 설명입니다. 스마트홈 기기의 종료예약설정 등을 관리할 수 있습니다.

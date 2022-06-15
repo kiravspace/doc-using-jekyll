@@ -1,3 +1,7 @@
+---
+depth_order: 4
+---
+
 # 하나의 Parameter에 여러 Entity mapping 하기
 
 Utterance Parameter는 사용자의 발화에서 정보를 담아 직접 처리하거나 Backend Proxy로 보내는 파라미터입니다. 이 때, 하나의 파라미터에 여러 개의 Entity를 담아 동일하게 처리하고 싶을 경우, 여러 Entity를 매핑할 수 있습니다.

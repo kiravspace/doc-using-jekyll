@@ -1,3 +1,7 @@
+---
+depth_order: 4
+---
+
 # SmartHomeError
 
 NUGU스마트홈에서 지원하고 있는 Error와 Exception에 대한 내용입니다. ServiceProvider는 SmartHomeBackendProxy 구현 시 아래 리스트를 참조하여 SmartHomeDevice 제어 및 상태 조회 시 발생하는 오류 혹은 예외상황에 맞는 error code를 응답해야 합니다.

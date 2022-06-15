@@ -1,3 +1,7 @@
+---
+depth_order: 2
+---
+
 # 구성요소
 
 ![](/assets/images/linux_component.png)

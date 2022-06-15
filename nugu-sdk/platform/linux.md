@@ -1,4 +1,5 @@
 ---
+depth_order: 3
 description: Linux 환경에서 NUGU 서비스를 쉽게 사용할 수 있도록 NUGU SDK for Linux를 제공합니다.
 ---
 

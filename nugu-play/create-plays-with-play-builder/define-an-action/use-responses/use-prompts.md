@@ -1,3 +1,7 @@
+---
+depth_order: 1
+---
+
 # Prompt 사용하기
 
 ## Prompt 사용하기 <a href="#use-prompts" id="use-prompts"></a>

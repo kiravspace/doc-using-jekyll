@@ -1,3 +1,7 @@
+---
+depth_order: 5
+---
+
 # Configurable Parameter
 
 Configurable Parameter는 Backend Parameter와 유사하지만 Play Builder를 통해 Play에서 Parameter의 값을 변경할 수 있는 Parameter 입니다.

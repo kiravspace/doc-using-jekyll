@@ -1,3 +1,7 @@
+---
+depth_order: 13
+---
+
 # TemperatureControl Interface
 
 NUGU 스마트홈 TemperatureControl Capability Interface는 NUGU 스마트홈에 등록된 SmartHomeDevice의 온도제어방식에 대한 설명입니다. TemperatureControl Interface는 주변 온도를 특정 온도로 설정하기 위한 스마트홈 기기의 제어 명령입니다.

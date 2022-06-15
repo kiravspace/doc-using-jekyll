@@ -1,3 +1,7 @@
+---
+depth_order: 12
+---
+
 # StateCheck Interface
 
 NUGU 스마트홈 StateCheck Capability Interface는 NUGU 스마트홈에 등록된 SmartHomeDevice의 상태조회방식에 대한 설명입니다.

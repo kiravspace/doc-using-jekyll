@@ -1,3 +1,7 @@
+---
+depth_order: 2
+---
+
 # SmartHomeCapability
 
 SmartHome Capability Interface는 스마트홈 기기를 제어하기 위한 규격을 의미합니다. 예를 들어 [조명](../smarthomedevicetype/type-21)의 전원제어 기능을 지원하기 위해서는 PowerControl Interface를 사용할 수 있고, [조명](../smarthomedevicetype/type-21)의 밝기제어를 지원하기 위해서는 BrightnessControl Interface를 활용할 수 있습니다. 아래는 NUGU스마트홈이 지원하는 SmartHomeCapability 리스트입니다. Play Builder를 통해 SmartHome Play를 생성할 때 연동하고자 하는 스마트홈 기기가 지원하는 기능에 따라 SmartHomeCapability를 선택해 사용할 수 있습니다. SmartHome Play를 제작 시 별도로 사용자 발화문을 정의할 필요가 없으며, SmartHome Device의 종류에 따라 지원하는 Capability가 상이할 수 있습니다. SmartHomeCapability는 1개 이상의 SmartHomeDirective를 보유하고 있고, SmartHomeCapability를 지원할 경우 해당 SmartHomeCapability가 보유하고 있는 모든 SmartHomeDirective를 지원해야 합니다. 하나의 기기가 복수개의 SmartHomeCapability를 지원할 수 있습니다.

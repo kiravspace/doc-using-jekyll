@@ -1,3 +1,7 @@
+---
+depth_order: 1
+---
+
 # SmartHomeDeviceType
 
 NUGU스마트홈은 다양한 SmartHome DeviceType을 지원하고 있습니다. IoT ServiceProvider는 Discovery에 응답할 때 사용자가 등록한 IoT기기들을 NUGU스마트홈에서 지원하는 SmartHome DeviceType 중 가장 적합한 것으로 선택해 응답해야 합니다. SmartHome DeviceType을 선택하면 NUGU 에이전트를 통해 인입되는 사용자 발화 중 해당 SmartHome DeviceType이 지원하는 사용자 발화들에 대한 자연어처리 결과 기반으로 제어 및 조회 요청이 전달됩니다. 예를 들어, SmartHome DeviceType으로 조명을 선택할 경우 모든 사용자 발화 중 조명을 제어하려는 의도를 가진 표현인지, 해당 조명 기기가 수행 가능한 제어 요청인지 검증하고, 검증된 사용자 요청에 대해 SmartHome Play를 통해 IoT ServiceProvider에게 조명 기기에 대한 제어 및 조회 요청을 전달합니다.

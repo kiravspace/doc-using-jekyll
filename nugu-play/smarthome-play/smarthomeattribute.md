@@ -1,3 +1,7 @@
+---
+depth_order: 3
+---
+
 # SmartHomeAttribute
 
 NUGU스마트홈을 통해 스마트홈 기기를 제어할 때 Capability나 Directive에 따라 포함되는 Attributes가 있습니다. SmartHome Attributes는 다양한 사용자 발화에 대응하여 아래와 같이 사용자 발화 데이터를 정규화하여 SmartHomeBackendProxy에 제어 요청을 보낼 때 포함합니다. IoT ServiceProvider는 지원하고자 하는 기능에 맞는 Directive가 어떠한 Attribute를 갖는지 확인하고 지원할 Attribute를 선택해야 합니다.

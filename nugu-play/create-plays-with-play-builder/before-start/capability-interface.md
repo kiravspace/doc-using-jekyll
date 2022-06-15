@@ -1,3 +1,7 @@
+---
+depth_order: 4
+---
+
 # Capability interface
 
 디바이스의 여러 기능을 제어하기 위한 규격을 Capability Interface라 합니다. 응답을 재생하는 기능 외에 오디오 재생, 무드등 제어, 음량 조절 등 다양한 기능을 제어할 수 있습니다.

@@ -1,3 +1,7 @@
+---
+depth_order: 6
+---
+
 # DeviceTemperatureControl Interface
 
 NUGU스마트홈 DeviceTemperatureControl Capability Interface는 NUGU스마트홈에 등록된 SmartHomeDevice 자체의 온도제어방식에 대한 설명입니다. TemperatureControl Interface가 주변 온도에 대한 제어 명령이라면 DeviceTemperatureControl Interface는 해당 SmartHomeDevice 자체의 온도 설정에 대한 명령으로 구성되어 있습니다.

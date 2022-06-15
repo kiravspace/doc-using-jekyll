@@ -1,3 +1,7 @@
+---
+depth_order: 2
+---
+
 # AirQualityCheck Interface
 
 NUGU 스마트홈 AirQualityCheck Capability Interface는 NUGU 스마트홈에 등록된 SmartHomeDevice에서 주변 공기 상태를 측정하는 방식에 대한 설명입니다. 공기질은 1부터 10단계까지의 단계로 응답할 수 있으며 숫자가 작을수록 공기질이 좋은 상태입니다.

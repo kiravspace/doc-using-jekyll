@@ -1,3 +1,7 @@
+---
+depth_order: 10
+---
+
 # PowerControl Interface
 
 NUGU 스마트홈 PowerControl Capability Interface는 NUGU 스마트홈에 등록된 SmartHomeDevice의 전원제어방식에 대한 설명입니다. 전원을 켜고 끄거나 동작을 시작, 중지할 수 있는 모든 종류의 SmartHomeDevice를 지원합니다.

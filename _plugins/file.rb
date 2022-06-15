@@ -11,7 +11,7 @@ module Jekyll
       def render(page_context)
         render_from_custom_context(
           page_context,
-          ->(context) do
+          ->(context, _) do
             context["file_src"] = params["src"]
 
             if params.has_key?("caption")

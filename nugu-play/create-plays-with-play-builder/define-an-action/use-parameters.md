@@ -1,3 +1,7 @@
+---
+depth_order: 2
+---
+
 # Parameter
 
 ## Parameter 사용하기 <a href="use-parameters" id="use-parameters"></a>

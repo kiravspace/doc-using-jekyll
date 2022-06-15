@@ -1,4 +1,5 @@
 ---
+depth_order: 7
 description: NUGU SDK 의 UI Component 들은 Dark / Light 모드를 지원합니다.
 ---
 

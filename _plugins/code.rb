@@ -30,9 +30,9 @@ module Jekyll
       def render(page_context)
         render_from_custom_context(
           page_context,
-          ->(context) do
+          ->(context, converter) do
             context["code_title"] = params["title"]
-            context["code_body"] = body_to_string(context, @body)
+            context["code_body"] = converter.convert(@body)
           end
         )
       end

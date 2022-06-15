@@ -1,3 +1,7 @@
+---
+depth_order: 5
+---
+
 # Play 운영 정책
 
 서비스 중인 Play의 서비스 품질 확보를 위해 NUGU developers에서는 정기 또는 비정기적으로 품질 검사를 실시합니다.

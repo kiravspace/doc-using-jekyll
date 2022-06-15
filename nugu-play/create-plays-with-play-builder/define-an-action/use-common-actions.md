@@ -1,3 +1,7 @@
+---
+depth_order: 7
+---
+
 # Common Action 사용하기
 
 Common Action이란 여러 액션이 공통으로 사용할 수 있는 액션입니다. 이 Common Action은 일반 액션과 유사하나 Trigger가 없고 어떤 Action에서 이 Common Action으로 이동할지 정의해야 하는 특징이 있습니다.

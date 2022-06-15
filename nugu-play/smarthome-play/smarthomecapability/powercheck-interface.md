@@ -1,3 +1,7 @@
+---
+depth_order: 9
+---
+
 # PowerCheck Interface
 
 NUGU스마트홈 PowerCheck Interface는 NUGU스마트홈에 등록된 SmartHomeDevice의 전력량관련 조회방식에 대한 설명입니다. 스마트홈 기기의 사용전력량, 목표전력량 등의 조회 기능을 지원합니다.

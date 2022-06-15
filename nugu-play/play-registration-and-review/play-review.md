@@ -1,3 +1,7 @@
+---
+depth_order: 4
+---
+
 # Play 심사
 
 `Developers Console` >  `Play kit` > `Play 관리`심사 착수 후 2~3주(워킹데이 10~15일)입니다.메뉴에서 Play 심사에 필요한 각종 정보(기본 정보, 연동 정보, 배포 정보, 심사 정보)들을 모두 빠짐없이 등록을 한 후에 심사 요청을 하면 Play에 대한 심사가 시작됩니다.([심사 요청](play-review#review-request))

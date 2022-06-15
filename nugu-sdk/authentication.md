@@ -48,7 +48,7 @@ CSRF를 위해 사용 되는 값입니다.
 {% endapi::parameter %}
 
 {% api::response status="302" description="" %}
-{% code %}
+{% code title="Header" %}
 ```
 HTTP/1.1 302 
 Date: Mon, 14 Oct 2019 02:24:58 GMT
@@ -96,12 +96,16 @@ authorization_code (신규), client_credentials (NUGU 회원 미사용, 체험�
 {% endapi::parameter %}
 
 {% api::response status="200" description="" %}
-{% code %}
+{% code title="Header" %}
 ```
 HTTP/1.1 200 
 Date: Mon, 14 Oct 2019 02:24:59 GMT
 Content-Type: application/json;charset=UTF-8
+```
+{% endcode %}
 
+{% code title="Body" %}
+```json
 {
   "access_token" : "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHAiOjM3MTg1MDM1NDYsInVzZXJfbmFtZSI6IkFMREZBS0sxQjhaUjU2MzE1QzVEIiwianRpIjoiYWU4ZWQ0MTEtZTljYy00NGRjLThlYjUtODc4NTdjM2QzNmFlIiwiY2xpZW50X2lkIjoic3BlYWtlci5udWd1Lm51MTEwIiwic2NvcGUiOltdLCJleHQiOnsidXNyIjoiQUxERkFLSzFCOFpSNTYzMTVDNUQiLCJwb2MiOiJzcGVha2VyLm51Z3UubnUxMTAiLCJkdmMiOiJBTERGRzU1WU1ZUkE5RTUyN0VCRCIsInRrbiI6IjNDNzMxMzEwOUIyQTQ1RTZCQjhBRUQ2MjBGRjNBMThGIn19.DrmLXJXBF9YL7-R7gtEg5dOLQ7UfYMlPKGp1WHNfx8M",
   "token_type" : "Bearer",
@@ -114,25 +118,33 @@ Content-Type: application/json;charset=UTF-8
 {% endapi::response %}
 
 {% api::response status="400" description="" %}
-{% code %}
+{% code title="Header"%}
 ```
 HTTP/1.1 400 
 Date: Mon, 14 Oct 2019 04:22:45 GMT
 Content-Type: application/json;charset=UTF-8
+```
+{% endcode %}
 
+{% code title="Body" %}
+```json
 {"error":"invalid_grant","error_description":"Invalid authorization code: 0rrbEjnOfqxIv6uNic6C"}
 ```
 {% endcode %}
 {% endapi::response %}
 
 {% api::response status="401" description="" %}
-{% code %}
+{% code title="Header"%}
 ```
 HTTP/1.1 401 
 Date: Mon, 14 Oct 2019 04:22:45 GMT
 Content-Type: application/json;charset=UTF-8
 WWW-Authenticate: Form realm="NUGU", error="invalid_client", error_description="Bad client credentials"
+```
+{% endcode %}
 
+{% code title="Body" %}
+```json
 {"error":"invalid_client","error_description":"Bad client credentials"}
 ```
 {% endcode %}
@@ -165,12 +177,16 @@ refresh_token (갱신)
 {% endapi::parameter %}
 
 {% api::response status="200" description="" %}
-{% code %}
+{% code title="Header"%}
 ```
 HTTP/1.1 200 
 Date: Mon, 14 Oct 2019 03:01:27 GMT
 Content-Type: application/json;charset=UTF-8
+```
+{% endcode %}
 
+{% code title="Body" %}
+```json
 {
   "access_token" : "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHAiOjM3MTg1MDU3MzQsInVzZXJfbmFtZSI6IkFMREZBS0sxQjhaUjU2MzE1QzVEIiwianRpIjoiNzcyNWVmNGYtNzc4Yy00NDUyLTk3ZWItODE0NWVmNWIyOTNkIiwiY2xpZW50X2lkIjoic3BlYWtlci5udWd1Lm51MTEwIiwic2NvcGUiOltdLCJleHQiOnsidXNyIjoiQUxERkFLSzFCOFpSNTYzMTVDNUQiLCJkdmMiOiJBTERGRzU1WU1ZUkE5RTUyN0VCRCIsInBvYyI6InNwZWFrZXIubnVndS5udTExMCIsInRrbiI6IjNDNzMxMzEwOUIyQTQ1RTZCQjhBRUQ2MjBGRjNBMThGIn19.pKy2WqIWtKCybQT8jGZsYUyvGg3ZdtQ4zzTSj7IeRYQ",
   "token_type" : "Bearer",
@@ -183,25 +199,33 @@ Content-Type: application/json;charset=UTF-8
 {% endapi::response %}
 
 {% api::response status="400" description="" %}
-{% code %}
+{% code title="Header" %}
 ```
 HTTP/1.1 400 
 Date: Mon, 14 Oct 2019 04:22:45 GMT
 Content-Type: application/json;charset=UTF-8
+```
+{% endcode %}
 
+{% code title="Body" %}
+```json
 {"error":"invalid_grant","error_description":""}
 ```
 {% endcode %}
 {% endapi::response %}
 
 {% api::response status="401" description="" %}
-{% code %}
+{% code title="Header" %}
 ```
 HTTP/1.1 401 
 Date: Mon, 14 Oct 2019 04:22:45 GMT
 Content-Type: application/json;charset=UTF-8
 WWW-Authenticate: Form realm="NUGU", error="invalid_client", error_description="Bad client credentials"
+```
+{% endcode %}
 
+{% code title="Body" %}
+```json
 {"error":"invalid_client","error_description":"Bad client credentials"}
 ```
 {% endcode %}
@@ -232,36 +256,48 @@ WWW-Authenticate: Form realm="NUGU", error="invalid_client", error_description="
 {% endapi::parameter %}
 
 {% api::response status="200" description="" %}
-{% code %}
+{% code title="Header" %}
 ```
 HTTP/1.1 200 
 Date: Mon, 14 Oct 2019 03:01:27 GMT
 Content-Type: application/json;charset=UTF-8
+```
+{% endcode %}
 
+{% code title="Body" %}
+```json
 {}
 ```
 {% endcode %}
 {% endapi::response %}
 
 {% api::response status="400" description="" %}
-{% code %}
+{% code title="Header" %}
 ```
 HTTP/1.1 400 
 Date: Mon, 14 Oct 2019 04:22:45 GMT
 Content-Type: application/json;charset=UTF-8
+```
+{% endcode %}
 
+{% code title="Body" %}
+```json
 {"error":"invalid_token","error_description":""}
 ```
 {% endcode %}
 {% endapi::response %}
 
 {% api::response status="401" description="" %}
-{% code %}
+{% code title="Header" %}
 ```
 HTTP/1.1 401 
 Date: Mon, 14 Oct 2019 04:22:45 GMT
 Content-Type: application/json;charset=UTF-8
+```
+{% endcode %}
 
+{% code title="Body" %}
+```json
 {"error":"invalid_client","error_description":""}
 ```
 {% endcode %}
@@ -292,38 +328,48 @@ Content-Type: application/json;charset=UTF-8
 {% endapi::parameter %}
 
 {% api::response status="200" description="" %}
-{% code %}
+{% code title="Header" %}
 ```
 HTTP/1.1 200 
 Date: Mon, 14 Oct 2019 03:01:27 GMT
 Content-Type: application/json;charset=UTF-8
+```
+{% endcode %}
 
-{
-"active":true
-}
+{% code title="Body" %}
+```json
+{"active":true}
 ```
 {% endcode %}
 {% endapi::response %}
 
 {% api::response status="400" description="" %}
-{% code %}
+{% code title="Header" %}
 ```
 HTTP/1.1 400 
 Date: Mon, 14 Oct 2019 04:22:45 GMT
 Content-Type: application/json;charset=UTF-8
+```
+{% endcode %}
 
+{% code title="Body" %}
+```json
 {"error":"invalid_token","error_description":""}
 ```
 {% endcode %}
 {% endapi::response %}
 
 {% api::response status="401" description="" %}
-{% code %}
+{% code title="Header" %}
 ```
 HTTP/1.1 401 
 Date: Mon, 14 Oct 2019 04:22:45 GMT
 Content-Type: application/json;charset=UTF-8
+```
+{% endcode %}
 
+{% code title="Body" %}
+```json
 {"error":"invalid_client","error_description":""}
 ```
 {% endcode %}

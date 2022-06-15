@@ -33,7 +33,7 @@ module Jekyll
       def render(page_context)
         render_from_custom_context(
           page_context,
-          ->(context) do
+          ->(context, _) do
             context["api_method"] = params["method"]
             context["api_base_url"] = params["base_url"]
             context["api_path"] = params["path"]
@@ -64,7 +64,7 @@ module Jekyll
       def render(page_context)
         render_from_custom_context(
           page_context,
-          ->(context) do
+          ->(context, _) do
             context["api_description"] = @body.render(page_context)
           end
         )
@@ -87,7 +87,7 @@ module Jekyll
       def render(page_context)
         render_from_custom_context(
           page_context,
-          ->(context) do
+          ->(context, _) do
             context["api_request_name"] = params["name"]
             context["api_request_type"] = params["type"]
             context["api_request_category"] = params["category"]
@@ -113,7 +113,7 @@ module Jekyll
       def render(page_context)
         render_from_custom_context(
           page_context,
-          ->(context) do
+          ->(context, _) do
             context["api_response_status"] = params["status"]
             context["api_response_description"] = params["description"]
             context["api_response_body"] = @body.render(page_context)

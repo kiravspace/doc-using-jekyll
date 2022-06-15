@@ -1,3 +1,7 @@
+---
+depth_order: 2
+---
+
 # Parameter로 응답 작성하기
 
 지금까지 Parameter의 개념과 작성(등록)하는 방법에 대하여 알아보았습니다. 이제부터는 이와 같이 만들어진 Parameter를 사용하여 Play의 Response(응답)을 작성하는 방법을 알아보겠습니다.

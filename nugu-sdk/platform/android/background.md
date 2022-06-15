@@ -1,3 +1,7 @@
+---
+depth_order: 3
+---
+
 # Background 동작 처리
 
 Connection-oriented 방식을 사용하는 PoC 의 경우 application 이 background 로 전활될 경우 필요하다면 연결을 끊어주어야 합니다.

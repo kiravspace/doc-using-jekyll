@@ -1,3 +1,7 @@
+---
+depth_order: 3
+---
+
 # Response
 
 Response는 사용자의 발화를 입력 받았을 때 Play가 내놓게 되는 결과물을 의미합니다. Action이 Trigger에 의해 동작하게 되었을 때 자신의 하위에 Branch Action이 없으면 그 결과(output)로 Response를 반환합니다.

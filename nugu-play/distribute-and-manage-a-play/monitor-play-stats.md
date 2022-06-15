@@ -1,3 +1,7 @@
+---
+depth_order: 4
+---
+
 # Play 이용 통계 확인
 
 서비스 중인 Play의 이용 통계를 확인할 수 있습니다. `Developers Console` > `Play kit` > `통계` 메뉴에서 확인할 수 있으며, 통계 항목은 다음과 같습니다.

@@ -1,3 +1,7 @@
+---
+depth_order: 3
+---
+
 # BrightnessControl Interface
 
 NUGU 스마트홈 BrightnessControl Capability Interface는 NUGU 스마트홈에 등록된 SmartHomeDevice의 밝기제어방식에 대한 설명입니다. 스마트홈 기기의 밝기는 1부터 100단계로 제어할 수 있습니다.

@@ -1,3 +1,7 @@
+---
+depth_order: 6
+---
+
 # 예외 상황 관리
 
 Play가 동작하는 과정에서 정상적인 응답을 하지 못하는 경우가 발생할 수 있습니다. '예외 상황 관리'는 이렇게 정상적인 응답을 못하는 경우를 별도로 관리하는 공간으로, Exception Code와 그 상황에 나가게 될 메시지를 Prompt로 작성할 수 있습니다. 어떠한 상황이 예외 상황에 해당한다는 판단은 Backend proxy에서 하며, Backend proxy에서 Exception Code를 전달받으면, Action은 동작을 멈추고 Exception Prompt를 사용자에게 전달하게 됩니다.

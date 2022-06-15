@@ -1,3 +1,7 @@
+---
+depth_order: 2
+---
+
 # Capability Interfaces
 
 Capability Interface는 디바이스의 기능을 제어하기 위한 규격을 의미합니다. 예를 들어 스트리밍을 통한 음악을 재생하는 Play는 AudioPlayer Interface를 사용하면 필요한 기능을 구현할 수 있습니다.

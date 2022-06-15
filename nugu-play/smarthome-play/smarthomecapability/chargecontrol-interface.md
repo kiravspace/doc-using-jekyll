@@ -1,3 +1,7 @@
+---
+depth_order: 4
+---
+
 # ChargeControl Interface
 
 NUGU스마트홈 ChargeControl Interface는 NUGU스마트홈에 등록된 SmartHomeDevice의 충전관련 기능들에 대한 설명입니다. 충전 기능이 있는 모든 SmartHomeDevice를 지원합니다.

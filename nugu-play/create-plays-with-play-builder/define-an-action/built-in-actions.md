@@ -1,3 +1,7 @@
+---
+depth_order: 1
+---
+
 # Built-in Actions
 
 Play Builder의 사용자가 Play를 만들면서 생성한 Action을 Custom Action이라고 하며, 꼭 만들어야 하거나 만들기를 권장하는 Action을 미리 생성하여 Built-in Action으로 제공하고 있습니다.

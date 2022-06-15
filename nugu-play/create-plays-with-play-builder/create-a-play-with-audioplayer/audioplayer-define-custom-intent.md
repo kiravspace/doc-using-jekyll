@@ -1,3 +1,7 @@
+---
+depth_order: 1
+---
+
 # Custom Intent 정의하기
 
 AudioPlayer Interface에서 제공하는 Built-in Intent 외에 추가로 사용할 Custom Intent를 정의합니다. AudioPlayer를 개발할 때는 Built-in Intent의 종류와 용도를 정확히 파악하고, 시나리오에 따라 추가로 필요한 Custom Intent를 정의해야 합니다.

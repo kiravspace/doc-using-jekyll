@@ -17,7 +17,7 @@ module Jekyll
       def render(page_context)
         render_from_custom_context(
           page_context,
-          ->(context) do
+          ->(context, _) do
             if params["url"].start_with?(HTTP_SCHEME) || params["url"].start_with?(HTTPS_SCHEME)
               begin
                 res = Net::HTTP.get_response URI(params["url"])

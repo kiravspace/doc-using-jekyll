@@ -1,3 +1,7 @@
+---
+depth_order: 3
+---
+
 # Backend proxy
 
 사용자의 발화로부터 Intent와 Entity가 분석되면 대화 관리자가 적절한 Prompt를 생성하여 스피커로 전달합니다.

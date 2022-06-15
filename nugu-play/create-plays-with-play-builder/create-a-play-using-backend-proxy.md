@@ -1,3 +1,7 @@
+---
+depth_order: 6
+---
+
 # 외부 연동 서버 (Backend proxy) 연결하기
 
 ## 개요

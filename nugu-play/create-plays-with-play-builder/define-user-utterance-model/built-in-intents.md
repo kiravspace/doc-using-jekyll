@@ -1,3 +1,7 @@
+---
+depth_order: 1
+---
+
 # Built-in Intent
 
 Built-in Intent는 자주 사용될 것으로 예상되거나 꼭 정의해야 하는 발화들을 미리 훈련시켜 제공하기에 별도로 학습을 위한 발화문을 정의할 필요가 없는 Intent 입니다. NUGU플랫폼에서 Built-in Intent의 인식 및 자연어 처리 성능을 향상시킬 때 함께 성능이 향상됩니다.

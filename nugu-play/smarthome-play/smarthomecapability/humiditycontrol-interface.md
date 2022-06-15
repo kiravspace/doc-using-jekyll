@@ -1,3 +1,7 @@
+---
+depth_order: 7
+---
+
 # HumidityControl Interface
 
 NUGU스마트홈 HumidityControl Capability Interface는 NUGU스마트홈에 등록된 SmartHomeDevice의 습도제어방식에 대한 설명입니다. 제어하고자 하는 습도는 해당 공간의 습도 비율로 %단위로 설정하며 습도를 제어하는 기능을 가진 SmartHomeDevice들을 지원합니다.

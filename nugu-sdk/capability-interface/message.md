@@ -1,4 +1,5 @@
 ---
+depth_order: 18
 description: 문자 확인 및 전송 기능 제어를 위한 규격
 ---
 

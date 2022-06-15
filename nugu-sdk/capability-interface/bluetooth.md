@@ -1,4 +1,5 @@
 ---
+depth_order: 10
 description: 디바이스의 블루투스를 제어하기 위한 규격
 ---
 

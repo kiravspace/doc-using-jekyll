@@ -1,3 +1,7 @@
+---
+depth_order: 8
+---
+
 # ModeControl Interface
 
 NUGU 스마트홈 ModeControl Capability Interface는 NUGU 스마트홈에 등록된 SmartHomeDevice의 모드설정방식에 대한 설명입니다. NUGU스마트홈에는 사전에 정의된 모드명들이 있으며 다양한 표현을 정규화하여 정의된 모드명으로 제어 요청을 보냅니다. IoT ServiceProvider는 제어 대상인 스마트홈 기기의 특성과 모드명으로 적합한 기능을 제어하게 됩니다.

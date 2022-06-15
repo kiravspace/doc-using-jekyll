@@ -1,4 +1,5 @@
 ---
+depth_order: 12
 description: 디바이스의 디스플레이를 제어하기 위한 규격
 ---
 

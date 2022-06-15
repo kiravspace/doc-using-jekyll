@@ -1,4 +1,5 @@
 ---
+depth_order: 13
 description: 디바이스 배터리 정보를 Play 로 전달하기 위한 규격
 ---
 

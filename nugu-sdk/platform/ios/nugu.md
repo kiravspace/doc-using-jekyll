@@ -1,3 +1,7 @@
+---
+depth_order: 6
+---
+
 # NUGU 사용자 인터페이스
 
 [SDK UX Guide](../../sdk-design-guide/voice-chrome) 을 준수하여 어플리케이션을 개발하는데 사용할 수 있는 레이아웃 객체와 UI 컨트롤 같은 UI 구성요소를 미리 빌드된 형태로 제공합니다.

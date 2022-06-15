@@ -1,3 +1,7 @@
+---
+depth_order: 5
+---
+
 # ColorControl Interface
 
 NUGU 스마트홈 ColorControl Capability Interface는 NUGU 스마트홈에 등록된 SmartHomeDevice의 설정된 색 제어방식에 대한 설명입니다. 스마트 조명 등의 색상 변경을 지원합니다.

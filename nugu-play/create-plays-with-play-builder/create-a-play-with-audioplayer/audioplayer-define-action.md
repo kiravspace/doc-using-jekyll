@@ -1,3 +1,7 @@
+---
+depth_order: 2
+---
+
 # Action 정의하기
 
 AudioPlayer Interface를 지원하는 Play는 다음의 세 경우에 대해 Action을 정의해야 합니다.

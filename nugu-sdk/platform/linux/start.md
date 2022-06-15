@@ -1,3 +1,7 @@
+---
+depth_order: 1
+---
+
 # 시작하기
 
 ## Step 1: 최소 요구사항 확인하기
@@ -151,7 +155,7 @@ int main(int argc, char *argv[])
 
 음성인식을 요청하기 위해서는 아래와 같은 코드를 작성해야 합니다.
 
-1. 헤더 파일(nugu_client.hh, capability_factory.hh)을 include에 포함시키고, `NuguClientKit, NuguCapability` namespace를 사용하도록 설정합니다.
+\1. 헤더 파일(nugu_client.hh, capability_factory.hh)을 include에 포함시키고, `NuguClientKit, NuguCapability` namespace를 사용하도록 설정합니다.
 
 {% code %}
 ```cpp
@@ -163,7 +167,7 @@ using namespace NuguCapability;
 ```
 {% endcode %}
 
-2. `IASRHandler` 객체를 생성하고, 음성인식 모델 파일을 설정합니다.
+\2. `IASRHandler` 객체를 생성하고, 음성인식 모델 파일을 설정합니다.
 
 {% code %}
 ```cpp
@@ -174,7 +178,7 @@ asr_handler->setAttribute(ASRAttribute { "/var/lib/nugu/model", "CLIENT", "PARTI
 ```
 {% endcode %}
 
-3. `NuguClient` 객체를 생성하고, `ASR Capability` 추가 후, SDK를 초기화 합니다.
+\3. `NuguClient` 객체를 생성하고, `ASR Capability` 추가 후, SDK를 초기화 합니다.
 
 {% code %}
 ```cpp
@@ -186,7 +190,7 @@ nugu_client->initialize();
 ```
 {% endcode %}
 
-4. 음성인식 기능을 사용하기 위해 OAuth2 access-token 설정 후, NUGU 서비스 연결을 요청합니다.
+\4. 음성인식 기능을 사용하기 위해 OAuth2 access-token 설정 후, NUGU 서비스 연결을 요청합니다.
 
 {% code %}
 ```cpp

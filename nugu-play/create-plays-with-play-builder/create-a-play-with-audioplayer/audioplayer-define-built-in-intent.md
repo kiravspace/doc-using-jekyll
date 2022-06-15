@@ -1,3 +1,7 @@
+---
+depth_order: 3
+---
+
 # Built-in Intent를 위한 Action 정의하기
 
 스피커의 상태(state)에 따라 Action을 정의 방법을 "아리아, 이어서 재생"과 같이 "resume" Built-in Intent를 사용하는 경우를 예로 들어 설명합니다.

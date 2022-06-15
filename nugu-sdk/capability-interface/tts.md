@@ -1,4 +1,5 @@
 ---
+depth_order: 4
 description: 음성 합성 결과를 전달받기 위한 규격
 ---
 

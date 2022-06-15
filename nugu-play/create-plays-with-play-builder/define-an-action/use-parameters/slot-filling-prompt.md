@@ -1,3 +1,7 @@
+---
+depth_order: 3
+---
+
 # 필수 Entity 정의하기 (Slot-Filling Prompt)
 
 User Utterance Model을 정의하다 보면 사용자로부터 추가로 정보를 받아야만 처리할 수 있는 Intent가 있을 수 있습니다. 가령, 알람을 맞춰달라는 Intent를 처리하고자 한다면, '몇 시'라는 정보(Entity)가 꼭 필요합니다.

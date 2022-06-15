@@ -1,4 +1,5 @@
 ---
+depth_order: 7
 description: 디바이스 위치 정보를 Play 로 전달하기 위한 규격
 ---
 

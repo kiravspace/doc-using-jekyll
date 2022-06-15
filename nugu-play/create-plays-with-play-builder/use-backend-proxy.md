@@ -1,3 +1,7 @@
+---
+depth_order: 10
+---
+
 # Backend proxy 개발 가이드
 
 이 페이지는 Backend proxy 개발/구축을 가이드합니다.
