@@ -36,6 +36,7 @@ $(function () {
             e.preventDefault();
 
             $("#section").load($clicked.attr("href") + " #container", function (html) {
+                $(this).scrollTop(0);
                 document.title = html.match("<title>(.*?)</title>")[1];
 
                 if (typeof (history.pushState) !== "undefined") {
@@ -46,6 +47,7 @@ $(function () {
                 $clicked.parent().addClass("selected").removeClass("fold");
 
                 updateTab();
+                updateImage();
             });
         });
     });
@@ -74,5 +76,16 @@ $(function () {
         });
     }
 
+    function updateImage() {
+        $("img").each(function (_, img) {
+            let $img = $(img);
+
+            if ($img.parent().text().trim().length) {
+                $img.addClass("img-inline");
+            }
+        });
+    }
+
     updateTab();
+    updateImage();
 });
