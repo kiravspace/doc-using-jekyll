@@ -79,7 +79,7 @@ module Jekyll::Potion
     end
 
     def baseurl
-      @site.config["baseurl"]
+      @site.config["baseurl"] ||= ""
     end
 
     def theme_path
