@@ -80,11 +80,38 @@ $(function () {
         $("img").each(function (_, img) {
             let $img = $(img);
 
+            if ($img.attr("id") === "modal_image") {
+                return;
+            }
+
             if ($img.parent().text().trim().length) {
-                $img.addClass("img-inline");
+                $img.addClass("img_inline");
+            } else {
+                $img.addClass("expandable")
+                    .bind("click", function () {
+                        $("#modal_image")
+                            .attr("src", $img.attr("src"))
+                            .bind("load", function () {
+                                $("#modal_image_area").removeClass("hide");
+                            });
+                    });
             }
         });
     }
+
+    let $modal_image_area = $("#modal_image_area");
+
+    $modal_image_area.bind("click", function () {
+        $(this).addClass("hide");
+    });
+
+    $(document).keydown(function (e) {
+        if (e.keyCode === 27 || e.which === 27) {
+            if (!$modal_image_area.hasClass("hide")) {
+                $modal_image_area.addClass("hide");
+            }
+        }
+    });
 
     updateTab();
     updateImage();
