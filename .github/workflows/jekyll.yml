@@ -26,6 +26,6 @@ jobs:
     - uses:  helaili/jekyll-action@v2.3
       with:
         keep_history: true
-        target_branch: 'gh-pages'
-        jekyll_build_options: '--config _config.yml,_config.working.yml --trace'
+        target_branch: "gh-pages"
+        jekyll_build_options: "--config _config.yml,_config.working.yml --trace"
         token: ${{ secrets.JEKYLL_PAT }}

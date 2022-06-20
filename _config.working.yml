@@ -1,1 +1,4 @@
 baseurl: "/doc-using-jekyll"
+
+exclude:
+  - "CNAME"

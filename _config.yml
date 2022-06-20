@@ -31,8 +31,6 @@ exclude:
   - "*.iml"
   - ".idea/"
   - "_jekyll-potion"
-  - "_exclude"
-  - "CNAME"
 
 sass:
   style: compressed
