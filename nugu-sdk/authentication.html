@@ -2106,6 +2106,97 @@
   <p>%7B%22deviceSerialNumber%22%3A%22DEVICE_SERIAL_NUMBER%22%7D</p>
 </blockquote>
 
+<div class="api">
+    <div class="api_summary">인증 요청 (Authorize Endpoint)</div>
+    <div class="api_header">
+        <div class="api_method">get</div>
+        <div class="api_url">https://api.host.domain/v1/auth/oauth/authorize</div>
+    </div>
+    <div class="api_description">
+    
+NUGU계정 미사용, 체험판 사용 시에는 불필요합니다.
+
+</div>
+    <div class="api_parameter_title">Parameters</div>
+    
+        <div class="api_parameter_category_title">Query</div>
+        <div class="api_parameters">
+            <div class="api_parameter">
+    <div class="api_parameter_name">client:id</div>
+    <div class="api_parameter_type">string</div>
+    <div class="api_parameter_description">
+발급받은 ClientId를 사용 합니다.
+</div>
+</div>
+<div class="api_parameter">
+    <div class="api_parameter_name">response:type</div>
+    <div class="api_parameter_type">string</div>
+    <div class="api_parameter_description">
+code 만 사용 됩니다.
+</div>
+</div>
+<div class="api_parameter">
+    <div class="api_parameter_name">redirect:uri</div>
+    <div class="api_parameter_type">string</div>
+    <div class="api_parameter_description">
+설정한 RedirectUri를 사용합니다.
+</div>
+</div>
+<div class="api_parameter">
+    <div class="api_parameter_name">scope</div>
+    <div class="api_parameter_type">string</div>
+    <div class="api_parameter_description">
+(TODO)
+</div>
+</div>
+<div class="api_parameter">
+    <div class="api_parameter_name">data</div>
+    <div class="api_parameter_type">string</div>
+    <div class="api_parameter_description">
+추가적인 데이터를 포함됩니다.
+</div>
+</div>
+<div class="api_parameter">
+    <div class="api_parameter_name">state</div>
+    <div class="api_parameter_type">string</div>
+    <div class="api_parameter_description">
+CSRF를 위해 사용 되는 값입니다.
+</div>
+</div>
+        </div>
+    
+    
+    <div class="api_response_title">Responses</div>
+    <div class="api_responses">
+        <div class="api_response">
+    <div class="api_response_header">
+        <div class="api_response_status">302</div>
+        <div class="api_response_description"></div>
+    </div>
+    <div class="api_response_body">
+        
+<div class="code">
+    <div class="code_title">Header</div>
+    <div class="code_body">
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code><table class="rouge-table"><tbody><tr>
+<td class="rouge-gutter gl"><pre class="lineno">1
+2
+3
+</pre></td>
+<td class="rouge-code"><pre>HTTP/1.1 302 
+Date: Mon, 14 Oct 2019 02:24:58 GMT
+Location: {redirect_uri}?code={code}&amp;state={state}
+</pre></td>
+</tr></tbody></table></code></pre></div></div>
+</div>
+</div>
+
+
+    </div>
+</div>
+    </div>
+</div>
+
 <h2 id="token-endpoint">Token Endpoint</h2>
 
 <p><code class="language-plaintext highlighter-rouge">grant_type=refresh_token</code>, <code class="language-plaintext highlighter-rouge">grant_type=authorization_code</code> , <code class="language-plaintext highlighter-rouge">grant_type=client_credentials</code> 가사용 됩니다.</p>
@@ -2114,10 +2205,730 @@
 
 <p>Client 인증 정보는 Body Parameter(application/x-www-form-urlencoded)를 사용 합니다.</p>
 
+<div class="api">
+    <div class="api_summary">토큰 요청 (Token Endpoint)</div>
+    <div class="api_header">
+        <div class="api_method">post</div>
+        <div class="api_url">https://api.host.domain/v1/auth/oauth/token</div>
+    </div>
+    <div class="api_description">
+    
+NUGU계정 미사용, 체험판 사용 시에는 code와 redirect_url 입력이 불필요합니다.
+
+</div>
+    <div class="api_parameter_title">Parameters</div>
+    
+    
+        <div class="api_parameter_category_title">Body</div>
+        <div class="api_parameters">
+            <div class="api_parameter">
+    <div class="api_parameter_name">data</div>
+    <div class="api_parameter_type">string</div>
+    <div class="api_parameter_description">
+추가적인 데이터가 포함 됩니다. ex) {"deviceSerialNumber":"DEVICE_SERIAL_NUMBER"}
+</div>
+</div>
+<div class="api_parameter">
+    <div class="api_parameter_name">grant:type</div>
+    <div class="api_parameter_type">string</div>
+    <div class="api_parameter_description">
+authorization_code (신규), client_credentials (NUGU 회원 미사용, 체험판)
+</div>
+</div>
+<div class="api_parameter">
+    <div class="api_parameter_name">code</div>
+    <div class="api_parameter_type">string</div>
+    <div class="api_parameter_description">
+응답 받은 code 값을 사용 합니다.
+</div>
+</div>
+<div class="api_parameter">
+    <div class="api_parameter_name">redirect:uri</div>
+    <div class="api_parameter_type">string</div>
+    <div class="api_parameter_description">
+인증 요청 시 사용된 redirect_uri를 사용합니다.
+</div>
+</div>
+<div class="api_parameter">
+    <div class="api_parameter_name">client:id</div>
+    <div class="api_parameter_type">string</div>
+    <div class="api_parameter_description">
+발급 받은 ClientId를 사용합니다.
+</div>
+</div>
+<div class="api_parameter">
+    <div class="api_parameter_name">client:secret</div>
+    <div class="api_parameter_type">string</div>
+    <div class="api_parameter_description">
+발급 받은 ClientSecret을 사용합니다.
+</div>
+</div>
+        </div>
+    
+    <div class="api_response_title">Responses</div>
+    <div class="api_responses">
+        <div class="api_response">
+    <div class="api_response_header">
+        <div class="api_response_status">200</div>
+        <div class="api_response_description"></div>
+    </div>
+    <div class="api_response_body">
+        
+<div class="code">
+    <div class="code_title">Header</div>
+    <div class="code_body">
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code><table class="rouge-table"><tbody><tr>
+<td class="rouge-gutter gl"><pre class="lineno">1
+2
+3
+</pre></td>
+<td class="rouge-code"><pre>HTTP/1.1 200 
+Date: Mon, 14 Oct 2019 02:24:59 GMT
+Content-Type: application/json;charset=UTF-8
+</pre></td>
+</tr></tbody></table></code></pre></div></div>
+</div>
+</div>
+
+
+<div class="code">
+    <div class="code_title">Body</div>
+    <div class="code_body">
+<div class="language-json highlighter-rouge"><div class="highlight"><pre class="highlight"><code><table class="rouge-table"><tbody><tr>
+<td class="rouge-gutter gl"><pre class="lineno">1
+2
+3
+4
+5
+6
+7
+</pre></td>
+<td class="rouge-code"><pre><span class="p">{</span><span class="w">
+  </span><span class="nl">"access_token"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHAiOjM3MTg1MDM1NDYsInVzZXJfbmFtZSI6IkFMREZBS0sxQjhaUjU2MzE1QzVEIiwianRpIjoiYWU4ZWQ0MTEtZTljYy00NGRjLThlYjUtODc4NTdjM2QzNmFlIiwiY2xpZW50X2lkIjoic3BlYWtlci5udWd1Lm51MTEwIiwic2NvcGUiOltdLCJleHQiOnsidXNyIjoiQUxERkFLSzFCOFpSNTYzMTVDNUQiLCJwb2MiOiJzcGVha2VyLm51Z3UubnUxMTAiLCJkdmMiOiJBTERGRzU1WU1ZUkE5RTUyN0VCRCIsInRrbiI6IjNDNzMxMzEwOUIyQTQ1RTZCQjhBRUQ2MjBGRjNBMThGIn19.DrmLXJXBF9YL7-R7gtEg5dOLQ7UfYMlPKGp1WHNfx8M"</span><span class="p">,</span><span class="w">
+  </span><span class="nl">"token_type"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"Bearer"</span><span class="p">,</span><span class="w">
+  </span><span class="nl">"refresh_token"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHAiOjE1NzM2MTE4OTksInVzZXJfbmFtZSI6IkFMREZBS0sxQjhaUjU2MzE1QzVEIiwianRpIjoiNjAzYTkyNjUtNTJmNS00ZDE2LWEzOWYtMTVkMGZhM2IxMTgyIiwiY2xpZW50X2lkIjoic3BlYWtlci5udWd1Lm51MTEwIiwic2NvcGUiOltdLCJhdGkiOiJhZThlZDQxMS1lOWNjLTQ0ZGMtOGViNS04Nzg1N2MzZDM2YWUiLCJleHQiOnsidXNyIjoiQUxERkFLSzFCOFpSNTYzMTVDNUQiLCJkdmMiOiJBTERGRzU1WU1ZUkE5RTUyN0VCRCIsInBvYyI6InNwZWFrZXIubnVndS5udTExMCIsInRrbiI6IjNDNzMxMzEwOUIyQTQ1RTZCQjhBRUQ2MjBGRjNBMThGIn19.F29whyNRE6LN3c9yfNTH3F9uN3W04aP2Jxav3rSSFoY"</span><span class="p">,</span><span class="w">
+  </span><span class="nl">"expires_in"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="mi">2147483646</span><span class="p">,</span><span class="w">
+  </span><span class="nl">"jti"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"ae8ed411-e9cc-44dc-8eb5-87857c3d36ae"</span><span class="w">
+</span><span class="p">}</span><span class="w">
+</span></pre></td>
+</tr></tbody></table></code></pre></div></div>
+</div>
+</div>
+
+
+    </div>
+</div>
+<div class="api_response">
+    <div class="api_response_header">
+        <div class="api_response_status">400</div>
+        <div class="api_response_description"></div>
+    </div>
+    <div class="api_response_body">
+        
+<div class="code">
+    <div class="code_title">Header</div>
+    <div class="code_body">
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code><table class="rouge-table"><tbody><tr>
+<td class="rouge-gutter gl"><pre class="lineno">1
+2
+3
+</pre></td>
+<td class="rouge-code"><pre>HTTP/1.1 400 
+Date: Mon, 14 Oct 2019 04:22:45 GMT
+Content-Type: application/json;charset=UTF-8
+</pre></td>
+</tr></tbody></table></code></pre></div></div>
+</div>
+</div>
+
+
+<div class="code">
+    <div class="code_title">Body</div>
+    <div class="code_body">
+<div class="language-json highlighter-rouge"><div class="highlight"><pre class="highlight"><code><table class="rouge-table"><tbody><tr>
+<td class="rouge-gutter gl"><pre class="lineno">1
+</pre></td>
+<td class="rouge-code"><pre><span class="p">{</span><span class="nl">"error"</span><span class="p">:</span><span class="s2">"invalid_grant"</span><span class="p">,</span><span class="nl">"error_description"</span><span class="p">:</span><span class="s2">"Invalid authorization code: 0rrbEjnOfqxIv6uNic6C"</span><span class="p">}</span><span class="w">
+</span></pre></td>
+</tr></tbody></table></code></pre></div></div>
+</div>
+</div>
+
+
+    </div>
+</div>
+<div class="api_response">
+    <div class="api_response_header">
+        <div class="api_response_status">401</div>
+        <div class="api_response_description"></div>
+    </div>
+    <div class="api_response_body">
+        
+<div class="code">
+    <div class="code_title">Header</div>
+    <div class="code_body">
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code><table class="rouge-table"><tbody><tr>
+<td class="rouge-gutter gl"><pre class="lineno">1
+2
+3
+4
+</pre></td>
+<td class="rouge-code"><pre>HTTP/1.1 401 
+Date: Mon, 14 Oct 2019 04:22:45 GMT
+Content-Type: application/json;charset=UTF-8
+WWW-Authenticate: Form realm="NUGU", error="invalid_client", error_description="Bad client credentials"
+</pre></td>
+</tr></tbody></table></code></pre></div></div>
+</div>
+</div>
+
+
+<div class="code">
+    <div class="code_title">Body</div>
+    <div class="code_body">
+<div class="language-json highlighter-rouge"><div class="highlight"><pre class="highlight"><code><table class="rouge-table"><tbody><tr>
+<td class="rouge-gutter gl"><pre class="lineno">1
+</pre></td>
+<td class="rouge-code"><pre><span class="p">{</span><span class="nl">"error"</span><span class="p">:</span><span class="s2">"invalid_client"</span><span class="p">,</span><span class="nl">"error_description"</span><span class="p">:</span><span class="s2">"Bad client credentials"</span><span class="p">}</span><span class="w">
+</span></pre></td>
+</tr></tbody></table></code></pre></div></div>
+</div>
+</div>
+
+
+    </div>
+</div>
+    </div>
+</div>
+
+<div class="api">
+    <div class="api_summary">토큰 갱신 요청 (Token Endpoint)</div>
+    <div class="api_header">
+        <div class="api_method">post</div>
+        <div class="api_url">https://api.host.domain/v1/auth/oauth/token</div>
+    </div>
+    <div class="api_description">
+    
+NUGU계정 미사용, 체험판 사용 시에는 불필요합니다.
+
+</div>
+    <div class="api_parameter_title">Parameters</div>
+    
+    
+        <div class="api_parameter_category_title">Body</div>
+        <div class="api_parameters">
+            <div class="api_parameter">
+    <div class="api_parameter_name">data</div>
+    <div class="api_parameter_type">string</div>
+    <div class="api_parameter_description">
+추가적인 데이터가 포함 됩니다. ex) {"deviceSerialNumber":"DEVICE_SEERIAL_NUMBER"}
+</div>
+</div>
+<div class="api_parameter">
+    <div class="api_parameter_name">grant:type</div>
+    <div class="api_parameter_type">string</div>
+    <div class="api_parameter_description">
+refresh_token (갱신)
+</div>
+</div>
+<div class="api_parameter">
+    <div class="api_parameter_name">refresh:token</div>
+    <div class="api_parameter_type">string</div>
+    <div class="api_parameter_description">
+신규 발급 시 응답 받은 refresh_token을 사용합니다.
+</div>
+</div>
+<div class="api_parameter">
+    <div class="api_parameter_name">client:id</div>
+    <div class="api_parameter_type">string</div>
+    <div class="api_parameter_description">
+
+</div>
+</div>
+<div class="api_parameter">
+    <div class="api_parameter_name">client:secret</div>
+    <div class="api_parameter_type">string</div>
+    <div class="api_parameter_description">
+
+</div>
+</div>
+        </div>
+    
+    <div class="api_response_title">Responses</div>
+    <div class="api_responses">
+        <div class="api_response">
+    <div class="api_response_header">
+        <div class="api_response_status">200</div>
+        <div class="api_response_description"></div>
+    </div>
+    <div class="api_response_body">
+        
+<div class="code">
+    <div class="code_title">Header</div>
+    <div class="code_body">
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code><table class="rouge-table"><tbody><tr>
+<td class="rouge-gutter gl"><pre class="lineno">1
+2
+3
+</pre></td>
+<td class="rouge-code"><pre>HTTP/1.1 200 
+Date: Mon, 14 Oct 2019 03:01:27 GMT
+Content-Type: application/json;charset=UTF-8
+</pre></td>
+</tr></tbody></table></code></pre></div></div>
+</div>
+</div>
+
+
+<div class="code">
+    <div class="code_title">Body</div>
+    <div class="code_body">
+<div class="language-json highlighter-rouge"><div class="highlight"><pre class="highlight"><code><table class="rouge-table"><tbody><tr>
+<td class="rouge-gutter gl"><pre class="lineno">1
+2
+3
+4
+5
+6
+7
+</pre></td>
+<td class="rouge-code"><pre><span class="p">{</span><span class="w">
+  </span><span class="nl">"access_token"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHAiOjM3MTg1MDU3MzQsInVzZXJfbmFtZSI6IkFMREZBS0sxQjhaUjU2MzE1QzVEIiwianRpIjoiNzcyNWVmNGYtNzc4Yy00NDUyLTk3ZWItODE0NWVmNWIyOTNkIiwiY2xpZW50X2lkIjoic3BlYWtlci5udWd1Lm51MTEwIiwic2NvcGUiOltdLCJleHQiOnsidXNyIjoiQUxERkFLSzFCOFpSNTYzMTVDNUQiLCJkdmMiOiJBTERGRzU1WU1ZUkE5RTUyN0VCRCIsInBvYyI6InNwZWFrZXIubnVndS5udTExMCIsInRrbiI6IjNDNzMxMzEwOUIyQTQ1RTZCQjhBRUQ2MjBGRjNBMThGIn19.pKy2WqIWtKCybQT8jGZsYUyvGg3ZdtQ4zzTSj7IeRYQ"</span><span class="p">,</span><span class="w">
+  </span><span class="nl">"token_type"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"Bearer"</span><span class="p">,</span><span class="w">
+  </span><span class="nl">"refresh_token"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHAiOjE1NzM2MTE4OTksInVzZXJfbmFtZSI6IkFMREZBS0sxQjhaUjU2MzE1QzVEIiwianRpIjoiNjAzYTkyNjUtNTJmNS00ZDE2LWEzOWYtMTVkMGZhM2IxMTgyIiwiY2xpZW50X2lkIjoic3BlYWtlci5udWd1Lm51MTEwIiwic2NvcGUiOltdLCJhdGkiOiI3NzI1ZWY0Zi03NzhjLTQ0NTItOTdlYi04MTQ1ZWY1YjI5M2QiLCJleHQiOnsidXNyIjoiQUxERkFLSzFCOFpSNTYzMTVDNUQiLCJkdmMiOiJBTERGRzU1WU1ZUkE5RTUyN0VCRCIsInBvYyI6InNwZWFrZXIubnVndS5udTExMCIsInRrbiI6IjNDNzMxMzEwOUIyQTQ1RTZCQjhBRUQ2MjBGRjNBMThGIn19.AkXWHMuUlKYKs3wP92roaBWQaFmuW7e4kKmlhmrWDZc"</span><span class="p">,</span><span class="w">
+  </span><span class="nl">"expires_in"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="mi">2147483646</span><span class="p">,</span><span class="w">
+  </span><span class="nl">"jti"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"7725ef4f-778c-4452-97eb-8145ef5b293d"</span><span class="w">
+</span><span class="p">}</span><span class="w">
+</span></pre></td>
+</tr></tbody></table></code></pre></div></div>
+</div>
+</div>
+
+
+    </div>
+</div>
+<div class="api_response">
+    <div class="api_response_header">
+        <div class="api_response_status">400</div>
+        <div class="api_response_description"></div>
+    </div>
+    <div class="api_response_body">
+        
+<div class="code">
+    <div class="code_title">Header</div>
+    <div class="code_body">
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code><table class="rouge-table"><tbody><tr>
+<td class="rouge-gutter gl"><pre class="lineno">1
+2
+3
+</pre></td>
+<td class="rouge-code"><pre>HTTP/1.1 400 
+Date: Mon, 14 Oct 2019 04:22:45 GMT
+Content-Type: application/json;charset=UTF-8
+</pre></td>
+</tr></tbody></table></code></pre></div></div>
+</div>
+</div>
+
+
+<div class="code">
+    <div class="code_title">Body</div>
+    <div class="code_body">
+<div class="language-json highlighter-rouge"><div class="highlight"><pre class="highlight"><code><table class="rouge-table"><tbody><tr>
+<td class="rouge-gutter gl"><pre class="lineno">1
+</pre></td>
+<td class="rouge-code"><pre><span class="p">{</span><span class="nl">"error"</span><span class="p">:</span><span class="s2">"invalid_grant"</span><span class="p">,</span><span class="nl">"error_description"</span><span class="p">:</span><span class="s2">""</span><span class="p">}</span><span class="w">
+</span></pre></td>
+</tr></tbody></table></code></pre></div></div>
+</div>
+</div>
+
+
+    </div>
+</div>
+<div class="api_response">
+    <div class="api_response_header">
+        <div class="api_response_status">401</div>
+        <div class="api_response_description"></div>
+    </div>
+    <div class="api_response_body">
+        
+<div class="code">
+    <div class="code_title">Header</div>
+    <div class="code_body">
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code><table class="rouge-table"><tbody><tr>
+<td class="rouge-gutter gl"><pre class="lineno">1
+2
+3
+4
+</pre></td>
+<td class="rouge-code"><pre>HTTP/1.1 401 
+Date: Mon, 14 Oct 2019 04:22:45 GMT
+Content-Type: application/json;charset=UTF-8
+WWW-Authenticate: Form realm="NUGU", error="invalid_client", error_description="Bad client credentials"
+</pre></td>
+</tr></tbody></table></code></pre></div></div>
+</div>
+</div>
+
+
+<div class="code">
+    <div class="code_title">Body</div>
+    <div class="code_body">
+<div class="language-json highlighter-rouge"><div class="highlight"><pre class="highlight"><code><table class="rouge-table"><tbody><tr>
+<td class="rouge-gutter gl"><pre class="lineno">1
+</pre></td>
+<td class="rouge-code"><pre><span class="p">{</span><span class="nl">"error"</span><span class="p">:</span><span class="s2">"invalid_client"</span><span class="p">,</span><span class="nl">"error_description"</span><span class="p">:</span><span class="s2">"Bad client credentials"</span><span class="p">}</span><span class="w">
+</span></pre></td>
+</tr></tbody></table></code></pre></div></div>
+</div>
+</div>
+
+
+    </div>
+</div>
+    </div>
+</div>
+
 <h2 id="revoke-endpoint">Revoke Endpoint</h2>
+
+<div class="api">
+    <div class="api_summary">연결 해제 (Revoke Endpoint)</div>
+    <div class="api_header">
+        <div class="api_method">post</div>
+        <div class="api_url">/v1/auth/oauth/revoke</div>
+    </div>
+    <div class="api_description">
+    
+
+
+</div>
+    <div class="api_parameter_title">Parameters</div>
+    
+    
+        <div class="api_parameter_category_title">Body</div>
+        <div class="api_parameters">
+            <div class="api_parameter">
+    <div class="api_parameter_name">data</div>
+    <div class="api_parameter_type">string</div>
+    <div class="api_parameter_description">
+
+</div>
+</div>
+<div class="api_parameter">
+    <div class="api_parameter_name">token</div>
+    <div class="api_parameter_type">string</div>
+    <div class="api_parameter_description">
+
+</div>
+</div>
+<div class="api_parameter">
+    <div class="api_parameter_name">client:id</div>
+    <div class="api_parameter_type">string</div>
+    <div class="api_parameter_description">
+
+</div>
+</div>
+<div class="api_parameter">
+    <div class="api_parameter_name">client:secret</div>
+    <div class="api_parameter_type">string</div>
+    <div class="api_parameter_description">
+
+</div>
+</div>
+        </div>
+    
+    <div class="api_response_title">Responses</div>
+    <div class="api_responses">
+        <div class="api_response">
+    <div class="api_response_header">
+        <div class="api_response_status">200</div>
+        <div class="api_response_description"></div>
+    </div>
+    <div class="api_response_body">
+        
+<div class="code">
+    <div class="code_title">Header</div>
+    <div class="code_body">
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code><table class="rouge-table"><tbody><tr>
+<td class="rouge-gutter gl"><pre class="lineno">1
+2
+3
+</pre></td>
+<td class="rouge-code"><pre>HTTP/1.1 200 
+Date: Mon, 14 Oct 2019 03:01:27 GMT
+Content-Type: application/json;charset=UTF-8
+</pre></td>
+</tr></tbody></table></code></pre></div></div>
+</div>
+</div>
+
+
+<div class="code">
+    <div class="code_title">Body</div>
+    <div class="code_body">
+<div class="language-json highlighter-rouge"><div class="highlight"><pre class="highlight"><code><table class="rouge-table"><tbody><tr>
+<td class="rouge-gutter gl"><pre class="lineno">1
+</pre></td>
+<td class="rouge-code"><pre><span class="p">{}</span><span class="w">
+</span></pre></td>
+</tr></tbody></table></code></pre></div></div>
+</div>
+</div>
+
+
+    </div>
+</div>
+<div class="api_response">
+    <div class="api_response_header">
+        <div class="api_response_status">400</div>
+        <div class="api_response_description"></div>
+    </div>
+    <div class="api_response_body">
+        
+<div class="code">
+    <div class="code_title">Header</div>
+    <div class="code_body">
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code><table class="rouge-table"><tbody><tr>
+<td class="rouge-gutter gl"><pre class="lineno">1
+2
+3
+</pre></td>
+<td class="rouge-code"><pre>HTTP/1.1 400 
+Date: Mon, 14 Oct 2019 04:22:45 GMT
+Content-Type: application/json;charset=UTF-8
+</pre></td>
+</tr></tbody></table></code></pre></div></div>
+</div>
+</div>
+
+
+<div class="code">
+    <div class="code_title">Body</div>
+    <div class="code_body">
+<div class="language-json highlighter-rouge"><div class="highlight"><pre class="highlight"><code><table class="rouge-table"><tbody><tr>
+<td class="rouge-gutter gl"><pre class="lineno">1
+</pre></td>
+<td class="rouge-code"><pre><span class="p">{</span><span class="nl">"error"</span><span class="p">:</span><span class="s2">"invalid_token"</span><span class="p">,</span><span class="nl">"error_description"</span><span class="p">:</span><span class="s2">""</span><span class="p">}</span><span class="w">
+</span></pre></td>
+</tr></tbody></table></code></pre></div></div>
+</div>
+</div>
+
+
+    </div>
+</div>
+<div class="api_response">
+    <div class="api_response_header">
+        <div class="api_response_status">401</div>
+        <div class="api_response_description"></div>
+    </div>
+    <div class="api_response_body">
+        
+<div class="code">
+    <div class="code_title">Header</div>
+    <div class="code_body">
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code><table class="rouge-table"><tbody><tr>
+<td class="rouge-gutter gl"><pre class="lineno">1
+2
+3
+</pre></td>
+<td class="rouge-code"><pre>HTTP/1.1 401 
+Date: Mon, 14 Oct 2019 04:22:45 GMT
+Content-Type: application/json;charset=UTF-8
+</pre></td>
+</tr></tbody></table></code></pre></div></div>
+</div>
+</div>
+
+
+<div class="code">
+    <div class="code_title">Body</div>
+    <div class="code_body">
+<div class="language-json highlighter-rouge"><div class="highlight"><pre class="highlight"><code><table class="rouge-table"><tbody><tr>
+<td class="rouge-gutter gl"><pre class="lineno">1
+</pre></td>
+<td class="rouge-code"><pre><span class="p">{</span><span class="nl">"error"</span><span class="p">:</span><span class="s2">"invalid_client"</span><span class="p">,</span><span class="nl">"error_description"</span><span class="p">:</span><span class="s2">""</span><span class="p">}</span><span class="w">
+</span></pre></td>
+</tr></tbody></table></code></pre></div></div>
+</div>
+</div>
+
+
+    </div>
+</div>
+    </div>
+</div>
 
 <h2 id="introspect-endpoint">Introspect Endpoint</h2>
 
+<div class="api">
+    <div class="api_summary">연결 조회 (Introspect Endpoint)</div>
+    <div class="api_header">
+        <div class="api_method">post</div>
+        <div class="api_url">/v1/auth/oauth/introspect</div>
+    </div>
+    <div class="api_description">
+    
+
+
+</div>
+    <div class="api_parameter_title">Parameters</div>
+    
+    
+        <div class="api_parameter_category_title">Body</div>
+        <div class="api_parameters">
+            <div class="api_parameter">
+    <div class="api_parameter_name">data</div>
+    <div class="api_parameter_type">string</div>
+    <div class="api_parameter_description">
+
+</div>
+</div>
+<div class="api_parameter">
+    <div class="api_parameter_name">token</div>
+    <div class="api_parameter_type">string</div>
+    <div class="api_parameter_description">
+
+</div>
+</div>
+<div class="api_parameter">
+    <div class="api_parameter_name">client:id</div>
+    <div class="api_parameter_type">string</div>
+    <div class="api_parameter_description">
+
+</div>
+</div>
+<div class="api_parameter">
+    <div class="api_parameter_name">client:secret</div>
+    <div class="api_parameter_type">string</div>
+    <div class="api_parameter_description">
+
+</div>
+</div>
+        </div>
+    
+    <div class="api_response_title">Responses</div>
+    <div class="api_responses">
+        <div class="api_response">
+    <div class="api_response_header">
+        <div class="api_response_status">200</div>
+        <div class="api_response_description"></div>
+    </div>
+    <div class="api_response_body">
+        
+<div class="code">
+    <div class="code_title">Header</div>
+    <div class="code_body">
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code><table class="rouge-table"><tbody><tr>
+<td class="rouge-gutter gl"><pre class="lineno">1
+2
+3
+</pre></td>
+<td class="rouge-code"><pre>HTTP/1.1 200 
+Date: Mon, 14 Oct 2019 03:01:27 GMT
+Content-Type: application/json;charset=UTF-8
+</pre></td>
+</tr></tbody></table></code></pre></div></div>
+</div>
+</div>
+
+
+<div class="code">
+    <div class="code_title">Body</div>
+    <div class="code_body">
+<div class="language-json highlighter-rouge"><div class="highlight"><pre class="highlight"><code><table class="rouge-table"><tbody><tr>
+<td class="rouge-gutter gl"><pre class="lineno">1
+</pre></td>
+<td class="rouge-code"><pre><span class="p">{</span><span class="nl">"active"</span><span class="p">:</span><span class="kc">true</span><span class="p">}</span><span class="w">
+</span></pre></td>
+</tr></tbody></table></code></pre></div></div>
+</div>
+</div>
+
+
+    </div>
+</div>
+<div class="api_response">
+    <div class="api_response_header">
+        <div class="api_response_status">400</div>
+        <div class="api_response_description"></div>
+    </div>
+    <div class="api_response_body">
+        
+<div class="code">
+    <div class="code_title">Header</div>
+    <div class="code_body">
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code><table class="rouge-table"><tbody><tr>
+<td class="rouge-gutter gl"><pre class="lineno">1
+2
+3
+</pre></td>
+<td class="rouge-code"><pre>HTTP/1.1 400 
+Date: Mon, 14 Oct 2019 04:22:45 GMT
+Content-Type: application/json;charset=UTF-8
+</pre></td>
+</tr></tbody></table></code></pre></div></div>
+</div>
+</div>
+
+
+<div class="code">
+    <div class="code_title">Body</div>
+    <div class="code_body">
+<div class="language-json highlighter-rouge"><div class="highlight"><pre class="highlight"><code><table class="rouge-table"><tbody><tr>
+<td class="rouge-gutter gl"><pre class="lineno">1
+</pre></td>
+<td class="rouge-code"><pre><span class="p">{</span><span class="nl">"error"</span><span class="p">:</span><span class="s2">"invalid_token"</span><span class="p">,</span><span class="nl">"error_description"</span><span class="p">:</span><span class="s2">""</span><span class="p">}</span><span class="w">
+</span></pre></td>
+</tr></tbody></table></code></pre></div></div>
+</div>
+</div>
+
+
+    </div>
+</div>
+<div class="api_response">
+    <div class="api_response_header">
+        <div class="api_response_status">401</div>
+        <div class="api_response_description"></div>
+    </div>
+    <div class="api_response_body">
+        
+<div class="code">
+    <div class="code_title">Header</div>
+    <div class="code_body">
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code><table class="rouge-table"><tbody><tr>
+<td class="rouge-gutter gl"><pre class="lineno">1
+2
+3
+</pre></td>
+<td class="rouge-code"><pre>HTTP/1.1 401 
+Date: Mon, 14 Oct 2019 04:22:45 GMT
+Content-Type: application/json;charset=UTF-8
+</pre></td>
+</tr></tbody></table></code></pre></div></div>
+</div>
+</div>
+
+
+<div class="code">
+    <div class="code_title">Body</div>
+    <div class="code_body">
+<div class="language-json highlighter-rouge"><div class="highlight"><pre class="highlight"><code><table class="rouge-table"><tbody><tr>
+<td class="rouge-gutter gl"><pre class="lineno">1
+</pre></td>
+<td class="rouge-code"><pre><span class="p">{</span><span class="nl">"error"</span><span class="p">:</span><span class="s2">"invalid_client"</span><span class="p">,</span><span class="nl">"error_description"</span><span class="p">:</span><span class="s2">""</span><span class="p">}</span><span class="w">
+</span></pre></td>
+</tr></tbody></table></code></pre></div></div>
+</div>
+</div>
+
+
+    </div>
+</div>
+    </div>
+</div>
 
     </div>
     
