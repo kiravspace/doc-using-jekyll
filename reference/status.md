@@ -6,7 +6,7 @@ depth_order: 1
 
 NUGU 대화의 상태는 크게 idle, listening, processing, responding의 4단계로 나눠질 수 있습니다. 먼저 대기상태(idle state)에서 사용자가 호출어(wake-up word)를 발화하거나 호출 버튼을 누르면 NUGU가 사용자의 명령을 받아들일 수 있는 상태(listening-passive)로 변경됩니다. 이때 사용자가 말하기 시작하면 사용자의 발화를 입력 받는 상태(listening-active)로 변경되며, 사용자의 발화가 종료되면 동작을 결정하는 단계(processing)를 거쳐 명령에 대한 답변이나 동작을 수행(responding)하게 됩니다. 각 상태의 기본 흐름은 아래와 같습니다.
 
-![](/assets/images/status-01.png)
+![](../assets/images/status-01.png)
 
 각 상태 별 정의는 아래와 같습니다.
 

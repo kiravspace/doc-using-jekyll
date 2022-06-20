@@ -72,7 +72,7 @@ NUGU 기기에서 제공하는 물리적 버튼들은 다음과 같습니다. �
 |----------------------------|------------------------------------------------------|
 | 부팅 완료 후 Welcome Prompt 직전  | • On/Off 설정 없으며 항상 소리를 제공<br/>• 기기별로 설정 가능           |
 
-![](/assets/images/nugu-device-01.png)
+![](../../assets/images/nugu-device-01.png)
 
 **호출 효과 (Wake up success)**
 
@@ -84,11 +84,11 @@ NUGU 기기에서 제공하는 물리적 버튼들은 다음과 같습니다. �
 
 호출어 발화 시
 
-![](/assets/images/nugu-device-02.png)
+![](../../assets/images/nugu-device-02.png)
 
 Slot-filling 시
 
-![](/assets/images/nugu-device-03.png)
+![](../../assets/images/nugu-device-03.png)
 
 **인식 완료음 (End listen)**
 
@@ -98,7 +98,7 @@ Listening 상태에서 사용자의 발화가 완료되어 Listening 상태가 �
 |-----------------------|-----------------------------------------------------|
 | Wake up 후 발화 인식 성공 시  | • 애플리케이션에서 On/Off 설정을 제공<br/>• 기기별로 설정 가능           |
 
-![](/assets/images/nugu-device-04.png)
+![](../../assets/images/nugu-device-04.png)
 
 #### **응답 실패 (Response fail)**
 
@@ -110,11 +110,11 @@ Listening 상태에서 사용자의 발화가 완료되어 Listening 상태가 �
 
 잡음 / 1음절 발화 / 블랙 리스트 발화 시
 
-![](/assets/images/nugu-device-05.png)
+![](../../assets/images/nugu-device-05.png)
 
 Slot-filling을 위한 listening 상태에서 타임아웃 시
 
-![](/assets/images/nugu-device-06.png)
+![](../../assets/images/nugu-device-06.png)
 
 **전원 꺼짐 (Power off)**
 
@@ -124,7 +124,7 @@ Slot-filling을 위한 listening 상태에서 타임아웃 시
 |-----------|--------------------------------------------|
 | 전원을 끌 경우  | • On/Off 설정 없으며 항상 소리를 제공<br/>• 기기별로 설정 가능 |
 
-![](/assets/images/nugu-device-07.png)
+![](../../assets/images/nugu-device-07.png)
 
 ### **2) 서비스 효과음(Service Feedback Sound)**
 
@@ -148,4 +148,4 @@ Slot-filling을 위한 listening 상태에서 타임아웃 시
 | 볼륨을 높일    | 볼륨 제어음 재생 O    | 볼륨 제어음 재생 O               |
 | 볼륨을 낮출 때  | 볼륨 제어음 재생 O    | 볼륨 제어음 재생 O               |
 
-![](/assets/images/nugu-device-08.png)
+![](../../assets/images/nugu-device-08.png)

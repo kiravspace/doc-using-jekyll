@@ -4,7 +4,7 @@ depth_order: 2
 
 # 구성요소
 
-![](/assets/images/component-01.jpeg)
+![](../../../assets/images/component-01.jpeg)
 
 ## 구성요소 목록
 

@@ -30,7 +30,7 @@ Play가 디바이스의 특정 기능을 제어하기 위한 명령어입니다.
 
 Built-in Intent, Directive, Event는 스피커와 Play 사이에서 다음과 같은 방향으로 전달됩니다.
 
-![](/assets/images/capability-interfaces-01.png)
+![](../../../assets/images/capability-interfaces-01.png)
 
 ## Built-in Intent
 
@@ -50,7 +50,7 @@ Play는 Backend proxy로부터 Directive를 넘겨받아 디바이스로 전달�
 
 Directive 구현에 대한 자세한 내용은 은 [Backend proxy API Reference](backend-proxy-api-reference)를 참고해 주세요.
 
-![](/assets/images/capability-interfaces-02.png)
+![](../../../assets/images/capability-interfaces-02.png)
 
 Directive가 정의된 Play를 사용하기 위해서 일반적으로 사용자는 "아리아 AA뮤직에서 최신 음악 틀어줘"와 같이 Play의 호출 이름(Invocation name)을 함께 발화해야 합니다.
 
@@ -60,7 +60,7 @@ Directive가 정의된 Play를 사용하기 위해서 일반적으로 사용자�
 * 일시 정지(Pause) 상태인 경우, 일시 정지 시점부터 1시간 이내
 * 오디오가 종료된 후 17초 이내
 
-![](/assets/images/capability-interfaces-03.png)
+![](../../../assets/images/capability-interfaces-03.png)
 
 ## Event
 

@@ -23,7 +23,7 @@ Play 생성과 함께 추가되는 Universal Intent는 다음과 같습니다.
 
 Play를 빌드하기 위해서는 Universal Intent을 처리할 Action이 반드시 존재해야 합니다. Universal Intent를 trigger로 설정한 Action을 생성하지 않은 경우, Built-in Action이 자동 추가되며 Play를 생성할 때 입력한 기본응답을 통해 자동 정의됩니다.
 
-![](/assets/images/built-in-intents-01.png)
+![](../../../assets/images/built-in-intents-01.png)
 
 ## Control Intent
 

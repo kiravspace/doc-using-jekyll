@@ -10,13 +10,13 @@ Biz 사용자 관리 체험판에서는 Private Play 단위로 사용자를 초�
 
 현재의 권한 확인이 가능합니다. 정식판의 경우 Biz Service를 위한 정보, Biz API를 위 제휴사 계정 기반 토큰 생성을 위한 정보 등 더 많은 정보를 활용하여 사용자를 초대할 수 있습니다.
 
-![](/assets/images/enrolled-user-invitation-trial-01.png)
+![](../../assets/images/enrolled-user-invitation-trial-01.png)
 
 ## 2. 사용자 그룹 관리
 
 Biz 사용자 관리 > 사용자 그룹 관리에서 초대할 사용자가 소속될 그룹을 생성하고, 관리 할 수 있습니다. 그룹별 Private Play를 구성할 수 있습니다. 그룹이 없는 사용자의 경우 미분류에 해당됩니다.
 
-![](/assets/images/enrolled-user-invitation-trial-02.png)
+![](../../assets/images/enrolled-user-invitation-trial-02.png)
 
 ## 3. 사용자 초대 관리
 
@@ -24,20 +24,20 @@ Biz 사용자 관리 > 사용자 그룹 관리에서 초대할 사용자가 소�
 
 사용자 초대 관리에서 "사용자 초대하기"로 들어가면 초대를 위한 상세 페이지로 이동합니다.
 
-![](/assets/images/enrolled-user-invitation-trial-03.png)
+![](../../assets/images/enrolled-user-invitation-trial-03.png)
 
 ### 사용자 초대 기본정보 입력
 
 * 초대 메일에 표시될 "기본정보"를 입력합니다. 입력된 내용은 "초대장 미리보기"로 확인 가능합니다.
 
-![](/assets/images/enrolled-user-invitation-trial-04.png)
+![](../../assets/images/enrolled-user-invitation-trial-04.png)
 
 ### **사용자 초대 그룹 및 Private Play 지정**
 
 * 그리고 미리 만들어진 "사용자 그룹"을 지정하여 초대하거나, 새로운 사용자 그룹을 만들어 초대하거나, 혹은 "미분류"로 초대 할 수 있습니다.
 * 미리 만들어진 그룹으로 초대하는 경우, 해당 그룹의 Private Play가 할당됨으로 별도로 Private Play를 선택하지 않습니다. 미분류나 새로운 그룹을 만들어 초대하는 경우는, 사용할 Private Play를 선택하여 초대합니다.
 
-![](/assets/images/enrolled-user-invitation-trial-05.png)
+![](../../assets/images/enrolled-user-invitation-trial-05.png)
 
 ### 초대자 등록
 
@@ -45,17 +45,17 @@ Biz 사용자 관리 > 사용자 그룹 관리에서 초대할 사용자가 소�
 
 * 초대자 직접등록
 
-![](/assets/images/enrolled-user-invitation-trial-06.png)
+![](../../assets/images/enrolled-user-invitation-trial-06.png)
 
 * 초대자 파일로 등록
 
-![](/assets/images/enrolled-user-invitation-trial-07.png)
+![](../../assets/images/enrolled-user-invitation-trial-07.png)
 
 ### 초대장 미리보기
 
 입력한 초대 기본 정보를 포함하여, 수신 대상 초대자에게 보낼 메일의 내용을 미리 확인 할 수 있습니다. 초대장 발송은 미리보기 확인 후 가능합니다.
 
-![](/assets/images/enrolled-user-invitation-trial-08.png)
+![](../../assets/images/enrolled-user-invitation-trial-08.png)
 
 ### 초대장 발송
 
@@ -71,11 +71,11 @@ Biz 사용자 관리 > 사용자 그룹 관리에서 초대할 사용자가 소�
 
 사용자는 이메일로 수신된 초대장에서 "여기" 링크를 클릭하여 NUGU ID 인증 페이지로 이동할 수 있으며, 로그인 인증 시점부터 Private Play 이용이 가능합니다. 제공 받은 Private Play의 상세 정보는 NUGU App에서 확인할 수 있습니다.
 
-![](/assets/images/enrolled-user-invitation-trial-09.png)
+![](../../assets/images/enrolled-user-invitation-trial-09.png)
 
-![](/assets/images/enrolled-user-invitation-trial-10.png)
+![](../../assets/images/enrolled-user-invitation-trial-10.png)
 
-![](/assets/images/enrolled-user-invitation-trial-11.png)
+![](../../assets/images/enrolled-user-invitation-trial-11.png)
 
 {% alerts style="info" %}
 이메일마다 하나의 NUGU ID만 인증 할 수 있습니다.

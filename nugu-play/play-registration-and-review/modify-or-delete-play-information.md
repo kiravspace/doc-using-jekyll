@@ -8,7 +8,7 @@ depth_order: 3
 
 Play 상태가 등록, 심사 대기(심사 요청 중) 상태일 때는 심사 요청과 등록을 취소해야 정보를 수정할 수 있습니다.
 
-![](/assets/images/modify-or-delete-play-information-01.png)
+![](../../assets/images/modify-or-delete-play-information-01.png)
 
 {% alerts style="info" %}
 심사 대기 중인 Play를 취소하는 방법은 [심사 취소](play-review#review-cancellation)를 참고하세요.

@@ -21,7 +21,7 @@ Play 심사 승인이 거절되면 Play 반려 사유 리포트를 Play 기본 �
 개발 완료 및 충분한 테스트를 마친 Play는 [심사 요청](play-review#review-request) 이후 다음의 프로세스에 따라 심사합니다.\
 심사 소요 기간은 각 기준을 충족했을 때, 심사 착수 후 2~3주(워킹데이 10~15일)입니다.
 
-![](/assets/images/play-review-01.png)
+![](../../assets/images/play-review-01.png)
 
 {% alerts style="info" %}
 심사완료 직전, 수정 피드백 반영을 위해 일시 반려할 수 있습니다.
@@ -178,11 +178,11 @@ NUGU play와 기본 NUGU서비스 간 간섭을 방지하고자 아래와 같은
 
 등록/심사 요청 페이지 하단에 위치한 `심사요청` 버튼을 클릭하여 Play의 심사를 요청합니다.
 
-![](/assets/images/simsago.png)
+![](../../assets/images/simsago.png)
 
 심사 요청과 동시에 Play 상태는 심사 대기로 전환되고, Play 심사 담당자에게 심사 요청 사항이 자동으로 전달됩니다. Play 상태는 `Developers Console` > `Play kit` > `Play 관리` 페이지에서 확인할 수 있습니다.
 
-![](/assets/images/simsajung.png)
+![](../../assets/images/simsajung.png)
 
 {% alerts style="warning" %}
 심사 요청된 Play 정보를 운영자가 검토하여 필수 정보가 누락된 경우에는 본격적인 심사 과정을 진행하기 전에 반려할 수 있습니다.\
@@ -200,7 +200,7 @@ Play 심사가 시작하기 전인 심사 요청 상태(**심사대기** 상태)
 1. `Developers Console` > P`lay kit` > `Play 관리`에서 심사를 취소할 **심사대기** 상태의 Play를 클릭하여 선택합니다.
 2. 배포/심사 정보 페이지 하단에 위치한 `심사취소` 버튼을 클릭하여 심사 취소를 완료합니다.
    
-   ![](/assets/images/simsacancel2.png)
+   ![](../../assets/images/simsacancel2.png)
 3. 심사 취소 요청과 동시에 Play는 등록 중 상태로 바뀝니다.
 
 {% alerts style="info" %}

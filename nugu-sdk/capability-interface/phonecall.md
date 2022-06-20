@@ -17,7 +17,7 @@ description: 전화 수/발신 기능 제어를 위한 규격
 
 ## State Diagram
 
-![](/assets/images/phonecall-01.png)
+![](../../assets/images/phonecall-01.png)
 
 ## SDK Interface
 

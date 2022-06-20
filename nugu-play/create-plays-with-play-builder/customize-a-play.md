@@ -17,19 +17,19 @@ Play Builder 내에서 사용되는 것으로 여러 버전의 Play를 만들고
 **③ Capability Interface**\
 NUGU에서 제공하는 Capability Interface를 사용하여 Play를 만들 경우, 사용할 Interface를 체크하면 사용이 가능하며 여러 개의 Interface 간 중복해서 사용할 수 있습니다. 단, Capability Interface를 사용하기 위해서는 Backend proxy와 필수적으로 연동되어 있어야 합니다.
 
-![](/assets/images/customize-a-play-01.png)
+![](../../assets/images/customize-a-play-01.png)
 
 {% alerts style="info" %}
 현재는 AudioPlayer Interface와, Display Interface를 지원합니다.  자세한 내용은
 
-[AudioPlayer Interface 지원하는 Play 만들기](./create-a-play-with-audioplayer)
+[AudioPlayer Interface 지원하는 Play 만들기](create-a-play-with-audioplayer)
 
 [Display Interface ](./use-backend-proxy/capability-interfaces/display-interface)
 
 를 참고하세요.
 {% endalerts %}
 
-![](/assets/images/customize-a-play-02.jpg)
+![](../../assets/images/customize-a-play-02.jpg)
 
 **④ 합성음 목소리**
 
@@ -56,7 +56,7 @@ NUGU에서 제공하는 Capability Interface를 사용하여 Play를 만들 경�
 
 ## 외부 연동 서버 설정 및 예외 상황 관리(`General` > `외부 서버 연결 정보`) <a href="setting-backend-proxy" id="setting-backend-proxy"></a>
 
-![](/assets/images/customize-a-play-03.jpg)
+![](../../assets/images/customize-a-play-03.jpg)
 
 **⑥ Web URL**
 
@@ -94,10 +94,10 @@ Play에서 정상적인 응답을 못하는 경우(예: 콘텐츠 서버의 무�
 
 Intent(혹은 precondition)와 Action과의 관계 및 Action Tree를 보여줍니다.
 
-![](/assets/images/customize-a-play-04.png)
+![](../../assets/images/customize-a-play-04.png)
 
 ## 빌드/History(`General` > `빌드 / History`)
 
 빌드 이력(History)을 확인할 수 있습니다. 또한, 이 페이지에서도 `Play 빌드` 버튼을 이용하여 Play를 빌드할 수 있습니다.
 
-![](/assets/images/customize-a-play-05.png)
+![](../../assets/images/customize-a-play-05.png)

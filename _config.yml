@@ -1,3 +1,9 @@
+includes_dir: ""
+
+collections:
+  posts:
+    output: false
+
 plugins:
   - jekyll-spaceship
 
@@ -10,8 +16,7 @@ defaults:
   - scope:
       path: "README.md"
     values:
-      permalink: /
-      depth_order: 1
+      permalink: "/"
 
 markdown: kramdown
 
@@ -25,9 +30,13 @@ kramdown:
 exclude:
   - "*.iml"
   - ".idea/"
+  - "_jekyll-potion"
+  - "_exclude"
 
 sass:
   style: compressed
+
+baseurl: "/document"
 
 ########################################
 
@@ -51,3 +60,12 @@ potion_config:
   is_show_pagination: true
   is_show_empty_to_child_pages: true
 ########################################
+
+########################################
+
+potion:
+  title: Developers | Guide
+########################################
+
+jekyll-potion:
+  title: Developers | Guide

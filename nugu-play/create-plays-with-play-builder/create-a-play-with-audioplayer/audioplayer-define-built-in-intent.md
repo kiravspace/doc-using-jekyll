@@ -18,9 +18,9 @@ depth_order: 3
 
 ## "resume" Built-in Intent를 처리하는 Action 정의
 
-1. Action을 정의할 Play가 `General` > `기본 정보` 페이지의 Capability Interface에서 AudioPlayer Interface 제어 항목이 `ON`으로 설정되어 있는지 확인합니다. ![](/assets/images/audioplay-define-built-in-intent-01.png)
+1. Action을 정의할 Play가 `General` > `기본 정보` 페이지의 Capability Interface에서 AudioPlayer Interface 제어 항목이 `ON`으로 설정되어 있는지 확인합니다. ![](../../../assets/images/audioplay-define-built-in-intent-01.png)
 2. Play에 'resume'이라는 Action을 생성합니다.
-3. Trigger의 Intent 항목에서 NUGU.INTENT.resume을 선택합니다. ![](/assets/images/audioplay-define-built-in-intent-02.png)
+3. Trigger의 Intent 항목에서 NUGU.INTENT.resume을 선택합니다. ![](../../../assets/images/audioplay-define-built-in-intent-02.png)
 
 ## 스피커의 상태를 처리하는 Branch Action 생성
 
@@ -31,30 +31,30 @@ depth_order: 3
 * **resumeWhileStopped** - 나머지 모든 경우(Default)
 * Branch Action의 종류는 위에서 스피커의 상태에 따라 동작을 정의한 표와 동일합니다.
 
-![](/assets/images/audioplay-define-built-in-intent-03.gif)
+![](../../../assets/images/audioplay-define-built-in-intent-03.gif)
 
 ## 각 Branch Action에서 Trigger 조건 정의
 
-1. Branch Action의 버튼을 클릭하여 각 Branch Action의 상세 설정 페이지로 이동합니다. ![](/assets/images/audioplay-define-built-in-intent-04.png)
+1. Branch Action의 버튼을 클릭하여 각 Branch Action의 상세 설정 페이지로 이동합니다. ![](../../../assets/images/audioplay-define-built-in-intent-04.png)
 2. 이동한 Branch Action의 'Trigger 선택' 영역에서 Trigger Composite Condition 항목의 `+` > `Condition` 버튼을 클릭하면 하단에 셀렉트 박스(Select Box)가 표시됩니다.
 3. 첫 번째 셀렉트 박스에서 `[NPK]context_supportedInterfaces_AudioPlayer_playerActivity`를 선택하고, 두 번째 셀렉트 박스에서 `다음과 같을 경우`를 선택한 후, 우측에 생긴 박스에서 `String`을 선택 상태로 두고 각 Branch Action별로 `PAUSED`, `PLAYING` 이라고 입력합니다.
    * Default로 선택된 Branch Action은 Trigger 정의가 필요없습니다.
    * AudioPlayer 상태는 context.supportedInterfaces.AudioPlayer.playerActivity"에 저장되어 있습니다.
    * context.supportedInterfaces.AudioPlayer.playerActivity는 Backend proxy API의 Request Body에 정의되어 있습니다. 자세한 내용은 [Backend proxy API Reference](../use-backend-proxy/#backend-proxyapireference)를 참고하세요.
-4. Trigger 다음과 같이 정의하면, 'resumeWhilePause' Branch Action은 PAUSED 상태에서 동작합니다. ![](/assets/images/audioplay-define-built-in-intent-05.gif)
-5. 그리고, 'resumeWhilePlaying' Branch Action은 같은 방식으로 PLAYING 이라고 입력합니다. ![](/assets/images/audioplay-define-built-in-intent-06.png)
-6. 나머지 모든 경우는 각 상태에 대한 조건을 모두 정의할 필요 없이 Branch Action을 Default로 지정합니다. ![](/assets/images/audioplay-define-built-in-intent-07.png)
+4. Trigger 다음과 같이 정의하면, 'resumeWhilePause' Branch Action은 PAUSED 상태에서 동작합니다. ![](../../../assets/images/audioplay-define-built-in-intent-05.gif)
+5. 그리고, 'resumeWhilePlaying' Branch Action은 같은 방식으로 PLAYING 이라고 입력합니다. ![](../../../assets/images/audioplay-define-built-in-intent-06.png)
+6. 나머지 모든 경우는 각 상태에 대한 조건을 모두 정의할 필요 없이 Branch Action을 Default로 지정합니다. ![](../../../assets/images/audioplay-define-built-in-intent-07.png)
 
 ## 각 Branch Action의 응답 정의
 
-1. 응답에 필요한 정보 가져오기에서 Backend proxy 사용 여부 항목이 `ON`으로 설정되어 있는지 확인합니다. ![](/assets/images/audioplay-define-built-in-intent-08.png)
-2. Output 영역에서 각 Branch Action별로 응답을 정의합니다. resumeWhilePause Branch Action은 Response 유형을 `Directive`로 선택합니다. ![](/assets/images/audioplay-define-built-in-intent-09.png)
+1. 응답에 필요한 정보 가져오기에서 Backend proxy 사용 여부 항목이 `ON`으로 설정되어 있는지 확인합니다. ![](../../../assets/images/audioplay-define-built-in-intent-08.png)
+2. Output 영역에서 각 Branch Action별로 응답을 정의합니다. resumeWhilePause Branch Action은 Response 유형을 `Directive`로 선택합니다. ![](../../../assets/images/audioplay-define-built-in-intent-09.png)
    * resumeWhilePause Branch Action의 응답은 이전의 일시 정지(PAUSED) 시점의 시간을 AudioPlayer.Play Directive를 통해 전송하면 됩니다.
    * AudioPlayer.Play Directive를 Backend proxy에서 만들어서 전송하면 해당 Directive는 스피커까지 전송되어 '이어서 재생'을 시작합니다.
    * AudioPlayer.Play Directive의 offsetInMilliseconds 값은 일시 정지된 시간을 넣어주어야 이어서 재생이 가능합니다.
-3. resumeWhilePlaying Branch Action은 Prompt에 "이미 재생 중입니다." 등의 응답 메시지를 입력합니다. ![](/assets/images/audioplay-define-built-in-intent-10.png)
+3. resumeWhilePlaying Branch Action은 Prompt에 "이미 재생 중입니다." 등의 응답 메시지를 입력합니다. ![](../../../assets/images/audioplay-define-built-in-intent-10.png)
    * 오디오가 이미 재생 중이기 때문에 Directive를 전송할 필요가 없으므로 응답 Prompt만을 보내고 계속 이어서 재생합니다.
-4. resumeWhileStopped Branch Action은 Response 유형을 `Prompt + Directive`로 선택하고, Prompt에 '음악을 들려드릴게요.' 등의 응답 메시지를 입력합니다. ![](/assets/images/audioplay-define-built-in-intent-11.png)
+4. resumeWhileStopped Branch Action은 Response 유형을 `Prompt + Directive`로 선택하고, Prompt에 '음악을 들려드릴게요.' 등의 응답 메시지를 입력합니다. ![](../../../assets/images/audioplay-define-built-in-intent-11.png)
    * 오디오를 이어서 재생하는 것은 아니지만 해당 Action을 처음부터 재생 시작하도록 정의했으므로, 응답 Prompt로 음악 재생이 시작됨을 알려줌과 동시에 AudioPlayer.Play Directive를 전송해야 합니다.
    * 이 경우 Backend proxy는 offsetInMilliseconds 값을 0으로 하여 처음부터 재생하도록 AudioPlayer.Play Directive를 전송해야 합니다.
 5. 각 Branch Action별로 설정을 완료할 때마다 `Play 저장` 버튼을 클릭하여 Play에 적용합니다.

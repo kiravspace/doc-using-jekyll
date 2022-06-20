@@ -54,7 +54,7 @@ let dialogStateAggregator = nuguClient.dialogStateAggregator
 {% endcode %}
 {% endtabs::content %}
 
-{% test::content title="Linux" %}
+{% tabs::content title="Linux" %}
 CapabilityFactory::makeCapability 함수로 ChipsAgent 를 생성하고 NuguClient 에 추가해 주어야합니다.
 
 {% code %}

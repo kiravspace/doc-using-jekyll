@@ -9,9 +9,9 @@ description: Directive 의 실행 순서를 제어하기 위한 규격
 
 최신 버전은 1.0 입니다.
 
-| Version | Date | Description |
-| :--- | :--- | :--- |
-| 1.0 | 2020.11.30 | 규격 추가 |
+| Version | Date       | Description |
+|:--------|:-----------|:------------|
+| 1.0     | 2020.11.30 | 규격 추가       |
 
 ## SDK Interface
 

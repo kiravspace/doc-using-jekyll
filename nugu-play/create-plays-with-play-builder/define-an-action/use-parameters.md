@@ -12,8 +12,8 @@ depth_order: 2
 
 Parameter는 정보를 담아두고 사용하는 일종의 그릇입니다. Play에서 응답을 만들 때 문장 내에 parameter를 입력하면, 해당 Parameter에 담긴 정보(Entity)에 따라 Play가 응답합니다.
 
-![](/assets/images/use-parameters-01.png)
+![](../../../assets/images/use-parameters-01.png)
 
 이러한 Parameter는 정보를 어디서 가져오는가에 따라 Utterance Parameter와 Backend Parameter로 구분됩니다. Utterance Parameter는 사용자의 발화에서 가져온 정보를 담는 Parameter이며, Backend Parameter는 외부 서버 등 사용자의 발화 외의 곳에서 정보를 가져와 담는 Parameter입니다.
 
-![](/assets/images/use-parameters-02.png)
+![](../../../assets/images/use-parameters-02.png)

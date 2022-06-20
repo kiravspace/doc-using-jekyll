@@ -15,7 +15,7 @@ Directive를 사용하여 디바이스를 제어하기 위해서는 다음과 �
 {% alerts style="info" %}
 Directive의 개념과 이를 적용하는 방법에 대한 자세한 내용은 다음을 참고하세요.
 
-* Directive 개념에 대한 자세한 내용은 [Response 사용하기](../../../create-plays-with-play-builder/define-an-action/use-responses)를 참고하세요.
+* Directive 개념에 대한 자세한 내용은 [Response 사용하기]()를 참고하세요.
 * Capability Interface의 개념과 Play Directive에 대한 자세한 내용은 [Capability Interfaces](../../use-backend-proxy/capability-interfaces)를 참고하세요.
 * AudioPlayer Interface 지원하는 Play를 만드는 방법에 대한 자세한 내용은 [AudioPlayer Interface 지원하는 Play 만들기](../../create-a-play-with-audioplayer)를 참고하세요.
 {% endalerts %}
@@ -26,17 +26,17 @@ Directive를 사용하기 위해서는 Backend proxy에 Capability Interface 규
 
 다음은 AudioPlayer Interface를 지원하는 스피커에 Directive가 전달되는 과정을 설명한 그림입니다.
 
-![](/assets/images/use-directives-01.png)
+![](../../../../assets/images/use-directives-01.png)
 
 ## Capability Interface를 사용함으로 설정하기
 
 * Play Builder 홈 화면에서 Capability Interface를 설정할 Play를 클릭하여 선택한 후 `General` > `기본 정보` 페이지의 Capability Interface에서 AudioPlayer Interface 제어 항목을 `ON`으로 설정합니다.
 
-![](/assets/images/use-directives-02.png)
+![](../../../../assets/images/use-directives-02.png)
 
 * Built-in Intent 15개가 추가됩니다. Built-in Intent 추가 여부는 `User Utterance Model` > `Built-in Intents` 페이지에서 확인할 수 있습니다.
 
-![](/assets/images/use-directives-03.png)
+![](../../../../assets/images/use-directives-03.png)
 
 ## Action에서 Directive 사용하기
 
@@ -46,7 +46,7 @@ Capability Interface를 사용함으로 설정한 Play는 Response의 유형이 
 위 내용에 대한 자세한 내용은 [AudioPlayer Interface 지원하는 Play 만들기](../../create-a-play-with-audioplayer)를 참고하세요. 그리고 필수 Intent에 대한 자세한 내용은 User Utterance Model 정의하기(Intent & Entity)의 [Built-in Intents](../../define-user-utterance-model/built-in-intents)를 참고하세요.
 {% endalerts %}
 
-![](/assets/images/use-directives-04.png)
+![](../../../../assets/images/use-directives-04.png)
 
 한 Play에서 여러 Directive를 사용하는 경우, Backend proxy에서 Action을 구분해서 Directive를 전달하게 됩니다.
 

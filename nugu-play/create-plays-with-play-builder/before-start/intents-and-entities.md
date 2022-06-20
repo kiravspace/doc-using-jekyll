@@ -47,7 +47,7 @@ Entity는 필요한 경우에만 정의하는 선택 요소이지만, 정의한 
 
 **Entity Type**은 특정 Entity들의 집합 또는 그 범주를 의미하며, **Entity Role**은 특정 Entity의 발화 문장에서의 역할을 의미합니다.
 
-![](/assets/images/intents-and-entities-01.png)
+![](../../../assets/images/intents-and-entities-01.png)
 
 Entity Type은 Built-in Entity Type과 Custom Entity type으로 구분됩니다.
 
@@ -74,12 +74,12 @@ Entity Type은 Built-in Entity Type과 Custom Entity type으로 구분됩니다.
 
 ask.weather를 생성하고, 이 Intent에 예상 발화를 연결하면 User Utterance Model이 완성됩니다.
 
-![](/assets/images/intents-and-entities-02.png)
+![](../../../assets/images/intents-and-entities-02.png)
 
 그러나, 실제로는 사용자가 "어제 날씨 알려줘", "내일 날씨 알려줘", "명동 날씨 알려줘" 와 같이 발화할 수도 있습니다. 이러한 발화들을 각각 독립된 Intent로 정의한 뒤, 각 Intent를 처리하는 기능들을 추가하여 처리하는 것도 가능합니다.
 
-![](/assets/images/intents-and-entities-03.png)
+![](../../../assets/images/intents-and-entities-03.png)
 
 그러나 '어제', '내일', '명동'을 Entity로 간주하고 동일한 ask.weather Intent로 처리하면, 조금 더 효율적으로 대응이 가능합니다. 이를 위해, 같은 속성을 가진 Entity끼리 하나의 Entity Type으로 묶고, 이를 예상 발화에 지정하면 Entity를 활용한 User Utterance Model을 정의할 수 있습니다. Entity Type을 예상 발화에 지정할 때에는 Entity Type별로 하나의 값만을 사용해도 됩니다.
 
-![](/assets/images/intents-and-entities-04.png)
+![](../../../assets/images/intents-and-entities-04.png)

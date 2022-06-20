@@ -12,7 +12,7 @@ Backend proxy는 응답을 생성하기 위해 필요한 정보를 외부로부�
 개발에 대한 자세한 내용은 [외부 연동 서버(Backend proxy)](use-backend-proxy)를 참고하세요.
 {% endalerts %}
 
-![](/assets/images/create-a-play-using-backend-proxy-01.png)
+![](../../assets/images/create-a-play-using-backend-proxy-01.png)
 
 Backend proxy는 위 그림과 같이 다음의 경우에 사용합니다.
 
@@ -53,8 +53,8 @@ Backend proxy는 위 그림과 같이 다음의 경우에 사용합니다.
 {% alerts style="info" %}
 Backend Parameter, 예외 상황 관리, Capability Interface(Directive)와 관련한 자세한 내용은 다음 링크 페이지를 참고하세요.
 
-* **Parameter**: [Parameter 사용하기](./define-an-action/use-parameters)
-* **Capability Interface(Directive)**: [AudioPlayer Interface 지원하는 Play 만들기](./create-a-play-with-audioplayer)
+* **Parameter**: [Parameter 사용하기](define-an-action/use-parameters)
+* **Capability Interface(Directive)**: [AudioPlayer Interface 지원하는 Play 만들기](create-a-play-with-audioplayer)
 * **예외 상황**: [예외 상황 관리](./define-an-action/manage-exceptions)
 {% endalerts %}
 

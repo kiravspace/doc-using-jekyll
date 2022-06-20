@@ -36,21 +36,21 @@ OAuth를 이용해 사용자 정보에 접근할 수 있고, 이를 통해 Play�
 
 1.  Github App의 우측 상단 내 Profile 사진을 클릭하고 `Settings` > `Developers settings` > `OAuth Apps` > `Settings` 메뉴를 클릭합니다.
 
-    ![](/assets/images/link-oauth20-01.png)
+    ![](../../assets/images/link-oauth20-01.png)
 2. `New OAuth App` 버튼을 클릭하여 새로운 OAuth App을 만듭니다.
    * 최초 등록하는 경우, 버튼에는 `Register a new application`이라고 표시됩니다.
 
-     ![](/assets/images/link-oauth20-02.png)
+     ![](../../assets/images/link-oauth20-02.png)
 3. OAuth App 생성 화면에서 Application name, Homepage URL, Application description, Authorization callback URL을 입력한 후 `Register application`을 눌러 OAuth App을 생성을 완료합니다.
    * Authorization callback URL에는 `https://developers.nugu.co.kr/app/callback.html`을 입력합니다.
 
-     ![](/assets/images/link-oauth20-03.png)
+     ![](../../assets/images/link-oauth20-03.png)
 
 ### 2단계: OAuth App 정보 확인하기
 
 1단계에서 등록한 OAuth App에서 Client ID와 Client Secret 정보를 확인합니다.
 
-![](/assets/images/link-oauth20-04.png)
+![](../../assets/images/link-oauth20-04.png)
 
 ### 3단계: OAuth URL 정보 확인하기
 
@@ -73,7 +73,7 @@ OAuth Scope는 Access Token으로 사용할 수 있는 리소스의 허용 범�
 
 2단계부터 4단계에 걸쳐 확인한 정보를 `Developers` > `Play kit` > `Play 관` 메뉴에서 `Play 등록하기` 버튼을 클릭해 OAuth 계정 연동 정보를 입력합니다.
 
-![](/assets/images/link-oauth20-05.png)
+![](../../assets/images/link-oauth20-05.png)
 
 #### ① 로그인 URL
 3단계에서 확인한 URL을 입력합니다. ([https://github.com/login/oauth/authorize](https://github.com/login/oauth/authorize))
@@ -226,12 +226,12 @@ Content-Length:
 ## OAuth 연동 테스트하기 <a href="test-oauth" id="test-oauth"></a>
 
 1. Play의 상태가 등록중, 심사대기, 심사반려, 심사중, 심사완료, 배포대기 중인 경우에 스피커에서 테스트가 가능합니다.
-   ![](/assets/images/link-oauth20-06.png)
+   ![](../../assets/images/link-oauth20-06.png)
 2. [테스트하기](test-a-play)에서 '디바이스(스피커)에서 테스트하기' 항목을 참고하여 테스트 스피커를 추가합니다.
 3. NUGU 앱에 접속하여 왼쪽 위의 햄버거 메뉴를 클릭한 후 NUGU play 항목에서 내가 만든 Play를 클릭합니다.
-   ![](/assets/images/link-oauth20-07.png)
+   ![](../../assets/images/link-oauth20-07.png)
 4. '계정 연동' 버튼을 클릭합니다. 계정 연동 후 스피커로 테스트합니다. NUGU 앱에서 계정 연동을 하고 스피커로 테스트 하면 accessToken을 받을 수 있습니다. (단, 플레이 등록 후 하루 후부터 스피커 테스트가 가능합니다.)
-   ![](/assets/images/link-oauth20-08.png)
+   ![](../../assets/images/link-oauth20-08.png)
 
 {% alerts style="info" %}
 Play를 등록하는 방법은 [Play 정보 등록](../play-registration-and-review/register-a-play)을 참고하세요.

@@ -23,17 +23,17 @@ User Utterance Model은 Play가 사용자의 말을 이해할 수 있도록 훈�
 
 이 도구는 완전히 같은 텍스트로 구성되었지만 다른 방식으로 Entity가 태깅된 문장들을 찾아냅니다. 동일한 문장이 다른 방식으로 태깅되면, NLU엔진 또한 복수로 분석하게 되어 명확한 동작 수행을 할 수 없습니다. 이 도구에서 발견되는 문장은 하나의 방식으로 태깅해야 합니다. 아래의 예는 잘못 태깅한 문장을 나타냅니다.
 
-![](/assets/images/corpus-inspection-01.png)
+![](../../../assets/images/corpus-inspection-01.png)
 
 훈련 데이터를 구성할 때 이와 같이 동일한 문장을 다르게 Entity 태깅한 경우, `중복 태깅 찾기` 도구는 아래와 같이 분석을 하게 됩니다. 이 경우에는, 두 문장 중 하나를 삭제해야만 정상적인 결과를 얻을 수 있습니다.
 
-![](/assets/images/corpus-inspection-02.png)
+![](../../../assets/images/corpus-inspection-02.png)
 
 아래의 예와 같이 같은 문장이 서로 다른 Intent에서 다른 Entity 태깅이 된 경우도 중복태깅으로 간주하여 `중복 태깅 찾기`도구는 해당 문장을 찾아내게 됩니다.
 
-![](/assets/images/corpus-inspection-03.png)
+![](../../../assets/images/corpus-inspection-03.png)
 
-![](/assets/images/corpus-inspection-04.png)
+![](../../../assets/images/corpus-inspection-04.png)
 
 ## 훈련/결과 불일치 문장 찾기 <a href="not-matched" id="not-matched"></a>
 
@@ -41,7 +41,7 @@ User Utterance Model은 Play가 사용자의 말을 이해할 수 있도록 훈�
 
 다음과 같이 같은 텍스트가 여러 개의 Entity Type으로 정의된 경우, 훈련 요청한 대로 실제 분석이 되지 않게 됩니다. 다음과 같이 '택배'라는 텍스트가 연락처를 의미하는 'CONTACTS'와 기능을 의미하는 'FUNCTION'에 포함된 경우 중의성이 발생하여 원하는 결과를 얻을 수 없을 가능성이 높습니다.
 
-![](/assets/images/corpus-inspection-05.png)
+![](../../../assets/images/corpus-inspection-05.png)
 
 {% alerts style="danger" %}
 검증 도구를 통과했다고 하여 훈련 데이터가 완벽함을 의미하지 않습니다.\

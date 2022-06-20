@@ -61,7 +61,7 @@ depth_order: 1
 | display.header         | body     | string             | Y    | 본문 제목                                                                                                                         |
 | display.body           | body     | string             | Y    | 본문 내용                                                                                                                         |
 | display.footer         | body     | string             |      | 본문 부가 설명                                                                                                                      |
-| display.image          | body     | string             |      | 이미지<br/>ImageText Type에서 이미지가 없을 경우, 디폴트 이미지 노출<br/>![](/assets/images/img_notification.png)                                  |
+| display.image          | body     | string             |      | 이미지<br/>ImageText Type에서 이미지가 없을 경우, 디폴트 이미지 노출<br/>![](../../../assets/images/img_notification.png)                                  |
 | display.grammarGuide   | body     | array of string    |      | 가이드 발화문                                                                                                                       |
 
 ## 3. Response <a href="#id-announcement-v1-3response" id="id-announcement-v1-3response"></a>
@@ -106,9 +106,9 @@ depth_order: 1
 
 ### 3.3 설명 <a href="#id-announcement-v1-3.3" id="id-announcement-v1-3.3"></a>
 
-| 이름                       | 속성                | 설명                                                                                                                                                                                                                                   |
-|--------------------------|-------------------|--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| devices                  | array of object   | 발송 요청 그룹내 디바이스들의 발송 결과                                                                                                                                                                                                               |
-| devices\[\].uniqueName   | string            | 발송 대상 기기의 unique name                                                                                                                                                                                                                |
-| devices\[\].token        | string            | 발송 대상 기기의 API Token                                                                                                                                                                                                                  |
-| devices\[\].resultCode   | enum              | 발송 결과<br/>OK : 발송 성공<br/>NOT_CONNECTED : 사용자에 연결되지 않은 기기<br/>TIMEOUT : 기기와의 연결 실패<br/>CONNECT_ERROR : 기기가 꺼져 있거나, 네트워크에 문제가 있음</em><br/><em></em>NOT<em>_</em>SUPPORTED : 지원하지 않는 기기<br/>ERROR : 알 수 없는 에러(개발팀 문의 필요)                |
+| 이름                     | 속성              | 설명                                                                                                                                                                                             |
+|------------------------|-----------------|------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
+| devices                | array of object | 발송 요청 그룹내 디바이스들의 발송 결과                                                                                                                                                                         |
+| devices\[\].uniqueName | string          | 발송 대상 기기의 unique name                                                                                                                                                                          |
+| devices\[\].token      | string          | 발송 대상 기기의 API Token                                                                                                                                                                            |
+| devices\[\].resultCode | enum            | 발송 결과<br/>OK : 발송 성공<br/>NOT_CONNECTED : 사용자에 연결되지 않은 기기<br/>TIMEOUT : 기기와의 연결 실패<br/>CONNECT_ERROR : 기기가 꺼져 있거나, 네트워크에 문제가 있음<br/>NOT_SUPPORTED : 지원하지 않는 기기<br/>ERROR : 알 수 없는 에러(개발팀 문의 필요) |

@@ -9,12 +9,12 @@ description: 음성 합성 결과를 전달받기 위한 규격
 
 최신 버전은 1.3 입니다.
 
-| Version | Date | Description |
-| :--- | :--- | :--- |
-| 1.0 | 2019.11.24 | 규격 추가 |
-| 1.1 | 2020.03.23 | Stop directive 에서 token 필드 삭제 |
-| 1.2 | 2020.06.05 | Context 에 token 필드 추가 |
-| 1.3 | 2020.11.09 | SpeechStarted, SpeechStopped, SpeechFinished event 전송 규칙 수정 |
+| Version | Date       | Description                                                 |
+|:--------|:-----------|:------------------------------------------------------------|
+| 1.0     | 2019.11.24 | 규격 추가                                                       |
+| 1.1     | 2020.03.23 | Stop directive 에서 token 필드 삭제                               |
+| 1.2     | 2020.06.05 | Context 에 token 필드 추가                                       |
+| 1.3     | 2020.11.09 | SpeechStarted, SpeechStopped, SpeechFinished event 전송 규칙 수정 |
 
 ## SDK Interface
 

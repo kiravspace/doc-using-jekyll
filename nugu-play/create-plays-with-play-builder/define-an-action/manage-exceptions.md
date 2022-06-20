@@ -13,7 +13,7 @@ Play가 동작하는 과정에서 정상적인 응답을 하지 못하는 경우
 1. 외부 연동 서버(Backend proxy)의 URL을 입력합니다.
    * http:// 또는 https://를 함께 입력해야 합니다.
 
-       ![](/assets/images/manage-exceptions-01.png)
+       ![](../../../assets/images/manage-exceptions-01.png)
 2. Backend proxy 사용 여부를 ON으로 설정합니다.
 3. 예외 처리 영역에서 Exception Code를 작성하고 \[Enter] 키를 누릅니다.
 4. Exception Prompt 필드에 응답할 Prompt를 입력한 후 \[Enter] 키를 누릅니다.
@@ -22,7 +22,7 @@ Play가 동작하는 과정에서 정상적인 응답을 하지 못하는 경우
      입력창에 처음 입력하는 Prompt의 유형은 종료 Prompt로, 두번째로 입력하는 Prompt는 대기 Prompt로 자동 설정됩니다.
    * 예외 상황의 Prompt는 스택으로 구성되어, LIFO(Last In First Out)로 동작합니다.
 
-       ![](/assets/images/manage-exceptions-02.gif)
+       ![](../../../assets/images/manage-exceptions-02.gif)
 
 예외 상황은 일반적으로 두 가지 종류가 있습니다.
 
@@ -39,19 +39,19 @@ Exception Prompt에서는 무엇이 문제인지를 간단하게 안내한 뒤, 
 
 이렇게 예상되는 장애는 (1)에 해당하므로 예외 상황으로 등록하여, 해당 장애 발생 시 사용자에게 정상적인 서비스가 불가능한 이유를 간단히 안내하고 세션을 종료해야 합니다. 이런 경우에는 Exception Prompt는 종료 Prompt 하나만 등록합니다.
 
-![](/assets/images/manage-exceptions-03.png)
+![](../../../assets/images/manage-exceptions-03.png)
 
 그러나, 사용자가 요청한 채널이 미지원 채널인 경우는 (2)에 해당합니다. 이러한 경우에도 종료 Prompt만 사용하여 미지원 채널임을 안내하고 세션 종료할 수도 있지만, 대기 Prompt를 하나 더 추가하여 사용자에게 Entity를 다시 입력 받도록 대기 상태로 이동할 수도 있습니다.
 
-![](/assets/images/manage-exceptions-04.png)
+![](../../../assets/images/manage-exceptions-04.png)
 
 사용자로 부터 목적 시간이나 날짜를 입력 받는 Play에서는, '2월 31일'과 같이 특정 월을 나타내는 Entity와 특정 일을 나타내는 Entity의 조합이 맞지 않는 경우가 발생할 수도 있습니다. 이런 경우도 (2)에 해당하며 예외 상황으로 등록하고 다시 입력받을 수 있습니다.
 
-![](/assets/images/manage-exceptions-05.png)
+![](../../../assets/images/manage-exceptions-05.png)
 
 사용자 발화의 Entity를 체크하는 예외 상황을 등록했다면, 이 Exception Code가 동작하는 과정은 다음과 같습니다.
 
-![](/assets/images/manage-exceptions-06.png)
+![](../../../assets/images/manage-exceptions-06.png)
 
 ## Exception Prompt를 통해 이동한 대기 상태의 특징
 

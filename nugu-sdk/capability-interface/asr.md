@@ -21,7 +21,7 @@ description: 음성인식 결과를 Play 로 전달하기 위한 규격
 
 ## State Diagram
 
-![](/assets/images/asr-01.png)
+![](../../assets/images/asr-01.png)
 
 ## SDK Interface
 

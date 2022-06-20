@@ -8,7 +8,7 @@ Play를 생성한 이후에는 사용자가 어떻게 발화할 것인지 예측
 
 Play Builder를 이용하여 '날씨와 미세 먼지 정보를 제공하는 Play'의 Intent를 만들어 보도록 하겠습니다.
 
-![](/assets/images/create-plays-with-play-builder-02.png)
+![](../../../assets/images/create-plays-with-play-builder-02.png)
 
 ## 날씨 관련 Intent 추가
 
@@ -26,7 +26,7 @@ Play Builder를 이용하여 '날씨와 미세 먼지 정보를 제공하는 Pla
    * 같은 의도라도 다양한 표현이 존재할 수 있으므로 예상 발화를 많이 입력할수록 사용자 의도 파악에 도움이 됩니다.
 5. 입력한 발화를 삭제하려면 Expression 리스트에서 각 발화마다 표시된 휴지통() 아이콘을 누릅니다.
 
-   ![](/assets/images/create-an-intent-and-custom-utterances-01.gif)
+   ![](../../../assets/images/create-an-intent-and-custom-utterances-01.gif)
 6. Intent에 예상 발화를 등록한 후 `Play 저장` 버튼을 클릭하여 Intent 등록 작업을 완료합니다.
 7`Play 저장` 버튼 대신 `목록` 버튼을 클릭하면 Play에 Intent를 추가하지 않고 Custom Intents 페이지로 이동합니다.
 
@@ -38,7 +38,7 @@ Intent를 Play에 저장하면, NLU 엔진은 등록된 예상 발화를 자동�
 
 1. "미세 먼지" 관련 Intent도 위 "날씨" 관련 Intent 추가 방법과 동일하게 추가합니다.(예: ask.microdust)
 
-   ![](/assets/images/create-an-intent-and-custom-utterances-02.png)
+   ![](../../../assets/images/create-an-intent-and-custom-utterances-02.png)
 2. 추가한 Intent는 Custom Intents 페이지에서 확인 및 관리할 수 있습니다.
 
-   ![](/assets/images/create-an-intent-and-custom-utterances-03.png)
+   ![](../../../assets/images/create-an-intent-and-custom-utterances-03.png)

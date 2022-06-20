@@ -18,11 +18,11 @@ Play Builder에서 만든 Play를, NUGU play kit에서 Private Play 속성으 �
 
 * TID 기준으로 등록된 Biz 사용자의 APP화면에 NUGU play 목록을 펼쳐 볼 때 해당 Private Play를 확인 할 수 있습니다. 해당 Private Play는 초대 받아 권한을 받은 사용자에게만 노출됩니다.
 
-![](/assets/images/private-play-01.jpg)
+![](../assets/images/private-play-01.jpg)
 
 * Play를 클릭하여, 해당 Play의 상세정보를 확인 할 수 있습니.
 
-![](/assets/images/private-play-02.jpg)
+![](../assets/images/private-play-02.jpg)
 
 * 해당 Play에 대한 기본적인 정보의 조회가 가능하며, OAuth 계정 연동을 허용한 Play의 경우, "계정 연동" 버튼로 사용자의 계정을 로그인하여 Play를 이용할 수 있습니다. 자세한 내용은 [OAuth 2.0 연동하기](../nugu-play/create-plays-with-play-builder/link-oauth20) 를 참고해주세요.
 

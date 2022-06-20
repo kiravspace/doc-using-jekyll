@@ -14,15 +14,15 @@ depth_order: 3
 
 * 기본 정보
 
-![](/assets/images/manage-a-play-01.png)
+![](../../assets/images/manage-a-play-01.png)
 
 * 등록 정보
 
-![](/assets/images/manage-a-play-02.png)
+![](../../assets/images/manage-a-play-02.png)
 
 공개유형이 Private Play인 경우, NUGU biz kit에 연결된 아래의 정보를 추가 확인이 가능합니다.
 
-![](/assets/images/manage-a-play-03.png)
+![](../../assets/images/manage-a-play-03.png)
 
 * Play가 제공 중인 전용 디바이스(Private Play에 한함)
 * Play를 사용중인 사용자(Private Play에 한함)
@@ -31,7 +31,7 @@ depth_order: 3
 
 `Developers Console` > `Play kit` > `Play 관리`  메뉴에서 현재 서비스 중인 Play에 대해 중지(Disable)하거나 중지(Disable) 상태의 Play를 재개(Enable)할 수 있습니다.
 
-![](/assets/images/manage-a-play-04.png)
+![](../../assets/images/manage-a-play-04.png)
 
 1. 관리 현황 리스트에서 상태를 변경할 Play를 클릭하여 선택합니다.
 2. 상태 정보 항목의 `Enable` 또는 `Disable` 버튼을 클릭한 후, 상태 변경 확인창에서 \[확인] 버튼을 클릭하여 상태를 변경합니다.
@@ -47,7 +47,7 @@ Play의 상태 변경(Enable → Disable, Disable → Enable)은 자유롭게 �
 
 1. 관리 현황 리스트에서 삭제할 Play를 클릭하여 선택합니다.
 
-   ![](/assets/images/manage-a-play-05.png)
+   ![](../../assets/images/manage-a-play-05.png)
 2. 화면 상단의 `Play 삭제` 버튼을 클릭합니다.
 
 {% alerts style="info" %}

@@ -21,7 +21,7 @@ description: Play 에서 전달하는 음원을 재생하기 위한 규격
 
 ## State Diagram
 
-![](/assets/images/audioplayer-01.png)
+![](../../assets/images/audioplayer-01.png)
 
 ## SDK Interface
 

@@ -4,7 +4,7 @@ depth_order: 2
 
 # 구성요소
 
-![](/assets/images/linux_component.png)
+![](../../../assets/images/linux_component.png)
 
 ## 구성요소 목록
 

@@ -12,10 +12,10 @@ Play가 배포되면 Play는 상용 서비스 상태가 되며, Play 등록 현�
 
 1. `Developers` > `Play kit` > `Play 관리 `페이지의 서비스중 Play에, Play Builder에서 서비스중 버전 이후의 새로운 빌드를 생성한 경우, `업데이트` 버튼이 생성되며, 클릭 할 수 있습니다.
 
-   ![](/assets/images/PlayManage2_1.png)
+   ![](../../assets/images/PlayManage2_1.png)
 2. Snapshot 버전 리스트에서 등록할 버전을 선택하고 `확인` 버튼을 클릭합니다.
 
-   ![](/assets/images/version.jpg)
+   ![](../../assets/images/version.jpg)
 
 이후의 업데이트 절차는 Play 등록 방법과 동일합니다. 업데이트 등록이 완료되면 업데이트 버전에 대한 심사/배포 프로세스가 진행됩니다.
 

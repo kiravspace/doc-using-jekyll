@@ -10,10 +10,10 @@ Voice Chrome 외에 디스플레이 기능을 추가하기 위해 LED를 사용�
 
 ## **NUGU Voice Chrome 색상**
 
-| Color                                             | RGB                   | CMYK         | Pantone |
-|---------------------------------------------------|-----------------------|--------------|---------|
-| ![](/assets/images/voice-chrome-01.png) NUGU Blue | 0,158, 255 (#009DFF)  | 85, 21, 0, 0 | 2925C   |
-| ![](/assets/images/voice-chrome-02.png) Green     | 0, 230, 136 (#00E688) | 48, 0, 45, 0 | 2412C   |
+| Color                                                  | RGB                   | CMYK         | Pantone |
+|--------------------------------------------------------|-----------------------|--------------|---------|
+| ![](../../assets/images/voice-chrome-01.png) NUGU Blue | 0,158, 255 (#009DFF)  | 85, 21, 0, 0 | 2925C   |
+| ![](../../assets/images/voice-chrome-02.png) Green     | 0, 230, 136 (#00E688) | 48, 0, 45, 0 | 2412C   |
 
 ## **NUGU Voice Chrome 상태**
 
@@ -25,13 +25,13 @@ Idle 상태는 '**NUGU Voice Button**'을 사용하고, 나머지 상태는 그�
 
 기기에 Wake-up 버튼이 탑재해 있을 경우 NUGU Voice Button은 미노출도 허용합니다.
 
-| 상태                    |                   동작                    | 설명                     |
-|-----------------------|:---------------------------------------:|------------------------|
-| **Idle**              | ![](/assets/images/voice-chrome-03.png) | Wake-up 가능한 대기 상태      |
-| **Listening-Passive** | ![](/assets/images/voice-chrome-04.gif) | 사용자 발화 입력 대기 상태        |
-| **Listening-Active**  | ![](/assets/images/voice-chrome-05.gif) | 사용자 발화 입력 중 상태         |
-| **Processing**        | ![](/assets/images/voice-chrome-06.gif) | 입력된 사용자 발화를 분석하는 상태    |
-| **Speaking**          | ![](/assets/images/voice-chrome-07.gif) | 정보/동작에 대해서 TTS 답변하는 상태 |
+| 상태                    |                      동작                      | 설명                     |
+|-----------------------|:--------------------------------------------:|------------------------|
+| **Idle**              | ![](../../assets/images/voice-chrome-03.png) | Wake-up 가능한 대기 상태      |
+| **Listening-Passive** | ![](../../assets/images/voice-chrome-04.gif) | 사용자 발화 입력 대기 상태        |
+| **Listening-Active**  | ![](../../assets/images/voice-chrome-05.gif) | 사용자 발화 입력 중 상태         |
+| **Processing**        | ![](../../assets/images/voice-chrome-06.gif) | 입력된 사용자 발화를 분석하는 상태    |
+| **Speaking**          | ![](../../assets/images/voice-chrome-07.gif) | 정보/동작에 대해서 TTS 답변하는 상태 |
 
 \[동작설명]
 
@@ -48,11 +48,11 @@ NUGU Voice Button은 음성 입력이 가능한 대기 상태를 나타내는 �
 
 BLUE / WHITE 컬러타입 중 한 가지를 선택 적용할 수 있습니다.
 
-![(좌) BLUE / (우) WHITE](/assets/images/voice-chrome-08.png)
+![(좌) BLUE / (우) WHITE](../../assets/images/voice-chrome-08.png)
 
 Idle 상태에 적용되며, **FAB** (Floating Action Button) 또는 **Button** 타입으로 사용하는 것을 권장합니다. (FAB과 Button은 Elevation값에 차이가 있습니다.)
 
-![(1) FAB / (2) Button](/assets/images/voice-chrome-09.png)
+![(1) FAB / (2) Button](../../assets/images/voice-chrome-09.png)
 
 FAB과 Button에 따른 사용 및 동작 정의는 다음과 같습니다.
 
@@ -63,17 +63,17 @@ FAB과 Button에 따른 사용 및 동작 정의는 다음과 같습니다.
 {% tabs::content title="FAB" %}
 (1) **FAB**을 눌러 보이스크롬을 호출하면 FAB 버튼은 사라집니다.
 
-![](/assets/images/voice-chrome-10.png)
+![](../../assets/images/voice-chrome-10.png)
 
 (1-1) **FAB**은 스크롤 방향에 따라 노출 여부를 달리할 수 있습니다.
 
-![(좌) Scroll down / (우) Scroll up (세로 스크롤이 있는 디바이스에 적용 가능)](/assets/images/voice-chrome-11.png)
+![(좌) Scroll down / (우) Scroll up (세로 스크롤이 있는 디바이스에 적용 가능)](../../assets/images/voice-chrome-11.png)
 {% endtabs::content %}
 
 {% tabs::content title="Button" %}
 (2) **Button**을 눌러 Voice Chrome을 호출하면, Toggle Button 버튼으로 상태가 변경됩니다.
 
-![Toggle Button은 투명도가 적용된 Container에 도트 애니메이션이 적용됩니다.](/assets/images/voice-chrome-12.png)
+![Toggle Button은 투명도가 적용된 Container에 도트 애니메이션이 적용됩니다.](../../assets/images/voice-chrome-12.png)
 {% endtabs::content %}
 {% endtabs %}
 
@@ -81,13 +81,13 @@ FAB과 Button에 따른 사용 및 동작 정의는 다음과 같습니다.
 
 Voice Chrome 을 실행하면 NUGU Voice Chrome Window가 활성화됩니다. Voice Chrome은 최상단 레이어이며, 화면의 하단 영역에 위치합니다. Light / Dark Theme 중 한 가지 타입을 선택해 적용할 수 있습니다.
 
-| Light Theme                             | Dark Theme                              |
-|-----------------------------------------|-----------------------------------------|
-| ![](/assets/images/voice-chrome-13.png) | ![](/assets/images/voice-chrome-14.png) |
+| Light Theme                                  | Dark Theme                                   |
+|----------------------------------------------|----------------------------------------------|
+| ![](../../assets/images/voice-chrome-13.png) | ![](../../assets/images/voice-chrome-14.png) |
 
 Voice Chrome Window를 닫는 동작은 아래 2가지입니다. App 화면 영역을 터치하면 Voice Chrome Window는 닫히는 것을 권장합니다.
 
 * App 화면 영역을 터치하면, **Voice Chrome이 닫히고, 해당 화면의 액션버튼이 실행**됩니다.
 * Android back key는 모든 단계에서 닫기 동작이 가능합니다.
 
-![(1) App 화면 닫기는 Listening-Passive/Listening-Active 단계에서 작동됩니다. (Processing은 닫기 동작 하지 않음)](/assets/images/voice-chrome-15.png)
+![(1) App 화면 닫기는 Listening-Passive/Listening-Active 단계에서 작동됩니다. (Processing은 닫기 동작 하지 않음)](../../assets/images/voice-chrome-15.png)
