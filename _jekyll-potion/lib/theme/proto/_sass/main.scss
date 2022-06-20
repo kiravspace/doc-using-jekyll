@@ -466,9 +466,14 @@ body {
                 max-width: 15%;
               }
 
+              & > .api_parameter_type {
+                flex: auto;
+                max-width: 15%;
+              }
+
               & > .api_parameter_description {
                 flex: auto;
-                max-width: 85%;
+                max-width: 70%;
               }
             }
           }
