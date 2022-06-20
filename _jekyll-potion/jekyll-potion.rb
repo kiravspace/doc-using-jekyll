@@ -10,6 +10,7 @@ module Jekyll::Potion
 end
 
 require_relative "lib/tags/alerts"
+require_relative "lib/tags/api"
 require_relative "lib/tags/code"
 require_relative "lib/tags/file"
 require_relative "lib/tags/link"

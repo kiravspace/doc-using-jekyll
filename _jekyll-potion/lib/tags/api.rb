@@ -96,7 +96,7 @@ module Jekyll::Potion
   end
 
   class ApiResponseTag < Liquid::Block
-    include Jekyll::Potion::ChildBlockModule
+    include PotionBlockElement
 
     def initialize(tag_name, markup, options)
       super
