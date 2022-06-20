@@ -3,7 +3,7 @@
 <head>
     <meta charset="utf-8">
 <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
-<title>시작하기</title>
+<title>Authentication</title>
 <link rel="stylesheet" href="https://fonts.googleapis.com/earlyaccess/nanumgothic.css">
 <link rel="stylesheet" href="/assets/css/main.css">
 <link rel="stylesheet" href="/assets/css/syntax.css">
@@ -2086,433 +2086,58 @@
 <section id="section">
     <div id="container" class="container">
     <div class="header">
-        <div class="heading">시작하기</div>
+        <div class="heading">Authentication</div>
         <div class="description"></div>
     </div>
     <div class="content">
-        <h2 id="step-1-최소-요구사항-확인하기">Step 1: 최소 요구사항 확인하기</h2>
+        <p>NUGU 플랫폼 인증은 <a href="https://tools.ietf.org/html/rfc6749">OAuth 2.0</a>의 규격을 지원하고, NUGU의 회원 체계는 SK텔레콤의 <a href="https://www.skt-id.co.kr">T아이디</a>를 따릅니다.</p>
 
-<ul>
-  <li>Ubuntu xenial(16.04)</li>
-</ul>
+<p>플랫폼 인증을 위해서는 NUGU에서 별도로 발급하는 <code class="language-plaintext highlighter-rouge">Client Id, Client Secret</code>과 제휴사에서 등록한 <code class="language-plaintext highlighter-rouge">Redirect Uri</code> 정보가 필요합니다. 인증 정보는 체험판 신청으로 발급 받을 수 있으며, 정식판 제휴 시에는 PoC 관리 메뉴에서 발급 받은 정보를 확인 할 수 있습니다.</p>
 
-<h2 id="step-2-nugu-sdk-설치하기">Step 2: NUGU SDK 설치하기</h2>
+<h2 id="authorize-endpoint">Authorize Endpoint</h2>
 
-<p>NUGU SDK for Linux는 설치에 필요한 패키지(<code class="language-plaintext highlighter-rouge">*.deb</code>) 파일들을 쉽게 다운로드 받을 수 있도록 Ubuntu에서 제공하는 <a href="https://launchpad.net/~nugulinux/+archive/ubuntu/sdk">PPA</a>(<a href="https://launchpad.net">https://launchpad.net</a>)를 통해 배포하고 있습니다.</p>
+<p><code class="language-plaintext highlighter-rouge">response_type=code</code> 만 사용 됩니다.</p>
 
-<h3 id="ppa-추가하기">PPA 추가하기</h3>
+<p><code class="language-plaintext highlighter-rouge">data</code> 파라미터를 사용하여 디바이스 일련번호를 전달 할 수 있습니다.</p>
 
-<p>아래 명령을 통해 시스템에 PPA를 추가할 수 있습니다.</p>
+<blockquote>
+  <p>{“deviceSerialNumber”:”DEVICE_SERIAL_NUMBER”}</p>
 
-<div id="tabs-13" class="tabs">
-    <ul class="tabs_title">
-        
-            <li data-content-id="tab-content-14" class="tab_title">Ubuntu</li>
-        
-            <li data-content-id="tab-content-23" class="tab_title">Debian</li>
-        
-    </ul>
-    <div id="tab-content-14" class="tab_content">
-    
-<div class="code">
-    <div class="code_title"></div>
-    <div class="code_body">
-<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code><table class="rouge-table"><tbody><tr>
-<td class="rouge-gutter gl"><pre class="lineno">1
-2
-</pre></td>
-<td class="rouge-code"><pre><span class="nb">sudo </span>add-apt-repository ppa:nugulinux/sdk
-<span class="nb">sudo </span>apt-get update
-</pre></td>
-</tr></tbody></table></code></pre></div></div>
-</div>
-</div>
+  <p>%7B%22deviceSerialNumber%22%3A%22DEVICE_SERIAL_NUMBER%22%7D</p>
+</blockquote>
 
+<h2 id="token-endpoint">Token Endpoint</h2>
 
-</div>
-<div id="tab-content-23" class="tab_content">
-    
-<p>사용하고 있는 Debian 버전에 따라 NUGU SDK의 Bionic 또는 Xenial PPA 주소를 추가해야 합니다.</p>
+<p><code class="language-plaintext highlighter-rouge">grant_type=refresh_token</code>, <code class="language-plaintext highlighter-rouge">grant_type=authorization_code</code> , <code class="language-plaintext highlighter-rouge">grant_type=client_credentials</code> 가사용 됩니다.</p>
 
-<div class="code">
-    <div class="code_title"></div>
-    <div class="code_body">
-<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code><table class="rouge-table"><tbody><tr>
-<td class="rouge-gutter gl"><pre class="lineno">1
-2
-3
-4
-5
-6
-7
-</pre></td>
-<td class="rouge-code"><pre><span class="c"># Debian 버전이 Buster일 경우</span>
-<span class="nv">$ </span><span class="nb">sudo </span>vi /etc/apt/sources.list.d/nugu.list
-deb http://ppa.launchpad.net/nugulinux/sdk/ubuntu bionic main
+<p>NUGU계정 미사용, 체험판은 <code class="language-plaintext highlighter-rouge">grant_type=client_credentials</code> 을 사용합니다.</p>
 
-<span class="c"># Debian 버전이 Stretch일 경우</span>
-<span class="nv">$ </span><span class="nb">sudo </span>vi /etc/apt/sources.list.d/nugu.list
-deb http://ppa.launchpad.net/nugulinux/sdk/ubuntu xenial main
-</pre></td>
-</tr></tbody></table></code></pre></div></div>
-</div>
-</div>
+<p>Client 인증 정보는 Body Parameter(application/x-www-form-urlencoded)를 사용 합니다.</p>
 
-<p>이제 NUGU SDK PPA에 대한 인증키를 설치해야 합니다.</p>
+<h2 id="revoke-endpoint">Revoke Endpoint</h2>
 
-<div class="code">
-    <div class="code_title"></div>
-    <div class="code_body">
-<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code><table class="rouge-table"><tbody><tr>
-<td class="rouge-gutter gl"><pre class="lineno">1
-2
-</pre></td>
-<td class="rouge-code"><pre><span class="nb">sudo </span>apt-key adv <span class="nt">--keyserver</span> <span class="s1">'hkp://keyserver.ubuntu.com:80'</span> <span class="nt">--recv-key</span> 5DE933034EEA59C4
-<span class="nb">sudo </span>apt-get update
-</pre></td>
-</tr></tbody></table></code></pre></div></div>
-</div>
-</div>
+<h2 id="introspect-endpoint">Introspect Endpoint</h2>
 
-
-</div>
-
-</div>
-
-<h3 id="패키지-설치하기">패키지 설치하기</h3>
-
-<p>NUGU SDK for Linux는 아래의 패키지들로 구성되어 있습니다.</p>
-
-<table>
-  <thead>
-    <tr>
-      <th style="text-align: left">패키지</th>
-      <th style="text-align: left">설명</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <td style="text-align: left"><code class="language-plaintext highlighter-rouge">libnugu</code></td>
-      <td style="text-align: left">NUGU SDK 동작에 필요한 패키지<br>- shared library(<code class="language-plaintext highlighter-rouge">*.so.{version}</code> files)</td>
-    </tr>
-    <tr>
-      <td style="text-align: left"><code class="language-plaintext highlighter-rouge">libnugu-plugins-default</code></td>
-      <td style="text-align: left">기본 제공 플러그인 모음 패키지<br>- <code class="language-plaintext highlighter-rouge">gstreamer.so</code>, <code class="language-plaintext highlighter-rouge">opus.so</code>, <code class="language-plaintext highlighter-rouge">portaudio.so</code> 등</td>
-    </tr>
-    <tr>
-      <td style="text-align: left"><code class="language-plaintext highlighter-rouge">libnugu-dev</code></td>
-      <td style="text-align: left">빌드에 필요한 패키지<br>- header files, pkg-config(<code class="language-plaintext highlighter-rouge">nugu.pc</code>) 및 <code class="language-plaintext highlighter-rouge">libnugu.so</code>
-</td>
-    </tr>
-    <tr>
-      <td style="text-align: left"><code class="language-plaintext highlighter-rouge">libnugu-examples</code></td>
-      <td style="text-align: left">예제 프로그램 패키지<br>- 콘솔 기반의 예제 프로그램, OAuth2 클라이언트 예제</td>
-    </tr>
-  </tbody>
-</table>
-
-<p>아래 명령을 통해 시스템에 설치할 수 있습니다.</p>
-
-<div class="code">
-    <div class="code_title"></div>
-    <div class="code_body">
-<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code><table class="rouge-table"><tbody><tr>
-<td class="rouge-gutter gl"><pre class="lineno">1
-</pre></td>
-<td class="rouge-code"><pre><span class="nb">sudo </span>apt-get <span class="nb">install </span>libnugu libnugu-plugins-default libnugu-dev libnugu-examples
-</pre></td>
-</tr></tbody></table></code></pre></div></div>
-</div>
-</div>
-
-<h2 id="step-3-프로젝트-설정하기">Step 3: 프로젝트 설정하기</h2>
-
-<h3 id="poc-정보-입력하기">PoC 정보 입력하기</h3>
-
-<div class="alerts warning">
-    
-<p>NUGU PoC를 생성하기 위해서는 NUGU Developers를 통해 제휴가 필요합니다.<br>
-더 자세한 내용은 <a href="https://developers.nugu.co.kr/#/sdk/nuguSdkInfo">NUGU SDK 소개</a>에서 확인이 가능합니다.</p>
-
-<ul>
-  <li>체험판은 <a href="https://developers.nugu.co.kr/#/sdk/sdkTrial">체험판 신청</a>을 통해 발급 가능합니다.</li>
-</ul>
-
-</div>
-
-<p>발급받은 PoC 정보를 확인하기 위해서 <a href="https://developers.nugu.co.kr/#/sdk/pocList">NUGU SDK PoC목록</a>으로 이동해서 Client ID, Client Secret, Redirect URI 정보를 확인하세요.</p>
-
-<ul>
-  <li>체험판은 <a href="https://developers.nugu.co.kr/#/sdk/sdkTrial">체험판 신청 내역</a>에서 확인 가능합니다.</li>
-</ul>
-
-<div class="alerts success">
-    
-<ul>
-  <li>체험판은 Redirect URI가 필요하지 않습니다.</li>
-</ul>
-
-</div>
-
-<h3 id="음성인식-모델-파일-설정하기">음성인식 모델 파일 설정하기</h3>
-
-<h4 id="다운로드-받기">다운로드 받기</h4>
-
-<p><a href="https://developers.nugu.co.kr/#/sdk/pocList">NUGU SDK PoC목록</a>에서 음성인식 모델 파일을 다운로드 받습니다.</p>
-
-<ul>
-  <li>체험판은 <a href="https://developers.nugu.co.kr/#/sdk/sdkTrial">체험판 신청 내역</a>에서 음성인식 모델파일을 다운로드 받습니다.</li>
-</ul>
-
-<h4 id="설정하기">설정하기</h4>
-
-<p>다운로드가 완료되면, Linux 디바이스에 임의의 디렉토리를 생성한 후, 아래와 같은 파일명으로 복사해 주시면 됩니다.</p>
-
-<ul>
-  <li>
-<code class="language-plaintext highlighter-rouge">nugu_model_wakeup_net.raw</code>  - keyword detection에 사용되는 model 파일 (1/2)</li>
-  <li>
-<code class="language-plaintext highlighter-rouge">nugu_model_wakeup_search.raw</code>  - keyword detection에 사용되는 model 파일 (2/2)</li>
-  <li>
-<code class="language-plaintext highlighter-rouge">nugu_model_epd.raw</code> - VAD(Voice Activity Detection) 에 사용되는 model 파일</li>
-</ul>
-
-<h3 id="oauth2-client-구현하기">OAuth2 client 구현하기</h3>
-
-<p>NUGU SDK for Linux는 아래의 이유로 인해 iOS, Android와 달리 인증을 위한 기능을 제공하고 있지 않습니다.</p>
-
-<ul>
-  <li>Linux 기반의 제품은 대부분 디스플레이가 없어 별도의 연동 어플리케이션을 통한 사용자 인증을 필요로 합니다.</li>
-  <li>다른 플랫폼과 달리 GUI framework이 다양하기 때문에 표준화된 인증 UI를 SDK에서 제공해 주기 어렵습니다.</li>
-</ul>
-
-<p>하지만, 인증을 쉽게 테스트할 수 있도록 아래의 NUGU SDK for Linux Github에 Python으로 작성된 별도의 웹기반 OAuth2 client 예제를 제공하고 있습니다.</p>
-
-<div class="pagination">
-    <a class="left" href="https://github.com/nugu-developers/nugu-linux/wiki/Sample-OAuth2">
-        <div class="block left">
-            <div class="block_thumb"></div>
-            <div class="block_content">
-                <div class="block_title">NUGU SDK for Linux OAuth2 client python sample</div>
-                <div class="block_description">NUGU SDK for Linux. Contribute to nugu-developers/nugu-linux development by creating an account on GitHub.</div>
-            </div>
-        </div>
-    </a>
-</div>
-
-<p><a href="https://developers.nugu.co.kr/#/sdk/pocList">NUGU SDK PoC목록</a>에서 nugu-config.json 파일을 다운로드 받은 후, Client ID, Client Secret 정보를 활용하여 위 OAuth2 client 예제를 통해 인증을 진행할 수 있습니다.</p>
-
-<ul>
-  <li>체험판은 <a href="https://developers.nugu.co.kr/#/sdk/sdkTrial">체험판 신청 내역</a>에서  nugu-config.json 파일을 다운로드 받습니다.</li>
-</ul>
-
-<h2 id="step-4-nugu-사용하기">Step 4: NUGU 사용하기</h2>
-
-<h3 id="gmainloop-사용하기">GMainLoop 사용하기</h3>
-
-<p>NUGU SDK for Linux는 event-driven 방식으로 어플리케이션을 개발할 수 있도록 <a href="https://wiki.gnome.org/Projects/GLib">glib</a>에서 제공하는 <a href="https://developer.gnome.org/glib/stable/glib-The-Main-Event-Loop.html">event loop</a>을 사용하고 있습니다. 따라서 <code class="language-plaintext highlighter-rouge">main()</code> 코드는 아래 구조로 작성되어야 합니다.</p>
-
-<div class="code">
-    <div class="code_title"></div>
-    <div class="code_body">
-<div class="language-c highlighter-rouge"><div class="highlight"><pre class="highlight"><code><table class="rouge-table"><tbody><tr>
-<td class="rouge-gutter gl"><pre class="lineno">1
-2
-3
-4
-5
-6
-7
-8
-9
-10
-11
-12
-13
-14
-15
-16
-17
-18
-19
-</pre></td>
-<td class="rouge-code"><pre><span class="cp">#include</span> <span class="cpf">&lt;glib.h&gt;</span><span class="cp">
-</span>
-<span class="kt">int</span> <span class="nf">main</span><span class="p">(</span><span class="kt">int</span> <span class="n">argc</span><span class="p">,</span> <span class="kt">char</span> <span class="o">*</span><span class="n">argv</span><span class="p">[])</span>
-<span class="p">{</span>
-  <span class="n">GMainLoop</span> <span class="o">*</span><span class="n">loop</span><span class="p">;</span>
-
-  <span class="cm">/* event loop 생성 */</span>
-  <span class="n">loop</span> <span class="o">=</span> <span class="n">g_main_loop_new</span> <span class="p">(</span><span class="nb">NULL</span><span class="p">,</span> <span class="n">FALSE</span><span class="p">);</span>
-
-  <span class="cm">/* 사용자의 초기화 코드 등록(nugu sdk 코드 등) */</span>
-
-  <span class="cm">/* event loop 시작 */</span>
-  <span class="n">g_main_loop_run</span> <span class="p">(</span><span class="n">loop</span><span class="p">);</span>
-
-  <span class="cm">/* event loop 해제 */</span>
-  <span class="n">g_main_loop_unref</span> <span class="p">(</span><span class="n">loop</span><span class="p">);</span>
-
-  <span class="k">return</span> <span class="mi">0</span><span class="p">;</span>
-<span class="p">}</span>
-</pre></td>
-</tr></tbody></table></code></pre></div></div>
-</div>
-</div>
-
-<h3 id="nugu-음성인식-사용하기">NUGU 음성인식 사용하기</h3>
-
-<p>음성인식을 요청하기 위해서는 아래와 같은 코드를 작성해야 합니다.</p>
-
-<p>⁣1. 헤더 파일(nugu_client.hh, capability_factory.hh)을 include에 포함시키고, <code class="language-plaintext highlighter-rouge">NuguClientKit, NuguCapability</code> namespace를 사용하도록 설정합니다.</p>
-
-<div class="code">
-    <div class="code_title"></div>
-    <div class="code_body">
-<div class="language-cpp highlighter-rouge"><div class="highlight"><pre class="highlight"><code><table class="rouge-table"><tbody><tr>
-<td class="rouge-gutter gl"><pre class="lineno">1
-2
-3
-4
-5
-</pre></td>
-<td class="rouge-code"><pre><span class="cp">#include</span> <span class="cpf">&lt;clientkit/nugu_client.hh&gt;</span><span class="cp">
-#include</span> <span class="cpf">&lt;capability/capability_factory.hh&gt;</span><span class="cp">
-</span>
-<span class="k">using</span> <span class="k">namespace</span> <span class="n">NuguClientKit</span><span class="p">;</span>
-<span class="k">using</span> <span class="k">namespace</span> <span class="n">NuguCapability</span><span class="p">;</span>
-</pre></td>
-</tr></tbody></table></code></pre></div></div>
-</div>
-</div>
-
-<p>⁣2. <code class="language-plaintext highlighter-rouge">IASRHandler</code> 객체를 생성하고, 음성인식 모델 파일을 설정합니다.</p>
-
-<div class="code">
-    <div class="code_title"></div>
-    <div class="code_body">
-<div class="language-cpp highlighter-rouge"><div class="highlight"><pre class="highlight"><code><table class="rouge-table"><tbody><tr>
-<td class="rouge-gutter gl"><pre class="lineno">1
-2
-3
-4
-</pre></td>
-<td class="rouge-code"><pre><span class="k">auto</span> <span class="nf">my_asr_listener</span><span class="p">(</span><span class="n">std</span><span class="o">::</span><span class="n">make_shared</span><span class="o">&lt;</span><span class="n">MyASR</span><span class="o">&gt;</span><span class="p">());</span>
-<span class="k">auto</span> <span class="nf">asr_handler</span><span class="p">(</span><span class="n">std</span><span class="o">::</span><span class="n">shared_ptr</span><span class="o">&lt;</span><span class="n">IASRHandler</span><span class="o">&gt;</span><span class="p">(</span>
-   <span class="n">CapabilityFactory</span><span class="o">::</span><span class="n">makeCapability</span><span class="o">&lt;</span><span class="n">ASRAgent</span><span class="p">,</span> <span class="n">IASRHandler</span><span class="o">&gt;</span><span class="p">(</span><span class="n">my_asr_listener</span><span class="p">.</span><span class="n">get</span><span class="p">())));</span>
-<span class="n">asr_handler</span><span class="o">-&gt;</span><span class="n">setAttribute</span><span class="p">(</span><span class="n">ASRAttribute</span> <span class="p">{</span> <span class="s">"/var/lib/nugu/model"</span><span class="p">,</span> <span class="s">"CLIENT"</span><span class="p">,</span> <span class="s">"PARTIAL"</span> <span class="p">});</span>
-</pre></td>
-</tr></tbody></table></code></pre></div></div>
-</div>
-</div>
-
-<p>⁣3. <code class="language-plaintext highlighter-rouge">NuguClient</code> 객체를 생성하고, <code class="language-plaintext highlighter-rouge">ASR Capability</code> 추가 후, SDK를 초기화 합니다.</p>
-
-<div class="code">
-    <div class="code_title"></div>
-    <div class="code_body">
-<div class="language-cpp highlighter-rouge"><div class="highlight"><pre class="highlight"><code><table class="rouge-table"><tbody><tr>
-<td class="rouge-gutter gl"><pre class="lineno">1
-2
-3
-4
-5
-</pre></td>
-<td class="rouge-code"><pre><span class="n">NuguClient</span><span class="o">*</span> <span class="n">nugu_client</span> <span class="o">=</span> <span class="k">new</span> <span class="nf">NuguClient</span><span class="p">());</span>
-<span class="n">nugu_client</span><span class="o">-&gt;</span><span class="n">getCapabilityBuilder</span><span class="p">()</span>
-       <span class="o">-&gt;</span><span class="n">add</span><span class="p">(</span><span class="n">CapabilityType</span><span class="o">::</span><span class="n">ASR</span><span class="p">,</span> <span class="n">my_asr_listener</span><span class="p">.</span><span class="n">get</span><span class="p">())</span>
-       <span class="o">-&gt;</span><span class="n">construct</span><span class="p">();</span>
-<span class="n">nugu_client</span><span class="o">-&gt;</span><span class="n">initialize</span><span class="p">();</span>
-</pre></td>
-</tr></tbody></table></code></pre></div></div>
-</div>
-</div>
-
-<p>⁣4. 음성인식 기능을 사용하기 위해 OAuth2 access-token 설정 후, NUGU 서비스 연결을 요청합니다.</p>
-
-<div class="code">
-    <div class="code_title"></div>
-    <div class="code_body">
-<div class="language-cpp highlighter-rouge"><div class="highlight"><pre class="highlight"><code><table class="rouge-table"><tbody><tr>
-<td class="rouge-gutter gl"><pre class="lineno">1
-2
-3
-</pre></td>
-<td class="rouge-code"><pre><span class="k">auto</span> <span class="nf">network_manager</span><span class="p">(</span><span class="n">nugu_client</span><span class="o">-&gt;</span><span class="n">getNetworkManager</span><span class="p">());</span>
-<span class="n">network_manager</span><span class="o">-&gt;</span><span class="n">setToken</span><span class="p">(</span><span class="s">"..."</span><span class="p">);</span>
-<span class="n">network_manager</span><span class="o">-&gt;</span><span class="n">connect</span><span class="p">();</span>
-</pre></td>
-</tr></tbody></table></code></pre></div></div>
-</div>
-</div>
-
-<p>전체 코드는 Github의 아래 wiki에서 확인할 수 있습니다.</p>
-
-<div class="pagination">
-    <a class="left" href="https://github.com/nugu-developers/nugu-linux/wiki/Create-your-first-application">
-        <div class="block left">
-            <div class="block_thumb"></div>
-            <div class="block_content">
-                <div class="block_title">NUGU SDK for Linux Wiki - Create your first application</div>
-                <div class="block_description">NUGU SDK for Linux. Contribute to nugu-developers/nugu-linux development by creating an account on GitHub.</div>
-            </div>
-        </div>
-    </a>
-</div>
-
-<h3 id="build">Build</h3>
-
-<p>NUGU SDK for Linux는 빌드 설정을 쉽게 구성할 수 있도록 <code class="language-plaintext highlighter-rouge">pkg-config</code> 파일을 제공합니다. 따라서, 아래와 같이 <code class="language-plaintext highlighter-rouge">nugu.pc</code>를 사용해 빌드 명령을 수행할 수 있습니다.</p>
-
-<div class="code">
-    <div class="code_title"></div>
-    <div class="code_body">
-<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code><table class="rouge-table"><tbody><tr>
-<td class="rouge-gutter gl"><pre class="lineno">1
-</pre></td>
-<td class="rouge-code"><pre><span class="nv">$ </span>g++ <span class="nt">-std</span><span class="o">=</span>c++11 hello.cc <span class="sb">`</span>pkg-config <span class="nt">--cflags</span> <span class="nt">--libs</span> nugu<span class="sb">`</span> <span class="nt">-o</span> hello
-</pre></td>
-</tr></tbody></table></code></pre></div></div>
-</div>
-</div>
-
-<h2 id="더-알아보기">더 알아보기</h2>
-
-<h3 id="download-the-sdk-source-code">Download the SDK source code</h3>
-
-<p>아래 Github 주소를 통해 NUGU SDK for Linux 전체 소스 코드를 다운로드 받을 수 있습니다.</p>
-
-<div class="pagination">
-    <a class="left" href="https://github.com/nugu-developers/nugu-linux">
-        <div class="block left">
-            <div class="block_thumb"></div>
-            <div class="block_content">
-                <div class="block_title">NUGU SDK for Linux Github repository</div>
-                <div class="block_description">NUGU SDK for Linux. Contribute to nugu-developers/nugu-linux development by creating an account on GitHub.</div>
-            </div>
-        </div>
-    </a>
-</div>
 
     </div>
     
     <div class="pagination">
     
-        <a href="/nugu-sdk/platform/linux">
+        <a href="/nugu-sdk/manage-poc/statistic">
             <div class="block left">
                 <div class="block_thumb"></div>
                 <div class="block_content">
-                    <div class="block_title">Linux</div>
-                    <div class="block_description">Linux 환경에서 NUGU 서비스를 쉽게 사용할 수 있도록 NUGU SDK for Linux를 제공합니다.</div>
+                    <div class="block_title">이용 통계 확인</div>
+                    <div class="block_description"></div>
                 </div>
             </div>
         </a>
     
     
-        <a href="/nugu-sdk/platform/linux/component">
+        <a href="/nugu-sdk/capability-interface">
             <div class="block right">
                 <div class="block_content">
-                    <div class="block_title">구성요소</div>
+                    <div class="block_title">Capability Interface</div>
                     <div class="block_description"></div>
                 </div>
                 <div class="block_thumb"></div>
