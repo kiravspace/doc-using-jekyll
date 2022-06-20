@@ -1,11 +1,12 @@
 <meta charset="utf-8">
 <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
 
-{%- if page.title -%}
-<title>{{ page.title | escape }}</title>
-{%- else -%}
-<title>{{ site.title | escape }}</title>
-{%- endif -%}
+{% assign title = site.data.potion.site_title %}
+
+{% if page.title %}
+{% assign title = title | prepend: " - " | prepend: page.title %}
+{% endif %}
+<title>{{ title | escape }}</title>
 
 <link rel="stylesheet" href="https://fonts.googleapis.com/earlyaccess/nanumgothic.css">
 <link rel="stylesheet" href="{{ site.data.potion.target_assets }}/css/main.css">

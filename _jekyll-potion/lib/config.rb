@@ -102,6 +102,10 @@ module Jekyll::Potion
       File.join(baseurl, @config[ASSETS_PATH_KEY])
     end
 
+    def site_title
+      @config[TITLE_KEY]
+    end
+
     def templates_path
       File.join(theme_path, "template")
     end
