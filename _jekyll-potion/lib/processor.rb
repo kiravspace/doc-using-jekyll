@@ -12,6 +12,8 @@ module Jekyll::Potion
 
     def site_post_read(site) end
 
+    def site_post_render(site) end
+
     def page_pre_render(page) end
 
     def page_post_render(page) end

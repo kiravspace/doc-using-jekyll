@@ -1,10 +1,47 @@
 require "nokogiri"
+require "json"
 
 module Jekyll::Potion
+  class DataPage < Jekyll::Page
+    def initialize(site, base, dir, name)
+      @site = site
+      @base = base
+      @dir = dir
+      @name = name
+      self.process(@name)
+      self.data ||= {}
+      # self.data["layout"] = "default"
+      # self.data["title"] = data
+    end
+  end
+
   class SearchProcessor < Processor
     def initialize(config)
       super
       @indexes = []
+    end
+
+    def site_post_read(site)
+      # config.data_assets.each { |asset| load_static_files(asset) }
+    end
+
+    def load_static_files(base, dir = "")
+      Dir.foreach(File.join(base, dir)) { |file_name|
+        next if file_name == "." or file_name == ".."
+
+        path = File.join(base, dir, file_name)
+
+        if File.directory?(path)
+          load_static_files(base, file_name)
+        else
+          logger.trace("add static file #{File.join(dir, file_name)}")
+          data_file = config.add_static_files(base, dir, file_name)
+
+          if (file_name === "search.json")
+            @search_data = data_file
+          end
+        end
+      }
     end
 
     def page_post_render(page)
@@ -12,7 +49,7 @@ module Jekyll::Potion
         html = Nokogiri::HTML.parse(page.output)
 
         page_index = {
-          "url" => page.url,
+          "url" => config.page_potion(page).url,
           "hashes" => create_indexes(page, html.css("section").css("div.container").css("div.content"))
         }
         @indexes << page_index
@@ -23,12 +60,23 @@ module Jekyll::Potion
       end
     end
 
+    def site_post_render(site)
+      my_object = { :array => [1, 2, 3, { :sample => "hash" }], :foo => "bar" }
+      # puts JSON.pretty_generate(my_object)
+
+      page = DataPage.new(site, site.source, File.join(config.assets_path, "data"), "search.json")
+      page.output = JSON.pretty_generate(@indexes)
+      site.pages << page
+    end
+
     def create_indexes(page, content)
       hash = ""
 
       hashed = []
 
-      indexes = [page.data["title"], page.data["description"]]
+      indexes = []
+      indexes << page.data["title"]
+      indexes << page.data["description"] unless page.data["description"].nil? || page.data["description"].empty?
 
       titles = ["", "", "", "", "", ""]
 
@@ -49,7 +97,7 @@ module Jekyll::Potion
 
             hash = tag["id"]
             indexes.clear
-            indexes << tag.text.strip
+            indexes << tag.text.strip unless tag.text.empty?
           end
         else
           indexes.concat(create_default_index(tag))
@@ -70,18 +118,12 @@ module Jekyll::Potion
 
       case tag.name
       when "a"
-        unless tag.text.strip.empty?
-          indexes << tag.text.strip
-        end
+        indexes << tag.text.strip unless tag.text.strip.empty?
       when "p", "blockquote"
-        unless tag.text.strip.empty?
-          indexes << tag.text.strip
-        end
+        indexes << tag.text.strip unless tag.text.strip.empty?
       when "ul", "ol"
         tag.css("li").each { |li|
-          unless li.text.strip.empty?
-            indexes << li.text.strip
-          end
+          indexes << li.text.strip unless li.text.strip.empty?
         }
       when "table"
         tag.css("thread").css("tr").each { |tr|
@@ -94,14 +136,10 @@ module Jekyll::Potion
         indexes.concat(create_div_index(tag))
       when "pre"
         if tag.classes.include?("highlight")
-          unless tag.css("td.rouge-code").text.strip.empty?
-            indexes << tag.css("td.rouge-code").text.strip
-          end
+          indexes << tag.css("td.rouge-code").text.strip unless tag.css("td.rouge-code").text.strip.empty?
         end
       when "text", "hr"
-        unless tag.text.strip.empty?
-          indexes << tag.text.strip
-        end
+        indexes << tag.text.strip unless tag.text.strip.empty?
       else
         logger.warn("undefined search type", tag.name)
       end
@@ -118,12 +156,8 @@ module Jekyll::Potion
           tab_content.children.each { |child_tag| indexes.concat(create_default_index(child_tag)) }
         }
       when tag.classes.include?("code")
-        unless tag.css(".code_title").text.strip.empty?
-          indexes << tag.css(".code_title").text.strip
-        end
-        unless tag.css("td.rouge-code").text.strip.empty?
-          indexes << tag.css("td.rouge-code").text.strip
-        end
+        indexes << tag.css(".code_title").text.strip unless tag.css(".code_title").text.strip.empty?
+        indexes << tag.css("td.rouge-code").text.strip unless tag.css("td.rouge-code").text.strip.empty?
       else
         tag.children.each { |child_tag| indexes.concat(create_default_index(child_tag)) }
       end

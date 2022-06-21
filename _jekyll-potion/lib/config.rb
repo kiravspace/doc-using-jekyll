@@ -47,7 +47,7 @@ module Jekyll::Potion
 
       @site.config["sass"]["sass_dir"] = _sass
 
-      @assets_collection = Jekyll::Collection.new(@site, @config[ASSETS_PATH_KEY])
+      @assets_collection = Jekyll::Collection.new(@site, assets_path)
     end
 
     def merge(default, config)
@@ -64,6 +64,10 @@ module Jekyll::Potion
 
     def site_pre_render(site)
       @processors.each { |processor| processor.site_pre_render(site) }
+    end
+
+    def site_post_render(site)
+      @processors.each { |processor| processor.site_post_render(site) }
     end
 
     def site_post_read(site)
@@ -98,8 +102,12 @@ module Jekyll::Potion
       File.join(theme_path, "assets")
     end
 
+    def assets_path
+      @config[ASSETS_PATH_KEY]
+    end
+
     def target_assets
-      File.join(baseurl, @config[ASSETS_PATH_KEY])
+      File.join(baseurl, assets_path)
     end
 
     def site_title
@@ -126,8 +134,14 @@ module Jekyll::Potion
       @site.data[key] = value
     end
 
+    def static_files
+      @site.static_files
+    end
+
     def add_static_files(base, dir, name)
-      @site.static_files << Jekyll::StaticFile.new(@site, base, dir, name, @assets_collection)
+      static_file = Jekyll::StaticFile.new(@site, base, dir, name, @assets_collection)
+      @site.static_files << static_file
+      static_file
     end
 
     def markdown_converter
@@ -185,6 +199,10 @@ module Jekyll::Potion
 
       Jekyll::Hooks.register_one(:site, :pre_render, PRIORITY) do |site|
         config.site_pre_render(site)
+      end
+
+      Jekyll::Hooks.register_one(:site, :post_render, PRIORITY) do |site|
+        config.site_post_render(site)
       end
 
       Jekyll::Hooks.register_one(:pages, :pre_render, PRIORITY) do |page|

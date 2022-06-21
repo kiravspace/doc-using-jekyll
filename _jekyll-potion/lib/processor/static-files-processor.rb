@@ -1,7 +1,5 @@
 module Jekyll::Potion
   class StaticFilesProcessor < Processor
-    JAVASCRIPT_FILE_PATH = "/assets/js"
-
     def site_post_read(site)
       load_static_files(config.assets)
     end
