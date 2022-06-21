@@ -35,17 +35,40 @@ body {
     }
 
     & > div.search {
-      width: 40%;
+      idth: 20%;
       height: 100%;
       float: right;
+      align-items: center;
+      display: flex;
+      justify-content: right;
+      padding-right: 1em;
 
-      & > div.search_bax {
+      & > div.search_bar {
         display: flex;
-        width: 100%;
-        height: 100%;
+        width: fit-content;
+        height: 2em;
         text-align: center;
         justify-content: center;
         align-items: center;
+        float: right;
+        padding: 0 1em;
+        border: 1px solid lightgray;
+        border-radius: 1em;
+
+        &:hover {
+          cursor: pointer;
+          background-color: whitesmoke;
+        }
+
+        & > div.search_icon {
+          width: 1em;
+          height: 1em;
+          max-height: 2em;
+          margin-right: 0.5em;
+          background: url(../svg/magnifier.svg) right center no-repeat;
+          background-size: 1em;
+          opacity: 0.8;
+        }
       }
     }
   }
