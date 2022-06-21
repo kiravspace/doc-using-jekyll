@@ -5,6 +5,7 @@ module Jekyll::Potion
     PRIORITY = 10
 
     TITLE_KEY = "title"
+    ICON_KEY = "icon"
     THEME_KEY = "theme"
     ASSETS_PATH_KEY = "assets"
     IS_SHOW_PAGINATION_KEY = "is_show_pagination"
@@ -13,6 +14,7 @@ module Jekyll::Potion
 
     DEFAULT = {
       TITLE_KEY => "",
+      ICON_KEY => "",
       THEME_KEY => "proto",
       ASSETS_PATH_KEY => "assets",
       IS_SHOW_PAGINATION_KEY => true,
@@ -21,6 +23,7 @@ module Jekyll::Potion
         "optional-front-matter-processor",
         "static-files-processor",
         "make-title-processor",
+        "make-date-processor",
         "navigation-processor",
         "empty-content-processor",
         "pagination-processor",
@@ -112,6 +115,14 @@ module Jekyll::Potion
 
     def site_title
       @config[TITLE_KEY]
+    end
+
+    def site_icon
+      if @config[ICON_KEY].empty?
+        @config[ICON_KEY]
+      else
+        File.join(baseurl, @config[ICON_KEY])
+      end
     end
 
     def templates_path

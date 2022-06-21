@@ -61,9 +61,6 @@ module Jekyll::Potion
     end
 
     def site_post_render(site)
-      my_object = { :array => [1, 2, 3, { :sample => "hash" }], :foo => "bar" }
-      # puts JSON.pretty_generate(my_object)
-
       page = DataPage.new(site, site.source, File.join(config.assets_path, "data"), "search.json")
       page.output = JSON.pretty_generate(@indexes)
       site.pages << page

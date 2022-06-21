@@ -1,11 +1,16 @@
+url: "https://gh-page.kirav.net"
+base_url: ""
+
 includes_dir: ""
+
+exclude:
+  - "*.iml"
+  - ".idea/"
+  - "_jekyll-potion"
 
 collections:
   posts:
     output: false
-
-plugins:
-  - jekyll-spaceship
 
 defaults:
   - scope:
@@ -19,7 +24,6 @@ defaults:
       permalink: "/"
 
 markdown: kramdown
-
 kramdown:
   input: GFM
   syntax_highlighter: rouge
@@ -27,15 +31,12 @@ kramdown:
     block:
       line_numbers: true
 
-exclude:
-  - "*.iml"
-  - ".idea/"
-  - "_jekyll-potion"
-
 sass:
   style: compressed
 
 ########################################
+plugins:
+  - jekyll-spaceship
 
 jekyll-spaceship:
   processors:
@@ -50,19 +51,6 @@ jekyll-spaceship:
 
 ########################################
 
-potion_config:
-  theme: proto
-  title: Developers | Guide
-  is_make_title: true
-  is_show_pagination: true
-  is_show_empty_to_child_pages: true
-########################################
-
-########################################
-
-potion:
-  title: Developers | Guide
-########################################
-
 jekyll-potion:
   title: Developers | Guide
+  icon: assets/icon/icon.png
