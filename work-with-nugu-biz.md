@@ -7,12 +7,12 @@ depth_order: 3
 
 NUGU biz kit은 NUGU 플랫폼과 연동된 디바이스를 비즈니스 환경에서 활용하기 위한 상품입니다. 비즈니스 용도를 위해 NUGU play kit에서 Private Play를 만들고, 특정 디바이스 또는 사용자 그룹만 사용할 수 있도록 관리 할 수 있습니다. 또한 해당 디바이스 및 사용자를 대상으로 Announcement (tts, image) 메세지를 보낼 수 있습니다.
 
-* [주요 개념](/pages/work-with-nugu-biz/nugu-biz-concept)
-* [체험판 및 정식판](/pages/work-with-nugu-biz/describebiz)
-* [Private Play](/pages/work-with-nugu-biz/private-play)
-* [Biz 전용 디바이스 관리](/pages/work-with-nugu-biz/manage-shared-device)
-* [Biz 사용자 관리](/pages/work-with-nugu-bizgu-biz/manage-enrolled-user)
-* [Biz API](/pages/work-with-nugu-bizgu-biz/biz-api)
+* [주요 개념](./work-with-nugu-biz/nugu-biz-concept)
+* [체험판 및 정식판](./work-with-nugu-biz/describebiz)
+* [Private Play](./work-with-nugu-biz/private-play)
+* [Biz 전용 디바이스 관리](./work-with-nugu-biz/manage-shared-device)
+* [Biz 사용자 관리](./work-with-nugu-bizgu-biz/manage-enrolled-user)
+* [Biz API](./work-with-nugu-bizgu-biz/biz-api)
 
 ## Biz 전용 디바이스 관리(Shared Device)
 

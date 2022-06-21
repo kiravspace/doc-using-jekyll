@@ -9,7 +9,7 @@ description: >-
 
 ## NUGU SDK Architecture
 
-> NUGU SDK를 더 자세히 알아보기 위해서는 각각의 플랫폼 별 페이지를 통해 확인하실 수 있습니다.
+NUGU SDK를 더 자세히 알아보기 위해서는 각각의 플랫폼 별 페이지를 통해 확인하실 수 있습니다.
 
 ![](../assets/images/nugu-sdk-platform-01.png)
 

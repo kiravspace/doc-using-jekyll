@@ -58,7 +58,7 @@ depth_order: 6
 
 ### 1. 새로운 기능
 
-* 실패 발화 분석 도구에 용언 분석 기능 추가 : [자세히 알아보기](/pages/nugu-play/create-plays-with-play-builder/support-tools/log-mining#log-mining-verb)
+* 실패 발화 분석 도구에 용언 분석 기능 추가 : [자세히 알아보기](./create-plays-with-play-builder/support-tools/log-mining#log-mining-verb)
 
 ### 2. 향상/변경된 기능
 

@@ -8,7 +8,7 @@ body {
   & > header {
     height: 3em;
     border-bottom: 1px solid darkgray;
-    box-shadow: 1px 3px 3px lightgrey;
+    box-shadow: 1px 3px 3px lightgray;
 
     & > div.header {
       width: 20%;
@@ -52,7 +52,7 @@ body {
 
   & > nav {
     width: calc(20% - 1px);
-    height: calc(100vh - 4em);
+    height: calc(100vh - 3em);
     float: left;
     overflow: auto;
     border-right: 1px solid darkgray;
@@ -96,6 +96,8 @@ body {
             flex: auto;
             display: none;
             color: inherit;
+            background: url(../svg/unfold.svg) center no-repeat;
+            background-size: 80%;
 
             &:hover {
               cursor: pointer;
@@ -106,6 +108,8 @@ body {
             flex: auto;
             display: none;
             color: inherit;
+            background: url(../svg/fold.svg) center no-repeat;
+            background-size: 80%;
 
             &:hover {
               cursor: pointer;
@@ -141,9 +145,9 @@ body {
           }
 
           &.selected {
-            background-color: #f0f0f0;
-            border-top: 1px solid #f0f0f0;
-            border-bottom: 1px solid #f0f0f0;
+            background-color: lightgray;
+            border-top: 1px solid lightgray;
+            border-bottom: 1px solid lightgray;
             color: blue;
           }
         }
@@ -153,7 +157,7 @@ body {
 
   & > section {
     width: 80%;
-    height: calc(100vh - 4em);
+    height: calc(100vh - 3em);
     float: left;
     overflow: auto;
 
@@ -164,7 +168,7 @@ body {
 
     %bordered_boxed {
       @extend %boxed;
-      border: 1px solid #f0f0f0;
+      border: 1px solid lightgray;
       border-radius: 0.5em;
     }
 
@@ -272,6 +276,7 @@ body {
           text-overflow: ellipsis;
           overflow: hidden;
           white-space: nowrap;
+          font-weight: normal;
         }
       }
     }
@@ -282,7 +287,7 @@ body {
       & > .header {
         padding-bottom: 2em;
         margin-bottom: 0;
-        border-bottom: 1px solid #f0f0f0;
+        border-bottom: 1px solid lightgray;
 
         & > .heading {
           font-size: xx-large;
@@ -302,7 +307,7 @@ body {
         & > h2 {
           padding-top: 1em;
           margin-top: 0;
-          border-top: 1px solid #f0f0f0;
+          border-top: 1px solid lightgray;
           border-collapse: collapse;
         }
 
@@ -312,7 +317,7 @@ body {
 
         code.highlighter-rouge {
           font-family: "Nanum Gothic", sans-serif;
-          background-color: #f0f0f0;
+          background-color: lightgray;
           border-radius: 0.5em;
           padding: 0.2em 0.5em;
           margin: 0 0.2em;
@@ -351,7 +356,7 @@ body {
 
             code {
               font-family: "Nanum Gothic", sans-serif;
-              background-color: #f0f0f0;
+              background-color: lightgray;
               border-radius: 0.5em;
               padding: 0.2em 0.5em;
               margin: 0 0.2em;
@@ -369,6 +374,16 @@ body {
           }
         }
 
+        blockquote {
+          display: flex;
+          height: 3.5em;
+          margin-left: 2.5em;
+          padding-left: 1em;
+          border-left: 0.2em solid lightgray;
+          vertical-align: middle;
+          align-items: center;
+        }
+
         .empty_block {
           @extend %pagination;
 
@@ -377,10 +392,14 @@ body {
 
         .file_block {
           @extend %pagination;
+
+          margin-top: 2em;
         }
 
         .link_block {
           @extend %pagination;
+
+          margin-top: 2em;
         }
 
         table:not(.rouge-table) {
@@ -391,8 +410,8 @@ body {
           color: black;
 
           tr {
-            border-top: 1px solid #f0f0f0;
-            border-bottom: 1px solid #f0f0f0;
+            border-top: 1px solid lightgray;
+            border-bottom: 1px solid lightgray;
           }
 
           thead {
@@ -475,7 +494,7 @@ body {
 
           .code_title {
             padding: 0.5em 1em;
-            background-color: #f0f0f0;
+            background-color: lightgray;
             font-weight: bold;
 
             &:empty {
@@ -492,7 +511,7 @@ body {
           & > .api_summary {
             font-weight: bold;
             padding: 1em;
-            background-color: #f0f0f0;
+            background-color: lightgray;
             border-radius: 0.5em 0.5em 0 0;
           }
 
@@ -519,7 +538,7 @@ body {
 
           & > .api_description {
             padding: 1em;
-            border-bottom: 1px solid #f0f0f0;
+            border-bottom: 1px solid lightgray;
           }
 
           & > .api_parameter_category_title {
@@ -532,10 +551,10 @@ body {
             & > .api_parameter {
               display: flex;
               padding: 0.5em;
-              border-bottom: 1px solid #f0f0f0;
+              border-bottom: 1px solid lightgray;
 
               &:hover {
-                background-color: #f0f0f0;
+                background-color: lightgray;
                 cursor: pointer;
               }
 
@@ -598,13 +617,13 @@ body {
             & > li.tab_title {
               display: block;
               padding: 0.3em 2em;
-              border: 1px solid #f0f0f0;
+              border: 1px solid lightgray;
               border-bottom-style: none;
               margin-inline-end: 0.5em;
               text-align: center;
 
               &.selected {
-                background-color: #f0f0f0;
+                background-color: lightgray;
               }
 
               &:hover {
@@ -614,7 +633,7 @@ body {
           }
 
           & > div.tab_content {
-            border: 1px solid #f0f0f0;
+            border: 1px solid lightgray;
             padding: 0.5em;
             display: none;
 
@@ -669,10 +688,4 @@ body {
       }
     }
   }
-
-  & > footer {
-    height: 1em;
-    clear: both;
-  }
-
 }
