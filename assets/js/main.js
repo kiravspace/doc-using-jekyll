@@ -101,8 +101,21 @@ $(function () {
 
     let $modal_image_area = $("#modal_image_area");
 
-    $modal_image_area.bind("click", function () {
-        $(this).addClass("hide");
+    $modal_image_area.children("div.modal_wrapper").bind("click", function () {
+        $modal_image_area.addClass("hide");
+    });
+
+    let $go_search = $("#go_search");
+    let $modal_search_area = $("#modal_search_area");
+
+    $go_search.bind("click", function () {
+        $modal_search_area.removeClass("hide");
+    });
+
+    $modal_search_area.children("div.modal_wrapper").bind("click", function (e) {
+        if (this === e.target) {
+            $modal_search_area.addClass("hide");
+        }
     });
 
     $(document).keydown(function (e) {
@@ -110,7 +123,120 @@ $(function () {
             if (!$modal_image_area.hasClass("hide")) {
                 $modal_image_area.addClass("hide");
             }
+
+            if (!$modal_search_area.hasClass("hide")) {
+                $modal_search_area.addClass("hide");
+            }
         }
+    });
+
+    let search_indexes = [];
+
+    function create_array(start, end) {
+        let array = [];
+        for (let i = start; i <= end; i++) {
+            array.push(i);
+        }
+        return array
+    }
+
+    function distinct_index(indexes, nums) {
+        let contents_range_array = [];
+        let distinct = [];
+
+        nums.forEach(function (num) {
+            let contains = contents_range_array.filter(function (contents_range) {
+                return contents_range.includes(num)
+            }).length > 0;
+
+            if (!contains) {
+                let start = Math.max(num - 1, 0);
+                let end = Math.min(start + 2, indexes.length - 1);
+                contents_range_array.push(create_array(start, end));
+                distinct.push(num);
+            }
+        })
+
+        return distinct;
+    }
+
+    function select_contents(indexes, num) {
+        let start = Math.max(num - 1, 0)
+        return indexes.slice(start, start + 3)
+    }
+
+    function select_content_hash_indexes(indexes, keyword) {
+        let filter = indexes
+            .map(function (index, indexes_index) {
+                if (new RegExp(keyword, "i").test(index)) {
+                    return indexes_index;
+                } else {
+                    return -1;
+                }
+            })
+            .filter(function (hash_indexes) {
+                return hash_indexes >= 0;
+            });
+
+        return distinct_index(indexes, filter)
+            .map(function (hash_index) {
+                return select_contents(indexes, hash_index);
+            });
+    }
+
+    function select_hashes(hashes, keyword) {
+        return hashes
+            .map(function (hash) {
+                let hash_indexes = select_content_hash_indexes(hash.indexes, keyword);
+
+                if (hash_indexes.length > 0) {
+                    return hash_indexes.map(function (contents) {
+                        return {
+                            "hash": (hash.hash === "") ? "" : "#" + hash.hash,
+                            "title": hash.title,
+                            "contents": contents
+                        };
+                    })
+                } else {
+                    return [];
+                }
+            })
+            .filter(function (hash) {
+                return hash.length > 0;
+            });
+    }
+
+    function select_search_result(search_indexes, keyword) {
+        return [].concat.apply(
+            [],
+            search_indexes
+                .map(function (page) {
+                    let hashes = select_hashes(page.hashes, keyword);
+
+                    if (hashes.length > 0) {
+                        return [].concat.apply([], hashes).map(function (hash) {
+                            return {
+                                "url": page.url + hash.hash,
+                                "title": hash.title,
+                                "contents": hash.contents
+                            };
+                        });
+                    } else {
+                        return [];
+                    }
+                })
+                .filter(function (hashes) {
+                    return hashes.length > 0;
+                })
+        );
+    }
+
+    $.getJSON($("meta[property='search-indexes-location']").attr("content"), function (data) {
+        let keyword = "Developers"
+        search_indexes = data;
+
+        let indexes = select_search_result(search_indexes, keyword);
+        console.log(indexes)
     });
 
     updateTab();
