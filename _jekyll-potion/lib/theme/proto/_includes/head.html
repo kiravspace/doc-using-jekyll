@@ -1,5 +1,10 @@
 <meta charset="utf-8">
 <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
+<meta content="no-cache" http-equiv="Cache-Control">
+<meta content="no-cache" http-equiv="Pragma">
+{% unless page.data["last-modified-date"].nil? %}
+<meta content="Mon,20 Jul 2016 19:30:30" http-equiv="Last-Modified"/>
+{% endunless %}
 
 {% assign title = site.data.potion.site_title %}
 
