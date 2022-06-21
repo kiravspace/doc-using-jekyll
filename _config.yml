@@ -32,6 +32,7 @@ kramdown:
       line_numbers: true
 
 sass:
+  sass_dir: ""
   style: compressed
 
 ########################################

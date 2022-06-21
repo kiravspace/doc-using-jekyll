@@ -7,14 +7,56 @@ body {
 
   & > header {
     height: 3em;
+    border-bottom: 1px solid darkgray;
+    box-shadow: 1px 3px 3px lightgrey;
+
+    & > div.header {
+      width: 20%;
+      height: 100%;
+      float: left;
+
+      & > div.title {
+        display: flex;
+        width: 100%;
+        height: 100%;
+        text-align: center;
+        justify-content: center;
+        align-items: center;
+        font-size: large;
+        font-weight: bold;
+
+        & > img {
+          width: auto;
+          max-height: 2em;
+          vertical-align: middle;
+          margin-right: 0.5em;
+        }
+      }
+    }
+
+    & > div.search {
+      width: 40%;
+      height: 100%;
+      float: right;
+
+      & > div.search_bax {
+        display: flex;
+        width: 100%;
+        height: 100%;
+        text-align: center;
+        justify-content: center;
+        align-items: center;
+      }
+    }
   }
 
   & > nav {
-    width: 20%;
+    width: calc(20% - 1px);
     height: calc(100vh - 4em);
     float: left;
-    background-color: white;
     overflow: auto;
+    border-right: 1px solid darkgray;
+    box-shadow: 1px 2px lightgrey;
 
     & > div.nav_container {
       width: 95%;
@@ -182,6 +224,32 @@ body {
         width: calc(4em - (0.2em * 2));
         height: calc(100% - (0.2em * 2));
         float: left;
+        opacity: 0.5;
+
+        &.prev {
+          background: url(../svg/left.svg) center no-repeat;
+          background-size: 80%;
+        }
+
+        &.next {
+          background: url(../svg/right.svg) center no-repeat;
+          background-size: 80%;
+        }
+
+        &.document {
+          background: url(../svg/document.svg) center no-repeat;
+          background-size: 70%;
+        }
+
+        &.file {
+          background: url(../svg/file.svg) center no-repeat;
+          background-size: 70%;
+        }
+
+        &.link {
+          background: url(../svg/link.svg) center no-repeat;
+          background-size: 60%;
+        }
       }
 
       & > .block_content {
@@ -301,7 +369,17 @@ body {
           }
         }
 
-        .pagination {
+        .empty_block {
+          @extend %pagination;
+
+          margin-top: 2em;
+        }
+
+        .file_block {
+          @extend %pagination;
+        }
+
+        .link_block {
           @extend %pagination;
         }
 
@@ -551,7 +629,7 @@ body {
         }
       }
 
-      .pagination {
+      & > .pagination_block {
         @extend %pagination;
 
         margin-top: 2em;

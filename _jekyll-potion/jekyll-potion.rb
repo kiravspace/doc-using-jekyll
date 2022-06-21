@@ -1,4 +1,5 @@
 require_relative "lib/models/page-potion"
+require_relative "lib/models/data-page"
 
 require_relative "lib/logger"
 require_relative "lib/processor"
