@@ -48,8 +48,6 @@ module Jekyll::Potion
       @processors = @config[PROCESSOR_KEY].map { |processor| Processor.load_processor_class(processor) }
                                           .map { |processor_class| processor_class.new(self) }
 
-      @site.config["sass"]["sass_dir"] = _sass
-
       @assets_collection = Jekyll::Collection.new(@site, assets_path)
     end
 
@@ -150,9 +148,7 @@ module Jekyll::Potion
     end
 
     def add_static_files(base, dir, name)
-      static_file = Jekyll::StaticFile.new(@site, base, dir, name, @assets_collection)
-      @site.static_files << static_file
-      static_file
+      @site.static_files << Jekyll::StaticFile.new(@site, base, dir, name, @assets_collection)
     end
 
     def markdown_converter

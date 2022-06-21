@@ -8,10 +8,6 @@ module Jekyll::Potion
       @indexes = []
     end
 
-    def site_post_read(site)
-      # config.data_assets.each { |asset| load_static_files(asset) }
-    end
-
     def load_static_files(base, dir = "")
       Dir.foreach(File.join(base, dir)) { |file_name|
         next if file_name == "." or file_name == ".."
@@ -22,11 +18,7 @@ module Jekyll::Potion
           load_static_files(base, file_name)
         else
           logger.trace("add static file #{File.join(dir, file_name)}")
-          data_file = config.add_static_files(base, dir, file_name)
-
-          if (file_name === "search.json")
-            @search_data = data_file
-          end
+          config.add_static_files(base, dir, file_name)
         end
       }
     end
@@ -62,22 +54,22 @@ module Jekyll::Potion
       indexes << page.data["title"]
       indexes << page.data["description"] unless page.data["description"].nil? || page.data["description"].empty?
 
-      titles = ["", "", "", "", "", ""]
+      titles = [page.data["title"], "", "", "", "", "", ""]
 
       content.children.each { |tag|
         if tag.name =~ /h(\d+)/
           unless tag.text.strip.empty?
-            current = $1.to_i
-
-            (current..6).each { |i| titles[i] = "" }
-
-            titles[current] = tag.text.strip
-
             hashed << {
-              "hash" => hash,
+              "hash" => "#{hash}",
               "title" => titles.select { |title| !title.empty? }.join(" > "),
               "indexes" => indexes.clone
             }
+
+            current = $1.to_i + 1
+
+            (current..7).each { |i| titles[i] = "" }
+
+            titles[current] = tag.text.strip
 
             hash = tag["id"]
             indexes.clear
@@ -89,7 +81,7 @@ module Jekyll::Potion
       }
 
       hashed << {
-        "hash" => hash,
+        "hash" => "#{hash}",
         "title" => titles.select { |title| !title.empty? }.join(" > "),
         "indexes" => indexes.clone
       }
