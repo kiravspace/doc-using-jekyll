@@ -73,7 +73,7 @@ nugu_client->getCapabilityBuilder()
 
 ### Context 구성
 
-[UI 제어](./#ui-1) 기능을 사용하기 위해서는 template 화면의 상태 정보를 [Context](./#context) 에 포함시켜 주어야 합니다.
+[UI 제어](#ui-1) 기능을 사용하기 위해서는 template 화면의 상태 정보를 [Context](#context) 에 포함시켜 주어야 합니다.
 
 {% tabs %}
 {% tabs::content title="Android" %}
@@ -116,13 +116,13 @@ displayAgent.delegate = MyDisplayAgentDelegate()
 {% endtabs::content %}
 {% endtabs %}
 
-### UI 구성 및 제어
+### UI 구성 및 제어 <a id="ui-1"></a>
 
-Display 로 화면을 구성하기 위해 필요한 데이터는 [Template](./#directive-template) directive 에 포함되어 전달됩니다.
+Display 로 화면을 구성하기 위해 필요한 데이터는 [Template](./display/display-directive#directive-template) directive 에 포함되어 전달됩니다.
 
-Template 화면은 [Close](./#close) directive 또는 SDK 내부 timer 등에 의해 종료될 수 있으며, [Update](./#update) directive 에 의해 변경될 수 있습니다.
+Template 화면은 [Close](./display/display-directive#close) directive 또는 SDK 내부 timer 등에 의해 종료될 수 있으며, [Update](./display/display-directive#update) directive 에 의해 변경될 수 있습니다.
 
-Template 의 focus 와 scroll 은 `사용자 발화` 에 따라 [ControlFocus](display-directive#controlfocus), [ControlScroll](display-directive#controlscroll) directive 로 제어될 수 있습니다.
+Template 의 focus 와 scroll 은 `사용자 발화` 에 따라 [ControlFocus](./display/display-directive#controlfocus), [ControlScroll](./display/display-directive#controlscroll) directive 로 제어될 수 있습니다.
 
 {% tabs %}
 {% tabs::content title="Android" %}
@@ -215,7 +215,7 @@ CapabilityFactory::makeCapability<DisplayAgent, IDisplayHandler>(display_listene
 
 ### 사용자 인터렉션 처리
 
-Template 하위 항목 선택시 [ElementSelected](display-event#elementselected) event 가 전달됩니다.
+Template 하위 항목 선택시 [ElementSelected](./display/display-event#elementselected) event 가 전달됩니다.
 
 {% tabs %}
 {% tabs::content title="Android" %}

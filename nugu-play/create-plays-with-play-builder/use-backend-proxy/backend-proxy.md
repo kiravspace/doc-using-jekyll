@@ -10,7 +10,7 @@ NUGU 플랫폼의 Dialog Manager는 지정된 포맷(Backend proxy API 규격)�
 
 ![](../../../assets/images/backend-proxy-01.png)
 
-이 서버는 Play Builder를 통해 Play를 만드는 과정에서 정의한 파라미터와 [Backend proxy API Reference](backend-proxy-api-reference)에서 제공하는 규격을 사용하여 직접 개발해야 합니다.
+이 서버는 Play Builder를 통해 Play를 만드는 과정에서 정의한 파라미터와 [Backend proxy API Reference](./backend-proxy-api-reference)에서 제공하는 규격을 사용하여 직접 개발해야 합니다.
 
 NUGU 플랫폼에서는 Backend proxy를 구축할 수 있는 클라우드 환경을 제공하고 있지 않으며, Play를 개발하는 곳에서 직접 구축을 하거나 클라우드 서비스를 이용할 수 있습니다.
 
@@ -49,7 +49,7 @@ REST API URL 생성 규칙은 다음과 같습니다.
 
 ## Request Body
 
-Request의 Body로 전달되는 JSON 포맷의 데이터는 [Backend proxy API Reference](backend-proxy-api-reference)를 참조합니다. 이 JSON 데이터는 임의의 필드가 추가 될 수 있으므로, 이에 대한 영향이 없도록 구현되어야 합니다. Request Body에 정의된 필드 중 Play Builder에 설정한 값들에 의해 결정되는 필드는 action.parameters 입니다.
+Request의 Body로 전달되는 JSON 포맷의 데이터는 [Backend proxy API Reference](./backend-proxy-api-reference)를 참조합니다. 이 JSON 데이터는 임의의 필드가 추가 될 수 있으므로, 이에 대한 영향이 없도록 구현되어야 합니다. Request Body에 정의된 필드 중 Play Builder에 설정한 값들에 의해 결정되는 필드는 action.parameters 입니다.
 
 NUGU 플랫폼에서 Play Builder에 설정된 정보로부터 action.parameters 필드를 채우는 규칙은 다음과 같습니다.
 

@@ -63,7 +63,7 @@ nugu_client->getCapabilityBuilder()
 
 ### 텍스트 명령
 
-임의의 텍스트 명령을 [TextInput](text#textinput) event 로 요청할 수 있습니다.
+임의의 텍스트 명령을 [TextInput](#textinput) event 로 요청할 수 있습니다.
 
 {% tabs %}
 {% tabs::content title="Android" %}

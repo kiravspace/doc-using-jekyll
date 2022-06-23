@@ -18,30 +18,30 @@ Display Interface는 AudioPlayer를 위한 Display와 중첩하여 사용하지 
 
 현재 Display Interface를 지원하는 디바이스와 해상는 다음과 같습니다.
 
-|  디바이스 |  Size (px)  | Orientation |
-| :---: | :---------: | :---------: |
-| NU300 |  1280 x 800 |  Landscape  |
-|  Btv  | 1920 x 1080 |  Landscape  |
+|  디바이스  |  Size (px)   | Orientation  |
+|:------:|:------------:|:------------:|
+| NU300  |  1280 x 800  |  Landscape   |
+|  Btv   | 1920 x 1080  |  Landscape   |
 
 ## Template Types
 
 다음과 같은 유형의 화면 Template을 지원합니다.
 
-|    Type    |                           NU300                           | Btv                                                       |
-| :--------: | :-------------------------------------------------------: | --------------------------------------------------------- |
-|  FullText1 | ![](../../../../assets/images/display-interface-01.png) | ![](../../../../assets/images/display-interface-02.jpg) |
-|  FullText2 | ![](../../../../assets/images/display-interface-03.png) | ![](../../../../assets/images/display-interface-04.png) |
-| ImageText1 | ![](../../../../assets/images/display-interface-05.png) | ![](../../../../assets/images/display-interface-06.png) |
-| ImageText2 | ![](../../../../assets/images/display-interface-07.png) | ![](../../../../assets/images/display-interface-08.png) |
-| ImageText3 | ![](../../../../assets/images/display-interface-09.png) | ![](../../../../assets/images/display-interface-10.png) |
-| ImageText4 | ![](../../../../assets/images/display-interface-11.png) | ![](../../../../assets/images/display-interface-12.png) |
-|  TextList1 | ![](../../../../assets/images/display-interface-13.png) | ![](../../../../assets/images/display-interface-14.png) |
-|  TextList2 | ![](../../../../assets/images/display-interface-15.png) | ![](../../../../assets/images/display-interface-16.png) |
-|  TextList3 | ![](../../../../assets/images/display-interface-17.png) | ![](../../../../assets/images/display-interface-18.png) |
-|  TextList4 | ![](../../../../assets/images/display-interface-19.png) | ![](../../../../assets/images/display-interface-20.png) |
-| ImageList1 | ![](../../../../assets/images/display-interface-21.png) | ![](../../../../assets/images/display-interface-22.png) |
-| ImageList2 | ![](../../../../assets/images/display-interface-23.png) | ![](../../../../assets/images/display-interface-24.jpg) |
-| ImageList3 | ![](../../../../assets/images/display-interface-25.png) | ![](../../../../assets/images/display-interface-26.png) |
+|    Type     |                           NU300                            | Btv                                                        |
+|:-----------:|:----------------------------------------------------------:|------------------------------------------------------------|
+|  FullText1  |  ![](../../../../assets/images/display-interface-01.png)   | ![](../../../../assets/images/display-interface-02.jpg)    |
+|  FullText2  |  ![](../../../../assets/images/display-interface-03.png)   | ![](../../../../assets/images/display-interface-04.png)    |
+| ImageText1  |  ![](../../../../assets/images/display-interface-05.png)   | ![](../../../../assets/images/display-interface-06.png)    |
+| ImageText2  |  ![](../../../../assets/images/display-interface-07.png)   | ![](../../../../assets/images/display-interface-08.png)    |
+| ImageText3  |  ![](../../../../assets/images/display-interface-09.png)   | ![](../../../../assets/images/display-interface-10.png)    |
+| ImageText4  |  ![](../../../../assets/images/display-interface-11.png)   | ![](../../../../assets/images/display-interface-12.png)    |
+|  TextList1  |  ![](../../../../assets/images/display-interface-13.png)   | ![](../../../../assets/images/display-interface-14.png)    |
+|  TextList2  |  ![](../../../../assets/images/display-interface-15.png)   | ![](../../../../assets/images/display-interface-16.png)    |
+|  TextList3  |  ![](../../../../assets/images/display-interface-17.png)   | ![](../../../../assets/images/display-interface-18.png)    |
+|  TextList4  |  ![](../../../../assets/images/display-interface-19.png)   | ![](../../../../assets/images/display-interface-20.png)    |
+| ImageList1  |  ![](../../../../assets/images/display-interface-21.png)   | ![](../../../../assets/images/display-interface-22.png)    |
+| ImageList2  |  ![](../../../../assets/images/display-interface-23.png)   | ![](../../../../assets/images/display-interface-24.jpg)    |
+| ImageList3  |  ![](../../../../assets/images/display-interface-25.png)   | ![](../../../../assets/images/display-interface-26.png)    |
 
 ## Context
 
@@ -59,11 +59,11 @@ Display Interface는 AudioPlayer를 위한 Display와 중첩하여 사용하지 
 ```
 {% endcode %}
 
-| Parameter     | Type   | 필수  | Description                              |
-| ------------- | ------ |-----| ---------------------------------------- |
-| version       | string | Y   | 인터페이스 버전                                 |
-| playServiceId | string | N   | template을 전송한 Play의 play service id      |
-| token         | string | N   | 클릭하는 template을 식별하기 위한 unique identifier |
+| Parameter      | Type    | 필수   | Description                               |
+|----------------|---------|------|-------------------------------------------|
+| version        | string  | Y    | 인터페이스 버전                                  |
+| playServiceId  | string  | N    | template을 전송한 Play의 play service id       |
+| token          | string  | N    | 클릭하는 template을 식별하기 위한 unique identifier  |
 
 ## 화면 구성 요소
 

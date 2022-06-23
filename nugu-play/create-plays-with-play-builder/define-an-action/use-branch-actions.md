@@ -61,7 +61,7 @@ Branch Action은 기본적으로 Root Action과 같으나, Trigger가 Intent가 
 * Parameter: 'day', 'location', 'day_check'
 * Backend proxy 사용 여부 : 'ON'
 * Backend Parameter: 'status', 'resultcode'
-* Parameter 등록 및 설정 방법에 대한 자세한 내용은 [Parameter](use-parameters)를 참고하세요.
+* Parameter 등록 및 설정 방법에 대한 자세한 내용은 [Parameter](./use-parameters)를 참고하세요.
 * Output 정의 영역에서 `Branch Action` 버튼을 클릭하여 Output 유형을 Branch로 선택합니다.
 
 ![](../../../assets/images/use-branch-actions-09.png)
@@ -183,6 +183,6 @@ Branch Action은 기본적으로 Root Action과 같으나, Trigger가 Intent가 
 이 장과 함께 보면 좋은 도움말
 
 * [Response Filter 사용하기](../define-response-filters)
-* [Response에서 조사 사용하기](use-responses/use-prompts#process-postpositions)
-* [Response에서 발화 옵션 사용하기](use-responses/use-prompts#use-utterance-options)
+* [Response에서 조사 사용하기](./use-responses/use-prompts#process-postpositions)
+* [Response에서 발화 옵션 사용하기](./use-responses/use-prompts#use-utterance-options)
 {% endalerts %}

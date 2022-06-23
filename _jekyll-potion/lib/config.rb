@@ -27,6 +27,8 @@ module Jekyll::Potion
         "navigation-processor",
         "empty-content-processor",
         "pagination-processor",
+        "rewrite-img-src-processor",
+        "rewrite-a-href-processor",
         "search-processor"
       ]
     }

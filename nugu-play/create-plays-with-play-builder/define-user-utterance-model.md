@@ -10,7 +10,7 @@ depth_order: 4
 
 Intent를 만들고 수정하는 것은 좌측 메뉴의 `User Utterance Model` > `Custom Intents`와 `Built-in Intents` 메뉴에서 할 수 있습니다. Custom Intent는 Play 내에서 정의된 Intent를 의미하고, Built-in Intent는 NUGU play kit에서 제공하는 Intent로서 여러 분야에서 공통적으로 사용될 것으로 예상되어 미리 학습시켜 둔 Intent입니다.
 
-### Custom Intent 생성하기 <a href="create-custom-intent" id="create-custom-intent"></a>
+### Custom Intent 생성하기 <a id="create-custom-intent"></a>
 
 먼저 Custom Intent를 추가하는 방법에 대해 알아보도록 하겠습니다.
 
@@ -73,7 +73,7 @@ Intent를 만들고 수정하는 것은 좌측 메뉴의 `User Utterance Model` 
 ![](../../assets/images/define-user-utterance-model-10.gif)
 
 그러나 아직은 'LOCATION'에 하나의 Entity만 있으므로 Entity를 더 추가하거나 다른 Type으로 변경해야 합니다.\
-이에 대한 자세한 내용은 아래의 [Custom Entity Type에 Entity 추가하기](./#custom-entity-type)에서 더 알아보도록 하겠습니다.
+이에 대한 자세한 내용은 아래의 [Custom Entity Type에 Entity 추가하기](#custom-entity-type)에서 더 알아보도록 하겠습니다.
 
 '문장 내 역할'은 이 Entity가 문장 내에서 하게 되는 역할(Entity Role)을 의미합니다.
 
@@ -92,18 +92,18 @@ Intent를 더 추가하고 싶다면 계속 추가가 가능하며, 추가 가�
 {% alerts style="info" %}
 다음의 내용을 참고하세요.
 
-* [예상 발화 작성 가이드](how-to-write-customer-utterances)를 참고하세요.
+* [예상 발화 작성 가이드](./define-user-utterance-model/how-to-write-customer-utterances)를 참고하세요.
 * Play Builder에서는 예상 발화를 파일로 업로드할 수 있도록 지원하고 있습니다.
-  예상 발화 및 Entity 업로드 가이드와 Built-in Intent에 대한 자세한 내용은 [Built-in Intent](built-in-intents)를 참고하세요.
+  예상 발화 및 Entity 업로드 가이드와 Built-in Intent에 대한 자세한 내용은 [Built-in Intent](./define-user-utterance-model/built-in-intents)를 참고하세요.
 {% endalerts %}
 
 ## Entity
 
 Entity는 Type을 기준으로 생성하고 정의하며 Entity Type은 Custom과 Built-in Entity Type으로 구성됩니다. Custom Entity Type은 Play Builder를 통해 직접 등록하는 Entity Type이며, Built-in Entity Type은 시간, 개수, 지명과 같이 여러 분야에서 공통으로 사용될 것으로 예상되어 NUGU play kit이 제공해 주는 Entity Type입니다.
 
-### Custom Entity Type에 Entity 추가하기 <a href="custom-entity-type" id="custom-entity-type"></a>
+### Custom Entity Type에 Entity 추가하기 <a id="custom-entity-type"></a>
 
-[Custom Intent 생성하기](./#create-custom-intent)에서 'LOCATION'이라는 Entity Type을 생성하고, '명동'이라는 Entity를 추가하였습니다. 이 Entity Type에 '명동'이라는 Entity 외 다른 Entity를 추가 등록하는 방법에 대해 알아보겠습니다.
+[Custom Intent 생성하기](#create-custom-intent)에서 'LOCATION'이라는 Entity Type을 생성하고, '명동'이라는 Entity를 추가하였습니다. 이 Entity Type에 '명동'이라는 Entity 외 다른 Entity를 추가 등록하는 방법에 대해 알아보겠습니다.
 
 1) Play Builder 홈 화면에서 Entity를 추가할 Play를 클릭하여 선택한 후, `User Utterance Model` > `Custom Entity Types`을 클릭합니다.
 
@@ -171,6 +171,6 @@ Built-in Entity Type도 Custom Entity Type과 마찬가지로 일부 Type에 대
 {% alerts style="info" %}
 함께 보면 좋은 도움말
 
-* [Intent의 예상 발화 문장을 잘 입력하는 방법](how-to-write-customer-utterances)
-* [AudioPlayer Interface 알아보기](../use-backend-proxy/capability-interfaces/audioplayer-interface)
+* [Intent의 예상 발화 문장을 잘 입력하는 방법](./define-user-utterance-model/how-to-write-customer-utterances)
+* [AudioPlayer Interface 알아보기](./use-backend-proxy/capability-interfaces/audioplayer-interface)
 {% endalerts %}

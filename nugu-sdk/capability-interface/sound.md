@@ -70,7 +70,7 @@ nugu_client->getCapabilityBuilder()
 
 ### 재생
 
-디바이스 음원 재생이 [Beep](sound#beep) directive 로 요청될 수 있습니다.
+디바이스 음원 재생이 [Beep](#beep) directive 로 요청될 수 있습니다.
 
 {% tabs %}
 {% tabs::content title="Android" %}

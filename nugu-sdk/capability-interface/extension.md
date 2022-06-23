@@ -77,9 +77,9 @@ nugu_client->getCapabilityBuilder()
 
 ### Context 구성 및 기능 실행
 
-Play 에서 알아야 하는 디바이스/Application 의 정보를 [Context](extension#context) 에 포함시켜 주어야 합니다.
+Play 에서 알아야 하는 디바이스/Application 의 정보를 [Context](#context) 에 포함시켜 주어야 합니다.
 
-특정 기능의 실행이 [Action](extension#action) directive 로 요청될 수 있습니다.
+특정 기능의 실행이 [Action](#action) directive 로 요청될 수 있습니다.
 
 {% tabs %}
 {% tabs::content title="Android" %}
@@ -143,7 +143,7 @@ CapabilityFactory::makeCapability<ExtensionAgent, IExtensionHandler>(extension_l
 
 ### 기능 요청
 
-특정 기능 실행을 [CommandIssued](extension#commandissued) event 로 요청할 수 있습니다.
+특정 기능 실행을 [CommandIssued](#commandissued) event 로 요청할 수 있습니다.
 
 {% tabs %}
 {% tabs::content title="Android" %}

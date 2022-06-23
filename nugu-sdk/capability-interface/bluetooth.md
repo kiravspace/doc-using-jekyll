@@ -64,7 +64,7 @@ nugu_client->getCapabilityBuilder()
 
 ### Context 구성
 
-디바이스의 블루투스 상태를 [Context](speaker#context) 에 포함시켜 주어야 합니다.
+디바이스의 블루투스 상태를 [Context](#context) 에 포함시켜 주어야 합니다.
 
 [Android reference](https://github.com/nugu-developers/nugu-android/blob/master/nugu-agent/src/main/java/com/skt/nugu/sdk/agent/bluetooth/BluetoothProvider.kt#L21)
 
@@ -111,9 +111,9 @@ auto bluetooth_listener(std::make_shared<BluetoothListener>());
 
 ### 블루투스 기기 제어
 
-디바이스의 블루투스 기기 제어가 [StartDiscoverableMode](bluetooth#startdiscoverablemode)/[FinishDiscoverableMode](bluetooth#finishdiscoverablemode) directive 로 요청될 수 있습니다.
+디바이스의 블루투스 기기 제어가 [StartDiscoverableMode](./bluetooth#startdiscoverablemode)/[FinishDiscoverableMode](./bluetooth#finishdiscoverablemode) directive 로 요청될 수 있습니다.
 
-디바이스와 연결된 블루투스 기기의 음원 재생이 [Play](bluetooth#play)/[Stop](bluetooth#stop)/[Pause](bluetooth#pause)/[Next](bluetooth#next)/[Previous](bluetooth#previous) directive 로 요청될 수 있습니다.
+디바이스와 연결된 블루투스 기기의 음원 재생이 [Play](./bluetooth#play)/[Stop](./bluetooth#stop)/[Pause](./bluetooth#pause)/[Next](./bluetooth#next)/[Previous](./bluetooth#previous) directive 로 요청될 수 있습니다.
 
 {% tabs %}
 {% tabs::content title="Android" %}

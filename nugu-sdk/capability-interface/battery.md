@@ -63,7 +63,7 @@ nugu_client->getCapabilityBuilder()
 
 ### Context 구성
 
-디바이스 배터리 정보를 [Context](battery#context) 에 포함시켜 주어야 합니다.
+디바이스 배터리 정보를 [Context](#context) 에 포함시켜 주어야 합니다.
 
 {% tabs %}
 {% tabs::content title="Android" %}

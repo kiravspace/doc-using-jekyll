@@ -40,7 +40,7 @@ Built-in Action은 다음과 같습니다.
 
 ![](../../../assets/images/built-in-actions-05.png)
 
-### NUGU.ACTION.fallback <a href="#fallback" id="fallback"></a>
+### NUGU.ACTION.fallback <a id="fallback"></a>
 
 사용자가 Play 세션 내에서 발화를 했지만 처리할 Intent가 없는 경우에 동작합니다.
 
@@ -55,7 +55,7 @@ Built-in Action은 다음과 같습니다.
 ![](../../../assets/images/built-in-actions-07.png)
 
 {% alerts style="info" %}
-prompt 대신 [Common Action](use-common-actions)을 선택하여, 적절한 Directive를 사용하거나, Backend Proxy와 연계한 액션으로 처리도 가능합니다.
+prompt 대신 [Common Action](./use-common-actions)을 선택하여, 적절한 Directive를 사용하거나, Backend Proxy와 연계한 액션으로 처리도 가능합니다.
 {% endalerts %}
 
 
@@ -68,5 +68,5 @@ prompt 대신 [Common Action](use-common-actions)을 선택하여, 적절한 Dir
 {% alerts style="info" %}
 이 장과 함께 보면 좋은 도움말
 
-* [Action Tree 알아보기](use-branch-actions#use-branch-actions)
+* [Action Tree 알아보기](./use-branch-actions#use-branch-actions)
 {% endalerts %}

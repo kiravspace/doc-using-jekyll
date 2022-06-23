@@ -4,7 +4,7 @@ depth_order: 2
 
 # Parameter
 
-## Parameter 사용하기 <a href="use-parameters" id="use-parameters"></a>
+## Parameter 사용하기 <a id="use-parameters"></a>
 
 앞서 [아리아, 안녕!](../hello-aria)에서 사용자의 발화에 대해 응답하는 아주 간단한 Play를 만들어보았습니다.
 

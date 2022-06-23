@@ -6,7 +6,7 @@ depth_order: 3
 
 ![](https://www.youtube.com/watch?v=eoIn2K9P2Yo)
 
-이제 [Intent 만들고 예상 발화 등록하기](create-an-intent-and-custom-utterances)에서 만든 2개의 Intent(ask.weather, ask.microdust)에 대한 응답을 입력하는 방법을 살펴보겠습니다.
+이제 [Intent 만들고 예상 발화 등록하기](./create-an-intent-and-custom-utterances)에서 만든 2개의 Intent(ask.weather, ask.microdust)에 대한 응답을 입력하는 방법을 살펴보겠습니다.
 
 NUGU에서는 하나의 Intent를 처리하는 최소 응답 단위를 Action이라고 부릅니다.
 

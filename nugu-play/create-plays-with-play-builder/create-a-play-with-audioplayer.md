@@ -19,5 +19,5 @@ AudioPlayer Interface를 사용하기 위해서는 `General` > `기본 정보` >
 3. [Built-in Intent를 위한 Action 정의하기](./create-a-play-with-audioplayer/audioplayer-define-built-in-intent)
 
 {% alerts style="info" %}
-AudioPlayer Interface에서 제공하는 Built-in Intent, Directive, Event에 대한 자세한 설명은 [Capability Interfaces](use-backend-proxy/capability-interfaces)를 참고하세요.
+AudioPlayer Interface에서 제공하는 Built-in Intent, Directive, Event에 대한 자세한 설명은 [Capability Interfaces](./use-backend-proxy/capability-interfaces)를 참고하세요.
 {% endalerts %}

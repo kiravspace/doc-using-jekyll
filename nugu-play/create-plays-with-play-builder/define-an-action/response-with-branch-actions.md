@@ -20,7 +20,7 @@ Response + Branch Action는 세 요소로 구성됩니다.
 
 Response + Branch Action의 Response는 대기 Prompt만 사용할 수 있습니다. 이 대기 Prompt 발화 후에는 세션 초기로 돌아가지 않고, 직전 사용자 발화 정보를 유지한 채 사용자 발화를 다시 듣는 대기상태로 이동합니다. 이 대기 상태에서 사용자가 새로운 Intent를 발화하거나 Entity만을 발화를 한 경우, 그 Intent/Entity가 precondition으로 지정된 Branch Action이 있는 지 순차적으로 탐색하여 조건을 만족시키는 Action으로 이동하게 됩니다.
 
-## Branch Action의 특성 <a href="multi-turn-branch" id="multi-turn-branch"></a>
+## Branch Action의 특성 <a id="multi-turn-branch"></a>
 
 Response + Branch Action의 Branch Action은 Default 지정이 필수가 아닙니다. Branch Action의 precondition을 하나도 만족시키지 못한 경우 Default Branch로 이동하며, Default Branch가 없을 경우 Reprompt를 발화합니다.
 

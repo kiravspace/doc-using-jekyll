@@ -5,7 +5,7 @@ description: TemplateRenderer 적용 방법
 
 # NUGU Display의 노출과 제어
 
-[Display 가이드](https://developers-doc.nugu.co.kr/nugu-sdk/capability-interface/display)에 소개된 DisplayAggregatorInterface.Renderer, DisplayAggregatorInterface.Controller 를 구현하고 DisplayAgent를 이용하여 Template 화면을 노출하고 이를 제어할 수 있습니다.
+[Display 가이드](../../../nugu-sdk/capability-interface/display)에 소개된 DisplayAggregatorInterface.Renderer, DisplayAggregatorInterface.Controller 를 구현하고 DisplayAgent를 이용하여 Template 화면을 노출하고 이를 제어할 수 있습니다.
 
 개발 편의를 위해 NUGU SDK는 이 과정을 구현한 `TemplateRenderer`를 제공합니다.  
 TemplateRenderer의 적용 방법을 설명합니다.

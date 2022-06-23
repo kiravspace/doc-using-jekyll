@@ -62,7 +62,7 @@ SKML 태그는 결과창에 그대로 나오게 되나, 실제로 발화되지�
 
 Initial Parameter를 정의했으나, 실제로 Backend proxy에서 Initial Parameter를 전달하지 않으면 응답이 늦을 수도 있습니다.
 
-## 디바이스에서 테스트하기 <a href="test-a-play-using-speaker" id="test-a-play-using-speaker"></a>
+## 디바이스에서 테스트하기 <a id="test-a-play-using-speaker"></a>
 
 ### Play 테스트 가능 상태 확인하기
 

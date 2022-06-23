@@ -7,7 +7,7 @@ depth_order: 2
 Play가 제공할 기능들을 사용하기 위해 사용자는 발화를 통해 Play에게 의도를 전달해야 합니다. 인간과 기계(Play)가 음성 대화를 통해 상호 작용할 수 있도록 하는 언어모델을 User Utterance Model이라고 합니다. Play는 이러한 모델을 통해 사용자의 말을 이해하고 그 속에 담긴 요청/명령을 수행할 수 있게 됩니다.
 
 {% alerts style="info" %}
-의도와 기능에 대한 자세한 내용은 [Play](intents-and-entities)를 참고하세요.
+의도와 기능에 대한 자세한 내용은 [Play](./intents-and-entities)를 참고하세요.
 {% endalerts %}
 
 그리고, User Utterance Model은 Intent와 Entity로 구성됩니다. 여기서 Intent는 Play의 기능을 동작시키기 위해 표현하는 사용자 의도를 의미하며, Entity는 사용자의 요청을 정확히 처리하기 위해 Intent 외에 추가로 알아야 하는 개체를 의미합니다.

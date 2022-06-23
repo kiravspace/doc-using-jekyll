@@ -9,7 +9,7 @@ description: Template 유지 정책의 커스텀
 
 예를들어 응답 TTS재생이 종료되면 일정시간 후 연관된 Template은 자동으로 제거됩니다. 또한 미디어 플레이어 Template의 경우, 새로운 미디어 플레이 요청이 들어왔을때 기존의 모든 Template을 제거한후 노출됩니다.
 
-이런 기본 정책과 다른 자신만의 유지정책을 가지려면 `**DisplayAggregatorInterface.Renderer`를 직접 구현하여 `NuguAndroidClient` 객체에 [displayRenderer로 등록](https://developers-doc.nugu.co.kr/nugu-sdk/platform/android/nugu-display#templaterenderer-1)하면 됩니다.
+이런 기본 정책과 다른 자신만의 유지정책을 가지려면 `**DisplayAggregatorInterface.Renderer`를 직접 구현하여 `NuguAndroidClient` 객체에 [displayRenderer로 등록](../nugu-display#templaterenderer-1)하면 됩니다.
 
 ## Renderer 구현
 

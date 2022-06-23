@@ -6,7 +6,7 @@ depth_order: 3
 
 배포된 Play의 정보 확인 및 서비스 중지, 재개, 삭제 등 상태 관리는 `Developers Console` > `Play kit` > `Play 관리`  메뉴 기능을 통해 확인하거나 설정할 수 있습니다.
 
-## Play 정보 확인 <a href="manage-a-playinformation" id="manage-a-playinformation"></a>
+## Play 정보 확인 <a id="manage-a-playinformation"></a>
 
 배포가 완료된 Play는 `Developers Console` > `Play kit` > `Play 관리`  메뉴에서 등록된 정보와 상태를 확인하고, 상태 변경을 할 수 있습니다.
 
@@ -27,7 +27,7 @@ depth_order: 3
 * Play가 제공 중인 전용 디바이스(Private Play에 한함)
 * Play를 사용중인 사용자(Private Play에 한함)
 
-## Play 상태 변경(중지  밎 서비스 재개) <a href="change-play-status" id="change-play-status"></a>
+## Play 상태 변경(중지  밎 서비스 재개) <a id="change-play-status"></a>
 
 `Developers Console` > `Play kit` > `Play 관리`  메뉴에서 현재 서비스 중인 Play에 대해 중지(Disable)하거나 중지(Disable) 상태의 Play를 재개(Enable)할 수 있습니다.
 
@@ -41,7 +41,7 @@ depth_order: 3
 Play의 상태 변경(Enable → Disable, Disable → Enable)은 자유롭게 설정할 수 있으나 NUGU developers의 관리자가 직권 중지한 Play는 개발자가 직접 재개할 수 없습니다.이 경우 NUGU developers 운영자에 문의 등록하여 Play 직권 중지 사유에 대해 확인을 해야 합니다. 이후 중지 사유가 해결됐을 경우에만 Play 서비스를 재개할 수 있습니다.
 {% endalerts %}
 
-## Play 삭제 <a href="delete-a-play" id="delete-a-play"></a>
+## Play 삭제 <a id="delete-a-play"></a>
 
 `Developers Console` > `Play kit` > `Play 관리`  메뉴에서 현재 서비스 중인 Play를 삭제 요청 할 수 있습니다. 삭제 요청 된 Play는 즉시 삭제되지 않고, 중단 처리 기간을 거쳐 종료, 삭제됩니다.
 

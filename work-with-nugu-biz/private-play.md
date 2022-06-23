@@ -28,4 +28,4 @@ Play Builder에서 만든 Play를, NUGU play kit에서 Private Play 속성으 �
 
 #### 2) NUGU APP의 Biz 사용자 설정에서 확인
 
-초대받아 등록된 Biz 사용자는, NUGU APP의 Biz 사용자 설정에서 Biz Service 혹은 Private Play를 확인 할 수 있으며, 이용 여부 설정을 변경 할 수 있습니다. 자세한 내용은[ Biz 사용자 설정 (NUGU APP)](manage-enrolled-user/biz-nugu-app) 을 참고해주세요.
+초대받아 등록된 Biz 사용자는, NUGU APP의 Biz 사용자 설정에서 Biz Service 혹은 Private Play를 확인 할 수 있으며, 이용 여부 설정을 변경 할 수 있습니다. 자세한 내용은[ Biz 사용자 설정 (NUGU APP)](./manage-enrolled-user/biz-nugu-app) 을 참고해주세요.

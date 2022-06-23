@@ -48,7 +48,7 @@ Directive는 Action에 정의된 Response로 사용됩니다. Directive를 응�
 
 Play는 Backend proxy로부터 Directive를 넘겨받아 디바이스로 전달하게 됩니다. 따라서, Backend proxy에서는 각 Directive를 생성해서 요청이 올 때마다 전달을 해야 합니다.
 
-Directive 구현에 대한 자세한 내용은 은 [Backend proxy API Reference](backend-proxy-api-reference)를 참고해 주세요.
+Directive 구현에 대한 자세한 내용은 은 [Backend proxy API Reference](./backend-proxy-api-reference)를 참고해 주세요.
 
 ![](../../../assets/images/capability-interfaces-02.png)
 

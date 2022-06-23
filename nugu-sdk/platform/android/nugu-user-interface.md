@@ -62,12 +62,12 @@ ChromeWindow은 사용자의 음성 입력 수신, NUGU 음성 출력 등 NUGU �
    ```
 {% endcode %}
 
-| Methods |
-| :--- |
-| **fun isShown() : Boolean** chromeWindow의 visible 확인 |
-| **fun dismiss()** chromeWindow를 종료 |
-| **fun setScreenOnWhileASR(screenOn: Boolean)** ASR 중에 화면을 켜진 상태로 유지 |
-| **fun setOnCustomChipsProvider(provider: CustomChipsProvider)** chromeWindow에 표시될 custom chips (발화 가이드) 프로바이더 설정 |
+| Methods                                                                                                              |
+|:---------------------------------------------------------------------------------------------------------------------|
+| **fun isShown() : Boolean**<br/>chromeWindow의 visible 확인                                                             |
+| **fun dismiss()**<br/>chromeWindow를 종료                                                                               |
+| **fun setScreenOnWhileASR(screenOn: Boolean)**<br/>ASR 중에 화면을 켜진 상태로 유지                                              |
+| **fun setOnCustomChipsProvider(provider: CustomChipsProvider)**<br/>chromeWindow에 표시될 custom chips (발화 가이드) 프로바이더 설정 |
 
 ## NuguButton
 
@@ -92,12 +92,12 @@ NUGU Voice Button은 음성 입력이 가능한 대기 상태를 나타내는 �
 
    attributes 수정하여 버튼 타입 및 색생등 설정할수 있습니다.
 
-| Attribute |
-| :--- |
-| **types** fab, button 제공 |
-| **colors** blue, white 제공 |
-| **autoPlay** 뷰생성시 Animation을 자동으로 재생 (default:false) |
-| **loopPlay** Animation을 재생을 반복 (default:true) |
+| Attribute    | 설명                                      |
+|:-------------|-----------------------------------------|
+| **types**    | fab, button 제공                          |
+| **colors**   | blue, white 제공                          |
+| **autoPlay** | 뷰생성시 Animation을 자동으로 재생 (default:false) |
+| **loopPlay** | Animation을 재생을 반복 (default:true)        |
 
 {% alerts style="info" %}
 Template 내의 NuguButton 색상은 **TemplateView.nuguButtonColor** 정적변수를 설정하여 변경 가능합니다.  

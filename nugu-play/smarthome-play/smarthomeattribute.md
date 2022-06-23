@@ -369,7 +369,7 @@ ChangeColor Directive Request 예시 (POST, /nugu/v1/capabilities/ColorControl/d
 ```
 {% endcode %}
 
-Related to [ColorControl Interface](smarthomecapability/colorcontrol-interface)
+Related to [ColorControl Interface](./smarthomecapability/colorcontrol-interface)
 
 ### deviceTemperatureLevel
 
@@ -415,7 +415,7 @@ SetDeviceTemperatureLevel Directive Request 예시 (POST, /nugu/v1/capabilities/
 ```
 {% endcode %}
 
-Related to [DeviceTemperatureControl Interface](smarthomecapability/devicetemperaturecontrol-interface)
+Related to [DeviceTemperatureControl Interface](./smarthomecapability/devicetemperaturecontrol-interface)
 
 ### humidityLevel
 
@@ -465,7 +465,7 @@ SetHumidity Directive Request 예시 (POST, /nugu/v1/capabilities/HumidityContro
 ```
 {% endcode %}
 
-Related to [HumidityControl Interface](smarthomecapability/humiditycontrol-interface)
+Related to [HumidityControl Interface](./smarthomecapability/humiditycontrol-interface)
 
 ### humidityDelta
 
@@ -515,7 +515,7 @@ IncreaseHumidity Directive Request 예시 (POST, /nugu/v1/capabilities/HumidityC
 ```
 {% endcode %}
 
-Related to [HumidityControl Interface](smarthomecapability/humiditycontrol-interface)
+Related to [HumidityControl Interface](./smarthomecapability/humiditycontrol-interface)
 
 ### mode
 
@@ -633,7 +633,7 @@ SetMode Directive Request 예시 (POST, /nugu/v1/capabilities/ModeControl/direct
 ```
 {% endcode %}
 
-Related to [ModeControl Interface](smarthomecapability/modecontrol-interface)
+Related to [ModeControl Interface](./smarthomecapability/modecontrol-interface)
 
 ### temperatureLevel
 
@@ -685,7 +685,7 @@ SetTemperature Directive Request 예시 (POST, /nugu/v1/capabilities/Temperature
 ```
 {% endcode %}
 
-Related to [TemperatureControl Interface](smarthomecapability/temperaturecontrol-interface)
+Related to [TemperatureControl Interface](./smarthomecapability/temperaturecontrol-interface)
 
 ### temperatureDelta
 
@@ -737,5 +737,5 @@ IncreaseTemperature Directive Request 예시 (POST, /nugu/v1/capabilities/Temper
 ```
 {% endcode %}
 
-Related to [TemperatureControl Interface](smarthomecapability/temperaturecontrol-interface)
+Related to [TemperatureControl Interface](./smarthomecapability/temperaturecontrol-interface)
 

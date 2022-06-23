@@ -14,9 +14,9 @@ depth_order: 3
 ```
 {% endcode %}
 
-## 2. Request <a href="#biz-announcement-v1-2request" id="biz-announcement-v1-2request"></a>
+## 2. Request <a id="biz-announcement-v1-2request"></a>
 
-### 2.1 Body <a href="#biz-announcement-v1-2.1body" id="biz-announcement-v1-2.1body"></a>
+### 2.1 Body <a id="biz-announcement-v1-2.1body"></a>
 
 {% code %}
 ```json
@@ -41,7 +41,7 @@ depth_order: 3
 ```
 {% endcode %}
 
-### 2.2 설명 <a href="#biz-announcement-v1-2.2" id="biz-announcement-v1-2.2"></a>
+### 2.2 설명 <a id="biz-announcement-v1-2.2"></a>
 
 | 이름                    | 유형      | 속성                | 필수   | 설명                                                                                                   |
 |-----------------------|---------|-------------------|------|------------------------------------------------------------------------------------------------------|
@@ -62,29 +62,29 @@ depth_order: 3
 | display.image         | body    | string            |      | 이미지<br/>ImageText Type에서 이미지가 없을 경우, 디폴트 이미지 노출<br/>![](../../../assets/images/img_notification.png) |
 | display.grammarGuide  | body    | array of string   |      | 가이드 발화문                                                                                              |
 
-## 3. Response <a href="#biz-announcement-v1-3response" id="biz-announcement-v1-3response"></a>
+## 3. Response <a id="biz-announcement-v1-3response"></a>
 
-### 3.1 HTTP Status <a href="#biz-announcement-v1-3.1httpstatus" id="biz-announcement-v1-3.1httpstatus"></a>
+### 3.1 HTTP Status <a id="biz-announcement-v1-3.1httpstatus"></a>
 
-| HTTP Status  | errorCode  | 설명                                               |
-|--------------|------------|--------------------------------------------------|
-| 202          |            | 정상 요청                                            |
-| 403          |            | 퍼블리셔 API Token이 유효하지 않거나, 유효하지 않은 자원에 접근할 경우 리턴  |
-| 404          |            | 발송 요청한 그룹이 존재하지 않을 때 응답값                         |
-| 400          | V1ANN001   | body 값을 파싱할 수 없음                                 |
-| 400          | V1ANN002   | playServiceId 없음                                 |
-| 400          | V1ANN101   | tts 객체가 모두 존재하지 않음                               |
-| 400          | V1ANN102   | tts.text 없음                                      |
-| 400          | V1ANN103   | tts.speed 값이 잘못됨                                 |
-| 400          | V1ANN104   | tts.pause1 값이 잘못됨                                |
-| 400          | V1ANN105   | tts.pause2 값이 잘못됨                                |
-| 400          | V1ANN201   | display.type 값이 잘못됨                              |
-| 400          | V1ANN202   | display.title 값이 없음                              |
-| 400          | V1ANN203   | display.header 값이 없음                             |
-| 400          | V1ANN204   | display.body 값이 없음                               |
-| 400          | V1ANN204   | 허용되지 않는 playServiceId                            |
+| HTTP Status | errorCode | 설명                                              |
+|-------------|-----------|-------------------------------------------------|
+| 202         |           | 정상 요청                                           |
+| 403         |           | 퍼블리셔 API Token이 유효하지 않거나, 유효하지 않은 자원에 접근할 경우 리턴 |
+| 404         |           | 발송 요청한 그룹이 존재하지 않을 때 응답값                        |
+| 400         | V1ANN001  | body 값을 파싱할 수 없음                                |
+| 400         | V1ANN002  | playServiceId 없음                                |
+| 400         | V1ANN101  | tts 객체가 모두 존재하지 않음                              |
+| 400         | V1ANN102  | tts.text 없음                                     |
+| 400         | V1ANN103  | tts.speed 값이 잘못됨                                |
+| 400         | V1ANN104  | tts.pause1 값이 잘못됨                               |
+| 400         | V1ANN105  | tts.pause2 값이 잘못됨                               |
+| 400         | V1ANN201  | display.type 값이 잘못됨                             |
+| 400         | V1ANN202  | display.title 값이 없음                             |
+| 400         | V1ANN203  | display.header 값이 없음                            |
+| 400         | V1ANN204  | display.body 값이 없음                              |
+| 400         | V1ANN204  | 허용되지 않는 playServiceId                           |
 
-### 3.2 Body <a href="#id-announcement-v1-3.2body" id="id-announcement-v1-3.2body"></a>
+### 3.2 Body <a id="id-announcement-v1-3.2body"></a>
 
 * callback URL을 입력했을 경우에만 전달받음
 
@@ -106,7 +106,7 @@ depth_order: 3
 ```
 {% endcode %}
 
-### 3.3 설명 <a href="#id-announcement-v1-3.3" id="id-announcement-v1-3.3"></a>
+### 3.3 설명 <a id="id-announcement-v1-3.3"></a>
 
 | 이름                               | 속성               | 설명                                                                                                                                                                                                 |
 |----------------------------------|------------------|----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|

@@ -64,7 +64,7 @@ nugu_client->getCapabilityBuilder()
 
 ### Context 구성
 
-디바이스의 microphone 상태를 [Context](mic#context) 에 포함시켜 주어야 합니다.
+디바이스의 microphone 상태를 [Context](#context) 에 포함시켜 주어야 합니다.
 
 {% tabs %}
 {% tabs::content title="Android" %}
@@ -85,7 +85,7 @@ class MyMicrophone: Microphone {
 
 ### Microphone 제어
 
-디바이스의 microphone 제어가 [SetMic](mic#setmic) directive 로 요청될 수 있습니다.
+디바이스의 microphone 제어가 [SetMic](#setmic) directive 로 요청될 수 있습니다.
 
 {% tabs %}
 {% tabs::content title="Android" %}

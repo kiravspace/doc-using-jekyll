@@ -6,13 +6,13 @@ depth_order: 4
 
 NUGU 디바이스를 사무 공간, 호텔, 병원 등 다양한 공용 공간에서, 공간의 목적에 맞게 사용 가능합니다. NUGU 디바이스 설치 후 전용 디바이스로 등록/설정하면, NUGU 개인 계정과 연결없이 해당 공간에서 누구나 사용 가능합니다.
 
-## 등록 프로세스 <a href="registration-process" id="registration-process"></a>
+## 등록 프로세스 <a id="registration-process"></a>
 
 전용 디바이스 기능 사용을 하려면, 먼저 디바이스를 등록해야 합니다.
 
 디바이스 등록은 사전 준비 → 디바이스 그룹 생성 → 디바이스 Setup Tool 설치 → Setup Tool을 통한 디바이스 등록 및 설정 프로세스로 진행합니다.
 
-## 사전 준비 <a href="prerequisites" id="prerequisites"></a>
+## 사전 준비 <a id="prerequisites"></a>
 
 전용 디바이스의 등록 설정을 위해선, 아래와 같은 사전 준비와 확인이 필요합니다.
 
@@ -25,7 +25,7 @@ NUGU 디바이스를 사무 공간, 호텔, 병원 등 다양한 공용 공간�
 **디바이스 설정 모드(Setup 모드)**\
 처음 개봉한 디바이스는 전원을 켜면 자동으로 설정 모드로 진입하기 때문에 별도의 설정 작업을 진행하지 않아도 됩니다. 단, 이미 사용하고 중인 디바이스의 경우, 스피커의 네트워크 진입 모드 버튼을 누르거나 스피커 상단의 음소거 버튼을 길게(7-8초) 눌러 설정 모드로 변경할 수 있습니다.
 
-## 디바이스 그룹 생성 <a href="create-a-device-group" id="create-a-device-group"></a>
+## 디바이스 그룹 생성 <a id="create-a-device-group"></a>
 
 사전 준비가 끝나면 다음으로 디바이스 그룹을 생성합니다.
 
@@ -41,7 +41,7 @@ NUGU 디바이스를 사무 공간, 호텔, 병원 등 다양한 공용 공간�
 
    ![](../assets/images/manage-shared-device-03.jpg)
 
-## Setup Tool 설치 및 디바이스 등록 <a href="installsetuptoolsandregistershareddevice" id="installsetuptoolsandregistershareddevice"></a>
+## Setup Tool 설치 및 디바이스 등록 <a id="installsetuptoolsandregistershareddevice"></a>
 
 디바이스 그룹을 생성한 후에는 \[Setup Tool]을 설치하고 사용할 디바이스를 등록합니다.
 
@@ -90,7 +90,7 @@ NUGU 디바이스를 사무 공간, 호텔, 병원 등 다양한 공용 공간�
 디바이스는 한 번에 최대 25대씩 등록할 수 있습니다. 체험판은 기 등록된 디바이스 포함 총 10대 까지 등록 가능합니다.
 {% endalerts %}
 
-## 디바이스 그룹 관리 <a href="manage-device-groups" id="manage-device-groups"></a>
+## 디바이스 그룹 관리 <a id="manage-device-groups"></a>
 
 이 메뉴에서는 디바이스 그룹 정보를 수정 또는 삭제, 등록된 전용 디바이스 삭제, Private Play 추가 등의 작업을 할 수 있습니다.
 
@@ -150,7 +150,7 @@ NUGU 디바이스를 사무 공간, 호텔, 병원 등 다양한 공용 공간�
 
 ![](../assets/images/manage-shared-device-19.jpg)
 
-## Biz 전용 디바이스의 서비스 이용 제한 <a href="limitservicesforshareddevice" id="limitservicesforshareddevice"></a>
+## Biz 전용 디바이스의 서비스 이용 제한 <a id="limitservicesforshareddevice"></a>
 
 NUGU 디바이스를 전용 디바이스로 등록하면, 사용 제외 Play 설정과 관계없이 NUGU에서 제공되는 일부 서비스의 이용이 기본적으로 제한됩니다. 제한되는 서비스 항목은 다음과 같습니다.
 

@@ -21,7 +21,7 @@ Play 사용을 위해 사용자가 발화한 음성명령 중 실패한 발화 T
 **Intent Top 10**\
 Play 사용을 위해 사용자가 발화한 음성명령의 Intent Top 10
 
-## 주요 통계 <a href="main-stats" id="main-stats"></a>
+## 주요 통계 <a id="main-stats"></a>
 
 주요 통계 메뉴를 통해 Play 전체 또는 Play별 사용자 요청 건 수, 총 요청 건 수를 확인할 수 있으며, 조회 결과를 통계 데이터로 다운로드할 수도 있습니다.
 
@@ -33,7 +33,7 @@ Play 사용을 위해 사용자가 발화한 음성명령의 Intent Top 10
 
    ![](../../assets/images/monitor-play-stats-02.jpg)
 
-## 주요 발화 통계 <a href="utterance-stats" id="utterance-stats"></a>
+## 주요 발화 통계 <a id="utterance-stats"></a>
 
 `Developers Console` > `Play kit` > `통계` 페이지의 주요 발화 Top 100 통계 항목에서 조회할 Play를 선택하고, 조회 기간을 설정한 후 `확인` 버튼을 클릭합니다.
 

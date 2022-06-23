@@ -14,7 +14,7 @@ depth_order: 6
 
 ### 2. 스마트홈 Play 등록, 테스트 가이드 추가
 
-* Play 정보 등록 (smarthome play) 내용 추가 : [자세히 알아보기](smarthome-play)
+* Play 정보 등록 (smarthome play) 내용 추가 : [자세히 알아보기](./smarthome-play)
 
 ## Version 2.0.0
 

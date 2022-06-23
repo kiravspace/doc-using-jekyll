@@ -61,6 +61,6 @@ Exception Prompt에서는 무엇이 문제인지를 간단하게 안내한 뒤, 
 
 즉, 정의되어 있으나 비어 있는 Utterance Parameter가 있다면 해당 Parameter를 Entity로 채울 수 있고, 이미 Parameter를 채운 Entity와 같은 Type의 값이 있다면 기존 Parameter의 값을 새로운 Entity로 대체하게 됩니다. 이 Exception Prompt를 통한 대기 상태에서는 이와 같이 Entity만 추가로 받을 수 있습니다. 사용자의 발화로부터 추가 발화를 입력 받아도 Entity를 채울 수 없는 경우에는 두 번째 Exception Prompt를 내보내고 세션이 종료됩니다.
 
-## Global Exception Case 정의 <a href="global-exception-case" id="global-exception-case"></a>
+## Global Exception Case 정의 <a id="global-exception-case"></a>
 
 Play 내에서 공통으로 사용할 Exception Case는 `General` > `외부 연동 서버 설정` > `예외 상황 관리` 에서 정의하고 사용할 수 있습니다. 이 곳에서 정의한 Exception Case는 모든 액션에 상속됩니다.

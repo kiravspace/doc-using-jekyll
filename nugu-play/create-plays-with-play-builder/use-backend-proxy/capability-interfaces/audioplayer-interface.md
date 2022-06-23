@@ -20,7 +20,7 @@ AudioPlayer Interface는 오디오 파일의 재생 외에 플레이어의 다�
 샘플링 주파수와 비트율은 최소 권장 사항을 의미합니다. 더 낮은 값을 사용해도 재생을 되지만 음질의 저하를 체감할 수 있기 때문에 최소 권장을 준수할 것을 강력히 권장합니다.
 
 {% alerts style="info" %}
-AudioPlayer Interface를 지원하는 Play를 만드는 방법은 [AudioPlayer를 지원하는 Play 만들기](../../create-a-play-with-audioplayer/#create-a-play-with-audioplayer)를 참고하세요.
+AudioPlayer Interface를 지원하는 Play를 만드는 방법은 [AudioPlayer를 지원하는 Play 만들기](../../create-a-play-with-audioplayer)를 참고하세요.
 {% endalerts %}
 
 ## State Diagram

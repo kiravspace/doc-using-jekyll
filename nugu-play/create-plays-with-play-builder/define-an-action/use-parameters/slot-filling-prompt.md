@@ -11,7 +11,7 @@ User Utterance Model을 정의하다 보면 사용자로부터 추가로 정보�
 Slot-Filling Prompt를 통해 Entity를 다시 받기 위해서는 Utterance Parameter에 Entity를 매핑한 후 '필수' 박스에 체크를 해야합니다.
 
 {% alerts style="info" %}
-Utterance Parameter 등록 및 매핑에 대한 자세한 내용은 [Parameter 사용하기]()를 참고하세요.
+Utterance Parameter 등록 및 매핑에 대한 자세한 내용은 [Parameter 사용하기](../use-parameters)를 참고하세요.
 {% endalerts %}
 
 ## 필수 Entity 정의하기

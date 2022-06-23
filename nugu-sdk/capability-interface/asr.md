@@ -141,7 +141,7 @@ nugu_client->getCapabilityBuilder()
 
 ### 음성 인식 요청
 
-`아리아` 발화 또는 NUGU Button 선택 시 [Recognize](asr#recognize) event 를 전달하여 음성인식을 시작할 수 있습니다.
+`아리아` 발화 또는 NUGU Button 선택 시 [Recognize](#recognize) event 를 전달하여 음성인식을 시작할 수 있습니다.
 
 {% tabs %}
 {% tabs::content title="Android" %}
@@ -174,7 +174,7 @@ asr_handler->startRecognition()
 
 음성인식에 대한 진행 상태를 모니터링 할 수 있습니다.
 
-음성인식에 대한 STT(SpeechToText) 결과가 [NotifyResult](asr#notifyresult) directive 로 전달됩니다.
+음성인식에 대한 STT(SpeechToText) 결과가 [NotifyResult](#notifyresult) directive 로 전달됩니다.
 
 {% tabs %}
 {% tabs::content title="Android" %}
@@ -270,7 +270,7 @@ CapabilityFactory::makeCapability<ASRAgent, IASRHandler>(asr_listener.get());
 
 ### 음성 인식 중단
 
-사용자가 음성 인식 중단 요청을 [StopRecognize](asr#stoprecognize) event 로 전달할 수 있습니다.
+사용자가 음성 인식 중단 요청을 [StopRecognize](#stoprecognize) event 로 전달할 수 있습니다.
 
 {% tabs %}
 {% tabs::content title="Android" %}
@@ -313,11 +313,11 @@ asr_handler->stopRecognition()
 ```
 {% endcode %}
 
-| parameter | type   | mandatory | description                                                                                                                                                                                                                                                                                |
-|:----------|:-------|:----------|:-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| engine    | string | N         | Device 에서 사용하는 음성인식 engine 을 명시 NUGU 음성인식 engine 을 사용하는 경우 "skt"(값을 채우지 않으면 default "skt")                                                                                                                                                                                                 |
-| state     | string | Y         | IDLE<br/>EXPECTING_SPEECH<br/>LISTENING<br/>RECOGNIZING<br/>BUSY<br/>[State Diagram](asr#state-diagram) 참고                                                                                                                                                                                 |
-| initiator | string | N         | 마이크 오픈이 어떻게 트리거되었는지<br/>- WAKE_UP_WORD : 사용자 발화로 Wakeup<br/>- PRESS_AND_HOLD : PTT 방식으로 Wakeup<br/>- TAP : NUGU 버튼 등에 의해서 Wakeup<br/>- EXPECT_SPEECH : ASR.ExpectSpeech<br/>- EARSET : 이어셋 VoiceCommand 등을 통해 Wakeup                                                                       |
+| parameter | type   | mandatory | description                                                                                                                                                                                                          |
+|:----------|:-------|:----------|:---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
+| engine    | string | N         | Device 에서 사용하는 음성인식 engine 을 명시 NUGU 음성인식 engine 을 사용하는 경우 "skt"(값을 채우지 않으면 default "skt")                                                                                                                           |
+| state     | string | Y         | IDLE<br/>EXPECTING_SPEECH<br/>LISTENING<br/>RECOGNIZING<br/>BUSY<br/>[State Diagram](#state-diagram) 참고                                                                                                              |
+| initiator | string | N         | 마이크 오픈이 어떻게 트리거되었는지<br/>- WAKE_UP_WORD : 사용자 발화로 Wakeup<br/>- PRESS_AND_HOLD : PTT 방식으로 Wakeup<br/>- TAP : NUGU 버튼 등에 의해서 Wakeup<br/>- EXPECT_SPEECH : ASR.ExpectSpeech<br/>- EARSET : 이어셋 VoiceCommand 등을 통해 Wakeup |
 
 ## Directives
 

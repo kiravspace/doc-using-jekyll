@@ -84,7 +84,7 @@ nugu_client->getCapabilityBuilder()
 
 ### Context 구성
 
-Play 에서 디바이스의 볼륨을 제어하기 위해서는 디바이스의 볼륨 정보를 [Context](location#context) 에 포함시켜 주어야 합니다.
+Play 에서 디바이스의 볼륨을 제어하기 위해서는 디바이스의 볼륨 정보를 [Context](#context) 에 포함시켜 주어야 합니다.
 
 {% tabs %}
 {% tabs::content title="Android" %}
@@ -114,9 +114,9 @@ speaker_handler->setSpeakerInfo(speakers)
 
 ### 볼륨 제어
 
-디바이스의 볼륨 제어가 [SetVolume](speaker#setvolume) directive 로 요청될 수 있습니다.
+디바이스의 볼륨 제어가 [SetVolume](#setvolume) directive 로 요청될 수 있습니다.
 
-디바이스의 볼륨 음소거 제어가 [SetMute](speaker#setmute) directive 로 요청될 수 있습니다.
+디바이스의 볼륨 음소거 제어가 [SetMute](#setmute) directive 로 요청될 수 있습니다.
 
 {% tabs %}
 {% tabs::content title="Android" %}

@@ -14,7 +14,7 @@ Response Filter는 Parameter에 담긴 값 또는 형식을 변환시킬 수 있
 | NLG Normalizer      | 정해진 규칙에 의해 값을 변환해 줍니다.<br/>한번에 여러 가지 값을 일괄 변경할 수 있습니다.<br/>1,2,3이 들어오면 'a'로, 3,4,5,6,7이 들어오면 'b'로 변환할 수 있습니다.      | \\=  |
 | NLG Function        | 정해진 규칙에 맞게 형식값을 변환합니다.                                                                                             | \\\: |
 
-## NLG Translator <a href="nlg-translator" id="nlg-translator"></a>
+## NLG Translator
 
 날씨를 안내할 때, "오늘 날씨는 `{% raw %}{{status}}{% endraw %}`" 같이, 외부(기상 정보 제공 서버)에서 날씨 상태값을 체크한 뒤, 외부 연동 서버(Backend proxy)에서 "맑겠습니다.", "눈이 올 예정입니다"와 같이 Prompt의 일부를 처리하는 것도 가능합니다.
 
@@ -42,7 +42,7 @@ Parameter 의 끝의 기호 `}}` 뒤에 특수기호 >를 입력하면 앞서 �
 
 ![](../../assets/images/define-response-filters-03.gif)
 
-## NLG Normalizer <a href="nlg-normalizer" id="nlg-normalizer"></a>
+## NLG Normalizer
 
 NLG Normalizer는 Translator와 기능이 유사하지만, 가장 큰 차이점은 여러 개의 Source를 하나의 Target으로 변경해 준다는 점입니다.
 
@@ -56,7 +56,7 @@ NLG Normalizer는 Translator와 기능이 유사하지만, 가장 큰 차이점�
 
    ![](../../assets/images/define-response-filters-06.gif)
 
-## NLG Function <a href="nlg-function" id="nlg-function"></a>
+## NLG Function
 
 마지막으로, NLG Function을 추가하는 방법은 다음과 같습니다.
 

@@ -37,7 +37,7 @@ Play를 만드는 과정은 크게 다음과 같습니다.
 
 ![](../assets/images/create-plays-with-play-builder-04.png)
 
-다음 장([아리아, 안녕!](hello-aria))에서는 Play 만드는 법에 대해 간단하게 설명하고, 이후 각 과정에 대해 순서대로 상세하게 설명합니다.
+다음 장([아리아, 안녕!](./create-plays-with-play-builder/hello-aria))에서는 Play 만드는 법에 대해 간단하게 설명하고, 이후 각 과정에 대해 순서대로 상세하게 설명합니다.
 
 {% alerts style="info" %}
 Play Builder 내의 모든 상세 페이지에는 화면에 도움말이 직접 포함되어 있어 작업에 필요한 정보를 표시해 줍니다.\

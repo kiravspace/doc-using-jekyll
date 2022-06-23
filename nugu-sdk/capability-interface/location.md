@@ -58,7 +58,7 @@ nugu_client->getCapabilityBuilder()
 
 ### Context 구성
 
-Play 에서 위치 정보 기반의 정보를 제공 받기 위해서는 디바이스의 위치 정보를 [Context](location#context) 에 포함시켜 주어야 합니다.
+Play 에서 위치 정보 기반의 정보를 제공 받기 위해서는 디바이스의 위치 정보를 [Context](#context) 에 포함시켜 주어야 합니다.
 
 {% tabs %}
 {% tabs::content title="Android" %}

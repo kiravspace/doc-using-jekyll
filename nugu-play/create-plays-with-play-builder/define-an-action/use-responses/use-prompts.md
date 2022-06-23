@@ -4,21 +4,21 @@ depth_order: 1
 
 # Prompt 사용하기
 
-## Prompt 사용하기 <a href="#use-prompts" id="use-prompts"></a>
+## Prompt 사용하기 <a id="use-prompts"></a>
 
 Prompt는 사용자에게 응답으로 전달할 메시지를 의미합니다. Prompt를 작성할때 다음과 같은 구성 요소들을 사용할 수 있습니다.
 
-| 구성요소             | 하위요소           | 특징                                                                                                                                                                   | 자동완성 단축키               |
-|------------------|----------------|----------------------------------------------------------------------------------------------------------------------------------------------------------------------|------------------------|
-| 일반 텍스트           |                | '가나다'와 같은 일반적인 텍스트를 그대로 읽어 발화합니다.                                                                                                                                    |                        |
-| Parameter        |                | {% raw %}{{}}{% endraw %}와 같은 형태로 사용하며, Parameter에 담긴 값을 텍스트로 변형하여 발화합니다.<br/>Parameter 사용법에 대한 자세한 내용은 [Parameter 사용하기](../use-parameters)를 참고하세요.                  | {% raw %}{{{% endraw%} |
-| Response Filter  | NLG Translator | Parameter와 항상 결합하여 사용되며, 단독으로 쓰일 수 없습니다.                                                                                                                             | \\>                    |
-| ^^               | NLG Normalizer | Parameter에 담겨 있는 값이 Filter의 Source와 100% 일치할 경우에만 동작합니다.                                                                                                             | =                      |
-| ^^               | NLG Function   | Response Filter에 대한 자세한 내용은 [Response Filter](../../define-response-filters)를 참고하세요.                                                                                 | \:                     |
-| 조사               |                | '을/를'과 같이 앞 음절에 따라 조사가 바뀌는 경우에 자동으로 변환하여 발화합니다.<br/>조사 자동 변환은 Parameter와 함께 사용될 때만 동작합니다.<br/>조사 처리에 대한 자세한 내용은 [조사 처리하기](use-prompts#process-postpositions)를 참고하세요. | /                      |
-| SKML 태그          |                | TTS 엔진이 텍스트 혹은 Parameter의 값을 SKML 태그에 따라 발화합니다.<br/>SKML 태그 사용 대한 자세한 내용은 [발화 옵션 사용하기](use-prompts#use-utterance-options)를 참고하세요.                                    | <                      |
+| 구성요소             | 하위요소           | 특징                                                                                                                                                        | 자동완성 단축키               |
+|------------------|----------------|-----------------------------------------------------------------------------------------------------------------------------------------------------------|------------------------|
+| 일반 텍스트           |                | '가나다'와 같은 일반적인 텍스트를 그대로 읽어 발화합니다.                                                                                                                         |                        |
+| Parameter        |                | {% raw %}{{}}{% endraw %}와 같은 형태로 사용하며, Parameter에 담긴 값을 텍스트로 변형하여 발화합니다.<br/>Parameter 사용법에 대한 자세한 내용은 [Parameter 사용하기](../use-parameters)를 참고하세요.       | {% raw %}{{{% endraw%} |
+| Response Filter  | NLG Translator | Parameter와 항상 결합하여 사용되며, 단독으로 쓰일 수 없습니다.                                                                                                                  | \\>                    |
+| ^^               | NLG Normalizer | Parameter에 담겨 있는 값이 Filter의 Source와 100% 일치할 경우에만 동작합니다.                                                                                                  | =                      |
+| ^^               | NLG Function   | Response Filter에 대한 자세한 내용은 [Response Filter](../../define-response-filters)를 참고하세요.                                                                      | \:                     |
+| 조사               |                | '을/를'과 같이 앞 음절에 따라 조사가 바뀌는 경우에 자동으로 변환하여 발화합니다.<br/>조사 자동 변환은 Parameter와 함께 사용될 때만 동작합니다.<br/>조사 처리에 대한 자세한 내용은 [조사 처리하기](#process-postpositions)를 참고하세요. | /                      |
+| SKML 태그          |                | TTS 엔진이 텍스트 혹은 Parameter의 값을 SKML 태그에 따라 발화합니다.<br/>SKML 태그 사용 대한 자세한 내용은 [발화 옵션 사용하기](#use-utterance-options)를 참고하세요.                                    | <                      |
 
-#### Prompt의 유형 <a href="#prompt-types" id="prompt-types"></a>
+#### Prompt의 유형 <a id="prompt-types"></a>
 
 Play Builder의 Prompt에는 3가지 유형이 있습니다.
 
@@ -39,13 +39,13 @@ Prompt는 사용 위치에 따라 다음과 같이 구분됩니다.
 | Slot-filling Prompt         |                                | 대기 Prompt와 종료 Prompt가 사용됩니다.<br/>여러 Prompt가 입력된 경우, 위에서부터 순차적으로 발화됩니다.           |
 | 예외 상황 처리의 Exception Prompt  |                                | 대기 Prompt와 종료 Prompt가 사용됩니다.<br/>여러 Prompt가 입력된 경우, 위에서부터 순차적으로 발화됩니다.           |
 
-#### Silent Prompt <a href="#silent-prompt" id="silent-prompt"></a>
+#### Silent Prompt <a id="silent-prompt"></a>
 
 사용자에게 빈 응답을 전달하고 싶을 경우, Silent Prompt를 사용할 수 있습니다. Silent Prompt는 Prompt 입력 창 우측의 버튼을 눌러 설정 가능합니다. Silent Prompt를 응답으로 설정하면, 아무 발화 없이 대기 모드로 넘어가거나 세션이 종료되므로 꼭 필요한 경우에만 사용하는 것이 좋습니다. Silent Prompt는 모든 유형의 Prompt에서 사용할 수 있습니다.
 
 ![](../../../../assets/images/use-prompts-01.gif)
 
-## 조사 처리하기 <a href="#process-postpositions" id="process-postpositions"></a>
+## 조사 처리하기 <a id="process-postpositions"></a>
 
 국어의 조사 '이/가, 을/를, 은/는, 과/와, 로/으로'는 같은 형태소지만 앞음절의 받침 유무에 따라 다르게 사용됩니다.
 
@@ -75,7 +75,7 @@ Parameter의 `}}` 기호 뒤에 / 입력하면 조사의 자동완성 창이 표
 * 괄호나 특수문자가 포함된다면 제거한 후 처리합니다.
 * 단위, 한글, 영문, 숫자에 해당하지 않는 경우는 변환하지 않습니다.
 
-## 발화 옵션 사용하기 <a href="#use-utterance-options" id="use-utterance-options"></a>
+## 발화 옵션 사용하기 <a id="use-utterance-options"></a>
 
 입력한 Response의 Prompt를 TTS 엔진이 음성으로 변환할 때 예상과는 다른 방식으로 읽을 수도 있고, 때로는 천천히 읽거나 또박또박 읽게 하고 싶을 수도 있습니다.
 
@@ -117,7 +117,7 @@ Play Builder는 입력한 Prompt를 음성으로 변환시킬 때 개별적으�
 
 ![](../../../../assets/images/use-prompts-07.png)
 
-### 문장 내 발화 옵션 태그 추가하기 <a href="#skml-tag" id="skml-tag"></a>
+### 문장 내 발화 옵션 태그 추가하기 <a id="skml-tag"></a>
 
 Prompt 내에서 특정 구간에 끊어읽기를 추가하거나, 특정 단어를 읽는 방식을 조절하는 태그도 제공하고 있습니다.
 
@@ -150,7 +150,7 @@ Prompt 내에서 특정 구간에 끊어읽기를 추가하거나, 특정 단어
 | ^^     | ^^          | ^^                                                                                                                                                                             | ^^        | 범위<br/>- `[yyyy]-[mm]-[dd]~`<br/>- `[yyyy]-[mm]-[dd]`<br/>- `[yyyy]:[mm]:[dd]~`<br/>- `[yyyy]:[mm]:[dd]`<br/>- `[yyyy]/[mm]/[dd]~[yyyy]/[mm]/[dd]`<br/>- `[yyyy].[mm].[dd]~`<br/>- `[yyyy].[mm].[dd]`<br/>- `[mm]-[dd]~`<br/>- `[mm]-[dd]`<br/>- `[mm]/[dd]~`<br/>- `[mm]/[dd]`<br/>- `[mm].[dd]~`<br/>- `[mm].[dd]`  |
 | ^^     | 시간 읽기       | '열한시 삽십분 사십오초'와 같이 시간으로 읽습니다.<br/>'hh시 mm분 ss초, hh시 mm분'과 같이 특정 시간으로 읽거나<br/>'hh시 mm분 ss초에서 hh시 mm분 ss초',<br/>'hh시 mm분에서 hh시 mm분'처럼 범위로 읽는 것을 지원합니다.                           | time      | 특정 시간<br/>- `[hh]:[mm]:[ss]`<br/>- `[mm]:[ss]`                                                                                                                                                                                                                                                                        |
 | ^^     | ^^          | ^^                                                                                                                                                                             | ^^        | 기간<br/>- `[hh]:[mm]:[ss]~`<br/>- `[hh]:[mm]:[ss]`<br/>- `[hh]:[mm]:[ss]-`<br/>- `[hh]:[mm]:[ss]`<br/>- `[mm]:[ss]~`<br/>- `[mm]:[ss]`<br/>- `[mm]:[ss]-`<br/>- `[mm]:[ss]`                                                                                                                                            |
-| ^^     | 단위 읽기       | '칠미터, 칠그램'과 같이 단위로 읽습니다.<br/>139개의 단위를 읽기 지원합니다.<br/>([발화 옵션에서 UNIT 태그로 지원 단위 목록](./use-prompts#list-of-unit-tags-supported-by-utterance-options))                             | unit      | `[n][unit]`                                                                                                                                                                                                                                                                                                           |
+| ^^     | 단위 읽기       | '칠미터, 칠그램'과 같이 단위로 읽습니다.<br/>139개의 단위를 읽기 지원합니다.<br/>([발화 옵션에서 UNIT 태그로 지원 단위 목록](#list-of-unit-tags-supported-by-utterance-options))                                          | unit      | `[n][unit]`                                                                                                                                                                                                                                                                                                           |
 | ^^     | 주소 읽기       | '팔십삼 다시 일'과 같이 지번 주소의 지번을 읽습니다.                                                                                                                                                | address   | `[n]-[n]`                                                                                                                                                                                                                                                                                                             |
 | ^^     | 전화번호 읽기     | '일이삼사 일이삼사'와 같이 전화번호로 읽습니다.                                                                                                                                                    | telephone | `[n]-[n]`<br/>`[n]-[n]-[n]`                                                                                                                                                                                                                                                                                           |
 | ^^     | 영어 스펠링 읽기   | '비티에스'와 같이 영어 스펠링으로 읽습니다.<br/>대소문자는 구분하지 않습니다.                                                                                                                                 | spell     | `[text]`                                                                                                                                                                                                                                                                                                              |
@@ -184,6 +184,6 @@ Prompt 내에서 특정 구간에 끊어읽기를 추가하거나, 특정 단어
 Prompt 내에 사용하는 태그는 텍스트를 직접 입력하여 추가 또는 수정할 수 있습니다.
 {% endalerts %}
 
-### 발화 옵션에서 UNIT 태그로 지원하는 단위 목록 <a href="#list-of-unit-tags-supported-by-utterance-options" id="list-of-unit-tags-supported-by-utterance-options"></a>
+### 발화 옵션에서 UNIT 태그로 지원하는 단위 목록 <a id="list-of-unit-tags-supported-by-utterance-options"></a>
 
 문장 내 발화 옵션 태그 중 `텍스트 읽기` > `단위 읽기` 태그에서 지원하는 목록은 [단위 목록](../../../../reference/list-of-unit-tags-supported-by-utterance-options) 문서에서 확인할 수 있습니다.

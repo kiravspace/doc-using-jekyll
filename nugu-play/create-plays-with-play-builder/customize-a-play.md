@@ -6,7 +6,7 @@ depth_order: 3
 
 Play를 처음 생성한 뒤 좌측의 `General`의 하위 메뉴에서 Play와 관련된 설정을 할 수 있습니다. 이 설정은 Play를 만드는 데 있어 필수 사항은 아닙니다.
 
-## 기본 정보(`General` > `기본 정보`) <a href="setting" id="setting"></a>
+## 기본 정보(`General` > `기본 정보`) <a id="setting"></a>
 
 **① Play 이름**\
 Play를 생성할 때 등록한 것으로서, Play Builder 내에서 ID 역할을 하며, 중복과 변경이 허용되지 않습니다.
@@ -22,7 +22,7 @@ NUGU에서 제공하는 Capability Interface를 사용하여 Play를 만들 경�
 {% alerts style="info" %}
 현재는 AudioPlayer Interface와, Display Interface를 지원합니다.  자세한 내용은
 
-[AudioPlayer Interface 지원하는 Play 만들기](create-a-play-with-audioplayer)
+[AudioPlayer Interface 지원하는 Play 만들기](./create-a-play-with-audioplayer)
 
 [Display Interface ](./use-backend-proxy/capability-interfaces/display-interface)
 
@@ -54,7 +54,7 @@ NUGU에서 제공하는 Capability Interface를 사용하여 Play를 만들 경�
 발화 옵션에 대한 자세한 내용은 [발화 옵션 사용하기](./define-an-action/use-responses/use-prompts#use-utterance-options)를 참고하세요.
 {% endalerts %}
 
-## 외부 연동 서버 설정 및 예외 상황 관리(`General` > `외부 서버 연결 정보`) <a href="setting-backend-proxy" id="setting-backend-proxy"></a>
+## 외부 연동 서버 설정 및 예외 상황 관리(`General` > `외부 서버 연결 정보`) <a id="setting-backend-proxy"></a>
 
 ![](../../assets/images/customize-a-play-03.jpg)
 

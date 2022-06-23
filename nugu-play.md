@@ -49,5 +49,5 @@ NUGU play kit에서 만들 수 있는 Play는 사용 대상에 따라 다음 두
 Play 호출 이름은 사용자가 Play를 호출하기 위해 발화하는 고유한 이름을 말합니다. 사용자가 Play 호출 이름을 발화하면 해당 Play의 세션으로 진입하여 해당 Play의 기능을 사용할 수 있게 됩니다. 호출 이름은 Play Builder를 통해 Play를 만든 후, NUGU play kit에서 심사요청서를 작성할 때 입력할 수 있으며, 심사 단계에서 호출이름을 검토합니다.
 
 {% alerts style="info" %}
-Play 생성 시에 이 호출 이름을 정의해야 하고, 호출 이름에 대한 자세한 내용은 [호출 이름 정의하기](nugu-play/play-registration-and-review/register-a-play#define-an-invocation-name)를 참고하면 됩니다.
+Play 생성 시에 이 호출 이름을 정의해야 하고, 호출 이름에 대한 자세한 내용은 [호출 이름 정의하기](./nugu-play/play-registration-and-review/register-a-play#define-an-invocation-name)를 참고하면 됩니다.
 {% endalerts %}

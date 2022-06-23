@@ -31,7 +31,7 @@ Play 서비스명과 Play 서비스 ID를 입력하여 넘어가면,  배포를 
 
 ![](../../assets/images/register-a-play-05.png)
 
-## 기본 정보 <a href="basic-information" id="basic-information"></a>
+## 기본 정보 <a id="basic-information"></a>
 
 Play 기본 정보는 Play 관련 필수 정보로 아래의 내용들을 등록해야 합니다. 입력을 완료하면 `다음` 버튼을 클릭합니다.
 
@@ -43,7 +43,7 @@ Play 타입은 Public Play와 Private Play로 구분됩니다. Play의 서비스
 
 **②  Play 호출 이름**
 
-사용자가 Play를 시작하기 위해 부를 때 사용하는 이름입니다. 반드시 3자 이상의 한글로만 등록해야 하며, 가능하면 8자 이하로 기억하고 부르기 쉬운 단어를 사용하는 것이 좋습니다. Play 호출 이름은 Play 심사 항목이기 때문에 신청하신 이름을 그대로 사용할 수 있다고 보장하지 않습니다. 널리 쓰이는 일반적인 이름이나 타사명, 서비스에 해당하는 용어 또는 이와 유사한 호출 이름은 사용할 수 없기 때문에,심사를 하면서 운영자가 별도로 연락을 드릴 수도 있습니다. 효과적인 호출 이름을 등록할 수 있도록 먼저 \[[작성 가이드 보기](register-a-play#define-an-invocation-name)]를 읽어보신 후에 등록 절차를 진행해주시길 권장합니다.
+사용자가 Play를 시작하기 위해 부를 때 사용하는 이름입니다. 반드시 3자 이상의 한글로만 등록해야 하며, 가능하면 8자 이하로 기억하고 부르기 쉬운 단어를 사용하는 것이 좋습니다. Play 호출 이름은 Play 심사 항목이기 때문에 신청하신 이름을 그대로 사용할 수 있다고 보장하지 않습니다. 널리 쓰이는 일반적인 이름이나 타사명, 서비스에 해당하는 용어 또는 이와 유사한 호출 이름은 사용할 수 없기 때문에,심사를 하면서 운영자가 별도로 연락을 드릴 수도 있습니다. 효과적인 호출 이름을 등록할 수 있도록 먼저 [[작성 가이드 보기](#define-an-invocation-name)]를 읽어보신 후에 등록 절차를 진행해주시길 권장합니다.
 
 **③ Play 설명**
 
@@ -59,7 +59,7 @@ Play를 개발한 주체(개인, 회사 또는 단체)의 이름 또는 별칭�
 
 ****
 
-### 호출 이름 정의하기 <a href="define-an-invocation-name" id="define-an-invocation-name"></a>
+### 호출 이름 정의하기 <a id="define-an-invocation-name"></a>
 
 #### Play 호출 이름의 필수 조건
 
@@ -99,7 +99,7 @@ Play 호출 이름은 위 조건을 기준으로 사용 승인 심사를 진행�
   * 홈픽택배, 11번가 쇼핑, 데일리브리핑, 오늘의 운세
 * Play 호출 이름을 발화한 후 이어서 발화하는 “오픈”, ”열어”, ”시작”, ”스타트”, ”실행” 등의 Intent를 원활하게 발음할 수 있는 이름으로 정하는 것이 좋습니다.
 
-## 연동 정보 <a href="link-information" id="link-information"></a>
+## 연동 정보 <a id="link-information"></a>
 
 사용자에게 제공할 Play 타입을 선택하고, 제공하려는 Play의 사용자 계정이 NUGU 사용자 계정과 연결이 필요할 경우 계정 연동에 관련된 정보를 입력합니다.
 
@@ -151,14 +151,14 @@ Access Token을 획득 시 HTTP 요청에 필요한 클라이언트 secret을 �
 
 인증 서버의 인터페이스 구현에 맞는 클라이언트 인증 정보 전송 방식을 선택합니다.
 
-## 배포/심사 정보 <a href="deployment-information" id="deployment-information"></a>
+## 배포/심사 정보 <a id="deployment-information"></a>
 
 Play 심사 승인에 필요한 정보와 사용자에게 Play를 설명하기 위한 정보들로 구성되어 있으며, 등록된 내용은 NUGU App을 통해 사용자에게 제공됩니다.
 
 배포/심사 정보 등록 후 `심사 요청` 버튼을 클릭하면 자동으로 NUGU developers 운영자에게 Play가 심사가 요청됩니다.
 
 {% alerts style="info" %}
-심사 요청에 대한 자세한 내용은 [심사 요청](play-review#review-request) 페이지를 참고해주세요.
+심사 요청에 대한 자세한 내용은 [심사 요청](./play-review#review-request) 페이지를 참고해주세요.
 {% endalerts %}
 
 ****

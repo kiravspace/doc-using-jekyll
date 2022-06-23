@@ -11,7 +11,7 @@ module Jekyll::Potion
       render_from_custom_context(
         page_context,
         ->(context, _) do
-          context["file_src"] = File.join(context["site"].config["baseurl"], params["src"])
+          context["file_src"] = File.join(context["site_potion"].baseurl, params["src"])
 
           if params.has_key?("caption")
             context["file_caption"] = params["caption"]

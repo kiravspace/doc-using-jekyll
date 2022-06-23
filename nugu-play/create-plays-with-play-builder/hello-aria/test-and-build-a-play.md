@@ -19,7 +19,7 @@ depth_order: 4
 5. 테스트 결과 수정해야 할 부분이 있으면 Intent와 Action을 수정한 후 만족할 만한 결과가 나타날 때까지 위 테스트를 반복합니다.
 
 {% alerts style="info" %}
-Intent와 Action 작업에 대한 내용은 각각 [Intent 만들고 예상 발화 등록하기](create-an-intent-and-custom-utterances)과 [Action 만들고 응답 등록하기](create-an-action-and-an-answer)을 참고하세요.
+Intent와 Action 작업에 대한 내용은 각각 [Intent 만들고 예상 발화 등록하기](./create-an-intent-and-custom-utterances)과 [Action 만들고 응답 등록하기](./create-an-action-and-an-answer)을 참고하세요.
 {% endalerts %}
 
 ## 빌드하기

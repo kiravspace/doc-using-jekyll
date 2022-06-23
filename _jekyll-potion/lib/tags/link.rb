@@ -5,8 +5,7 @@ module Jekyll::Potion
 
     include PotionTag
 
-    HTTP_SCHEME = "http://".freeze
-    HTTPS_SCHEME = "https://".freeze
+    HTTP_SCHEME = %r!http(s)?://!im.freeze
 
     def initialize(tag_name, markup, options)
       super
@@ -17,7 +16,7 @@ module Jekyll::Potion
       render_from_custom_context(
         page_context,
         ->(context, _) do
-          if params["url"].start_with?(HTTP_SCHEME) || params["url"].start_with?(HTTPS_SCHEME)
+          if params["url"] =~ HTTP_SCHEME
             begin
               res = Net::HTTP.get_response URI(params["url"])
               raise res.body unless res.is_a?(Net::HTTPSuccess)

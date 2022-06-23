@@ -7,7 +7,7 @@ description: 어두운 테마
 
 NUGU의 UI component는 어두운 테마를 지원합니다.
 
-아래 가이드를 따라 테마를 변경하면 [Template](https://developers-doc.nugu.co.kr/nugu-sdk/platform/android/nugu-display), [ChromeWindow](https://developers-doc.nugu.co.kr/nugu-sdk/platform/android/nugu-user-interface#chromewindow)에 어두운 테마를 적용 수 있습니다.
+아래 가이드를 따라 테마를 변경하면 [Template](../../../nugu-sdk/platform/android/nugu-display), [ChromeWindow](https://developers-doc.nugu.co.kr/nugu-sdk/platform/android/nugu-user-interface#chromewindow)에 어두운 테마를 적용 수 있습니다.
 
 ## 테마 설정
 

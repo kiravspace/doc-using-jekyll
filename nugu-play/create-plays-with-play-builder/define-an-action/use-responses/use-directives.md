@@ -15,7 +15,7 @@ Directive를 사용하여 디바이스를 제어하기 위해서는 다음과 �
 {% alerts style="info" %}
 Directive의 개념과 이를 적용하는 방법에 대한 자세한 내용은 다음을 참고하세요.
 
-* Directive 개념에 대한 자세한 내용은 [Response 사용하기]()를 참고하세요.
+* Directive 개념에 대한 자세한 내용은 [Response 사용하기](../use-responses)를 참고하세요.
 * Capability Interface의 개념과 Play Directive에 대한 자세한 내용은 [Capability Interfaces](../../use-backend-proxy/capability-interfaces)를 참고하세요.
 * AudioPlayer Interface 지원하는 Play를 만드는 방법에 대한 자세한 내용은 [AudioPlayer Interface 지원하는 Play 만들기](../../create-a-play-with-audioplayer)를 참고하세요.
 {% endalerts %}

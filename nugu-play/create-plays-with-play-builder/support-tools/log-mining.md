@@ -13,19 +13,19 @@ depth_order: 2
 
 이 도구는 스피커를 통해 사용자에게 전달되는 최종 응답이 에러 메세지에 해당하는 경우 '서비스 실패'라고 판단하며, 이 때 NLU 분석이 되었다면 `정상 응답 실패`, NLU 분석 결과가 없다면 `NLU 분석 실패`로 분류합니다. [Fallback prompt](../define-an-action/built-in-actions#fallback), [Exception prompt](../define-an-action/manage-exceptions) 외에도, 일반 액션에서 "제가 할 수 없는 일이에요.", "검색에 실패했습니다" 등과 같은 응답이 전달된 경우, 서비스 실패로 분류되어 `실패 발화 분석` 도구의 분석 대상이 될 수 있습니다.
 
-## 정상 응답 실패 <a href="failed" id="failed"></a>
+## 정상 응답 실패 <a id="failed"></a>
 
 이 도구에서는 Play 개발자가 생성한 User Utterance Model에 의해 NLU 분석은 이루어졌으나, 정상적인 응답이 나가지 않은 경우의 로그를 확인할 수 있습니다. NLU 분석이 이루어졌다고 하여, 그 분석이 Play 개발자의 의도대로 되었다고 간주할 수는 없습니다. NLU 엔진이 사용자 발화를 개발자의 의도대로 분석했으나 처리 가능 범위 밖의 요청이었을 수 있고, 또는 개발자의 의도대로 분석하지 않고 다르게 분석했을 수도 있습니다.
 
 첫 번째 경우(의도대로 분석되었으며 그 요청이 가능 범위 밖인 경우)는 별도의 대응이 필요없으나, 두 번째 경우(예상과 다르게 분석된 경우)는 학습 문장을 추가/수정하거나, Entity를 수정/추가하여 의도대로 분석이 되도록 User Utterance Model을 수정하는 것을 권장합니다.
 
-## NLU 분석 실패 <a href="no-nlu-result" id="no-nlu-result"></a>
+## NLU 분석 실패 <a id="no-nlu-result"></a>
 
 Play 개발자가 요청한 학습 데이터를 기반으로 생성된 User Utterance Model 만으로는 NLU 엔진이 해당 발화를 분석할 수 없는 경우 해당 발화를 보여주며, 그 중 해결 방안을 제안할 수 있는 경우 이를 보여줍니다. 이 도구가 제시하는 해결 방안은 크게 두 가지 `Entity 등록`과 `용언 등록`이 있습니다.
 
 ![](../../../assets/images/log-mining-01.png)
 
-### 추천 해결 방안 1 : Entity 등록 <a href="log-mining-entity" id="log-mining-entity"></a>
+### 추천 해결 방안 1 : Entity 등록 <a id="log-mining-entity"></a>
 
 NLU 분석 실패 발화 내의 특정 단어가 Entity일 가능성이 있어서 Entity로 등록할 필요가 있다고 분석되는 경우에 추천 방안이 제시됩니다. 이 추천 결과를 통해 (1) 해당 문장 자체를 기존 Intent의 예상 발화로 추가하거나, (2) 발화 내의 특정 단어를 Entity로 추가하여 Model을 수정하는 것을 권장합니다.
 
@@ -39,7 +39,7 @@ NLU 분석 실패 발화 내의 특정 단어가 Entity일 가능성이 있어�
 
 사용자 발화에 포함된 텍스트 중 Entity 등록을 추천하는 단어가 있는 경우 그 텍스트들을 노출하며, 각 텍스트들과 유사한 텍스트가 포함된 Entity Type 들을 추천합니다. 하나의 텍스트에는 여러 Entity Type이 추천될 수 있습니다. 이 경우도 하나의 텍스트는 하나의 Entity Type에만 추가하는 것을 권장합니다.
 
-### 추천 해결 방안 2 : 용언 등록 <a href="log-mining-verb" id="log-mining-verb"></a>
+### 추천 해결 방안 2 : 용언 등록 <a id="log-mining-verb"></a>
 
 NLU 분석의 원인이 용언인 경우, 그 문장과 유사한 의미로 분석되는 학습 문장 및 Intent을 추천합니다. 이 용언은 기존 데이터에 포함되지 않은 새로운 용언일 가능성이 높습니다. 이 용언과 기존 학습 문장을 조합하여 새로운 학습 문장 및 Intent를 추천하게 되며, 이때 학습 문장에 Entity 태깅이 필요하다면, Entity 태깅된 학습 문장이 추천됩니다.
 

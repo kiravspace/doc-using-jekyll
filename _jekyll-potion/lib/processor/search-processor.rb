@@ -26,10 +26,12 @@ module Jekyll::Potion
     def page_post_render(page)
       if config.markdown_converter.matches(page.extname)
         html = Nokogiri::HTML.parse(page.output)
+        page_potion = config.page_potion(page)
 
         page_index = {
-          "url" => config.page_potion(page).url,
-          "hashes" => create_indexes(page, html.css("section").css("div.container").css("div.content"))
+          "url" => page_potion.url,
+          "hashes" => create_indexes(page, html.css("section").css("div.container").css("div.content")),
+          "order" => page_potion.order
         }
         @indexes << page_index
         logger.trace(

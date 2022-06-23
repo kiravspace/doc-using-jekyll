@@ -18,7 +18,7 @@ AudioPlayer Interface를 위한 Display Interface를 사용하기 위해서는 `
 * Btv
 * NU300
 
-## AudioPlayer Interface를 위한 확장 Template <a href="audioplayer-display-interface" id="audioplayer-display-interface"></a>
+## AudioPlayer Interface를 위한 확장 Template <a id="audioplayer-display-interface"></a>
 
 AudioPlayer를 지원하는 Play가 화면을 가진 디바이스에서 사용될 때 보여지는 Template으로 Play를 개발할 때 다음의 두 작업을 꼭 해야 합니다.
 

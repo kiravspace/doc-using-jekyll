@@ -61,7 +61,7 @@ nugu_client->getCapabilityBuilder()
 
 ### 디바이스 전원 제어
 
-`사용자 발화` 에 따라 [TurnOff](system#turnoff) directive 로 디바이스 전원을 제어할 수 있습니다.
+`사용자 발화` 에 따라 [TurnOff](#turnoff) directive 로 디바이스 전원을 제어할 수 있습니다.
 
 {% alerts style="warning" %}
 iOS 는 지원하지 않습니다
@@ -108,7 +108,7 @@ CapabilityFactory::makeCapability<SystemAgent, ISystemHandler>(system_listener.g
 
 ### 에러처리
 
-NUGU 서버에서 에러가 발생할 경우 [Exception](system#exception) directive 로 error code가 전달됩니다.
+NUGU 서버에서 에러가 발생할 경우 [Exception](#exception) directive 로 error code가 전달됩니다.
 
 사용자가 에러 상황을 인지할 수 있도록 Toast, Local TTS 등으로 안내해야합니다.
 
@@ -170,7 +170,7 @@ CapabilityFactory::makeCapability<SystemAgent, ISystemHandler>(system_listener.g
 
 ### 디바이스 등록 해제
 
-누구 서버에서 디바이스가 등록 해제되면 [Revoke](system#revoke) directive 로 reason 이 전달됩니다.
+누구 서버에서 디바이스가 등록 해제되면 [Revoke](#revoke) directive 로 reason 이 전달됩니다.
 
 Application 의 상황에 따라 NUGU 로그인 화면으로 이동하거나 NUGU Button 을 비활성화 해야합니다.
 

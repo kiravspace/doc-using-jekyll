@@ -70,7 +70,7 @@ let mediaPlayerAgent = nuguClient.mediaPlayerAgent
 
 ### Context 구성
 
-앱에서 재생중인 음원에 대한 정보를 [Context](mediaplayer#context-1) 에 포함시켜 주어야 합니다.
+앱에서 재생중인 음원에 대한 정보를 [Context](./mediaplayer#context-1) 에 포함시켜 주어야 합니다.
 
 {% tabs %}
 {% tabs::content title="Android" %}
@@ -109,7 +109,7 @@ mediaPlayerAgent.delegate = MyMediaPlayerAgentDelegate()
 
 ### 제어 명령
 
-`사용자 발화`에 의해 음악 [검색](mediaplayer#search)/[재생](mediaplayer#play)/[중지](mediaplayer#stop)/[다음](mediaplayer#next)/[이전](mediaplayer#previous)/[탐색](mediaplayer#move)/[일시정지](mediaplayer#pause)/[계속재생](mediaplayer#resume)/[다시재생](mediaplayer#rewind)/[반복](mediaplayer#toggle)/[즐겨찾기](mediaplayer#toggle)/[셔플](mediaplayer#toggle)/[재생목록 보기](mediaplayer#handleplaylist)/[가사 보기](mediaplayer#handlelyrics) 가 directive 로 요청될 수 있습니다.
+`사용자 발화`에 의해 음악 [검색](./mediaplayer#search)/[재생](./mediaplayer#play)/[중지](./mediaplayer#stop)/[다음](./mediaplayer#next)/[이전](./mediaplayer#previous)/[탐색](./mediaplayer#move)/[일시정지](./mediaplayer#pause)/[계속재생](./mediaplayer#resume)/[다시재생](./mediaplayer#rewind)/[반복](./mediaplayer#toggle)/[즐겨찾기](./mediaplayer#toggle)/[셔플](./mediaplayer#toggle)/[재생목록 보기](./mediaplayer#handleplaylist)/[가사 보기](./mediaplayer#handlelyrics) 가 directive 로 요청될 수 있습니다.
 
 {% tabs %}
 {% tabs::content title="Android" %}
@@ -236,7 +236,7 @@ mediaPlayerAgent.delegate = MyMediaPlayerAgentDelegate()
 
 ### 재생중인 곡 정보 요청
 
-재생중인 곡 정보가 [GetInfo](mediaplayer#getinfo) directive 로 요청될 수 있습니다.
+재생중인 곡 정보가 [GetInfo](./mediaplayer#getinfo) directive 로 요청될 수 있습니다.
 
 {% tabs %}
 {% tabs::content title="Android" %}
@@ -302,23 +302,23 @@ mediaPlayerAgent.delegate = MyMediaPlayerAgentDelegate()
 ```
 {% endcode %}
 
-| parameter                 | type            | mandatory | Play Builder Precondition | description                                                                                                                                             |
-|:--------------------------|:----------------|:----------|:--------------------------|:--------------------------------------------------------------------------------------------------------------------------------------------------------|
-| appStatus                 | string          | Y         | Y                         | **(임의의 String으로 SDK에서 enum 처리하면 안됨)**<br/>- **NOT_RUNNING**<br/>- **NORMAL** : 정상 상태 디폴트<br/>- **...** : 지정된 에러코드                                       |
-| playerActivity            | string          | Y         | Y                         | 앱의 현재 재생 상태<br/>- **STOPPED**<br/>- **PLAYING**<br/>- **PAUSED**                                                                                        |
-| user                      | object          | N         | N                         | 사용자 정보                                                                                                                                                  |
-| user.isLogIn              | string          | Y         | N                         | 로그인 여부 (TRUE/FALSE)                                                                                                                                     |
-| user.hasVoucher           | string          | Y         | N                         | 재생 가능 이용권 보유 여부 (TRUE/FALSE)                                                                                                                            |
-| currentSong               | [Song](./#song) | N         | N                         | 현재 재생 중이거나 마지막에 재생한 곡의 정보                                                                                                                               |
-| playlist                  | object          | N         | N                         | Play List가 현재 재생 상태이거나 멈춰있는 경우                                                                                                                          |
-| playlist.type             | string          | Y         | N                         | 현재 재생 리스트의 타입<br/>- **CHART** : 차트 리스트 재생 중<br/>- **PLAYLIST** : 사용자 저장 플레이리스트 재생 중<br/>- **THEMELIST** : 테마리스트의 경우<br/>- **DEFAULT** : 위에 해당 사항이 없는 경우 |
-| playlist.name             | string          | Y         | N                         | 각 타입 내에서의 이름 (PLAYLIST, THEMELIST의 경우)                                                                                                                  |
-| playlist.number           | string          | Y         | N                         | type이 "PLAYLIST"인 경우 mandantory 재생 중인 플레이리스트의 번호                                                                                                        |
-| playlist.length           | string          | Y         | N                         | 전체 곡 수                                                                                                                                                  |
-| playlist.currentSongOrder | string          | Y         | N                         | 현재 재생 곡 순서 (전체가 N이면, current 값은 1(첫곡), ... N(마지막곡) 까지 나올 수 있음)                                                                                          |
-| toggle                    | object          | N         | N                         | Toggle Directive에서 지원하는 기능의 상태 정보 repeat, shuffle 중 지원하는 기능만 포함해야 함 (포함되지 않은 파라미터는 Play에서 미지원으로 판단)<br/>모두 지원하지 않으면 toggle 파라미터가 없어야 함                  |
-| toggle.repeat             | string          | N         | N                         | **ALL** : 전체 반복<br/>**ONE** : 한곡 반복<br/>**NONE** : 반복 없음                                                                                                |
-| toggle.shuffle            | string          | N         | N                         | 셔플 여부 (ON/OFF)                                                                                                                                          |
+| parameter                 | type          | mandatory | Play Builder Precondition | description                                                                                                                                             |
+|:--------------------------|:--------------|:----------|:--------------------------|:--------------------------------------------------------------------------------------------------------------------------------------------------------|
+| appStatus                 | string        | Y         | Y                         | **(임의의 String으로 SDK에서 enum 처리하면 안됨)**<br/>- **NOT_RUNNING**<br/>- **NORMAL** : 정상 상태 디폴트<br/>- **...** : 지정된 에러코드                                       |
+| playerActivity            | string        | Y         | Y                         | 앱의 현재 재생 상태<br/>- **STOPPED**<br/>- **PLAYING**<br/>- **PAUSED**                                                                                        |
+| user                      | object        | N         | N                         | 사용자 정보                                                                                                                                                  |
+| user.isLogIn              | string        | Y         | N                         | 로그인 여부 (TRUE/FALSE)                                                                                                                                     |
+| user.hasVoucher           | string        | Y         | N                         | 재생 가능 이용권 보유 여부 (TRUE/FALSE)                                                                                                                            |
+| currentSong               | [Song](#song) | N         | N                         | 현재 재생 중이거나 마지막에 재생한 곡의 정보                                                                                                                               |
+| playlist                  | object        | N         | N                         | Play List가 현재 재생 상태이거나 멈춰있는 경우                                                                                                                          |
+| playlist.type             | string        | Y         | N                         | 현재 재생 리스트의 타입<br/>- **CHART** : 차트 리스트 재생 중<br/>- **PLAYLIST** : 사용자 저장 플레이리스트 재생 중<br/>- **THEMELIST** : 테마리스트의 경우<br/>- **DEFAULT** : 위에 해당 사항이 없는 경우 |
+| playlist.name             | string        | Y         | N                         | 각 타입 내에서의 이름 (PLAYLIST, THEMELIST의 경우)                                                                                                                  |
+| playlist.number           | string        | Y         | N                         | type이 "PLAYLIST"인 경우 mandantory 재생 중인 플레이리스트의 번호                                                                                                        |
+| playlist.length           | string        | Y         | N                         | 전체 곡 수                                                                                                                                                  |
+| playlist.currentSongOrder | string        | Y         | N                         | 현재 재생 곡 순서 (전체가 N이면, current 값은 1(첫곡), ... N(마지막곡) 까지 나올 수 있음)                                                                                          |
+| toggle                    | object        | N         | N                         | Toggle Directive에서 지원하는 기능의 상태 정보 repeat, shuffle 중 지원하는 기능만 포함해야 함 (포함되지 않은 파라미터는 Play에서 미지원으로 판단)<br/>모두 지원하지 않으면 toggle 파라미터가 없어야 함                  |
+| toggle.repeat             | string        | N         | N                         | **ALL** : 전체 반복<br/>**ONE** : 한곡 반복<br/>**NONE** : 반복 없음                                                                                                |
+| toggle.shuffle            | string        | N         | N                         | 셔플 여부 (ON/OFF)                                                                                                                                          |
 
 ## Common Objects
 
@@ -382,16 +382,16 @@ mediaPlayerAgent.delegate = MyMediaPlayerAgentDelegate()
 ```
 {% endcode %}
 
-| parameter      | type            | mandatory | description                                                                                                                                 |
-|:---------------|:----------------|:----------|:--------------------------------------------------------------------------------------------------------------------------------------------|
-| token          | string          | Y         | 전달하는 Directive를 식별하기 위한 unique string<br/>결과 이벤트에 이 token을 그대로 전달해주어야 함                                                                     |
-| action         | string          | Y         | 앱의 동작 가능 여부를 모를 수 있기 때문에 상태를 파악하고 실행하는 동작을 구분하기 위해 정의<br/>- **CHECK** : 최초 호출 시<br/>- **EXECUTE** : suspended를 통해 상태가 확인되고 난 후 다시 요청하는 경우   |
-| asrText        | string          | N         | 요청된 발화문                                                                                                                                     |
-| song           | [Song](./#song) | N         | -                                                                                                                                           |
-| toggle         | object          | N         | repeat, shuffle 중 지원하는 기능만 포함해야 함 (포함되지 않은 파라미터는 Play에서 미지원으로 판단)<br/>모두 지원하지 않으면 toggle 파라미터가 없어야 함                                        |
-| toggle.repeat  | string          | N         | **ALL** : 전체 반복<br/>**ONE** : 한곡 반복<br/>**NONE** : 반복 없음                                                                                    |
-| toggle.shuffle | string          | N         | 셔플 여부 (ON/OFF)                                                                                                                              |
-| data           | obejct          | N         | Play Directive 처리 결과에 따라 Suspended 이벤트를 받을 수 있는데, 연속된 요청을 위해 최초 요청에서 사용된 정보를 이후 flow에서 사용하는 용도로 사용                                          |
+| parameter      | type          | mandatory | description                                                                                                                                 |
+|:---------------|:--------------|:----------|:--------------------------------------------------------------------------------------------------------------------------------------------|
+| token          | string        | Y         | 전달하는 Directive를 식별하기 위한 unique string<br/>결과 이벤트에 이 token을 그대로 전달해주어야 함                                                                     |
+| action         | string        | Y         | 앱의 동작 가능 여부를 모를 수 있기 때문에 상태를 파악하고 실행하는 동작을 구분하기 위해 정의<br/>- **CHECK** : 최초 호출 시<br/>- **EXECUTE** : suspended를 통해 상태가 확인되고 난 후 다시 요청하는 경우   |
+| asrText        | string        | N         | 요청된 발화문                                                                                                                                     |
+| song           | [Song](#song) | N         | -                                                                                                                                           |
+| toggle         | object        | N         | repeat, shuffle 중 지원하는 기능만 포함해야 함 (포함되지 않은 파라미터는 Play에서 미지원으로 판단)<br/>모두 지원하지 않으면 toggle 파라미터가 없어야 함                                        |
+| toggle.repeat  | string        | N         | **ALL** : 전체 반복<br/>**ONE** : 한곡 반복<br/>**NONE** : 반복 없음                                                                                    |
+| toggle.shuffle | string        | N         | 셔플 여부 (ON/OFF)                                                                                                                              |
+| data           | obejct        | N         | Play Directive 처리 결과에 따라 Suspended 이벤트를 받을 수 있는데, 연속된 요청을 위해 최초 요청에서 사용된 정보를 이후 flow에서 사용하는 용도로 사용                                          |
 
 ### Stop
 
@@ -434,11 +434,11 @@ mediaPlayerAgent.delegate = MyMediaPlayerAgentDelegate()
 ```
 {% endcode %}
 
-| parameter | type            | mandatory | description                                                         |
-|:----------|:----------------|:----------|:--------------------------------------------------------------------|
-| token     | string          | Y         | 전달하는 Directive를 식별하기 위한 unique string 결과 이벤트에 이 token을 그대로 전달해주어야 함 |
-| asrText   | string          | N         | 요청된 발화문                                                             |
-| song      | [Song](./#song) | N         | -                                                                   |
+| parameter | type          | mandatory | description                                                         |
+|:----------|:--------------|:----------|:--------------------------------------------------------------------|
+| token     | string        | Y         | 전달하는 Directive를 식별하기 위한 unique string 결과 이벤트에 이 token을 그대로 전달해주어야 함 |
+| asrText   | string        | N         | 요청된 발화문                                                             |
+| song      | [Song](#song) | N         | -                                                                   |
 
 ### Previous
 
@@ -760,15 +760,15 @@ mediaPlayerAgent.delegate = MyMediaPlayerAgentDelegate()
 ```
 {% endcode %}
 
-| parameter       | type            | mandatory | description                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                 |
-|:----------------|:----------------|:----------|:----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| token           | string          | Y         | Directive에서 전달한 token                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                       |
-| song            | [Song](./#song) | N         | -                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                           |
-| playlist        | object          | N         | -                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                           |
-| playlist.name   | string          | N         | 재생할 플레이리스트명                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                 |
-| playlist.number | string          | Y         | 재생할 플레이리스트의 번호                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                              |
-| issueCode       | string          | N         | **(임의의 String으로 SDK에서 enum 처리하면 안됨)**<br/>- 재생을 수행하지만, 아래와 같은 특수 동작 및 prompt를 분기하는 경우<br/>• **onlyAdult** : 첫곡이 '성인 인증'이 필요한 음악으로, > skip하여 재생<br/>• **disable** : 첫곡이 서비스가 중지된 곡 > skip하여 재생<br/>• **notAllowed** : 첫 곡이 제공사 사정으로 재생할 수 없음. > skip하여 재생<br/>• **onlyPreview** : 첫 곡이 권리사 요청으로 미리듣기만 가능한 음악 > 미리듣기만 재생<br/>• **noRecentPlayed** : 최근들은 곡 요청시, 최근들은 이력이 없어서 실시간 차트로 대안 재생하는 경우<br/>• **noFavoritePlayed** : 많이 들은 곡 요청시, 많이들은 이력이 없어서 실시간 차트로 대안 재생하는 경우<br/>• **excludeSong**: 첫 곡이 안듣기 설정한 곡이어서 skip 하여 재생 |
-| data            | object          | N         | Play Directive에서 data 파라미터가 존재하면 그 object를 그대로 보내줘야 함                                                                                                                                                                                                                                                                                                                                                                                                                                                                       |
+| parameter       | type          | mandatory | description                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                 |
+|:----------------|:--------------|:----------|:----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
+| token           | string        | Y         | Directive에서 전달한 token                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                       |
+| song            | [Song](#song) | N         | -                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                           |
+| playlist        | object        | N         | -                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                           |
+| playlist.name   | string        | N         | 재생할 플레이리스트명                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                 |
+| playlist.number | string        | Y         | 재생할 플레이리스트의 번호                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                              |
+| issueCode       | string        | N         | **(임의의 String으로 SDK에서 enum 처리하면 안됨)**<br/>- 재생을 수행하지만, 아래와 같은 특수 동작 및 prompt를 분기하는 경우<br/>• **onlyAdult** : 첫곡이 '성인 인증'이 필요한 음악으로, > skip하여 재생<br/>• **disable** : 첫곡이 서비스가 중지된 곡 > skip하여 재생<br/>• **notAllowed** : 첫 곡이 제공사 사정으로 재생할 수 없음. > skip하여 재생<br/>• **onlyPreview** : 첫 곡이 권리사 요청으로 미리듣기만 가능한 음악 > 미리듣기만 재생<br/>• **noRecentPlayed** : 최근들은 곡 요청시, 최근들은 이력이 없어서 실시간 차트로 대안 재생하는 경우<br/>• **noFavoritePlayed** : 많이 들은 곡 요청시, 많이들은 이력이 없어서 실시간 차트로 대안 재생하는 경우<br/>• **excludeSong**: 첫 곡이 안듣기 설정한 곡이어서 skip 하여 재생 |
+| data            | object        | N         | Play Directive에서 data 파라미터가 존재하면 그 object를 그대로 보내줘야 함                                                                                                                                                                                                                                                                                                                                                                                                                                                                       |
 
 ### PlayFailed
 
@@ -951,15 +951,15 @@ mediaPlayerAgent.delegate = MyMediaPlayerAgentDelegate()
 ```
 {% endcode %}
 
-| parameter       | type            | mandatory | description                                                  |
-|:----------------|:----------------|:----------|:-------------------------------------------------------------|
-| token           | string          | Y         | Directive에서 전달한 token                                        |
-| song            | [Song](./#song) | N         | 재생하는 음원의 정보                                                  |
-| target          | string          | Y         | **PLAYLIST** : 플레이리스트 이동 성공한 경우<br/>**TRACK** : 트랙 이동 성공한 경우 |
-| playlist        | object          | N         | -                                                            |
-| playlist.name   | string          | N         | 재생할 플레이리스트명                                                  |
-| playlist.number | string          | Y         | 재생할 플레이리스트의 번호                                               |
-| data            | object          | N         | Play Directive에서 data 파라미터가 존재하면 그 object를 그대로 보내줘야 함        |
+| parameter       | type          | mandatory | description                                                  |
+|:----------------|:--------------|:----------|:-------------------------------------------------------------|
+| token           | string        | Y         | Directive에서 전달한 token                                        |
+| song            | [Song](#song) | N         | 재생하는 음원의 정보                                                  |
+| target          | string        | Y         | **PLAYLIST** : 플레이리스트 이동 성공한 경우<br/>**TRACK** : 트랙 이동 성공한 경우 |
+| playlist        | object        | N         | -                                                            |
+| playlist.name   | string        | N         | 재생할 플레이리스트명                                                  |
+| playlist.number | string        | Y         | 재생할 플레이리스트의 번호                                               |
+| data            | object        | N         | Play Directive에서 data 파라미터가 존재하면 그 object를 그대로 보내줘야 함        |
 
 ### PreviousFailed
 
@@ -1040,15 +1040,15 @@ mediaPlayerAgent.delegate = MyMediaPlayerAgentDelegate()
 ```
 {% endcode %}
 
-| parameter       | type            | mandatory | description                                                   |
-|:----------------|:----------------|:----------|:--------------------------------------------------------------|
-| token           | string          | Y         | Directive에서 전달한 token                                         |
-| song            | [Song](./#song) | N         | 재생하는 곡 정보                                                     |
-| target          | string          | Y         | **PLAYLIST** : 플레이리스트 이동 성공한 경우<br/>**TRACK** : 트랙 이동 성공한 경우  |
-| playlist        | object          | N         | -                                                             |
-| playlist.name   | string          | N         | 재생할 플레이리스트명                                                   |
-| playlist.number | string          | Y         | 재생할 플레이리스트의 번호                                                |
-| data            | object          | N         | Play Directive에서 data 파라미터가 존재하면 그 object를 그대로 보내줘야 함         |
+| parameter       | type          | mandatory | description                                                   |
+|:----------------|:--------------|:----------|:--------------------------------------------------------------|
+| token           | string        | Y         | Directive에서 전달한 token                                         |
+| song            | [Song](#song) | N         | 재생하는 곡 정보                                                     |
+| target          | string        | Y         | **PLAYLIST** : 플레이리스트 이동 성공한 경우<br/>**TRACK** : 트랙 이동 성공한 경우  |
+| playlist        | object        | N         | -                                                             |
+| playlist.name   | string        | N         | 재생할 플레이리스트명                                                   |
+| playlist.number | string        | Y         | 재생할 플레이리스트의 번호                                                |
+| data            | object        | N         | Play Directive에서 data 파라미터가 존재하면 그 object를 그대로 보내줘야 함         |
 
 ### NextFailed
 

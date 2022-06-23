@@ -61,7 +61,7 @@ nugu_client->getCapabilityBuilder()
 
 ### 재생 상태 정보
 
-[Speak](tts#speak) directive 로 전달된 음원에 대한 재생 상태를 모니터링 할 수 있습니다.
+[Speak](#speak) directive 로 전달된 음원에 대한 재생 상태를 모니터링 할 수 있습니다.
 
 {% tabs %}
 {% tabs::content title="Android" %}

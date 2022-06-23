@@ -49,7 +49,7 @@ NuguAndroidClient.Builder(...)
 
 ### Context 구성
 
-디바이스의 디스플레이 상태를 [Context](screen#context) 에 포함시켜 주어야 합니다.
+디바이스의 디스플레이 상태를 [Context](#context) 에 포함시켜 주어야 합니다.
 
 {% tabs %}
 {% tabs::content title="Android" %}
@@ -70,7 +70,7 @@ class MyScreen: Screen {
 
 ### 디스플레이 제어
 
-디바이스의 디스플레이 제어가 [TurnOn](screen#turnon)/[TurnOff](screen#turnoff)/[SetBrightness](screen#setbrightness) directive 로 요청될 수 있습니다.
+디바이스의 디스플레이 제어가 [TurnOn](#turnon)/[TurnOff](#turnoff)/[SetBrightness](#setbrightness) directive 로 요청될 수 있습니다.
 
 {% tabs %}
 {% tabs::content title="Android" %}

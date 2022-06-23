@@ -6,7 +6,7 @@ depth_order: 2
 
 등록된 Biz 사용자가 Biz API 수신 및 제휴사 계정 인증을 한 경우, 계정 인증을 통해 생성된 토큰을 바탕으로 개인에게 특화된 Announcement 메세지를 사용자의 디바이스에 발송 할 수 있습니다.
 
-## 1. URL <a href="#biz-announcement-v1-1url" id="biz-announcement-v1-1url"></a>
+## 1. URL <a id="biz-announcement-v1-1url"></a>
 
 {% code %}
 ```
@@ -14,9 +14,9 @@ depth_order: 2
 ```
 {% endcode %}
 
-## 2. Request <a href="#biz-announcement-v1-2request" id="biz-announcement-v1-2request"></a>
+## 2. Request <a id="biz-announcement-v1-2request"></a>
 
-### 2.1 Body <a href="#biz-announcement-v1-2.1body" id="biz-announcement-v1-2.1body"></a>
+### 2.1 Body <a id="biz-announcement-v1-2.1body"></a>
 
 **body**
 
@@ -43,7 +43,7 @@ depth_order: 2
 ```
 {% endcode %}
 
-### 2.2 설명 <a href="#biz-announcement-v1-2.2" id="biz-announcement-v1-2.2"></a>
+### 2.2 설명 <a id="biz-announcement-v1-2.2"></a>
 
 | 이름                    | 유형      | 속성               | 필수   | 설명                                                                                                                          |
 |-----------------------|---------|------------------|------|-----------------------------------------------------------------------------------------------------------------------------|
@@ -64,9 +64,9 @@ depth_order: 2
 | display.image         | body    | string           |      | 이미지<br/>ImageText Type에서 이미지가 없을 경우, 디폴트 이미지 노출<br/><img src="/assets/images/img_notification.png" alt="">                  |
 | display.grammarGuide  | body    | array of string  |      | 가이드 발화문                                                                                                                     |
 
-## 3. Response <a href="#biz-announcement-v1-3response" id="biz-announcement-v1-3response"></a>
+## 3. Response <a id="biz-announcement-v1-3response"></a>
 
-### 3.1 HTTP Status <a href="#biz-announcement-v1-3.1httpstatus" id="biz-announcement-v1-3.1httpstatus"></a>
+### 3.1 HTTP Status <a id="biz-announcement-v1-3.1httpstatus"></a>
 
 | HTTP Status  | errorCode  | 설명                                               |
 |--------------|------------|--------------------------------------------------|
@@ -86,7 +86,7 @@ depth_order: 2
 | 400          | V1ANN204   | display.body 값이 없음                               |
 | 400          | V1ANN301   | 허용되지 않는 playServiceId                            |
 
-### 3.2 Body <a href="#biz-announcement-v1-3.2body" id="biz-announcement-v1-3.2body"></a>
+### 3.2 Body <a id="biz-announcement-v1-3.2body"></a>
 
 {% code %}
 ```json
@@ -102,7 +102,7 @@ depth_order: 2
 ```
 {% endcode %}
 
-### 3.3 설명 <a href="#biz-announcement-v1-3.3" id="biz-announcement-v1-3.3"></a>
+### 3.3 설명 <a id="biz-announcement-v1-3.3"></a>
 
 | 이름                     | 속성              | 설명                                                                                                                                                                                                 |
 |------------------------|-----------------|----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|

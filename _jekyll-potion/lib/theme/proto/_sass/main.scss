@@ -232,7 +232,7 @@ body {
         }
 
         & > .block_content {
-          text-align: left;
+          text-align: right;
           float: right;
         }
       }
@@ -243,7 +243,7 @@ body {
         }
 
         & > .block_content {
-          text-align: right;
+          text-align: left;
           float: left;
         }
       }
@@ -455,6 +455,7 @@ body {
               td {
                 height: 2em;
                 padding: 0.5em;
+                line-height: 1.7em;
               }
             }
           }
@@ -719,6 +720,8 @@ body {
         border-radius: 0.5em;
         padding: 0.5em;
         display: inline-block;
+        cursor: default;
+        color: black;
 
         & > div.search_bar {
           width: calc(100% - 2em);
@@ -729,7 +732,7 @@ body {
           align-items: center;
           padding: 0 1em;
 
-          & > div.search_icon {
+          & > label.search_icon {
             width: 2em;
             height: 2em;
             background: url(../svg/magnifier.svg) center no-repeat;
@@ -737,13 +740,13 @@ body {
           }
 
           & > input {
-            font-size: 2em;
+            &::placeholder {
+              color: gray;
+            }
+
+            font-size: 1.5em;
             width: 100%;
             border: none;
-
-            &:focus {
-              border: none;
-            }
           }
         }
 
@@ -759,9 +762,21 @@ body {
             border-bottom: 1px solid lightgray;
             padding-top: 0.5em;
 
+            &:hover {
+              background-color: whitesmoke;
+            }
+
             & > a {
               height: 100%;
               text-decoration: none;
+              color: black;
+
+              code {
+                font-family: "Nanum Gothic", sans-serif;
+                color: royalblue;
+                font-weight: bold;
+                text-decoration: underline;
+              }
 
               & > div.page_title {
                 font-weight: bold;
@@ -769,9 +784,11 @@ body {
 
               & > div.content {
                 & > p {
+                  line-height: 1.2em;
                   margin: 0;
                   margin-block: 0.5em;
                   margin-inline: 0;
+                  color: slategray;
                 }
               }
             }
