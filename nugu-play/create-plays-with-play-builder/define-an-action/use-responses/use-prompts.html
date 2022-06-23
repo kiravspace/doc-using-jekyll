@@ -8,7 +8,7 @@
 
 
 
-<meta http-equiv="Last-Modified" content="2022-06-21 12:58:58 +0000">
+<meta http-equiv="Last-Modified" content="2022-06-23 08:19:00 +0000">
 
 
 
@@ -36,8 +36,8 @@
 <link rel="stylesheet" href="/assets/css/main.css">
 <link rel="stylesheet" href="/assets/css/syntax.css">
 
-<script type="text/javascript" src="/assets/js/jquery-3.6.0.js"></script>
-<script type="text/javascript" src="/assets/js/jquery-ui.js"></script>
+<script type="text/javascript" src="/assets/js/jquery-3.6.0.min.js"></script>
+<script type="text/javascript" src="/assets/js/jsrender.min.js"></script>
 <script type="text/javascript" src="/assets/js/main.js"></script>
 
 </head>
@@ -2129,7 +2129,7 @@
         <div class="description"></div>
     </div>
     <div class="content">
-        <h2 id="prompt-사용하기-">Prompt 사용하기 <a href="#use-prompts" id="use-prompts"></a>
+        <h2 id="prompt-사용하기-">Prompt 사용하기 <a id="use-prompts"></a>
 </h2>
 
 <p>Prompt는 사용자에게 응답으로 전달할 메시지를 의미합니다. Prompt를 작성할때 다음과 같은 구성 요소들을 사용할 수 있습니다.</p>
@@ -2153,7 +2153,7 @@
     <tr>
       <td>Parameter</td>
       <td> </td>
-      <td>{{}}와 같은 형태로 사용하며, Parameter에 담긴 값을 텍스트로 변형하여 발화합니다.<br>Parameter 사용법에 대한 자세한 내용은 <a href="../use-parameters">Parameter 사용하기</a>를 참고하세요.</td>
+      <td>{{}}와 같은 형태로 사용하며, Parameter에 담긴 값을 텍스트로 변형하여 발화합니다.<br>Parameter 사용법에 대한 자세한 내용은 <a href="/nugu-play/create-plays-with-play-builder/define-an-action/use-parameters">Parameter 사용하기</a>를 참고하세요.</td>
       <td>{{</td>
     </tr>
     <tr>
@@ -2173,25 +2173,25 @@
     <tr>
       
       <td>NLG Function</td>
-      <td>Response Filter에 대한 자세한 내용은 <a href="../../define-response-filters">Response Filter</a>를 참고하세요.</td>
+      <td>Response Filter에 대한 자세한 내용은 <a href="/nugu-play/create-plays-with-play-builder/define-response-filters">Response Filter</a>를 참고하세요.</td>
       <td>:</td>
     </tr>
     <tr>
       <td>조사</td>
       <td> </td>
-      <td>‘을/를’과 같이 앞 음절에 따라 조사가 바뀌는 경우에 자동으로 변환하여 발화합니다.<br>조사 자동 변환은 Parameter와 함께 사용될 때만 동작합니다.<br>조사 처리에 대한 자세한 내용은 <a href="use-prompts#process-postpositions">조사 처리하기</a>를 참고하세요.</td>
+      <td>‘을/를’과 같이 앞 음절에 따라 조사가 바뀌는 경우에 자동으로 변환하여 발화합니다.<br>조사 자동 변환은 Parameter와 함께 사용될 때만 동작합니다.<br>조사 처리에 대한 자세한 내용은 <a href="#process-postpositions">조사 처리하기</a>를 참고하세요.</td>
       <td>/</td>
     </tr>
     <tr>
       <td>SKML 태그</td>
       <td> </td>
-      <td>TTS 엔진이 텍스트 혹은 Parameter의 값을 SKML 태그에 따라 발화합니다.<br>SKML 태그 사용 대한 자세한 내용은 <a href="use-prompts#use-utterance-options">발화 옵션 사용하기</a>를 참고하세요.</td>
+      <td>TTS 엔진이 텍스트 혹은 Parameter의 값을 SKML 태그에 따라 발화합니다.<br>SKML 태그 사용 대한 자세한 내용은 <a href="#use-utterance-options">발화 옵션 사용하기</a>를 참고하세요.</td>
       <td>&lt;</td>
     </tr>
   </tbody>
 </table>
 
-<h4 id="prompt의-유형-">Prompt의 유형 <a href="#prompt-types" id="prompt-types"></a>
+<h4 id="prompt의-유형-">Prompt의 유형 <a id="prompt-types"></a>
 </h4>
 
 <p>Play Builder의 Prompt에는 3가지 유형이 있습니다.</p>
@@ -2265,14 +2265,14 @@
   </tbody>
 </table>
 
-<h4 id="silent-prompt-">Silent Prompt <a href="#silent-prompt" id="silent-prompt"></a>
+<h4 id="silent-prompt-">Silent Prompt <a id="silent-prompt"></a>
 </h4>
 
 <p>사용자에게 빈 응답을 전달하고 싶을 경우, Silent Prompt를 사용할 수 있습니다. Silent Prompt는 Prompt 입력 창 우측의 버튼을 눌러 설정 가능합니다. Silent Prompt를 응답으로 설정하면, 아무 발화 없이 대기 모드로 넘어가거나 세션이 종료되므로 꼭 필요한 경우에만 사용하는 것이 좋습니다. Silent Prompt는 모든 유형의 Prompt에서 사용할 수 있습니다.</p>
 
-<p><img src="../../../../assets/images/use-prompts-01.gif" alt=""></p>
+<p><img src="/assets/images/use-prompts-01.gif" alt=""></p>
 
-<h2 id="조사-처리하기-">조사 처리하기 <a href="#process-postpositions" id="process-postpositions"></a>
+<h2 id="조사-처리하기-">조사 처리하기 <a id="process-postpositions"></a>
 </h2>
 
 <p>국어의 조사 ‘이/가, 을/를, 은/는, 과/와, 로/으로’는 같은 형태소지만 앞음절의 받침 유무에 따라 다르게 사용됩니다.</p>
@@ -2281,11 +2281,11 @@
 
 <p>Parameter의 <code class="language-plaintext highlighter-rouge">}}</code> 기호 뒤에 / 입력하면 조사의 자동완성 창이 표시됩니다. 이 창에서 원하는 조사를 선택합니다.</p>
 
-<p><img src="../../../../assets/images/use-prompts-02.png" alt=""></p>
+<p><img src="/assets/images/use-prompts-02.png" alt=""></p>
 
 <p>다음과 같이 중괄호 사이에 대표 조사가 입력되지만, 실제 발화 시에는 Parameter 마지막 글자의 받침 여부 따라 조사가 변환되어 출력됩니다.</p>
 
-<p><img src="../../../../assets/images/use-prompts-03.png" alt=""></p>
+<p><img src="/assets/images/use-prompts-03.png" alt=""></p>
 
 <p>자동완성을 사용하지 않더라도 parameter의 <code class="language-plaintext highlighter-rouge">}}</code> 사이에 조사를 직접 입력해도 정상 동작합니다.</p>
 
@@ -2326,12 +2326,12 @@
 
 <ul>
   <li>알파벳은 미국식 영어로 읽는 것을 한국어로 옮긴다고 간주하고 조사 처리합니다.</li>
-  <li>10 g, 1 m와 같이 숫자와 단위가 붙어서 조합되고, <a href="../../../../reference/list-of-unit-tags-supported-by-utterance-options">발화 옵션 Say 태그(단위 속성)</a>를 처리하지 않은 경우, 10 그램, 1 미터와 같이 단위에 대한 표준어로 변환하여 조사를 붙입니다.</li>
+  <li>10 g, 1 m와 같이 숫자와 단위가 붙어서 조합되고, <a href="/reference/list-of-unit-tags-supported-by-utterance-options">발화 옵션 Say 태그(단위 속성)</a>를 처리하지 않은 경우, 10 그램, 1 미터와 같이 단위에 대한 표준어로 변환하여 조사를 붙입니다.</li>
   <li>괄호나 특수문자가 포함된다면 제거한 후 처리합니다.</li>
   <li>단위, 한글, 영문, 숫자에 해당하지 않는 경우는 변환하지 않습니다.</li>
 </ul>
 
-<h2 id="발화-옵션-사용하기-">발화 옵션 사용하기 <a href="#use-utterance-options" id="use-utterance-options"></a>
+<h2 id="발화-옵션-사용하기-">발화 옵션 사용하기 <a id="use-utterance-options"></a>
 </h2>
 
 <p>입력한 Response의 Prompt를 TTS 엔진이 음성으로 변환할 때 예상과는 다른 방식으로 읽을 수도 있고, 때로는 천천히 읽거나 또박또박 읽게 하고 싶을 수도 있습니다.</p>
@@ -2346,11 +2346,11 @@
 
 <p>⁣1. Play 내 모든 prompt의 발화 옵션을 변경하고 싶다면 <code class="language-plaintext highlighter-rouge">General</code> &gt; <code class="language-plaintext highlighter-rouge">기본정보</code> 로 이동 합니다.</p>
 
-<p><img src="../../../../assets/images/use-prompts-04.png" alt=""></p>
+<p><img src="/assets/images/use-prompts-04.png" alt=""></p>
 
 <p>⁣2. 기본 정보 페이지의 Prompt 발화 옵션에서 발화속도, 음 높낮이, 문장 사이의 묵음 길이, 끊어읽기 뒤 묵음 길이를 설정한 후 <code class="language-plaintext highlighter-rouge">발화옵션 적용하기</code> 버튼을 클릭합니다. 이 값을 변경하면 변경한 순간 이후부터 만드는 Prompt부터 적용됩니다.</p>
 
-<p><img src="../../../../assets/images/use-prompts-05.png" alt=""></p>
+<p><img src="/assets/images/use-prompts-05.png" alt=""></p>
 
 <p><strong>① 발화속도 (speed)</strong> 재생 속도를 50 ~ 120% 사이에서 변경할 수 있습니다.(기본값: 100%) 최솟값이나 최댓값으로 설정할 경우에는 음질 열화가 발생할 수 있으므로 85 ~ 115 사잇값 사용을 권장합니다.</p>
 
@@ -2366,7 +2366,7 @@
 
 <p>⁣1. Play Builder 홈 화면에서 모든 Prompt의 발화 옵션을 변경할 Play를 클릭하여 선택한 후 <code class="language-plaintext highlighter-rouge">Actions</code> &gt; <code class="language-plaintext highlighter-rouge">Custom Actions</code> 페이지에서 발화 옵션을 설정할 문장이 있는 Action을 선택합니다.</p>
 
-<p><img src="../../../../assets/images/use-prompts-06.png" alt=""></p>
+<p><img src="/assets/images/use-prompts-06.png" alt=""></p>
 
 <p>⁣2. Output 정의 영역에서 발화 옵션을 변경할 Prompt의 우측 버튼을 클릭하여 옵션을 설정한 후 [Play 저장] 버튼을 클릭합니다.</p>
 
@@ -2374,16 +2374,16 @@
   <li>변경 가능한 옵션은 전체 발화 옵션과 같습니다.</li>
 </ul>
 
-<p><img src="../../../../assets/images/use-prompts-07.png" alt=""></p>
+<p><img src="/assets/images/use-prompts-07.png" alt=""></p>
 
-<h3 id="문장-내-발화-옵션-태그-추가하기-">문장 내 발화 옵션 태그 추가하기 <a href="#skml-tag" id="skml-tag"></a>
+<h3 id="문장-내-발화-옵션-태그-추가하기-">문장 내 발화 옵션 태그 추가하기 <a id="skml-tag"></a>
 </h3>
 
 <p>Prompt 내에서 특정 구간에 끊어읽기를 추가하거나, 특정 단어를 읽는 방식을 조절하는 태그도 제공하고 있습니다.</p>
 
 <p>태그들은 기본적으로 <code class="language-plaintext highlighter-rouge">&lt;태그 속성="속성값"&gt;</code> 형태로 구성됩니다. 이 태그는 직접 입력하지 않아도 되도록 Prompt 문장 입력창에서 자동완성으로 제공하고 있습니다. 문장 입력 중 특수문자 <code class="language-plaintext highlighter-rouge">&lt;</code>를 입력한 뒤 자동완성창에서 세 가지 기능 중 적용할 옵션을 선택합니다.</p>
 
-<p><img src="../../../../assets/images/use-prompts-08.png" alt=""></p>
+<p><img src="/assets/images/use-prompts-08.png" alt=""></p>
 
 <table>
   <thead>
@@ -2546,7 +2546,7 @@
     <tr>
       
       <td>단위 읽기</td>
-      <td>‘칠미터, 칠그램’과 같이 단위로 읽습니다.<br>139개의 단위를 읽기 지원합니다.<br>(<a href="./use-prompts#list-of-unit-tags-supported-by-utterance-options">발화 옵션에서 UNIT 태그로 지원 단위 목록</a>)</td>
+      <td>‘칠미터, 칠그램’과 같이 단위로 읽습니다.<br>139개의 단위를 읽기 지원합니다.<br>(<a href="#list-of-unit-tags-supported-by-utterance-options">발화 옵션에서 UNIT 태그로 지원 단위 목록</a>)</td>
       <td>unit</td>
       <td><code class="language-plaintext highlighter-rouge">[n][unit]</code></td>
     </tr>
@@ -2761,10 +2761,10 @@
 
 </div>
 
-<h3 id="발화-옵션에서-unit-태그로-지원하는-단위-목록-">발화 옵션에서 UNIT 태그로 지원하는 단위 목록 <a href="#list-of-unit-tags-supported-by-utterance-options" id="list-of-unit-tags-supported-by-utterance-options"></a>
+<h3 id="발화-옵션에서-unit-태그로-지원하는-단위-목록-">발화 옵션에서 UNIT 태그로 지원하는 단위 목록 <a id="list-of-unit-tags-supported-by-utterance-options"></a>
 </h3>
 
-<p>문장 내 발화 옵션 태그 중 <code class="language-plaintext highlighter-rouge">텍스트 읽기</code> &gt; <code class="language-plaintext highlighter-rouge">단위 읽기</code> 태그에서 지원하는 목록은 <a href="../../../../reference/list-of-unit-tags-supported-by-utterance-options">단위 목록</a> 문서에서 확인할 수 있습니다.</p>
+<p>문장 내 발화 옵션 태그 중 <code class="language-plaintext highlighter-rouge">텍스트 읽기</code> &gt; <code class="language-plaintext highlighter-rouge">단위 읽기</code> 태그에서 지원하는 목록은 <a href="/reference/list-of-unit-tags-supported-by-utterance-options">단위 목록</a> 문서에서 확인할 수 있습니다.</p>
 
     </div>
     
@@ -2799,134 +2799,28 @@
         <img id="modal_image" class="modal_image" src="">
     </div>
 </div>
+<script type="text/x-jsrender" id="search_contents_tmpl">
+
+<div class="search_content">
+    <a href="/nugu-play/create-plays-with-play-builder/define-an-action/use-responses/{{:url}}">
+        <div class="page_title">{{:title}}</div>
+        <div class="content">
+            {{for contents}}
+            <p>{{:}}</p>
+            {{/for}}
+        </div>
+    </a>
+</div>
+
+</script>
 <div id="modal_search_area" class="modal_image_area hide">
     <div class="modal_wrapper">
         <div class="modal_search">
             <div class="search_bar">
-                <div class="search_icon"></div>
-                <input id="search-keyword" type="text" palceholder="검색어를 입력하세요.">
+                <label class="search_icon" for="search_keyword"></label>
+                <input id="search_keyword" type="text" placeholder="최소 2자 이상의 검색어를 입력하신 후 Enter를 입력하세요.">
             </div>
-            <div class="search_contents">
-                <div class="search_content">
-                    <a href="">
-                        <div class="page_title">제목</div>
-                        <div class="content">
-                            <p>321321321312</p>
-                            <p>321321321312</p>
-                            <p>321321321312</p>
-                        </div>
-                    </a>
-                </div>
-                <div class="search_content">
-                    <a href="">
-                        <div class="page_title">제목</div>
-                        <div class="content">
-                            <p>321321321312</p>
-                            <p>321321321312</p>
-                            <p>321321321312</p>
-                        </div>
-                    </a>
-                </div>
-                <div class="search_content">
-                    <a href="">
-                        <div class="page_title">제목</div>
-                        <div class="content">
-                            <p>321321321312</p>
-                            <p>321321321312</p>
-                            <p>321321321312</p>
-                        </div>
-                    </a>
-                </div>
-                <div class="search_content">
-                    <a href="">
-                        <div class="page_title">제목</div>
-                        <div class="content">
-                            <p>321321321312</p>
-                            <p>321321321312</p>
-                            <p>321321321312</p>
-                        </div>
-                    </a>
-                </div>
-                <div class="search_content">
-                    <a href="">
-                        <div class="page_title">제목</div>
-                        <div class="content">
-                            <p>321321321312</p>
-                            <p>321321321312</p>
-                            <p>321321321312</p>
-                        </div>
-                    </a>
-                </div>
-                <div class="search_content">
-                    <a href="">
-                        <div class="page_title">제목</div>
-                        <div class="content">
-                            <p>321321321312</p>
-                            <p>321321321312</p>
-                            <p>321321321312</p>
-                        </div>
-                    </a>
-                </div>
-                <div class="search_content">
-                    <a href="">
-                        <div class="page_title">제목</div>
-                        <div class="content">
-                            <p>321321321312</p>
-                            <p>321321321312</p>
-                            <p>321321321312</p>
-                        </div>
-                    </a>
-                </div>
-                <div class="search_content">
-                    <a href="">
-                        <div class="page_title">제목</div>
-                        <div class="content">
-                            <p>321321321312</p>
-                            <p>321321321312</p>
-                            <p>321321321312</p>
-                        </div>
-                    </a>
-                </div>
-                <div class="search_content">
-                    <a href="">
-                        <div class="page_title">제목</div>
-                        <div class="content">
-                            <p>321321321312</p>
-                            <p>321321321312</p>
-                            <p>321321321312</p>
-                        </div>
-                    </a>
-                </div>
-                <div class="search_content">
-                    <a href="">
-                        <div class="page_title">제목</div>
-                        <div class="content">
-                            <p>321321321312</p>
-                            <p>321321321312</p>
-                            <p>321321321312</p>
-                        </div>
-                    </a>
-                </div>
-                <div class="search_content">
-                    <a href="">
-                        <div class="page_title">제목</div>
-                        <div class="content">
-                            <p>321321321312</p>
-                            <p>321321321312</p>
-                            <p>321321321312</p>
-                        </div>
-                    </a>
-                </div>
-                <div class="search_content">
-                    <a href="">
-                        <div class="page_title">제목</div>
-                        <div class="content">
-                            <p>321321321312</p>
-                            <p>321321321312</p>
-                            <p>321321321312</p>
-                        </div>
-                    </a>
-                </div>
+            <div id="search_contents" class="search_contents">
             </div>
         </div>
     </div>

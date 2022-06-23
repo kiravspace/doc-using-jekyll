@@ -8,7 +8,7 @@
 
 
 
-<meta http-equiv="Last-Modified" content="2022-06-21 12:58:58 +0000">
+<meta http-equiv="Last-Modified" content="2022-06-23 08:19:00 +0000">
 
 
 
@@ -40,8 +40,8 @@
 <link rel="stylesheet" href="/assets/css/main.css">
 <link rel="stylesheet" href="/assets/css/syntax.css">
 
-<script type="text/javascript" src="/assets/js/jquery-3.6.0.js"></script>
-<script type="text/javascript" src="/assets/js/jquery-ui.js"></script>
+<script type="text/javascript" src="/assets/js/jquery-3.6.0.min.js"></script>
+<script type="text/javascript" src="/assets/js/jsrender.min.js"></script>
 <script type="text/javascript" src="/assets/js/main.js"></script>
 
 </head>
@@ -2261,7 +2261,7 @@ nugu_client-&gt;getCapabilityBuilder()
 
 <h3 id="context-구성">Context 구성</h3>
 
-<p>문자 기능과 관련된 상태 정보를 <a href="message#context">Context</a> 에 포함시켜 주어야 합니다.</p>
+<p>문자 기능과 관련된 상태 정보를 <a href="#context">Context</a> 에 포함시켜 주어야 합니다.</p>
 
 <div id="tabs-62" class="tabs">
     <ul class="tabs_title">
@@ -2304,7 +2304,7 @@ nugu_client-&gt;getCapabilityBuilder()
 
 <h3 id="문자-전송">문자 전송</h3>
 
-<p>문자 전송이 <a href="message#sendcandidates">SendCandidates</a>, <a href="message#sendmessage">SendMessage</a> directive 로 요청될 수 있습니다.</p>
+<p>문자 전송이 <a href="#sendcandidates">SendCandidates</a>, <a href="#sendmessage">SendMessage</a> directive 로 요청될 수 있습니다.</p>
 
 <div id="tabs-84" class="tabs">
     <ul class="tabs_title">
@@ -2413,7 +2413,7 @@ CapabilityFactory::makeCapability&lt;MessageAgent, IMessageHandler&gt;(message_l
 
 <h3 id="문자-읽기">문자 읽기</h3>
 
-<p>문자 읽기가 <a href="message#getmessage">GetMessage</a>, <a href="message#readmessage">ReadMessage</a> directive 로 요청될 수 있습니다.</p>
+<p>문자 읽기가 <a href="/nugu-sdk/capability-interface/message#getmessage">GetMessage</a>, <a href="/nugu-sdk/capability-interface/message#readmessage">ReadMessage</a> directive 로 요청될 수 있습니다.</p>
 
 <div id="tabs-139" class="tabs">
     <ul class="tabs_title">
@@ -2501,7 +2501,7 @@ CapabilityFactory::makeCapability&lt;MessageAgent, IMessageHandler&gt;(message_l
 
 <h3 id="재생-상태-모니터링">재생 상태 모니터링</h3>
 
-<p><a href="message#readmessage">ReadMessage</a> directive 로 전달된 문자에 대한 재생 상태를 모니터링 할 수 있습니다.</p>
+<p><a href="/nugu-sdk/capability-interface/message#readmessage">ReadMessage</a> directive 로 전달된 문자에 대한 재생 상태를 모니터링 할 수 있습니다.</p>
 
 <div id="tabs-185" class="tabs">
     <ul class="tabs_title">
@@ -2648,7 +2648,7 @@ messageAgent.addOnPlaybackListener(listener)
     </tr>
     <tr>
       <td style="text-align: left">template.candidates</td>
-      <td style="text-align: left">array of <a href="./#contact">Contact</a>
+      <td style="text-align: left">array of <a href="#contact">Contact</a>
 </td>
       <td style="text-align: left">N</td>
       <td style="text-align: left">화면에 검색 결과 리스트를 디스플레이하는 중에만 context에 추가</td>
@@ -2907,7 +2907,7 @@ messageAgent.addOnPlaybackListener(listener)
     </tr>
     <tr>
       <td style="text-align: left">candidates</td>
-      <td style="text-align: left">array of <a href="./#contact">Contact</a>
+      <td style="text-align: left">array of <a href="#contact">Contact</a>
 </td>
       <td style="text-align: left">N</td>
       <td style="text-align: left">candidates가 없으면 이 항목이 없어야 함</td>
@@ -2983,7 +2983,7 @@ messageAgent.addOnPlaybackListener(listener)
   <tbody>
     <tr>
       <td style="text-align: left">recipient</td>
-      <td style="text-align: left"><a href="message#contact">Contact</a></td>
+      <td style="text-align: left"><a href="/nugu-sdk/capability-interface/message#contact">Contact</a></td>
       <td style="text-align: left">Y</td>
       <td style="text-align: left"> </td>
     </tr>
@@ -3066,7 +3066,7 @@ messageAgent.addOnPlaybackListener(listener)
     </tr>
     <tr>
       <td style="text-align: left">candidates</td>
-      <td style="text-align: left">array of <a href="./#contact">Contact</a>
+      <td style="text-align: left">array of <a href="#contact">Contact</a>
 </td>
       <td style="text-align: left">N</td>
       <td style="text-align: left">candidates가 없으면 이 항목이 없어야 함</td>
@@ -3232,7 +3232,7 @@ messageAgent.addOnPlaybackListener(listener)
   <tbody>
     <tr>
       <td style="text-align: left">recipient</td>
-      <td style="text-align: left"><a href="message#contact">Contact</a></td>
+      <td style="text-align: left"><a href="/nugu-sdk/capability-interface/message#contact">Contact</a></td>
       <td style="text-align: left">Y</td>
       <td style="text-align: left"> </td>
     </tr>
@@ -3508,134 +3508,28 @@ messageAgent.addOnPlaybackListener(listener)
         <img id="modal_image" class="modal_image" src="">
     </div>
 </div>
+<script type="text/x-jsrender" id="search_contents_tmpl">
+
+<div class="search_content">
+    <a href="/nugu-sdk/capability-interface/{{:url}}">
+        <div class="page_title">{{:title}}</div>
+        <div class="content">
+            {{for contents}}
+            <p>{{:}}</p>
+            {{/for}}
+        </div>
+    </a>
+</div>
+
+</script>
 <div id="modal_search_area" class="modal_image_area hide">
     <div class="modal_wrapper">
         <div class="modal_search">
             <div class="search_bar">
-                <div class="search_icon"></div>
-                <input id="search-keyword" type="text" palceholder="검색어를 입력하세요.">
+                <label class="search_icon" for="search_keyword"></label>
+                <input id="search_keyword" type="text" placeholder="최소 2자 이상의 검색어를 입력하신 후 Enter를 입력하세요.">
             </div>
-            <div class="search_contents">
-                <div class="search_content">
-                    <a href="">
-                        <div class="page_title">제목</div>
-                        <div class="content">
-                            <p>321321321312</p>
-                            <p>321321321312</p>
-                            <p>321321321312</p>
-                        </div>
-                    </a>
-                </div>
-                <div class="search_content">
-                    <a href="">
-                        <div class="page_title">제목</div>
-                        <div class="content">
-                            <p>321321321312</p>
-                            <p>321321321312</p>
-                            <p>321321321312</p>
-                        </div>
-                    </a>
-                </div>
-                <div class="search_content">
-                    <a href="">
-                        <div class="page_title">제목</div>
-                        <div class="content">
-                            <p>321321321312</p>
-                            <p>321321321312</p>
-                            <p>321321321312</p>
-                        </div>
-                    </a>
-                </div>
-                <div class="search_content">
-                    <a href="">
-                        <div class="page_title">제목</div>
-                        <div class="content">
-                            <p>321321321312</p>
-                            <p>321321321312</p>
-                            <p>321321321312</p>
-                        </div>
-                    </a>
-                </div>
-                <div class="search_content">
-                    <a href="">
-                        <div class="page_title">제목</div>
-                        <div class="content">
-                            <p>321321321312</p>
-                            <p>321321321312</p>
-                            <p>321321321312</p>
-                        </div>
-                    </a>
-                </div>
-                <div class="search_content">
-                    <a href="">
-                        <div class="page_title">제목</div>
-                        <div class="content">
-                            <p>321321321312</p>
-                            <p>321321321312</p>
-                            <p>321321321312</p>
-                        </div>
-                    </a>
-                </div>
-                <div class="search_content">
-                    <a href="">
-                        <div class="page_title">제목</div>
-                        <div class="content">
-                            <p>321321321312</p>
-                            <p>321321321312</p>
-                            <p>321321321312</p>
-                        </div>
-                    </a>
-                </div>
-                <div class="search_content">
-                    <a href="">
-                        <div class="page_title">제목</div>
-                        <div class="content">
-                            <p>321321321312</p>
-                            <p>321321321312</p>
-                            <p>321321321312</p>
-                        </div>
-                    </a>
-                </div>
-                <div class="search_content">
-                    <a href="">
-                        <div class="page_title">제목</div>
-                        <div class="content">
-                            <p>321321321312</p>
-                            <p>321321321312</p>
-                            <p>321321321312</p>
-                        </div>
-                    </a>
-                </div>
-                <div class="search_content">
-                    <a href="">
-                        <div class="page_title">제목</div>
-                        <div class="content">
-                            <p>321321321312</p>
-                            <p>321321321312</p>
-                            <p>321321321312</p>
-                        </div>
-                    </a>
-                </div>
-                <div class="search_content">
-                    <a href="">
-                        <div class="page_title">제목</div>
-                        <div class="content">
-                            <p>321321321312</p>
-                            <p>321321321312</p>
-                            <p>321321321312</p>
-                        </div>
-                    </a>
-                </div>
-                <div class="search_content">
-                    <a href="">
-                        <div class="page_title">제목</div>
-                        <div class="content">
-                            <p>321321321312</p>
-                            <p>321321321312</p>
-                            <p>321321321312</p>
-                        </div>
-                    </a>
-                </div>
+            <div id="search_contents" class="search_contents">
             </div>
         </div>
     </div>

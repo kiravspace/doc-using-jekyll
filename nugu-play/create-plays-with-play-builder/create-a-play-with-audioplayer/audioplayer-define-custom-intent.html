@@ -8,7 +8,7 @@
 
 
 
-<meta http-equiv="Last-Modified" content="2022-06-21 12:58:58 +0000">
+<meta http-equiv="Last-Modified" content="2022-06-23 08:19:00 +0000">
 
 
 
@@ -36,8 +36,8 @@
 <link rel="stylesheet" href="/assets/css/main.css">
 <link rel="stylesheet" href="/assets/css/syntax.css">
 
-<script type="text/javascript" src="/assets/js/jquery-3.6.0.js"></script>
-<script type="text/javascript" src="/assets/js/jquery-ui.js"></script>
+<script type="text/javascript" src="/assets/js/jquery-3.6.0.min.js"></script>
+<script type="text/javascript" src="/assets/js/jsrender.min.js"></script>
 <script type="text/javascript" src="/assets/js/main.js"></script>
 
 </head>
@@ -2133,7 +2133,7 @@
 
 <div class="alerts info">
     
-<p>Built-in Intent에 대한 자세한 내용은 <a href="../define-user-utterance-model/built-in-intents">Built-in Intent</a>를 참고하세요.</p>
+<p>Built-in Intent에 대한 자세한 내용은 <a href="/nugu-play/create-plays-with-play-builder/define-user-utterance-model/built-in-intents">Built-in Intent</a>를 참고하세요.</p>
 
 </div>
 
@@ -2141,13 +2141,13 @@
 
 <p>Built-in Intent 중 NUGU.INTENT.play는 단독 발화인 경우에만 동작합니다. 즉, 특별한 Entity 없이 “틀어줘”와 같이 재생을 명령하는 경우에만 분석이 됩니다.</p>
 
-<p><img src="../../../assets/images/audioplayer-define-custom-intent-01.png" alt=""></p>
+<p><img src="/assets/images/audioplayer-define-custom-intent-01.png" alt=""></p>
 
 <h2 id="특정-음악을-틀어주는-play를-개발하는-경우">특정 음악을 틀어주는 Play를 개발하는 경우</h2>
 
 <p>만약, 개발하고자 하는 Play에서 “클래식 음악 틀어줘”와 같이 Entity로 분석되어야 하는 항목을 포함하는 경우에는 Built-in Intent만으로 표현할 수 없기 때문에, Custom Intent로 정의를 해주어야 합니다.</p>
 
-<p><img src="../../../assets/images/audioplayer-define-custom-intent-02.png" alt=""></p>
+<p><img src="/assets/images/audioplayer-define-custom-intent-02.png" alt=""></p>
 
 <div class="alerts info">
     
@@ -2188,134 +2188,28 @@
         <img id="modal_image" class="modal_image" src="">
     </div>
 </div>
+<script type="text/x-jsrender" id="search_contents_tmpl">
+
+<div class="search_content">
+    <a href="/nugu-play/create-plays-with-play-builder/create-a-play-with-audioplayer/{{:url}}">
+        <div class="page_title">{{:title}}</div>
+        <div class="content">
+            {{for contents}}
+            <p>{{:}}</p>
+            {{/for}}
+        </div>
+    </a>
+</div>
+
+</script>
 <div id="modal_search_area" class="modal_image_area hide">
     <div class="modal_wrapper">
         <div class="modal_search">
             <div class="search_bar">
-                <div class="search_icon"></div>
-                <input id="search-keyword" type="text" palceholder="검색어를 입력하세요.">
+                <label class="search_icon" for="search_keyword"></label>
+                <input id="search_keyword" type="text" placeholder="최소 2자 이상의 검색어를 입력하신 후 Enter를 입력하세요.">
             </div>
-            <div class="search_contents">
-                <div class="search_content">
-                    <a href="">
-                        <div class="page_title">제목</div>
-                        <div class="content">
-                            <p>321321321312</p>
-                            <p>321321321312</p>
-                            <p>321321321312</p>
-                        </div>
-                    </a>
-                </div>
-                <div class="search_content">
-                    <a href="">
-                        <div class="page_title">제목</div>
-                        <div class="content">
-                            <p>321321321312</p>
-                            <p>321321321312</p>
-                            <p>321321321312</p>
-                        </div>
-                    </a>
-                </div>
-                <div class="search_content">
-                    <a href="">
-                        <div class="page_title">제목</div>
-                        <div class="content">
-                            <p>321321321312</p>
-                            <p>321321321312</p>
-                            <p>321321321312</p>
-                        </div>
-                    </a>
-                </div>
-                <div class="search_content">
-                    <a href="">
-                        <div class="page_title">제목</div>
-                        <div class="content">
-                            <p>321321321312</p>
-                            <p>321321321312</p>
-                            <p>321321321312</p>
-                        </div>
-                    </a>
-                </div>
-                <div class="search_content">
-                    <a href="">
-                        <div class="page_title">제목</div>
-                        <div class="content">
-                            <p>321321321312</p>
-                            <p>321321321312</p>
-                            <p>321321321312</p>
-                        </div>
-                    </a>
-                </div>
-                <div class="search_content">
-                    <a href="">
-                        <div class="page_title">제목</div>
-                        <div class="content">
-                            <p>321321321312</p>
-                            <p>321321321312</p>
-                            <p>321321321312</p>
-                        </div>
-                    </a>
-                </div>
-                <div class="search_content">
-                    <a href="">
-                        <div class="page_title">제목</div>
-                        <div class="content">
-                            <p>321321321312</p>
-                            <p>321321321312</p>
-                            <p>321321321312</p>
-                        </div>
-                    </a>
-                </div>
-                <div class="search_content">
-                    <a href="">
-                        <div class="page_title">제목</div>
-                        <div class="content">
-                            <p>321321321312</p>
-                            <p>321321321312</p>
-                            <p>321321321312</p>
-                        </div>
-                    </a>
-                </div>
-                <div class="search_content">
-                    <a href="">
-                        <div class="page_title">제목</div>
-                        <div class="content">
-                            <p>321321321312</p>
-                            <p>321321321312</p>
-                            <p>321321321312</p>
-                        </div>
-                    </a>
-                </div>
-                <div class="search_content">
-                    <a href="">
-                        <div class="page_title">제목</div>
-                        <div class="content">
-                            <p>321321321312</p>
-                            <p>321321321312</p>
-                            <p>321321321312</p>
-                        </div>
-                    </a>
-                </div>
-                <div class="search_content">
-                    <a href="">
-                        <div class="page_title">제목</div>
-                        <div class="content">
-                            <p>321321321312</p>
-                            <p>321321321312</p>
-                            <p>321321321312</p>
-                        </div>
-                    </a>
-                </div>
-                <div class="search_content">
-                    <a href="">
-                        <div class="page_title">제목</div>
-                        <div class="content">
-                            <p>321321321312</p>
-                            <p>321321321312</p>
-                            <p>321321321312</p>
-                        </div>
-                    </a>
-                </div>
+            <div id="search_contents" class="search_contents">
             </div>
         </div>
     </div>

@@ -8,7 +8,7 @@
 
 
 
-<meta http-equiv="Last-Modified" content="2022-06-21 12:58:58 +0000">
+<meta http-equiv="Last-Modified" content="2022-06-23 08:19:00 +0000">
 
 
 
@@ -36,8 +36,8 @@
 <link rel="stylesheet" href="/assets/css/main.css">
 <link rel="stylesheet" href="/assets/css/syntax.css">
 
-<script type="text/javascript" src="/assets/js/jquery-3.6.0.js"></script>
-<script type="text/javascript" src="/assets/js/jquery-ui.js"></script>
+<script type="text/javascript" src="/assets/js/jquery-3.6.0.min.js"></script>
+<script type="text/javascript" src="/assets/js/jsrender.min.js"></script>
 <script type="text/javascript" src="/assets/js/main.js"></script>
 
 </head>
@@ -2219,9 +2219,9 @@
 
 <p>NUGU의 페르소나는 20대 후반에서 30대 초반의 여성으로, 차분하고 편안함을 지향하는 다정다감한 성격의 친구같은 비서입니다. 세부 대화 스타일은 다음과 같으며, 작성한 Prompt가 NUGU 페르소나와 일치하는지 검토하는 것을 권장합니다.</p>
 
-<p><img src="../../assets/images/write-a-prompt-01.png" alt="NUGU 페르소나"></p>
+<p><img src="/assets/images/write-a-prompt-01.png" alt="NUGU 페르소나"></p>
 
-<p><img src="../../assets/images/write-a-prompt-02.png" alt=""></p>
+<p><img src="/assets/images/write-a-prompt-02.png" alt=""></p>
 
 <h3 id="스타일">스타일</h3>
 
@@ -2289,134 +2289,28 @@
         <img id="modal_image" class="modal_image" src="">
     </div>
 </div>
+<script type="text/x-jsrender" id="search_contents_tmpl">
+
+<div class="search_content">
+    <a href="/nugu-play/nugu-ux/{{:url}}">
+        <div class="page_title">{{:title}}</div>
+        <div class="content">
+            {{for contents}}
+            <p>{{:}}</p>
+            {{/for}}
+        </div>
+    </a>
+</div>
+
+</script>
 <div id="modal_search_area" class="modal_image_area hide">
     <div class="modal_wrapper">
         <div class="modal_search">
             <div class="search_bar">
-                <div class="search_icon"></div>
-                <input id="search-keyword" type="text" palceholder="검색어를 입력하세요.">
+                <label class="search_icon" for="search_keyword"></label>
+                <input id="search_keyword" type="text" placeholder="최소 2자 이상의 검색어를 입력하신 후 Enter를 입력하세요.">
             </div>
-            <div class="search_contents">
-                <div class="search_content">
-                    <a href="">
-                        <div class="page_title">제목</div>
-                        <div class="content">
-                            <p>321321321312</p>
-                            <p>321321321312</p>
-                            <p>321321321312</p>
-                        </div>
-                    </a>
-                </div>
-                <div class="search_content">
-                    <a href="">
-                        <div class="page_title">제목</div>
-                        <div class="content">
-                            <p>321321321312</p>
-                            <p>321321321312</p>
-                            <p>321321321312</p>
-                        </div>
-                    </a>
-                </div>
-                <div class="search_content">
-                    <a href="">
-                        <div class="page_title">제목</div>
-                        <div class="content">
-                            <p>321321321312</p>
-                            <p>321321321312</p>
-                            <p>321321321312</p>
-                        </div>
-                    </a>
-                </div>
-                <div class="search_content">
-                    <a href="">
-                        <div class="page_title">제목</div>
-                        <div class="content">
-                            <p>321321321312</p>
-                            <p>321321321312</p>
-                            <p>321321321312</p>
-                        </div>
-                    </a>
-                </div>
-                <div class="search_content">
-                    <a href="">
-                        <div class="page_title">제목</div>
-                        <div class="content">
-                            <p>321321321312</p>
-                            <p>321321321312</p>
-                            <p>321321321312</p>
-                        </div>
-                    </a>
-                </div>
-                <div class="search_content">
-                    <a href="">
-                        <div class="page_title">제목</div>
-                        <div class="content">
-                            <p>321321321312</p>
-                            <p>321321321312</p>
-                            <p>321321321312</p>
-                        </div>
-                    </a>
-                </div>
-                <div class="search_content">
-                    <a href="">
-                        <div class="page_title">제목</div>
-                        <div class="content">
-                            <p>321321321312</p>
-                            <p>321321321312</p>
-                            <p>321321321312</p>
-                        </div>
-                    </a>
-                </div>
-                <div class="search_content">
-                    <a href="">
-                        <div class="page_title">제목</div>
-                        <div class="content">
-                            <p>321321321312</p>
-                            <p>321321321312</p>
-                            <p>321321321312</p>
-                        </div>
-                    </a>
-                </div>
-                <div class="search_content">
-                    <a href="">
-                        <div class="page_title">제목</div>
-                        <div class="content">
-                            <p>321321321312</p>
-                            <p>321321321312</p>
-                            <p>321321321312</p>
-                        </div>
-                    </a>
-                </div>
-                <div class="search_content">
-                    <a href="">
-                        <div class="page_title">제목</div>
-                        <div class="content">
-                            <p>321321321312</p>
-                            <p>321321321312</p>
-                            <p>321321321312</p>
-                        </div>
-                    </a>
-                </div>
-                <div class="search_content">
-                    <a href="">
-                        <div class="page_title">제목</div>
-                        <div class="content">
-                            <p>321321321312</p>
-                            <p>321321321312</p>
-                            <p>321321321312</p>
-                        </div>
-                    </a>
-                </div>
-                <div class="search_content">
-                    <a href="">
-                        <div class="page_title">제목</div>
-                        <div class="content">
-                            <p>321321321312</p>
-                            <p>321321321312</p>
-                            <p>321321321312</p>
-                        </div>
-                    </a>
-                </div>
+            <div id="search_contents" class="search_contents">
             </div>
         </div>
     </div>

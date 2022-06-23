@@ -8,7 +8,7 @@
 
 
 
-<meta http-equiv="Last-Modified" content="2022-06-21 12:58:58 +0000">
+<meta http-equiv="Last-Modified" content="2022-06-23 08:19:00 +0000">
 
 
 
@@ -40,8 +40,8 @@
 <link rel="stylesheet" href="/assets/css/main.css">
 <link rel="stylesheet" href="/assets/css/syntax.css">
 
-<script type="text/javascript" src="/assets/js/jquery-3.6.0.js"></script>
-<script type="text/javascript" src="/assets/js/jquery-ui.js"></script>
+<script type="text/javascript" src="/assets/js/jquery-3.6.0.min.js"></script>
+<script type="text/javascript" src="/assets/js/jsrender.min.js"></script>
 <script type="text/javascript" src="/assets/js/main.js"></script>
 
 </head>
@@ -2250,7 +2250,7 @@ nugu_client-&gt;getCapabilityBuilder()
 
 <h3 id="context-구성">Context 구성</h3>
 
-<p>디바이스의 블루투스 상태를 <a href="speaker#context">Context</a> 에 포함시켜 주어야 합니다.</p>
+<p>디바이스의 블루투스 상태를 <a href="#context">Context</a> 에 포함시켜 주어야 합니다.</p>
 
 <p><a href="https://github.com/nugu-developers/nugu-android/blob/master/nugu-agent/src/main/java/com/skt/nugu/sdk/agent/bluetooth/BluetoothProvider.kt#L21">Android reference</a></p>
 
@@ -2341,9 +2341,9 @@ auto bluetooth_listener(std::make_shared&lt;BluetoothListener&gt;());
 
 <h3 id="블루투스-기기-제어">블루투스 기기 제어</h3>
 
-<p>디바이스의 블루투스 기기 제어가 <a href="bluetooth#startdiscoverablemode">StartDiscoverableMode</a>/<a href="bluetooth#finishdiscoverablemode">FinishDiscoverableMode</a> directive 로 요청될 수 있습니다.</p>
+<p>디바이스의 블루투스 기기 제어가 <a href="/nugu-sdk/capability-interface/bluetooth#startdiscoverablemode">StartDiscoverableMode</a>/<a href="/nugu-sdk/capability-interface/bluetooth#finishdiscoverablemode">FinishDiscoverableMode</a> directive 로 요청될 수 있습니다.</p>
 
-<p>디바이스와 연결된 블루투스 기기의 음원 재생이 <a href="bluetooth#play">Play</a>/<a href="bluetooth#stop">Stop</a>/<a href="bluetooth#pause">Pause</a>/<a href="bluetooth#next">Next</a>/<a href="bluetooth#previous">Previous</a> directive 로 요청될 수 있습니다.</p>
+<p>디바이스와 연결된 블루투스 기기의 음원 재생이 <a href="/nugu-sdk/capability-interface/bluetooth#play">Play</a>/<a href="/nugu-sdk/capability-interface/bluetooth#stop">Stop</a>/<a href="/nugu-sdk/capability-interface/bluetooth#pause">Pause</a>/<a href="/nugu-sdk/capability-interface/bluetooth#next">Next</a>/<a href="/nugu-sdk/capability-interface/bluetooth#previous">Previous</a> directive 로 요청될 수 있습니다.</p>
 
 <div id="tabs-111" class="tabs">
     <ul class="tabs_title">
@@ -3599,134 +3599,28 @@ CapabilityFactory::makeCapability&lt;BluetoothAgent, IBluetoothHandler&gt;(bluet
         <img id="modal_image" class="modal_image" src="">
     </div>
 </div>
+<script type="text/x-jsrender" id="search_contents_tmpl">
+
+<div class="search_content">
+    <a href="/nugu-sdk/capability-interface/{{:url}}">
+        <div class="page_title">{{:title}}</div>
+        <div class="content">
+            {{for contents}}
+            <p>{{:}}</p>
+            {{/for}}
+        </div>
+    </a>
+</div>
+
+</script>
 <div id="modal_search_area" class="modal_image_area hide">
     <div class="modal_wrapper">
         <div class="modal_search">
             <div class="search_bar">
-                <div class="search_icon"></div>
-                <input id="search-keyword" type="text" palceholder="검색어를 입력하세요.">
+                <label class="search_icon" for="search_keyword"></label>
+                <input id="search_keyword" type="text" placeholder="최소 2자 이상의 검색어를 입력하신 후 Enter를 입력하세요.">
             </div>
-            <div class="search_contents">
-                <div class="search_content">
-                    <a href="">
-                        <div class="page_title">제목</div>
-                        <div class="content">
-                            <p>321321321312</p>
-                            <p>321321321312</p>
-                            <p>321321321312</p>
-                        </div>
-                    </a>
-                </div>
-                <div class="search_content">
-                    <a href="">
-                        <div class="page_title">제목</div>
-                        <div class="content">
-                            <p>321321321312</p>
-                            <p>321321321312</p>
-                            <p>321321321312</p>
-                        </div>
-                    </a>
-                </div>
-                <div class="search_content">
-                    <a href="">
-                        <div class="page_title">제목</div>
-                        <div class="content">
-                            <p>321321321312</p>
-                            <p>321321321312</p>
-                            <p>321321321312</p>
-                        </div>
-                    </a>
-                </div>
-                <div class="search_content">
-                    <a href="">
-                        <div class="page_title">제목</div>
-                        <div class="content">
-                            <p>321321321312</p>
-                            <p>321321321312</p>
-                            <p>321321321312</p>
-                        </div>
-                    </a>
-                </div>
-                <div class="search_content">
-                    <a href="">
-                        <div class="page_title">제목</div>
-                        <div class="content">
-                            <p>321321321312</p>
-                            <p>321321321312</p>
-                            <p>321321321312</p>
-                        </div>
-                    </a>
-                </div>
-                <div class="search_content">
-                    <a href="">
-                        <div class="page_title">제목</div>
-                        <div class="content">
-                            <p>321321321312</p>
-                            <p>321321321312</p>
-                            <p>321321321312</p>
-                        </div>
-                    </a>
-                </div>
-                <div class="search_content">
-                    <a href="">
-                        <div class="page_title">제목</div>
-                        <div class="content">
-                            <p>321321321312</p>
-                            <p>321321321312</p>
-                            <p>321321321312</p>
-                        </div>
-                    </a>
-                </div>
-                <div class="search_content">
-                    <a href="">
-                        <div class="page_title">제목</div>
-                        <div class="content">
-                            <p>321321321312</p>
-                            <p>321321321312</p>
-                            <p>321321321312</p>
-                        </div>
-                    </a>
-                </div>
-                <div class="search_content">
-                    <a href="">
-                        <div class="page_title">제목</div>
-                        <div class="content">
-                            <p>321321321312</p>
-                            <p>321321321312</p>
-                            <p>321321321312</p>
-                        </div>
-                    </a>
-                </div>
-                <div class="search_content">
-                    <a href="">
-                        <div class="page_title">제목</div>
-                        <div class="content">
-                            <p>321321321312</p>
-                            <p>321321321312</p>
-                            <p>321321321312</p>
-                        </div>
-                    </a>
-                </div>
-                <div class="search_content">
-                    <a href="">
-                        <div class="page_title">제목</div>
-                        <div class="content">
-                            <p>321321321312</p>
-                            <p>321321321312</p>
-                            <p>321321321312</p>
-                        </div>
-                    </a>
-                </div>
-                <div class="search_content">
-                    <a href="">
-                        <div class="page_title">제목</div>
-                        <div class="content">
-                            <p>321321321312</p>
-                            <p>321321321312</p>
-                            <p>321321321312</p>
-                        </div>
-                    </a>
-                </div>
+            <div id="search_contents" class="search_contents">
             </div>
         </div>
     </div>

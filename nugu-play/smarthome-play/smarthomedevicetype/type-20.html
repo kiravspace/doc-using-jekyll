@@ -8,7 +8,7 @@
 
 
 
-<meta http-equiv="Last-Modified" content="2022-06-21 12:58:58 +0000">
+<meta http-equiv="Last-Modified" content="2022-06-23 08:19:00 +0000">
 
 
 
@@ -36,8 +36,8 @@
 <link rel="stylesheet" href="/assets/css/main.css">
 <link rel="stylesheet" href="/assets/css/syntax.css">
 
-<script type="text/javascript" src="/assets/js/jquery-3.6.0.js"></script>
-<script type="text/javascript" src="/assets/js/jquery-ui.js"></script>
+<script type="text/javascript" src="/assets/js/jquery-3.6.0.min.js"></script>
+<script type="text/javascript" src="/assets/js/jsrender.min.js"></script>
 <script type="text/javascript" src="/assets/js/main.js"></script>
 
 </head>
@@ -2273,27 +2273,27 @@
   </thead>
   <tbody>
     <tr>
-      <td style="text-align: left"><a href="../smarthomecapability/powercontrol-interface">PowerControl</a></td>
+      <td style="text-align: left"><a href="/nugu-play/smarthome-play/smarthomecapability/powercontrol-interface">PowerControl</a></td>
       <td style="text-align: left">제습기 전원 제어 기능입니다.<br>전원을 켜고 끄며 동작을 제어하는 기능들로 구성되어 있습니다.</td>
       <td style="text-align: left">“제습기 켜줘”</td>
     </tr>
     <tr>
-      <td style="text-align: left"><a href="../smarthomecapability/airflowcontrol-interface">AirflowControl</a></td>
+      <td style="text-align: left"><a href="/nugu-play/smarthome-play/smarthomecapability/airflowcontrol-interface">AirflowControl</a></td>
       <td style="text-align: left">제습기의 풍량 제어 기능입니다.<br>설정 풍량에 대한 상세한 정보는 SmartHomeAttribute : AirflowType을 참조하시기 바랍니다.</td>
       <td style="text-align: left">“제습기 풍량 강풍으로 설정해줘”</td>
     </tr>
     <tr>
-      <td style="text-align: left"><a href="../smarthomecapability/modecontrol-interface">ModeControl</a></td>
+      <td style="text-align: left"><a href="/nugu-play/smarthome-play/smarthomecapability/modecontrol-interface">ModeControl</a></td>
       <td style="text-align: left">제습기의 모드 제어 기능입니다.<br>설정 모드에 대한 상세한 정보는 SmartHomeAttribute : Mode를 참조하시기 바랍니다.</td>
       <td style="text-align: left">“제습기 자동제습모드로 설정해줘”</td>
     </tr>
     <tr>
-      <td style="text-align: left"><a href="../smarthomecapability/settimecontrol-interface">SetTimeControl</a></td>
+      <td style="text-align: left"><a href="/nugu-play/smarthome-play/smarthomecapability/settimecontrol-interface">SetTimeControl</a></td>
       <td style="text-align: left">제습기 기기의 시간 설정 기능입니다.</td>
       <td style="text-align: left">“제습기 1시간 후로 종료예약해줘”</td>
     </tr>
     <tr>
-      <td style="text-align: left"><a href="../smarthomecapability/humiditycontrol-interface">HumidityControl</a></td>
+      <td style="text-align: left"><a href="/nugu-play/smarthome-play/smarthomecapability/humiditycontrol-interface">HumidityControl</a></td>
       <td style="text-align: left">제습기의 습도 제어 기능입니다.<br>주변 습도 및 희망 습도에 대한 기능들로 구성되어 있습니다.</td>
       <td style="text-align: left">“제습기 습도 50%로 설정해줘”</td>
     </tr>
@@ -2333,134 +2333,28 @@
         <img id="modal_image" class="modal_image" src="">
     </div>
 </div>
+<script type="text/x-jsrender" id="search_contents_tmpl">
+
+<div class="search_content">
+    <a href="/nugu-play/smarthome-play/smarthomedevicetype/{{:url}}">
+        <div class="page_title">{{:title}}</div>
+        <div class="content">
+            {{for contents}}
+            <p>{{:}}</p>
+            {{/for}}
+        </div>
+    </a>
+</div>
+
+</script>
 <div id="modal_search_area" class="modal_image_area hide">
     <div class="modal_wrapper">
         <div class="modal_search">
             <div class="search_bar">
-                <div class="search_icon"></div>
-                <input id="search-keyword" type="text" palceholder="검색어를 입력하세요.">
+                <label class="search_icon" for="search_keyword"></label>
+                <input id="search_keyword" type="text" placeholder="최소 2자 이상의 검색어를 입력하신 후 Enter를 입력하세요.">
             </div>
-            <div class="search_contents">
-                <div class="search_content">
-                    <a href="">
-                        <div class="page_title">제목</div>
-                        <div class="content">
-                            <p>321321321312</p>
-                            <p>321321321312</p>
-                            <p>321321321312</p>
-                        </div>
-                    </a>
-                </div>
-                <div class="search_content">
-                    <a href="">
-                        <div class="page_title">제목</div>
-                        <div class="content">
-                            <p>321321321312</p>
-                            <p>321321321312</p>
-                            <p>321321321312</p>
-                        </div>
-                    </a>
-                </div>
-                <div class="search_content">
-                    <a href="">
-                        <div class="page_title">제목</div>
-                        <div class="content">
-                            <p>321321321312</p>
-                            <p>321321321312</p>
-                            <p>321321321312</p>
-                        </div>
-                    </a>
-                </div>
-                <div class="search_content">
-                    <a href="">
-                        <div class="page_title">제목</div>
-                        <div class="content">
-                            <p>321321321312</p>
-                            <p>321321321312</p>
-                            <p>321321321312</p>
-                        </div>
-                    </a>
-                </div>
-                <div class="search_content">
-                    <a href="">
-                        <div class="page_title">제목</div>
-                        <div class="content">
-                            <p>321321321312</p>
-                            <p>321321321312</p>
-                            <p>321321321312</p>
-                        </div>
-                    </a>
-                </div>
-                <div class="search_content">
-                    <a href="">
-                        <div class="page_title">제목</div>
-                        <div class="content">
-                            <p>321321321312</p>
-                            <p>321321321312</p>
-                            <p>321321321312</p>
-                        </div>
-                    </a>
-                </div>
-                <div class="search_content">
-                    <a href="">
-                        <div class="page_title">제목</div>
-                        <div class="content">
-                            <p>321321321312</p>
-                            <p>321321321312</p>
-                            <p>321321321312</p>
-                        </div>
-                    </a>
-                </div>
-                <div class="search_content">
-                    <a href="">
-                        <div class="page_title">제목</div>
-                        <div class="content">
-                            <p>321321321312</p>
-                            <p>321321321312</p>
-                            <p>321321321312</p>
-                        </div>
-                    </a>
-                </div>
-                <div class="search_content">
-                    <a href="">
-                        <div class="page_title">제목</div>
-                        <div class="content">
-                            <p>321321321312</p>
-                            <p>321321321312</p>
-                            <p>321321321312</p>
-                        </div>
-                    </a>
-                </div>
-                <div class="search_content">
-                    <a href="">
-                        <div class="page_title">제목</div>
-                        <div class="content">
-                            <p>321321321312</p>
-                            <p>321321321312</p>
-                            <p>321321321312</p>
-                        </div>
-                    </a>
-                </div>
-                <div class="search_content">
-                    <a href="">
-                        <div class="page_title">제목</div>
-                        <div class="content">
-                            <p>321321321312</p>
-                            <p>321321321312</p>
-                            <p>321321321312</p>
-                        </div>
-                    </a>
-                </div>
-                <div class="search_content">
-                    <a href="">
-                        <div class="page_title">제목</div>
-                        <div class="content">
-                            <p>321321321312</p>
-                            <p>321321321312</p>
-                            <p>321321321312</p>
-                        </div>
-                    </a>
-                </div>
+            <div id="search_contents" class="search_contents">
             </div>
         </div>
     </div>

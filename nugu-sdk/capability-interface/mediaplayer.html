@@ -8,7 +8,7 @@
 
 
 
-<meta http-equiv="Last-Modified" content="2022-06-21 12:58:58 +0000">
+<meta http-equiv="Last-Modified" content="2022-06-23 08:19:00 +0000">
 
 
 
@@ -40,8 +40,8 @@
 <link rel="stylesheet" href="/assets/css/main.css">
 <link rel="stylesheet" href="/assets/css/syntax.css">
 
-<script type="text/javascript" src="/assets/js/jquery-3.6.0.js"></script>
-<script type="text/javascript" src="/assets/js/jquery-ui.js"></script>
+<script type="text/javascript" src="/assets/js/jquery-3.6.0.min.js"></script>
+<script type="text/javascript" src="/assets/js/jsrender.min.js"></script>
 <script type="text/javascript" src="/assets/js/main.js"></script>
 
 </head>
@@ -2262,7 +2262,7 @@ NuguAndroidClient().Builder()
 
 <h3 id="context-구성">Context 구성</h3>
 
-<p>앱에서 재생중인 음원에 대한 정보를 <a href="mediaplayer#context-1">Context</a> 에 포함시켜 주어야 합니다.</p>
+<p>앱에서 재생중인 음원에 대한 정보를 <a href="/nugu-sdk/capability-interface/mediaplayer#context-1">Context</a> 에 포함시켜 주어야 합니다.</p>
 
 <div id="tabs-68" class="tabs">
     <ul class="tabs_title">
@@ -2339,7 +2339,7 @@ mediaPlayerAgent.delegate = MyMediaPlayerAgentDelegate()
 
 <h3 id="제어-명령">제어 명령</h3>
 
-<p><code class="language-plaintext highlighter-rouge">사용자 발화</code>에 의해 음악 <a href="mediaplayer#search">검색</a>/<a href="mediaplayer#play">재생</a>/<a href="mediaplayer#stop">중지</a>/<a href="mediaplayer#next">다음</a>/<a href="mediaplayer#previous">이전</a>/<a href="mediaplayer#move">탐색</a>/<a href="mediaplayer#pause">일시정지</a>/<a href="mediaplayer#resume">계속재생</a>/<a href="mediaplayer#rewind">다시재생</a>/<a href="mediaplayer#toggle">반복</a>/<a href="mediaplayer#toggle">즐겨찾기</a>/<a href="mediaplayer#toggle">셔플</a>/<a href="mediaplayer#handleplaylist">재생목록 보기</a>/<a href="mediaplayer#handlelyrics">가사 보기</a> 가 directive 로 요청될 수 있습니다.</p>
+<p><code class="language-plaintext highlighter-rouge">사용자 발화</code>에 의해 음악 <a href="/nugu-sdk/capability-interface/mediaplayer#search">검색</a>/<a href="/nugu-sdk/capability-interface/mediaplayer#play">재생</a>/<a href="/nugu-sdk/capability-interface/mediaplayer#stop">중지</a>/<a href="/nugu-sdk/capability-interface/mediaplayer#next">다음</a>/<a href="/nugu-sdk/capability-interface/mediaplayer#previous">이전</a>/<a href="/nugu-sdk/capability-interface/mediaplayer#move">탐색</a>/<a href="/nugu-sdk/capability-interface/mediaplayer#pause">일시정지</a>/<a href="/nugu-sdk/capability-interface/mediaplayer#resume">계속재생</a>/<a href="/nugu-sdk/capability-interface/mediaplayer#rewind">다시재생</a>/<a href="/nugu-sdk/capability-interface/mediaplayer#toggle">반복</a>/<a href="/nugu-sdk/capability-interface/mediaplayer#toggle">즐겨찾기</a>/<a href="/nugu-sdk/capability-interface/mediaplayer#toggle">셔플</a>/<a href="/nugu-sdk/capability-interface/mediaplayer#handleplaylist">재생목록 보기</a>/<a href="/nugu-sdk/capability-interface/mediaplayer#handlelyrics">가사 보기</a> 가 directive 로 요청될 수 있습니다.</p>
 
 <div id="tabs-107" class="tabs">
     <ul class="tabs_title">
@@ -2592,7 +2592,7 @@ mediaPlayerAgent.delegate = MyMediaPlayerAgentDelegate()
 
 <h3 id="재생중인-곡-정보-요청">재생중인 곡 정보 요청</h3>
 
-<p>재생중인 곡 정보가 <a href="mediaplayer#getinfo">GetInfo</a> directive 로 요청될 수 있습니다.</p>
+<p>재생중인 곡 정보가 <a href="/nugu-sdk/capability-interface/mediaplayer#getinfo">GetInfo</a> directive 로 요청될 수 있습니다.</p>
 
 <div id="tabs-234" class="tabs">
     <ul class="tabs_title">
@@ -2773,7 +2773,7 @@ mediaPlayerAgent.delegate = MyMediaPlayerAgentDelegate()
     </tr>
     <tr>
       <td style="text-align: left">currentSong</td>
-      <td style="text-align: left"><a href="./#song">Song</a></td>
+      <td style="text-align: left"><a href="#song">Song</a></td>
       <td style="text-align: left">N</td>
       <td style="text-align: left">N</td>
       <td style="text-align: left">현재 재생 중이거나 마지막에 재생한 곡의 정보</td>
@@ -3036,7 +3036,7 @@ mediaPlayerAgent.delegate = MyMediaPlayerAgentDelegate()
     </tr>
     <tr>
       <td style="text-align: left">song</td>
-      <td style="text-align: left"><a href="./#song">Song</a></td>
+      <td style="text-align: left"><a href="#song">Song</a></td>
       <td style="text-align: left">N</td>
       <td style="text-align: left">-</td>
     </tr>
@@ -3170,7 +3170,7 @@ mediaPlayerAgent.delegate = MyMediaPlayerAgentDelegate()
     </tr>
     <tr>
       <td style="text-align: left">song</td>
-      <td style="text-align: left"><a href="./#song">Song</a></td>
+      <td style="text-align: left"><a href="#song">Song</a></td>
       <td style="text-align: left">N</td>
       <td style="text-align: left">-</td>
     </tr>
@@ -3998,7 +3998,7 @@ mediaPlayerAgent.delegate = MyMediaPlayerAgentDelegate()
     </tr>
     <tr>
       <td style="text-align: left">song</td>
-      <td style="text-align: left"><a href="./#song">Song</a></td>
+      <td style="text-align: left"><a href="#song">Song</a></td>
       <td style="text-align: left">N</td>
       <td style="text-align: left">-</td>
     </tr>
@@ -4491,7 +4491,7 @@ mediaPlayerAgent.delegate = MyMediaPlayerAgentDelegate()
     </tr>
     <tr>
       <td style="text-align: left">song</td>
-      <td style="text-align: left"><a href="./#song">Song</a></td>
+      <td style="text-align: left"><a href="#song">Song</a></td>
       <td style="text-align: left">N</td>
       <td style="text-align: left">재생하는 음원의 정보</td>
     </tr>
@@ -4730,7 +4730,7 @@ mediaPlayerAgent.delegate = MyMediaPlayerAgentDelegate()
     </tr>
     <tr>
       <td style="text-align: left">song</td>
-      <td style="text-align: left"><a href="./#song">Song</a></td>
+      <td style="text-align: left"><a href="#song">Song</a></td>
       <td style="text-align: left">N</td>
       <td style="text-align: left">재생하는 곡 정보</td>
     </tr>
@@ -5851,134 +5851,28 @@ mediaPlayerAgent.delegate = MyMediaPlayerAgentDelegate()
         <img id="modal_image" class="modal_image" src="">
     </div>
 </div>
+<script type="text/x-jsrender" id="search_contents_tmpl">
+
+<div class="search_content">
+    <a href="/nugu-sdk/capability-interface/{{:url}}">
+        <div class="page_title">{{:title}}</div>
+        <div class="content">
+            {{for contents}}
+            <p>{{:}}</p>
+            {{/for}}
+        </div>
+    </a>
+</div>
+
+</script>
 <div id="modal_search_area" class="modal_image_area hide">
     <div class="modal_wrapper">
         <div class="modal_search">
             <div class="search_bar">
-                <div class="search_icon"></div>
-                <input id="search-keyword" type="text" palceholder="검색어를 입력하세요.">
+                <label class="search_icon" for="search_keyword"></label>
+                <input id="search_keyword" type="text" placeholder="최소 2자 이상의 검색어를 입력하신 후 Enter를 입력하세요.">
             </div>
-            <div class="search_contents">
-                <div class="search_content">
-                    <a href="">
-                        <div class="page_title">제목</div>
-                        <div class="content">
-                            <p>321321321312</p>
-                            <p>321321321312</p>
-                            <p>321321321312</p>
-                        </div>
-                    </a>
-                </div>
-                <div class="search_content">
-                    <a href="">
-                        <div class="page_title">제목</div>
-                        <div class="content">
-                            <p>321321321312</p>
-                            <p>321321321312</p>
-                            <p>321321321312</p>
-                        </div>
-                    </a>
-                </div>
-                <div class="search_content">
-                    <a href="">
-                        <div class="page_title">제목</div>
-                        <div class="content">
-                            <p>321321321312</p>
-                            <p>321321321312</p>
-                            <p>321321321312</p>
-                        </div>
-                    </a>
-                </div>
-                <div class="search_content">
-                    <a href="">
-                        <div class="page_title">제목</div>
-                        <div class="content">
-                            <p>321321321312</p>
-                            <p>321321321312</p>
-                            <p>321321321312</p>
-                        </div>
-                    </a>
-                </div>
-                <div class="search_content">
-                    <a href="">
-                        <div class="page_title">제목</div>
-                        <div class="content">
-                            <p>321321321312</p>
-                            <p>321321321312</p>
-                            <p>321321321312</p>
-                        </div>
-                    </a>
-                </div>
-                <div class="search_content">
-                    <a href="">
-                        <div class="page_title">제목</div>
-                        <div class="content">
-                            <p>321321321312</p>
-                            <p>321321321312</p>
-                            <p>321321321312</p>
-                        </div>
-                    </a>
-                </div>
-                <div class="search_content">
-                    <a href="">
-                        <div class="page_title">제목</div>
-                        <div class="content">
-                            <p>321321321312</p>
-                            <p>321321321312</p>
-                            <p>321321321312</p>
-                        </div>
-                    </a>
-                </div>
-                <div class="search_content">
-                    <a href="">
-                        <div class="page_title">제목</div>
-                        <div class="content">
-                            <p>321321321312</p>
-                            <p>321321321312</p>
-                            <p>321321321312</p>
-                        </div>
-                    </a>
-                </div>
-                <div class="search_content">
-                    <a href="">
-                        <div class="page_title">제목</div>
-                        <div class="content">
-                            <p>321321321312</p>
-                            <p>321321321312</p>
-                            <p>321321321312</p>
-                        </div>
-                    </a>
-                </div>
-                <div class="search_content">
-                    <a href="">
-                        <div class="page_title">제목</div>
-                        <div class="content">
-                            <p>321321321312</p>
-                            <p>321321321312</p>
-                            <p>321321321312</p>
-                        </div>
-                    </a>
-                </div>
-                <div class="search_content">
-                    <a href="">
-                        <div class="page_title">제목</div>
-                        <div class="content">
-                            <p>321321321312</p>
-                            <p>321321321312</p>
-                            <p>321321321312</p>
-                        </div>
-                    </a>
-                </div>
-                <div class="search_content">
-                    <a href="">
-                        <div class="page_title">제목</div>
-                        <div class="content">
-                            <p>321321321312</p>
-                            <p>321321321312</p>
-                            <p>321321321312</p>
-                        </div>
-                    </a>
-                </div>
+            <div id="search_contents" class="search_contents">
             </div>
         </div>
     </div>

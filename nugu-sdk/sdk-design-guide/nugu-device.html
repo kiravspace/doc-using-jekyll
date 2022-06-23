@@ -8,7 +8,7 @@
 
 
 
-<meta http-equiv="Last-Modified" content="2022-06-21 12:58:58 +0000">
+<meta http-equiv="Last-Modified" content="2022-06-23 08:19:00 +0000">
 
 
 
@@ -36,8 +36,8 @@
 <link rel="stylesheet" href="/assets/css/main.css">
 <link rel="stylesheet" href="/assets/css/syntax.css">
 
-<script type="text/javascript" src="/assets/js/jquery-3.6.0.js"></script>
-<script type="text/javascript" src="/assets/js/jquery-ui.js"></script>
+<script type="text/javascript" src="/assets/js/jquery-3.6.0.min.js"></script>
+<script type="text/javascript" src="/assets/js/jsrender.min.js"></script>
 <script type="text/javascript" src="/assets/js/main.js"></script>
 
 </head>
@@ -2324,7 +2324,7 @@
   </tbody>
 </table>
 
-<p><img src="../../assets/images/nugu-device-01.png" alt=""></p>
+<p><img src="/assets/images/nugu-device-01.png" alt=""></p>
 
 <p><strong>호출 효과 (Wake up success)</strong></p>
 
@@ -2347,11 +2347,11 @@
 
 <p>호출어 발화 시</p>
 
-<p><img src="../../assets/images/nugu-device-02.png" alt=""></p>
+<p><img src="/assets/images/nugu-device-02.png" alt=""></p>
 
 <p>Slot-filling 시</p>
 
-<p><img src="../../assets/images/nugu-device-03.png" alt=""></p>
+<p><img src="/assets/images/nugu-device-03.png" alt=""></p>
 
 <p><strong>인식 완료음 (End listen)</strong></p>
 
@@ -2372,7 +2372,7 @@
   </tbody>
 </table>
 
-<p><img src="../../assets/images/nugu-device-04.png" alt=""></p>
+<p><img src="/assets/images/nugu-device-04.png" alt=""></p>
 
 <h4 id="응답-실패-response-fail"><strong>응답 실패 (Response fail)</strong></h4>
 
@@ -2395,11 +2395,11 @@
 
 <p>잡음 / 1음절 발화 / 블랙 리스트 발화 시</p>
 
-<p><img src="../../assets/images/nugu-device-05.png" alt=""></p>
+<p><img src="/assets/images/nugu-device-05.png" alt=""></p>
 
 <p>Slot-filling을 위한 listening 상태에서 타임아웃 시</p>
 
-<p><img src="../../assets/images/nugu-device-06.png" alt=""></p>
+<p><img src="/assets/images/nugu-device-06.png" alt=""></p>
 
 <p><strong>전원 꺼짐 (Power off)</strong></p>
 
@@ -2420,7 +2420,7 @@
   </tbody>
 </table>
 
-<p><img src="../../assets/images/nugu-device-07.png" alt=""></p>
+<p><img src="/assets/images/nugu-device-07.png" alt=""></p>
 
 <h3 id="2-서비스-효과음service-feedback-sound"><strong>2) 서비스 효과음(Service Feedback Sound)</strong></h3>
 
@@ -2478,7 +2478,7 @@
   </tbody>
 </table>
 
-<p><img src="../../assets/images/nugu-device-08.png" alt=""></p>
+<p><img src="/assets/images/nugu-device-08.png" alt=""></p>
 
     </div>
     
@@ -2513,134 +2513,28 @@
         <img id="modal_image" class="modal_image" src="">
     </div>
 </div>
+<script type="text/x-jsrender" id="search_contents_tmpl">
+
+<div class="search_content">
+    <a href="/nugu-sdk/sdk-design-guide/{{:url}}">
+        <div class="page_title">{{:title}}</div>
+        <div class="content">
+            {{for contents}}
+            <p>{{:}}</p>
+            {{/for}}
+        </div>
+    </a>
+</div>
+
+</script>
 <div id="modal_search_area" class="modal_image_area hide">
     <div class="modal_wrapper">
         <div class="modal_search">
             <div class="search_bar">
-                <div class="search_icon"></div>
-                <input id="search-keyword" type="text" palceholder="검색어를 입력하세요.">
+                <label class="search_icon" for="search_keyword"></label>
+                <input id="search_keyword" type="text" placeholder="최소 2자 이상의 검색어를 입력하신 후 Enter를 입력하세요.">
             </div>
-            <div class="search_contents">
-                <div class="search_content">
-                    <a href="">
-                        <div class="page_title">제목</div>
-                        <div class="content">
-                            <p>321321321312</p>
-                            <p>321321321312</p>
-                            <p>321321321312</p>
-                        </div>
-                    </a>
-                </div>
-                <div class="search_content">
-                    <a href="">
-                        <div class="page_title">제목</div>
-                        <div class="content">
-                            <p>321321321312</p>
-                            <p>321321321312</p>
-                            <p>321321321312</p>
-                        </div>
-                    </a>
-                </div>
-                <div class="search_content">
-                    <a href="">
-                        <div class="page_title">제목</div>
-                        <div class="content">
-                            <p>321321321312</p>
-                            <p>321321321312</p>
-                            <p>321321321312</p>
-                        </div>
-                    </a>
-                </div>
-                <div class="search_content">
-                    <a href="">
-                        <div class="page_title">제목</div>
-                        <div class="content">
-                            <p>321321321312</p>
-                            <p>321321321312</p>
-                            <p>321321321312</p>
-                        </div>
-                    </a>
-                </div>
-                <div class="search_content">
-                    <a href="">
-                        <div class="page_title">제목</div>
-                        <div class="content">
-                            <p>321321321312</p>
-                            <p>321321321312</p>
-                            <p>321321321312</p>
-                        </div>
-                    </a>
-                </div>
-                <div class="search_content">
-                    <a href="">
-                        <div class="page_title">제목</div>
-                        <div class="content">
-                            <p>321321321312</p>
-                            <p>321321321312</p>
-                            <p>321321321312</p>
-                        </div>
-                    </a>
-                </div>
-                <div class="search_content">
-                    <a href="">
-                        <div class="page_title">제목</div>
-                        <div class="content">
-                            <p>321321321312</p>
-                            <p>321321321312</p>
-                            <p>321321321312</p>
-                        </div>
-                    </a>
-                </div>
-                <div class="search_content">
-                    <a href="">
-                        <div class="page_title">제목</div>
-                        <div class="content">
-                            <p>321321321312</p>
-                            <p>321321321312</p>
-                            <p>321321321312</p>
-                        </div>
-                    </a>
-                </div>
-                <div class="search_content">
-                    <a href="">
-                        <div class="page_title">제목</div>
-                        <div class="content">
-                            <p>321321321312</p>
-                            <p>321321321312</p>
-                            <p>321321321312</p>
-                        </div>
-                    </a>
-                </div>
-                <div class="search_content">
-                    <a href="">
-                        <div class="page_title">제목</div>
-                        <div class="content">
-                            <p>321321321312</p>
-                            <p>321321321312</p>
-                            <p>321321321312</p>
-                        </div>
-                    </a>
-                </div>
-                <div class="search_content">
-                    <a href="">
-                        <div class="page_title">제목</div>
-                        <div class="content">
-                            <p>321321321312</p>
-                            <p>321321321312</p>
-                            <p>321321321312</p>
-                        </div>
-                    </a>
-                </div>
-                <div class="search_content">
-                    <a href="">
-                        <div class="page_title">제목</div>
-                        <div class="content">
-                            <p>321321321312</p>
-                            <p>321321321312</p>
-                            <p>321321321312</p>
-                        </div>
-                    </a>
-                </div>
+            <div id="search_contents" class="search_contents">
             </div>
         </div>
     </div>

@@ -8,7 +8,7 @@
 
 
 
-<meta http-equiv="Last-Modified" content="2022-06-21 12:58:58 +0000">
+<meta http-equiv="Last-Modified" content="2022-06-23 08:19:00 +0000">
 
 
 
@@ -36,8 +36,8 @@
 <link rel="stylesheet" href="/assets/css/main.css">
 <link rel="stylesheet" href="/assets/css/syntax.css">
 
-<script type="text/javascript" src="/assets/js/jquery-3.6.0.js"></script>
-<script type="text/javascript" src="/assets/js/jquery-ui.js"></script>
+<script type="text/javascript" src="/assets/js/jquery-3.6.0.min.js"></script>
+<script type="text/javascript" src="/assets/js/jsrender.min.js"></script>
 <script type="text/javascript" src="/assets/js/main.js"></script>
 
 </head>
@@ -2160,8 +2160,7 @@
   </tbody>
 </table>
 
-<h2 id="nlg-translator-">NLG Translator <a href="nlg-translator" id="nlg-translator"></a>
-</h2>
+<h2 id="nlg-translator">NLG Translator</h2>
 
 <p>날씨를 안내할 때, “오늘 날씨는 <code class="language-plaintext highlighter-rouge">{{status}}</code>” 같이, 외부(기상 정보 제공 서버)에서 날씨 상태값을 체크한 뒤, 외부 연동 서버(Backend proxy)에서 “맑겠습니다.”, “눈이 올 예정입니다”와 같이 Prompt의 일부를 처리하는 것도 가능합니다.</p>
 
@@ -2175,12 +2174,12 @@
   <li>
     <p>Play Builder 홈 화면에서 NLG Translator를 추가할 Play를 클릭하여 선택한 후 <code class="language-plaintext highlighter-rouge">Response Filters</code> &gt; <code class="language-plaintext highlighter-rouge">NLG Translator</code> &gt; <code class="language-plaintext highlighter-rouge">+NLG Translator 추가</code>를 클릭합니다.</p>
 
-    <p><img src="../../assets/images/define-response-filters-01.png" alt=""></p>
+    <p><img src="/assets/images/define-response-filters-01.png" alt=""></p>
   </li>
   <li>
     <p>Translator의 Filter명을 입력하고, 변경 전의 값을 Source에, 바뀔 값을 Target에 각각 입력한 후 <code class="language-plaintext highlighter-rouge">Enter</code> 키를 누르거나 입력 필드 이외 영역에 마우스 왼쪽 버튼을 클릭합니다.</p>
 
-    <p><img src="../../assets/images/define-response-filters-02.png" alt=""></p>
+    <p><img src="/assets/images/define-response-filters-02.png" alt=""></p>
   </li>
 </ol>
 
@@ -2195,10 +2194,9 @@
 <p>Play Builder는 Response Filter를 쉽게 입력할 수 있도록 자동완성 기능을 지원합니다.<br>
 Parameter 의 끝의 기호 <code class="language-plaintext highlighter-rouge">}}</code> 뒤에 특수기호 &gt;를 입력하면 앞서 정의한 NLG Translator의 리스트가 표시되며, 원하는 Filter를 선택합니다.</p>
 
-<p><img src="../../assets/images/define-response-filters-03.gif" alt=""></p>
+<p><img src="/assets/images/define-response-filters-03.gif" alt=""></p>
 
-<h2 id="nlg-normalizer-">NLG Normalizer <a href="nlg-normalizer" id="nlg-normalizer"></a>
-</h2>
+<h2 id="nlg-normalizer">NLG Normalizer</h2>
 
 <p>NLG Normalizer는 Translator와 기능이 유사하지만, 가장 큰 차이점은 여러 개의 Source를 하나의 Target으로 변경해 준다는 점입니다.</p>
 
@@ -2206,22 +2204,21 @@ Parameter 의 끝의 기호 <code class="language-plaintext highlighter-rouge">}
   <li>
     <p>Play Builder 홈 화면에서 NLG Normalizer를 추가할 Play를 클릭하여 선택한 후 <code class="language-plaintext highlighter-rouge">Response Filters</code> &gt; <code class="language-plaintext highlighter-rouge">NLG Normalizer</code> &gt; <code class="language-plaintext highlighter-rouge">+NLG Normalizer 추가</code>를 클릭합니다.</p>
 
-    <p><img src="../../assets/images/define-response-filters-04.png" alt=""></p>
+    <p><img src="/assets/images/define-response-filters-04.png" alt=""></p>
   </li>
   <li>
     <p>Normalizer의 Filter명을 입력하고, 변경 전의 값을 Source에, 바뀔 값을 Target에 각각 입력한 후 <code class="language-plaintext highlighter-rouge">Enter</code> 키를 누르거나 입력 필드 이외 영역에 마우스 왼쪽 버튼을 클릭합니다.</p>
 
-    <p><img src="../../assets/images/define-response-filters-05.png" alt=""></p>
+    <p><img src="/assets/images/define-response-filters-05.png" alt=""></p>
   </li>
   <li>
     <p>NLG Normalizer의 자동 완성 기능으로 적용하기 위한 기호는 = 이며, 사용 방법은 NLG Translator와 같습니다.</p>
 
-    <p><img src="../../assets/images/define-response-filters-06.gif" alt=""></p>
+    <p><img src="/assets/images/define-response-filters-06.gif" alt=""></p>
   </li>
 </ol>
 
-<h2 id="nlg-function-">NLG Function <a href="nlg-function" id="nlg-function"></a>
-</h2>
+<h2 id="nlg-function">NLG Function</h2>
 
 <p>마지막으로, NLG Function을 추가하는 방법은 다음과 같습니다.</p>
 
@@ -2230,7 +2227,7 @@ Parameter 의 끝의 기호 <code class="language-plaintext highlighter-rouge">}
   <li>NLG Function 타입을 선택 및 이름을 입력하고, 후 변경 전의 값을 Source에, 바뀔 값을 Target에 각각 입력한 후 <code class="language-plaintext highlighter-rouge">Enter</code> 키를 누르거나 입력 필드 이외 영역에 마우스 왼쪽 버튼을 클릭합니다.</li>
 </ol>
 
-<p><img src="../../assets/images/define-response-filters-07.png" alt=""></p>
+<p><img src="/assets/images/define-response-filters-07.png" alt=""></p>
 
 <ul>
   <li>NLG Function은 날짜 형식에 사용하는 DATE 타입을 제공합니다.</li>
@@ -2247,11 +2244,11 @@ Parameter 의 끝의 기호 <code class="language-plaintext highlighter-rouge">}
   <li>NLF Function의 자동완성을 위한 기호는 : 이며, 사용 방법은 NLG Translator와 같습니다.</li>
 </ol>
 
-<p><img src="../../assets/images/define-response-filters-08.gif" alt=""></p>
+<p><img src="/assets/images/define-response-filters-08.gif" alt=""></p>
 
 <p>참고로, Response Filter는 종류에 상관없이 중첩해서 사용할 수 있습니다.</p>
 
-<p><img src="../../assets/images/define-response-filters-09.png" alt=""></p>
+<p><img src="/assets/images/define-response-filters-09.png" alt=""></p>
 
     </div>
     
@@ -2286,134 +2283,28 @@ Parameter 의 끝의 기호 <code class="language-plaintext highlighter-rouge">}
         <img id="modal_image" class="modal_image" src="">
     </div>
 </div>
+<script type="text/x-jsrender" id="search_contents_tmpl">
+
+<div class="search_content">
+    <a href="/nugu-play/create-plays-with-play-builder/{{:url}}">
+        <div class="page_title">{{:title}}</div>
+        <div class="content">
+            {{for contents}}
+            <p>{{:}}</p>
+            {{/for}}
+        </div>
+    </a>
+</div>
+
+</script>
 <div id="modal_search_area" class="modal_image_area hide">
     <div class="modal_wrapper">
         <div class="modal_search">
             <div class="search_bar">
-                <div class="search_icon"></div>
-                <input id="search-keyword" type="text" palceholder="검색어를 입력하세요.">
+                <label class="search_icon" for="search_keyword"></label>
+                <input id="search_keyword" type="text" placeholder="최소 2자 이상의 검색어를 입력하신 후 Enter를 입력하세요.">
             </div>
-            <div class="search_contents">
-                <div class="search_content">
-                    <a href="">
-                        <div class="page_title">제목</div>
-                        <div class="content">
-                            <p>321321321312</p>
-                            <p>321321321312</p>
-                            <p>321321321312</p>
-                        </div>
-                    </a>
-                </div>
-                <div class="search_content">
-                    <a href="">
-                        <div class="page_title">제목</div>
-                        <div class="content">
-                            <p>321321321312</p>
-                            <p>321321321312</p>
-                            <p>321321321312</p>
-                        </div>
-                    </a>
-                </div>
-                <div class="search_content">
-                    <a href="">
-                        <div class="page_title">제목</div>
-                        <div class="content">
-                            <p>321321321312</p>
-                            <p>321321321312</p>
-                            <p>321321321312</p>
-                        </div>
-                    </a>
-                </div>
-                <div class="search_content">
-                    <a href="">
-                        <div class="page_title">제목</div>
-                        <div class="content">
-                            <p>321321321312</p>
-                            <p>321321321312</p>
-                            <p>321321321312</p>
-                        </div>
-                    </a>
-                </div>
-                <div class="search_content">
-                    <a href="">
-                        <div class="page_title">제목</div>
-                        <div class="content">
-                            <p>321321321312</p>
-                            <p>321321321312</p>
-                            <p>321321321312</p>
-                        </div>
-                    </a>
-                </div>
-                <div class="search_content">
-                    <a href="">
-                        <div class="page_title">제목</div>
-                        <div class="content">
-                            <p>321321321312</p>
-                            <p>321321321312</p>
-                            <p>321321321312</p>
-                        </div>
-                    </a>
-                </div>
-                <div class="search_content">
-                    <a href="">
-                        <div class="page_title">제목</div>
-                        <div class="content">
-                            <p>321321321312</p>
-                            <p>321321321312</p>
-                            <p>321321321312</p>
-                        </div>
-                    </a>
-                </div>
-                <div class="search_content">
-                    <a href="">
-                        <div class="page_title">제목</div>
-                        <div class="content">
-                            <p>321321321312</p>
-                            <p>321321321312</p>
-                            <p>321321321312</p>
-                        </div>
-                    </a>
-                </div>
-                <div class="search_content">
-                    <a href="">
-                        <div class="page_title">제목</div>
-                        <div class="content">
-                            <p>321321321312</p>
-                            <p>321321321312</p>
-                            <p>321321321312</p>
-                        </div>
-                    </a>
-                </div>
-                <div class="search_content">
-                    <a href="">
-                        <div class="page_title">제목</div>
-                        <div class="content">
-                            <p>321321321312</p>
-                            <p>321321321312</p>
-                            <p>321321321312</p>
-                        </div>
-                    </a>
-                </div>
-                <div class="search_content">
-                    <a href="">
-                        <div class="page_title">제목</div>
-                        <div class="content">
-                            <p>321321321312</p>
-                            <p>321321321312</p>
-                            <p>321321321312</p>
-                        </div>
-                    </a>
-                </div>
-                <div class="search_content">
-                    <a href="">
-                        <div class="page_title">제목</div>
-                        <div class="content">
-                            <p>321321321312</p>
-                            <p>321321321312</p>
-                            <p>321321321312</p>
-                        </div>
-                    </a>
-                </div>
+            <div id="search_contents" class="search_contents">
             </div>
         </div>
     </div>

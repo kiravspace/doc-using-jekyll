@@ -8,7 +8,7 @@
 
 
 
-<meta http-equiv="Last-Modified" content="2022-06-21 12:58:58 +0000">
+<meta http-equiv="Last-Modified" content="2022-06-23 08:19:00 +0000">
 
 
 
@@ -36,8 +36,8 @@
 <link rel="stylesheet" href="/assets/css/main.css">
 <link rel="stylesheet" href="/assets/css/syntax.css">
 
-<script type="text/javascript" src="/assets/js/jquery-3.6.0.js"></script>
-<script type="text/javascript" src="/assets/js/jquery-ui.js"></script>
+<script type="text/javascript" src="/assets/js/jquery-3.6.0.min.js"></script>
+<script type="text/javascript" src="/assets/js/jsrender.min.js"></script>
 <script type="text/javascript" src="/assets/js/main.js"></script>
 
 </head>
@@ -2129,7 +2129,7 @@
         <div class="description"></div>
     </div>
     <div class="content">
-        <p>SmartHome Capability Interface는 스마트홈 기기를 제어하기 위한 규격을 의미합니다. 예를 들어 <a href="../smarthomedevicetype/type-21">조명</a>의 전원제어 기능을 지원하기 위해서는 PowerControl Interface를 사용할 수 있고, <a href="../smarthomedevicetype/type-21">조명</a>의 밝기제어를 지원하기 위해서는 BrightnessControl Interface를 활용할 수 있습니다. 아래는 NUGU스마트홈이 지원하는 SmartHomeCapability 리스트입니다. Play Builder를 통해 SmartHome Play를 생성할 때 연동하고자 하는 스마트홈 기기가 지원하는 기능에 따라 SmartHomeCapability를 선택해 사용할 수 있습니다. SmartHome Play를 제작 시 별도로 사용자 발화문을 정의할 필요가 없으며, SmartHome Device의 종류에 따라 지원하는 Capability가 상이할 수 있습니다. SmartHomeCapability는 1개 이상의 SmartHomeDirective를 보유하고 있고, SmartHomeCapability를 지원할 경우 해당 SmartHomeCapability가 보유하고 있는 모든 SmartHomeDirective를 지원해야 합니다. 하나의 기기가 복수개의 SmartHomeCapability를 지원할 수 있습니다.</p>
+        <p>SmartHome Capability Interface는 스마트홈 기기를 제어하기 위한 규격을 의미합니다. 예를 들어 <a href="/nugu-play/smarthome-play/smarthomedevicetype/type-21">조명</a>의 전원제어 기능을 지원하기 위해서는 PowerControl Interface를 사용할 수 있고, <a href="/nugu-play/smarthomedevicetype/type-21">조명</a>의 밝기제어를 지원하기 위해서는 BrightnessControl Interface를 활용할 수 있습니다. 아래는 NUGU스마트홈이 지원하는 SmartHomeCapability 리스트입니다. Play Builder를 통해 SmartHome Play를 생성할 때 연동하고자 하는 스마트홈 기기가 지원하는 기능에 따라 SmartHomeCapability를 선택해 사용할 수 있습니다. SmartHome Play를 제작 시 별도로 사용자 발화문을 정의할 필요가 없으며, SmartHome Device의 종류에 따라 지원하는 Capability가 상이할 수 있습니다. SmartHomeCapability는 1개 이상의 SmartHomeDirective를 보유하고 있고, SmartHomeCapability를 지원할 경우 해당 SmartHomeCapability가 보유하고 있는 모든 SmartHomeDirective를 지원해야 합니다. 하나의 기기가 복수개의 SmartHomeCapability를 지원할 수 있습니다.</p>
 
 <table>
   <thead>
@@ -2141,88 +2141,88 @@
   </thead>
   <tbody>
     <tr>
-      <td style="text-align: left"><a href="airflowcontrol-interface">AirflowControl</a></td>
+      <td style="text-align: left"><a href="/nugu-play/smarthome-play/smarthomecapability/airflowcontrol-interface">AirflowControl</a></td>
       <td style="text-align: left">NUGU 스마트홈에 등록된 SmartHomeDevice의 풍량제어방식에 대한 설명입니다.<br>특정 풍량을 설정하거나 풍량 단계를 상향, 하향 조정하는 등의 Directive들로 구성되어 있으며 팬 및 풍량, 풍속을 제어할 수 있는 기능이 있는 모든 SmartHomeDevice를 지원합니다.</td>
       <td style="text-align: left">
-<a href="../smarthomedevicetype/type-2">가습기</a><br><a href="../smarthomedevicetype/type-4-1">공기청정기</a><br><a href="../smarthomedevicetype/type-8">선풍기</a><br><a href="../smarthomedevicetype/type-14">에어워셔</a><br><a href="../smarthomedevicetype/type-15">에어컨</a><br><a href="../smarthomedevicetype/type-20">제습기</a>
+<a href="/nugu-play/smarthomedevicetype/type-2">가습기</a><br><a href="/nugu-play/smarthomedevicetype/type-4-1">공기청정기</a><br><a href="/nugu-play/smarthomedevicetype/type-8">선풍기</a><br><a href="/nugu-play/smarthomedevicetype/type-14">에어워셔</a><br><a href="/nugu-play/smarthomedevicetype/type-15">에어컨</a><br><a href="/nugu-play/smarthomedevicetype/type-20">제습기</a>
 </td>
     </tr>
     <tr>
-      <td style="text-align: left"><a href="airqualitycheck-interface">AirQualityCheck</a></td>
+      <td style="text-align: left"><a href="/nugu-play/smarthome-play/smarthomecapability/airqualitycheck-interface">AirQualityCheck</a></td>
       <td style="text-align: left">NUGU 스마트홈에 등록된 SmartHomeDevice에서 주변 공기 상태를 측정하는 방식에 대한 설명입니다.<br>공기질은 1부터 10단계까지의 단계로 응답할 수 있으며 숫자가 작을수록 공기질이 좋은 상태입니다.</td>
       <td style="text-align: left">
-<a href="../smarthomedevicetype/type-4">공기센서</a><br><a href="../smarthomedevicetype/type-4-1">공기청정기</a><br><a href="../smarthomedevicetype/type-14">에어워셔</a><br><a href="../smarthomedevicetype/type-15">에어컨</a>
+<a href="/nugu-play/smarthomedevicetype/type-4">공기센서</a><br><a href="/nugu-play/smarthomedevicetype/type-4-1">공기청정기</a><br><a href="/nugu-play/smarthomedevicetype/type-14">에어워셔</a><br><a href="/nugu-play/smarthomedevicetype/type-15">에어컨</a>
 </td>
     </tr>
     <tr>
-      <td style="text-align: left"><a href="brightnesscontrol-interface">BrightnessControl</a></td>
+      <td style="text-align: left"><a href="/nugu-play/smarthome-play/smarthomecapability/brightnesscontrol-interface">BrightnessControl</a></td>
       <td style="text-align: left">NUGU 스마트홈에 등록된 SmartHomeDevice의 밝기제어방식에 대한 설명입니다.<br>스마트홈 기기의 밝기는 1부터 100단계로 제어할 수 있습니다.</td>
-      <td style="text-align: left"><a href="../smarthomedevicetype/type-21">조명</a></td>
+      <td style="text-align: left"><a href="/nugu-play/smarthomedevicetype/type-21">조명</a></td>
     </tr>
     <tr>
-      <td style="text-align: left"><a href="chargecontrol-interface">ChargeControl</a></td>
+      <td style="text-align: left"><a href="/nugu-play/smarthome-play/smarthomecapability/chargecontrol-interface">ChargeControl</a></td>
       <td style="text-align: left">NUGU스마트홈에 등록된 SmartHomeDevice의 충전관련 기능들에 대한 설명입니다.<br>충전 기능이 있는 모든 SmartHomeDevice를 지원합니다.</td>
-      <td style="text-align: left"><a href="../smarthomedevicetype/type-6">로봇청소기</a></td>
+      <td style="text-align: left"><a href="/nugu-play/smarthomedevicetype/type-6">로봇청소기</a></td>
     </tr>
     <tr>
-      <td style="text-align: left"><a href="colorcontrol-interface">ColorControl</a></td>
-      <td style="text-align: left">NUGU 스마트홈에 등록된 SmartHomeDevice의 설정된 색 제어방식에 대한 설명입니다.<br>스마트 <a href="../smarthomedevicetype/type-21">조명</a> 등의 색상 변경을 지원합니다.</td>
-      <td style="text-align: left"><a href="../smarthomedevicetype/type-21">조명</a></td>
+      <td style="text-align: left"><a href="/nugu-play/smarthome-play/smarthomecapability/colorcontrol-interface">ColorControl</a></td>
+      <td style="text-align: left">NUGU 스마트홈에 등록된 SmartHomeDevice의 설정된 색 제어방식에 대한 설명입니다.<br>스마트 <a href="/nugu-play/smarthomedevicetype/type-21">조명</a> 등의 색상 변경을 지원합니다.</td>
+      <td style="text-align: left"><a href="/nugu-play/smarthomedevicetype/type-21">조명</a></td>
     </tr>
     <tr>
-      <td style="text-align: left"><a href="devicetemperaturecontrol-interface">DeviceTemperatureControl</a></td>
+      <td style="text-align: left"><a href="/nugu-play/smarthome-play/smarthomecapability/devicetemperaturecontrol-interface">DeviceTemperatureControl</a></td>
       <td style="text-align: left">NUGU스마트홈에 등록된 SmartHomeDevice 자체의 온도제어방식에 대한 설명입니다.<br>TemperatureControl Interface가 주변 온도에 대한 제어 명령이라면 DeviceTemperatureControl Interface는 해당 SmartHomeDevice 자체의 온도 설정에 대한 명령으로 구성되어 있습니다.</td>
       <td style="text-align: left">
-<a href="../smarthomedevicetype/type-5">냉장고</a><br><a href="../smarthomedevicetype/type-17">오븐</a>
+<a href="/nugu-play/smarthomedevicetype/type-5">냉장고</a><br><a href="/nugu-play/smarthomedevicetype/type-17">오븐</a>
 </td>
     </tr>
     <tr>
-      <td style="text-align: left"><a href="humiditycontrol-interface">HumidityControl</a></td>
+      <td style="text-align: left"><a href="/nugu-play/smarthome-play/smarthomecapability/humiditycontrol-interface">HumidityControl</a></td>
       <td style="text-align: left">NUGU스마트홈에 등록된 SmartHomeDevice의 습도제어방식에 대한 설명입니다.<br>제어하고자 하는 습도는 해당 공간의 습도 비율로 %단위로 설정하며 습도를 제어하는 기능을 가진 SmartHomeDevice들을 지원합니다.</td>
       <td style="text-align: left">
-<a href="../smarthomedevicetype/type-14">에어워셔</a><br><a href="../smarthomedevicetype/type-20">제습기</a>
+<a href="/nugu-play/smarthomedevicetype/type-14">에어워셔</a><br><a href="/nugu-play/smarthomedevicetype/type-20">제습기</a>
 </td>
     </tr>
     <tr>
-      <td style="text-align: left"><a href="modecontrol-interface">ModeControl</a></td>
+      <td style="text-align: left"><a href="/nugu-play/smarthome-play/smarthomecapability/modecontrol-interface">ModeControl</a></td>
       <td style="text-align: left">NUGU 스마트홈에 등록된 SmartHomeDevice의 모드설정방식에 대한 설명입니다.<br>NUGU스마트홈에는 사전에 정의된 모드명들이 있으며 다양한 표현을 정규화하여 정의된 모드명으로 제어 요청을 보냅니다.<br>IoT ServiceProvider는 제어 대상인 스마트홈 기기의 특성과 모드명으로 적합한 기능을 제어하게 됩니다.</td>
       <td style="text-align: left">
-<a href="../smarthomedevicetype/type-2">가습기</a><br><a href="../smarthomedevicetype/type-4-1">공기청정기</a><br><a href="../smarthomedevicetype/type-5">냉장고</a><br><a href="../smarthomedevicetype/type-7">보일러</a><br><a href="../smarthomedevicetype/type-8">선풍기</a><br><a href="../smarthomedevicetype/type-14">에어워셔</a><br><a href="../smarthomedevicetype/type-15">에어컨</a><br><a href="../smarthomedevicetype/type-20">제습기</a>
+<a href="/nugu-play/smarthomedevicetype/type-2">가습기</a><br><a href="/nugu-play/smarthomedevicetype/type-4-1">공기청정기</a><br><a href="/nugu-play/smarthomedevicetype/type-5">냉장고</a><br><a href="/nugu-play/smarthomedevicetype/type-7">보일러</a><br><a href="/nugu-play/smarthomedevicetype/type-8">선풍기</a><br><a href="/nugu-play/smarthomedevicetype/type-14">에어워셔</a><br><a href="/nugu-play/smarthomedevicetype/type-15">에어컨</a><br><a href="/nugu-play/smarthomedevicetype/type-20">제습기</a>
 </td>
     </tr>
     <tr>
-      <td style="text-align: left"><a href="powercheck-interface">PowerCheck</a></td>
+      <td style="text-align: left"><a href="/nugu-play/smarthome-play/smarthomecapability/powercheck-interface">PowerCheck</a></td>
       <td style="text-align: left">NUGU스마트홈에 등록된 SmartHomeDevice의 전력량관련 조회방식에 대한 설명입니다.<br>스마트홈 기기의 사용전력량, 목표전력량 등의 조회 기능을 지원합니다.</td>
       <td style="text-align: left">
-<a href="../smarthomedevicetype/type-11">스마트플러그</a><br><a href="../smarthomedevicetype/type-13">에너지미터</a>
+<a href="/nugu-play/smarthomedevicetype/type-11">스마트플러그</a><br><a href="/nugu-play/smarthomedevicetype/type-13">에너지미터</a>
 </td>
     </tr>
     <tr>
-      <td style="text-align: left"><a href="powercontrol-interface">PowerControl</a></td>
+      <td style="text-align: left"><a href="/nugu-play/smarthome-play/smarthomecapability/powercontrol-interface">PowerControl</a></td>
       <td style="text-align: left">NUGU 스마트홈에 등록된 SmartHomeDevice의 전원제어방식에 대한 설명입니다.<br>전원을 켜고 끄거나 동작을 시작, 중지할 수 있는 모든 종류의 SmartHomeDevice를 지원합니다.</td>
       <td style="text-align: left">
-<a href="../smarthomedevicetype/type-1">가스차단기</a><br><a href="../smarthomedevicetype/type-2">가습기</a><br><a href="../smarthomedevicetype/type-3">건조기</a><br><a href="../smarthomedevicetype/type-4-1">공기청정기</a><br><a href="../smarthomedevicetype/type-6">로봇청소기</a><br><a href="../smarthomedevicetype/type-7">보일러</a><br><a href="../smarthomedevicetype/type-8">선풍기</a><br><a href="../smarthomedevicetype/type-9">세탁기</a><br><a href="../smarthomedevicetype/type-10">스마트스위치</a><br><a href="../smarthomedevicetype/type-11">스마트플러그</a><br><a href="../smarthomedevicetype/type-12">식기세척기</a><br><a href="../smarthomedevicetype/type-14">에어워셔</a><br><a href="../smarthomedevicetype/type-15">에어컨</a><br><a href="../smarthomedevicetype/type-17">오븐</a><br><a href="../smarthomedevicetype/type-18">의류관리기</a><br><a href="../smarthomedevicetype/type-20">제습기</a><br><a href="../smarthomedevicetype/type-21">조명</a>
+<a href="/nugu-play/smarthomedevicetype/type-1">가스차단기</a><br><a href="/nugu-play/smarthomedevicetype/type-2">가습기</a><br><a href="/nugu-play/smarthomedevicetype/type-3">건조기</a><br><a href="/nugu-play/smarthomedevicetype/type-4-1">공기청정기</a><br><a href="/nugu-play/smarthomedevicetype/type-6">로봇청소기</a><br><a href="/nugu-play/smarthomedevicetype/type-7">보일러</a><br><a href="/nugu-play/smarthomedevicetype/type-8">선풍기</a><br><a href="/nugu-play/smarthomedevicetype/type-9">세탁기</a><br><a href="/nugu-play/smarthomedevicetype/type-10">스마트스위치</a><br><a href="/nugu-play/smarthomedevicetype/type-11">스마트플러그</a><br><a href="/nugu-play/smarthomedevicetype/type-12">식기세척기</a><br><a href="/nugu-play/smarthomedevicetype/type-14">에어워셔</a><br><a href="/nugu-play/smarthomedevicetype/type-15">에어컨</a><br><a href="/nugu-play/smarthomedevicetype/type-17">오븐</a><br><a href="/nugu-play/smarthomedevicetype/type-18">의류관리기</a><br><a href="/nugu-play/smarthomedevicetype/type-20">제습기</a><br><a href="/nugu-play/smarthomedevicetype/type-21">조명</a>
 </td>
     </tr>
     <tr>
-      <td style="text-align: left"><a href="settimecontrol-interface">SetTimeControl</a></td>
+      <td style="text-align: left"><a href="/nugu-play/smarthome-play/smarthomecapability/settimecontrol-interface">SetTimeControl</a></td>
       <td style="text-align: left">NUGU 스마트홈에 등록된 SmartHomeDevice의 제어시간설정방식에 대한 설명입니다.<br>스마트홈 기기의 종료예약설정 등을 관리할 수 있습니다.</td>
       <td style="text-align: left">
-<a href="../smarthomedevicetype/type-2">가습기</a><br><a href="../smarthomedevicetype/type-4-1">공기청정기</a><br><a href="../smarthomedevicetype/type-7">보일러</a><br><a href="../smarthomedevicetype/type-8">선풍기</a><br><a href="../smarthomedevicetype/type-11">스마트플러그</a><br><a href="../smarthomedevicetype/type-14">에어워셔</a><br><a href="../smarthomedevicetype/type-15">에어컨</a><br><a href="../smarthomedevicetype/type-20">제습기</a>
+<a href="/nugu-play/smarthomedevicetype/type-2">가습기</a><br><a href="/nugu-play/smarthomedevicetype/type-4-1">공기청정기</a><br><a href="/nugu-play/smarthomedevicetype/type-7">보일러</a><br><a href="/nugu-play/smarthomedevicetype/type-8">선풍기</a><br><a href="/nugu-play/smarthomedevicetype/type-11">스마트플러그</a><br><a href="/nugu-play/smarthomedevicetype/type-14">에어워셔</a><br><a href="/nugu-play/smarthomedevicetype/type-15">에어컨</a><br><a href="/nugu-play/smarthomedevicetype/type-20">제습기</a>
 </td>
     </tr>
     <tr>
-      <td style="text-align: left"><a href="statecheck-interface">StateCheck</a></td>
+      <td style="text-align: left"><a href="/nugu-play/smarthome-play/smarthomecapability/statecheck-interface">StateCheck</a></td>
       <td style="text-align: left">NUGU 스마트홈에 등록된 SmartHomeDevice의 상태조회방식에 대한 설명입니다.</td>
       <td style="text-align: left">
-<a href="../smarthomedevicetype/type-12">식기세척기</a><br><a href="../smarthomedevicetype/type-16">열림감지센서</a><br><a href="../smarthomedevicetype/type-17">오븐</a><br><a href="../smarthomedevicetype/type-18">의류관리기</a><br><a href="../smarthomedevicetype/type-19">정수기</a>
+<a href="/nugu-play/smarthomedevicetype/type-12">식기세척기</a><br><a href="/nugu-play/smarthomedevicetype/type-16">열림감지센서</a><br><a href="/nugu-play/smarthomedevicetype/type-17">오븐</a><br><a href="/nugu-play/smarthomedevicetype/type-18">의류관리기</a><br><a href="/nugu-play/smarthomedevicetype/type-19">정수기</a>
 </td>
     </tr>
     <tr>
-      <td style="text-align: left"><a href="temperaturecontrol-interface">TemperatureControl</a></td>
+      <td style="text-align: left"><a href="/nugu-play/smarthome-play/smarthomecapability/temperaturecontrol-interface">TemperatureControl</a></td>
       <td style="text-align: left">NUGU 스마트홈에 등록된 SmartHomeDevice의 온도제어방식에 대한 설명입니다.<br>TemperatureControl Interface는 주변 온도를 특정 온도로 설정하기 위한 스마트홈 기기의 제어 명령입니다.</td>
       <td style="text-align: left">
-<a href="../smarthomedevicetype/type-7">보일러</a><br><a href="../smarthomedevicetype/type-15">에어컨</a>
+<a href="/nugu-play/smarthomedevicetype/type-7">보일러</a><br><a href="/nugu-play/smarthomedevicetype/type-15">에어컨</a>
 </td>
     </tr>
   </tbody>
@@ -2261,134 +2261,28 @@
         <img id="modal_image" class="modal_image" src="">
     </div>
 </div>
+<script type="text/x-jsrender" id="search_contents_tmpl">
+
+<div class="search_content">
+    <a href="/nugu-play/smarthome-play/{{:url}}">
+        <div class="page_title">{{:title}}</div>
+        <div class="content">
+            {{for contents}}
+            <p>{{:}}</p>
+            {{/for}}
+        </div>
+    </a>
+</div>
+
+</script>
 <div id="modal_search_area" class="modal_image_area hide">
     <div class="modal_wrapper">
         <div class="modal_search">
             <div class="search_bar">
-                <div class="search_icon"></div>
-                <input id="search-keyword" type="text" palceholder="검색어를 입력하세요.">
+                <label class="search_icon" for="search_keyword"></label>
+                <input id="search_keyword" type="text" placeholder="최소 2자 이상의 검색어를 입력하신 후 Enter를 입력하세요.">
             </div>
-            <div class="search_contents">
-                <div class="search_content">
-                    <a href="">
-                        <div class="page_title">제목</div>
-                        <div class="content">
-                            <p>321321321312</p>
-                            <p>321321321312</p>
-                            <p>321321321312</p>
-                        </div>
-                    </a>
-                </div>
-                <div class="search_content">
-                    <a href="">
-                        <div class="page_title">제목</div>
-                        <div class="content">
-                            <p>321321321312</p>
-                            <p>321321321312</p>
-                            <p>321321321312</p>
-                        </div>
-                    </a>
-                </div>
-                <div class="search_content">
-                    <a href="">
-                        <div class="page_title">제목</div>
-                        <div class="content">
-                            <p>321321321312</p>
-                            <p>321321321312</p>
-                            <p>321321321312</p>
-                        </div>
-                    </a>
-                </div>
-                <div class="search_content">
-                    <a href="">
-                        <div class="page_title">제목</div>
-                        <div class="content">
-                            <p>321321321312</p>
-                            <p>321321321312</p>
-                            <p>321321321312</p>
-                        </div>
-                    </a>
-                </div>
-                <div class="search_content">
-                    <a href="">
-                        <div class="page_title">제목</div>
-                        <div class="content">
-                            <p>321321321312</p>
-                            <p>321321321312</p>
-                            <p>321321321312</p>
-                        </div>
-                    </a>
-                </div>
-                <div class="search_content">
-                    <a href="">
-                        <div class="page_title">제목</div>
-                        <div class="content">
-                            <p>321321321312</p>
-                            <p>321321321312</p>
-                            <p>321321321312</p>
-                        </div>
-                    </a>
-                </div>
-                <div class="search_content">
-                    <a href="">
-                        <div class="page_title">제목</div>
-                        <div class="content">
-                            <p>321321321312</p>
-                            <p>321321321312</p>
-                            <p>321321321312</p>
-                        </div>
-                    </a>
-                </div>
-                <div class="search_content">
-                    <a href="">
-                        <div class="page_title">제목</div>
-                        <div class="content">
-                            <p>321321321312</p>
-                            <p>321321321312</p>
-                            <p>321321321312</p>
-                        </div>
-                    </a>
-                </div>
-                <div class="search_content">
-                    <a href="">
-                        <div class="page_title">제목</div>
-                        <div class="content">
-                            <p>321321321312</p>
-                            <p>321321321312</p>
-                            <p>321321321312</p>
-                        </div>
-                    </a>
-                </div>
-                <div class="search_content">
-                    <a href="">
-                        <div class="page_title">제목</div>
-                        <div class="content">
-                            <p>321321321312</p>
-                            <p>321321321312</p>
-                            <p>321321321312</p>
-                        </div>
-                    </a>
-                </div>
-                <div class="search_content">
-                    <a href="">
-                        <div class="page_title">제목</div>
-                        <div class="content">
-                            <p>321321321312</p>
-                            <p>321321321312</p>
-                            <p>321321321312</p>
-                        </div>
-                    </a>
-                </div>
-                <div class="search_content">
-                    <a href="">
-                        <div class="page_title">제목</div>
-                        <div class="content">
-                            <p>321321321312</p>
-                            <p>321321321312</p>
-                            <p>321321321312</p>
-                        </div>
-                    </a>
-                </div>
+            <div id="search_contents" class="search_contents">
             </div>
         </div>
     </div>

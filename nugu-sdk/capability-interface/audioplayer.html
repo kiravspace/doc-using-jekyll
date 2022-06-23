@@ -8,7 +8,7 @@
 
 
 
-<meta http-equiv="Last-Modified" content="2022-06-21 12:58:58 +0000">
+<meta http-equiv="Last-Modified" content="2022-06-23 08:19:00 +0000">
 
 
 
@@ -40,8 +40,8 @@
 <link rel="stylesheet" href="/assets/css/main.css">
 <link rel="stylesheet" href="/assets/css/syntax.css">
 
-<script type="text/javascript" src="/assets/js/jquery-3.6.0.js"></script>
-<script type="text/javascript" src="/assets/js/jquery-ui.js"></script>
+<script type="text/javascript" src="/assets/js/jquery-3.6.0.min.js"></script>
+<script type="text/javascript" src="/assets/js/jsrender.min.js"></script>
 <script type="text/javascript" src="/assets/js/main.js"></script>
 
 </head>
@@ -2186,7 +2186,7 @@
 
 <h2 id="state-diagram">State Diagram</h2>
 
-<p><img src="../../assets/images/audioplayer-01.png" alt=""></p>
+<p><img src="/assets/images/audioplayer-01.png" alt=""></p>
 
 <h2 id="sdk-interface">SDK Interface</h2>
 
@@ -2273,7 +2273,7 @@ nugu_client-&gt;getCapabilityBuilder()
 
 <h3 id="재생-상태-모니터링">재생 상태 모니터링</h3>
 
-<p><a href="audioplayer#play">Play</a> directive 로 전달된 음원에 대한 재생 상태를 모니터링 할 수 있습니다.</p>
+<p><a href="/nugu-sdk/capability-interface/audioplayer#play">Play</a> directive 로 전달된 음원에 대한 재생 상태를 모니터링 할 수 있습니다.</p>
 
 <div id="tabs-66" class="tabs">
     <ul class="tabs_title">
@@ -2390,11 +2390,11 @@ CapabilityFactory::makeCapability&lt;AudioPlayerAgent, IAudioPlayerHandler&gt;(a
 
 <h3 id="ui-구성-및-제어">UI 구성 및 제어</h3>
 
-<p>AudioPlayer 로 음원을 재생할 때 화면을 구성하기 위해 필요한 데이터는 <a href="audioplayer#play">Play</a> directive 의 <code class="language-plaintext highlighter-rouge">audioItem.metadata.template</code> 에 포함되어 전달됩니다.</p>
+<p>AudioPlayer 로 음원을 재생할 때 화면을 구성하기 위해 필요한 데이터는 <a href="/nugu-sdk/capability-interface/audioplayer#play">Play</a> directive 의 <code class="language-plaintext highlighter-rouge">audioItem.metadata.template</code> 에 포함되어 전달됩니다.</p>
 
-<p><a href="audioplayer#stop">Stop</a> directive 또는 SDK 내부 timer 등에 의해 종료될 수 있으며, <a href="audioplayer#updatemetadata">UpdateMetadata</a> directive 에 의해 변경될 수 있습니다.</p>
+<p><a href="/nugu-sdk/capability-interface/audioplayer#stop">Stop</a> directive 또는 SDK 내부 timer 등에 의해 종료될 수 있으며, <a href="/nugu-sdk/capability-interface/audioplayer#updatemetadata">UpdateMetadata</a> directive 에 의해 변경될 수 있습니다.</p>
 
-<p><a href="audioplayer#audioitem-metadata-template-audioplayer-template1">AudioPlayer.Template1</a> 에 포함된 가사의 화면은 <code class="language-plaintext highlighter-rouge">사용자 발화</code> 에 따라 <a href="audioplayer#showlyrics">ShowLyrics</a>, <a href="audioplayer#hidelyrics">HideLyrics</a>, <a href="audioplayer#controllyricspage">ControlLyricsPage</a> directive 로 제어될 수 있습니다.</p>
+<p><a href="/nugu-sdk/capability-interface/audioplayer#audioitem-metadata-template-audioplayer-template1">AudioPlayer.Template1</a> 에 포함된 가사의 화면은 <code class="language-plaintext highlighter-rouge">사용자 발화</code> 에 따라 <a href="/nugu-sdk/capability-interface/audioplayer#showlyrics">ShowLyrics</a>, <a href="/nugu-sdk/capability-interface/audioplayer#hidelyrics">HideLyrics</a>, <a href="/nugu-sdk/capability-interface/audioplayer#controllyricspage">ControlLyricsPage</a> directive 로 제어될 수 있습니다.</p>
 
 <div id="tabs-129" class="tabs">
     <ul class="tabs_title">
@@ -2591,7 +2591,7 @@ CapabilityFactory::makeCapability&lt;AudioPlayerAgent, IAudioPlayerHandler&gt;(a
 
 <h3 id="제어-명령">제어 명령</h3>
 
-<p>PUI, GUI 등으로 사용자가 <a href="audioplayer#nextcommandissued">다음</a>/<a href="audioplayer#previouscommandissued">이전</a>/<a href="audioplayer#favoritecommandissued">즐겨찾기</a>/<a href="audioplayer#repeatcommandissued">반복</a>/<a href="audioplayer#shufflecommandissued">셔플</a> 요청을 event 로 전달할 수 있습니다.</p>
+<p>PUI, GUI 등으로 사용자가 <a href="/nugu-sdk/capability-interface/audioplayer#nextcommandissued">다음</a>/<a href="/nugu-sdk/capability-interface/audioplayer#previouscommandissued">이전</a>/<a href="/nugu-sdk/capability-interface/audioplayer#favoritecommandissued">즐겨찾기</a>/<a href="/nugu-sdk/capability-interface/audioplayer#repeatcommandissued">반복</a>/<a href="/nugu-sdk/capability-interface/audioplayer#shufflecommandissued">셔플</a> 요청을 event 로 전달할 수 있습니다.</p>
 
 <div id="tabs-229" class="tabs">
     <ul class="tabs_title">
@@ -5629,134 +5629,28 @@ audio_player_handler-&gt;requestShuffleCommand(false)
         <img id="modal_image" class="modal_image" src="">
     </div>
 </div>
+<script type="text/x-jsrender" id="search_contents_tmpl">
+
+<div class="search_content">
+    <a href="/nugu-sdk/capability-interface/{{:url}}">
+        <div class="page_title">{{:title}}</div>
+        <div class="content">
+            {{for contents}}
+            <p>{{:}}</p>
+            {{/for}}
+        </div>
+    </a>
+</div>
+
+</script>
 <div id="modal_search_area" class="modal_image_area hide">
     <div class="modal_wrapper">
         <div class="modal_search">
             <div class="search_bar">
-                <div class="search_icon"></div>
-                <input id="search-keyword" type="text" palceholder="검색어를 입력하세요.">
+                <label class="search_icon" for="search_keyword"></label>
+                <input id="search_keyword" type="text" placeholder="최소 2자 이상의 검색어를 입력하신 후 Enter를 입력하세요.">
             </div>
-            <div class="search_contents">
-                <div class="search_content">
-                    <a href="">
-                        <div class="page_title">제목</div>
-                        <div class="content">
-                            <p>321321321312</p>
-                            <p>321321321312</p>
-                            <p>321321321312</p>
-                        </div>
-                    </a>
-                </div>
-                <div class="search_content">
-                    <a href="">
-                        <div class="page_title">제목</div>
-                        <div class="content">
-                            <p>321321321312</p>
-                            <p>321321321312</p>
-                            <p>321321321312</p>
-                        </div>
-                    </a>
-                </div>
-                <div class="search_content">
-                    <a href="">
-                        <div class="page_title">제목</div>
-                        <div class="content">
-                            <p>321321321312</p>
-                            <p>321321321312</p>
-                            <p>321321321312</p>
-                        </div>
-                    </a>
-                </div>
-                <div class="search_content">
-                    <a href="">
-                        <div class="page_title">제목</div>
-                        <div class="content">
-                            <p>321321321312</p>
-                            <p>321321321312</p>
-                            <p>321321321312</p>
-                        </div>
-                    </a>
-                </div>
-                <div class="search_content">
-                    <a href="">
-                        <div class="page_title">제목</div>
-                        <div class="content">
-                            <p>321321321312</p>
-                            <p>321321321312</p>
-                            <p>321321321312</p>
-                        </div>
-                    </a>
-                </div>
-                <div class="search_content">
-                    <a href="">
-                        <div class="page_title">제목</div>
-                        <div class="content">
-                            <p>321321321312</p>
-                            <p>321321321312</p>
-                            <p>321321321312</p>
-                        </div>
-                    </a>
-                </div>
-                <div class="search_content">
-                    <a href="">
-                        <div class="page_title">제목</div>
-                        <div class="content">
-                            <p>321321321312</p>
-                            <p>321321321312</p>
-                            <p>321321321312</p>
-                        </div>
-                    </a>
-                </div>
-                <div class="search_content">
-                    <a href="">
-                        <div class="page_title">제목</div>
-                        <div class="content">
-                            <p>321321321312</p>
-                            <p>321321321312</p>
-                            <p>321321321312</p>
-                        </div>
-                    </a>
-                </div>
-                <div class="search_content">
-                    <a href="">
-                        <div class="page_title">제목</div>
-                        <div class="content">
-                            <p>321321321312</p>
-                            <p>321321321312</p>
-                            <p>321321321312</p>
-                        </div>
-                    </a>
-                </div>
-                <div class="search_content">
-                    <a href="">
-                        <div class="page_title">제목</div>
-                        <div class="content">
-                            <p>321321321312</p>
-                            <p>321321321312</p>
-                            <p>321321321312</p>
-                        </div>
-                    </a>
-                </div>
-                <div class="search_content">
-                    <a href="">
-                        <div class="page_title">제목</div>
-                        <div class="content">
-                            <p>321321321312</p>
-                            <p>321321321312</p>
-                            <p>321321321312</p>
-                        </div>
-                    </a>
-                </div>
-                <div class="search_content">
-                    <a href="">
-                        <div class="page_title">제목</div>
-                        <div class="content">
-                            <p>321321321312</p>
-                            <p>321321321312</p>
-                            <p>321321321312</p>
-                        </div>
-                    </a>
-                </div>
+            <div id="search_contents" class="search_contents">
             </div>
         </div>
     </div>

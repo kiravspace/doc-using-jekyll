@@ -8,7 +8,7 @@
 
 
 
-<meta http-equiv="Last-Modified" content="2022-06-21 12:58:58 +0000">
+<meta http-equiv="Last-Modified" content="2022-06-23 08:19:00 +0000">
 
 
 
@@ -36,8 +36,8 @@
 <link rel="stylesheet" href="/assets/css/main.css">
 <link rel="stylesheet" href="/assets/css/syntax.css">
 
-<script type="text/javascript" src="/assets/js/jquery-3.6.0.js"></script>
-<script type="text/javascript" src="/assets/js/jquery-ui.js"></script>
+<script type="text/javascript" src="/assets/js/jquery-3.6.0.min.js"></script>
+<script type="text/javascript" src="/assets/js/jsrender.min.js"></script>
 <script type="text/javascript" src="/assets/js/main.js"></script>
 
 </head>
@@ -2133,11 +2133,11 @@
 
 <p>Play를 만들면서 동일한 Action을 여러 번 만들어야 하는 경우, Common Action을 통해 이러한 반복 작업을 줄일 수 있으며, 전체 Play를 이해하기 쉽도록 단순하게 구성할 수 있습니다. 3개의 Intent를 처리하는 Play를 예로 Common Action을 알아보겠습니다.</p>
 
-<p><img src="../../../assets/images/use-common-actions-01.png" alt=""></p>
+<p><img src="/assets/images/use-common-actions-01.png" alt=""></p>
 
 <p>이러한 구성의 Play에서, B2의 Output인 B21, B22, B23과 C2의 Output인 C31, C32, C33이 각각 같은 응답을 하는 액션인 경우, 위와 같이 각각 정의할 수도 있습니다. 그러나, 중복이 되는 액션을 아래와 같이 Common Action으로 만들어 구성할 수 있습니다.</p>
 
-<p><img src="../../../assets/images/use-common-actions-02.png" alt=""></p>
+<p><img src="/assets/images/use-common-actions-02.png" alt=""></p>
 
 <p>Common Action에서 X, X1, X2, X3를 만든 뒤, B2와 C3에서 이동할 액션으로 X로 지정을 하면 기존과 동일하게 동작하게 됩니다.</p>
 
@@ -2147,17 +2147,17 @@
   <li>
     <p><code class="language-plaintext highlighter-rouge">Custom Actions</code>의 화면 상단 탭에서 <code class="language-plaintext highlighter-rouge">Common Actions</code>으로 이동한 뒤, <code class="language-plaintext highlighter-rouge">Action 추가</code> 버튼을 누른 뒤, Action 생성 페이지를 열어 Common Action을 생성합니다.</p>
 
-    <p><img src="../../../assets/images/use-common-actions-03.gif" alt=""></p>
+    <p><img src="/assets/images/use-common-actions-03.gif" alt=""></p>
   </li>
   <li>
     <p>일반 Action을 만듭니다.</p>
 
-    <p><img src="../../../assets/images/use-common-actions-04.png" alt=""></p>
+    <p><img src="/assets/images/use-common-actions-04.png" alt=""></p>
   </li>
   <li>
     <p>Common Action과 연결할 Action(B2, C3)으로 이동하여, <code class="language-plaintext highlighter-rouge">Output 유형</code> &gt; <code class="language-plaintext highlighter-rouge">Common Action</code>을 선택하고, 이동할 Common Action을 선택합니다.</p>
 
-    <p><img src="../../../assets/images/use-common-actions-05.gif" alt=""></p>
+    <p><img src="/assets/images/use-common-actions-05.gif" alt=""></p>
   </li>
 </ol>
 
@@ -2182,7 +2182,7 @@
 <p>이 장과 함께 보면 좋은 도움말</p>
 
 <ul>
-  <li><a href="../customize-a-play#setting-backend-proxy">Global Backend Parameter</a></li>
+  <li><a href="/nugu-play/create-plays-with-play-builder/customize-a-play#setting-backend-proxy">Global Backend Parameter</a></li>
 </ul>
 
 </div>
@@ -2220,134 +2220,28 @@
         <img id="modal_image" class="modal_image" src="">
     </div>
 </div>
+<script type="text/x-jsrender" id="search_contents_tmpl">
+
+<div class="search_content">
+    <a href="/nugu-play/create-plays-with-play-builder/define-an-action/{{:url}}">
+        <div class="page_title">{{:title}}</div>
+        <div class="content">
+            {{for contents}}
+            <p>{{:}}</p>
+            {{/for}}
+        </div>
+    </a>
+</div>
+
+</script>
 <div id="modal_search_area" class="modal_image_area hide">
     <div class="modal_wrapper">
         <div class="modal_search">
             <div class="search_bar">
-                <div class="search_icon"></div>
-                <input id="search-keyword" type="text" palceholder="검색어를 입력하세요.">
+                <label class="search_icon" for="search_keyword"></label>
+                <input id="search_keyword" type="text" placeholder="최소 2자 이상의 검색어를 입력하신 후 Enter를 입력하세요.">
             </div>
-            <div class="search_contents">
-                <div class="search_content">
-                    <a href="">
-                        <div class="page_title">제목</div>
-                        <div class="content">
-                            <p>321321321312</p>
-                            <p>321321321312</p>
-                            <p>321321321312</p>
-                        </div>
-                    </a>
-                </div>
-                <div class="search_content">
-                    <a href="">
-                        <div class="page_title">제목</div>
-                        <div class="content">
-                            <p>321321321312</p>
-                            <p>321321321312</p>
-                            <p>321321321312</p>
-                        </div>
-                    </a>
-                </div>
-                <div class="search_content">
-                    <a href="">
-                        <div class="page_title">제목</div>
-                        <div class="content">
-                            <p>321321321312</p>
-                            <p>321321321312</p>
-                            <p>321321321312</p>
-                        </div>
-                    </a>
-                </div>
-                <div class="search_content">
-                    <a href="">
-                        <div class="page_title">제목</div>
-                        <div class="content">
-                            <p>321321321312</p>
-                            <p>321321321312</p>
-                            <p>321321321312</p>
-                        </div>
-                    </a>
-                </div>
-                <div class="search_content">
-                    <a href="">
-                        <div class="page_title">제목</div>
-                        <div class="content">
-                            <p>321321321312</p>
-                            <p>321321321312</p>
-                            <p>321321321312</p>
-                        </div>
-                    </a>
-                </div>
-                <div class="search_content">
-                    <a href="">
-                        <div class="page_title">제목</div>
-                        <div class="content">
-                            <p>321321321312</p>
-                            <p>321321321312</p>
-                            <p>321321321312</p>
-                        </div>
-                    </a>
-                </div>
-                <div class="search_content">
-                    <a href="">
-                        <div class="page_title">제목</div>
-                        <div class="content">
-                            <p>321321321312</p>
-                            <p>321321321312</p>
-                            <p>321321321312</p>
-                        </div>
-                    </a>
-                </div>
-                <div class="search_content">
-                    <a href="">
-                        <div class="page_title">제목</div>
-                        <div class="content">
-                            <p>321321321312</p>
-                            <p>321321321312</p>
-                            <p>321321321312</p>
-                        </div>
-                    </a>
-                </div>
-                <div class="search_content">
-                    <a href="">
-                        <div class="page_title">제목</div>
-                        <div class="content">
-                            <p>321321321312</p>
-                            <p>321321321312</p>
-                            <p>321321321312</p>
-                        </div>
-                    </a>
-                </div>
-                <div class="search_content">
-                    <a href="">
-                        <div class="page_title">제목</div>
-                        <div class="content">
-                            <p>321321321312</p>
-                            <p>321321321312</p>
-                            <p>321321321312</p>
-                        </div>
-                    </a>
-                </div>
-                <div class="search_content">
-                    <a href="">
-                        <div class="page_title">제목</div>
-                        <div class="content">
-                            <p>321321321312</p>
-                            <p>321321321312</p>
-                            <p>321321321312</p>
-                        </div>
-                    </a>
-                </div>
-                <div class="search_content">
-                    <a href="">
-                        <div class="page_title">제목</div>
-                        <div class="content">
-                            <p>321321321312</p>
-                            <p>321321321312</p>
-                            <p>321321321312</p>
-                        </div>
-                    </a>
-                </div>
+            <div id="search_contents" class="search_contents">
             </div>
         </div>
     </div>

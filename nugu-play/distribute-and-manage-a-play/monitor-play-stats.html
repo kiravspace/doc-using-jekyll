@@ -8,7 +8,7 @@
 
 
 
-<meta http-equiv="Last-Modified" content="2022-06-21 12:58:58 +0000">
+<meta http-equiv="Last-Modified" content="2022-06-23 08:19:00 +0000">
 
 
 
@@ -36,8 +36,8 @@
 <link rel="stylesheet" href="/assets/css/main.css">
 <link rel="stylesheet" href="/assets/css/syntax.css">
 
-<script type="text/javascript" src="/assets/js/jquery-3.6.0.js"></script>
-<script type="text/javascript" src="/assets/js/jquery-ui.js"></script>
+<script type="text/javascript" src="/assets/js/jquery-3.6.0.min.js"></script>
+<script type="text/javascript" src="/assets/js/jsrender.min.js"></script>
 <script type="text/javascript" src="/assets/js/main.js"></script>
 
 </head>
@@ -2146,7 +2146,7 @@ Play 사용을 위해 사용자가 발화한 음성명령 중 실패한 발화 T
 <p><strong>Intent Top 10</strong><br>
 Play 사용을 위해 사용자가 발화한 음성명령의 Intent Top 10</p>
 
-<h2 id="주요-통계-">주요 통계 <a href="main-stats" id="main-stats"></a>
+<h2 id="주요-통계-">주요 통계 <a id="main-stats"></a>
 </h2>
 
 <p>주요 통계 메뉴를 통해 Play 전체 또는 Play별 사용자 요청 건 수, 총 요청 건 수를 확인할 수 있으며, 조회 결과를 통계 데이터로 다운로드할 수도 있습니다.</p>
@@ -2156,25 +2156,25 @@ Play 사용을 위해 사용자가 발화한 음성명령의 Intent Top 10</p>
     <p><code class="language-plaintext highlighter-rouge">Developers Console</code> &gt; <code class="language-plaintext highlighter-rouge">Play kit</code> &gt; <code class="language-plaintext highlighter-rouge">통계</code> 메뉴에서 Play를 선택하고, 조회 기간을 설정한 후 <code class="language-plaintext highlighter-rouge">확인</code> 버튼을 클릭합니다.<br>
 조회할 PoC를 <code class="language-plaintext highlighter-rouge">전체</code>로 선택하면 서비스 제공자가 상용 배포한 모든 Play가 서비스 중인 PoC의 전체 통계가 합산되어 제공됩니다.</p>
 
-    <p><img src="../../assets/images/monitor-play-stats-01.jpg" alt=""></p>
+    <p><img src="/assets/images/monitor-play-stats-01.jpg" alt=""></p>
   </li>
   <li>
     <p>Play 통계 조회가 완료되면, 통계 내역에서 Play 이용자 수, 전체 요청 수의 확인이 가능하며, <code class="language-plaintext highlighter-rouge">통계다운로드</code> 버튼을 클릭하여 조회 결과를 다운로드할 수 있습니. 데이터는 엑셀 파일로 저장됩니다.</p>
 
-    <p><img src="../../assets/images/monitor-play-stats-02.jpg" alt=""></p>
+    <p><img src="/assets/images/monitor-play-stats-02.jpg" alt=""></p>
   </li>
 </ol>
 
-<h2 id="주요-발화-통계-">주요 발화 통계 <a href="utterance-stats" id="utterance-stats"></a>
+<h2 id="주요-발화-통계-">주요 발화 통계 <a id="utterance-stats"></a>
 </h2>
 
 <p><code class="language-plaintext highlighter-rouge">Developers Console</code> &gt; <code class="language-plaintext highlighter-rouge">Play kit</code> &gt; <code class="language-plaintext highlighter-rouge">통계</code> 페이지의 주요 발화 Top 100 통계 항목에서 조회할 Play를 선택하고, 조회 기간을 설정한 후 <code class="language-plaintext highlighter-rouge">확인</code> 버튼을 클릭합니다.</p>
 
-<p><img src="../../assets/images/monitor-play-stats-03.jpg" alt=""></p>
+<p><img src="/assets/images/monitor-play-stats-03.jpg" alt=""></p>
 
 <p>조회가 완료되면 주요 발화 Top 100 리스트에서 발화 내용을 확인할 수 있습니다.</p>
 
-<p><img src="../../assets/images/monitor-play-stats-04.jpg" alt=""></p>
+<p><img src="/assets/images/monitor-play-stats-04.jpg" alt=""></p>
 
 <p>마찬가지로 실패 발화 TOP 100, intent Top 10도 조회 할 수 있습니다.</p>
 
@@ -2211,134 +2211,28 @@ Play 사용을 위해 사용자가 발화한 음성명령의 Intent Top 10</p>
         <img id="modal_image" class="modal_image" src="">
     </div>
 </div>
+<script type="text/x-jsrender" id="search_contents_tmpl">
+
+<div class="search_content">
+    <a href="/nugu-play/distribute-and-manage-a-play/{{:url}}">
+        <div class="page_title">{{:title}}</div>
+        <div class="content">
+            {{for contents}}
+            <p>{{:}}</p>
+            {{/for}}
+        </div>
+    </a>
+</div>
+
+</script>
 <div id="modal_search_area" class="modal_image_area hide">
     <div class="modal_wrapper">
         <div class="modal_search">
             <div class="search_bar">
-                <div class="search_icon"></div>
-                <input id="search-keyword" type="text" palceholder="검색어를 입력하세요.">
+                <label class="search_icon" for="search_keyword"></label>
+                <input id="search_keyword" type="text" placeholder="최소 2자 이상의 검색어를 입력하신 후 Enter를 입력하세요.">
             </div>
-            <div class="search_contents">
-                <div class="search_content">
-                    <a href="">
-                        <div class="page_title">제목</div>
-                        <div class="content">
-                            <p>321321321312</p>
-                            <p>321321321312</p>
-                            <p>321321321312</p>
-                        </div>
-                    </a>
-                </div>
-                <div class="search_content">
-                    <a href="">
-                        <div class="page_title">제목</div>
-                        <div class="content">
-                            <p>321321321312</p>
-                            <p>321321321312</p>
-                            <p>321321321312</p>
-                        </div>
-                    </a>
-                </div>
-                <div class="search_content">
-                    <a href="">
-                        <div class="page_title">제목</div>
-                        <div class="content">
-                            <p>321321321312</p>
-                            <p>321321321312</p>
-                            <p>321321321312</p>
-                        </div>
-                    </a>
-                </div>
-                <div class="search_content">
-                    <a href="">
-                        <div class="page_title">제목</div>
-                        <div class="content">
-                            <p>321321321312</p>
-                            <p>321321321312</p>
-                            <p>321321321312</p>
-                        </div>
-                    </a>
-                </div>
-                <div class="search_content">
-                    <a href="">
-                        <div class="page_title">제목</div>
-                        <div class="content">
-                            <p>321321321312</p>
-                            <p>321321321312</p>
-                            <p>321321321312</p>
-                        </div>
-                    </a>
-                </div>
-                <div class="search_content">
-                    <a href="">
-                        <div class="page_title">제목</div>
-                        <div class="content">
-                            <p>321321321312</p>
-                            <p>321321321312</p>
-                            <p>321321321312</p>
-                        </div>
-                    </a>
-                </div>
-                <div class="search_content">
-                    <a href="">
-                        <div class="page_title">제목</div>
-                        <div class="content">
-                            <p>321321321312</p>
-                            <p>321321321312</p>
-                            <p>321321321312</p>
-                        </div>
-                    </a>
-                </div>
-                <div class="search_content">
-                    <a href="">
-                        <div class="page_title">제목</div>
-                        <div class="content">
-                            <p>321321321312</p>
-                            <p>321321321312</p>
-                            <p>321321321312</p>
-                        </div>
-                    </a>
-                </div>
-                <div class="search_content">
-                    <a href="">
-                        <div class="page_title">제목</div>
-                        <div class="content">
-                            <p>321321321312</p>
-                            <p>321321321312</p>
-                            <p>321321321312</p>
-                        </div>
-                    </a>
-                </div>
-                <div class="search_content">
-                    <a href="">
-                        <div class="page_title">제목</div>
-                        <div class="content">
-                            <p>321321321312</p>
-                            <p>321321321312</p>
-                            <p>321321321312</p>
-                        </div>
-                    </a>
-                </div>
-                <div class="search_content">
-                    <a href="">
-                        <div class="page_title">제목</div>
-                        <div class="content">
-                            <p>321321321312</p>
-                            <p>321321321312</p>
-                            <p>321321321312</p>
-                        </div>
-                    </a>
-                </div>
-                <div class="search_content">
-                    <a href="">
-                        <div class="page_title">제목</div>
-                        <div class="content">
-                            <p>321321321312</p>
-                            <p>321321321312</p>
-                            <p>321321321312</p>
-                        </div>
-                    </a>
-                </div>
+            <div id="search_contents" class="search_contents">
             </div>
         </div>
     </div>

@@ -8,7 +8,7 @@
 
 
 
-<meta http-equiv="Last-Modified" content="2022-06-21 12:58:58 +0000">
+<meta http-equiv="Last-Modified" content="2022-06-23 08:19:00 +0000">
 
 
 
@@ -40,8 +40,8 @@
 <link rel="stylesheet" href="/assets/css/main.css">
 <link rel="stylesheet" href="/assets/css/syntax.css">
 
-<script type="text/javascript" src="/assets/js/jquery-3.6.0.js"></script>
-<script type="text/javascript" src="/assets/js/jquery-ui.js"></script>
+<script type="text/javascript" src="/assets/js/jquery-3.6.0.min.js"></script>
+<script type="text/javascript" src="/assets/js/jsrender.min.js"></script>
 <script type="text/javascript" src="/assets/js/main.js"></script>
 
 </head>
@@ -2288,7 +2288,7 @@ nugu_client-&gt;getCapabilityBuilder()
 
 <h3 id="context-구성">Context 구성</h3>
 
-<p><a href="./#ui-1">UI 제어</a> 기능을 사용하기 위해서는 template 화면의 상태 정보를 <a href="./#context">Context</a> 에 포함시켜 주어야 합니다.</p>
+<p><a href="#ui-1">UI 제어</a> 기능을 사용하기 위해서는 template 화면의 상태 정보를 <a href="#context">Context</a> 에 포함시켜 주어야 합니다.</p>
 
 <div id="tabs-71" class="tabs">
     <ul class="tabs_title">
@@ -2375,13 +2375,14 @@ displayAgent.delegate = MyDisplayAgentDelegate()
 
 </div>
 
-<h3 id="ui-구성-및-제어">UI 구성 및 제어</h3>
+<h3 id="ui-구성-및-제어-">UI 구성 및 제어 <a id="ui-1"></a>
+</h3>
 
-<p>Display 로 화면을 구성하기 위해 필요한 데이터는 <a href="./#directive-template">Template</a> directive 에 포함되어 전달됩니다.</p>
+<p>Display 로 화면을 구성하기 위해 필요한 데이터는 <a href="/nugu-sdk/capability-interface/display/display-directive#directive-template">Template</a> directive 에 포함되어 전달됩니다.</p>
 
-<p>Template 화면은 <a href="./#close">Close</a> directive 또는 SDK 내부 timer 등에 의해 종료될 수 있으며, <a href="./#update">Update</a> directive 에 의해 변경될 수 있습니다.</p>
+<p>Template 화면은 <a href="/nugu-sdk/capability-interface/display/display-directive#close">Close</a> directive 또는 SDK 내부 timer 등에 의해 종료될 수 있으며, <a href="/nugu-sdk/capability-interface/display/display-directive#update">Update</a> directive 에 의해 변경될 수 있습니다.</p>
 
-<p>Template 의 focus 와 scroll 은 <code class="language-plaintext highlighter-rouge">사용자 발화</code> 에 따라 <a href="display-directive#controlfocus">ControlFocus</a>, <a href="display-directive#controlscroll">ControlScroll</a> directive 로 제어될 수 있습니다.</p>
+<p>Template 의 focus 와 scroll 은 <code class="language-plaintext highlighter-rouge">사용자 발화</code> 에 따라 <a href="/nugu-sdk/capability-interface/display/display-directive#controlfocus">ControlFocus</a>, <a href="/nugu-sdk/capability-interface/display/display-directive#controlscroll">ControlScroll</a> directive 로 제어될 수 있습니다.</p>
 
 <div id="tabs-120" class="tabs">
     <ul class="tabs_title">
@@ -2565,7 +2566,7 @@ CapabilityFactory::makeCapability&lt;DisplayAgent, IDisplayHandler&gt;(display_l
 
 <h3 id="사용자-인터렉션-처리">사용자 인터렉션 처리</h3>
 
-<p>Template 하위 항목 선택시 <a href="display-event#elementselected">ElementSelected</a> event 가 전달됩니다.</p>
+<p>Template 하위 항목 선택시 <a href="/nugu-sdk/capability-interface/display/display-event#elementselected">ElementSelected</a> event 가 전달됩니다.</p>
 
 <div id="tabs-213" class="tabs">
     <ul class="tabs_title">
@@ -2994,7 +2995,7 @@ CapabilityFactory::makeCapability&lt;DisplayAgent, IDisplayHandler&gt;(display_l
     </tr>
     <tr>
       <td style="text-align: left">image</td>
-      <td style="text-align: left"><a href="../../nugu-play/create-plays-with-play-builder/use-backend-proxy/capability-interfaces/display-interface#imageobject">ImageObject</a></td>
+      <td style="text-align: left"><a href="/nugu-play/create-plays-with-play-builder/use-backend-proxy/capability-interfaces/display-interface#imageobject">ImageObject</a></td>
       <td style="text-align: left">N</td>
       <td style="text-align: left">버튼 이미지<br>- type이 image인 경우에 한해 필수이며, 해당 이미지를 이용해 버튼을 표현한다.</td>
     </tr>
@@ -3118,31 +3119,31 @@ CapabilityFactory::makeCapability&lt;DisplayAgent, IDisplayHandler&gt;(display_l
   <tbody>
     <tr>
       <td style="text-align: left">logo</td>
-      <td style="text-align: left"><a href="../../../nugu-play/create-plays-with-play-builder/use-backend-proxy/capability-interfaces/display-interface#imageobject">ImageObject</a></td>
+      <td style="text-align: left"><a href="/nugu-play/create-plays-with-play-builder/use-backend-proxy/capability-interfaces/display-interface#imageobject">ImageObject</a></td>
       <td style="text-align: left">N</td>
       <td style="text-align: left">png 타입으로 투명 이미지로 제공해야 함</td>
     </tr>
     <tr>
       <td style="text-align: left">text</td>
-      <td style="text-align: left"><a href="../../../nugu-play/create-plays-with-play-builder/use-backend-proxy/capability-interfaces/display-interface#textobject">TextObject</a></td>
+      <td style="text-align: left"><a href="/nugu-play/create-plays-with-play-builder/use-backend-proxy/capability-interfaces/display-interface#textobject">TextObject</a></td>
       <td style="text-align: left">Y</td>
       <td style="text-align: left">제목</td>
     </tr>
     <tr>
       <td style="text-align: left">subtext</td>
-      <td style="text-align: left"><a href="../../../nugu-play/create-plays-with-play-builder/use-backend-proxy/capability-interfaces/display-interface#textobject">TextObject</a></td>
+      <td style="text-align: left"><a href="/nugu-play/create-plays-with-play-builder/use-backend-proxy/capability-interfaces/display-interface#textobject">TextObject</a></td>
       <td style="text-align: left">N</td>
       <td style="text-align: left">ASR Text 등 부제목</td>
     </tr>
     <tr>
       <td style="text-align: left">subicon</td>
-      <td style="text-align: left"><a href="../../../nugu-play/create-plays-with-play-builder/use-backend-proxy/capability-interfaces/display-interface#imageobject">ImageObject</a></td>
+      <td style="text-align: left"><a href="/nugu-play/create-plays-with-play-builder/use-backend-proxy/capability-interfaces/display-interface#imageobject">ImageObject</a></td>
       <td style="text-align: left">N</td>
       <td style="text-align: left">서브 아이콘 ( 위치 : subText 왼쪽 )</td>
     </tr>
     <tr>
       <td style="text-align: left">button</td>
-      <td style="text-align: left"><a href="../../../nugu-play/create-plays-with-play-builder/use-backend-proxy/capability-interfaces/display-interface#buttonobject">ButtonObject</a></td>
+      <td style="text-align: left"><a href="/nugu-play/create-plays-with-play-builder/use-backend-proxy/capability-interfaces/display-interface#buttonobject">ButtonObject</a></td>
       <td style="text-align: left">N</td>
       <td style="text-align: left">우측에 위치하는 버튼</td>
     </tr>
@@ -3181,7 +3182,7 @@ CapabilityFactory::makeCapability&lt;DisplayAgent, IDisplayHandler&gt;(display_l
   <tbody>
     <tr>
       <td style="text-align: left">image</td>
-      <td style="text-align: left"><a href="../../../nugu-play/create-plays-with-play-builder/use-backend-proxy/capability-interfaces/display-interface#imageobject">ImageObject</a></td>
+      <td style="text-align: left"><a href="/nugu-play/create-plays-with-play-builder/use-backend-proxy/capability-interfaces/display-interface#imageobject">ImageObject</a></td>
       <td style="text-align: left">N</td>
       <td style="text-align: left">-</td>
     </tr>
@@ -3342,7 +3343,7 @@ CapabilityFactory::makeCapability&lt;DisplayAgent, IDisplayHandler&gt;(display_l
   <tbody>
     <tr>
       <td style="text-align: left">image</td>
-      <td style="text-align: left"><a href="../../../nugu-play/create-plays-with-play-builder/use-backend-proxy/capability-interfaces/display-interface#imageobject">ImageObject</a></td>
+      <td style="text-align: left"><a href="/nugu-play/create-plays-with-play-builder/use-backend-proxy/capability-interfaces/display-interface#imageobject">ImageObject</a></td>
       <td style="text-align: left">N</td>
       <td style="text-align: left">banner에 사용되는 image object</td>
     </tr>
@@ -3480,13 +3481,13 @@ CapabilityFactory::makeCapability&lt;DisplayAgent, IDisplayHandler&gt;(display_l
     </tr>
     <tr>
       <td style="text-align: left">text</td>
-      <td style="text-align: left"><a href="../../../nugu-play/create-plays-with-play-builder/use-backend-proxy/capability-interfaces/display-interface#textobject">TextObject</a></td>
+      <td style="text-align: left"><a href="/nugu-play/create-plays-with-play-builder/use-backend-proxy/capability-interfaces/display-interface#textobject">TextObject</a></td>
       <td style="text-align: left">N</td>
       <td style="text-align: left">-</td>
     </tr>
     <tr>
       <td style="text-align: left">image</td>
-      <td style="text-align: left"><a href="../../../nugu-play/create-plays-with-play-builder/use-backend-proxy/capability-interfaces/display-interface#imageobject">ImageObject</a></td>
+      <td style="text-align: left"><a href="/nugu-play/create-plays-with-play-builder/use-backend-proxy/capability-interfaces/display-interface#imageobject">ImageObject</a></td>
       <td style="text-align: left">N</td>
       <td style="text-align: left">-</td>
     </tr>
@@ -3526,134 +3527,28 @@ CapabilityFactory::makeCapability&lt;DisplayAgent, IDisplayHandler&gt;(display_l
         <img id="modal_image" class="modal_image" src="">
     </div>
 </div>
+<script type="text/x-jsrender" id="search_contents_tmpl">
+
+<div class="search_content">
+    <a href="/nugu-sdk/capability-interface/{{:url}}">
+        <div class="page_title">{{:title}}</div>
+        <div class="content">
+            {{for contents}}
+            <p>{{:}}</p>
+            {{/for}}
+        </div>
+    </a>
+</div>
+
+</script>
 <div id="modal_search_area" class="modal_image_area hide">
     <div class="modal_wrapper">
         <div class="modal_search">
             <div class="search_bar">
-                <div class="search_icon"></div>
-                <input id="search-keyword" type="text" palceholder="검색어를 입력하세요.">
+                <label class="search_icon" for="search_keyword"></label>
+                <input id="search_keyword" type="text" placeholder="최소 2자 이상의 검색어를 입력하신 후 Enter를 입력하세요.">
             </div>
-            <div class="search_contents">
-                <div class="search_content">
-                    <a href="">
-                        <div class="page_title">제목</div>
-                        <div class="content">
-                            <p>321321321312</p>
-                            <p>321321321312</p>
-                            <p>321321321312</p>
-                        </div>
-                    </a>
-                </div>
-                <div class="search_content">
-                    <a href="">
-                        <div class="page_title">제목</div>
-                        <div class="content">
-                            <p>321321321312</p>
-                            <p>321321321312</p>
-                            <p>321321321312</p>
-                        </div>
-                    </a>
-                </div>
-                <div class="search_content">
-                    <a href="">
-                        <div class="page_title">제목</div>
-                        <div class="content">
-                            <p>321321321312</p>
-                            <p>321321321312</p>
-                            <p>321321321312</p>
-                        </div>
-                    </a>
-                </div>
-                <div class="search_content">
-                    <a href="">
-                        <div class="page_title">제목</div>
-                        <div class="content">
-                            <p>321321321312</p>
-                            <p>321321321312</p>
-                            <p>321321321312</p>
-                        </div>
-                    </a>
-                </div>
-                <div class="search_content">
-                    <a href="">
-                        <div class="page_title">제목</div>
-                        <div class="content">
-                            <p>321321321312</p>
-                            <p>321321321312</p>
-                            <p>321321321312</p>
-                        </div>
-                    </a>
-                </div>
-                <div class="search_content">
-                    <a href="">
-                        <div class="page_title">제목</div>
-                        <div class="content">
-                            <p>321321321312</p>
-                            <p>321321321312</p>
-                            <p>321321321312</p>
-                        </div>
-                    </a>
-                </div>
-                <div class="search_content">
-                    <a href="">
-                        <div class="page_title">제목</div>
-                        <div class="content">
-                            <p>321321321312</p>
-                            <p>321321321312</p>
-                            <p>321321321312</p>
-                        </div>
-                    </a>
-                </div>
-                <div class="search_content">
-                    <a href="">
-                        <div class="page_title">제목</div>
-                        <div class="content">
-                            <p>321321321312</p>
-                            <p>321321321312</p>
-                            <p>321321321312</p>
-                        </div>
-                    </a>
-                </div>
-                <div class="search_content">
-                    <a href="">
-                        <div class="page_title">제목</div>
-                        <div class="content">
-                            <p>321321321312</p>
-                            <p>321321321312</p>
-                            <p>321321321312</p>
-                        </div>
-                    </a>
-                </div>
-                <div class="search_content">
-                    <a href="">
-                        <div class="page_title">제목</div>
-                        <div class="content">
-                            <p>321321321312</p>
-                            <p>321321321312</p>
-                            <p>321321321312</p>
-                        </div>
-                    </a>
-                </div>
-                <div class="search_content">
-                    <a href="">
-                        <div class="page_title">제목</div>
-                        <div class="content">
-                            <p>321321321312</p>
-                            <p>321321321312</p>
-                            <p>321321321312</p>
-                        </div>
-                    </a>
-                </div>
-                <div class="search_content">
-                    <a href="">
-                        <div class="page_title">제목</div>
-                        <div class="content">
-                            <p>321321321312</p>
-                            <p>321321321312</p>
-                            <p>321321321312</p>
-                        </div>
-                    </a>
-                </div>
+            <div id="search_contents" class="search_contents">
             </div>
         </div>
     </div>

@@ -8,7 +8,7 @@
 
 
 
-<meta http-equiv="Last-Modified" content="2022-06-21 12:58:58 +0000">
+<meta http-equiv="Last-Modified" content="2022-06-23 08:19:00 +0000">
 
 
 
@@ -36,8 +36,8 @@
 <link rel="stylesheet" href="/assets/css/main.css">
 <link rel="stylesheet" href="/assets/css/syntax.css">
 
-<script type="text/javascript" src="/assets/js/jquery-3.6.0.js"></script>
-<script type="text/javascript" src="/assets/js/jquery-ui.js"></script>
+<script type="text/javascript" src="/assets/js/jquery-3.6.0.min.js"></script>
+<script type="text/javascript" src="/assets/js/jsrender.min.js"></script>
 <script type="text/javascript" src="/assets/js/main.js"></script>
 
 </head>
@@ -2147,14 +2147,14 @@ Voice Chrome 외에 디스플레이 기능을 추가하기 위해 LED를 사용�
   <tbody>
     <tr>
       <td>
-<img src="../../assets/images/voice-chrome-01.png" alt=""> NUGU Blue</td>
+<img src="/assets/images/voice-chrome-01.png" alt=""> NUGU Blue</td>
       <td>0,158, 255 (#009DFF)</td>
       <td>85, 21, 0, 0</td>
       <td>2925C</td>
     </tr>
     <tr>
       <td>
-<img src="../../assets/images/voice-chrome-02.png" alt=""> Green</td>
+<img src="/assets/images/voice-chrome-02.png" alt=""> Green</td>
       <td>0, 230, 136 (#00E688)</td>
       <td>48, 0, 45, 0</td>
       <td>2412C</td>
@@ -2183,27 +2183,27 @@ Voice Chrome 외에 디스플레이 기능을 추가하기 위해 LED를 사용�
   <tbody>
     <tr>
       <td><strong>Idle</strong></td>
-      <td style="text-align: center"><img src="../../assets/images/voice-chrome-03.png" alt=""></td>
+      <td style="text-align: center"><img src="/assets/images/voice-chrome-03.png" alt=""></td>
       <td>Wake-up 가능한 대기 상태</td>
     </tr>
     <tr>
       <td><strong>Listening-Passive</strong></td>
-      <td style="text-align: center"><img src="../../assets/images/voice-chrome-04.gif" alt=""></td>
+      <td style="text-align: center"><img src="/assets/images/voice-chrome-04.gif" alt=""></td>
       <td>사용자 발화 입력 대기 상태</td>
     </tr>
     <tr>
       <td><strong>Listening-Active</strong></td>
-      <td style="text-align: center"><img src="../../assets/images/voice-chrome-05.gif" alt=""></td>
+      <td style="text-align: center"><img src="/assets/images/voice-chrome-05.gif" alt=""></td>
       <td>사용자 발화 입력 중 상태</td>
     </tr>
     <tr>
       <td><strong>Processing</strong></td>
-      <td style="text-align: center"><img src="../../assets/images/voice-chrome-06.gif" alt=""></td>
+      <td style="text-align: center"><img src="/assets/images/voice-chrome-06.gif" alt=""></td>
       <td>입력된 사용자 발화를 분석하는 상태</td>
     </tr>
     <tr>
       <td><strong>Speaking</strong></td>
-      <td style="text-align: center"><img src="../../assets/images/voice-chrome-07.gif" alt=""></td>
+      <td style="text-align: center"><img src="/assets/images/voice-chrome-07.gif" alt=""></td>
       <td>정보/동작에 대해서 TTS 답변하는 상태</td>
     </tr>
   </tbody>
@@ -2228,11 +2228,11 @@ Voice Chrome 외에 디스플레이 기능을 추가하기 위해 LED를 사용�
 
 <p>BLUE / WHITE 컬러타입 중 한 가지를 선택 적용할 수 있습니다.</p>
 
-<p><img src="../../assets/images/voice-chrome-08.png" alt="(좌) BLUE / (우) WHITE"></p>
+<p><img src="/assets/images/voice-chrome-08.png" alt="(좌) BLUE / (우) WHITE"></p>
 
 <p>Idle 상태에 적용되며, <strong>FAB</strong> (Floating Action Button) 또는 <strong>Button</strong> 타입으로 사용하는 것을 권장합니다. (FAB과 Button은 Elevation값에 차이가 있습니다.)</p>
 
-<p><img src="../../assets/images/voice-chrome-09.png" alt="(1) FAB / (2) Button"></p>
+<p><img src="/assets/images/voice-chrome-09.png" alt="(1) FAB / (2) Button"></p>
 
 <p>FAB과 Button에 따른 사용 및 동작 정의는 다음과 같습니다.</p>
 
@@ -2253,18 +2253,18 @@ Voice Chrome 외에 디스플레이 기능을 추가하기 위해 LED를 사용�
     
 <p>(1) <strong>FAB</strong>을 눌러 보이스크롬을 호출하면 FAB 버튼은 사라집니다.</p>
 
-<p><img src="../../assets/images/voice-chrome-10.png" alt=""></p>
+<p><img src="/assets/images/voice-chrome-10.png" alt=""></p>
 
 <p>(1-1) <strong>FAB</strong>은 스크롤 방향에 따라 노출 여부를 달리할 수 있습니다.</p>
 
-<p><img src="../../assets/images/voice-chrome-11.png" alt="(좌) Scroll down / (우) Scroll up (세로 스크롤이 있는 디바이스에 적용 가능)"></p>
+<p><img src="/assets/images/voice-chrome-11.png" alt="(좌) Scroll down / (우) Scroll up (세로 스크롤이 있는 디바이스에 적용 가능)"></p>
 
 </div>
 <div id="tab-content-67" class="tab_content">
     
 <p>(2) <strong>Button</strong>을 눌러 Voice Chrome을 호출하면, Toggle Button 버튼으로 상태가 변경됩니다.</p>
 
-<p><img src="../../assets/images/voice-chrome-12.png" alt="Toggle Button은 투명도가 적용된 Container에 도트 애니메이션이 적용됩니다."></p>
+<p><img src="/assets/images/voice-chrome-12.png" alt="Toggle Button은 투명도가 적용된 Container에 도트 애니메이션이 적용됩니다."></p>
 
 </div>
 
@@ -2283,8 +2283,8 @@ Voice Chrome 외에 디스플레이 기능을 추가하기 위해 LED를 사용�
   </thead>
   <tbody>
     <tr>
-      <td><img src="../../assets/images/voice-chrome-13.png" alt=""></td>
-      <td><img src="../../assets/images/voice-chrome-14.png" alt=""></td>
+      <td><img src="/assets/images/voice-chrome-13.png" alt=""></td>
+      <td><img src="/assets/images/voice-chrome-14.png" alt=""></td>
     </tr>
   </tbody>
 </table>
@@ -2296,7 +2296,7 @@ Voice Chrome 외에 디스플레이 기능을 추가하기 위해 LED를 사용�
   <li>Android back key는 모든 단계에서 닫기 동작이 가능합니다.</li>
 </ul>
 
-<p><img src="../../assets/images/voice-chrome-15.png" alt="(1) App 화면 닫기는 Listening-Passive/Listening-Active 단계에서 작동됩니다. (Processing은 닫기 동작 하지 않음)"></p>
+<p><img src="/assets/images/voice-chrome-15.png" alt="(1) App 화면 닫기는 Listening-Passive/Listening-Active 단계에서 작동됩니다. (Processing은 닫기 동작 하지 않음)"></p>
 
     </div>
     
@@ -2331,134 +2331,28 @@ Voice Chrome 외에 디스플레이 기능을 추가하기 위해 LED를 사용�
         <img id="modal_image" class="modal_image" src="">
     </div>
 </div>
+<script type="text/x-jsrender" id="search_contents_tmpl">
+
+<div class="search_content">
+    <a href="/nugu-sdk/sdk-design-guide/{{:url}}">
+        <div class="page_title">{{:title}}</div>
+        <div class="content">
+            {{for contents}}
+            <p>{{:}}</p>
+            {{/for}}
+        </div>
+    </a>
+</div>
+
+</script>
 <div id="modal_search_area" class="modal_image_area hide">
     <div class="modal_wrapper">
         <div class="modal_search">
             <div class="search_bar">
-                <div class="search_icon"></div>
-                <input id="search-keyword" type="text" palceholder="검색어를 입력하세요.">
+                <label class="search_icon" for="search_keyword"></label>
+                <input id="search_keyword" type="text" placeholder="최소 2자 이상의 검색어를 입력하신 후 Enter를 입력하세요.">
             </div>
-            <div class="search_contents">
-                <div class="search_content">
-                    <a href="">
-                        <div class="page_title">제목</div>
-                        <div class="content">
-                            <p>321321321312</p>
-                            <p>321321321312</p>
-                            <p>321321321312</p>
-                        </div>
-                    </a>
-                </div>
-                <div class="search_content">
-                    <a href="">
-                        <div class="page_title">제목</div>
-                        <div class="content">
-                            <p>321321321312</p>
-                            <p>321321321312</p>
-                            <p>321321321312</p>
-                        </div>
-                    </a>
-                </div>
-                <div class="search_content">
-                    <a href="">
-                        <div class="page_title">제목</div>
-                        <div class="content">
-                            <p>321321321312</p>
-                            <p>321321321312</p>
-                            <p>321321321312</p>
-                        </div>
-                    </a>
-                </div>
-                <div class="search_content">
-                    <a href="">
-                        <div class="page_title">제목</div>
-                        <div class="content">
-                            <p>321321321312</p>
-                            <p>321321321312</p>
-                            <p>321321321312</p>
-                        </div>
-                    </a>
-                </div>
-                <div class="search_content">
-                    <a href="">
-                        <div class="page_title">제목</div>
-                        <div class="content">
-                            <p>321321321312</p>
-                            <p>321321321312</p>
-                            <p>321321321312</p>
-                        </div>
-                    </a>
-                </div>
-                <div class="search_content">
-                    <a href="">
-                        <div class="page_title">제목</div>
-                        <div class="content">
-                            <p>321321321312</p>
-                            <p>321321321312</p>
-                            <p>321321321312</p>
-                        </div>
-                    </a>
-                </div>
-                <div class="search_content">
-                    <a href="">
-                        <div class="page_title">제목</div>
-                        <div class="content">
-                            <p>321321321312</p>
-                            <p>321321321312</p>
-                            <p>321321321312</p>
-                        </div>
-                    </a>
-                </div>
-                <div class="search_content">
-                    <a href="">
-                        <div class="page_title">제목</div>
-                        <div class="content">
-                            <p>321321321312</p>
-                            <p>321321321312</p>
-                            <p>321321321312</p>
-                        </div>
-                    </a>
-                </div>
-                <div class="search_content">
-                    <a href="">
-                        <div class="page_title">제목</div>
-                        <div class="content">
-                            <p>321321321312</p>
-                            <p>321321321312</p>
-                            <p>321321321312</p>
-                        </div>
-                    </a>
-                </div>
-                <div class="search_content">
-                    <a href="">
-                        <div class="page_title">제목</div>
-                        <div class="content">
-                            <p>321321321312</p>
-                            <p>321321321312</p>
-                            <p>321321321312</p>
-                        </div>
-                    </a>
-                </div>
-                <div class="search_content">
-                    <a href="">
-                        <div class="page_title">제목</div>
-                        <div class="content">
-                            <p>321321321312</p>
-                            <p>321321321312</p>
-                            <p>321321321312</p>
-                        </div>
-                    </a>
-                </div>
-                <div class="search_content">
-                    <a href="">
-                        <div class="page_title">제목</div>
-                        <div class="content">
-                            <p>321321321312</p>
-                            <p>321321321312</p>
-                            <p>321321321312</p>
-                        </div>
-                    </a>
-                </div>
+            <div id="search_contents" class="search_contents">
             </div>
         </div>
     </div>

@@ -8,7 +8,7 @@
 
 
 
-<meta http-equiv="Last-Modified" content="2022-06-21 12:58:58 +0000">
+<meta http-equiv="Last-Modified" content="2022-06-23 08:19:00 +0000">
 
 
 
@@ -36,8 +36,8 @@
 <link rel="stylesheet" href="/assets/css/main.css">
 <link rel="stylesheet" href="/assets/css/syntax.css">
 
-<script type="text/javascript" src="/assets/js/jquery-3.6.0.js"></script>
-<script type="text/javascript" src="/assets/js/jquery-ui.js"></script>
+<script type="text/javascript" src="/assets/js/jquery-3.6.0.min.js"></script>
+<script type="text/javascript" src="/assets/js/jsrender.min.js"></script>
 <script type="text/javascript" src="/assets/js/main.js"></script>
 
 </head>
@@ -2131,7 +2131,7 @@
     <div class="content">
         <p>배포된 Play의 정보 확인 및 서비스 중지, 재개, 삭제 등 상태 관리는 <code class="language-plaintext highlighter-rouge">Developers Console</code> &gt; <code class="language-plaintext highlighter-rouge">Play kit</code> &gt; <code class="language-plaintext highlighter-rouge">Play 관리</code>  메뉴 기능을 통해 확인하거나 설정할 수 있습니다.</p>
 
-<h2 id="play-정보-확인-">Play 정보 확인 <a href="manage-a-playinformation" id="manage-a-playinformation"></a>
+<h2 id="play-정보-확인-">Play 정보 확인 <a id="manage-a-playinformation"></a>
 </h2>
 
 <p>배포가 완료된 Play는 <code class="language-plaintext highlighter-rouge">Developers Console</code> &gt; <code class="language-plaintext highlighter-rouge">Play kit</code> &gt; <code class="language-plaintext highlighter-rouge">Play 관리</code>  메뉴에서 등록된 정보와 상태를 확인하고, 상태 변경을 할 수 있습니다.</p>
@@ -2142,29 +2142,29 @@
   <li>기본 정보</li>
 </ul>
 
-<p><img src="../../assets/images/manage-a-play-01.png" alt=""></p>
+<p><img src="/assets/images/manage-a-play-01.png" alt=""></p>
 
 <ul>
   <li>등록 정보</li>
 </ul>
 
-<p><img src="../../assets/images/manage-a-play-02.png" alt=""></p>
+<p><img src="/assets/images/manage-a-play-02.png" alt=""></p>
 
 <p>공개유형이 Private Play인 경우, NUGU biz kit에 연결된 아래의 정보를 추가 확인이 가능합니다.</p>
 
-<p><img src="../../assets/images/manage-a-play-03.png" alt=""></p>
+<p><img src="/assets/images/manage-a-play-03.png" alt=""></p>
 
 <ul>
   <li>Play가 제공 중인 전용 디바이스(Private Play에 한함)</li>
   <li>Play를 사용중인 사용자(Private Play에 한함)</li>
 </ul>
 
-<h2 id="play-상태-변경중지--밎-서비스-재개-">Play 상태 변경(중지  밎 서비스 재개) <a href="change-play-status" id="change-play-status"></a>
+<h2 id="play-상태-변경중지--밎-서비스-재개-">Play 상태 변경(중지  밎 서비스 재개) <a id="change-play-status"></a>
 </h2>
 
 <p><code class="language-plaintext highlighter-rouge">Developers Console</code> &gt; <code class="language-plaintext highlighter-rouge">Play kit</code> &gt; <code class="language-plaintext highlighter-rouge">Play 관리</code>  메뉴에서 현재 서비스 중인 Play에 대해 중지(Disable)하거나 중지(Disable) 상태의 Play를 재개(Enable)할 수 있습니다.</p>
 
-<p><img src="../../assets/images/manage-a-play-04.png" alt=""></p>
+<p><img src="/assets/images/manage-a-play-04.png" alt=""></p>
 
 <ol>
   <li>관리 현황 리스트에서 상태를 변경할 Play를 클릭하여 선택합니다.</li>
@@ -2178,7 +2178,7 @@
 
 </div>
 
-<h2 id="play-삭제-">Play 삭제 <a href="delete-a-play" id="delete-a-play"></a>
+<h2 id="play-삭제-">Play 삭제 <a id="delete-a-play"></a>
 </h2>
 
 <p><code class="language-plaintext highlighter-rouge">Developers Console</code> &gt; <code class="language-plaintext highlighter-rouge">Play kit</code> &gt; <code class="language-plaintext highlighter-rouge">Play 관리</code>  메뉴에서 현재 서비스 중인 Play를 삭제 요청 할 수 있습니다. 삭제 요청 된 Play는 즉시 삭제되지 않고, 중단 처리 기간을 거쳐 종료, 삭제됩니다.</p>
@@ -2187,7 +2187,7 @@
   <li>
     <p>관리 현황 리스트에서 삭제할 Play를 클릭하여 선택합니다.</p>
 
-    <p><img src="../../assets/images/manage-a-play-05.png" alt=""></p>
+    <p><img src="/assets/images/manage-a-play-05.png" alt=""></p>
   </li>
   <li>
     <p>화면 상단의 <code class="language-plaintext highlighter-rouge">Play 삭제</code> 버튼을 클릭합니다.</p>
@@ -2237,134 +2237,28 @@
         <img id="modal_image" class="modal_image" src="">
     </div>
 </div>
+<script type="text/x-jsrender" id="search_contents_tmpl">
+
+<div class="search_content">
+    <a href="/nugu-play/distribute-and-manage-a-play/{{:url}}">
+        <div class="page_title">{{:title}}</div>
+        <div class="content">
+            {{for contents}}
+            <p>{{:}}</p>
+            {{/for}}
+        </div>
+    </a>
+</div>
+
+</script>
 <div id="modal_search_area" class="modal_image_area hide">
     <div class="modal_wrapper">
         <div class="modal_search">
             <div class="search_bar">
-                <div class="search_icon"></div>
-                <input id="search-keyword" type="text" palceholder="검색어를 입력하세요.">
+                <label class="search_icon" for="search_keyword"></label>
+                <input id="search_keyword" type="text" placeholder="최소 2자 이상의 검색어를 입력하신 후 Enter를 입력하세요.">
             </div>
-            <div class="search_contents">
-                <div class="search_content">
-                    <a href="">
-                        <div class="page_title">제목</div>
-                        <div class="content">
-                            <p>321321321312</p>
-                            <p>321321321312</p>
-                            <p>321321321312</p>
-                        </div>
-                    </a>
-                </div>
-                <div class="search_content">
-                    <a href="">
-                        <div class="page_title">제목</div>
-                        <div class="content">
-                            <p>321321321312</p>
-                            <p>321321321312</p>
-                            <p>321321321312</p>
-                        </div>
-                    </a>
-                </div>
-                <div class="search_content">
-                    <a href="">
-                        <div class="page_title">제목</div>
-                        <div class="content">
-                            <p>321321321312</p>
-                            <p>321321321312</p>
-                            <p>321321321312</p>
-                        </div>
-                    </a>
-                </div>
-                <div class="search_content">
-                    <a href="">
-                        <div class="page_title">제목</div>
-                        <div class="content">
-                            <p>321321321312</p>
-                            <p>321321321312</p>
-                            <p>321321321312</p>
-                        </div>
-                    </a>
-                </div>
-                <div class="search_content">
-                    <a href="">
-                        <div class="page_title">제목</div>
-                        <div class="content">
-                            <p>321321321312</p>
-                            <p>321321321312</p>
-                            <p>321321321312</p>
-                        </div>
-                    </a>
-                </div>
-                <div class="search_content">
-                    <a href="">
-                        <div class="page_title">제목</div>
-                        <div class="content">
-                            <p>321321321312</p>
-                            <p>321321321312</p>
-                            <p>321321321312</p>
-                        </div>
-                    </a>
-                </div>
-                <div class="search_content">
-                    <a href="">
-                        <div class="page_title">제목</div>
-                        <div class="content">
-                            <p>321321321312</p>
-                            <p>321321321312</p>
-                            <p>321321321312</p>
-                        </div>
-                    </a>
-                </div>
-                <div class="search_content">
-                    <a href="">
-                        <div class="page_title">제목</div>
-                        <div class="content">
-                            <p>321321321312</p>
-                            <p>321321321312</p>
-                            <p>321321321312</p>
-                        </div>
-                    </a>
-                </div>
-                <div class="search_content">
-                    <a href="">
-                        <div class="page_title">제목</div>
-                        <div class="content">
-                            <p>321321321312</p>
-                            <p>321321321312</p>
-                            <p>321321321312</p>
-                        </div>
-                    </a>
-                </div>
-                <div class="search_content">
-                    <a href="">
-                        <div class="page_title">제목</div>
-                        <div class="content">
-                            <p>321321321312</p>
-                            <p>321321321312</p>
-                            <p>321321321312</p>
-                        </div>
-                    </a>
-                </div>
-                <div class="search_content">
-                    <a href="">
-                        <div class="page_title">제목</div>
-                        <div class="content">
-                            <p>321321321312</p>
-                            <p>321321321312</p>
-                            <p>321321321312</p>
-                        </div>
-                    </a>
-                </div>
-                <div class="search_content">
-                    <a href="">
-                        <div class="page_title">제목</div>
-                        <div class="content">
-                            <p>321321321312</p>
-                            <p>321321321312</p>
-                            <p>321321321312</p>
-                        </div>
-                    </a>
-                </div>
+            <div id="search_contents" class="search_contents">
             </div>
         </div>
     </div>

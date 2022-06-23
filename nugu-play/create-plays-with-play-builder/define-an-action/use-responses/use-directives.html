@@ -8,7 +8,7 @@
 
 
 
-<meta http-equiv="Last-Modified" content="2022-06-21 12:58:58 +0000">
+<meta http-equiv="Last-Modified" content="2022-06-23 08:19:00 +0000">
 
 
 
@@ -36,8 +36,8 @@
 <link rel="stylesheet" href="/assets/css/main.css">
 <link rel="stylesheet" href="/assets/css/syntax.css">
 
-<script type="text/javascript" src="/assets/js/jquery-3.6.0.js"></script>
-<script type="text/javascript" src="/assets/js/jquery-ui.js"></script>
+<script type="text/javascript" src="/assets/js/jquery-3.6.0.min.js"></script>
+<script type="text/javascript" src="/assets/js/jsrender.min.js"></script>
 <script type="text/javascript" src="/assets/js/main.js"></script>
 
 </head>
@@ -2144,9 +2144,9 @@
 <p>Directive의 개념과 이를 적용하는 방법에 대한 자세한 내용은 다음을 참고하세요.</p>
 
 <ul>
-  <li>Directive 개념에 대한 자세한 내용은 <a href="">Response 사용하기</a>를 참고하세요.</li>
-  <li>Capability Interface의 개념과 Play Directive에 대한 자세한 내용은 <a href="../../use-backend-proxy/capability-interfaces">Capability Interfaces</a>를 참고하세요.</li>
-  <li>AudioPlayer Interface 지원하는 Play를 만드는 방법에 대한 자세한 내용은 <a href="../../create-a-play-with-audioplayer">AudioPlayer Interface 지원하는 Play 만들기</a>를 참고하세요.</li>
+  <li>Directive 개념에 대한 자세한 내용은 <a href="/nugu-play/create-plays-with-play-builder/define-an-action/use-responses">Response 사용하기</a>를 참고하세요.</li>
+  <li>Capability Interface의 개념과 Play Directive에 대한 자세한 내용은 <a href="/nugu-play/create-plays-with-play-builder/use-backend-proxy/capability-interfaces">Capability Interfaces</a>를 참고하세요.</li>
+  <li>AudioPlayer Interface 지원하는 Play를 만드는 방법에 대한 자세한 내용은 <a href="/nugu-play/create-plays-with-play-builder/create-a-play-with-audioplayer">AudioPlayer Interface 지원하는 Play 만들기</a>를 참고하세요.</li>
 </ul>
 
 </div>
@@ -2157,7 +2157,7 @@
 
 <p>다음은 AudioPlayer Interface를 지원하는 스피커에 Directive가 전달되는 과정을 설명한 그림입니다.</p>
 
-<p><img src="../../../../assets/images/use-directives-01.png" alt=""></p>
+<p><img src="/assets/images/use-directives-01.png" alt=""></p>
 
 <h2 id="capability-interface를-사용함으로-설정하기">Capability Interface를 사용함으로 설정하기</h2>
 
@@ -2165,13 +2165,13 @@
   <li>Play Builder 홈 화면에서 Capability Interface를 설정할 Play를 클릭하여 선택한 후 <code class="language-plaintext highlighter-rouge">General</code> &gt; <code class="language-plaintext highlighter-rouge">기본 정보</code> 페이지의 Capability Interface에서 AudioPlayer Interface 제어 항목을 <code class="language-plaintext highlighter-rouge">ON</code>으로 설정합니다.</li>
 </ul>
 
-<p><img src="../../../../assets/images/use-directives-02.png" alt=""></p>
+<p><img src="/assets/images/use-directives-02.png" alt=""></p>
 
 <ul>
   <li>Built-in Intent 15개가 추가됩니다. Built-in Intent 추가 여부는 <code class="language-plaintext highlighter-rouge">User Utterance Model</code> &gt; <code class="language-plaintext highlighter-rouge">Built-in Intents</code> 페이지에서 확인할 수 있습니다.</li>
 </ul>
 
-<p><img src="../../../../assets/images/use-directives-03.png" alt=""></p>
+<p><img src="/assets/images/use-directives-03.png" alt=""></p>
 
 <h2 id="action에서-directive-사용하기">Action에서 Directive 사용하기</h2>
 
@@ -2179,11 +2179,11 @@
 
 <div class="alerts info">
     
-<p>위 내용에 대한 자세한 내용은 <a href="../../create-a-play-with-audioplayer">AudioPlayer Interface 지원하는 Play 만들기</a>를 참고하세요. 그리고 필수 Intent에 대한 자세한 내용은 User Utterance Model 정의하기(Intent &amp; Entity)의 <a href="../../define-user-utterance-model/built-in-intents">Built-in Intents</a>를 참고하세요.</p>
+<p>위 내용에 대한 자세한 내용은 <a href="/nugu-play/create-plays-with-play-builder/create-a-play-with-audioplayer">AudioPlayer Interface 지원하는 Play 만들기</a>를 참고하세요. 그리고 필수 Intent에 대한 자세한 내용은 User Utterance Model 정의하기(Intent &amp; Entity)의 <a href="/nugu-play/create-plays-with-play-builder/define-user-utterance-model/built-in-intents">Built-in Intents</a>를 참고하세요.</p>
 
 </div>
 
-<p><img src="../../../../assets/images/use-directives-04.png" alt=""></p>
+<p><img src="/assets/images/use-directives-04.png" alt=""></p>
 
 <p>한 Play에서 여러 Directive를 사용하는 경우, Backend proxy에서 Action을 구분해서 Directive를 전달하게 됩니다.</p>
 
@@ -2247,134 +2247,28 @@
         <img id="modal_image" class="modal_image" src="">
     </div>
 </div>
+<script type="text/x-jsrender" id="search_contents_tmpl">
+
+<div class="search_content">
+    <a href="/nugu-play/create-plays-with-play-builder/define-an-action/use-responses/{{:url}}">
+        <div class="page_title">{{:title}}</div>
+        <div class="content">
+            {{for contents}}
+            <p>{{:}}</p>
+            {{/for}}
+        </div>
+    </a>
+</div>
+
+</script>
 <div id="modal_search_area" class="modal_image_area hide">
     <div class="modal_wrapper">
         <div class="modal_search">
             <div class="search_bar">
-                <div class="search_icon"></div>
-                <input id="search-keyword" type="text" palceholder="검색어를 입력하세요.">
+                <label class="search_icon" for="search_keyword"></label>
+                <input id="search_keyword" type="text" placeholder="최소 2자 이상의 검색어를 입력하신 후 Enter를 입력하세요.">
             </div>
-            <div class="search_contents">
-                <div class="search_content">
-                    <a href="">
-                        <div class="page_title">제목</div>
-                        <div class="content">
-                            <p>321321321312</p>
-                            <p>321321321312</p>
-                            <p>321321321312</p>
-                        </div>
-                    </a>
-                </div>
-                <div class="search_content">
-                    <a href="">
-                        <div class="page_title">제목</div>
-                        <div class="content">
-                            <p>321321321312</p>
-                            <p>321321321312</p>
-                            <p>321321321312</p>
-                        </div>
-                    </a>
-                </div>
-                <div class="search_content">
-                    <a href="">
-                        <div class="page_title">제목</div>
-                        <div class="content">
-                            <p>321321321312</p>
-                            <p>321321321312</p>
-                            <p>321321321312</p>
-                        </div>
-                    </a>
-                </div>
-                <div class="search_content">
-                    <a href="">
-                        <div class="page_title">제목</div>
-                        <div class="content">
-                            <p>321321321312</p>
-                            <p>321321321312</p>
-                            <p>321321321312</p>
-                        </div>
-                    </a>
-                </div>
-                <div class="search_content">
-                    <a href="">
-                        <div class="page_title">제목</div>
-                        <div class="content">
-                            <p>321321321312</p>
-                            <p>321321321312</p>
-                            <p>321321321312</p>
-                        </div>
-                    </a>
-                </div>
-                <div class="search_content">
-                    <a href="">
-                        <div class="page_title">제목</div>
-                        <div class="content">
-                            <p>321321321312</p>
-                            <p>321321321312</p>
-                            <p>321321321312</p>
-                        </div>
-                    </a>
-                </div>
-                <div class="search_content">
-                    <a href="">
-                        <div class="page_title">제목</div>
-                        <div class="content">
-                            <p>321321321312</p>
-                            <p>321321321312</p>
-                            <p>321321321312</p>
-                        </div>
-                    </a>
-                </div>
-                <div class="search_content">
-                    <a href="">
-                        <div class="page_title">제목</div>
-                        <div class="content">
-                            <p>321321321312</p>
-                            <p>321321321312</p>
-                            <p>321321321312</p>
-                        </div>
-                    </a>
-                </div>
-                <div class="search_content">
-                    <a href="">
-                        <div class="page_title">제목</div>
-                        <div class="content">
-                            <p>321321321312</p>
-                            <p>321321321312</p>
-                            <p>321321321312</p>
-                        </div>
-                    </a>
-                </div>
-                <div class="search_content">
-                    <a href="">
-                        <div class="page_title">제목</div>
-                        <div class="content">
-                            <p>321321321312</p>
-                            <p>321321321312</p>
-                            <p>321321321312</p>
-                        </div>
-                    </a>
-                </div>
-                <div class="search_content">
-                    <a href="">
-                        <div class="page_title">제목</div>
-                        <div class="content">
-                            <p>321321321312</p>
-                            <p>321321321312</p>
-                            <p>321321321312</p>
-                        </div>
-                    </a>
-                </div>
-                <div class="search_content">
-                    <a href="">
-                        <div class="page_title">제목</div>
-                        <div class="content">
-                            <p>321321321312</p>
-                            <p>321321321312</p>
-                            <p>321321321312</p>
-                        </div>
-                    </a>
-                </div>
+            <div id="search_contents" class="search_contents">
             </div>
         </div>
     </div>

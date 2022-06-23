@@ -8,7 +8,7 @@
 
 
 
-<meta http-equiv="Last-Modified" content="2022-06-21 12:58:58 +0000">
+<meta http-equiv="Last-Modified" content="2022-06-23 08:19:00 +0000">
 
 
 
@@ -40,8 +40,8 @@
 <link rel="stylesheet" href="/assets/css/main.css">
 <link rel="stylesheet" href="/assets/css/syntax.css">
 
-<script type="text/javascript" src="/assets/js/jquery-3.6.0.js"></script>
-<script type="text/javascript" src="/assets/js/jquery-ui.js"></script>
+<script type="text/javascript" src="/assets/js/jquery-3.6.0.min.js"></script>
+<script type="text/javascript" src="/assets/js/jsrender.min.js"></script>
 <script type="text/javascript" src="/assets/js/main.js"></script>
 
 </head>
@@ -2133,7 +2133,7 @@
         <div class="description">User Interface</div>
     </div>
     <div class="content">
-        <p><a href="../../sdk-design-guide/voice-chrome">SDK UX Guide</a> 을 준수하여 어플리케이션을 개발하는데 사용할 수 있는 레이아웃 객체와 UI 컨트롤 같은 UI 구성요소를 미리 빌드된 형태로 제공합니다.</p>
+        <p><a href="/nugu-sdk/sdk-design-guide/voice-chrome">SDK UX Guide</a> 을 준수하여 어플리케이션을 개발하는데 사용할 수 있는 레이아웃 객체와 UI 컨트롤 같은 UI 구성요소를 미리 빌드된 형태로 제공합니다.</p>
 
 <h2 id="chromewindow">ChromeWindow</h2>
 
@@ -2249,19 +2249,19 @@
   <tbody>
     <tr>
       <td style="text-align: left">
-<strong>fun isShown() : Boolean</strong> chromeWindow의 visible 확인</td>
+<strong>fun isShown() : Boolean</strong><br>chromeWindow의 visible 확인</td>
     </tr>
     <tr>
       <td style="text-align: left">
-<strong>fun dismiss()</strong> chromeWindow를 종료</td>
+<strong>fun dismiss()</strong><br>chromeWindow를 종료</td>
     </tr>
     <tr>
       <td style="text-align: left">
-<strong>fun setScreenOnWhileASR(screenOn: Boolean)</strong> ASR 중에 화면을 켜진 상태로 유지</td>
+<strong>fun setScreenOnWhileASR(screenOn: Boolean)</strong><br>ASR 중에 화면을 켜진 상태로 유지</td>
     </tr>
     <tr>
       <td style="text-align: left">
-<strong>fun setOnCustomChipsProvider(provider: CustomChipsProvider)</strong> chromeWindow에 표시될 custom chips (발화 가이드) 프로바이더 설정</td>
+<strong>fun setOnCustomChipsProvider(provider: CustomChipsProvider)</strong><br>chromeWindow에 표시될 custom chips (발화 가이드) 프로바이더 설정</td>
     </tr>
   </tbody>
 </table>
@@ -2310,24 +2310,25 @@
   <thead>
     <tr>
       <th style="text-align: left">Attribute</th>
+      <th>설명</th>
     </tr>
   </thead>
   <tbody>
     <tr>
-      <td style="text-align: left">
-<strong>types</strong> fab, button 제공</td>
+      <td style="text-align: left"><strong>types</strong></td>
+      <td>fab, button 제공</td>
     </tr>
     <tr>
-      <td style="text-align: left">
-<strong>colors</strong> blue, white 제공</td>
+      <td style="text-align: left"><strong>colors</strong></td>
+      <td>blue, white 제공</td>
     </tr>
     <tr>
-      <td style="text-align: left">
-<strong>autoPlay</strong> 뷰생성시 Animation을 자동으로 재생 (default:false)</td>
+      <td style="text-align: left"><strong>autoPlay</strong></td>
+      <td>뷰생성시 Animation을 자동으로 재생 (default:false)</td>
     </tr>
     <tr>
-      <td style="text-align: left">
-<strong>loopPlay</strong> Animation을 재생을 반복 (default:true)</td>
+      <td style="text-align: left"><strong>loopPlay</strong></td>
+      <td>Animation을 재생을 반복 (default:true)</td>
     </tr>
   </tbody>
 </table>
@@ -2448,134 +2449,28 @@ ex) TemplateView.nuguButtonColor = NuguButtonColor.WHITE</p>
         <img id="modal_image" class="modal_image" src="">
     </div>
 </div>
+<script type="text/x-jsrender" id="search_contents_tmpl">
+
+<div class="search_content">
+    <a href="/nugu-sdk/platform/android/{{:url}}">
+        <div class="page_title">{{:title}}</div>
+        <div class="content">
+            {{for contents}}
+            <p>{{:}}</p>
+            {{/for}}
+        </div>
+    </a>
+</div>
+
+</script>
 <div id="modal_search_area" class="modal_image_area hide">
     <div class="modal_wrapper">
         <div class="modal_search">
             <div class="search_bar">
-                <div class="search_icon"></div>
-                <input id="search-keyword" type="text" palceholder="검색어를 입력하세요.">
+                <label class="search_icon" for="search_keyword"></label>
+                <input id="search_keyword" type="text" placeholder="최소 2자 이상의 검색어를 입력하신 후 Enter를 입력하세요.">
             </div>
-            <div class="search_contents">
-                <div class="search_content">
-                    <a href="">
-                        <div class="page_title">제목</div>
-                        <div class="content">
-                            <p>321321321312</p>
-                            <p>321321321312</p>
-                            <p>321321321312</p>
-                        </div>
-                    </a>
-                </div>
-                <div class="search_content">
-                    <a href="">
-                        <div class="page_title">제목</div>
-                        <div class="content">
-                            <p>321321321312</p>
-                            <p>321321321312</p>
-                            <p>321321321312</p>
-                        </div>
-                    </a>
-                </div>
-                <div class="search_content">
-                    <a href="">
-                        <div class="page_title">제목</div>
-                        <div class="content">
-                            <p>321321321312</p>
-                            <p>321321321312</p>
-                            <p>321321321312</p>
-                        </div>
-                    </a>
-                </div>
-                <div class="search_content">
-                    <a href="">
-                        <div class="page_title">제목</div>
-                        <div class="content">
-                            <p>321321321312</p>
-                            <p>321321321312</p>
-                            <p>321321321312</p>
-                        </div>
-                    </a>
-                </div>
-                <div class="search_content">
-                    <a href="">
-                        <div class="page_title">제목</div>
-                        <div class="content">
-                            <p>321321321312</p>
-                            <p>321321321312</p>
-                            <p>321321321312</p>
-                        </div>
-                    </a>
-                </div>
-                <div class="search_content">
-                    <a href="">
-                        <div class="page_title">제목</div>
-                        <div class="content">
-                            <p>321321321312</p>
-                            <p>321321321312</p>
-                            <p>321321321312</p>
-                        </div>
-                    </a>
-                </div>
-                <div class="search_content">
-                    <a href="">
-                        <div class="page_title">제목</div>
-                        <div class="content">
-                            <p>321321321312</p>
-                            <p>321321321312</p>
-                            <p>321321321312</p>
-                        </div>
-                    </a>
-                </div>
-                <div class="search_content">
-                    <a href="">
-                        <div class="page_title">제목</div>
-                        <div class="content">
-                            <p>321321321312</p>
-                            <p>321321321312</p>
-                            <p>321321321312</p>
-                        </div>
-                    </a>
-                </div>
-                <div class="search_content">
-                    <a href="">
-                        <div class="page_title">제목</div>
-                        <div class="content">
-                            <p>321321321312</p>
-                            <p>321321321312</p>
-                            <p>321321321312</p>
-                        </div>
-                    </a>
-                </div>
-                <div class="search_content">
-                    <a href="">
-                        <div class="page_title">제목</div>
-                        <div class="content">
-                            <p>321321321312</p>
-                            <p>321321321312</p>
-                            <p>321321321312</p>
-                        </div>
-                    </a>
-                </div>
-                <div class="search_content">
-                    <a href="">
-                        <div class="page_title">제목</div>
-                        <div class="content">
-                            <p>321321321312</p>
-                            <p>321321321312</p>
-                            <p>321321321312</p>
-                        </div>
-                    </a>
-                </div>
-                <div class="search_content">
-                    <a href="">
-                        <div class="page_title">제목</div>
-                        <div class="content">
-                            <p>321321321312</p>
-                            <p>321321321312</p>
-                            <p>321321321312</p>
-                        </div>
-                    </a>
-                </div>
+            <div id="search_contents" class="search_contents">
             </div>
         </div>
     </div>

@@ -8,7 +8,7 @@
 
 
 
-<meta http-equiv="Last-Modified" content="2022-06-21 12:58:58 +0000">
+<meta http-equiv="Last-Modified" content="2022-06-23 08:19:00 +0000">
 
 
 
@@ -36,8 +36,8 @@
 <link rel="stylesheet" href="/assets/css/main.css">
 <link rel="stylesheet" href="/assets/css/syntax.css">
 
-<script type="text/javascript" src="/assets/js/jquery-3.6.0.js"></script>
-<script type="text/javascript" src="/assets/js/jquery-ui.js"></script>
+<script type="text/javascript" src="/assets/js/jquery-3.6.0.min.js"></script>
+<script type="text/javascript" src="/assets/js/jsrender.min.js"></script>
 <script type="text/javascript" src="/assets/js/main.js"></script>
 
 </head>
@@ -2131,14 +2131,14 @@
     <div class="content">
         <p>NUGU 디바이스를 사무 공간, 호텔, 병원 등 다양한 공용 공간에서, 공간의 목적에 맞게 사용 가능합니다. NUGU 디바이스 설치 후 전용 디바이스로 등록/설정하면, NUGU 개인 계정과 연결없이 해당 공간에서 누구나 사용 가능합니다.</p>
 
-<h2 id="등록-프로세스-">등록 프로세스 <a href="registration-process" id="registration-process"></a>
+<h2 id="등록-프로세스-">등록 프로세스 <a id="registration-process"></a>
 </h2>
 
 <p>전용 디바이스 기능 사용을 하려면, 먼저 디바이스를 등록해야 합니다.</p>
 
 <p>디바이스 등록은 사전 준비 → 디바이스 그룹 생성 → 디바이스 Setup Tool 설치 → Setup Tool을 통한 디바이스 등록 및 설정 프로세스로 진행합니다.</p>
 
-<h2 id="사전-준비-">사전 준비 <a href="prerequisites" id="prerequisites"></a>
+<h2 id="사전-준비-">사전 준비 <a id="prerequisites"></a>
 </h2>
 
 <p>전용 디바이스의 등록 설정을 위해선, 아래와 같은 사전 준비와 확인이 필요합니다.</p>
@@ -2152,35 +2152,35 @@
 <p><strong>디바이스 설정 모드(Setup 모드)</strong><br>
 처음 개봉한 디바이스는 전원을 켜면 자동으로 설정 모드로 진입하기 때문에 별도의 설정 작업을 진행하지 않아도 됩니다. 단, 이미 사용하고 중인 디바이스의 경우, 스피커의 네트워크 진입 모드 버튼을 누르거나 스피커 상단의 음소거 버튼을 길게(7-8초) 눌러 설정 모드로 변경할 수 있습니다.</p>
 
-<h2 id="디바이스-그룹-생성-">디바이스 그룹 생성 <a href="create-a-device-group" id="create-a-device-group"></a>
+<h2 id="디바이스-그룹-생성-">디바이스 그룹 생성 <a id="create-a-device-group"></a>
 </h2>
 
 <p>사전 준비가 끝나면 다음으로 디바이스 그룹을 생성합니다.</p>
 
 <p>⁣1. <code class="language-plaintext highlighter-rouge">Developers Console</code> &gt;<code class="language-plaintext highlighter-rouge">Biz kit</code> &gt; <code class="language-plaintext highlighter-rouge">Biz 전용 디바이스 관리</code> 메뉴에서 <code class="language-plaintext highlighter-rouge">그룹 생성하기</code> 버튼을 클릭합니다.</p>
 
-<p><img src="../assets/images/manage-shared-device-01.jpg" alt="">
+<p><img src="/assets/images/manage-shared-device-01.jpg" alt="">
 ⁣2. 디바이스 그룹 생성 팝업에서 생성할 디바이스 그룹의 기본 정보(디바이스 그룹명, 디바이스 그룹 설명, 주소)를 입력하고 <code class="language-plaintext highlighter-rouge">생성</code> 버튼을 클릭하면 그룹이 생성됩니다.</p>
 <ul>
   <li>특정 주소 정보가 필요한 서비스(예: 날씨)의 경우, 주소를 등록하면 등록한 주소지를 기준으로 서비스가 제공됩니다.</li>
 </ul>
 
-<p><img src="../assets/images/manage-shared-device-02.jpg" alt=""></p>
+<p><img src="/assets/images/manage-shared-device-02.jpg" alt=""></p>
 
 <ul>
   <li>디바이스 그룹 현황 리스트에 생성한 디바이스 그룹이 표시됩니다.</li>
 </ul>
 
-<p><img src="../assets/images/manage-shared-device-03.jpg" alt=""></p>
+<p><img src="/assets/images/manage-shared-device-03.jpg" alt=""></p>
 
-<h2 id="setup-tool-설치-및-디바이스-등록-">Setup Tool 설치 및 디바이스 등록 <a href="installsetuptoolsandregistershareddevice" id="installsetuptoolsandregistershareddevice"></a>
+<h2 id="setup-tool-설치-및-디바이스-등록-">Setup Tool 설치 및 디바이스 등록 <a id="installsetuptoolsandregistershareddevice"></a>
 </h2>
 
 <p>디바이스 그룹을 생성한 후에는 [Setup Tool]을 설치하고 사용할 디바이스를 등록합니다.</p>
 
 <p>⁣1. <code class="language-plaintext highlighter-rouge">Developers Console</code> &gt;<code class="language-plaintext highlighter-rouge">Biz kit</code> &gt; <code class="language-plaintext highlighter-rouge">Biz 전용 디바이스 관리</code> 메뉴에서  <code class="language-plaintext highlighter-rouge">Setup Tool 다운로드</code> 버튼을 클릭하여 설치 파일을 내려받아 프로그램을 설치합니다.</p>
 
-<p><img src="../assets/images/manage-shared-device-04.jpg" alt=""></p>
+<p><img src="/assets/images/manage-shared-device-04.jpg" alt=""></p>
 
 <div class="alerts info">
     
@@ -2190,11 +2190,11 @@
 
 <p>⁣2. Setup Tool 프로그램을 실행하고, 전용 디바이스를 등록할 디바이스 그룹명을 선택하고 <code class="language-plaintext highlighter-rouge">다음</code> 버튼을 클릭합니다.</p>
 
-<p><img src="../assets/images/manage-shared-device-05.png" alt=""></p>
+<p><img src="/assets/images/manage-shared-device-05.png" alt=""></p>
 
 <p>⁣3. <code class="language-plaintext highlighter-rouge">디바이스 검색</code> 버튼을 클릭하여 전용 디바이스로 등록할 디바이스를 검색 및 선택한 후 <code class="language-plaintext highlighter-rouge">다음</code> 버튼을 클릭합니다. 체험판 회원의 경우 10대의 디바이스만 등록이 가능합니다.</p>
 
-<p><img src="../assets/images/manage-shared-device-06.png" alt=""></p>
+<p><img src="/assets/images/manage-shared-device-06.png" alt=""></p>
 
 <div class="alerts info">
     
@@ -2207,11 +2207,11 @@
 
 <p>⁣4. <code class="language-plaintext highlighter-rouge">Wi-Fi 검색</code> 버튼을 클릭하여 전용 디바이스에 등록하려는 Wi-Fi 네트워크를 선택한 후 <code class="language-plaintext highlighter-rouge">다음</code> 버튼을 클릭하여 네트워크를 설정합니다.</p>
 
-<p><img src="../assets/images/manage-shared-device-07.png" alt=""></p>
+<p><img src="/assets/images/manage-shared-device-07.png" alt=""></p>
 
 <p>⁣5. 네트워크 설정을 완료한 후 <code class="language-plaintext highlighter-rouge">다음</code> 버튼을 클릭하여 NUGU developers에 전용 디바이스로 등록을 요청합니다.</p>
 
-<p><img src="../assets/images/manage-shared-device-08.png" alt=""></p>
+<p><img src="/assets/images/manage-shared-device-08.png" alt=""></p>
 
 <div class="alerts info">
     
@@ -2221,11 +2221,11 @@
 
 <p>⁣6. 디바이스 상태가 디바이스 등록 완료로 모두 변경되면 <code class="language-plaintext highlighter-rouge">다음</code> 버튼을 클릭합니다.</p>
 
-<p><img src="../assets/images/manage-shared-device-09.png" alt=""></p>
+<p><img src="/assets/images/manage-shared-device-09.png" alt=""></p>
 
 <p>⁣7. 디바이스 최종 등록 완료 메시지가 표시되면 <code class="language-plaintext highlighter-rouge">확인</code> 버튼을 클릭하여 작업을 종료합니다.</p>
 
-<p><img src="../assets/images/manage-shared-device-10.png" alt=""></p>
+<p><img src="/assets/images/manage-shared-device-10.png" alt=""></p>
 
 <div class="alerts info">
     
@@ -2233,7 +2233,7 @@
 
 </div>
 
-<h2 id="디바이스-그룹-관리-">디바이스 그룹 관리 <a href="manage-device-groups" id="manage-device-groups"></a>
+<h2 id="디바이스-그룹-관리-">디바이스 그룹 관리 <a id="manage-device-groups"></a>
 </h2>
 
 <p>이 메뉴에서는 디바이스 그룹 정보를 수정 또는 삭제, 등록된 전용 디바이스 삭제, Private Play 추가 등의 작업을 할 수 있습니다.</p>
@@ -2242,17 +2242,17 @@
 
 <p><code class="language-plaintext highlighter-rouge">Developers Console</code> &gt;<code class="language-plaintext highlighter-rouge">Biz kit</code> &gt; <code class="language-plaintext highlighter-rouge">Biz 전용 디바이스 관리</code> 디바이스 그룹 현황 리스트에서 정보를 수정할 디바이스 그룹명을 클릭하여 선택합니다.</p>
 
-<p><img src="../assets/images/manage-shared-device-11.jpg" alt=""></p>
+<p><img src="/assets/images/manage-shared-device-11.jpg" alt=""></p>
 
 <p>디바이스 그룹 상세 페이지의 기본 정보 항목에 있는 <code class="language-plaintext highlighter-rouge">수정</code> 버튼을 클릭한 후 그룹명, 그룹설명, 주소 등의 기본 정보를 조회/변경할 수 있습니다. Biz API를 사용하는 정식판 권한의 경우, 추가적으로 API를 보낼 수 있는 디바이스 그룹 token을 확인 할 수 있습니다.</p>
 
-<p><img src="../assets/images/manage-shared-device-12.jpg" alt=""></p>
+<p><img src="/assets/images/manage-shared-device-12.jpg" alt=""></p>
 
 <h3 id="등록된-디바이스-삭제">등록된 디바이스 삭제</h3>
 
 <p>디바이스 그룹 상세 페이지의 등록된 디바이스 항목에서 삭제할 디바이스를 선택한 후 <code class="language-plaintext highlighter-rouge">디바이스 삭제</code> 버튼을 클릭합니다.</p>
 
-<p><img src="../assets/images/manage-shared-device-13.jpg" alt=""></p>
+<p><img src="/assets/images/manage-shared-device-13.jpg" alt=""></p>
 
 <div class="alerts info">
     
@@ -2266,17 +2266,17 @@
 
 <p>디바이스 그룹 상세 페이지의 Private Play 항목에서 <code class="language-plaintext highlighter-rouge">Play 추가하기</code> 버튼을 클릭하여 Private Play 추가할 수 있습니다.</p>
 
-<p><img src="../assets/images/manage-shared-device-14.png" alt=""></p>
+<p><img src="/assets/images/manage-shared-device-14.png" alt=""></p>
 
 <p>등록한 Private Play를 삭제하려면, 삭제할 Private Play를 선택하고 <code class="language-plaintext highlighter-rouge">- Play 삭제</code> 버튼을 클릭합니다.</p>
 
-<p><img src="../assets/images/manage-shared-device-15.png" alt=""></p>
+<p><img src="/assets/images/manage-shared-device-15.png" alt=""></p>
 
 <h3 id="디바이스-그룹-삭제">디바이스 그룹 삭제</h3>
 
 <p>디바이스 그룹을 삭제하려면, 디바이스 그룹 현황 리스트에서 삭제할 디바이스 그룹 선택 후 <code class="language-plaintext highlighter-rouge">디바이스 그룹 삭제</code> 버튼을 클릭합니다.</p>
 
-<p><img src="../assets/images/manage-shared-device-16.jpeg" alt=""></p>
+<p><img src="/assets/images/manage-shared-device-16.jpeg" alt=""></p>
 
 <div class="alerts info">
     
@@ -2288,17 +2288,17 @@
 
 <p>정식판 권한의 경우, 전용 디바이스 그룹에서 NUGU에서 기본적으로 제공하는 Play 서비스를 사용할 수 없도록 제외 Play를 지정 할 수 있습니다. <code class="language-plaintext highlighter-rouge">설정하기</code> 버튼으로 NUGU device의 기본 서비스 Play 목록을 조회합니다.</p>
 
-<p><img src="../assets/images/manage-shared-device-17.jpg" alt=""></p>
+<p><img src="/assets/images/manage-shared-device-17.jpg" alt=""></p>
 
 <p>해당 디바이스 그룹에서, 사용하지 못하게 할 특정 서비스 Play를 선택 합니다.</p>
 
-<p><img src="../assets/images/manage-shared-device-18.jpg" alt=""></p>
+<p><img src="/assets/images/manage-shared-device-18.jpg" alt=""></p>
 
 <p>설정이 완료되면, 해당 Play 서비스의 이용 시, 이용 불가능 안내 처리 됩니다.</p>
 
-<p><img src="../assets/images/manage-shared-device-19.jpg" alt=""></p>
+<p><img src="/assets/images/manage-shared-device-19.jpg" alt=""></p>
 
-<h2 id="biz-전용-디바이스의-서비스-이용-제한-">Biz 전용 디바이스의 서비스 이용 제한 <a href="limitservicesforshareddevice" id="limitservicesforshareddevice"></a>
+<h2 id="biz-전용-디바이스의-서비스-이용-제한-">Biz 전용 디바이스의 서비스 이용 제한 <a id="limitservicesforshareddevice"></a>
 </h2>
 
 <p>NUGU 디바이스를 전용 디바이스로 등록하면, 사용 제외 Play 설정과 관계없이 NUGU에서 제공되는 일부 서비스의 이용이 기본적으로 제한됩니다. 제한되는 서비스 항목은 다음과 같습니다.</p>
@@ -2350,134 +2350,28 @@
         <img id="modal_image" class="modal_image" src="">
     </div>
 </div>
+<script type="text/x-jsrender" id="search_contents_tmpl">
+
+<div class="search_content">
+    <a href="/work-with-nugu-biz/{{:url}}">
+        <div class="page_title">{{:title}}</div>
+        <div class="content">
+            {{for contents}}
+            <p>{{:}}</p>
+            {{/for}}
+        </div>
+    </a>
+</div>
+
+</script>
 <div id="modal_search_area" class="modal_image_area hide">
     <div class="modal_wrapper">
         <div class="modal_search">
             <div class="search_bar">
-                <div class="search_icon"></div>
-                <input id="search-keyword" type="text" palceholder="검색어를 입력하세요.">
+                <label class="search_icon" for="search_keyword"></label>
+                <input id="search_keyword" type="text" placeholder="최소 2자 이상의 검색어를 입력하신 후 Enter를 입력하세요.">
             </div>
-            <div class="search_contents">
-                <div class="search_content">
-                    <a href="">
-                        <div class="page_title">제목</div>
-                        <div class="content">
-                            <p>321321321312</p>
-                            <p>321321321312</p>
-                            <p>321321321312</p>
-                        </div>
-                    </a>
-                </div>
-                <div class="search_content">
-                    <a href="">
-                        <div class="page_title">제목</div>
-                        <div class="content">
-                            <p>321321321312</p>
-                            <p>321321321312</p>
-                            <p>321321321312</p>
-                        </div>
-                    </a>
-                </div>
-                <div class="search_content">
-                    <a href="">
-                        <div class="page_title">제목</div>
-                        <div class="content">
-                            <p>321321321312</p>
-                            <p>321321321312</p>
-                            <p>321321321312</p>
-                        </div>
-                    </a>
-                </div>
-                <div class="search_content">
-                    <a href="">
-                        <div class="page_title">제목</div>
-                        <div class="content">
-                            <p>321321321312</p>
-                            <p>321321321312</p>
-                            <p>321321321312</p>
-                        </div>
-                    </a>
-                </div>
-                <div class="search_content">
-                    <a href="">
-                        <div class="page_title">제목</div>
-                        <div class="content">
-                            <p>321321321312</p>
-                            <p>321321321312</p>
-                            <p>321321321312</p>
-                        </div>
-                    </a>
-                </div>
-                <div class="search_content">
-                    <a href="">
-                        <div class="page_title">제목</div>
-                        <div class="content">
-                            <p>321321321312</p>
-                            <p>321321321312</p>
-                            <p>321321321312</p>
-                        </div>
-                    </a>
-                </div>
-                <div class="search_content">
-                    <a href="">
-                        <div class="page_title">제목</div>
-                        <div class="content">
-                            <p>321321321312</p>
-                            <p>321321321312</p>
-                            <p>321321321312</p>
-                        </div>
-                    </a>
-                </div>
-                <div class="search_content">
-                    <a href="">
-                        <div class="page_title">제목</div>
-                        <div class="content">
-                            <p>321321321312</p>
-                            <p>321321321312</p>
-                            <p>321321321312</p>
-                        </div>
-                    </a>
-                </div>
-                <div class="search_content">
-                    <a href="">
-                        <div class="page_title">제목</div>
-                        <div class="content">
-                            <p>321321321312</p>
-                            <p>321321321312</p>
-                            <p>321321321312</p>
-                        </div>
-                    </a>
-                </div>
-                <div class="search_content">
-                    <a href="">
-                        <div class="page_title">제목</div>
-                        <div class="content">
-                            <p>321321321312</p>
-                            <p>321321321312</p>
-                            <p>321321321312</p>
-                        </div>
-                    </a>
-                </div>
-                <div class="search_content">
-                    <a href="">
-                        <div class="page_title">제목</div>
-                        <div class="content">
-                            <p>321321321312</p>
-                            <p>321321321312</p>
-                            <p>321321321312</p>
-                        </div>
-                    </a>
-                </div>
-                <div class="search_content">
-                    <a href="">
-                        <div class="page_title">제목</div>
-                        <div class="content">
-                            <p>321321321312</p>
-                            <p>321321321312</p>
-                            <p>321321321312</p>
-                        </div>
-                    </a>
-                </div>
+            <div id="search_contents" class="search_contents">
             </div>
         </div>
     </div>

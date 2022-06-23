@@ -8,7 +8,7 @@
 
 
 
-<meta http-equiv="Last-Modified" content="2022-06-21 12:58:58 +0000">
+<meta http-equiv="Last-Modified" content="2022-06-23 08:19:00 +0000">
 
 
 
@@ -36,8 +36,8 @@
 <link rel="stylesheet" href="/assets/css/main.css">
 <link rel="stylesheet" href="/assets/css/syntax.css">
 
-<script type="text/javascript" src="/assets/js/jquery-3.6.0.js"></script>
-<script type="text/javascript" src="/assets/js/jquery-ui.js"></script>
+<script type="text/javascript" src="/assets/js/jquery-3.6.0.min.js"></script>
+<script type="text/javascript" src="/assets/js/jsrender.min.js"></script>
 <script type="text/javascript" src="/assets/js/main.js"></script>
 
 </head>
@@ -2135,11 +2135,11 @@
 
 <div class="alerts info">
     
-<p>개발에 대한 자세한 내용은 <a href="use-backend-proxy">외부 연동 서버(Backend proxy)</a>를 참고하세요.</p>
+<p>개발에 대한 자세한 내용은 <a href="/nugu-play/create-plays-with-play-builder/use-backend-proxy">외부 연동 서버(Backend proxy)</a>를 참고하세요.</p>
 
 </div>
 
-<p><img src="../../assets/images/create-a-play-using-backend-proxy-01.png" alt=""></p>
+<p><img src="/assets/images/create-a-play-using-backend-proxy-01.png" alt=""></p>
 
 <p>Backend proxy는 위 그림과 같이 다음의 경우에 사용합니다.</p>
 
@@ -2203,13 +2203,13 @@
 
 <ul>
   <li>
-<strong>Parameter</strong>: <a href="define-an-action/use-parameters">Parameter 사용하기</a>
+<strong>Parameter</strong>: <a href="/nugu-play/create-plays-with-play-builder/define-an-action/use-parameters">Parameter 사용하기</a>
 </li>
   <li>
-<strong>Capability Interface(Directive)</strong>: <a href="create-a-play-with-audioplayer">AudioPlayer Interface 지원하는 Play 만들기</a>
+<strong>Capability Interface(Directive)</strong>: <a href="/nugu-play/create-plays-with-play-builder/create-a-play-with-audioplayer">AudioPlayer Interface 지원하는 Play 만들기</a>
 </li>
   <li>
-<strong>예외 상황</strong>: <a href="./define-an-action/manage-exceptions">예외 상황 관리</a>
+<strong>예외 상황</strong>: <a href="/nugu-play/create-plays-with-play-builder/define-an-action/manage-exceptions">예외 상황 관리</a>
 </li>
 </ul>
 
@@ -2222,7 +2222,7 @@
 <ol>
   <li>Backend proxy 서버를 구축합니다.
     <ul>
-      <li>Backend proxy 개발에 대한 자세한 내용은 <a href="use-backend-proxy">외부 연동 서버(Backend proxy)</a>를 참고하세요.</li>
+      <li>Backend proxy 개발에 대한 자세한 내용은 <a href="/nugu-play/create-plays-with-play-builder/use-backend-proxy">외부 연동 서버(Backend proxy)</a>를 참고하세요.</li>
     </ul>
   </li>
   <li>Backend proxy를 Play와 연결합니다.
@@ -2238,7 +2238,7 @@
       <li>정의한 Backend Parameter에 어떤 값이 담기기를 기대하는지 안내해야 합니다.</li>
       <li>Play를 만들면서, 예외 상황을 처리해야 한다면 예외 상황 관리에 등록을 하고, 이를 Exception Code로 요청해야 합니다. (예 : 서버 장애,  잘못된 사용자의 요청 등)
         <ul>
-          <li>예외 처리에 대한 자세한 내용은 <a href="define-an-action/manage-exceptions">예외  상황 관리</a>를 참고하세요.</li>
+          <li>예외 처리에 대한 자세한 내용은 <a href="/nugu-play/create-plays-with-play-builder/define-an-action/manage-exceptions">예외  상황 관리</a>를 참고하세요.</li>
         </ul>
       </li>
       <li>Capability Interface를 사용하는 경우 어떤 Intent에서 어떻게 Directive를 내보낼 것인지 논의합니다.</li>
@@ -2258,8 +2258,8 @@
 <p>이 장과 같이 보면 좋은 도움말</p>
 
 <ul>
-  <li><a href="use-backend-proxy">Backend proxy</a></li>
-  <li><a href="define-an-action/use-parameters">Backend Parameter</a></li>
+  <li><a href="/nugu-play/create-plays-with-play-builder/use-backend-proxy">Backend proxy</a></li>
+  <li><a href="/nugu-play/create-plays-with-play-builder/define-an-action/use-parameters">Backend Parameter</a></li>
 </ul>
 
 </div>
@@ -2297,134 +2297,28 @@
         <img id="modal_image" class="modal_image" src="">
     </div>
 </div>
+<script type="text/x-jsrender" id="search_contents_tmpl">
+
+<div class="search_content">
+    <a href="/nugu-play/create-plays-with-play-builder/{{:url}}">
+        <div class="page_title">{{:title}}</div>
+        <div class="content">
+            {{for contents}}
+            <p>{{:}}</p>
+            {{/for}}
+        </div>
+    </a>
+</div>
+
+</script>
 <div id="modal_search_area" class="modal_image_area hide">
     <div class="modal_wrapper">
         <div class="modal_search">
             <div class="search_bar">
-                <div class="search_icon"></div>
-                <input id="search-keyword" type="text" palceholder="검색어를 입력하세요.">
+                <label class="search_icon" for="search_keyword"></label>
+                <input id="search_keyword" type="text" placeholder="최소 2자 이상의 검색어를 입력하신 후 Enter를 입력하세요.">
             </div>
-            <div class="search_contents">
-                <div class="search_content">
-                    <a href="">
-                        <div class="page_title">제목</div>
-                        <div class="content">
-                            <p>321321321312</p>
-                            <p>321321321312</p>
-                            <p>321321321312</p>
-                        </div>
-                    </a>
-                </div>
-                <div class="search_content">
-                    <a href="">
-                        <div class="page_title">제목</div>
-                        <div class="content">
-                            <p>321321321312</p>
-                            <p>321321321312</p>
-                            <p>321321321312</p>
-                        </div>
-                    </a>
-                </div>
-                <div class="search_content">
-                    <a href="">
-                        <div class="page_title">제목</div>
-                        <div class="content">
-                            <p>321321321312</p>
-                            <p>321321321312</p>
-                            <p>321321321312</p>
-                        </div>
-                    </a>
-                </div>
-                <div class="search_content">
-                    <a href="">
-                        <div class="page_title">제목</div>
-                        <div class="content">
-                            <p>321321321312</p>
-                            <p>321321321312</p>
-                            <p>321321321312</p>
-                        </div>
-                    </a>
-                </div>
-                <div class="search_content">
-                    <a href="">
-                        <div class="page_title">제목</div>
-                        <div class="content">
-                            <p>321321321312</p>
-                            <p>321321321312</p>
-                            <p>321321321312</p>
-                        </div>
-                    </a>
-                </div>
-                <div class="search_content">
-                    <a href="">
-                        <div class="page_title">제목</div>
-                        <div class="content">
-                            <p>321321321312</p>
-                            <p>321321321312</p>
-                            <p>321321321312</p>
-                        </div>
-                    </a>
-                </div>
-                <div class="search_content">
-                    <a href="">
-                        <div class="page_title">제목</div>
-                        <div class="content">
-                            <p>321321321312</p>
-                            <p>321321321312</p>
-                            <p>321321321312</p>
-                        </div>
-                    </a>
-                </div>
-                <div class="search_content">
-                    <a href="">
-                        <div class="page_title">제목</div>
-                        <div class="content">
-                            <p>321321321312</p>
-                            <p>321321321312</p>
-                            <p>321321321312</p>
-                        </div>
-                    </a>
-                </div>
-                <div class="search_content">
-                    <a href="">
-                        <div class="page_title">제목</div>
-                        <div class="content">
-                            <p>321321321312</p>
-                            <p>321321321312</p>
-                            <p>321321321312</p>
-                        </div>
-                    </a>
-                </div>
-                <div class="search_content">
-                    <a href="">
-                        <div class="page_title">제목</div>
-                        <div class="content">
-                            <p>321321321312</p>
-                            <p>321321321312</p>
-                            <p>321321321312</p>
-                        </div>
-                    </a>
-                </div>
-                <div class="search_content">
-                    <a href="">
-                        <div class="page_title">제목</div>
-                        <div class="content">
-                            <p>321321321312</p>
-                            <p>321321321312</p>
-                            <p>321321321312</p>
-                        </div>
-                    </a>
-                </div>
-                <div class="search_content">
-                    <a href="">
-                        <div class="page_title">제목</div>
-                        <div class="content">
-                            <p>321321321312</p>
-                            <p>321321321312</p>
-                            <p>321321321312</p>
-                        </div>
-                    </a>
-                </div>
+            <div id="search_contents" class="search_contents">
             </div>
         </div>
     </div>
