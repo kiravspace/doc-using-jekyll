@@ -91,9 +91,6 @@ $(function () {
             this.updateSectionLinks();
 
             Page.on(this, $(window), "popstate", e => {
-                // this.updateSectionContentFromPathname(document.location.pathname + document.location.hash);
-                // console.log("popstate", $(location).attr("pathname"), $(location).attr("hash"), e.originalEvent.state);
-                // this.updateSectionContentFromPathname($(location).attr("pathname") + $(location).attr("hash"));
                 this.loadPage($(location).attr("pathname") + $(location).attr("hash"));
             });
         }
@@ -118,7 +115,7 @@ $(function () {
                 .filter((_, div) => $(div).parent().has(selected).length)
                 .removeClass("fold");
 
-            selected.parent().addClass("selected");
+            selected.parent().addClass("selected")[0].scrollIntoView();
         }
 
         updateSectionTabs() {
@@ -213,70 +210,6 @@ $(function () {
             }
         }
 
-        // updateSectionContent(e) {
-        //     e.preventDefault();
-        //
-        //     let pathname = $(e.currentTarget).attr("href");
-        //     let before = $(location).attr("pathname");
-        //
-        //     if (pathname.startsWith("#")) {
-        //         console.log("hash change");
-        //         if (typeof (history.pushState) !== "undefined") {
-        //             history.pushState({"before": before}, document.title, pathname);
-        //         }
-        //
-        //         let hash = $(Page.getHash(pathname));
-        //         if (hash) {
-        //             hash[0].scrollIntoView();
-        //         }
-        //
-        //         return;
-        //     }
-        //
-        //     if (Page.matchPath($(location).attr("pathname"), pathname)) {
-        //         return;
-        //     }
-        //
-        //     console.log("current:" + before, "target: " + pathname);
-        //     this.section.load(pathname + " #container", html => {
-        //         this.section.scrollTop(0);
-        //         let title = html.match("<title>(.*?)</title>")[1];
-        //         document.title = title;
-        //
-        //         if (typeof (history.pushState) !== "undefined") {
-        //             history.pushState({"before": before}, title, pathname);
-        //         }
-        //
-        //         console.log("before:" + before, "current:" + $(location).attr("pathname"));
-        //
-        //         if (Page.hasHash(pathname)) {
-        //             location.hash = Page.getHash(pathname)
-        //         }
-        //
-        //         this.updateSectionTabs();
-        //         this.updateSectionImages();
-        //         this.updateSectionLinks();
-        //         this.updateNavigationSelected(pathname);
-        //     });
-        // }
-
-        // updateSectionContentFromPathname(pathname) {
-        //     this.section.load(pathname + " #container", html => {
-        //         this.section.scrollTop(0);
-        //         let title = html.match("<title>(.*?)</title>")[1];
-        //         document.title = title;
-        //
-        //         if (Page.hasHash(pathname)) {
-        //             window.location = Page.getHash(pathname)
-        //         }
-        //
-        //         this.updateSectionTabs();
-        //         this.updateSectionImages();
-        //         this.updateSectionLinks();
-        //         this.updateNavigationSelected(pathname);
-        //     });
-        // }
-
         select_search_result(keyword) {
             let result = Page.flatMap(
                 this.search_indexes
@@ -309,7 +242,7 @@ $(function () {
             });
 
             return result.map(r => {
-                r.contents = r.contents.map(s => s.replace(new RegExp(keyword, "gi"), "<code>" + keyword + "</code>"));
+                r.contents = r.contents.map(s => s.replace(new RegExp("(" + keyword + ")", "gi"), "<code>$1</code>"));
                 return r;
             });
         }
