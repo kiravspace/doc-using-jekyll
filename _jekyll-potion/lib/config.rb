@@ -10,6 +10,9 @@ module Jekyll::Potion
     ASSETS_PATH_KEY = "assets"
     IS_SHOW_PAGINATION_KEY = "is_show_pagination"
     IS_SHOW_EMPTY_KEY = "is_show_empty"
+    FAVICON_KEY = "favicon"
+    FAVICON_PATH_KEY = "path"
+    FAVICON_ASSETS_KEY = "assets"
     PROCESSOR_KEY = "processors"
 
     DEFAULT = {
@@ -19,6 +22,10 @@ module Jekyll::Potion
       ASSETS_PATH_KEY => "assets",
       IS_SHOW_PAGINATION_KEY => true,
       IS_SHOW_EMPTY_KEY => true,
+      FAVICON_KEY => {
+        FAVICON_PATH_KEY => "",
+        FAVICON_ASSETS_KEY => ""
+      },
       PROCESSOR_KEY => [
         "optional-front-matter-processor",
         "static-files-processor",
@@ -51,6 +58,9 @@ module Jekyll::Potion
                                           .map { |processor_class| processor_class.new(self) }
 
       @assets_collection = Jekyll::Collection.new(@site, assets_path)
+
+      puts @config
+      puts site.config[CONFIG_KEY]
     end
 
     def merge(default, config)
@@ -123,6 +133,14 @@ module Jekyll::Potion
       else
         File.join(baseurl, @config[ICON_KEY])
       end
+    end
+
+    def favicon_path
+      @config[FAVICON_KEY][FAVICON_PATH_KEY]
+    end
+
+    def favicon_assets
+      File.join(baseurl, @config[FAVICON_KEY][FAVICON_ASSETS_KEY])
     end
 
     def templates_path
