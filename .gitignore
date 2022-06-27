@@ -4,4 +4,7 @@ _site
 .jekyll-metadata
 vendor
 .idea
+*.iws
 *.iml
+*.ipr
+normalize
