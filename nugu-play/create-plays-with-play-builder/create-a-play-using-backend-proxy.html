@@ -8,7 +8,7 @@
 
 
 
-<meta http-equiv="Last-Modified" content="2022-06-23 08:56:35 +0000">
+<meta http-equiv="Last-Modified" content="2022-06-27 10:20:03 +0000">
 
 
 
@@ -63,10 +63,10 @@
 <body>
 <header>
     <div class="header">
-        <div class="title">
-            <img src="/assets/icon/icon.png">
+        <a href="/" class="title">
+            <img src="/assets/icon/icon.png" class="img_inline">
             Developers | Guide
-        </div>
+        </a>
     </div>
     <div class="search">
         <div id="go_search" class="search_bar">
@@ -2154,11 +2154,11 @@
 
 <div class="alerts info">
     
-<p>개발에 대한 자세한 내용은 <a href="/nugu-play/create-plays-with-play-builder/use-backend-proxy">외부 연동 서버(Backend proxy)</a>를 참고하세요.</p>
+<p>개발에 대한 자세한 내용은 <a href="/nugu-play/create-plays-with-play-builder/use-backend-proxy" class="a_internal">외부 연동 서버(Backend proxy)</a>를 참고하세요.</p>
 
 </div>
 
-<p><img src="/assets/images/create-a-play-using-backend-proxy-01.png" alt=""></p>
+<p><img src="/assets/images/create-a-play-using-backend-proxy-01.png" alt="" class="img_internal"></p>
 
 <p>Backend proxy는 위 그림과 같이 다음의 경우에 사용합니다.</p>
 
@@ -2222,13 +2222,13 @@
 
 <ul>
   <li>
-<strong>Parameter</strong>: <a href="/nugu-play/create-plays-with-play-builder/define-an-action/use-parameters">Parameter 사용하기</a>
+<strong>Parameter</strong>: <a href="/nugu-play/create-plays-with-play-builder/define-an-action/use-parameters" class="a_internal">Parameter 사용하기</a>
 </li>
   <li>
-<strong>Capability Interface(Directive)</strong>: <a href="/nugu-play/create-plays-with-play-builder/create-a-play-with-audioplayer">AudioPlayer Interface 지원하는 Play 만들기</a>
+<strong>Capability Interface(Directive)</strong>: <a href="/nugu-play/create-plays-with-play-builder/create-a-play-with-audioplayer" class="a_internal">AudioPlayer Interface 지원하는 Play 만들기</a>
 </li>
   <li>
-<strong>예외 상황</strong>: <a href="/nugu-play/create-plays-with-play-builder/define-an-action/manage-exceptions">예외 상황 관리</a>
+<strong>예외 상황</strong>: <a href="/nugu-play/create-plays-with-play-builder/define-an-action/manage-exceptions" class="a_internal">예외 상황 관리</a>
 </li>
 </ul>
 
@@ -2241,7 +2241,7 @@
 <ol>
   <li>Backend proxy 서버를 구축합니다.
     <ul>
-      <li>Backend proxy 개발에 대한 자세한 내용은 <a href="/nugu-play/create-plays-with-play-builder/use-backend-proxy">외부 연동 서버(Backend proxy)</a>를 참고하세요.</li>
+      <li>Backend proxy 개발에 대한 자세한 내용은 <a href="/nugu-play/create-plays-with-play-builder/use-backend-proxy" class="a_internal">외부 연동 서버(Backend proxy)</a>를 참고하세요.</li>
     </ul>
   </li>
   <li>Backend proxy를 Play와 연결합니다.
@@ -2257,7 +2257,7 @@
       <li>정의한 Backend Parameter에 어떤 값이 담기기를 기대하는지 안내해야 합니다.</li>
       <li>Play를 만들면서, 예외 상황을 처리해야 한다면 예외 상황 관리에 등록을 하고, 이를 Exception Code로 요청해야 합니다. (예 : 서버 장애,  잘못된 사용자의 요청 등)
         <ul>
-          <li>예외 처리에 대한 자세한 내용은 <a href="/nugu-play/create-plays-with-play-builder/define-an-action/manage-exceptions">예외  상황 관리</a>를 참고하세요.</li>
+          <li>예외 처리에 대한 자세한 내용은 <a href="/nugu-play/create-plays-with-play-builder/define-an-action/manage-exceptions" class="a_internal">예외  상황 관리</a>를 참고하세요.</li>
         </ul>
       </li>
       <li>Capability Interface를 사용하는 경우 어떤 Intent에서 어떻게 Directive를 내보낼 것인지 논의합니다.</li>
@@ -2277,8 +2277,8 @@
 <p>이 장과 같이 보면 좋은 도움말</p>
 
 <ul>
-  <li><a href="/nugu-play/create-plays-with-play-builder/use-backend-proxy">Backend proxy</a></li>
-  <li><a href="/nugu-play/create-plays-with-play-builder/define-an-action/use-parameters">Backend Parameter</a></li>
+  <li><a href="/nugu-play/create-plays-with-play-builder/use-backend-proxy" class="a_internal">Backend proxy</a></li>
+  <li><a href="/nugu-play/create-plays-with-play-builder/define-an-action/use-parameters" class="a_internal">Backend Parameter</a></li>
 </ul>
 
 </div>
@@ -2313,13 +2313,13 @@
 </section>
 <div id="modal_image_area" class="modal_image_area hide">
     <div class="modal_wrapper">
-        <img id="modal_image" class="modal_image" src="">
+        <img id="modal_image" class="modal_image" src="" data-skip-src-to-absolute>
     </div>
 </div>
 <script type="text/x-jsrender" id="search_contents_tmpl">
 
 <div class="search_content">
-    <a href="/nugu-play/create-plays-with-play-builder/{{:url}}">
+    <a href="{{:url}}">
         <div class="page_title">{{:title}}</div>
         <div class="content">
             {{for contents}}

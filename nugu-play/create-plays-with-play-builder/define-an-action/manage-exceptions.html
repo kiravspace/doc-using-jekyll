@@ -8,7 +8,7 @@
 
 
 
-<meta http-equiv="Last-Modified" content="2022-06-23 08:56:35 +0000">
+<meta http-equiv="Last-Modified" content="2022-06-27 10:20:03 +0000">
 
 
 
@@ -63,10 +63,10 @@
 <body>
 <header>
     <div class="header">
-        <div class="title">
-            <img src="/assets/icon/icon.png">
+        <a href="/" class="title">
+            <img src="/assets/icon/icon.png" class="img_inline">
             Developers | Guide
-        </div>
+        </a>
     </div>
     <div class="search">
         <div id="go_search" class="search_bar">
@@ -2160,7 +2160,7 @@
       <li>
         <p>http:// 또는 https://를 함께 입력해야 합니다.</p>
 
-        <p><img src="/assets/images/manage-exceptions-01.png" alt=""></p>
+        <p><img src="/assets/images/manage-exceptions-01.png" alt="" class="img_internal"></p>
       </li>
     </ul>
   </li>
@@ -2176,7 +2176,7 @@
       <li>
         <p>예외 상황의 Prompt는 스택으로 구성되어, LIFO(Last In First Out)로 동작합니다.</p>
 
-        <p><img src="/assets/images/manage-exceptions-02.gif" alt=""></p>
+        <p><img src="/assets/images/manage-exceptions-02.gif" alt="" class="img_internal"></p>
       </li>
     </ul>
   </li>
@@ -2207,19 +2207,19 @@
 
 <p>이렇게 예상되는 장애는 (1)에 해당하므로 예외 상황으로 등록하여, 해당 장애 발생 시 사용자에게 정상적인 서비스가 불가능한 이유를 간단히 안내하고 세션을 종료해야 합니다. 이런 경우에는 Exception Prompt는 종료 Prompt 하나만 등록합니다.</p>
 
-<p><img src="/assets/images/manage-exceptions-03.png" alt=""></p>
+<p><img src="/assets/images/manage-exceptions-03.png" alt="" class="img_internal"></p>
 
 <p>그러나, 사용자가 요청한 채널이 미지원 채널인 경우는 (2)에 해당합니다. 이러한 경우에도 종료 Prompt만 사용하여 미지원 채널임을 안내하고 세션 종료할 수도 있지만, 대기 Prompt를 하나 더 추가하여 사용자에게 Entity를 다시 입력 받도록 대기 상태로 이동할 수도 있습니다.</p>
 
-<p><img src="/assets/images/manage-exceptions-04.png" alt=""></p>
+<p><img src="/assets/images/manage-exceptions-04.png" alt="" class="img_internal"></p>
 
 <p>사용자로 부터 목적 시간이나 날짜를 입력 받는 Play에서는, ‘2월 31일’과 같이 특정 월을 나타내는 Entity와 특정 일을 나타내는 Entity의 조합이 맞지 않는 경우가 발생할 수도 있습니다. 이런 경우도 (2)에 해당하며 예외 상황으로 등록하고 다시 입력받을 수 있습니다.</p>
 
-<p><img src="/assets/images/manage-exceptions-05.png" alt=""></p>
+<p><img src="/assets/images/manage-exceptions-05.png" alt="" class="img_internal"></p>
 
 <p>사용자 발화의 Entity를 체크하는 예외 상황을 등록했다면, 이 Exception Code가 동작하는 과정은 다음과 같습니다.</p>
 
-<p><img src="/assets/images/manage-exceptions-06.png" alt=""></p>
+<p><img src="/assets/images/manage-exceptions-06.png" alt="" class="img_internal"></p>
 
 <h2 id="exception-prompt를-통해-이동한-대기-상태의-특징">Exception Prompt를 통해 이동한 대기 상태의 특징</h2>
 
@@ -2264,13 +2264,13 @@
 </section>
 <div id="modal_image_area" class="modal_image_area hide">
     <div class="modal_wrapper">
-        <img id="modal_image" class="modal_image" src="">
+        <img id="modal_image" class="modal_image" src="" data-skip-src-to-absolute>
     </div>
 </div>
 <script type="text/x-jsrender" id="search_contents_tmpl">
 
 <div class="search_content">
-    <a href="/nugu-play/create-plays-with-play-builder/define-an-action/{{:url}}">
+    <a href="{{:url}}">
         <div class="page_title">{{:title}}</div>
         <div class="content">
             {{for contents}}

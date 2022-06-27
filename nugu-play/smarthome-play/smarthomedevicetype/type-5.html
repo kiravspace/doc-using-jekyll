@@ -8,7 +8,7 @@
 
 
 
-<meta http-equiv="Last-Modified" content="2022-06-23 08:56:35 +0000">
+<meta http-equiv="Last-Modified" content="2022-06-27 10:20:03 +0000">
 
 
 
@@ -63,10 +63,10 @@
 <body>
 <header>
     <div class="header">
-        <div class="title">
-            <img src="/assets/icon/icon.png">
+        <a href="/" class="title">
+            <img src="/assets/icon/icon.png" class="img_inline">
             Developers | Guide
-        </div>
+        </a>
     </div>
     <div class="search">
         <div id="go_search" class="search_bar">
@@ -2157,7 +2157,11 @@
 <p>Discovery Request 예시</p>
 
 <div class="code">
-    <div class="code_title"></div>
+    <div class="code_title">
+        <div class="label"></div>
+        <div class="copy"></div>
+        <div class="copy_success">복사성공!</div>
+    </div>
     <div class="code_body">
 <div class="language-scheme highlighter-rouge"><div class="highlight"><pre class="highlight"><code><table class="rouge-table"><tbody><tr>
 <td class="rouge-gutter gl"><pre class="lineno">1
@@ -2179,7 +2183,11 @@
 <p>Discovery Response 예시</p>
 
 <div class="code">
-    <div class="code_title"></div>
+    <div class="code_title">
+        <div class="label"></div>
+        <div class="copy"></div>
+        <div class="copy_success">복사성공!</div>
+    </div>
     <div class="code_body">
 <div class="language-json highlighter-rouge"><div class="highlight"><pre class="highlight"><code><table class="rouge-table"><tbody><tr>
 <td class="rouge-gutter gl"><pre class="lineno">1
@@ -2246,12 +2254,12 @@
   </thead>
   <tbody>
     <tr>
-      <td style="text-align: left"><a href="/nugu-play/smarthome-play/smarthomecapability/modecontrol-interface">ModeControl</a></td>
+      <td style="text-align: left"><a href="/nugu-play/smarthome-play/smarthomecapability/modecontrol-interface" class="a_internal">ModeControl</a></td>
       <td style="text-align: left">냉장고의 모드 제어 기능입니다.<br>설정 모드에 대한 상세한 정보는 SmartHomeAttribute : Mode를 참조하시기 바랍니다.</td>
       <td style="text-align: left">“냉장고 급속냉동모드로 설정해줘”</td>
     </tr>
     <tr>
-      <td style="text-align: left"><a href="/nugu-play/smarthome-play/smarthomecapability/devicetemperaturecontrol-interface">DeviceTemperatureControl</a></td>
+      <td style="text-align: left"><a href="/nugu-play/smarthome-play/smarthomecapability/devicetemperaturecontrol-interface" class="a_internal">DeviceTemperatureControl</a></td>
       <td style="text-align: left">냉장고의 기기 온도 제어 기능입니다.<br>기기 자체의 온도에 대한 기능들로 구성되어 있습니다.</td>
       <td style="text-align: left">“냉장고 설정 온도 알려줘”</td>
     </tr>
@@ -2288,13 +2296,13 @@
 </section>
 <div id="modal_image_area" class="modal_image_area hide">
     <div class="modal_wrapper">
-        <img id="modal_image" class="modal_image" src="">
+        <img id="modal_image" class="modal_image" src="" data-skip-src-to-absolute>
     </div>
 </div>
 <script type="text/x-jsrender" id="search_contents_tmpl">
 
 <div class="search_content">
-    <a href="/nugu-play/smarthome-play/smarthomedevicetype/{{:url}}">
+    <a href="{{:url}}">
         <div class="page_title">{{:title}}</div>
         <div class="content">
             {{for contents}}

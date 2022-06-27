@@ -8,7 +8,7 @@
 
 
 
-<meta http-equiv="Last-Modified" content="2022-06-23 08:56:35 +0000">
+<meta http-equiv="Last-Modified" content="2022-06-27 10:20:03 +0000">
 
 
 
@@ -63,10 +63,10 @@
 <body>
 <header>
     <div class="header">
-        <div class="title">
-            <img src="/assets/icon/icon.png">
+        <a href="/" class="title">
+            <img src="/assets/icon/icon.png" class="img_inline">
             Developers | Guide
-        </div>
+        </a>
     </div>
     <div class="search">
         <div id="go_search" class="search_bar">
@@ -2152,37 +2152,37 @@
 
 <p>⁣1. <code class="language-plaintext highlighter-rouge">Play 등록하기</code> 버튼을 클릭하세요. Play Builder에서 개발한 Play 리스트 팝업이 표시됩니다.</p>
 
-<p><img src="/assets/images/register-a-play-01.png" alt="">
+<p><img src="/assets/images/register-a-play-01.png" alt="" class="img_inline img_internal">
 ⁣2. 등록할 Play의 타입을 결정하고 <code class="language-plaintext highlighter-rouge">다음</code> 버튼을 클릭하여 Play의 Snapshot 버전을 선택하는 화면으로 이동합니다. 일반적인 Play는 Custom 타입이며, Play Builder에 smarthome play 타입으로 만들어진 Play는 Pre-Built-in입니다.</p>
 
-<p><img src="/assets/images/register-a-play-02.png" alt=""></p>
+<p><img src="/assets/images/register-a-play-02.png" alt="" class="img_internal"></p>
 
 <div class="alerts info">
     
-<p>Smarthome 타입의 경우 <a href="/nugu-play/smarthome-play">Pre-built Play Builder로 스마트홈 Play 만들기</a>를 참고하세요.</p>
+<p>Smarthome 타입의 경우 <a href="/nugu-play/smarthome-play" class="a_internal">Pre-built Play Builder로 스마트홈 Play 만들기</a>를 참고하세요.</p>
 
 </div>
 <p>⁣3. 등록할 Snapshot 버전을 선택하고 확인 버튼을 클릭하여, Play 이름/ID 생성 화면으로 이동합니다.</p>
 
-<p><img src="/assets/images/register-a-play-03.png" alt="">
+<p><img src="/assets/images/register-a-play-03.png" alt="" class="img_inline img_internal">
 ⁣4. 사용자에게 노출될 Play 서비스명과, 고유한 Play ID를 생성합니다.</p>
 
 <p>Play 서비스명은 Play Builder에서의 Play Name과 다르게 Developers에서 지정하는 이름이며, NUGU APP을 포함한 서비스 화면 노출 용도로 활용됩니다.</p>
 
 <p>Play 서비스 ID는 개별 Play를 구분하는 고유ID이며, 한 번 저장한 후에는 변경이 불가능합니다. Play 서비스ID는 reverse domain name 표기 형태로 입력해야 하며, 다른 Play에서 이미 사용 중인 서비스ID는 등록할 수 없습니다. (입력 예 : com.example.myPlay)</p>
 
-<p><img src="/assets/images/register-a-play-04.png" alt=""></p>
+<p><img src="/assets/images/register-a-play-04.png" alt="" class="img_internal"></p>
 
 <p>Play 서비스명과 Play 서비스 ID를 입력하여 넘어가면,  배포를 위한 4단계의 정보 입력 화면이 생성됩니다. Play 정보 등록은 총 4단계이며, 1단계 기본 정보 입력 → 2단계 연동 정보 입력 → 3단계 배포/심사 정보 → 4단계 등록/심사 요청의 순서로 진행됩니다.</p>
 
-<p><img src="/assets/images/register-a-play-05.png" alt=""></p>
+<p><img src="/assets/images/register-a-play-05.png" alt="" class="img_internal"></p>
 
 <h2 id="기본-정보-">기본 정보 <a id="basic-information"></a>
 </h2>
 
 <p>Play 기본 정보는 Play 관련 필수 정보로 아래의 내용들을 등록해야 합니다. 입력을 완료하면 <code class="language-plaintext highlighter-rouge">다음</code> 버튼을 클릭합니다.</p>
 
-<p><img src="/assets/images/register-a-play-06.png" alt=""></p>
+<p><img src="/assets/images/register-a-play-06.png" alt="" class="img_internal"></p>
 
 <p><strong>① Play 공개 유형</strong></p>
 
@@ -2190,7 +2190,7 @@
 
 <p><strong>②  Play 호출 이름</strong></p>
 
-<p>사용자가 Play를 시작하기 위해 부를 때 사용하는 이름입니다. 반드시 3자 이상의 한글로만 등록해야 하며, 가능하면 8자 이하로 기억하고 부르기 쉬운 단어를 사용하는 것이 좋습니다. Play 호출 이름은 Play 심사 항목이기 때문에 신청하신 이름을 그대로 사용할 수 있다고 보장하지 않습니다. 널리 쓰이는 일반적인 이름이나 타사명, 서비스에 해당하는 용어 또는 이와 유사한 호출 이름은 사용할 수 없기 때문에,심사를 하면서 운영자가 별도로 연락을 드릴 수도 있습니다. 효과적인 호출 이름을 등록할 수 있도록 먼저 [<a href="#define-an-invocation-name">작성 가이드 보기</a>]를 읽어보신 후에 등록 절차를 진행해주시길 권장합니다.</p>
+<p>사용자가 Play를 시작하기 위해 부를 때 사용하는 이름입니다. 반드시 3자 이상의 한글로만 등록해야 하며, 가능하면 8자 이하로 기억하고 부르기 쉬운 단어를 사용하는 것이 좋습니다. Play 호출 이름은 Play 심사 항목이기 때문에 신청하신 이름을 그대로 사용할 수 있다고 보장하지 않습니다. 널리 쓰이는 일반적인 이름이나 타사명, 서비스에 해당하는 용어 또는 이와 유사한 호출 이름은 사용할 수 없기 때문에,심사를 하면서 운영자가 별도로 연락을 드릴 수도 있습니다. 효과적인 호출 이름을 등록할 수 있도록 먼저 [<a href="#define-an-invocation-name" class="hash_internal">작성 가이드 보기</a>]를 읽어보신 후에 등록 절차를 진행해주시길 권장합니다.</p>
 
 <p><strong>③ Play 설명</strong></p>
 
@@ -2268,13 +2268,13 @@
 
 <p>사용자 계정 체계를 필요로 하지 않는 Play 서비스라면, [미사용]을 선택하면 됩니다.</p>
 
-<p><img src="/assets/images/register-a-play-07.png" alt=""></p>
+<p><img src="/assets/images/register-a-play-07.png" alt="" class="img_internal"></p>
 
 <p>** 계정 연동 여부(OAuth 연동 여부)**</p>
 
-<p>제공하려는 Play의 사용자 계정과 NUGU 사용자 계정의 연결이 필요할 경우, 계정 연동에서 [사용]을 선택하고, 다음 정보를 등록합니다. 계정 연동에 대한 자세한 내용은 <a href="/nugu-play/create-plays-with-play-builder/link-oauth20#link-oauth20">[계정 연동 가이드 보기]</a>를 참고하세요.</p>
+<p>제공하려는 Play의 사용자 계정과 NUGU 사용자 계정의 연결이 필요할 경우, 계정 연동에서 [사용]을 선택하고, 다음 정보를 등록합니다. 계정 연동에 대한 자세한 내용은 <a href="/nugu-play/create-plays-with-play-builder/link-oauth20#link-oauth20" class="a_internal">[계정 연동 가이드 보기]</a>를 참고하세요.</p>
 
-<p><img src="/assets/images/register-a-play-08.png" alt=""></p>
+<p><img src="/assets/images/register-a-play-08.png" alt="" class="img_internal"></p>
 
 <p><strong>ⓐ 로그인 URL</strong></p>
 
@@ -2321,13 +2321,13 @@
 
 <div class="alerts info">
     
-<p>심사 요청에 대한 자세한 내용은 <a href="/nugu-play/play-registration-and-review/play-review#review-request">심사 요청</a> 페이지를 참고해주세요.</p>
+<p>심사 요청에 대한 자세한 내용은 <a href="/nugu-play/play-registration-and-review/play-review#review-request" class="a_internal">심사 요청</a> 페이지를 참고해주세요.</p>
 
 </div>
 
 <hr>
 
-<p><img src="/assets/images/register-a-play-09.png" alt=""></p>
+<p><img src="/assets/images/register-a-play-09.png" alt="" class="img_internal"></p>
 
 <p><strong>① Play 사용 지역</strong></p>
 
@@ -2357,7 +2357,7 @@
 
 <hr>
 
-<p><img src="/assets/images/register-a-play-10.png" alt=""></p>
+<p><img src="/assets/images/register-a-play-10.png" alt="" class="img_internal"></p>
 
 <p><strong>⑧ Play 심사용 설명</strong></p>
 
@@ -2390,7 +2390,7 @@
 <strong>주요 기능</strong>: 해당 Play가 제공하는 대표 기능을 등록합니다.</li>
 </ol>
 
-<p><img src="/assets/images/register-a-play-11.png" alt=""></p>
+<p><img src="/assets/images/register-a-play-11.png" alt="" class="img_internal"></p>
 
 <p><strong>⑭ 연결링크(선택)</strong></p>
 
@@ -2409,7 +2409,7 @@
 
 <div class="alerts info">
     
-<p>아이콘 등록에 관한 사항은 <a href="/reference/register-icon">아이콘 등록</a>를 참고하세요.</p>
+<p>아이콘 등록에 관한 사항은 <a href="/reference/register-icon" class="a_internal">아이콘 등록</a>를 참고하세요.</p>
 
 </div>
 
@@ -2449,13 +2449,13 @@
 </section>
 <div id="modal_image_area" class="modal_image_area hide">
     <div class="modal_wrapper">
-        <img id="modal_image" class="modal_image" src="">
+        <img id="modal_image" class="modal_image" src="" data-skip-src-to-absolute>
     </div>
 </div>
 <script type="text/x-jsrender" id="search_contents_tmpl">
 
 <div class="search_content">
-    <a href="/nugu-play/play-registration-and-review/{{:url}}">
+    <a href="{{:url}}">
         <div class="page_title">{{:title}}</div>
         <div class="content">
             {{for contents}}

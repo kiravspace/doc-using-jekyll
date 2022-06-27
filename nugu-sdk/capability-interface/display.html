@@ -8,7 +8,7 @@
 
 
 
-<meta http-equiv="Last-Modified" content="2022-06-23 08:56:35 +0000">
+<meta http-equiv="Last-Modified" content="2022-06-27 10:20:03 +0000">
 
 
 
@@ -67,10 +67,10 @@
 <body>
 <header>
     <div class="header">
-        <div class="title">
-            <img src="/assets/icon/icon.png">
+        <a href="/" class="title">
+            <img src="/assets/icon/icon.png" class="img_inline">
             Developers | Guide
-        </div>
+        </a>
     </div>
     <div class="search">
         <div id="go_search" class="search_bar">
@@ -2217,19 +2217,23 @@
 <div id="tabs-22" class="tabs">
     <ul class="tabs_title">
         
-            <li data-content-id="tab-content-23" class="tab_title">Android</li>
+            <li data-content-id="tab-content-23" class="tab_title selected">Android</li>
         
             <li data-content-id="tab-content-41" class="tab_title">iOS</li>
         
             <li data-content-id="tab-content-51" class="tab_title">Linux</li>
         
     </ul>
-    <div id="tab-content-23" class="tab_content">
+    <div id="tab-content-23" class="tab_content selected">
     
 <p>NuguAndroidClient instance 를 통해 DisplayAgent instance 에 접근할 수 있습니다.</p>
 
 <div class="code">
-    <div class="code_title"></div>
+    <div class="code_title">
+        <div class="label"></div>
+        <div class="copy"></div>
+        <div class="copy_success">복사성공!</div>
+    </div>
     <div class="code_body">
 <div class="language-text highlighter-rouge"><div class="highlight"><pre class="highlight"><code><table class="rouge-table"><tbody><tr>
 <td class="rouge-gutter gl"><pre class="lineno">1
@@ -2243,7 +2247,11 @@
 <p>AudioPlayer interface 와 Display interface 를 병합해주는 DisplayAggregatorInterface 를 제공합니다.</p>
 
 <div class="code">
-    <div class="code_title"></div>
+    <div class="code_title">
+        <div class="label"></div>
+        <div class="copy"></div>
+        <div class="copy_success">복사성공!</div>
+    </div>
     <div class="code_body">
 <div class="language-text highlighter-rouge"><div class="highlight"><pre class="highlight"><code><table class="rouge-table"><tbody><tr>
 <td class="rouge-gutter gl"><pre class="lineno">1
@@ -2261,7 +2269,11 @@
 <p>NuguClient instance 를 통해 DisplayAgent instance 에 접근할 수 있습니다.</p>
 
 <div class="code">
-    <div class="code_title"></div>
+    <div class="code_title">
+        <div class="label"></div>
+        <div class="copy"></div>
+        <div class="copy_success">복사성공!</div>
+    </div>
     <div class="code_body">
 <div class="language-text highlighter-rouge"><div class="highlight"><pre class="highlight"><code><table class="rouge-table"><tbody><tr>
 <td class="rouge-gutter gl"><pre class="lineno">1
@@ -2279,7 +2291,11 @@
 <p><a href="https://nugu-developers.github.io/nugu-linux/classNuguCapability_1_1CapabilityFactory.html#a46d96b1bc96903f02905c92ba8794bf6">CapabilityFactory::makeCapability</a> 함수로 <a href="https://nugu-developers.github.io/nugu-linux/classNuguCapability_1_1IDisplayHandler.html">DisplayAgent</a> 를 생성하고 <a href="https://nugu-developers.github.io/nugu-linux/classNuguClientKit_1_1NuguClient.html">NuguClient</a> 에 추가해 주어야합니다.</p>
 
 <div class="code">
-    <div class="code_title"></div>
+    <div class="code_title">
+        <div class="label"></div>
+        <div class="copy"></div>
+        <div class="copy_success">복사성공!</div>
+    </div>
     <div class="code_body">
 <div class="language-text highlighter-rouge"><div class="highlight"><pre class="highlight"><code><table class="rouge-table"><tbody><tr>
 <td class="rouge-gutter gl"><pre class="lineno">1
@@ -2307,22 +2323,26 @@ nugu_client-&gt;getCapabilityBuilder()
 
 <h3 id="context-구성">Context 구성</h3>
 
-<p><a href="#ui-1">UI 제어</a> 기능을 사용하기 위해서는 template 화면의 상태 정보를 <a href="#context">Context</a> 에 포함시켜 주어야 합니다.</p>
+<p><a href="#ui-1" class="hash_internal">UI 제어</a> 기능을 사용하기 위해서는 template 화면의 상태 정보를 <a href="#context" class="hash_internal">Context</a> 에 포함시켜 주어야 합니다.</p>
 
 <div id="tabs-71" class="tabs">
     <ul class="tabs_title">
         
-            <li data-content-id="tab-content-72" class="tab_title">Android</li>
+            <li data-content-id="tab-content-72" class="tab_title selected">Android</li>
         
             <li data-content-id="tab-content-94" class="tab_title">iOS</li>
         
     </ul>
-    <div id="tab-content-72" class="tab_content">
+    <div id="tab-content-72" class="tab_content selected">
     
 <p>DisplayAggregatorInterface.Controller 를 추가합니다.</p>
 
 <div class="code">
-    <div class="code_title"></div>
+    <div class="code_title">
+        <div class="label"></div>
+        <div class="copy"></div>
+        <div class="copy_success">복사성공!</div>
+    </div>
     <div class="code_body">
 <div class="language-text highlighter-rouge"><div class="highlight"><pre class="highlight"><code><table class="rouge-table"><tbody><tr>
 <td class="rouge-gutter gl"><pre class="lineno">1
@@ -2364,7 +2384,11 @@ displayAggregator.displayCardRendered(templateId, controller)
 <p>DisplayAgentDelegate 를 추가합니다.</p>
 
 <div class="code">
-    <div class="code_title"></div>
+    <div class="code_title">
+        <div class="label"></div>
+        <div class="copy"></div>
+        <div class="copy_success">복사성공!</div>
+    </div>
     <div class="code_body">
 <div class="language-text highlighter-rouge"><div class="highlight"><pre class="highlight"><code><table class="rouge-table"><tbody><tr>
 <td class="rouge-gutter gl"><pre class="lineno">1
@@ -2397,27 +2421,31 @@ displayAgent.delegate = MyDisplayAgentDelegate()
 <h3 id="ui-구성-및-제어-">UI 구성 및 제어 <a id="ui-1"></a>
 </h3>
 
-<p>Display 로 화면을 구성하기 위해 필요한 데이터는 <a href="/nugu-sdk/capability-interface/display/display-directive#directive-template">Template</a> directive 에 포함되어 전달됩니다.</p>
+<p>Display 로 화면을 구성하기 위해 필요한 데이터는 <a href="/nugu-sdk/capability-interface/display/display-directive#directive-template" class="a_internal">Template</a> directive 에 포함되어 전달됩니다.</p>
 
-<p>Template 화면은 <a href="/nugu-sdk/capability-interface/display/display-directive#close">Close</a> directive 또는 SDK 내부 timer 등에 의해 종료될 수 있으며, <a href="/nugu-sdk/capability-interface/display/display-directive#update">Update</a> directive 에 의해 변경될 수 있습니다.</p>
+<p>Template 화면은 <a href="/nugu-sdk/capability-interface/display/display-directive#close" class="a_internal">Close</a> directive 또는 SDK 내부 timer 등에 의해 종료될 수 있으며, <a href="/nugu-sdk/capability-interface/display/display-directive#update" class="a_internal">Update</a> directive 에 의해 변경될 수 있습니다.</p>
 
-<p>Template 의 focus 와 scroll 은 <code class="language-plaintext highlighter-rouge">사용자 발화</code> 에 따라 <a href="/nugu-sdk/capability-interface/display/display-directive#controlfocus">ControlFocus</a>, <a href="/nugu-sdk/capability-interface/display/display-directive#controlscroll">ControlScroll</a> directive 로 제어될 수 있습니다.</p>
+<p>Template 의 focus 와 scroll 은 <code class="language-plaintext highlighter-rouge">사용자 발화</code> 에 따라 <a href="/nugu-sdk/capability-interface/display/display-directive#controlfocus" class="a_internal">ControlFocus</a>, <a href="/nugu-sdk/capability-interface/display/display-directive#controlscroll" class="a_internal">ControlScroll</a> directive 로 제어될 수 있습니다.</p>
 
 <div id="tabs-120" class="tabs">
     <ul class="tabs_title">
         
-            <li data-content-id="tab-content-121" class="tab_title">Android</li>
+            <li data-content-id="tab-content-121" class="tab_title selected">Android</li>
         
             <li data-content-id="tab-content-156" class="tab_title">iOS</li>
         
             <li data-content-id="tab-content-181" class="tab_title">Linux</li>
         
     </ul>
-    <div id="tab-content-121" class="tab_content">
+    <div id="tab-content-121" class="tab_content selected">
     
 <p>DisplayAggregatorInterface.Renderer 를 추가합니다.</p>
 <div class="code">
-    <div class="code_title"></div>
+    <div class="code_title">
+        <div class="label"></div>
+        <div class="copy"></div>
+        <div class="copy_success">복사성공!</div>
+    </div>
     <div class="code_body">
 <div class="language-text highlighter-rouge"><div class="highlight"><pre class="highlight"><code><table class="rouge-table"><tbody><tr>
 <td class="rouge-gutter gl"><pre class="lineno">1
@@ -2445,7 +2473,11 @@ displayAggregator.setRenderer(renderer)
 <p>UI 를 제어하려면 DisplayAggregatorInterface.Controller 를 추가합니다.</p>
 
 <div class="code">
-    <div class="code_title"></div>
+    <div class="code_title">
+        <div class="label"></div>
+        <div class="copy"></div>
+        <div class="copy_success">복사성공!</div>
+    </div>
     <div class="code_body">
 <div class="language-text highlighter-rouge"><div class="highlight"><pre class="highlight"><code><table class="rouge-table"><tbody><tr>
 <td class="rouge-gutter gl"><pre class="lineno">1
@@ -2485,7 +2517,11 @@ displayAggregator.displayCardRendered(templateId, controller)
 <p>DisplayAgentDelegate 를 추가합니다.</p>
 
 <div class="code">
-    <div class="code_title"></div>
+    <div class="code_title">
+        <div class="label"></div>
+        <div class="copy"></div>
+        <div class="copy_success">복사성공!</div>
+    </div>
     <div class="code_body">
 <div class="language-text highlighter-rouge"><div class="highlight"><pre class="highlight"><code><table class="rouge-table"><tbody><tr>
 <td class="rouge-gutter gl"><pre class="lineno">1
@@ -2533,7 +2569,11 @@ displayAgent.delegate = MyDisplayAgentDelegate()
 <p><a href="https://nugu-developers.github.io/nugu-linux/classNuguCapability_1_1IDisplayListener.html">IDisplayListener</a> 를 추가합니다.</p>
 
 <div class="code">
-    <div class="code_title"></div>
+    <div class="code_title">
+        <div class="label"></div>
+        <div class="copy"></div>
+        <div class="copy_success">복사성공!</div>
+    </div>
     <div class="code_body">
 <div class="language-text highlighter-rouge"><div class="highlight"><pre class="highlight"><code><table class="rouge-table"><tbody><tr>
 <td class="rouge-gutter gl"><pre class="lineno">1
@@ -2585,22 +2625,26 @@ CapabilityFactory::makeCapability&lt;DisplayAgent, IDisplayHandler&gt;(display_l
 
 <h3 id="사용자-인터렉션-처리">사용자 인터렉션 처리</h3>
 
-<p>Template 하위 항목 선택시 <a href="/nugu-sdk/capability-interface/display/display-event#elementselected">ElementSelected</a> event 가 전달됩니다.</p>
+<p>Template 하위 항목 선택시 <a href="/nugu-sdk/capability-interface/display/display-event#elementselected" class="a_internal">ElementSelected</a> event 가 전달됩니다.</p>
 
 <div id="tabs-213" class="tabs">
     <ul class="tabs_title">
         
-            <li data-content-id="tab-content-214" class="tab_title">Android</li>
+            <li data-content-id="tab-content-214" class="tab_title selected">Android</li>
         
             <li data-content-id="tab-content-222" class="tab_title">iOS</li>
         
             <li data-content-id="tab-content-230" class="tab_title">Linux</li>
         
     </ul>
-    <div id="tab-content-214" class="tab_content">
+    <div id="tab-content-214" class="tab_content selected">
     
 <div class="code">
-    <div class="code_title"></div>
+    <div class="code_title">
+        <div class="label"></div>
+        <div class="copy"></div>
+        <div class="copy_success">복사성공!</div>
+    </div>
     <div class="code_body">
 <div class="language-text highlighter-rouge"><div class="highlight"><pre class="highlight"><code><table class="rouge-table"><tbody><tr>
 <td class="rouge-gutter gl"><pre class="lineno">1
@@ -2616,7 +2660,11 @@ CapabilityFactory::makeCapability&lt;DisplayAgent, IDisplayHandler&gt;(display_l
 <div id="tab-content-222" class="tab_content">
     
 <div class="code">
-    <div class="code_title"></div>
+    <div class="code_title">
+        <div class="label"></div>
+        <div class="copy"></div>
+        <div class="copy_success">복사성공!</div>
+    </div>
     <div class="code_body">
 <div class="language-text highlighter-rouge"><div class="highlight"><pre class="highlight"><code><table class="rouge-table"><tbody><tr>
 <td class="rouge-gutter gl"><pre class="lineno">1
@@ -2632,7 +2680,11 @@ CapabilityFactory::makeCapability&lt;DisplayAgent, IDisplayHandler&gt;(display_l
 <div id="tab-content-230" class="tab_content">
     
 <div class="code">
-    <div class="code_title"></div>
+    <div class="code_title">
+        <div class="label"></div>
+        <div class="copy"></div>
+        <div class="copy_success">복사성공!</div>
+    </div>
     <div class="code_body">
 <div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code><table class="rouge-table"><tbody><tr>
 <td class="rouge-gutter gl"><pre class="lineno">1
@@ -2653,17 +2705,21 @@ CapabilityFactory::makeCapability&lt;DisplayAgent, IDisplayHandler&gt;(display_l
 <div id="tabs-241" class="tabs">
     <ul class="tabs_title">
         
-            <li data-content-id="tab-content-242" class="tab_title">Android</li>
+            <li data-content-id="tab-content-242" class="tab_title selected">Android</li>
         
             <li data-content-id="tab-content-250" class="tab_title">iOS</li>
         
             <li data-content-id="tab-content-258" class="tab_title">Linux</li>
         
     </ul>
-    <div id="tab-content-242" class="tab_content">
+    <div id="tab-content-242" class="tab_content selected">
     
 <div class="code">
-    <div class="code_title"></div>
+    <div class="code_title">
+        <div class="label"></div>
+        <div class="copy"></div>
+        <div class="copy_success">복사성공!</div>
+    </div>
     <div class="code_body">
 <div class="language-text highlighter-rouge"><div class="highlight"><pre class="highlight"><code><table class="rouge-table"><tbody><tr>
 <td class="rouge-gutter gl"><pre class="lineno">1
@@ -2679,7 +2735,11 @@ CapabilityFactory::makeCapability&lt;DisplayAgent, IDisplayHandler&gt;(display_l
 <div id="tab-content-250" class="tab_content">
     
 <div class="code">
-    <div class="code_title"></div>
+    <div class="code_title">
+        <div class="label"></div>
+        <div class="copy"></div>
+        <div class="copy_success">복사성공!</div>
+    </div>
     <div class="code_body">
 <div class="language-text highlighter-rouge"><div class="highlight"><pre class="highlight"><code><table class="rouge-table"><tbody><tr>
 <td class="rouge-gutter gl"><pre class="lineno">1
@@ -2695,7 +2755,11 @@ CapabilityFactory::makeCapability&lt;DisplayAgent, IDisplayHandler&gt;(display_l
 <div id="tab-content-258" class="tab_content">
     
 <div class="code">
-    <div class="code_title"></div>
+    <div class="code_title">
+        <div class="label"></div>
+        <div class="copy"></div>
+        <div class="copy_success">복사성공!</div>
+    </div>
     <div class="code_body">
 <div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code><table class="rouge-table"><tbody><tr>
 <td class="rouge-gutter gl"><pre class="lineno">1
@@ -2714,7 +2778,11 @@ CapabilityFactory::makeCapability&lt;DisplayAgent, IDisplayHandler&gt;(display_l
 <h2 id="context">Context</h2>
 
 <div class="code">
-    <div class="code_title"></div>
+    <div class="code_title">
+        <div class="label"></div>
+        <div class="copy"></div>
+        <div class="copy_success">복사성공!</div>
+    </div>
     <div class="code_body">
 <div class="language-json highlighter-rouge"><div class="highlight"><pre class="highlight"><code><table class="rouge-table"><tbody><tr>
 <td class="rouge-gutter gl"><pre class="lineno">1
@@ -2783,7 +2851,11 @@ CapabilityFactory::makeCapability&lt;DisplayAgent, IDisplayHandler&gt;(display_l
 <h3 id="imageobject">ImageObject</h3>
 
 <div class="code">
-    <div class="code_title"></div>
+    <div class="code_title">
+        <div class="label"></div>
+        <div class="copy"></div>
+        <div class="copy_success">복사성공!</div>
+    </div>
     <div class="code_body">
 <div class="language-json highlighter-rouge"><div class="highlight"><pre class="highlight"><code><table class="rouge-table"><tbody><tr>
 <td class="rouge-gutter gl"><pre class="lineno">1
@@ -2897,7 +2969,11 @@ CapabilityFactory::makeCapability&lt;DisplayAgent, IDisplayHandler&gt;(display_l
 <h3 id="textobject">TextObject</h3>
 
 <div class="code">
-    <div class="code_title"></div>
+    <div class="code_title">
+        <div class="label"></div>
+        <div class="copy"></div>
+        <div class="copy_success">복사성공!</div>
+    </div>
     <div class="code_body">
 <div class="language-json highlighter-rouge"><div class="highlight"><pre class="highlight"><code><table class="rouge-table"><tbody><tr>
 <td class="rouge-gutter gl"><pre class="lineno">1
@@ -2951,7 +3027,11 @@ CapabilityFactory::makeCapability&lt;DisplayAgent, IDisplayHandler&gt;(display_l
 <h3 id="buttonobject">ButtonObject</h3>
 
 <div class="code">
-    <div class="code_title"></div>
+    <div class="code_title">
+        <div class="label"></div>
+        <div class="copy"></div>
+        <div class="copy_success">복사성공!</div>
+    </div>
     <div class="code_body">
 <div class="language-json highlighter-rouge"><div class="highlight"><pre class="highlight"><code><table class="rouge-table"><tbody><tr>
 <td class="rouge-gutter gl"><pre class="lineno">1
@@ -3014,7 +3094,7 @@ CapabilityFactory::makeCapability&lt;DisplayAgent, IDisplayHandler&gt;(display_l
     </tr>
     <tr>
       <td style="text-align: left">image</td>
-      <td style="text-align: left"><a href="/nugu-play/create-plays-with-play-builder/use-backend-proxy/capability-interfaces/display-interface#imageobject">ImageObject</a></td>
+      <td style="text-align: left"><a href="/nugu-play/create-plays-with-play-builder/use-backend-proxy/capability-interfaces/display-interface#imageobject" class="a_internal">ImageObject</a></td>
       <td style="text-align: left">N</td>
       <td style="text-align: left">버튼 이미지<br>- type이 image인 경우에 한해 필수이며, 해당 이미지를 이용해 버튼을 표현한다.</td>
     </tr>
@@ -3103,7 +3183,11 @@ CapabilityFactory::makeCapability&lt;DisplayAgent, IDisplayHandler&gt;(display_l
 <h3 id="titleobject">TitleObject</h3>
 
 <div class="code">
-    <div class="code_title"></div>
+    <div class="code_title">
+        <div class="label"></div>
+        <div class="copy"></div>
+        <div class="copy_success">복사성공!</div>
+    </div>
     <div class="code_body">
 <div class="language-json highlighter-rouge"><div class="highlight"><pre class="highlight"><code><table class="rouge-table"><tbody><tr>
 <td class="rouge-gutter gl"><pre class="lineno">1
@@ -3138,31 +3222,31 @@ CapabilityFactory::makeCapability&lt;DisplayAgent, IDisplayHandler&gt;(display_l
   <tbody>
     <tr>
       <td style="text-align: left">logo</td>
-      <td style="text-align: left"><a href="/nugu-play/create-plays-with-play-builder/use-backend-proxy/capability-interfaces/display-interface#imageobject">ImageObject</a></td>
+      <td style="text-align: left"><a href="/nugu-play/create-plays-with-play-builder/use-backend-proxy/capability-interfaces/display-interface#imageobject" class="a_internal">ImageObject</a></td>
       <td style="text-align: left">N</td>
       <td style="text-align: left">png 타입으로 투명 이미지로 제공해야 함</td>
     </tr>
     <tr>
       <td style="text-align: left">text</td>
-      <td style="text-align: left"><a href="/nugu-play/create-plays-with-play-builder/use-backend-proxy/capability-interfaces/display-interface#textobject">TextObject</a></td>
+      <td style="text-align: left"><a href="/nugu-play/create-plays-with-play-builder/use-backend-proxy/capability-interfaces/display-interface#textobject" class="a_internal">TextObject</a></td>
       <td style="text-align: left">Y</td>
       <td style="text-align: left">제목</td>
     </tr>
     <tr>
       <td style="text-align: left">subtext</td>
-      <td style="text-align: left"><a href="/nugu-play/create-plays-with-play-builder/use-backend-proxy/capability-interfaces/display-interface#textobject">TextObject</a></td>
+      <td style="text-align: left"><a href="/nugu-play/create-plays-with-play-builder/use-backend-proxy/capability-interfaces/display-interface#textobject" class="a_internal">TextObject</a></td>
       <td style="text-align: left">N</td>
       <td style="text-align: left">ASR Text 등 부제목</td>
     </tr>
     <tr>
       <td style="text-align: left">subicon</td>
-      <td style="text-align: left"><a href="/nugu-play/create-plays-with-play-builder/use-backend-proxy/capability-interfaces/display-interface#imageobject">ImageObject</a></td>
+      <td style="text-align: left"><a href="/nugu-play/create-plays-with-play-builder/use-backend-proxy/capability-interfaces/display-interface#imageobject" class="a_internal">ImageObject</a></td>
       <td style="text-align: left">N</td>
       <td style="text-align: left">서브 아이콘 ( 위치 : subText 왼쪽 )</td>
     </tr>
     <tr>
       <td style="text-align: left">button</td>
-      <td style="text-align: left"><a href="/nugu-play/create-plays-with-play-builder/use-backend-proxy/capability-interfaces/display-interface#buttonobject">ButtonObject</a></td>
+      <td style="text-align: left"><a href="/nugu-play/create-plays-with-play-builder/use-backend-proxy/capability-interfaces/display-interface#buttonobject" class="a_internal">ButtonObject</a></td>
       <td style="text-align: left">N</td>
       <td style="text-align: left">우측에 위치하는 버튼</td>
     </tr>
@@ -3172,7 +3256,11 @@ CapabilityFactory::makeCapability&lt;DisplayAgent, IDisplayHandler&gt;(display_l
 <h3 id="backgroundobject">BackgroundObject</h3>
 
 <div class="code">
-    <div class="code_title"></div>
+    <div class="code_title">
+        <div class="label"></div>
+        <div class="copy"></div>
+        <div class="copy_success">복사성공!</div>
+    </div>
     <div class="code_body">
 <div class="language-json highlighter-rouge"><div class="highlight"><pre class="highlight"><code><table class="rouge-table"><tbody><tr>
 <td class="rouge-gutter gl"><pre class="lineno">1
@@ -3201,7 +3289,7 @@ CapabilityFactory::makeCapability&lt;DisplayAgent, IDisplayHandler&gt;(display_l
   <tbody>
     <tr>
       <td style="text-align: left">image</td>
-      <td style="text-align: left"><a href="/nugu-play/create-plays-with-play-builder/use-backend-proxy/capability-interfaces/display-interface#imageobject">ImageObject</a></td>
+      <td style="text-align: left"><a href="/nugu-play/create-plays-with-play-builder/use-backend-proxy/capability-interfaces/display-interface#imageobject" class="a_internal">ImageObject</a></td>
       <td style="text-align: left">N</td>
       <td style="text-align: left">-</td>
     </tr>
@@ -3274,7 +3362,11 @@ CapabilityFactory::makeCapability&lt;DisplayAgent, IDisplayHandler&gt;(display_l
 <p>GrammarGuide의 확장된 발화가이드 입니다.</p>
 
 <div class="code">
-    <div class="code_title"></div>
+    <div class="code_title">
+        <div class="label"></div>
+        <div class="copy"></div>
+        <div class="copy_success">복사성공!</div>
+    </div>
     <div class="code_body">
 <div class="language-json highlighter-rouge"><div class="highlight"><pre class="highlight"><code><table class="rouge-table"><tbody><tr>
 <td class="rouge-gutter gl"><pre class="lineno">1
@@ -3333,7 +3425,11 @@ CapabilityFactory::makeCapability&lt;DisplayAgent, IDisplayHandler&gt;(display_l
 <p>Banner에 사용되는 image object 입니다.</p>
 
 <div class="code">
-    <div class="code_title"></div>
+    <div class="code_title">
+        <div class="label"></div>
+        <div class="copy"></div>
+        <div class="copy_success">복사성공!</div>
+    </div>
     <div class="code_body">
 <div class="language-json highlighter-rouge"><div class="highlight"><pre class="highlight"><code><table class="rouge-table"><tbody><tr>
 <td class="rouge-gutter gl"><pre class="lineno">1
@@ -3362,7 +3458,7 @@ CapabilityFactory::makeCapability&lt;DisplayAgent, IDisplayHandler&gt;(display_l
   <tbody>
     <tr>
       <td style="text-align: left">image</td>
-      <td style="text-align: left"><a href="/nugu-play/create-plays-with-play-builder/use-backend-proxy/capability-interfaces/display-interface#imageobject">ImageObject</a></td>
+      <td style="text-align: left"><a href="/nugu-play/create-plays-with-play-builder/use-backend-proxy/capability-interfaces/display-interface#imageobject" class="a_internal">ImageObject</a></td>
       <td style="text-align: left">N</td>
       <td style="text-align: left">banner에 사용되는 image object</td>
     </tr>
@@ -3379,7 +3475,11 @@ CapabilityFactory::makeCapability&lt;DisplayAgent, IDisplayHandler&gt;(display_l
 <h3 id="togglebuttonobject">ToggleButtonObject</h3>
 
 <div class="code">
-    <div class="code_title"></div>
+    <div class="code_title">
+        <div class="label"></div>
+        <div class="copy"></div>
+        <div class="copy_success">복사성공!</div>
+    </div>
     <div class="code_body">
 <div class="language-json highlighter-rouge"><div class="highlight"><pre class="highlight"><code><table class="rouge-table"><tbody><tr>
 <td class="rouge-gutter gl"><pre class="lineno">1
@@ -3463,7 +3563,11 @@ CapabilityFactory::makeCapability&lt;DisplayAgent, IDisplayHandler&gt;(display_l
 <h3 id="badgeobject">BadgeObject</h3>
 
 <div class="code">
-    <div class="code_title"></div>
+    <div class="code_title">
+        <div class="label"></div>
+        <div class="copy"></div>
+        <div class="copy_success">복사성공!</div>
+    </div>
     <div class="code_body">
 <div class="language-json highlighter-rouge"><div class="highlight"><pre class="highlight"><code><table class="rouge-table"><tbody><tr>
 <td class="rouge-gutter gl"><pre class="lineno">1
@@ -3500,13 +3604,13 @@ CapabilityFactory::makeCapability&lt;DisplayAgent, IDisplayHandler&gt;(display_l
     </tr>
     <tr>
       <td style="text-align: left">text</td>
-      <td style="text-align: left"><a href="/nugu-play/create-plays-with-play-builder/use-backend-proxy/capability-interfaces/display-interface#textobject">TextObject</a></td>
+      <td style="text-align: left"><a href="/nugu-play/create-plays-with-play-builder/use-backend-proxy/capability-interfaces/display-interface#textobject" class="a_internal">TextObject</a></td>
       <td style="text-align: left">N</td>
       <td style="text-align: left">-</td>
     </tr>
     <tr>
       <td style="text-align: left">image</td>
-      <td style="text-align: left"><a href="/nugu-play/create-plays-with-play-builder/use-backend-proxy/capability-interfaces/display-interface#imageobject">ImageObject</a></td>
+      <td style="text-align: left"><a href="/nugu-play/create-plays-with-play-builder/use-backend-proxy/capability-interfaces/display-interface#imageobject" class="a_internal">ImageObject</a></td>
       <td style="text-align: left">N</td>
       <td style="text-align: left">-</td>
     </tr>
@@ -3543,13 +3647,13 @@ CapabilityFactory::makeCapability&lt;DisplayAgent, IDisplayHandler&gt;(display_l
 </section>
 <div id="modal_image_area" class="modal_image_area hide">
     <div class="modal_wrapper">
-        <img id="modal_image" class="modal_image" src="">
+        <img id="modal_image" class="modal_image" src="" data-skip-src-to-absolute>
     </div>
 </div>
 <script type="text/x-jsrender" id="search_contents_tmpl">
 
 <div class="search_content">
-    <a href="/nugu-sdk/capability-interface/{{:url}}">
+    <a href="{{:url}}">
         <div class="page_title">{{:title}}</div>
         <div class="content">
             {{for contents}}

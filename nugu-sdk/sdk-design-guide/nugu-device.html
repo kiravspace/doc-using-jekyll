@@ -8,7 +8,7 @@
 
 
 
-<meta http-equiv="Last-Modified" content="2022-06-23 08:56:35 +0000">
+<meta http-equiv="Last-Modified" content="2022-06-27 10:20:03 +0000">
 
 
 
@@ -63,10 +63,10 @@
 <body>
 <header>
     <div class="header">
-        <div class="title">
-            <img src="/assets/icon/icon.png">
+        <a href="/" class="title">
+            <img src="/assets/icon/icon.png" class="img_inline">
             Developers | Guide
-        </div>
+        </a>
     </div>
     <div class="search">
         <div id="go_search" class="search_bar">
@@ -2343,7 +2343,7 @@
   </tbody>
 </table>
 
-<p><img src="/assets/images/nugu-device-01.png" alt=""></p>
+<p><img src="/assets/images/nugu-device-01.png" alt="" class="img_internal"></p>
 
 <p><strong>호출 효과 (Wake up success)</strong></p>
 
@@ -2366,11 +2366,11 @@
 
 <p>호출어 발화 시</p>
 
-<p><img src="/assets/images/nugu-device-02.png" alt=""></p>
+<p><img src="/assets/images/nugu-device-02.png" alt="" class="img_internal"></p>
 
 <p>Slot-filling 시</p>
 
-<p><img src="/assets/images/nugu-device-03.png" alt=""></p>
+<p><img src="/assets/images/nugu-device-03.png" alt="" class="img_internal"></p>
 
 <p><strong>인식 완료음 (End listen)</strong></p>
 
@@ -2391,7 +2391,7 @@
   </tbody>
 </table>
 
-<p><img src="/assets/images/nugu-device-04.png" alt=""></p>
+<p><img src="/assets/images/nugu-device-04.png" alt="" class="img_internal"></p>
 
 <h4 id="응답-실패-response-fail"><strong>응답 실패 (Response fail)</strong></h4>
 
@@ -2414,11 +2414,11 @@
 
 <p>잡음 / 1음절 발화 / 블랙 리스트 발화 시</p>
 
-<p><img src="/assets/images/nugu-device-05.png" alt=""></p>
+<p><img src="/assets/images/nugu-device-05.png" alt="" class="img_internal"></p>
 
 <p>Slot-filling을 위한 listening 상태에서 타임아웃 시</p>
 
-<p><img src="/assets/images/nugu-device-06.png" alt=""></p>
+<p><img src="/assets/images/nugu-device-06.png" alt="" class="img_internal"></p>
 
 <p><strong>전원 꺼짐 (Power off)</strong></p>
 
@@ -2439,7 +2439,7 @@
   </tbody>
 </table>
 
-<p><img src="/assets/images/nugu-device-07.png" alt=""></p>
+<p><img src="/assets/images/nugu-device-07.png" alt="" class="img_internal"></p>
 
 <h3 id="2-서비스-효과음service-feedback-sound"><strong>2) 서비스 효과음(Service Feedback Sound)</strong></h3>
 
@@ -2497,7 +2497,7 @@
   </tbody>
 </table>
 
-<p><img src="/assets/images/nugu-device-08.png" alt=""></p>
+<p><img src="/assets/images/nugu-device-08.png" alt="" class="img_internal"></p>
 
     </div>
     
@@ -2529,13 +2529,13 @@
 </section>
 <div id="modal_image_area" class="modal_image_area hide">
     <div class="modal_wrapper">
-        <img id="modal_image" class="modal_image" src="">
+        <img id="modal_image" class="modal_image" src="" data-skip-src-to-absolute>
     </div>
 </div>
 <script type="text/x-jsrender" id="search_contents_tmpl">
 
 <div class="search_content">
-    <a href="/nugu-sdk/sdk-design-guide/{{:url}}">
+    <a href="{{:url}}">
         <div class="page_title">{{:title}}</div>
         <div class="content">
             {{for contents}}

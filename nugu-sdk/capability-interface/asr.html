@@ -8,7 +8,7 @@
 
 
 
-<meta http-equiv="Last-Modified" content="2022-06-23 08:56:35 +0000">
+<meta http-equiv="Last-Modified" content="2022-06-27 10:20:03 +0000">
 
 
 
@@ -67,10 +67,10 @@
 <body>
 <header>
     <div class="header">
-        <div class="title">
-            <img src="/assets/icon/icon.png">
+        <a href="/" class="title">
+            <img src="/assets/icon/icon.png" class="img_inline">
             Developers | Guide
-        </div>
+        </a>
     </div>
     <div class="search">
         <div id="go_search" class="search_bar">
@@ -2205,7 +2205,7 @@
 
 <h2 id="state-diagram">State Diagram</h2>
 
-<p><img src="/assets/images/asr-01.png" alt=""></p>
+<p><img src="/assets/images/asr-01.png" alt="" class="img_internal"></p>
 
 <h2 id="sdk-interface">SDK Interface</h2>
 
@@ -2216,19 +2216,23 @@
 <div id="tabs-25" class="tabs">
     <ul class="tabs_title">
         
-            <li data-content-id="tab-content-26" class="tab_title">Android</li>
+            <li data-content-id="tab-content-26" class="tab_title selected">Android</li>
         
             <li data-content-id="tab-content-76" class="tab_title">iOS</li>
         
             <li data-content-id="tab-content-111" class="tab_title">Linux</li>
         
     </ul>
-    <div id="tab-content-26" class="tab_content">
+    <div id="tab-content-26" class="tab_content selected">
     
 <p>NuguAndroidClient instance 를 통해 ASRAgent instance 에 접근할 수 있습니다.</p>
 
 <div class="code">
-    <div class="code_title"></div>
+    <div class="code_title">
+        <div class="label"></div>
+        <div class="copy"></div>
+        <div class="copy_success">복사성공!</div>
+    </div>
     <div class="code_body">
 <div class="language-text highlighter-rouge"><div class="highlight"><pre class="highlight"><code><table class="rouge-table"><tbody><tr>
 <td class="rouge-gutter gl"><pre class="lineno">1
@@ -2242,7 +2246,11 @@
 <p>Microphone 으로 부터 음성 데이터를 가져오기 위한 AudioSourceManager 를 생성합니다.</p>
 
 <div class="code">
-    <div class="code_title"></div>
+    <div class="code_title">
+        <div class="label"></div>
+        <div class="copy"></div>
+        <div class="copy_success">복사성공!</div>
+    </div>
     <div class="code_body">
 <div class="language-text highlighter-rouge"><div class="highlight"><pre class="highlight"><code><table class="rouge-table"><tbody><tr>
 <td class="rouge-gutter gl"><pre class="lineno">1
@@ -2256,7 +2264,11 @@
 <p>음성인식에 필요한 학습 모델을 설정합니다.</p>
 
 <div class="code">
-    <div class="code_title"></div>
+    <div class="code_title">
+        <div class="label"></div>
+        <div class="copy"></div>
+        <div class="copy_success">복사성공!</div>
+    </div>
     <div class="code_body">
 <div class="language-text highlighter-rouge"><div class="highlight"><pre class="highlight"><code><table class="rouge-table"><tbody><tr>
 <td class="rouge-gutter gl"><pre class="lineno">1
@@ -2292,7 +2304,11 @@
 <p>AudioSourceManager, ASRAgent 를 연결해주기 위한 SpeechRecognizerAggregator 를 생성합니다.</p>
 
 <div class="code">
-    <div class="code_title"></div>
+    <div class="code_title">
+        <div class="label"></div>
+        <div class="copy"></div>
+        <div class="copy_success">복사성공!</div>
+    </div>
     <div class="code_body">
 <div class="language-text highlighter-rouge"><div class="highlight"><pre class="highlight"><code><table class="rouge-table"><tbody><tr>
 <td class="rouge-gutter gl"><pre class="lineno">1
@@ -2320,7 +2336,11 @@
 <p>NuguClient instance 를 통해 ASRAgent instance 에 접근할 수 있습니다.</p>
 
 <div class="code">
-    <div class="code_title"></div>
+    <div class="code_title">
+        <div class="label"></div>
+        <div class="copy"></div>
+        <div class="copy_success">복사성공!</div>
+    </div>
     <div class="code_body">
 <div class="language-text highlighter-rouge"><div class="highlight"><pre class="highlight"><code><table class="rouge-table"><tbody><tr>
 <td class="rouge-gutter gl"><pre class="lineno">1
@@ -2334,7 +2354,11 @@
 <p>Microphone 으로 부터 음성 데이터를 가져오기 위한 MicInputProvider 를 생성합니다.</p>
 
 <div class="code">
-    <div class="code_title"></div>
+    <div class="code_title">
+        <div class="label"></div>
+        <div class="copy"></div>
+        <div class="copy_success">복사성공!</div>
+    </div>
     <div class="code_body">
 <div class="language-text highlighter-rouge"><div class="highlight"><pre class="highlight"><code><table class="rouge-table"><tbody><tr>
 <td class="rouge-gutter gl"><pre class="lineno">1
@@ -2348,7 +2372,11 @@
 <p>Microphone 으로 부터 가져온 음성 데이터가 NuguClient 로 전달될 수 있도록 합니다.</p>
 
 <div class="code">
-    <div class="code_title"></div>
+    <div class="code_title">
+        <div class="label"></div>
+        <div class="copy"></div>
+        <div class="copy_success">복사성공!</div>
+    </div>
     <div class="code_body">
 <div class="language-text highlighter-rouge"><div class="highlight"><pre class="highlight"><code><table class="rouge-table"><tbody><tr>
 <td class="rouge-gutter gl"><pre class="lineno">1
@@ -2362,7 +2390,11 @@
 <p>음성인식에 필요한 학습 모델을 설정합니다.</p>
 
 <div class="code">
-    <div class="code_title"></div>
+    <div class="code_title">
+        <div class="label"></div>
+        <div class="copy"></div>
+        <div class="copy_success">복사성공!</div>
+    </div>
     <div class="code_body">
 <div class="language-text highlighter-rouge"><div class="highlight"><pre class="highlight"><code><table class="rouge-table"><tbody><tr>
 <td class="rouge-gutter gl"><pre class="lineno">1
@@ -2382,7 +2414,11 @@ nuguClient.asrAgent.options = ASROptions(endPointing: .client(epdFile: epdFile))
 <p><a href="https://nugu-developers.github.io/nugu-linux/classNuguCapability_1_1CapabilityFactory.html#a46d96b1bc96903f02905c92ba8794bf6">CapabilityFactory::makeCapability</a> 함수로 <a href="https://nugu-developers.github.io/nugu-linux/classNuguCapability_1_1IASRHandler.html">ASRAgent</a> 를 생성하고 <a href="https://nugu-developers.github.io/nugu-linux/classNuguClientKit_1_1NuguClient.html">NuguClient</a> 에 추가해 주어야합니다.</p>
 
 <div class="code">
-    <div class="code_title"></div>
+    <div class="code_title">
+        <div class="label"></div>
+        <div class="copy"></div>
+        <div class="copy_success">복사성공!</div>
+    </div>
     <div class="code_body">
 <div class="language-text highlighter-rouge"><div class="highlight"><pre class="highlight"><code><table class="rouge-table"><tbody><tr>
 <td class="rouge-gutter gl"><pre class="lineno">1
@@ -2406,7 +2442,11 @@ nugu_client-&gt;getCapabilityBuilder()
 <p>음성인식에 필요한 학습 모델을 설정합니다.</p>
 
 <div class="code">
-    <div class="code_title"></div>
+    <div class="code_title">
+        <div class="label"></div>
+        <div class="copy"></div>
+        <div class="copy_success">복사성공!</div>
+    </div>
     <div class="code_body">
 <div class="language-text highlighter-rouge"><div class="highlight"><pre class="highlight"><code><table class="rouge-table"><tbody><tr>
 <td class="rouge-gutter gl"><pre class="lineno">1
@@ -2424,22 +2464,26 @@ nugu_client-&gt;getCapabilityBuilder()
 
 <h3 id="음성-인식-요청">음성 인식 요청</h3>
 
-<p><code class="language-plaintext highlighter-rouge">아리아</code> 발화 또는 NUGU Button 선택 시 <a href="#recognize">Recognize</a> event 를 전달하여 음성인식을 시작할 수 있습니다.</p>
+<p><code class="language-plaintext highlighter-rouge">아리아</code> 발화 또는 NUGU Button 선택 시 <a href="#recognize" class="hash_internal">Recognize</a> event 를 전달하여 음성인식을 시작할 수 있습니다.</p>
 
 <div id="tabs-139" class="tabs">
     <ul class="tabs_title">
         
-            <li data-content-id="tab-content-140" class="tab_title">Android</li>
+            <li data-content-id="tab-content-140" class="tab_title selected">Android</li>
         
             <li data-content-id="tab-content-148" class="tab_title">iOS</li>
         
             <li data-content-id="tab-content-157" class="tab_title">Linux</li>
         
     </ul>
-    <div id="tab-content-140" class="tab_content">
+    <div id="tab-content-140" class="tab_content selected">
     
 <div class="code">
-    <div class="code_title"></div>
+    <div class="code_title">
+        <div class="label"></div>
+        <div class="copy"></div>
+        <div class="copy_success">복사성공!</div>
+    </div>
     <div class="code_body">
 <div class="language-text highlighter-rouge"><div class="highlight"><pre class="highlight"><code><table class="rouge-table"><tbody><tr>
 <td class="rouge-gutter gl"><pre class="lineno">1
@@ -2455,7 +2499,11 @@ nugu_client-&gt;getCapabilityBuilder()
 <div id="tab-content-148" class="tab_content">
     
 <div class="code">
-    <div class="code_title"></div>
+    <div class="code_title">
+        <div class="label"></div>
+        <div class="copy"></div>
+        <div class="copy_success">복사성공!</div>
+    </div>
     <div class="code_body">
 <div class="language-text highlighter-rouge"><div class="highlight"><pre class="highlight"><code><table class="rouge-table"><tbody><tr>
 <td class="rouge-gutter gl"><pre class="lineno">1
@@ -2473,7 +2521,11 @@ asrAgent.startRecognition(initiator: .user)
 <div id="tab-content-157" class="tab_content">
     
 <div class="code">
-    <div class="code_title"></div>
+    <div class="code_title">
+        <div class="label"></div>
+        <div class="copy"></div>
+        <div class="copy_success">복사성공!</div>
+    </div>
     <div class="code_body">
 <div class="language-text highlighter-rouge"><div class="highlight"><pre class="highlight"><code><table class="rouge-table"><tbody><tr>
 <td class="rouge-gutter gl"><pre class="lineno">1
@@ -2493,24 +2545,28 @@ asrAgent.startRecognition(initiator: .user)
 
 <p>음성인식에 대한 진행 상태를 모니터링 할 수 있습니다.</p>
 
-<p>음성인식에 대한 STT(SpeechToText) 결과가 <a href="#notifyresult">NotifyResult</a> directive 로 전달됩니다.</p>
+<p>음성인식에 대한 STT(SpeechToText) 결과가 <a href="#notifyresult" class="hash_internal">NotifyResult</a> directive 로 전달됩니다.</p>
 
 <div id="tabs-172" class="tabs">
     <ul class="tabs_title">
         
-            <li data-content-id="tab-content-173" class="tab_title">Android</li>
+            <li data-content-id="tab-content-173" class="tab_title selected">Android</li>
         
             <li data-content-id="tab-content-209" class="tab_title">iOS</li>
         
             <li data-content-id="tab-content-229" class="tab_title">Linux</li>
         
     </ul>
-    <div id="tab-content-173" class="tab_content">
+    <div id="tab-content-173" class="tab_content selected">
     
 <p>SpeechRecognizerAggregatorInterface.OnStateChangeListener 를 추가합니다.</p>
 
 <div class="code">
-    <div class="code_title"></div>
+    <div class="code_title">
+        <div class="label"></div>
+        <div class="copy"></div>
+        <div class="copy_success">복사성공!</div>
+    </div>
     <div class="code_body">
 <div class="language-text highlighter-rouge"><div class="highlight"><pre class="highlight"><code><table class="rouge-table"><tbody><tr>
 <td class="rouge-gutter gl"><pre class="lineno">1
@@ -2534,7 +2590,11 @@ speechRecognizerAggregator.addListener(listener)
 <p>ASRAgentInterface.OnResultListener 를 추가합니다.</p>
 
 <div class="code">
-    <div class="code_title"></div>
+    <div class="code_title">
+        <div class="label"></div>
+        <div class="copy"></div>
+        <div class="copy_success">복사성공!</div>
+    </div>
     <div class="code_body">
 <div class="language-text highlighter-rouge"><div class="highlight"><pre class="highlight"><code><table class="rouge-table"><tbody><tr>
 <td class="rouge-gutter gl"><pre class="lineno">1
@@ -2578,7 +2638,11 @@ asrAgent.addOnResultListener(resultListener)
 <p>ASRAgentDelegate 를 추가합니다.</p>
 
 <div class="code">
-    <div class="code_title"></div>
+    <div class="code_title">
+        <div class="label"></div>
+        <div class="copy"></div>
+        <div class="copy_success">복사성공!</div>
+    </div>
     <div class="code_body">
 <div class="language-text highlighter-rouge"><div class="highlight"><pre class="highlight"><code><table class="rouge-table"><tbody><tr>
 <td class="rouge-gutter gl"><pre class="lineno">1
@@ -2616,7 +2680,11 @@ asrAgent.add(delegate: MyASRAgentDelegate())
 <p>음성인식 진행 상태를 모니터링 하려면 <a href="https://nugu-developers.github.io/nugu-linux/classNuguCapability_1_1IASRListener.html">IASRListener</a> 를 추가합니다.</p>
 
 <div class="code">
-    <div class="code_title"></div>
+    <div class="code_title">
+        <div class="label"></div>
+        <div class="copy"></div>
+        <div class="copy_success">복사성공!</div>
+    </div>
     <div class="code_body">
 <div class="language-text highlighter-rouge"><div class="highlight"><pre class="highlight"><code><table class="rouge-table"><tbody><tr>
 <td class="rouge-gutter gl"><pre class="lineno">1
@@ -2682,22 +2750,26 @@ CapabilityFactory::makeCapability&lt;ASRAgent, IASRHandler&gt;(asr_listener.get(
 
 <h3 id="음성-인식-중단">음성 인식 중단</h3>
 
-<p>사용자가 음성 인식 중단 요청을 <a href="#stoprecognize">StopRecognize</a> event 로 전달할 수 있습니다.</p>
+<p>사용자가 음성 인식 중단 요청을 <a href="#stoprecognize" class="hash_internal">StopRecognize</a> event 로 전달할 수 있습니다.</p>
 
 <div id="tabs-268" class="tabs">
     <ul class="tabs_title">
         
-            <li data-content-id="tab-content-269" class="tab_title">Android</li>
+            <li data-content-id="tab-content-269" class="tab_title selected">Android</li>
         
             <li data-content-id="tab-content-277" class="tab_title">iOS</li>
         
             <li data-content-id="tab-content-285" class="tab_title">Linux</li>
         
     </ul>
-    <div id="tab-content-269" class="tab_content">
+    <div id="tab-content-269" class="tab_content selected">
     
 <div class="code">
-    <div class="code_title"></div>
+    <div class="code_title">
+        <div class="label"></div>
+        <div class="copy"></div>
+        <div class="copy_success">복사성공!</div>
+    </div>
     <div class="code_body">
 <div class="language-text highlighter-rouge"><div class="highlight"><pre class="highlight"><code><table class="rouge-table"><tbody><tr>
 <td class="rouge-gutter gl"><pre class="lineno">1
@@ -2713,7 +2785,11 @@ CapabilityFactory::makeCapability&lt;ASRAgent, IASRHandler&gt;(asr_listener.get(
 <div id="tab-content-277" class="tab_content">
     
 <div class="code">
-    <div class="code_title"></div>
+    <div class="code_title">
+        <div class="label"></div>
+        <div class="copy"></div>
+        <div class="copy_success">복사성공!</div>
+    </div>
     <div class="code_body">
 <div class="language-text highlighter-rouge"><div class="highlight"><pre class="highlight"><code><table class="rouge-table"><tbody><tr>
 <td class="rouge-gutter gl"><pre class="lineno">1
@@ -2729,7 +2805,11 @@ CapabilityFactory::makeCapability&lt;ASRAgent, IASRHandler&gt;(asr_listener.get(
 <div id="tab-content-285" class="tab_content">
     
 <div class="code">
-    <div class="code_title"></div>
+    <div class="code_title">
+        <div class="label"></div>
+        <div class="copy"></div>
+        <div class="copy_success">복사성공!</div>
+    </div>
     <div class="code_body">
 <div class="language-text highlighter-rouge"><div class="highlight"><pre class="highlight"><code><table class="rouge-table"><tbody><tr>
 <td class="rouge-gutter gl"><pre class="lineno">1
@@ -2748,7 +2828,11 @@ CapabilityFactory::makeCapability&lt;ASRAgent, IASRHandler&gt;(asr_listener.get(
 <h2 id="context">Context</h2>
 
 <div class="code">
-    <div class="code_title"></div>
+    <div class="code_title">
+        <div class="label"></div>
+        <div class="copy"></div>
+        <div class="copy_success">복사성공!</div>
+    </div>
     <div class="code_body">
 <div class="language-text highlighter-rouge"><div class="highlight"><pre class="highlight"><code><table class="rouge-table"><tbody><tr>
 <td class="rouge-gutter gl"><pre class="lineno">1
@@ -2793,7 +2877,7 @@ CapabilityFactory::makeCapability&lt;ASRAgent, IASRHandler&gt;(asr_listener.get(
       <td style="text-align: left">state</td>
       <td style="text-align: left">string</td>
       <td style="text-align: left">Y</td>
-      <td style="text-align: left">IDLE<br>EXPECTING_SPEECH<br>LISTENING<br>RECOGNIZING<br>BUSY<br><a href="#state-diagram">State Diagram</a> 참고</td>
+      <td style="text-align: left">IDLE<br>EXPECTING_SPEECH<br>LISTENING<br>RECOGNIZING<br>BUSY<br><a href="#state-diagram" class="hash_internal">State Diagram</a> 참고</td>
     </tr>
     <tr>
       <td style="text-align: left">initiator</td>
@@ -2809,7 +2893,11 @@ CapabilityFactory::makeCapability&lt;ASRAgent, IASRHandler&gt;(asr_listener.get(
 <h3 id="expectspeech">ExpectSpeech</h3>
 
 <div class="code">
-    <div class="code_title"></div>
+    <div class="code_title">
+        <div class="label"></div>
+        <div class="copy"></div>
+        <div class="copy_success">복사성공!</div>
+    </div>
     <div class="code_body">
 <div class="language-text highlighter-rouge"><div class="highlight"><pre class="highlight"><code><table class="rouge-table"><tbody><tr>
 <td class="rouge-gutter gl"><pre class="lineno">1
@@ -2973,7 +3061,11 @@ CapabilityFactory::makeCapability&lt;ASRAgent, IASRHandler&gt;(asr_listener.get(
 </ul>
 
 <div class="code">
-    <div class="code_title"></div>
+    <div class="code_title">
+        <div class="label"></div>
+        <div class="copy"></div>
+        <div class="copy_success">복사성공!</div>
+    </div>
     <div class="code_body">
 <div class="language-text highlighter-rouge"><div class="highlight"><pre class="highlight"><code><table class="rouge-table"><tbody><tr>
 <td class="rouge-gutter gl"><pre class="lineno">1
@@ -3045,7 +3137,11 @@ CapabilityFactory::makeCapability&lt;ASRAgent, IASRHandler&gt;(asr_listener.get(
 <h3 id="cancelrecognize">CancelRecognize</h3>
 
 <div class="code">
-    <div class="code_title"></div>
+    <div class="code_title">
+        <div class="label"></div>
+        <div class="copy"></div>
+        <div class="copy_success">복사성공!</div>
+    </div>
     <div class="code_body">
 <div class="language-text highlighter-rouge"><div class="highlight"><pre class="highlight"><code><table class="rouge-table"><tbody><tr>
 <td class="rouge-gutter gl"><pre class="lineno">1
@@ -3103,7 +3199,11 @@ CapabilityFactory::makeCapability&lt;ASRAgent, IASRHandler&gt;(asr_listener.get(
 <h3 id="recognize">Recognize</h3>
 
 <div class="code">
-    <div class="code_title"></div>
+    <div class="code_title">
+        <div class="label"></div>
+        <div class="copy"></div>
+        <div class="copy_success">복사성공!</div>
+    </div>
     <div class="code_body">
 <div class="language-text highlighter-rouge"><div class="highlight"><pre class="highlight"><code><table class="rouge-table"><tbody><tr>
 <td class="rouge-gutter gl"><pre class="lineno">1
@@ -3376,7 +3476,11 @@ CapabilityFactory::makeCapability&lt;ASRAgent, IASRHandler&gt;(asr_listener.get(
 </ul>
 
 <div class="code">
-    <div class="code_title"></div>
+    <div class="code_title">
+        <div class="label"></div>
+        <div class="copy"></div>
+        <div class="copy_success">복사성공!</div>
+    </div>
     <div class="code_body">
 <div class="language-text highlighter-rouge"><div class="highlight"><pre class="highlight"><code><table class="rouge-table"><tbody><tr>
 <td class="rouge-gutter gl"><pre class="lineno">1
@@ -3435,7 +3539,11 @@ CapabilityFactory::makeCapability&lt;ASRAgent, IASRHandler&gt;(asr_listener.get(
 </ul>
 
 <div class="code">
-    <div class="code_title"></div>
+    <div class="code_title">
+        <div class="label"></div>
+        <div class="copy"></div>
+        <div class="copy_success">복사성공!</div>
+    </div>
     <div class="code_body">
 <div class="language-text highlighter-rouge"><div class="highlight"><pre class="highlight"><code><table class="rouge-table"><tbody><tr>
 <td class="rouge-gutter gl"><pre class="lineno">1
@@ -3494,7 +3602,11 @@ CapabilityFactory::makeCapability&lt;ASRAgent, IASRHandler&gt;(asr_listener.get(
 </ul>
 
 <div class="code">
-    <div class="code_title"></div>
+    <div class="code_title">
+        <div class="label"></div>
+        <div class="copy"></div>
+        <div class="copy_success">복사성공!</div>
+    </div>
     <div class="code_body">
 <div class="language-text highlighter-rouge"><div class="highlight"><pre class="highlight"><code><table class="rouge-table"><tbody><tr>
 <td class="rouge-gutter gl"><pre class="lineno">1
@@ -3553,7 +3665,11 @@ CapabilityFactory::makeCapability&lt;ASRAgent, IASRHandler&gt;(asr_listener.get(
 </ul>
 
 <div class="code">
-    <div class="code_title"></div>
+    <div class="code_title">
+        <div class="label"></div>
+        <div class="copy"></div>
+        <div class="copy_success">복사성공!</div>
+    </div>
     <div class="code_body">
 <div class="language-text highlighter-rouge"><div class="highlight"><pre class="highlight"><code><table class="rouge-table"><tbody><tr>
 <td class="rouge-gutter gl"><pre class="lineno">1
@@ -3635,13 +3751,13 @@ CapabilityFactory::makeCapability&lt;ASRAgent, IASRHandler&gt;(asr_listener.get(
 </section>
 <div id="modal_image_area" class="modal_image_area hide">
     <div class="modal_wrapper">
-        <img id="modal_image" class="modal_image" src="">
+        <img id="modal_image" class="modal_image" src="" data-skip-src-to-absolute>
     </div>
 </div>
 <script type="text/x-jsrender" id="search_contents_tmpl">
 
 <div class="search_content">
-    <a href="/nugu-sdk/capability-interface/{{:url}}">
+    <a href="{{:url}}">
         <div class="page_title">{{:title}}</div>
         <div class="content">
             {{for contents}}

@@ -8,7 +8,7 @@
 
 
 
-<meta http-equiv="Last-Modified" content="2022-06-23 08:56:35 +0000">
+<meta http-equiv="Last-Modified" content="2022-06-27 10:20:03 +0000">
 
 
 
@@ -63,10 +63,10 @@
 <body>
 <header>
     <div class="header">
-        <div class="title">
-            <img src="/assets/icon/icon.png">
+        <a href="/" class="title">
+            <img src="/assets/icon/icon.png" class="img_inline">
             Developers | Guide
-        </div>
+        </a>
     </div>
     <div class="search">
         <div id="go_search" class="search_bar">
@@ -2148,7 +2148,7 @@
         <div class="description"></div>
     </div>
     <div class="content">
-        <p><a href="/nugu-sdk/sdk-design-guide/voice-chrome">SDK UX Guide</a> 을 준수하여 어플리케이션을 개발하는데 사용할 수 있는 레이아웃 객체와 UI 컨트롤 같은 UI 구성요소를 미리 빌드된 형태로 제공합니다.</p>
+        <p><a href="/nugu-sdk/sdk-design-guide/voice-chrome" class="a_internal">SDK UX Guide</a> 을 준수하여 어플리케이션을 개발하는데 사용할 수 있는 레이아웃 객체와 UI 컨트롤 같은 UI 구성요소를 미리 빌드된 형태로 제공합니다.</p>
 
 <h2 id="nuguvoicechrome">NuguVoiceChrome</h2>
 
@@ -2186,7 +2186,11 @@
 </ol>
 
 <div class="code">
-    <div class="code_title"></div>
+    <div class="code_title">
+        <div class="label"></div>
+        <div class="copy"></div>
+        <div class="copy_success">복사성공!</div>
+    </div>
     <div class="code_body">
 <div class="language-swift highlighter-rouge"><div class="highlight"><pre class="highlight"><code><table class="rouge-table"><tbody><tr>
 <td class="rouge-gutter gl"><pre class="lineno">1
@@ -2204,7 +2208,11 @@
 </ol>
 
 <div class="code">
-    <div class="code_title"></div>
+    <div class="code_title">
+        <div class="label"></div>
+        <div class="copy"></div>
+        <div class="copy_success">복사성공!</div>
+    </div>
     <div class="code_body">
 <div class="language-swift highlighter-rouge"><div class="highlight"><pre class="highlight"><code><table class="rouge-table"><tbody><tr>
 <td class="rouge-gutter gl"><pre class="lineno">1
@@ -2235,7 +2243,11 @@
 </ul>
 
 <div class="code">
-    <div class="code_title"></div>
+    <div class="code_title">
+        <div class="label"></div>
+        <div class="copy"></div>
+        <div class="copy_success">복사성공!</div>
+    </div>
     <div class="code_body">
 <div class="language-swift highlighter-rouge"><div class="highlight"><pre class="highlight"><code><table class="rouge-table"><tbody><tr>
 <td class="rouge-gutter gl"><pre class="lineno">1
@@ -2275,7 +2287,11 @@
 </div>
 
 <div class="code">
-    <div class="code_title"></div>
+    <div class="code_title">
+        <div class="label"></div>
+        <div class="copy"></div>
+        <div class="copy_success">복사성공!</div>
+    </div>
     <div class="code_body">
 <div class="language-swift highlighter-rouge"><div class="highlight"><pre class="highlight"><code><table class="rouge-table"><tbody><tr>
 <td class="rouge-gutter gl"><pre class="lineno">1
@@ -2294,7 +2310,11 @@
 </ol>
 
 <div class="code">
-    <div class="code_title"></div>
+    <div class="code_title">
+        <div class="label"></div>
+        <div class="copy"></div>
+        <div class="copy_success">복사성공!</div>
+    </div>
     <div class="code_body">
 <div class="language-swift highlighter-rouge"><div class="highlight"><pre class="highlight"><code><table class="rouge-table"><tbody><tr>
 <td class="rouge-gutter gl"><pre class="lineno">1
@@ -2368,7 +2388,11 @@
 </table>
 
 <div class="code">
-    <div class="code_title"></div>
+    <div class="code_title">
+        <div class="label"></div>
+        <div class="copy"></div>
+        <div class="copy_success">복사성공!</div>
+    </div>
     <div class="code_body">
 <div class="language-swift highlighter-rouge"><div class="highlight"><pre class="highlight"><code><table class="rouge-table"><tbody><tr>
 <td class="rouge-gutter gl"><pre class="lineno">1
@@ -2394,7 +2418,11 @@
 <p>NUGU 토스트 메시지는 작은 팝업으로 작업에 관한 간단한 피드백을 제공합니다. 메시지에 필요한 공간만 차지하며 진행 중인 활동은 그대로 표시되고 상호작용도 유지됩니다. 토스트 메시지는 시간이 초과하면 자동으로 사라집니다.</p>
 
 <div class="code">
-    <div class="code_title"></div>
+    <div class="code_title">
+        <div class="label"></div>
+        <div class="copy"></div>
+        <div class="copy_success">복사성공!</div>
+    </div>
     <div class="code_body">
 <div class="language-swift highlighter-rouge"><div class="highlight"><pre class="highlight"><code><table class="rouge-table"><tbody><tr>
 <td class="rouge-gutter gl"><pre class="lineno">1
@@ -2441,13 +2469,13 @@
 </section>
 <div id="modal_image_area" class="modal_image_area hide">
     <div class="modal_wrapper">
-        <img id="modal_image" class="modal_image" src="">
+        <img id="modal_image" class="modal_image" src="" data-skip-src-to-absolute>
     </div>
 </div>
 <script type="text/x-jsrender" id="search_contents_tmpl">
 
 <div class="search_content">
-    <a href="/nugu-sdk/platform/ios/{{:url}}">
+    <a href="{{:url}}">
         <div class="page_title">{{:title}}</div>
         <div class="content">
             {{for contents}}

@@ -8,7 +8,7 @@
 
 
 
-<meta http-equiv="Last-Modified" content="2022-06-23 08:56:35 +0000">
+<meta http-equiv="Last-Modified" content="2022-06-27 10:20:03 +0000">
 
 
 
@@ -63,10 +63,10 @@
 <body>
 <header>
     <div class="header">
-        <div class="title">
-            <img src="/assets/icon/icon.png">
+        <a href="/" class="title">
+            <img src="/assets/icon/icon.png" class="img_inline">
             Developers | Guide
-        </div>
+        </a>
     </div>
     <div class="search">
         <div id="go_search" class="search_bar">
@@ -2151,9 +2151,9 @@
         <p>Biz 전용 디바이스 그룹이나, Biz 사용자를 대상으로 Announcement 메세지 (tts, image)를 보낼 수 있는 기능입니다.</p>
 
 <ul>
-  <li><a href="/work-with-nugu-biz/biz-api/api-announcement/api-announcement-usergroup">Biz 사용자 그룹별 Announcement 전송</a></li>
-  <li><a href="/work-with-nugu-biz/biz-api/api-announcement/api-announcement-bizuser">Biz 사용자별 Announcement 전송</a></li>
-  <li><a href="/work-with-nugu-biz/biz-api/api-announcement/api-announcement-shareddevice">전용디바이스 그룹별 Announcement 전송</a></li>
+  <li><a href="/work-with-nugu-biz/biz-api/api-announcement/api-announcement-usergroup" class="a_internal">Biz 사용자 그룹별 Announcement 전송</a></li>
+  <li><a href="/work-with-nugu-biz/biz-api/api-announcement/api-announcement-bizuser" class="a_internal">Biz 사용자별 Announcement 전송</a></li>
+  <li><a href="/work-with-nugu-biz/biz-api/api-announcement/api-announcement-shareddevice" class="a_internal">전용디바이스 그룹별 Announcement 전송</a></li>
 </ul>
 
     </div>
@@ -2186,13 +2186,13 @@
 </section>
 <div id="modal_image_area" class="modal_image_area hide">
     <div class="modal_wrapper">
-        <img id="modal_image" class="modal_image" src="">
+        <img id="modal_image" class="modal_image" src="" data-skip-src-to-absolute>
     </div>
 </div>
 <script type="text/x-jsrender" id="search_contents_tmpl">
 
 <div class="search_content">
-    <a href="/work-with-nugu-biz/biz-api/{{:url}}">
+    <a href="{{:url}}">
         <div class="page_title">{{:title}}</div>
         <div class="content">
             {{for contents}}

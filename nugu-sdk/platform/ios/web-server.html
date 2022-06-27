@@ -8,7 +8,7 @@
 
 
 
-<meta http-equiv="Last-Modified" content="2022-06-23 08:56:35 +0000">
+<meta http-equiv="Last-Modified" content="2022-06-27 10:20:03 +0000">
 
 
 
@@ -63,10 +63,10 @@
 <body>
 <header>
     <div class="header">
-        <div class="title">
-            <img src="/assets/icon/icon.png">
+        <a href="/" class="title">
+            <img src="/assets/icon/icon.png" class="img_inline">
             Developers | Guide
-        </div>
+        </a>
     </div>
     <div class="search">
         <div id="go_search" class="search_bar">
@@ -2168,7 +2168,11 @@
 <p><code class="language-plaintext highlighter-rouge">NuguClientKit</code> 은 사용자의 편의를 위해서 cookie 를 default 로 제공하고 있습니다. Default cookie 를 사용하려면 <code class="language-plaintext highlighter-rouge">addCooklie</code> 함수를, 직접 cookie 를 세팅하려면 <code class="language-plaintext highlighter-rouge">setCookie</code> 함수를 사용하면 됩니다.</p>
 
 <div class="code">
-    <div class="code_title">NuguServiceWebViewController.swift</div>
+    <div class="code_title">
+        <div class="label">NuguServiceWebViewController.swift</div>
+        <div class="copy"></div>
+        <div class="copy_success">복사성공!</div>
+    </div>
     <div class="code_body">
 <div class="language-swift highlighter-rouge"><div class="highlight"><pre class="highlight"><code><table class="rouge-table"><tbody><tr>
 <td class="rouge-gutter gl"><pre class="lineno">1
@@ -2203,7 +2207,11 @@
 </ul>
 
 <div class="code">
-    <div class="code_title">NuguServiceWebViewController.swift</div>
+    <div class="code_title">
+        <div class="label">NuguServiceWebViewController.swift</div>
+        <div class="copy"></div>
+        <div class="copy_success">복사성공!</div>
+    </div>
     <div class="code_body">
 <div class="language-swift highlighter-rouge"><div class="highlight"><pre class="highlight"><code><table class="rouge-table"><tbody><tr>
 <td class="rouge-gutter gl"><pre class="lineno">1
@@ -2308,7 +2316,11 @@
 <p>NuguServiceWebView 가 가지고 있던 <code class="language-plaintext highlighter-rouge">serviceSettingUrl</code> 과 <code class="language-plaintext highlighter-rouge">agreementUrl</code> 은 deprecate 되었습니다.</p>
 
 <div class="code">
-    <div class="code_title"></div>
+    <div class="code_title">
+        <div class="label"></div>
+        <div class="copy"></div>
+        <div class="copy_success">복사성공!</div>
+    </div>
     <div class="code_body">
 <div class="language-swift highlighter-rouge"><div class="highlight"><pre class="highlight"><code><table class="rouge-table"><tbody><tr>
 <td class="rouge-gutter gl"><pre class="lineno">1
@@ -2348,7 +2360,11 @@
 <p>대신 ConfigurationStore 에서 <code class="language-plaintext highlighter-rouge">serviceSettingUrl</code> 과 <code class="language-plaintext highlighter-rouge">agreementUrl</code> 을 제공합니다.</p>
 
 <div class="code">
-    <div class="code_title"></div>
+    <div class="code_title">
+        <div class="label"></div>
+        <div class="copy"></div>
+        <div class="copy_success">복사성공!</div>
+    </div>
     <div class="code_body">
 <div class="language-swift highlighter-rouge"><div class="highlight"><pre class="highlight"><code><table class="rouge-table"><tbody><tr>
 <td class="rouge-gutter gl"><pre class="lineno">1
@@ -2440,7 +2456,11 @@
 </ul>
 
 <div class="code">
-    <div class="code_title"></div>
+    <div class="code_title">
+        <div class="label"></div>
+        <div class="copy"></div>
+        <div class="copy_success">복사성공!</div>
+    </div>
     <div class="code_body">
 <div class="language-swift highlighter-rouge"><div class="highlight"><pre class="highlight"><code><table class="rouge-table"><tbody><tr>
 <td class="rouge-gutter gl"><pre class="lineno">1
@@ -2457,7 +2477,11 @@
 </ul>
 
 <div class="code">
-    <div class="code_title">AppDelegate.swift</div>
+    <div class="code_title">
+        <div class="label">AppDelegate.swift</div>
+        <div class="copy"></div>
+        <div class="copy_success">복사성공!</div>
+    </div>
     <div class="code_body">
 <div class="language-swift highlighter-rouge"><div class="highlight"><pre class="highlight"><code><table class="rouge-table"><tbody><tr>
 <td class="rouge-gutter gl"><pre class="lineno">1
@@ -2484,7 +2508,11 @@
 </ul>
 
 <div class="code">
-    <div class="code_title">NuguServiceWebViewController.swift</div>
+    <div class="code_title">
+        <div class="label">NuguServiceWebViewController.swift</div>
+        <div class="copy"></div>
+        <div class="copy_success">복사성공!</div>
+    </div>
     <div class="code_body">
 <div class="language-swift highlighter-rouge"><div class="highlight"><pre class="highlight"><code><table class="rouge-table"><tbody><tr>
 <td class="rouge-gutter gl"><pre class="lineno">1
@@ -2553,13 +2581,13 @@
 </section>
 <div id="modal_image_area" class="modal_image_area hide">
     <div class="modal_wrapper">
-        <img id="modal_image" class="modal_image" src="">
+        <img id="modal_image" class="modal_image" src="" data-skip-src-to-absolute>
     </div>
 </div>
 <script type="text/x-jsrender" id="search_contents_tmpl">
 
 <div class="search_content">
-    <a href="/nugu-sdk/platform/ios/{{:url}}">
+    <a href="{{:url}}">
         <div class="page_title">{{:title}}</div>
         <div class="content">
             {{for contents}}

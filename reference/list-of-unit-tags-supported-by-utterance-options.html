@@ -8,7 +8,7 @@
 
 
 
-<meta http-equiv="Last-Modified" content="2022-06-23 08:56:35 +0000">
+<meta http-equiv="Last-Modified" content="2022-06-27 10:20:03 +0000">
 
 
 
@@ -63,10 +63,10 @@
 <body>
 <header>
     <div class="header">
-        <div class="title">
-            <img src="/assets/icon/icon.png">
+        <a href="/" class="title">
+            <img src="/assets/icon/icon.png" class="img_inline">
             Developers | Guide
-        </div>
+        </a>
     </div>
     <div class="search">
         <div id="go_search" class="search_bar">
@@ -2148,7 +2148,7 @@
         <div class="description"></div>
     </div>
     <div class="content">
-        <p>문장 내 발화 옵션 태그 중 <code class="language-plaintext highlighter-rouge">텍스트 읽기</code> &gt; <code class="language-plaintext highlighter-rouge">단위 읽기</code> 태그에서 지원하는 단위의 목록은 다음과 같습니다.(<a href="/nugu-play/create-plays-with-play-builder/define-an-action/use-responses/use-prompts#use-utterance-options">발화 옵션 사용하기</a>)</p>
+        <p>문장 내 발화 옵션 태그 중 <code class="language-plaintext highlighter-rouge">텍스트 읽기</code> &gt; <code class="language-plaintext highlighter-rouge">단위 읽기</code> 태그에서 지원하는 단위의 목록은 다음과 같습니다.(<a href="/nugu-play/create-plays-with-play-builder/define-an-action/use-responses/use-prompts#use-utterance-options" class="a_internal">발화 옵션 사용하기</a>)</p>
 
 <table>
   <thead>
@@ -2747,13 +2747,13 @@
 </section>
 <div id="modal_image_area" class="modal_image_area hide">
     <div class="modal_wrapper">
-        <img id="modal_image" class="modal_image" src="">
+        <img id="modal_image" class="modal_image" src="" data-skip-src-to-absolute>
     </div>
 </div>
 <script type="text/x-jsrender" id="search_contents_tmpl">
 
 <div class="search_content">
-    <a href="/reference/{{:url}}">
+    <a href="{{:url}}">
         <div class="page_title">{{:title}}</div>
         <div class="content">
             {{for contents}}

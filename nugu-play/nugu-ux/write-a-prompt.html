@@ -8,7 +8,7 @@
 
 
 
-<meta http-equiv="Last-Modified" content="2022-06-23 08:56:35 +0000">
+<meta http-equiv="Last-Modified" content="2022-06-27 10:20:03 +0000">
 
 
 
@@ -63,10 +63,10 @@
 <body>
 <header>
     <div class="header">
-        <div class="title">
-            <img src="/assets/icon/icon.png">
+        <a href="/" class="title">
+            <img src="/assets/icon/icon.png" class="img_inline">
             Developers | Guide
-        </div>
+        </a>
     </div>
     <div class="search">
         <div id="go_search" class="search_bar">
@@ -2238,9 +2238,9 @@
 
 <p>NUGU의 페르소나는 20대 후반에서 30대 초반의 여성으로, 차분하고 편안함을 지향하는 다정다감한 성격의 친구같은 비서입니다. 세부 대화 스타일은 다음과 같으며, 작성한 Prompt가 NUGU 페르소나와 일치하는지 검토하는 것을 권장합니다.</p>
 
-<p><img src="/assets/images/write-a-prompt-01.png" alt="NUGU 페르소나"></p>
+<p><img src="/assets/images/write-a-prompt-01.png" alt="NUGU 페르소나" class="img_internal"></p>
 
-<p><img src="/assets/images/write-a-prompt-02.png" alt=""></p>
+<p><img src="/assets/images/write-a-prompt-02.png" alt="" class="img_internal"></p>
 
 <h3 id="스타일">스타일</h3>
 
@@ -2305,13 +2305,13 @@
 </section>
 <div id="modal_image_area" class="modal_image_area hide">
     <div class="modal_wrapper">
-        <img id="modal_image" class="modal_image" src="">
+        <img id="modal_image" class="modal_image" src="" data-skip-src-to-absolute>
     </div>
 </div>
 <script type="text/x-jsrender" id="search_contents_tmpl">
 
 <div class="search_content">
-    <a href="/nugu-play/nugu-ux/{{:url}}">
+    <a href="{{:url}}">
         <div class="page_title">{{:title}}</div>
         <div class="content">
             {{for contents}}

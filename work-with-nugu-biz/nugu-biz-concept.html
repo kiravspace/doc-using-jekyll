@@ -8,7 +8,7 @@
 
 
 
-<meta http-equiv="Last-Modified" content="2022-06-23 08:56:35 +0000">
+<meta http-equiv="Last-Modified" content="2022-06-27 10:20:03 +0000">
 
 
 
@@ -63,10 +63,10 @@
 <body>
 <header>
     <div class="header">
-        <div class="title">
-            <img src="/assets/icon/icon.png">
+        <a href="/" class="title">
+            <img src="/assets/icon/icon.png" class="img_inline">
             Developers | Guide
-        </div>
+        </a>
     </div>
     <div class="search">
         <div id="go_search" class="search_bar">
@@ -2253,11 +2253,11 @@
 
 <h2 id="biz-api">Biz API</h2>
 
-<p>NUGU biz kit의 정식판에서는 퍼블리셔에서 Biz 전용 디바이스와 Biz 사용자 관리에 유용한 API를 추가적으로 제공합니다. 자세한 내용은 <a href="/work-with-nugu-biz/biz-api">Biz API</a>의 설명을 참고하세요.</p>
+<p>NUGU biz kit의 정식판에서는 퍼블리셔에서 Biz 전용 디바이스와 Biz 사용자 관리에 유용한 API를 추가적으로 제공합니다. 자세한 내용은 <a href="/work-with-nugu-biz/biz-api" class="a_internal">Biz API</a>의 설명을 참고하세요.</p>
 
 <h2 id="annoucement">Annoucement</h2>
 
-<p>Biz API에서 지원하는 기능으로, Biz 전용 디바이스나 Biz 사용자의 디바이스에 토큰을 기준으로 Announcement 메세지 (tts, image)를 전송 할 수 있습니다. 자세한 내용은 <a href="/work-with-nugu-biz/biz-api/api-announcement">API 발송 (Announcement)</a>의 설명을 참고하세요.</p>
+<p>Biz API에서 지원하는 기능으로, Biz 전용 디바이스나 Biz 사용자의 디바이스에 토큰을 기준으로 Announcement 메세지 (tts, image)를 전송 할 수 있습니다. 자세한 내용은 <a href="/work-with-nugu-biz/biz-api/api-announcement" class="a_internal">API 발송 (Announcement)</a>의 설명을 참고하세요.</p>
 
     </div>
     
@@ -2289,13 +2289,13 @@
 </section>
 <div id="modal_image_area" class="modal_image_area hide">
     <div class="modal_wrapper">
-        <img id="modal_image" class="modal_image" src="">
+        <img id="modal_image" class="modal_image" src="" data-skip-src-to-absolute>
     </div>
 </div>
 <script type="text/x-jsrender" id="search_contents_tmpl">
 
 <div class="search_content">
-    <a href="/work-with-nugu-biz/{{:url}}">
+    <a href="{{:url}}">
         <div class="page_title">{{:title}}</div>
         <div class="content">
             {{for contents}}

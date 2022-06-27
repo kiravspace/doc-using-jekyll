@@ -8,7 +8,7 @@
 
 
 
-<meta http-equiv="Last-Modified" content="2022-06-23 08:56:35 +0000">
+<meta http-equiv="Last-Modified" content="2022-06-27 10:20:03 +0000">
 
 
 
@@ -63,10 +63,10 @@
 <body>
 <header>
     <div class="header">
-        <div class="title">
-            <img src="/assets/icon/icon.png">
+        <a href="/" class="title">
+            <img src="/assets/icon/icon.png" class="img_inline">
             Developers | Guide
-        </div>
+        </a>
     </div>
     <div class="search">
         <div id="go_search" class="search_bar">
@@ -2161,48 +2161,48 @@
   </thead>
   <tbody>
     <tr>
-      <td style="text-align: left"><a href="#airflowtype">airflowType</a></td>
+      <td style="text-align: left"><a href="#airflowtype" class="hash_internal">airflowType</a></td>
       <td style="text-align: left">설정하고자 하는 airflowType의 사용자 발화 정보.<br>해당 parameter의 value는 Device Discovery 당시 Response한 supprtedAirflowTypes 중 하나로 요청됩니다.</td>
     </tr>
     <tr>
-      <td style="text-align: left"><a href="#airflowdelta">airflowDelta</a></td>
+      <td style="text-align: left"><a href="#airflowdelta" class="hash_internal">airflowDelta</a></td>
       <td style="text-align: left">airflowType을 몇 단계 조절할지에 대한 사용자 발화 정보입니다.<br>해당 parameter가 없을 경우에는 1단계를 올리도록 설정해야 합니다.</td>
     </tr>
     <tr>
-      <td style="text-align: left"><a href="#brightnesslevel">brightnessLevel</a></td>
+      <td style="text-align: left"><a href="#brightnesslevel" class="hash_internal">brightnessLevel</a></td>
       <td style="text-align: left">사용자가 SmartHomeDevice에 설정하고자 하는 밝기의 발화 정보입니다.<br>1부터 100까지 설정할 수 있습니다.</td>
     </tr>
     <tr>
-      <td style="text-align: left"><a href="#brightnessdelta">brightnessDelta</a></td>
+      <td style="text-align: left"><a href="#brightnessdelta" class="hash_internal">brightnessDelta</a></td>
       <td style="text-align: left">설정 밝기를 몇 단계 조절지에 대한 사용자 발화 정보입니다.<br>해당 정보가 없을 경우 1단계를 올리도록 설정합니다.</td>
     </tr>
     <tr>
-      <td style="text-align: left"><a href="#colortype">colorType</a></td>
+      <td style="text-align: left"><a href="#colortype" class="hash_internal">colorType</a></td>
       <td style="text-align: left">사용자가 SmartHomeDevice에 설정하고자 하는 색상 정보입니다.</td>
     </tr>
     <tr>
-      <td style="text-align: left"><a href="#devicetemperaturelevel">deviceTemperatureLevel</a></td>
+      <td style="text-align: left"><a href="#devicetemperaturelevel" class="hash_internal">deviceTemperatureLevel</a></td>
       <td style="text-align: left">사용자가 SmartHomeDevice에 설정하고자 하는 자체설정온도의 발화정보입니다.<br>
 </td>
     </tr>
     <tr>
-      <td style="text-align: left"><a href="#humiditylevel">humidityLevel</a></td>
+      <td style="text-align: left"><a href="#humiditylevel" class="hash_internal">humidityLevel</a></td>
       <td style="text-align: left">사용자가 SmartHomeDevice에 설정하고자 하는 습도의 발화 정보입니다.<br>%단위입니다.</td>
     </tr>
     <tr>
-      <td style="text-align: left"><a href="#humiditydelta">humidityDelta</a></td>
+      <td style="text-align: left"><a href="#humiditydelta" class="hash_internal">humidityDelta</a></td>
       <td style="text-align: left">설정습도를 몇 % 조절지에 대한 사용자 발화 정보입니다.<br>해당 정보가 없을 경우 humidityStep만큼 올리도록 설정합니다.</td>
     </tr>
     <tr>
-      <td style="text-align: left"><a href="#mode">mode</a></td>
+      <td style="text-align: left"><a href="#mode" class="hash_internal">mode</a></td>
       <td style="text-align: left">설정하고자 하는 mode의 사용자 발화 정보.<br>해당 parameter의 value는 Device Discovery 당시 응답한 supportedModes 중 하나로 요청됩니다.</td>
     </tr>
     <tr>
-      <td style="text-align: left"><a href="#temperaturelevel">temperatureLevel</a></td>
+      <td style="text-align: left"><a href="#temperaturelevel" class="hash_internal">temperatureLevel</a></td>
       <td style="text-align: left">사용자가 SmartHomeDevice에 설정하고자 하는 온도(섭씨)의 발화 정보입니다.</td>
     </tr>
     <tr>
-      <td style="text-align: left"><a href="#temperaturedelta">temperatureDelta</a></td>
+      <td style="text-align: left"><a href="#temperaturedelta" class="hash_internal">temperatureDelta</a></td>
       <td style="text-align: left">설정온도를 몇 도(섭씨) 올릴지에 대한 사용자 발화 정보입니다.<br>해당 정보가 없을 경우에는 temperatureStep만큼 올리도록 설정합니다.</td>
     </tr>
   </tbody>
@@ -2292,7 +2292,11 @@
 <p>Attribute 사용 예시</p>
 
 <div class="code">
-    <div class="code_title"></div>
+    <div class="code_title">
+        <div class="label"></div>
+        <div class="copy"></div>
+        <div class="copy_success">복사성공!</div>
+    </div>
     <div class="code_body">
 <div class="language-scheme highlighter-rouge"><div class="highlight"><pre class="highlight"><code><table class="rouge-table"><tbody><tr>
 <td class="rouge-gutter gl"><pre class="lineno">1
@@ -2393,7 +2397,7 @@
 </div>
 </div>
 
-<p>Related to <a href="/nugu-play/smarthome-play/smarthomecapability/airflowcontrol-interface">AirflowControl Interface</a></p>
+<p>Related to <a href="/nugu-play/smarthome-play/smarthomecapability/airflowcontrol-interface" class="a_internal">AirflowControl Interface</a></p>
 
 <h3 id="airflowdelta">airflowDelta</h3>
 
@@ -2409,7 +2413,11 @@
 <p>Attribute 사용 예시</p>
 
 <div class="code">
-    <div class="code_title"></div>
+    <div class="code_title">
+        <div class="label"></div>
+        <div class="copy"></div>
+        <div class="copy_success">복사성공!</div>
+    </div>
     <div class="code_body">
 <div class="language-scheme highlighter-rouge"><div class="highlight"><pre class="highlight"><code><table class="rouge-table"><tbody><tr>
 <td class="rouge-gutter gl"><pre class="lineno">1
@@ -2502,7 +2510,7 @@
 </div>
 </div>
 
-<p>Related to <a href="/nugu-play/smarthome-play/smarthomecapability/airflowcontrol-interface">AirflowControl Interface</a></p>
+<p>Related to <a href="/nugu-play/smarthome-play/smarthomecapability/airflowcontrol-interface" class="a_internal">AirflowControl Interface</a></p>
 
 <h3 id="brightnesslevel">brightnessLevel</h3>
 
@@ -2511,7 +2519,11 @@
 <p>Attribute 사용 예시</p>
 
 <div class="code">
-    <div class="code_title"></div>
+    <div class="code_title">
+        <div class="label"></div>
+        <div class="copy"></div>
+        <div class="copy_success">복사성공!</div>
+    </div>
     <div class="code_body">
 <div class="language-scheme highlighter-rouge"><div class="highlight"><pre class="highlight"><code><table class="rouge-table"><tbody><tr>
 <td class="rouge-gutter gl"><pre class="lineno">1
@@ -2594,7 +2606,7 @@
 </div>
 </div>
 
-<p>Related to <a href="/nugu-play/smarthome-play/smarthomecapability/brightnesscontrol-interface">BrightnessControl Interface</a></p>
+<p>Related to <a href="/nugu-play/smarthome-play/smarthomecapability/brightnesscontrol-interface" class="a_internal">BrightnessControl Interface</a></p>
 
 <h3 id="brightnessdelta">brightnessDelta</h3>
 
@@ -2603,7 +2615,11 @@
 <p>Attribute 사용 예시</p>
 
 <div class="code">
-    <div class="code_title"></div>
+    <div class="code_title">
+        <div class="label"></div>
+        <div class="copy"></div>
+        <div class="copy_success">복사성공!</div>
+    </div>
     <div class="code_body">
 <div class="language-scheme highlighter-rouge"><div class="highlight"><pre class="highlight"><code><table class="rouge-table"><tbody><tr>
 <td class="rouge-gutter gl"><pre class="lineno">1
@@ -2692,7 +2708,7 @@
 </div>
 </div>
 
-<p>Related to <a href="/nugu-play/smarthome-play/smarthomecapability/brightnesscontrol-interface">BrightnessControl Interface</a></p>
+<p>Related to <a href="/nugu-play/smarthome-play/smarthomecapability/brightnesscontrol-interface" class="a_internal">BrightnessControl Interface</a></p>
 
 <h3 id="colortype">colorType</h3>
 
@@ -2823,7 +2839,11 @@
 <p>Attribute 사용 예시</p>
 
 <div class="code">
-    <div class="code_title"></div>
+    <div class="code_title">
+        <div class="label"></div>
+        <div class="copy"></div>
+        <div class="copy_success">복사성공!</div>
+    </div>
     <div class="code_body">
 <div class="language-scheme highlighter-rouge"><div class="highlight"><pre class="highlight"><code><table class="rouge-table"><tbody><tr>
 <td class="rouge-gutter gl"><pre class="lineno">1
@@ -2962,7 +2982,7 @@
 </div>
 </div>
 
-<p>Related to <a href="/nugu-play/smarthome-play/smarthomecapability/colorcontrol-interface">ColorControl Interface</a></p>
+<p>Related to <a href="/nugu-play/smarthome-play/smarthomecapability/colorcontrol-interface" class="a_internal">ColorControl Interface</a></p>
 
 <h3 id="devicetemperaturelevel">deviceTemperatureLevel</h3>
 
@@ -2971,7 +2991,11 @@
 <p>Attribute 사용 예시</p>
 
 <div class="code">
-    <div class="code_title"></div>
+    <div class="code_title">
+        <div class="label"></div>
+        <div class="copy"></div>
+        <div class="copy_success">복사성공!</div>
+    </div>
     <div class="code_body">
 <div class="language-scheme highlighter-rouge"><div class="highlight"><pre class="highlight"><code><table class="rouge-table"><tbody><tr>
 <td class="rouge-gutter gl"><pre class="lineno">1
@@ -3046,7 +3070,7 @@
 </div>
 </div>
 
-<p>Related to <a href="/nugu-play/smarthome-play/smarthomecapability/devicetemperaturecontrol-interface">DeviceTemperatureControl Interface</a></p>
+<p>Related to <a href="/nugu-play/smarthome-play/smarthomecapability/devicetemperaturecontrol-interface" class="a_internal">DeviceTemperatureControl Interface</a></p>
 
 <h3 id="humiditylevel">humidityLevel</h3>
 
@@ -3055,7 +3079,11 @@
 <p>Attribute 사용 예시</p>
 
 <div class="code">
-    <div class="code_title"></div>
+    <div class="code_title">
+        <div class="label"></div>
+        <div class="copy"></div>
+        <div class="copy_success">복사성공!</div>
+    </div>
     <div class="code_body">
 <div class="language-scheme highlighter-rouge"><div class="highlight"><pre class="highlight"><code><table class="rouge-table"><tbody><tr>
 <td class="rouge-gutter gl"><pre class="lineno">1
@@ -3138,7 +3166,7 @@
 </div>
 </div>
 
-<p>Related to <a href="/nugu-play/smarthome-play/smarthomecapability/humiditycontrol-interface">HumidityControl Interface</a></p>
+<p>Related to <a href="/nugu-play/smarthome-play/smarthomecapability/humiditycontrol-interface" class="a_internal">HumidityControl Interface</a></p>
 
 <h3 id="humiditydelta">humidityDelta</h3>
 
@@ -3147,7 +3175,11 @@
 <p>Attribute 사용 예시</p>
 
 <div class="code">
-    <div class="code_title"></div>
+    <div class="code_title">
+        <div class="label"></div>
+        <div class="copy"></div>
+        <div class="copy_success">복사성공!</div>
+    </div>
     <div class="code_body">
 <div class="language-scheme highlighter-rouge"><div class="highlight"><pre class="highlight"><code><table class="rouge-table"><tbody><tr>
 <td class="rouge-gutter gl"><pre class="lineno">1
@@ -3230,7 +3262,7 @@
 </div>
 </div>
 
-<p>Related to <a href="/nugu-play/smarthome-play/smarthomecapability/humiditycontrol-interface">HumidityControl Interface</a></p>
+<p>Related to <a href="/nugu-play/smarthome-play/smarthomecapability/humiditycontrol-interface" class="a_internal">HumidityControl Interface</a></p>
 
 <h3 id="mode">mode</h3>
 
@@ -3474,7 +3506,11 @@
 <p>Attribute 사용 예시</p>
 
 <div class="code">
-    <div class="code_title"></div>
+    <div class="code_title">
+        <div class="label"></div>
+        <div class="copy"></div>
+        <div class="copy_success">복사성공!</div>
+    </div>
     <div class="code_body">
 <div class="language-scheme highlighter-rouge"><div class="highlight"><pre class="highlight"><code><table class="rouge-table"><tbody><tr>
 <td class="rouge-gutter gl"><pre class="lineno">1
@@ -3575,7 +3611,7 @@
 </div>
 </div>
 
-<p>Related to <a href="/nugu-play/smarthome-play/smarthomecapability/modecontrol-interface">ModeControl Interface</a></p>
+<p>Related to <a href="/nugu-play/smarthome-play/smarthomecapability/modecontrol-interface" class="a_internal">ModeControl Interface</a></p>
 
 <h3 id="temperaturelevel">temperatureLevel</h3>
 
@@ -3584,7 +3620,11 @@
 <p>Attribute 사용 예시</p>
 
 <div class="code">
-    <div class="code_title"></div>
+    <div class="code_title">
+        <div class="label"></div>
+        <div class="copy"></div>
+        <div class="copy_success">복사성공!</div>
+    </div>
     <div class="code_body">
 <div class="language-scheme highlighter-rouge"><div class="highlight"><pre class="highlight"><code><table class="rouge-table"><tbody><tr>
 <td class="rouge-gutter gl"><pre class="lineno">1
@@ -3671,7 +3711,7 @@
 </div>
 </div>
 
-<p>Related to <a href="/nugu-play/smarthome-play/smarthomecapability/temperaturecontrol-interface">TemperatureControl Interface</a></p>
+<p>Related to <a href="/nugu-play/smarthome-play/smarthomecapability/temperaturecontrol-interface" class="a_internal">TemperatureControl Interface</a></p>
 
 <h3 id="temperaturedelta">temperatureDelta</h3>
 
@@ -3680,7 +3720,11 @@
 <p>Attribute 사용 예시</p>
 
 <div class="code">
-    <div class="code_title"></div>
+    <div class="code_title">
+        <div class="label"></div>
+        <div class="copy"></div>
+        <div class="copy_success">복사성공!</div>
+    </div>
     <div class="code_body">
 <div class="language-scheme highlighter-rouge"><div class="highlight"><pre class="highlight"><code><table class="rouge-table"><tbody><tr>
 <td class="rouge-gutter gl"><pre class="lineno">1
@@ -3767,7 +3811,7 @@
 </div>
 </div>
 
-<p>Related to <a href="/nugu-play/smarthome-play/smarthomecapability/temperaturecontrol-interface">TemperatureControl Interface</a></p>
+<p>Related to <a href="/nugu-play/smarthome-play/smarthomecapability/temperaturecontrol-interface" class="a_internal">TemperatureControl Interface</a></p>
 
     </div>
     
@@ -3799,13 +3843,13 @@
 </section>
 <div id="modal_image_area" class="modal_image_area hide">
     <div class="modal_wrapper">
-        <img id="modal_image" class="modal_image" src="">
+        <img id="modal_image" class="modal_image" src="" data-skip-src-to-absolute>
     </div>
 </div>
 <script type="text/x-jsrender" id="search_contents_tmpl">
 
 <div class="search_content">
-    <a href="/nugu-play/smarthome-play/{{:url}}">
+    <a href="{{:url}}">
         <div class="page_title">{{:title}}</div>
         <div class="content">
             {{for contents}}

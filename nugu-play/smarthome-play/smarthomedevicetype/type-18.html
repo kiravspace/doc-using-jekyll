@@ -8,7 +8,7 @@
 
 
 
-<meta http-equiv="Last-Modified" content="2022-06-23 08:56:35 +0000">
+<meta http-equiv="Last-Modified" content="2022-06-27 10:20:03 +0000">
 
 
 
@@ -63,10 +63,10 @@
 <body>
 <header>
     <div class="header">
-        <div class="title">
-            <img src="/assets/icon/icon.png">
+        <a href="/" class="title">
+            <img src="/assets/icon/icon.png" class="img_inline">
             Developers | Guide
-        </div>
+        </a>
     </div>
     <div class="search">
         <div id="go_search" class="search_bar">
@@ -2157,7 +2157,11 @@
 <p>Discovery Request 예시</p>
 
 <div class="code">
-    <div class="code_title"></div>
+    <div class="code_title">
+        <div class="label"></div>
+        <div class="copy"></div>
+        <div class="copy_success">복사성공!</div>
+    </div>
     <div class="code_body">
 <div class="language-scheme highlighter-rouge"><div class="highlight"><pre class="highlight"><code><table class="rouge-table"><tbody><tr>
 <td class="rouge-gutter gl"><pre class="lineno">1
@@ -2179,7 +2183,11 @@
 <p>Discovery Response 예시</p>
 
 <div class="code">
-    <div class="code_title"></div>
+    <div class="code_title">
+        <div class="label"></div>
+        <div class="copy"></div>
+        <div class="copy_success">복사성공!</div>
+    </div>
     <div class="code_body">
 <div class="language-json highlighter-rouge"><div class="highlight"><pre class="highlight"><code><table class="rouge-table"><tbody><tr>
 <td class="rouge-gutter gl"><pre class="lineno">1
@@ -2244,12 +2252,12 @@
   </thead>
   <tbody>
     <tr>
-      <td style="text-align: left"><a href="/nugu-play/smarthome-play/smarthomecapability/powercontrol-interface">PowerControl</a></td>
+      <td style="text-align: left"><a href="/nugu-play/smarthome-play/smarthomecapability/powercontrol-interface" class="a_internal">PowerControl</a></td>
       <td style="text-align: left">의류관리기의 전원제어 기능입니다.<br>전원을 켜고 끄며 동작을 제어하는 기능들로 구성되어 있습니다.</td>
       <td style="text-align: left">“의류관리기 켜줘”</td>
     </tr>
     <tr>
-      <td style="text-align: left"><a href="/nugu-play/smarthome-play/smarthomecapability/statecheck-interface">StateCheck</a></td>
+      <td style="text-align: left"><a href="/nugu-play/smarthome-play/smarthomecapability/statecheck-interface" class="a_internal">StateCheck</a></td>
       <td style="text-align: left">의류관리기의 상태 조회 기능입니다.<br>현재 기기의 상태를 조회하는 기능들로 구성되어 있습니다.</td>
       <td style="text-align: left">“의류관리기 현재 상태 알려줘”</td>
     </tr>
@@ -2286,13 +2294,13 @@
 </section>
 <div id="modal_image_area" class="modal_image_area hide">
     <div class="modal_wrapper">
-        <img id="modal_image" class="modal_image" src="">
+        <img id="modal_image" class="modal_image" src="" data-skip-src-to-absolute>
     </div>
 </div>
 <script type="text/x-jsrender" id="search_contents_tmpl">
 
 <div class="search_content">
-    <a href="/nugu-play/smarthome-play/smarthomedevicetype/{{:url}}">
+    <a href="{{:url}}">
         <div class="page_title">{{:title}}</div>
         <div class="content">
             {{for contents}}

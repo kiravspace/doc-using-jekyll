@@ -3,6 +3,7 @@ $(function () {
         static HASH_REGEX = new RegExp("([^#]*)#([^#]*)");
 
         constructor() {
+            this.title = $("header > div.header > a.title");
             this.nav = $("nav > div.nav_container");
             this.section = $("#section");
 
@@ -32,6 +33,7 @@ $(function () {
                 });
             });
 
+            this.initTitle();
             this.initNavigation();
 
             Page.on(this, this.modal_image, "load", () => this.modal_image_area.parent().removeClass("hide"));
@@ -89,10 +91,15 @@ $(function () {
             this.updateSectionTabs();
             this.updateSectionImages();
             this.updateSectionLinks();
+            this.updateSectionCodes();
 
             Page.on(this, $(window), "popstate", e => {
                 this.loadPage($(location).attr("pathname") + $(location).attr("hash"));
             });
+        }
+
+        initTitle() {
+            Page.on(this, this.title, "click", this.updateSectionContent);
         }
 
         initNavigation() {
@@ -119,15 +126,7 @@ $(function () {
         }
 
         updateSectionTabs() {
-            let tabs = this.section.find("div.tabs");
-            let tabTitles = tabs.find("li.tab_title");
-            let tabContents = tabs.find("div.tab_content");
-
-            tabTitles.removeClass("selected");
-            tabContents.removeClass("selected");
-
-            tabs.find("li.tab_title:first").addClass("selected");
-            tabs.find("div.tab_content:first").addClass("selected");
+            let tabTitles = this.section.find("div.tabs").find("li.tab_title");
 
             Page.on(this, tabTitles, "click", e => {
                 let $clicked = $(e.currentTarget);
@@ -142,10 +141,8 @@ $(function () {
         }
 
         updateSectionImages() {
-            let sectionImages = this.section.find("img:not(#modal_image)");
+            let expandableImages = this.section.find("img.img_internal:not(.img_inline)");
 
-            sectionImages.filter((_, img) => $(img).parent().text().trim().length).addClass("img_inline");
-            let expandableImages = sectionImages.filter((_, img) => !$(img).parent().text().trim().length).addClass("expandable");
             Page.on(this, expandableImages, "click", e => {
                 this.modal_image.attr("src", $(e.currentTarget).attr("src"));
             });
@@ -153,12 +150,28 @@ $(function () {
 
         updateSectionLinks() {
             // #, /로 시작하는 내부링크의 경우 페이지내 전환을 위해 click 이벤트를 조작한다.
-            let links = this.section.find("a[href]:not(.file)");
-            let absolute_links = links.filter((_, a) => $(a).attr("href").startsWith("/"));
-            let only_hash_links = links.filter((_, a) => $(a).attr("href").startsWith("#"));
+            let absolute_links = this.section.find("a.a_internal[href]");
+            let only_hash_links = this.section.find("a.hash_internal[href]");
 
             Page.on(this, absolute_links, "click", this.updateSectionContent);
             Page.on(this, only_hash_links, "click", this.updateHash);
+        }
+
+        updateSectionCodes() {
+            let codeCopy = this.section.find("div.copy");
+            Page.on(this, codeCopy, "click", e => {
+                e.preventDefault();
+
+                let $copy_click = $(e.currentTarget);
+
+                let code = $copy_click.parent().find("div.code_body").find("td.rouge-code").text().trim();
+
+                navigator.clipboard.writeText(code).then(() => {
+                    let $copy_success = $copy_click.parent().find("div.copy_success");
+                    $copy_success.addClass("show");
+                    setTimeout(() => $copy_success.removeClass("show"), 1000);
+                });
+            });
         }
 
         loadPage(pathname, callback) {
@@ -174,6 +187,8 @@ $(function () {
                 this.updateSectionTabs();
                 this.updateSectionImages();
                 this.updateSectionLinks();
+                this.updateSectionCodes();
+
                 this.updateNavigationSelected(pathname);
 
                 if (callback) {

@@ -8,7 +8,7 @@
 
 
 
-<meta http-equiv="Last-Modified" content="2022-06-23 08:56:35 +0000">
+<meta http-equiv="Last-Modified" content="2022-06-27 10:20:03 +0000">
 
 
 
@@ -63,10 +63,10 @@
 <body>
 <header>
     <div class="header">
-        <div class="title">
-            <img src="/assets/icon/icon.png">
+        <a href="/" class="title">
+            <img src="/assets/icon/icon.png" class="img_inline">
             Developers | Guide
-        </div>
+        </a>
     </div>
     <div class="search">
         <div id="go_search" class="search_bar">
@@ -2157,7 +2157,7 @@
   <li>
     <p>Play Builder 첫 화면의 Custom Plays에서 <code class="language-plaintext highlighter-rouge">새 Play 생성</code> 버튼을 클릭합니다.</p>
 
-    <p><img src="/assets/images/create-a-play-01.png" alt=""></p>
+    <p><img src="/assets/images/create-a-play-01.png" alt="" class="img_internal"></p>
   </li>
   <li>이름 정하기 팝업창에서 Play 이름과 기본 응답을 입력한 후 <code class="language-plaintext highlighter-rouge">다음</code> 버튼을 클릭합니다.
     <ul>
@@ -2167,19 +2167,19 @@
       <li>
         <p>기본 응답은 Play를 생성한 후에 Built-in Action의 welcome, stop, fallback Action에서 각각 수정할 수 있습니다.</p>
 
-        <p><img src="/assets/images/create-a-play-02.png" alt=""></p>
+        <p><img src="/assets/images/create-a-play-02.png" alt="" class="img_internal"></p>
       </li>
     </ul>
   </li>
   <li>
     <p>Play를 만드는 과정을 설명하는 팝업창에서 <code class="language-plaintext highlighter-rouge">다음</code> 버튼을 클릭하면 Play 생성이 완료됩니다.</p>
 
-    <p><img src="/assets/images/create-a-play-03.png" alt=""></p>
+    <p><img src="/assets/images/create-a-play-03.png" alt="" class="img_internal"></p>
   </li>
   <li>
     <p>생성된 Play는 홈 화면에 등록됩니다. 화면의 <code class="language-plaintext highlighter-rouge">새 Play 생성</code> 버튼을 클릭하여 Play를 계속해서 추가 생성할 수 있습니다.</p>
 
-    <p><img src="/assets/images/create-a-play-04.png" alt=""></p>
+    <p><img src="/assets/images/create-a-play-04.png" alt="" class="img_internal"></p>
   </li>
 </ol>
 
@@ -2213,13 +2213,13 @@
 </section>
 <div id="modal_image_area" class="modal_image_area hide">
     <div class="modal_wrapper">
-        <img id="modal_image" class="modal_image" src="">
+        <img id="modal_image" class="modal_image" src="" data-skip-src-to-absolute>
     </div>
 </div>
 <script type="text/x-jsrender" id="search_contents_tmpl">
 
 <div class="search_content">
-    <a href="/nugu-play/create-plays-with-play-builder/hello-aria/{{:url}}">
+    <a href="{{:url}}">
         <div class="page_title">{{:title}}</div>
         <div class="content">
             {{for contents}}

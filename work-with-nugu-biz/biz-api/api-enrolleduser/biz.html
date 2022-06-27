@@ -8,7 +8,7 @@
 
 
 
-<meta http-equiv="Last-Modified" content="2022-06-23 08:56:35 +0000">
+<meta http-equiv="Last-Modified" content="2022-06-27 10:20:03 +0000">
 
 
 
@@ -63,10 +63,10 @@
 <body>
 <header>
     <div class="header">
-        <div class="title">
-            <img src="/assets/icon/icon.png">
+        <a href="/" class="title">
+            <img src="/assets/icon/icon.png" class="img_inline">
             Developers | Guide
-        </div>
+        </a>
     </div>
     <div class="search">
         <div id="go_search" class="search_bar">
@@ -2149,11 +2149,11 @@
     </div>
     <div class="content">
         <ul>
-  <li><a href="/work-with-nugu-biz/biz-api/api-enrolleduser/biz/api-enrolleduser-creategroup">Biz 사용자 그룹 생성</a></li>
-  <li><a href="/work-with-nugu-biz/biz-api/api-enrolleduser/biz/api-enrolleduser-modgroup">Biz 사용자 그룹 수정</a></li>
-  <li><a href="/work-with-nugu-biz/biz-api/api-enrolleduser/biz/api-enrolleduser-deletegroup">Biz 사용자 그룹 삭제</a></li>
-  <li><a href="/work-with-nugu-biz/biz-api/api-enrolleduser/biz/api-enrolleduser-group-getlist">Biz 사용자 그룹 목록 조회</a></li>
-  <li><a href="/work-with-nugu-biz/biz-api/api-enrolleduser/biz/api-enrolleduser-group-getinfo">Biz 사용자 그룹 상세 조회</a></li>
+  <li><a href="/work-with-nugu-biz/biz-api/api-enrolleduser/biz/api-enrolleduser-creategroup" class="a_internal">Biz 사용자 그룹 생성</a></li>
+  <li><a href="/work-with-nugu-biz/biz-api/api-enrolleduser/biz/api-enrolleduser-modgroup" class="a_internal">Biz 사용자 그룹 수정</a></li>
+  <li><a href="/work-with-nugu-biz/biz-api/api-enrolleduser/biz/api-enrolleduser-deletegroup" class="a_internal">Biz 사용자 그룹 삭제</a></li>
+  <li><a href="/work-with-nugu-biz/biz-api/api-enrolleduser/biz/api-enrolleduser-group-getlist" class="a_internal">Biz 사용자 그룹 목록 조회</a></li>
+  <li><a href="/work-with-nugu-biz/biz-api/api-enrolleduser/biz/api-enrolleduser-group-getinfo" class="a_internal">Biz 사용자 그룹 상세 조회</a></li>
 </ul>
 
     </div>
@@ -2186,13 +2186,13 @@
 </section>
 <div id="modal_image_area" class="modal_image_area hide">
     <div class="modal_wrapper">
-        <img id="modal_image" class="modal_image" src="">
+        <img id="modal_image" class="modal_image" src="" data-skip-src-to-absolute>
     </div>
 </div>
 <script type="text/x-jsrender" id="search_contents_tmpl">
 
 <div class="search_content">
-    <a href="/work-with-nugu-biz/biz-api/api-enrolleduser/{{:url}}">
+    <a href="{{:url}}">
         <div class="page_title">{{:title}}</div>
         <div class="content">
             {{for contents}}

@@ -8,7 +8,7 @@
 
 
 
-<meta http-equiv="Last-Modified" content="2022-06-23 08:56:35 +0000">
+<meta http-equiv="Last-Modified" content="2022-06-27 10:20:03 +0000">
 
 
 
@@ -67,10 +67,10 @@
 <body>
 <header>
     <div class="header">
-        <div class="title">
-            <img src="/assets/icon/icon.png">
+        <a href="/" class="title">
+            <img src="/assets/icon/icon.png" class="img_inline">
             Developers | Guide
-        </div>
+        </a>
     </div>
     <div class="search">
         <div id="go_search" class="search_bar">
@@ -2185,7 +2185,7 @@
 
 <h2 id="state-diagram">State Diagram</h2>
 
-<p><img src="/assets/images/phonecall-01.png" alt=""></p>
+<p><img src="/assets/images/phonecall-01.png" alt="" class="img_internal"></p>
 
 <h2 id="sdk-interface">SDK Interface</h2>
 
@@ -2196,19 +2196,23 @@
 <div id="tabs-21" class="tabs">
     <ul class="tabs_title">
         
-            <li data-content-id="tab-content-22" class="tab_title">Android</li>
+            <li data-content-id="tab-content-22" class="tab_title selected">Android</li>
         
             <li data-content-id="tab-content-56" class="tab_title">iOS</li>
         
             <li data-content-id="tab-content-66" class="tab_title">Linux</li>
         
     </ul>
-    <div id="tab-content-22" class="tab_content">
+    <div id="tab-content-22" class="tab_content selected">
     
 <p>NuguAndroidClient 생성시 PhoneCallAgent 를 추가합니다.</p>
 
 <div class="code">
-    <div class="code_title"></div>
+    <div class="code_title">
+        <div class="label"></div>
+        <div class="copy"></div>
+        <div class="copy_success">복사성공!</div>
+    </div>
     <div class="code_body">
 <div class="language-text highlighter-rouge"><div class="highlight"><pre class="highlight"><code><table class="rouge-table"><tbody><tr>
 <td class="rouge-gutter gl"><pre class="lineno">1
@@ -2254,7 +2258,11 @@ NuguAndroidClient().Builder()
 <p>NuguAndroidClient instance 를 통해 PhoneCallAgent instance 에 접근할 수 있습니다.</p>
 
 <div class="code">
-    <div class="code_title"></div>
+    <div class="code_title">
+        <div class="label"></div>
+        <div class="copy"></div>
+        <div class="copy_success">복사성공!</div>
+    </div>
     <div class="code_body">
 <div class="language-text highlighter-rouge"><div class="highlight"><pre class="highlight"><code><table class="rouge-table"><tbody><tr>
 <td class="rouge-gutter gl"><pre class="lineno">1
@@ -2272,7 +2280,11 @@ NuguAndroidClient().Builder()
 <p>NuguClient instance 를 통해 PhoneCallAgent instance 에 접근할 수 있습니다.</p>
 
 <div class="code">
-    <div class="code_title"></div>
+    <div class="code_title">
+        <div class="label"></div>
+        <div class="copy"></div>
+        <div class="copy_success">복사성공!</div>
+    </div>
     <div class="code_body">
 <div class="language-text highlighter-rouge"><div class="highlight"><pre class="highlight"><code><table class="rouge-table"><tbody><tr>
 <td class="rouge-gutter gl"><pre class="lineno">1
@@ -2290,7 +2302,11 @@ NuguAndroidClient().Builder()
 <p><a href="https://nugu-developers.github.io/nugu-linux/classNuguCapability_1_1CapabilityFactory.html#a46d96b1bc96903f02905c92ba8794bf6">CapabilityFactory::makeCapability</a> 함수로 <a href="https://nugu-developers.github.io/nugu-linux/classNuguCapability_1_1IPhoneCallHandler.html">PhoneCallAgent</a> 를 생성하고 <a href="https://nugu-developers.github.io/nugu-linux/classNuguClientKit_1_1NuguClient.html">NuguClient</a> 에 추가해 주어야합니다.</p>
 
 <div class="code">
-    <div class="code_title"></div>
+    <div class="code_title">
+        <div class="label"></div>
+        <div class="copy"></div>
+        <div class="copy_success">복사성공!</div>
+    </div>
     <div class="code_body">
 <div class="language-text highlighter-rouge"><div class="highlight"><pre class="highlight"><code><table class="rouge-table"><tbody><tr>
 <td class="rouge-gutter gl"><pre class="lineno">1
@@ -2318,22 +2334,26 @@ nugu_client-&gt;getCapabilityBuilder()
 
 <h3 id="context-구성">Context 구성</h3>
 
-<p>통화 상태 정보를 <a href="#context">Context</a> 에 포함시켜 주어야 합니다.</p>
+<p>통화 상태 정보를 <a href="#context" class="hash_internal">Context</a> 에 포함시켜 주어야 합니다.</p>
 
 <div id="tabs-86" class="tabs">
     <ul class="tabs_title">
         
-            <li data-content-id="tab-content-87" class="tab_title">Android</li>
+            <li data-content-id="tab-content-87" class="tab_title selected">Android</li>
         
             <li data-content-id="tab-content-103" class="tab_title">iOS</li>
         
     </ul>
-    <div id="tab-content-87" class="tab_content">
+    <div id="tab-content-87" class="tab_content selected">
     
 <p>PhoneCallClient 를 구현합니다.</p>
 
 <div class="code">
-    <div class="code_title"></div>
+    <div class="code_title">
+        <div class="label"></div>
+        <div class="copy"></div>
+        <div class="copy_success">복사성공!</div>
+    </div>
     <div class="code_body">
 <div class="language-text highlighter-rouge"><div class="highlight"><pre class="highlight"><code><table class="rouge-table"><tbody><tr>
 <td class="rouge-gutter gl"><pre class="lineno">1
@@ -2363,7 +2383,11 @@ nugu_client-&gt;getCapabilityBuilder()
 <p>PhoneCallAgentDelegate 를 추가합니다.</p>
 
 <div class="code">
-    <div class="code_title"></div>
+    <div class="code_title">
+        <div class="label"></div>
+        <div class="copy"></div>
+        <div class="copy_success">복사성공!</div>
+    </div>
     <div class="code_body">
 <div class="language-text highlighter-rouge"><div class="highlight"><pre class="highlight"><code><table class="rouge-table"><tbody><tr>
 <td class="rouge-gutter gl"><pre class="lineno">1
@@ -2395,24 +2419,28 @@ phoneCallAgent.delegate = self
 
 <h3 id="발신">발신</h3>
 
-<p>전화 발신이 <a href="#sendcandidates">SendCandidates</a>, <a href="#makecall">MakeCall</a> directive 로 요청될 수 있습니다.</p>
+<p>전화 발신이 <a href="#sendcandidates" class="hash_internal">SendCandidates</a>, <a href="#makecall" class="hash_internal">MakeCall</a> directive 로 요청될 수 있습니다.</p>
 
 <div id="tabs-125" class="tabs">
     <ul class="tabs_title">
         
-            <li data-content-id="tab-content-126" class="tab_title">Android</li>
+            <li data-content-id="tab-content-126" class="tab_title selected">Android</li>
         
             <li data-content-id="tab-content-147" class="tab_title">iOS</li>
         
             <li data-content-id="tab-content-170" class="tab_title">Linux</li>
         
     </ul>
-    <div id="tab-content-126" class="tab_content">
+    <div id="tab-content-126" class="tab_content selected">
     
 <p>PhoneCallClient 를 구현합니다.</p>
 
 <div class="code">
-    <div class="code_title"></div>
+    <div class="code_title">
+        <div class="label"></div>
+        <div class="copy"></div>
+        <div class="copy_success">복사성공!</div>
+    </div>
     <div class="code_body">
 <div class="language-text highlighter-rouge"><div class="highlight"><pre class="highlight"><code><table class="rouge-table"><tbody><tr>
 <td class="rouge-gutter gl"><pre class="lineno">1
@@ -2452,7 +2480,11 @@ phoneCallAgent.delegate = self
 <p>PhoneCallAgentDelegate 를 추가합니다</p>
 
 <div class="code">
-    <div class="code_title"></div>
+    <div class="code_title">
+        <div class="label"></div>
+        <div class="copy"></div>
+        <div class="copy_success">복사성공!</div>
+    </div>
     <div class="code_body">
 <div class="language-text highlighter-rouge"><div class="highlight"><pre class="highlight"><code><table class="rouge-table"><tbody><tr>
 <td class="rouge-gutter gl"><pre class="lineno">1
@@ -2496,7 +2528,11 @@ phoneCallAgent.delegate = self
 <p><a href="https://nugu-developers.github.io/nugu-linux/classNuguCapability_1_1IPhoneCallListener.html">IPhoneCallListener</a> 를 추가합니다.</p>
 
 <div class="code">
-    <div class="code_title"></div>
+    <div class="code_title">
+        <div class="label"></div>
+        <div class="copy"></div>
+        <div class="copy_success">복사성공!</div>
+    </div>
     <div class="code_body">
 <div class="language-text highlighter-rouge"><div class="highlight"><pre class="highlight"><code><table class="rouge-table"><tbody><tr>
 <td class="rouge-gutter gl"><pre class="lineno">1
@@ -2548,7 +2584,7 @@ CapabilityFactory::makeCapability&lt;PhoneCallAgent, IPhoneCallHandler&gt;(phone
 
 <h3 id="수신">수신</h3>
 
-<p>수신 전화에 대한 수락이 <a href="/nugu-sdk/capability-interface/phonecall#acceptcall">AcceptCall</a> directive 로 거절이 <a href="/nugu-sdk/capability-interface/phonecall#endcall">EndCall</a> directive 로 요청될 수 있습니다.</p>
+<p>수신 전화에 대한 수락이 <a href="/nugu-sdk/capability-interface/phonecall#acceptcall" class="a_internal">AcceptCall</a> directive 로 거절이 <a href="/nugu-sdk/capability-interface/phonecall#endcall" class="a_internal">EndCall</a> directive 로 요청될 수 있습니다.</p>
 
 <div class="alerts info">
     
@@ -2559,17 +2595,21 @@ CapabilityFactory::makeCapability&lt;PhoneCallAgent, IPhoneCallHandler&gt;(phone
 <div id="tabs-206" class="tabs">
     <ul class="tabs_title">
         
-            <li data-content-id="tab-content-207" class="tab_title">Android</li>
+            <li data-content-id="tab-content-207" class="tab_title selected">Android</li>
         
             <li data-content-id="tab-content-228" class="tab_title">Linux</li>
         
     </ul>
-    <div id="tab-content-207" class="tab_content">
+    <div id="tab-content-207" class="tab_content selected">
     
 <p>PhoneCallClient 를 구현합니다.</p>
 
 <div class="code">
-    <div class="code_title"></div>
+    <div class="code_title">
+        <div class="label"></div>
+        <div class="copy"></div>
+        <div class="copy_success">복사성공!</div>
+    </div>
     <div class="code_body">
 <div class="language-text highlighter-rouge"><div class="highlight"><pre class="highlight"><code><table class="rouge-table"><tbody><tr>
 <td class="rouge-gutter gl"><pre class="lineno">1
@@ -2609,7 +2649,11 @@ CapabilityFactory::makeCapability&lt;PhoneCallAgent, IPhoneCallHandler&gt;(phone
 <p><a href="https://nugu-developers.github.io/nugu-linux/classNuguCapability_1_1IPhoneCallListener.html">IPhoneCallListener</a> 를 추가합니다.</p>
 
 <div class="code">
-    <div class="code_title"></div>
+    <div class="code_title">
+        <div class="label"></div>
+        <div class="copy"></div>
+        <div class="copy_success">복사성공!</div>
+    </div>
     <div class="code_body">
 <div class="language-text highlighter-rouge"><div class="highlight"><pre class="highlight"><code><table class="rouge-table"><tbody><tr>
 <td class="rouge-gutter gl"><pre class="lineno">1
@@ -2652,7 +2696,11 @@ CapabilityFactory::makeCapability&lt;PhoneCallAgent, IPhoneCallHandler&gt;(phone
 <h2 id="context">Context</h2>
 
 <div class="code">
-    <div class="code_title"></div>
+    <div class="code_title">
+        <div class="label"></div>
+        <div class="copy"></div>
+        <div class="copy_success">복사성공!</div>
+    </div>
     <div class="code_body">
 <div class="language-text highlighter-rouge"><div class="highlight"><pre class="highlight"><code><table class="rouge-table"><tbody><tr>
 <td class="rouge-gutter gl"><pre class="lineno">1
@@ -2766,11 +2814,11 @@ CapabilityFactory::makeCapability&lt;PhoneCallAgent, IPhoneCallHandler&gt;(phone
       <td style="text-align: left">string</td>
       <td style="text-align: left">N</td>
       <td style="text-align: left">
-<a href="#sendcandidate">SendCandidates</a> 참조</td>
+<a href="#sendcandidate" class="hash_internal">SendCandidates</a> 참조</td>
     </tr>
     <tr>
       <td style="text-align: left">template.candidates</td>
-      <td style="text-align: left">array of <a href="#person">Person</a>
+      <td style="text-align: left">array of <a href="#person" class="hash_internal">Person</a>
 </td>
       <td style="text-align: left">N</td>
       <td style="text-align: left">화면에 검색 결과 리스트를 디스플레이하는 중에만 context에 추가</td>
@@ -2817,7 +2865,11 @@ CapabilityFactory::makeCapability&lt;PhoneCallAgent, IPhoneCallHandler&gt;(phone
 </ul>
 
 <div class="code">
-    <div class="code_title"></div>
+    <div class="code_title">
+        <div class="label"></div>
+        <div class="copy"></div>
+        <div class="copy_success">복사성공!</div>
+    </div>
     <div class="code_body">
 <div class="language-text highlighter-rouge"><div class="highlight"><pre class="highlight"><code><table class="rouge-table"><tbody><tr>
 <td class="rouge-gutter gl"><pre class="lineno">1
@@ -3004,7 +3056,7 @@ CapabilityFactory::makeCapability&lt;PhoneCallAgent, IPhoneCallHandler&gt;(phone
     </tr>
     <tr>
       <td style="text-align: left">contacts</td>
-      <td style="text-align: left">array of <a href="#contact">Contact</a>
+      <td style="text-align: left">array of <a href="#contact" class="hash_internal">Contact</a>
 </td>
       <td style="text-align: left">N</td>
       <td style="text-align: left">-</td>
@@ -3019,7 +3071,11 @@ CapabilityFactory::makeCapability&lt;PhoneCallAgent, IPhoneCallHandler&gt;(phone
 </ul>
 
 <div class="code">
-    <div class="code_title"></div>
+    <div class="code_title">
+        <div class="label"></div>
+        <div class="copy"></div>
+        <div class="copy_success">복사성공!</div>
+    </div>
     <div class="code_body">
 <div class="language-text highlighter-rouge"><div class="highlight"><pre class="highlight"><code><table class="rouge-table"><tbody><tr>
 <td class="rouge-gutter gl"><pre class="lineno">1
@@ -3067,7 +3123,11 @@ CapabilityFactory::makeCapability&lt;PhoneCallAgent, IPhoneCallHandler&gt;(phone
 <h3 id="sendcandidates">SendCandidates</h3>
 
 <div class="code">
-    <div class="code_title"></div>
+    <div class="code_title">
+        <div class="label"></div>
+        <div class="copy"></div>
+        <div class="copy_success">복사성공!</div>
+    </div>
     <div class="code_body">
 <div class="language-text highlighter-rouge"><div class="highlight"><pre class="highlight"><code><table class="rouge-table"><tbody><tr>
 <td class="rouge-gutter gl"><pre class="lineno">1
@@ -3167,7 +3227,7 @@ CapabilityFactory::makeCapability&lt;PhoneCallAgent, IPhoneCallHandler&gt;(phone
     </tr>
     <tr>
       <td style="text-align: left">candidates</td>
-      <td style="text-align: left">array of <a href="#person">Person</a>
+      <td style="text-align: left">array of <a href="#person" class="hash_internal">Person</a>
 </td>
       <td style="text-align: left">N</td>
       <td style="text-align: left">candidates가 없으면 이 항목이 없어야 함</td>
@@ -3178,7 +3238,11 @@ CapabilityFactory::makeCapability&lt;PhoneCallAgent, IPhoneCallHandler&gt;(phone
 <h3 id="makecall">MakeCall</h3>
 
 <div class="code">
-    <div class="code_title"></div>
+    <div class="code_title">
+        <div class="label"></div>
+        <div class="copy"></div>
+        <div class="copy_success">복사성공!</div>
+    </div>
     <div class="code_body">
 <div class="language-text highlighter-rouge"><div class="highlight"><pre class="highlight"><code><table class="rouge-table"><tbody><tr>
 <td class="rouge-gutter gl"><pre class="lineno">1
@@ -3227,7 +3291,7 @@ CapabilityFactory::makeCapability&lt;PhoneCallAgent, IPhoneCallHandler&gt;(phone
   <tbody>
     <tr>
       <td style="text-align: left">recipient</td>
-      <td style="text-align: left"><a href="#person">Person</a></td>
+      <td style="text-align: left"><a href="#person" class="hash_internal">Person</a></td>
       <td style="text-align: left">Y</td>
       <td style="text-align: left">-</td>
     </tr>
@@ -3244,7 +3308,11 @@ CapabilityFactory::makeCapability&lt;PhoneCallAgent, IPhoneCallHandler&gt;(phone
 <h3 id="endcall">EndCall</h3>
 
 <div class="code">
-    <div class="code_title"></div>
+    <div class="code_title">
+        <div class="label"></div>
+        <div class="copy"></div>
+        <div class="copy_success">복사성공!</div>
+    </div>
     <div class="code_body">
 <div class="language-text highlighter-rouge"><div class="highlight"><pre class="highlight"><code><table class="rouge-table"><tbody><tr>
 <td class="rouge-gutter gl"><pre class="lineno">1
@@ -3280,7 +3348,11 @@ CapabilityFactory::makeCapability&lt;PhoneCallAgent, IPhoneCallHandler&gt;(phone
 <h3 id="acceptcall">AcceptCall</h3>
 
 <div class="code">
-    <div class="code_title"></div>
+    <div class="code_title">
+        <div class="label"></div>
+        <div class="copy"></div>
+        <div class="copy_success">복사성공!</div>
+    </div>
     <div class="code_body">
 <div class="language-text highlighter-rouge"><div class="highlight"><pre class="highlight"><code><table class="rouge-table"><tbody><tr>
 <td class="rouge-gutter gl"><pre class="lineno">1
@@ -3341,7 +3413,11 @@ CapabilityFactory::makeCapability&lt;PhoneCallAgent, IPhoneCallHandler&gt;(phone
 </ul>
 
 <div class="code">
-    <div class="code_title"></div>
+    <div class="code_title">
+        <div class="label"></div>
+        <div class="copy"></div>
+        <div class="copy_success">복사성공!</div>
+    </div>
     <div class="code_body">
 <div class="language-text highlighter-rouge"><div class="highlight"><pre class="highlight"><code><table class="rouge-table"><tbody><tr>
 <td class="rouge-gutter gl"><pre class="lineno">1
@@ -3380,11 +3456,15 @@ CapabilityFactory::makeCapability&lt;PhoneCallAgent, IPhoneCallHandler&gt;(phone
 
 <ul>
   <li>검색 결과 리스트가 화면에 보여지는 경우 보내는 Event</li>
-  <li>Parameter 들은 <a href="/nugu-sdk/capability-interface/phonecall#context">Context</a> 를 통해 전송되며, 검색 결과가 없는 경우에도 empty 로 전송해야 함.</li>
+  <li>Parameter 들은 <a href="/nugu-sdk/capability-interface/phonecall#context" class="a_internal">Context</a> 를 통해 전송되며, 검색 결과가 없는 경우에도 empty 로 전송해야 함.</li>
 </ul>
 
 <div class="code">
-    <div class="code_title"></div>
+    <div class="code_title">
+        <div class="label"></div>
+        <div class="copy"></div>
+        <div class="copy_success">복사성공!</div>
+    </div>
     <div class="code_body">
 <div class="language-text highlighter-rouge"><div class="highlight"><pre class="highlight"><code><table class="rouge-table"><tbody><tr>
 <td class="rouge-gutter gl"><pre class="lineno">1
@@ -3420,7 +3500,11 @@ CapabilityFactory::makeCapability&lt;PhoneCallAgent, IPhoneCallHandler&gt;(phone
 <h3 id="callarrived">CallArrived</h3>
 
 <div class="code">
-    <div class="code_title"></div>
+    <div class="code_title">
+        <div class="label"></div>
+        <div class="copy"></div>
+        <div class="copy_success">복사성공!</div>
+    </div>
     <div class="code_body">
 <div class="language-text highlighter-rouge"><div class="highlight"><pre class="highlight"><code><table class="rouge-table"><tbody><tr>
 <td class="rouge-gutter gl"><pre class="lineno">1
@@ -3516,7 +3600,11 @@ CapabilityFactory::makeCapability&lt;PhoneCallAgent, IPhoneCallHandler&gt;(phone
 </ul>
 
 <div class="code">
-    <div class="code_title"></div>
+    <div class="code_title">
+        <div class="label"></div>
+        <div class="copy"></div>
+        <div class="copy_success">복사성공!</div>
+    </div>
     <div class="code_body">
 <div class="language-text highlighter-rouge"><div class="highlight"><pre class="highlight"><code><table class="rouge-table"><tbody><tr>
 <td class="rouge-gutter gl"><pre class="lineno">1
@@ -3557,7 +3645,11 @@ CapabilityFactory::makeCapability&lt;PhoneCallAgent, IPhoneCallHandler&gt;(phone
 </ul>
 
 <div class="code">
-    <div class="code_title"></div>
+    <div class="code_title">
+        <div class="label"></div>
+        <div class="copy"></div>
+        <div class="copy_success">복사성공!</div>
+    </div>
     <div class="code_body">
 <div class="language-text highlighter-rouge"><div class="highlight"><pre class="highlight"><code><table class="rouge-table"><tbody><tr>
 <td class="rouge-gutter gl"><pre class="lineno">1
@@ -3597,7 +3689,11 @@ CapabilityFactory::makeCapability&lt;PhoneCallAgent, IPhoneCallHandler&gt;(phone
 </ul>
 
 <div class="code">
-    <div class="code_title"></div>
+    <div class="code_title">
+        <div class="label"></div>
+        <div class="copy"></div>
+        <div class="copy_success">복사성공!</div>
+    </div>
     <div class="code_body">
 <div class="language-text highlighter-rouge"><div class="highlight"><pre class="highlight"><code><table class="rouge-table"><tbody><tr>
 <td class="rouge-gutter gl"><pre class="lineno">1
@@ -3668,7 +3764,11 @@ CapabilityFactory::makeCapability&lt;PhoneCallAgent, IPhoneCallHandler&gt;(phone
 </ul>
 
 <div class="code">
-    <div class="code_title"></div>
+    <div class="code_title">
+        <div class="label"></div>
+        <div class="copy"></div>
+        <div class="copy_success">복사성공!</div>
+    </div>
     <div class="code_body">
 <div class="language-text highlighter-rouge"><div class="highlight"><pre class="highlight"><code><table class="rouge-table"><tbody><tr>
 <td class="rouge-gutter gl"><pre class="lineno">1
@@ -3715,7 +3815,7 @@ CapabilityFactory::makeCapability&lt;PhoneCallAgent, IPhoneCallHandler&gt;(phone
   <tbody>
     <tr>
       <td style="text-align: left">recipient</td>
-      <td style="text-align: left"><a href="#person">Person</a></td>
+      <td style="text-align: left"><a href="#person" class="hash_internal">Person</a></td>
       <td style="text-align: left">Y</td>
       <td style="text-align: left"> </td>
     </tr>
@@ -3752,13 +3852,13 @@ CapabilityFactory::makeCapability&lt;PhoneCallAgent, IPhoneCallHandler&gt;(phone
 </section>
 <div id="modal_image_area" class="modal_image_area hide">
     <div class="modal_wrapper">
-        <img id="modal_image" class="modal_image" src="">
+        <img id="modal_image" class="modal_image" src="" data-skip-src-to-absolute>
     </div>
 </div>
 <script type="text/x-jsrender" id="search_contents_tmpl">
 
 <div class="search_content">
-    <a href="/nugu-sdk/capability-interface/{{:url}}">
+    <a href="{{:url}}">
         <div class="page_title">{{:title}}</div>
         <div class="content">
             {{for contents}}

@@ -8,7 +8,7 @@
 
 
 
-<meta http-equiv="Last-Modified" content="2022-06-23 08:56:35 +0000">
+<meta http-equiv="Last-Modified" content="2022-06-27 10:20:03 +0000">
 
 
 
@@ -63,10 +63,10 @@
 <body>
 <header>
     <div class="header">
-        <div class="title">
-            <img src="/assets/icon/icon.png">
+        <a href="/" class="title">
+            <img src="/assets/icon/icon.png" class="img_inline">
             Developers | Guide
-        </div>
+        </a>
     </div>
     <div class="search">
         <div id="go_search" class="search_bar">
@@ -2150,7 +2150,7 @@
     <div class="content">
         <p>Parameter의 사용 방법을 알아보기 위해, 다음과 같이 사용자에게 특정 날짜나 특정 장소에 대한 날씨 값을 제공해주는 Play를 만든다고 가정을 해보겠습니다.</p>
 
-<p><img src="/assets/images/define-a-parameter-01.png" alt=""></p>
+<p><img src="/assets/images/define-a-parameter-01.png" alt="" class="img_internal"></p>
 
 <p>여기서, “오늘”과 “명동”이라는 정보는 사용자의 발화(“오늘 명동 날씨 알려줘.”)에서 알 수 있는 정보(Entity)입니다.</p>
 
@@ -2160,13 +2160,13 @@
 
 <h2 id="utterance-parameter-등록하기">Utterance Parameter 등록하기</h2>
 
-<p><a href="/nugu-play/create-plays-with-play-builder/hello-aria/create-an-action-and-an-answer">Action 만들고 응답 등록하기</a>에서 만들어 보았던 ‘answer.weather’라는 Action에서 Parameter를 만드는 법을 설명하도록 하겠습니다.</p>
+<p><a href="/nugu-play/create-plays-with-play-builder/hello-aria/create-an-action-and-an-answer" class="a_internal">Action 만들고 응답 등록하기</a>에서 만들어 보았던 ‘answer.weather’라는 Action에서 Parameter를 만드는 법을 설명하도록 하겠습니다.</p>
 
 <ol>
   <li>우선, <code class="language-plaintext highlighter-rouge">User Utterance Model</code> &gt; <code class="language-plaintext highlighter-rouge">Custom Intents</code> 페이지에서 다음과 같이 예상 발화를 입력하고 Entity를 지정해줍니다.</li>
 </ol>
 
-<p><img src="/assets/images/define-a-parameter-02.png" alt=""></p>
+<p><img src="/assets/images/define-a-parameter-02.png" alt="" class="img_internal"></p>
 
 <ul>
   <li>시간, 날짜 표현은 Built-in Entity Type에서 선택합니다.</li>
@@ -2176,7 +2176,7 @@
   <li>응답에 필요한 정보 가져오기 영역의 Utterance Parameter 입력 필드에 Parameter명을 입력하고 <code class="language-plaintext highlighter-rouge">Enter</code> 키를 누르거나 입력 필드 이외 영역에 마우스 왼쪽 버튼을 클릭합니다.</li>
 </ul>
 
-<p><img src="/assets/images/define-a-parameter-03.png" alt=""></p>
+<p><img src="/assets/images/define-a-parameter-03.png" alt="" class="img_internal"></p>
 
 <ul>
   <li>영자, 숫자, 특수문자인 언더바(<code class="language-plaintext highlighter-rouge">_</code>), 하이픈(<code class="language-plaintext highlighter-rouge">-</code>)만 사용하여 40자 이내에서 작성할 수 있으며, Play 내에서 같은 이름을 중복해서 등록할 수 없습니다.</li>
@@ -2185,7 +2185,7 @@
   <li>추가한 Parameter 우측 Mapping 항목의 <code class="language-plaintext highlighter-rouge">Entity mapping을 위해 이곳을 클릭하세요.</code> 버튼을 클릭한 후 Entity mapping 창에서 ‘day’ Parameter에는 ‘오늘’이 담겨 있는 ‘BID_DT_DAY’를, ‘location’ Parameter에는 ‘LOC_DONG’ Entity Type를 각각 매핑합니다.</li>
 </ul>
 
-<p><img src="/assets/images/define-a-parameter-04.gif" alt=""></p>
+<p><img src="/assets/images/define-a-parameter-04.gif" alt="" class="img_internal"></p>
 
 <ul>
   <li>각 Parameter 우측 Mapping 항목에 매핑된 Entity Type:Entity Role이 표시됩니다.</li>
@@ -2198,7 +2198,7 @@
 
 <div class="alerts info">
     
-<p>Backend proxy에 대한 자세한 내용은 <a href="/nugu-play/create-plays-with-play-builder/use-backend-proxy">외부 연동 서버(Backend proxy)</a>를 참고하세요.</p>
+<p>Backend proxy에 대한 자세한 내용은 <a href="/nugu-play/create-plays-with-play-builder/use-backend-proxy" class="a_internal">외부 연동 서버(Backend proxy)</a>를 참고하세요.</p>
 
 </div>
 
@@ -2208,13 +2208,13 @@
   <li>Utterance Parameter 아래의 Backend proxy 사용여부 항목의 <code class="language-plaintext highlighter-rouge">OFF</code> 버튼을 클릭하여 ON(사용)으로 설정합니다. Backend Parameter를 정의하는 테이블이 생깁니다.</li>
 </ol>
 
-<p><img src="/assets/images/define-a-parameter-05.png" alt=""></p>
+<p><img src="/assets/images/define-a-parameter-05.png" alt="" class="img_internal"></p>
 
 <ol>
   <li>Backend Parameter 입력 필드에 Parameter명을 입력하고 <code class="language-plaintext highlighter-rouge">Enter</code> 키를 누르거나 입력 필드 이외 영역에 마우스 왼쪽 버튼을 클릭합니다.</li>
 </ol>
 
-<p><img src="/assets/images/define-a-parameter-06.png" alt=""></p>
+<p><img src="/assets/images/define-a-parameter-06.png" alt="" class="img_internal"></p>
 
 <ul>
   <li>영자, 숫자, 특수문자인 언더바(<code class="language-plaintext highlighter-rouge">_</code>), 하이픈(<code class="language-plaintext highlighter-rouge">-</code>)만 사용하여 40자 이내로 작성할 수 있습니다.</li>
@@ -2228,7 +2228,7 @@
   <li>이렇게 입력을 하고, Backend proxy가 기상 정보를 Backend Parameter에 담아주면 다음과 같은 상태가 됩니다.</li>
 </ol>
 
-<p><img src="/assets/images/define-a-parameter-07.png" alt=""></p>
+<p><img src="/assets/images/define-a-parameter-07.png" alt="" class="img_internal"></p>
 
     </div>
     
@@ -2260,13 +2260,13 @@
 </section>
 <div id="modal_image_area" class="modal_image_area hide">
     <div class="modal_wrapper">
-        <img id="modal_image" class="modal_image" src="">
+        <img id="modal_image" class="modal_image" src="" data-skip-src-to-absolute>
     </div>
 </div>
 <script type="text/x-jsrender" id="search_contents_tmpl">
 
 <div class="search_content">
-    <a href="/nugu-play/create-plays-with-play-builder/define-an-action/use-parameters/{{:url}}">
+    <a href="{{:url}}">
         <div class="page_title">{{:title}}</div>
         <div class="content">
             {{for contents}}

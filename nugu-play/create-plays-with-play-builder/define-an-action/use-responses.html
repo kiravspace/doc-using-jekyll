@@ -8,7 +8,7 @@
 
 
 
-<meta http-equiv="Last-Modified" content="2022-06-23 08:56:35 +0000">
+<meta http-equiv="Last-Modified" content="2022-06-27 10:20:03 +0000">
 
 
 
@@ -63,10 +63,10 @@
 <body>
 <header>
     <div class="header">
-        <div class="title">
-            <img src="/assets/icon/icon.png">
+        <a href="/" class="title">
+            <img src="/assets/icon/icon.png" class="img_inline">
             Developers | Guide
-        </div>
+        </a>
     </div>
     <div class="search">
         <div id="go_search" class="search_bar">
@@ -2152,7 +2152,7 @@
 
 <p>다음과 같이 Action Tree의 끝에 위치한 Action만 Response를 가질 수 있습니다.</p>
 
-<p><img src="/assets/images/use-branch-actions-04.png" alt=""></p>
+<p><img src="/assets/images/use-branch-actions-04.png" alt="" class="img_internal"></p>
 
 <p>Response는 Prompt와 Directive로 구분할 수 있습니다.</p>
 
@@ -2175,13 +2175,13 @@
   <li>기본 상태의 Output 설정 화면</li>
 </ul>
 
-<p><img src="/assets/images/use-responses-01.png" alt=""></p>
+<p><img src="/assets/images/use-responses-01.png" alt="" class="img_internal"></p>
 
 <ul>
   <li>Capability Interface를 하나 이상 <code class="language-plaintext highlighter-rouge">ON</code> 한 경우의 Output 설정 화면</li>
 </ul>
 
-<p><img src="/assets/images/use-responses-02.png" alt=""></p>
+<p><img src="/assets/images/use-responses-02.png" alt="" class="img_internal"></p>
 
 <p>다음 장에서 Prompt와 Directive 사용법에 대해 알아보도록 하겠습니다.</p>
 
@@ -2190,8 +2190,8 @@
 <p>이 장과 함께 보면 좋은 도움말</p>
 
 <ul>
-  <li><a href="/nugu-play/create-plays-with-play-builder/define-an-action/use-responses/use-prompts">Prompt</a></li>
-  <li><a href="/nugu-play/create-plays-with-play-builder/define-an-action/use-responses/use-directives">Directive</a></li>
+  <li><a href="/nugu-play/create-plays-with-play-builder/define-an-action/use-responses/use-prompts" class="a_internal">Prompt</a></li>
+  <li><a href="/nugu-play/create-plays-with-play-builder/define-an-action/use-responses/use-directives" class="a_internal">Directive</a></li>
 </ul>
 
 </div>
@@ -2226,13 +2226,13 @@
 </section>
 <div id="modal_image_area" class="modal_image_area hide">
     <div class="modal_wrapper">
-        <img id="modal_image" class="modal_image" src="">
+        <img id="modal_image" class="modal_image" src="" data-skip-src-to-absolute>
     </div>
 </div>
 <script type="text/x-jsrender" id="search_contents_tmpl">
 
 <div class="search_content">
-    <a href="/nugu-play/create-plays-with-play-builder/define-an-action/{{:url}}">
+    <a href="{{:url}}">
         <div class="page_title">{{:title}}</div>
         <div class="content">
             {{for contents}}

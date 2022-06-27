@@ -8,7 +8,7 @@
 
 
 
-<meta http-equiv="Last-Modified" content="2022-06-23 08:56:35 +0000">
+<meta http-equiv="Last-Modified" content="2022-06-27 10:20:03 +0000">
 
 
 
@@ -63,10 +63,10 @@
 <body>
 <header>
     <div class="header">
-        <div class="title">
-            <img src="/assets/icon/icon.png">
+        <a href="/" class="title">
+            <img src="/assets/icon/icon.png" class="img_inline">
             Developers | Guide
-        </div>
+        </a>
     </div>
     <div class="search">
         <div id="go_search" class="search_bar">
@@ -2157,7 +2157,11 @@
 <p>Discovery Sample Request</p>
 
 <div class="code">
-    <div class="code_title">(POST, /nugu/v1/devices)</div>
+    <div class="code_title">
+        <div class="label">(POST, /nugu/v1/devices)</div>
+        <div class="copy"></div>
+        <div class="copy_success">복사성공!</div>
+    </div>
     <div class="code_body">
 <div class="language-json highlighter-rouge"><div class="highlight"><pre class="highlight"><code><table class="rouge-table"><tbody><tr>
 <td class="rouge-gutter gl"><pre class="lineno">1
@@ -2175,7 +2179,11 @@
 <p>Discovery Sample Response</p>
 
 <div class="code">
-    <div class="code_title"></div>
+    <div class="code_title">
+        <div class="label"></div>
+        <div class="copy"></div>
+        <div class="copy_success">복사성공!</div>
+    </div>
     <div class="code_body">
 <div class="language-json highlighter-rouge"><div class="highlight"><pre class="highlight"><code><table class="rouge-table"><tbody><tr>
 <td class="rouge-gutter gl"><pre class="lineno">1
@@ -2246,7 +2254,7 @@
   <tbody>
     <tr>
       <td style="text-align: left">supportedAirflowTypes</td>
-      <td style="text-align: left">해당 SmartHomeDevice가 지원하는 AirflowType의 명칭입니다.<br>AirflowType은 NUGU스마트홈에서 지원하는 명칭 중 선택해서 응답할 수 있으며, 지원하는 AirflowType의 명칭은 <a href="/nugu-play/smarthome-play/smarthomeattribute#airflowtype">AirflowType</a>를 참조하시기 바랍니다.<br>지원하는 AirflowType은 각 Device별로 Array 형태로 복수개 전달할 수 있습니다.</td>
+      <td style="text-align: left">해당 SmartHomeDevice가 지원하는 AirflowType의 명칭입니다.<br>AirflowType은 NUGU스마트홈에서 지원하는 명칭 중 선택해서 응답할 수 있으며, 지원하는 AirflowType의 명칭은 <a href="/nugu-play/smarthome-play/smarthomeattribute#airflowtype" class="a_internal">AirflowType</a>를 참조하시기 바랍니다.<br>지원하는 AirflowType은 각 Device별로 Array 형태로 복수개 전달할 수 있습니다.</td>
     </tr>
     <tr>
       <td style="text-align: left">customData</td>
@@ -2278,7 +2286,11 @@ Directive : SetAirflow</p>
 <p>Sample Request</p>
 
 <div class="code">
-    <div class="code_title">Control Request 예시 (POST, /nugu/v1/capabilities/AirflowControl/directives/SetAirflow)</div>
+    <div class="code_title">
+        <div class="label">Control Request 예시 (POST, /nugu/v1/capabilities/AirflowControl/directives/SetAirflow)</div>
+        <div class="copy"></div>
+        <div class="copy_success">복사성공!</div>
+    </div>
     <div class="code_body">
 <div class="language-json highlighter-rouge"><div class="highlight"><pre class="highlight"><code><table class="rouge-table"><tbody><tr>
 <td class="rouge-gutter gl"><pre class="lineno">1
@@ -2390,7 +2402,11 @@ Directive : SetAirflow</p>
 <p>Sample Response</p>
 
 <div class="code">
-    <div class="code_title"></div>
+    <div class="code_title">
+        <div class="label"></div>
+        <div class="copy"></div>
+        <div class="copy_success">복사성공!</div>
+    </div>
     <div class="code_body">
 <div class="language-json highlighter-rouge"><div class="highlight"><pre class="highlight"><code><table class="rouge-table"><tbody><tr>
 <td class="rouge-gutter gl"><pre class="lineno">1
@@ -2475,7 +2491,11 @@ Directive : AskAirflow</p>
 <p>Sample Request</p>
 
 <div class="code">
-    <div class="code_title">Control Request 예시 (POST, /nugu/v1/capabilities/AirflowControl/directives/AskAirflow)</div>
+    <div class="code_title">
+        <div class="label">Control Request 예시 (POST, /nugu/v1/capabilities/AirflowControl/directives/AskAirflow)</div>
+        <div class="copy"></div>
+        <div class="copy_success">복사성공!</div>
+    </div>
     <div class="code_body">
 <div class="language-json highlighter-rouge"><div class="highlight"><pre class="highlight"><code><table class="rouge-table"><tbody><tr>
 <td class="rouge-gutter gl"><pre class="lineno">1
@@ -2557,7 +2577,11 @@ Directive : AskAirflow</p>
 <p>Sample Response</p>
 
 <div class="code">
-    <div class="code_title"></div>
+    <div class="code_title">
+        <div class="label"></div>
+        <div class="copy"></div>
+        <div class="copy_success">복사성공!</div>
+    </div>
     <div class="code_body">
 <div class="language-json highlighter-rouge"><div class="highlight"><pre class="highlight"><code><table class="rouge-table"><tbody><tr>
 <td class="rouge-gutter gl"><pre class="lineno">1
@@ -2654,7 +2678,11 @@ Directive : IncreaseAirflow</p>
 <p>Sample Request</p>
 
 <div class="code">
-    <div class="code_title">Control Request 예시 (POST, /nugu/v1/capabilities/AirflowControl/directives/IncreaseAirflow)</div>
+    <div class="code_title">
+        <div class="label">Control Request 예시 (POST, /nugu/v1/capabilities/AirflowControl/directives/IncreaseAirflow)</div>
+        <div class="copy"></div>
+        <div class="copy_success">복사성공!</div>
+    </div>
     <div class="code_body">
 <div class="language-json highlighter-rouge"><div class="highlight"><pre class="highlight"><code><table class="rouge-table"><tbody><tr>
 <td class="rouge-gutter gl"><pre class="lineno">1
@@ -2753,7 +2781,11 @@ Directive : IncreaseAirflow</p>
 <p>Sample Response</p>
 
 <div class="code">
-    <div class="code_title"></div>
+    <div class="code_title">
+        <div class="label"></div>
+        <div class="copy"></div>
+        <div class="copy_success">복사성공!</div>
+    </div>
     <div class="code_body">
 <div class="language-json highlighter-rouge"><div class="highlight"><pre class="highlight"><code><table class="rouge-table"><tbody><tr>
 <td class="rouge-gutter gl"><pre class="lineno">1
@@ -2850,7 +2882,11 @@ Directive : DecreaseAirflow</p>
 <p>Sample Request</p>
 
 <div class="code">
-    <div class="code_title">Control Request 예시 (POST, /nugu/v1/capabilities/AirflowControl/directives/DecreaseAirflow)</div>
+    <div class="code_title">
+        <div class="label">Control Request 예시 (POST, /nugu/v1/capabilities/AirflowControl/directives/DecreaseAirflow)</div>
+        <div class="copy"></div>
+        <div class="copy_success">복사성공!</div>
+    </div>
     <div class="code_body">
 <div class="language-json highlighter-rouge"><div class="highlight"><pre class="highlight"><code><table class="rouge-table"><tbody><tr>
 <td class="rouge-gutter gl"><pre class="lineno">1
@@ -2949,7 +2985,11 @@ Directive : DecreaseAirflow</p>
 <p>Sample Response</p>
 
 <div class="code">
-    <div class="code_title"></div>
+    <div class="code_title">
+        <div class="label"></div>
+        <div class="copy"></div>
+        <div class="copy_success">복사성공!</div>
+    </div>
     <div class="code_body">
 <div class="language-json highlighter-rouge"><div class="highlight"><pre class="highlight"><code><table class="rouge-table"><tbody><tr>
 <td class="rouge-gutter gl"><pre class="lineno">1
@@ -3014,7 +3054,11 @@ Directive : SetAirflowMax</p>
 <p>Sample Request</p>
 
 <div class="code">
-    <div class="code_title">Control Request 예시 (POST, /nugu/v1/capabilities/AirflowControl/directives/SetAirflowMax)</div>
+    <div class="code_title">
+        <div class="label">Control Request 예시 (POST, /nugu/v1/capabilities/AirflowControl/directives/SetAirflowMax)</div>
+        <div class="copy"></div>
+        <div class="copy_success">복사성공!</div>
+    </div>
     <div class="code_body">
 <div class="language-json highlighter-rouge"><div class="highlight"><pre class="highlight"><code><table class="rouge-table"><tbody><tr>
 <td class="rouge-gutter gl"><pre class="lineno">1
@@ -3094,7 +3138,11 @@ Directive : SetAirflowMax</p>
 <p>Sample Response</p>
 
 <div class="code">
-    <div class="code_title"></div>
+    <div class="code_title">
+        <div class="label"></div>
+        <div class="copy"></div>
+        <div class="copy_success">복사성공!</div>
+    </div>
     <div class="code_body">
 <div class="language-json highlighter-rouge"><div class="highlight"><pre class="highlight"><code><table class="rouge-table"><tbody><tr>
 <td class="rouge-gutter gl"><pre class="lineno">1
@@ -3191,7 +3239,11 @@ Directive : SetAirflowMin</p>
 <p>Sample Request</p>
 
 <div class="code">
-    <div class="code_title">Control Request 예시 (POST, /nugu/v1/capabilities/AirflowControl/directives/SetAirflowMin)</div>
+    <div class="code_title">
+        <div class="label">Control Request 예시 (POST, /nugu/v1/capabilities/AirflowControl/directives/SetAirflowMin)</div>
+        <div class="copy"></div>
+        <div class="copy_success">복사성공!</div>
+    </div>
     <div class="code_body">
 <div class="language-json highlighter-rouge"><div class="highlight"><pre class="highlight"><code><table class="rouge-table"><tbody><tr>
 <td class="rouge-gutter gl"><pre class="lineno">1
@@ -3271,7 +3323,11 @@ Directive : SetAirflowMin</p>
 <p>Sample Response</p>
 
 <div class="code">
-    <div class="code_title"></div>
+    <div class="code_title">
+        <div class="label"></div>
+        <div class="copy"></div>
+        <div class="copy_success">복사성공!</div>
+    </div>
     <div class="code_body">
 <div class="language-json highlighter-rouge"><div class="highlight"><pre class="highlight"><code><table class="rouge-table"><tbody><tr>
 <td class="rouge-gutter gl"><pre class="lineno">1
@@ -3355,12 +3411,16 @@ Directive : SetAirflowMin</p>
 
 <h2 id="error--exception">Error &amp; Exception</h2>
 
-<p>해당 Capability/Directive에서 응답 시 사용할 수 있는 ErrorCode는 <a href="/nugu-play/smarthome-play/smarthomeerror">SmartHomeError</a>를 참조해주시기 바랍니다.</p>
+<p>해당 Capability/Directive에서 응답 시 사용할 수 있는 ErrorCode는 <a href="/nugu-play/smarthome-play/smarthomeerror" class="a_internal">SmartHomeError</a>를 참조해주시기 바랍니다.</p>
 
 <p>Sample Error Response</p>
 
 <div class="code">
-    <div class="code_title"></div>
+    <div class="code_title">
+        <div class="label"></div>
+        <div class="copy"></div>
+        <div class="copy_success">복사성공!</div>
+    </div>
     <div class="code_body">
 <div class="language-json highlighter-rouge"><div class="highlight"><pre class="highlight"><code><table class="rouge-table"><tbody><tr>
 <td class="rouge-gutter gl"><pre class="lineno">1
@@ -3417,7 +3477,11 @@ Directive : SetAirflowMin</p>
 
 <p>Request sample</p>
 <div class="code">
-    <div class="code_title"></div>
+    <div class="code_title">
+        <div class="label"></div>
+        <div class="copy"></div>
+        <div class="copy_success">복사성공!</div>
+    </div>
     <div class="code_body">
 <div class="language-json highlighter-rouge"><div class="highlight"><pre class="highlight"><code><table class="rouge-table"><tbody><tr>
 <td class="rouge-gutter gl"><pre class="lineno">1
@@ -3528,7 +3592,11 @@ Directive : SetAirflowMin</p>
 
 <p>Response Sample</p>
 <div class="code">
-    <div class="code_title"></div>
+    <div class="code_title">
+        <div class="label"></div>
+        <div class="copy"></div>
+        <div class="copy_success">복사성공!</div>
+    </div>
     <div class="code_body">
 <div class="language-json highlighter-rouge"><div class="highlight"><pre class="highlight"><code><table class="rouge-table"><tbody><tr>
 <td class="rouge-gutter gl"><pre class="lineno">1
@@ -3629,13 +3697,13 @@ Directive : SetAirflowMin</p>
 </section>
 <div id="modal_image_area" class="modal_image_area hide">
     <div class="modal_wrapper">
-        <img id="modal_image" class="modal_image" src="">
+        <img id="modal_image" class="modal_image" src="" data-skip-src-to-absolute>
     </div>
 </div>
 <script type="text/x-jsrender" id="search_contents_tmpl">
 
 <div class="search_content">
-    <a href="/nugu-play/smarthome-play/smarthomecapability/{{:url}}">
+    <a href="{{:url}}">
         <div class="page_title">{{:title}}</div>
         <div class="content">
             {{for contents}}

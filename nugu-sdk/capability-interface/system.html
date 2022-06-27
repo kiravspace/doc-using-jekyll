@@ -8,7 +8,7 @@
 
 
 
-<meta http-equiv="Last-Modified" content="2022-06-23 08:56:35 +0000">
+<meta http-equiv="Last-Modified" content="2022-06-27 10:20:03 +0000">
 
 
 
@@ -67,10 +67,10 @@
 <body>
 <header>
     <div class="header">
-        <div class="title">
-            <img src="/assets/icon/icon.png">
+        <a href="/" class="title">
+            <img src="/assets/icon/icon.png" class="img_inline">
             Developers | Guide
-        </div>
+        </a>
     </div>
     <div class="search">
         <div id="go_search" class="search_bar">
@@ -2197,19 +2197,23 @@
 <div id="tabs-18" class="tabs">
     <ul class="tabs_title">
         
-            <li data-content-id="tab-content-19" class="tab_title">Android</li>
+            <li data-content-id="tab-content-19" class="tab_title selected">Android</li>
         
             <li data-content-id="tab-content-29" class="tab_title">iOS</li>
         
             <li data-content-id="tab-content-39" class="tab_title">Linux</li>
         
     </ul>
-    <div id="tab-content-19" class="tab_content">
+    <div id="tab-content-19" class="tab_content selected">
     
 <p>NuguAndroidClient instance 를 통해 SystemAgent instance 에 접근할 수 있습니다.</p>
 
 <div class="code">
-    <div class="code_title"></div>
+    <div class="code_title">
+        <div class="label"></div>
+        <div class="copy"></div>
+        <div class="copy_success">복사성공!</div>
+    </div>
     <div class="code_body">
 <div class="language-text highlighter-rouge"><div class="highlight"><pre class="highlight"><code><table class="rouge-table"><tbody><tr>
 <td class="rouge-gutter gl"><pre class="lineno">1
@@ -2227,7 +2231,11 @@
 <p>NuguClient instance 를 통해 SystemAgent instance 에 접근할 수 있습니다.</p>
 
 <div class="code">
-    <div class="code_title"></div>
+    <div class="code_title">
+        <div class="label"></div>
+        <div class="copy"></div>
+        <div class="copy_success">복사성공!</div>
+    </div>
     <div class="code_body">
 <div class="language-text highlighter-rouge"><div class="highlight"><pre class="highlight"><code><table class="rouge-table"><tbody><tr>
 <td class="rouge-gutter gl"><pre class="lineno">1
@@ -2245,7 +2253,11 @@
 <p><a href="https://nugu-developers.github.io/nugu-linux/classNuguCapability_1_1CapabilityFactory.html#a46d96b1bc96903f02905c92ba8794bf6">CapabilityFactory::makeCapability</a> 함수로 <a href="https://nugu-developers.github.io/nugu-linux/classNuguCapability_1_1ISystemHandler.html">SystemAgent</a> 를 생성하고 <a href="https://nugu-developers.github.io/nugu-linux/classNuguClientKit_1_1NuguClient.html">NuguClient</a> 에 추가해 주어야합니다.</p>
 
 <div class="code">
-    <div class="code_title"></div>
+    <div class="code_title">
+        <div class="label"></div>
+        <div class="copy"></div>
+        <div class="copy_success">복사성공!</div>
+    </div>
     <div class="code_body">
 <div class="language-text highlighter-rouge"><div class="highlight"><pre class="highlight"><code><table class="rouge-table"><tbody><tr>
 <td class="rouge-gutter gl"><pre class="lineno">1
@@ -2273,7 +2285,7 @@ nugu_client-&gt;getCapabilityBuilder()
 
 <h3 id="디바이스-전원-제어">디바이스 전원 제어</h3>
 
-<p><code class="language-plaintext highlighter-rouge">사용자 발화</code> 에 따라 <a href="#turnoff">TurnOff</a> directive 로 디바이스 전원을 제어할 수 있습니다.</p>
+<p><code class="language-plaintext highlighter-rouge">사용자 발화</code> 에 따라 <a href="#turnoff" class="hash_internal">TurnOff</a> directive 로 디바이스 전원을 제어할 수 있습니다.</p>
 
 <div class="alerts warning">
     
@@ -2284,17 +2296,21 @@ nugu_client-&gt;getCapabilityBuilder()
 <div id="tabs-63" class="tabs">
     <ul class="tabs_title">
         
-            <li data-content-id="tab-content-64" class="tab_title">Android</li>
+            <li data-content-id="tab-content-64" class="tab_title selected">Android</li>
         
             <li data-content-id="tab-content-79" class="tab_title">Linux</li>
         
     </ul>
-    <div id="tab-content-64" class="tab_content">
+    <div id="tab-content-64" class="tab_content selected">
     
 <p>SystemAgentInterface.Listener 를 추가합니다.</p>
 
 <div class="code">
-    <div class="code_title"></div>
+    <div class="code_title">
+        <div class="label"></div>
+        <div class="copy"></div>
+        <div class="copy_success">복사성공!</div>
+    </div>
     <div class="code_body">
 <div class="language-text highlighter-rouge"><div class="highlight"><pre class="highlight"><code><table class="rouge-table"><tbody><tr>
 <td class="rouge-gutter gl"><pre class="lineno">1
@@ -2322,7 +2338,11 @@ systemAgent.addListener(listener)
 <p><a href="https://nugu-developers.github.io/nugu-linux/classNuguCapability_1_1ISystemListener.html">ISystemListener</a> 를 추가합니다.</p>
 
 <div class="code">
-    <div class="code_title"></div>
+    <div class="code_title">
+        <div class="label"></div>
+        <div class="copy"></div>
+        <div class="copy_success">복사성공!</div>
+    </div>
     <div class="code_body">
 <div class="language-text highlighter-rouge"><div class="highlight"><pre class="highlight"><code><table class="rouge-table"><tbody><tr>
 <td class="rouge-gutter gl"><pre class="lineno">1
@@ -2364,26 +2384,30 @@ CapabilityFactory::makeCapability&lt;SystemAgent, ISystemHandler&gt;(system_list
 
 <h3 id="에러처리">에러처리</h3>
 
-<p>NUGU 서버에서 에러가 발생할 경우 <a href="#exception">Exception</a> directive 로 error code가 전달됩니다.</p>
+<p>NUGU 서버에서 에러가 발생할 경우 <a href="#exception" class="hash_internal">Exception</a> directive 로 error code가 전달됩니다.</p>
 
 <p>사용자가 에러 상황을 인지할 수 있도록 Toast, Local TTS 등으로 안내해야합니다.</p>
 
 <div id="tabs-108" class="tabs">
     <ul class="tabs_title">
         
-            <li data-content-id="tab-content-109" class="tab_title">Android</li>
+            <li data-content-id="tab-content-109" class="tab_title selected">Android</li>
         
             <li data-content-id="tab-content-124" class="tab_title">iOS</li>
         
             <li data-content-id="tab-content-141" class="tab_title">Linux</li>
         
     </ul>
-    <div id="tab-content-109" class="tab_content">
+    <div id="tab-content-109" class="tab_content selected">
     
 <p>SystemAgentInterface.Listener 를 추가합니다.</p>
 
 <div class="code">
-    <div class="code_title"></div>
+    <div class="code_title">
+        <div class="label"></div>
+        <div class="copy"></div>
+        <div class="copy_success">복사성공!</div>
+    </div>
     <div class="code_body">
 <div class="language-text highlighter-rouge"><div class="highlight"><pre class="highlight"><code><table class="rouge-table"><tbody><tr>
 <td class="rouge-gutter gl"><pre class="lineno">1
@@ -2411,7 +2435,11 @@ systemAgent.addListener(listener)
 <p>SystemAgentDelegate 를 추가합니다.</p>
 
 <div class="code">
-    <div class="code_title"></div>
+    <div class="code_title">
+        <div class="label"></div>
+        <div class="copy"></div>
+        <div class="copy_success">복사성공!</div>
+    </div>
     <div class="code_body">
 <div class="language-text highlighter-rouge"><div class="highlight"><pre class="highlight"><code><table class="rouge-table"><tbody><tr>
 <td class="rouge-gutter gl"><pre class="lineno">1
@@ -2443,7 +2471,11 @@ systemAgent.add(systemAgentDelegate: MySystemAgentDelegate())
 <p><a href="https://nugu-developers.github.io/nugu-linux/classNuguCapability_1_1ISystemListener.html">ISystemListener</a> 를 추가합니다.</p>
 
 <div class="code">
-    <div class="code_title"></div>
+    <div class="code_title">
+        <div class="label"></div>
+        <div class="copy"></div>
+        <div class="copy_success">복사성공!</div>
+    </div>
     <div class="code_body">
 <div class="language-text highlighter-rouge"><div class="highlight"><pre class="highlight"><code><table class="rouge-table"><tbody><tr>
 <td class="rouge-gutter gl"><pre class="lineno">1
@@ -2485,26 +2517,30 @@ CapabilityFactory::makeCapability&lt;SystemAgent, ISystemHandler&gt;(system_list
 
 <h3 id="디바이스-등록-해제">디바이스 등록 해제</h3>
 
-<p>누구 서버에서 디바이스가 등록 해제되면 <a href="#revoke">Revoke</a> directive 로 reason 이 전달됩니다.</p>
+<p>누구 서버에서 디바이스가 등록 해제되면 <a href="#revoke" class="hash_internal">Revoke</a> directive 로 reason 이 전달됩니다.</p>
 
 <p>Application 의 상황에 따라 NUGU 로그인 화면으로 이동하거나 NUGU Button 을 비활성화 해야합니다.</p>
 
 <div id="tabs-170" class="tabs">
     <ul class="tabs_title">
         
-            <li data-content-id="tab-content-171" class="tab_title">Android</li>
+            <li data-content-id="tab-content-171" class="tab_title selected">Android</li>
         
             <li data-content-id="tab-content-186" class="tab_title">iOS</li>
         
             <li data-content-id="tab-content-203" class="tab_title">Linux</li>
         
     </ul>
-    <div id="tab-content-171" class="tab_content">
+    <div id="tab-content-171" class="tab_content selected">
     
 <p>SystemAgentInterface.Listener 를 추가합니다.</p>
 
 <div class="code">
-    <div class="code_title"></div>
+    <div class="code_title">
+        <div class="label"></div>
+        <div class="copy"></div>
+        <div class="copy_success">복사성공!</div>
+    </div>
     <div class="code_body">
 <div class="language-text highlighter-rouge"><div class="highlight"><pre class="highlight"><code><table class="rouge-table"><tbody><tr>
 <td class="rouge-gutter gl"><pre class="lineno">1
@@ -2532,7 +2568,11 @@ systemAgent.addListener(listener)
 <p>SystemAgentDelegate 를 추가합니다.</p>
 
 <div class="code">
-    <div class="code_title"></div>
+    <div class="code_title">
+        <div class="label"></div>
+        <div class="copy"></div>
+        <div class="copy_success">복사성공!</div>
+    </div>
     <div class="code_body">
 <div class="language-text highlighter-rouge"><div class="highlight"><pre class="highlight"><code><table class="rouge-table"><tbody><tr>
 <td class="rouge-gutter gl"><pre class="lineno">1
@@ -2564,7 +2604,11 @@ systemAgent.add(systemAgentDelegate: MySystemAgentDelegate())
 <p><a href="https://nugu-developers.github.io/nugu-linux/classNuguCapability_1_1ISystemListener.html">ISystemListener</a> 를 추가합니다.</p>
 
 <div class="code">
-    <div class="code_title"></div>
+    <div class="code_title">
+        <div class="label"></div>
+        <div class="copy"></div>
+        <div class="copy_success">복사성공!</div>
+    </div>
     <div class="code_body">
 <div class="language-text highlighter-rouge"><div class="highlight"><pre class="highlight"><code><table class="rouge-table"><tbody><tr>
 <td class="rouge-gutter gl"><pre class="lineno">1
@@ -2607,7 +2651,11 @@ CapabilityFactory::makeCapability&lt;SystemAgent, ISystemHandler&gt;(system_list
 <h2 id="context">Context</h2>
 
 <div class="code">
-    <div class="code_title"></div>
+    <div class="code_title">
+        <div class="label"></div>
+        <div class="copy"></div>
+        <div class="copy_success">복사성공!</div>
+    </div>
     <div class="code_body">
 <div class="language-text highlighter-rouge"><div class="highlight"><pre class="highlight"><code><table class="rouge-table"><tbody><tr>
 <td class="rouge-gutter gl"><pre class="lineno">1
@@ -2642,7 +2690,11 @@ CapabilityFactory::makeCapability&lt;SystemAgent, ISystemHandler&gt;(system_list
 </ul>
 
 <div class="code">
-    <div class="code_title"></div>
+    <div class="code_title">
+        <div class="label"></div>
+        <div class="copy"></div>
+        <div class="copy_success">복사성공!</div>
+    </div>
     <div class="code_body">
 <div class="language-text highlighter-rouge"><div class="highlight"><pre class="highlight"><code><table class="rouge-table"><tbody><tr>
 <td class="rouge-gutter gl"><pre class="lineno">1
@@ -2686,7 +2738,11 @@ CapabilityFactory::makeCapability&lt;SystemAgent, ISystemHandler&gt;(system_list
 </ul>
 
 <div class="code">
-    <div class="code_title"></div>
+    <div class="code_title">
+        <div class="label"></div>
+        <div class="copy"></div>
+        <div class="copy_success">복사성공!</div>
+    </div>
     <div class="code_body">
 <div class="language-text highlighter-rouge"><div class="highlight"><pre class="highlight"><code><table class="rouge-table"><tbody><tr>
 <td class="rouge-gutter gl"><pre class="lineno">1
@@ -2791,7 +2847,11 @@ CapabilityFactory::makeCapability&lt;SystemAgent, ISystemHandler&gt;(system_list
 </ul>
 
 <div class="code">
-    <div class="code_title"></div>
+    <div class="code_title">
+        <div class="label"></div>
+        <div class="copy"></div>
+        <div class="copy_success">복사성공!</div>
+    </div>
     <div class="code_body">
 <div class="language-text highlighter-rouge"><div class="highlight"><pre class="highlight"><code><table class="rouge-table"><tbody><tr>
 <td class="rouge-gutter gl"><pre class="lineno">1
@@ -2827,7 +2887,11 @@ CapabilityFactory::makeCapability&lt;SystemAgent, ISystemHandler&gt;(system_list
 </ul>
 
 <div class="code">
-    <div class="code_title"></div>
+    <div class="code_title">
+        <div class="label"></div>
+        <div class="copy"></div>
+        <div class="copy_success">복사성공!</div>
+    </div>
     <div class="code_body">
 <div class="language-text highlighter-rouge"><div class="highlight"><pre class="highlight"><code><table class="rouge-table"><tbody><tr>
 <td class="rouge-gutter gl"><pre class="lineno">1
@@ -2861,7 +2925,11 @@ CapabilityFactory::makeCapability&lt;SystemAgent, ISystemHandler&gt;(system_list
 <p>누구 서버에서 에러가 발생하면 전달됩니다.</p>
 
 <div class="code">
-    <div class="code_title"></div>
+    <div class="code_title">
+        <div class="label"></div>
+        <div class="copy"></div>
+        <div class="copy_success">복사성공!</div>
+    </div>
     <div class="code_body">
 <div class="language-text highlighter-rouge"><div class="highlight"><pre class="highlight"><code><table class="rouge-table"><tbody><tr>
 <td class="rouge-gutter gl"><pre class="lineno">1
@@ -2959,7 +3027,11 @@ CapabilityFactory::makeCapability&lt;SystemAgent, ISystemHandler&gt;(system_list
 </ul>
 
 <div class="code">
-    <div class="code_title"></div>
+    <div class="code_title">
+        <div class="label"></div>
+        <div class="copy"></div>
+        <div class="copy_success">복사성공!</div>
+    </div>
     <div class="code_body">
 <div class="language-text highlighter-rouge"><div class="highlight"><pre class="highlight"><code><table class="rouge-table"><tbody><tr>
 <td class="rouge-gutter gl"><pre class="lineno">1
@@ -2993,7 +3065,11 @@ CapabilityFactory::makeCapability&lt;SystemAgent, ISystemHandler&gt;(system_list
 <p>NUGU 서버에서 디바이스가 등록 해제되면 전달됩니다.</p>
 
 <div class="code">
-    <div class="code_title"></div>
+    <div class="code_title">
+        <div class="label"></div>
+        <div class="copy"></div>
+        <div class="copy_success">복사성공!</div>
+    </div>
     <div class="code_body">
 <div class="language-text highlighter-rouge"><div class="highlight"><pre class="highlight"><code><table class="rouge-table"><tbody><tr>
 <td class="rouge-gutter gl"><pre class="lineno">1
@@ -3068,7 +3144,11 @@ CapabilityFactory::makeCapability&lt;SystemAgent, ISystemHandler&gt;(system_list
 </ul>
 
 <div class="code">
-    <div class="code_title"></div>
+    <div class="code_title">
+        <div class="label"></div>
+        <div class="copy"></div>
+        <div class="copy_success">복사성공!</div>
+    </div>
     <div class="code_body">
 <div class="language-text highlighter-rouge"><div class="highlight"><pre class="highlight"><code><table class="rouge-table"><tbody><tr>
 <td class="rouge-gutter gl"><pre class="lineno">1
@@ -3110,7 +3190,11 @@ CapabilityFactory::makeCapability&lt;SystemAgent, ISystemHandler&gt;(system_list
 </ul>
 
 <div class="code">
-    <div class="code_title"></div>
+    <div class="code_title">
+        <div class="label"></div>
+        <div class="copy"></div>
+        <div class="copy_success">복사성공!</div>
+    </div>
     <div class="code_body">
 <div class="language-text highlighter-rouge"><div class="highlight"><pre class="highlight"><code><table class="rouge-table"><tbody><tr>
 <td class="rouge-gutter gl"><pre class="lineno">1
@@ -3171,7 +3255,11 @@ CapabilityFactory::makeCapability&lt;SystemAgent, ISystemHandler&gt;(system_list
 </ul>
 
 <div class="code">
-    <div class="code_title"></div>
+    <div class="code_title">
+        <div class="label"></div>
+        <div class="copy"></div>
+        <div class="copy_success">복사성공!</div>
+    </div>
     <div class="code_body">
 <div class="language-text highlighter-rouge"><div class="highlight"><pre class="highlight"><code><table class="rouge-table"><tbody><tr>
 <td class="rouge-gutter gl"><pre class="lineno">1
@@ -3213,7 +3301,11 @@ CapabilityFactory::makeCapability&lt;SystemAgent, ISystemHandler&gt;(system_list
 </ul>
 
 <div class="code">
-    <div class="code_title"></div>
+    <div class="code_title">
+        <div class="label"></div>
+        <div class="copy"></div>
+        <div class="copy_success">복사성공!</div>
+    </div>
     <div class="code_body">
 <div class="language-text highlighter-rouge"><div class="highlight"><pre class="highlight"><code><table class="rouge-table"><tbody><tr>
 <td class="rouge-gutter gl"><pre class="lineno">1
@@ -3279,7 +3371,11 @@ CapabilityFactory::makeCapability&lt;SystemAgent, ISystemHandler&gt;(system_list
 </ul>
 
 <div class="code">
-    <div class="code_title"></div>
+    <div class="code_title">
+        <div class="label"></div>
+        <div class="copy"></div>
+        <div class="copy_success">복사성공!</div>
+    </div>
     <div class="code_body">
 <div class="language-text highlighter-rouge"><div class="highlight"><pre class="highlight"><code><table class="rouge-table"><tbody><tr>
 <td class="rouge-gutter gl"><pre class="lineno">1
@@ -3321,7 +3417,11 @@ CapabilityFactory::makeCapability&lt;SystemAgent, ISystemHandler&gt;(system_list
 </ul>
 
 <div class="code">
-    <div class="code_title"></div>
+    <div class="code_title">
+        <div class="label"></div>
+        <div class="copy"></div>
+        <div class="copy_success">복사성공!</div>
+    </div>
     <div class="code_body">
 <div class="language-text highlighter-rouge"><div class="highlight"><pre class="highlight"><code><table class="rouge-table"><tbody><tr>
 <td class="rouge-gutter gl"><pre class="lineno">1
@@ -3380,13 +3480,13 @@ CapabilityFactory::makeCapability&lt;SystemAgent, ISystemHandler&gt;(system_list
 </section>
 <div id="modal_image_area" class="modal_image_area hide">
     <div class="modal_wrapper">
-        <img id="modal_image" class="modal_image" src="">
+        <img id="modal_image" class="modal_image" src="" data-skip-src-to-absolute>
     </div>
 </div>
 <script type="text/x-jsrender" id="search_contents_tmpl">
 
 <div class="search_content">
-    <a href="/nugu-sdk/capability-interface/{{:url}}">
+    <a href="{{:url}}">
         <div class="page_title">{{:title}}</div>
         <div class="content">
             {{for contents}}

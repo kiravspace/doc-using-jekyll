@@ -8,7 +8,7 @@
 
 
 
-<meta http-equiv="Last-Modified" content="2022-06-23 08:56:35 +0000">
+<meta http-equiv="Last-Modified" content="2022-06-27 10:20:03 +0000">
 
 
 
@@ -67,10 +67,10 @@
 <body>
 <header>
     <div class="header">
-        <div class="title">
-            <img src="/assets/icon/icon.png">
+        <a href="/" class="title">
+            <img src="/assets/icon/icon.png" class="img_inline">
             Developers | Guide
-        </div>
+        </a>
     </div>
     <div class="search">
         <div id="go_search" class="search_bar">
@@ -2202,17 +2202,21 @@
 <div id="tabs-19" class="tabs">
     <ul class="tabs_title">
         
-            <li data-content-id="tab-content-20" class="tab_title">Android</li>
+            <li data-content-id="tab-content-20" class="tab_title selected">Android</li>
         
             <li data-content-id="tab-content-42" class="tab_title">Linux</li>
         
     </ul>
-    <div id="tab-content-20" class="tab_content">
+    <div id="tab-content-20" class="tab_content selected">
     
 <p>NuguAndroidClient instance 를 통해 MessageAgent instance 에 접근할 수 있습니다.</p>
 
 <div class="code">
-    <div class="code_title"></div>
+    <div class="code_title">
+        <div class="label"></div>
+        <div class="copy"></div>
+        <div class="copy_success">복사성공!</div>
+    </div>
     <div class="code_body">
 <div class="language-text highlighter-rouge"><div class="highlight"><pre class="highlight"><code><table class="rouge-table"><tbody><tr>
 <td class="rouge-gutter gl"><pre class="lineno">1
@@ -2226,7 +2230,11 @@
 <p>NuguAndroidClient 생성시 MessageClient 를 추가합니다.</p>
 
 <div class="code">
-    <div class="code_title"></div>
+    <div class="code_title">
+        <div class="label"></div>
+        <div class="copy"></div>
+        <div class="copy_success">복사성공!</div>
+    </div>
     <div class="code_body">
 <div class="language-text highlighter-rouge"><div class="highlight"><pre class="highlight"><code><table class="rouge-table"><tbody><tr>
 <td class="rouge-gutter gl"><pre class="lineno">1
@@ -2252,7 +2260,11 @@ NuguAndroidClient().Builder()
 <p><a href="https://nugu-developers.github.io/nugu-linux/classNuguCapability_1_1CapabilityFactory.html#a46d96b1bc96903f02905c92ba8794bf6">CapabilityFactory::makeCapability</a> 함수로 <a href="https://nugu-developers.github.io/nugu-linux/classNuguCapability_1_1IMessageHandler.html">MessageAgent</a> 를 생성하고 <a href="https://nugu-developers.github.io/nugu-linux/classNuguClientKit_1_1NuguClient.html">NuguClient</a> 에 추가해 주어야합니다.</p>
 
 <div class="code">
-    <div class="code_title"></div>
+    <div class="code_title">
+        <div class="label"></div>
+        <div class="copy"></div>
+        <div class="copy_success">복사성공!</div>
+    </div>
     <div class="code_body">
 <div class="language-text highlighter-rouge"><div class="highlight"><pre class="highlight"><code><table class="rouge-table"><tbody><tr>
 <td class="rouge-gutter gl"><pre class="lineno">1
@@ -2280,20 +2292,24 @@ nugu_client-&gt;getCapabilityBuilder()
 
 <h3 id="context-구성">Context 구성</h3>
 
-<p>문자 기능과 관련된 상태 정보를 <a href="#context">Context</a> 에 포함시켜 주어야 합니다.</p>
+<p>문자 기능과 관련된 상태 정보를 <a href="#context" class="hash_internal">Context</a> 에 포함시켜 주어야 합니다.</p>
 
 <div id="tabs-62" class="tabs">
     <ul class="tabs_title">
         
-            <li data-content-id="tab-content-63" class="tab_title">Android</li>
+            <li data-content-id="tab-content-63" class="tab_title selected">Android</li>
         
     </ul>
-    <div id="tab-content-63" class="tab_content">
+    <div id="tab-content-63" class="tab_content selected">
     
 <p>MessageClient 를 구현합니다.</p>
 
 <div class="code">
-    <div class="code_title"></div>
+    <div class="code_title">
+        <div class="label"></div>
+        <div class="copy"></div>
+        <div class="copy_success">복사성공!</div>
+    </div>
     <div class="code_body">
 <div class="language-text highlighter-rouge"><div class="highlight"><pre class="highlight"><code><table class="rouge-table"><tbody><tr>
 <td class="rouge-gutter gl"><pre class="lineno">1
@@ -2323,22 +2339,26 @@ nugu_client-&gt;getCapabilityBuilder()
 
 <h3 id="문자-전송">문자 전송</h3>
 
-<p>문자 전송이 <a href="#sendcandidates">SendCandidates</a>, <a href="#sendmessage">SendMessage</a> directive 로 요청될 수 있습니다.</p>
+<p>문자 전송이 <a href="#sendcandidates" class="hash_internal">SendCandidates</a>, <a href="#sendmessage" class="hash_internal">SendMessage</a> directive 로 요청될 수 있습니다.</p>
 
 <div id="tabs-84" class="tabs">
     <ul class="tabs_title">
         
-            <li data-content-id="tab-content-85" class="tab_title">Android</li>
+            <li data-content-id="tab-content-85" class="tab_title selected">Android</li>
         
             <li data-content-id="tab-content-107" class="tab_title">Linux</li>
         
     </ul>
-    <div id="tab-content-85" class="tab_content">
+    <div id="tab-content-85" class="tab_content selected">
     
 <p>MessageClient 를 구현합니다.</p>
 
 <div class="code">
-    <div class="code_title"></div>
+    <div class="code_title">
+        <div class="label"></div>
+        <div class="copy"></div>
+        <div class="copy_success">복사성공!</div>
+    </div>
     <div class="code_body">
 <div class="language-text highlighter-rouge"><div class="highlight"><pre class="highlight"><code><table class="rouge-table"><tbody><tr>
 <td class="rouge-gutter gl"><pre class="lineno">1
@@ -2380,7 +2400,11 @@ nugu_client-&gt;getCapabilityBuilder()
 <p><a href="https://nugu-developers.github.io/nugu-linux/classNuguCapability_1_1IMessageListener.html">IMessageListener</a> 를 추가합니다.</p>
 
 <div class="code">
-    <div class="code_title"></div>
+    <div class="code_title">
+        <div class="label"></div>
+        <div class="copy"></div>
+        <div class="copy_success">복사성공!</div>
+    </div>
     <div class="code_body">
 <div class="language-text highlighter-rouge"><div class="highlight"><pre class="highlight"><code><table class="rouge-table"><tbody><tr>
 <td class="rouge-gutter gl"><pre class="lineno">1
@@ -2432,22 +2456,26 @@ CapabilityFactory::makeCapability&lt;MessageAgent, IMessageHandler&gt;(message_l
 
 <h3 id="문자-읽기">문자 읽기</h3>
 
-<p>문자 읽기가 <a href="/nugu-sdk/capability-interface/message#getmessage">GetMessage</a>, <a href="/nugu-sdk/capability-interface/message#readmessage">ReadMessage</a> directive 로 요청될 수 있습니다.</p>
+<p>문자 읽기가 <a href="/nugu-sdk/capability-interface/message#getmessage" class="a_internal">GetMessage</a>, <a href="/nugu-sdk/capability-interface/message#readmessage" class="a_internal">ReadMessage</a> directive 로 요청될 수 있습니다.</p>
 
 <div id="tabs-139" class="tabs">
     <ul class="tabs_title">
         
-            <li data-content-id="tab-content-140" class="tab_title">Android</li>
+            <li data-content-id="tab-content-140" class="tab_title selected">Android</li>
         
             <li data-content-id="tab-content-158" class="tab_title">Linux</li>
         
     </ul>
-    <div id="tab-content-140" class="tab_content">
+    <div id="tab-content-140" class="tab_content selected">
     
 <p>MessageClient 를 구현합니다.</p>
 
 <div class="code">
-    <div class="code_title"></div>
+    <div class="code_title">
+        <div class="label"></div>
+        <div class="copy"></div>
+        <div class="copy_success">복사성공!</div>
+    </div>
     <div class="code_body">
 <div class="language-text highlighter-rouge"><div class="highlight"><pre class="highlight"><code><table class="rouge-table"><tbody><tr>
 <td class="rouge-gutter gl"><pre class="lineno">1
@@ -2478,7 +2506,11 @@ CapabilityFactory::makeCapability&lt;MessageAgent, IMessageHandler&gt;(message_l
 <p><a href="https://nugu-developers.github.io/nugu-linux/classNuguCapability_1_1IMessageListener.html">IMessageListener</a> 를 추가합니다.</p>
 
 <div class="code">
-    <div class="code_title"></div>
+    <div class="code_title">
+        <div class="label"></div>
+        <div class="copy"></div>
+        <div class="copy_success">복사성공!</div>
+    </div>
     <div class="code_body">
 <div class="language-text highlighter-rouge"><div class="highlight"><pre class="highlight"><code><table class="rouge-table"><tbody><tr>
 <td class="rouge-gutter gl"><pre class="lineno">1
@@ -2520,20 +2552,24 @@ CapabilityFactory::makeCapability&lt;MessageAgent, IMessageHandler&gt;(message_l
 
 <h3 id="재생-상태-모니터링">재생 상태 모니터링</h3>
 
-<p><a href="/nugu-sdk/capability-interface/message#readmessage">ReadMessage</a> directive 로 전달된 문자에 대한 재생 상태를 모니터링 할 수 있습니다.</p>
+<p><a href="/nugu-sdk/capability-interface/message#readmessage" class="a_internal">ReadMessage</a> directive 로 전달된 문자에 대한 재생 상태를 모니터링 할 수 있습니다.</p>
 
 <div id="tabs-185" class="tabs">
     <ul class="tabs_title">
         
-            <li data-content-id="tab-content-186" class="tab_title">Android</li>
+            <li data-content-id="tab-content-186" class="tab_title selected">Android</li>
         
     </ul>
-    <div id="tab-content-186" class="tab_content">
+    <div id="tab-content-186" class="tab_content selected">
     
 <p>MessageAgentInterface.OnPlaybackListener 를 추가합니다.</p>
 
 <div class="code">
-    <div class="code_title"></div>
+    <div class="code_title">
+        <div class="label"></div>
+        <div class="copy"></div>
+        <div class="copy_success">복사성공!</div>
+    </div>
     <div class="code_body">
 <div class="language-text highlighter-rouge"><div class="highlight"><pre class="highlight"><code><table class="rouge-table"><tbody><tr>
 <td class="rouge-gutter gl"><pre class="lineno">1
@@ -2558,7 +2594,11 @@ messageAgent.addOnPlaybackListener(listener)
 <h2 id="context">Context</h2>
 
 <div class="code">
-    <div class="code_title"></div>
+    <div class="code_title">
+        <div class="label"></div>
+        <div class="copy"></div>
+        <div class="copy_success">복사성공!</div>
+    </div>
     <div class="code_body">
 <div class="language-text highlighter-rouge"><div class="highlight"><pre class="highlight"><code><table class="rouge-table"><tbody><tr>
 <td class="rouge-gutter gl"><pre class="lineno">1
@@ -2667,7 +2707,7 @@ messageAgent.addOnPlaybackListener(listener)
     </tr>
     <tr>
       <td style="text-align: left">template.candidates</td>
-      <td style="text-align: left">array of <a href="#contact">Contact</a>
+      <td style="text-align: left">array of <a href="#contact" class="hash_internal">Contact</a>
 </td>
       <td style="text-align: left">N</td>
       <td style="text-align: left">화면에 검색 결과 리스트를 디스플레이하는 중에만 context에 추가</td>
@@ -2698,7 +2738,11 @@ messageAgent.addOnPlaybackListener(listener)
 <h3 id="contact">Contact</h3>
 
 <div class="code">
-    <div class="code_title"></div>
+    <div class="code_title">
+        <div class="label"></div>
+        <div class="copy"></div>
+        <div class="copy_success">복사성공!</div>
+    </div>
     <div class="code_body">
 <div class="language-text highlighter-rouge"><div class="highlight"><pre class="highlight"><code><table class="rouge-table"><tbody><tr>
 <td class="rouge-gutter gl"><pre class="lineno">1
@@ -2830,7 +2874,11 @@ messageAgent.addOnPlaybackListener(listener)
 <h3 id="sendcandidates">SendCandidates</h3>
 
 <div class="code">
-    <div class="code_title"></div>
+    <div class="code_title">
+        <div class="label"></div>
+        <div class="copy"></div>
+        <div class="copy_success">복사성공!</div>
+    </div>
     <div class="code_body">
 <div class="language-text highlighter-rouge"><div class="highlight"><pre class="highlight"><code><table class="rouge-table"><tbody><tr>
 <td class="rouge-gutter gl"><pre class="lineno">1
@@ -2926,7 +2974,7 @@ messageAgent.addOnPlaybackListener(listener)
     </tr>
     <tr>
       <td style="text-align: left">candidates</td>
-      <td style="text-align: left">array of <a href="#contact">Contact</a>
+      <td style="text-align: left">array of <a href="#contact" class="hash_internal">Contact</a>
 </td>
       <td style="text-align: left">N</td>
       <td style="text-align: left">candidates가 없으면 이 항목이 없어야 함</td>
@@ -2955,7 +3003,11 @@ messageAgent.addOnPlaybackListener(listener)
 <h3 id="sendmessage">SendMessage</h3>
 
 <div class="code">
-    <div class="code_title"></div>
+    <div class="code_title">
+        <div class="label"></div>
+        <div class="copy"></div>
+        <div class="copy_success">복사성공!</div>
+    </div>
     <div class="code_body">
 <div class="language-text highlighter-rouge"><div class="highlight"><pre class="highlight"><code><table class="rouge-table"><tbody><tr>
 <td class="rouge-gutter gl"><pre class="lineno">1
@@ -3002,7 +3054,7 @@ messageAgent.addOnPlaybackListener(listener)
   <tbody>
     <tr>
       <td style="text-align: left">recipient</td>
-      <td style="text-align: left"><a href="/nugu-sdk/capability-interface/message#contact">Contact</a></td>
+      <td style="text-align: left"><a href="/nugu-sdk/capability-interface/message#contact" class="a_internal">Contact</a></td>
       <td style="text-align: left">Y</td>
       <td style="text-align: left"> </td>
     </tr>
@@ -3012,7 +3064,11 @@ messageAgent.addOnPlaybackListener(listener)
 <h3 id="getmessage">GetMessage</h3>
 
 <div class="code">
-    <div class="code_title"></div>
+    <div class="code_title">
+        <div class="label"></div>
+        <div class="copy"></div>
+        <div class="copy_success">복사성공!</div>
+    </div>
     <div class="code_body">
 <div class="language-text highlighter-rouge"><div class="highlight"><pre class="highlight"><code><table class="rouge-table"><tbody><tr>
 <td class="rouge-gutter gl"><pre class="lineno">1
@@ -3085,7 +3141,7 @@ messageAgent.addOnPlaybackListener(listener)
     </tr>
     <tr>
       <td style="text-align: left">candidates</td>
-      <td style="text-align: left">array of <a href="#contact">Contact</a>
+      <td style="text-align: left">array of <a href="#contact" class="hash_internal">Contact</a>
 </td>
       <td style="text-align: left">N</td>
       <td style="text-align: left">candidates가 없으면 이 항목이 없어야 함</td>
@@ -3096,7 +3152,11 @@ messageAgent.addOnPlaybackListener(listener)
 <h3 id="readmessage">ReadMessage</h3>
 
 <div class="code">
-    <div class="code_title"></div>
+    <div class="code_title">
+        <div class="label"></div>
+        <div class="copy"></div>
+        <div class="copy_success">복사성공!</div>
+    </div>
     <div class="code_body">
 <div class="language-text highlighter-rouge"><div class="highlight"><pre class="highlight"><code><table class="rouge-table"><tbody><tr>
 <td class="rouge-gutter gl"><pre class="lineno">1
@@ -3168,7 +3228,11 @@ messageAgent.addOnPlaybackListener(listener)
 </ul>
 
 <div class="code">
-    <div class="code_title"></div>
+    <div class="code_title">
+        <div class="label"></div>
+        <div class="copy"></div>
+        <div class="copy_success">복사성공!</div>
+    </div>
     <div class="code_body">
 <div class="language-text highlighter-rouge"><div class="highlight"><pre class="highlight"><code><table class="rouge-table"><tbody><tr>
 <td class="rouge-gutter gl"><pre class="lineno">1
@@ -3204,7 +3268,11 @@ messageAgent.addOnPlaybackListener(listener)
 <h3 id="sendmessagesucceeded">SendMessageSucceeded</h3>
 
 <div class="code">
-    <div class="code_title"></div>
+    <div class="code_title">
+        <div class="label"></div>
+        <div class="copy"></div>
+        <div class="copy_success">복사성공!</div>
+    </div>
     <div class="code_body">
 <div class="language-text highlighter-rouge"><div class="highlight"><pre class="highlight"><code><table class="rouge-table"><tbody><tr>
 <td class="rouge-gutter gl"><pre class="lineno">1
@@ -3251,7 +3319,7 @@ messageAgent.addOnPlaybackListener(listener)
   <tbody>
     <tr>
       <td style="text-align: left">recipient</td>
-      <td style="text-align: left"><a href="/nugu-sdk/capability-interface/message#contact">Contact</a></td>
+      <td style="text-align: left"><a href="/nugu-sdk/capability-interface/message#contact" class="a_internal">Contact</a></td>
       <td style="text-align: left">Y</td>
       <td style="text-align: left"> </td>
     </tr>
@@ -3261,7 +3329,11 @@ messageAgent.addOnPlaybackListener(listener)
 <h3 id="sendmessagefailed">SendMessageFailed</h3>
 
 <div class="code">
-    <div class="code_title"></div>
+    <div class="code_title">
+        <div class="label"></div>
+        <div class="copy"></div>
+        <div class="copy_success">복사성공!</div>
+    </div>
     <div class="code_body">
 <div class="language-text highlighter-rouge"><div class="highlight"><pre class="highlight"><code><table class="rouge-table"><tbody><tr>
 <td class="rouge-gutter gl"><pre class="lineno">1
@@ -3326,7 +3398,11 @@ messageAgent.addOnPlaybackListener(listener)
 <h3 id="getmessagesucceeded">GetMessageSucceeded</h3>
 
 <div class="code">
-    <div class="code_title"></div>
+    <div class="code_title">
+        <div class="label"></div>
+        <div class="copy"></div>
+        <div class="copy_success">복사성공!</div>
+    </div>
     <div class="code_body">
 <div class="language-text highlighter-rouge"><div class="highlight"><pre class="highlight"><code><table class="rouge-table"><tbody><tr>
 <td class="rouge-gutter gl"><pre class="lineno">1
@@ -3383,7 +3459,11 @@ messageAgent.addOnPlaybackListener(listener)
 <h3 id="getmessagefailed">GetMessageFailed</h3>
 
 <div class="code">
-    <div class="code_title"></div>
+    <div class="code_title">
+        <div class="label"></div>
+        <div class="copy"></div>
+        <div class="copy_success">복사성공!</div>
+    </div>
     <div class="code_body">
 <div class="language-text highlighter-rouge"><div class="highlight"><pre class="highlight"><code><table class="rouge-table"><tbody><tr>
 <td class="rouge-gutter gl"><pre class="lineno">1
@@ -3440,7 +3520,11 @@ messageAgent.addOnPlaybackListener(listener)
 <h3 id="readmessagefinished">ReadMessageFinished</h3>
 
 <div class="code">
-    <div class="code_title"></div>
+    <div class="code_title">
+        <div class="label"></div>
+        <div class="copy"></div>
+        <div class="copy_success">복사성공!</div>
+    </div>
     <div class="code_body">
 <div class="language-text highlighter-rouge"><div class="highlight"><pre class="highlight"><code><table class="rouge-table"><tbody><tr>
 <td class="rouge-gutter gl"><pre class="lineno">1
@@ -3524,13 +3608,13 @@ messageAgent.addOnPlaybackListener(listener)
 </section>
 <div id="modal_image_area" class="modal_image_area hide">
     <div class="modal_wrapper">
-        <img id="modal_image" class="modal_image" src="">
+        <img id="modal_image" class="modal_image" src="" data-skip-src-to-absolute>
     </div>
 </div>
 <script type="text/x-jsrender" id="search_contents_tmpl">
 
 <div class="search_content">
-    <a href="/nugu-sdk/capability-interface/{{:url}}">
+    <a href="{{:url}}">
         <div class="page_title">{{:title}}</div>
         <div class="content">
             {{for contents}}

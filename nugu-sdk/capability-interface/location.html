@@ -8,7 +8,7 @@
 
 
 
-<meta http-equiv="Last-Modified" content="2022-06-23 08:56:35 +0000">
+<meta http-equiv="Last-Modified" content="2022-06-27 10:20:03 +0000">
 
 
 
@@ -67,10 +67,10 @@
 <body>
 <header>
     <div class="header">
-        <div class="title">
-            <img src="/assets/icon/icon.png">
+        <a href="/" class="title">
+            <img src="/assets/icon/icon.png" class="img_inline">
             Developers | Guide
-        </div>
+        </a>
     </div>
     <div class="search">
         <div id="go_search" class="search_bar">
@@ -2182,19 +2182,23 @@
 <div id="tabs-15" class="tabs">
     <ul class="tabs_title">
         
-            <li data-content-id="tab-content-16" class="tab_title">Android</li>
+            <li data-content-id="tab-content-16" class="tab_title selected">Android</li>
         
             <li data-content-id="tab-content-26" class="tab_title">iOS</li>
         
             <li data-content-id="tab-content-36" class="tab_title">Linux</li>
         
     </ul>
-    <div id="tab-content-16" class="tab_content">
+    <div id="tab-content-16" class="tab_content selected">
     
 <p>NuguAndroidClient instance 를 통해 LocationAgent instance 에 접근할 수 있습니다.</p>
 
 <div class="code">
-    <div class="code_title"></div>
+    <div class="code_title">
+        <div class="label"></div>
+        <div class="copy"></div>
+        <div class="copy_success">복사성공!</div>
+    </div>
     <div class="code_body">
 <div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code><table class="rouge-table"><tbody><tr>
 <td class="rouge-gutter gl"><pre class="lineno">1
@@ -2212,7 +2216,11 @@
 <p>NuguClient instance 를 통해 LocationAgent instance 에 접근할 수 있습니다.</p>
 
 <div class="code">
-    <div class="code_title"></div>
+    <div class="code_title">
+        <div class="label"></div>
+        <div class="copy"></div>
+        <div class="copy_success">복사성공!</div>
+    </div>
     <div class="code_body">
 <div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code><table class="rouge-table"><tbody><tr>
 <td class="rouge-gutter gl"><pre class="lineno">1
@@ -2230,7 +2238,11 @@
 <p>CapabilityFactory::makeCapability 함수로 LocationAgent 를 생성하고 NuguClient 에 추가해 주어야합니다.</p>
 
 <div class="code">
-    <div class="code_title"></div>
+    <div class="code_title">
+        <div class="label"></div>
+        <div class="copy"></div>
+        <div class="copy_success">복사성공!</div>
+    </div>
     <div class="code_body">
 <div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code><table class="rouge-table"><tbody><tr>
 <td class="rouge-gutter gl"><pre class="lineno">1
@@ -2258,24 +2270,28 @@ nugu_client-&gt;getCapabilityBuilder()
 
 <h3 id="context-구성">Context 구성</h3>
 
-<p>Play 에서 위치 정보 기반의 정보를 제공 받기 위해서는 디바이스의 위치 정보를 <a href="#context">Context</a> 에 포함시켜 주어야 합니다.</p>
+<p>Play 에서 위치 정보 기반의 정보를 제공 받기 위해서는 디바이스의 위치 정보를 <a href="#context" class="hash_internal">Context</a> 에 포함시켜 주어야 합니다.</p>
 
 <div id="tabs-56" class="tabs">
     <ul class="tabs_title">
         
-            <li data-content-id="tab-content-57" class="tab_title">Android</li>
+            <li data-content-id="tab-content-57" class="tab_title selected">Android</li>
         
             <li data-content-id="tab-content-73" class="tab_title">iOS</li>
         
             <li data-content-id="tab-content-88" class="tab_title">Linux</li>
         
     </ul>
-    <div id="tab-content-57" class="tab_content">
+    <div id="tab-content-57" class="tab_content selected">
     
 <p>LocationProvider 를 추가합니다.</p>
 
 <div class="code">
-    <div class="code_title"></div>
+    <div class="code_title">
+        <div class="label"></div>
+        <div class="copy"></div>
+        <div class="copy_success">복사성공!</div>
+    </div>
     <div class="code_body">
 <div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code><table class="rouge-table"><tbody><tr>
 <td class="rouge-gutter gl"><pre class="lineno">1
@@ -2305,7 +2321,11 @@ NuguAndroidClient.Builder(...)
 <p>LocationAgentDelegate 를 추가합니다.</p>
 
 <div class="code">
-    <div class="code_title"></div>
+    <div class="code_title">
+        <div class="label"></div>
+        <div class="copy"></div>
+        <div class="copy_success">복사성공!</div>
+    </div>
     <div class="code_body">
 <div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code><table class="rouge-table"><tbody><tr>
 <td class="rouge-gutter gl"><pre class="lineno">1
@@ -2333,7 +2353,11 @@ locationAgent.delegate = MyLocationAgentDelegate()
 <p>ILocationListener를 추가합니다.</p>
 
 <div class="code">
-    <div class="code_title"></div>
+    <div class="code_title">
+        <div class="label"></div>
+        <div class="copy"></div>
+        <div class="copy_success">복사성공!</div>
+    </div>
     <div class="code_body">
 <div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code><table class="rouge-table"><tbody><tr>
 <td class="rouge-gutter gl"><pre class="lineno">1
@@ -2370,7 +2394,11 @@ auto location_listener(std::make_shared&lt;LocationListener&gt;());
 <h2 id="context">Context</h2>
 
 <div class="code">
-    <div class="code_title"></div>
+    <div class="code_title">
+        <div class="label"></div>
+        <div class="copy"></div>
+        <div class="copy_success">복사성공!</div>
+    </div>
     <div class="code_body">
 <div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code><table class="rouge-table"><tbody><tr>
 <td class="rouge-gutter gl"><pre class="lineno">1
@@ -2458,13 +2486,13 @@ auto location_listener(std::make_shared&lt;LocationListener&gt;());
 </section>
 <div id="modal_image_area" class="modal_image_area hide">
     <div class="modal_wrapper">
-        <img id="modal_image" class="modal_image" src="">
+        <img id="modal_image" class="modal_image" src="" data-skip-src-to-absolute>
     </div>
 </div>
 <script type="text/x-jsrender" id="search_contents_tmpl">
 
 <div class="search_content">
-    <a href="/nugu-sdk/capability-interface/{{:url}}">
+    <a href="{{:url}}">
         <div class="page_title">{{:title}}</div>
         <div class="content">
             {{for contents}}

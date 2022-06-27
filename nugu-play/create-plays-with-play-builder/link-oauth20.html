@@ -8,7 +8,7 @@
 
 
 
-<meta http-equiv="Last-Modified" content="2022-06-23 08:56:35 +0000">
+<meta http-equiv="Last-Modified" content="2022-06-27 10:20:03 +0000">
 
 
 
@@ -63,10 +63,10 @@
 <body>
 <header>
     <div class="header">
-        <div class="title">
-            <img src="/assets/icon/icon.png">
+        <a href="/" class="title">
+            <img src="/assets/icon/icon.png" class="img_inline">
             Developers | Guide
-        </div>
+        </a>
     </div>
     <div class="search">
         <div id="go_search" class="search_bar">
@@ -2191,7 +2191,7 @@
   <li>
     <p>Github App의 우측 상단 내 Profile 사진을 클릭하고 <code class="language-plaintext highlighter-rouge">Settings</code> &gt; <code class="language-plaintext highlighter-rouge">Developers settings</code> &gt; <code class="language-plaintext highlighter-rouge">OAuth Apps</code> &gt; <code class="language-plaintext highlighter-rouge">Settings</code> 메뉴를 클릭합니다.</p>
 
-    <p><img src="/assets/images/link-oauth20-01.png" alt=""></p>
+    <p><img src="/assets/images/link-oauth20-01.png" alt="" class="img_internal"></p>
   </li>
   <li>
 <code class="language-plaintext highlighter-rouge">New OAuth App</code> 버튼을 클릭하여 새로운 OAuth App을 만듭니다.
@@ -2199,7 +2199,7 @@
       <li>
         <p>최초 등록하는 경우, 버튼에는 <code class="language-plaintext highlighter-rouge">Register a new application</code>이라고 표시됩니다.</p>
 
-        <p><img src="/assets/images/link-oauth20-02.png" alt=""></p>
+        <p><img src="/assets/images/link-oauth20-02.png" alt="" class="img_internal"></p>
       </li>
     </ul>
   </li>
@@ -2208,7 +2208,7 @@
       <li>
         <p>Authorization callback URL에는 <code class="language-plaintext highlighter-rouge">https://developers.nugu.co.kr/app/callback.html</code>을 입력합니다.</p>
 
-        <p><img src="/assets/images/link-oauth20-03.png" alt=""></p>
+        <p><img src="/assets/images/link-oauth20-03.png" alt="" class="img_internal"></p>
       </li>
     </ul>
   </li>
@@ -2218,7 +2218,7 @@
 
 <p>1단계에서 등록한 OAuth App에서 Client ID와 Client Secret 정보를 확인합니다.</p>
 
-<p><img src="/assets/images/link-oauth20-04.png" alt=""></p>
+<p><img src="/assets/images/link-oauth20-04.png" alt="" class="img_internal"></p>
 
 <h3 id="3단계-oauth-url-정보-확인하기">3단계: OAuth URL 정보 확인하기</h3>
 
@@ -2247,7 +2247,7 @@
 
 <p>2단계부터 4단계에 걸쳐 확인한 정보를 <code class="language-plaintext highlighter-rouge">Developers</code> &gt; <code class="language-plaintext highlighter-rouge">Play kit</code> &gt; <code class="language-plaintext highlighter-rouge">Play 관</code> 메뉴에서 <code class="language-plaintext highlighter-rouge">Play 등록하기</code> 버튼을 클릭해 OAuth 계정 연동 정보를 입력합니다.</p>
 
-<p><img src="/assets/images/link-oauth20-05.png" alt=""></p>
+<p><img src="/assets/images/link-oauth20-05.png" alt="" class="img_internal"></p>
 
 <h4 id="-로그인-url">① 로그인 URL</h4>
 <p>3단계에서 확인한 URL을 입력합니다. (<a href="https://github.com/login/oauth/authorize">https://github.com/login/oauth/authorize</a>)</p>
@@ -2270,7 +2270,7 @@
 
 <div class="alerts info">
     
-<p>Backend proxy 개발에 대한 자세한 내용은 <a href="#using-access-token">Backend proxy에서 Access token 사용하기</a>를 참고하세요.</p>
+<p>Backend proxy 개발에 대한 자세한 내용은 <a href="#using-access-token" class="hash_internal">Backend proxy에서 Access token 사용하기</a>를 참고하세요.</p>
 
 </div>
 
@@ -2359,7 +2359,11 @@
 <p>Play 개발을 위해서 OAuth Token을 사용할 준비가 끝났으며, Play 사용자는 NUGU App을 통해서 OAuth 로그인을 통해 OAuth Token을 받을 수 있습니다. 그리고 Play 개발자는 Backend proxy을 통해서 context.session 항목으로 Access token을 받을 수 있습니다.</p>
 
 <div class="code">
-    <div class="code_title"></div>
+    <div class="code_title">
+        <div class="label"></div>
+        <div class="copy"></div>
+        <div class="copy_success">복사성공!</div>
+    </div>
     <div class="code_body">
 <div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code><table class="rouge-table"><tbody><tr>
 <td class="rouge-gutter gl"><pre class="lineno">1
@@ -2379,7 +2383,11 @@ Content-Type: application/json
 </div>
 
 <div class="code">
-    <div class="code_title"></div>
+    <div class="code_title">
+        <div class="label"></div>
+        <div class="copy"></div>
+        <div class="copy_success">복사성공!</div>
+    </div>
     <div class="code_body">
 <div class="language-json highlighter-rouge"><div class="highlight"><pre class="highlight"><code><table class="rouge-table"><tbody><tr>
 <td class="rouge-gutter gl"><pre class="lineno">1
@@ -2429,7 +2437,11 @@ Content-Type: application/json
 <p>사용자가 OAuth 인증을 한 이후에 아래와 같이 Invalidate Token API를 호출하여 OAuth Token을 만료 처리할 수 있습니다. 요청 Form의 token은 Access Token 입니다. Token이 만료처리되면 더이상 Backend proxy로 Access token이 전달되지 않습니다. 사용자는 Token이 만료되어도 ‘계정 연동’을 통해 다시 OAuth 인증을 받을 수 있습니다.</p>
 
 <div class="code">
-    <div class="code_title"></div>
+    <div class="code_title">
+        <div class="label"></div>
+        <div class="copy"></div>
+        <div class="copy_success">복사성공!</div>
+    </div>
     <div class="code_body">
 <div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code><table class="rouge-table"><tbody><tr>
 <td class="rouge-gutter gl"><pre class="lineno">1
@@ -2447,7 +2459,11 @@ content-Type: application/x-www-form-urlencoded
 </div>
 
 <div class="code">
-    <div class="code_title"></div>
+    <div class="code_title">
+        <div class="label"></div>
+        <div class="copy"></div>
+        <div class="copy_success">복사성공!</div>
+    </div>
     <div class="code_body">
 <div class="language-text highlighter-rouge"><div class="highlight"><pre class="highlight"><code><table class="rouge-table"><tbody><tr>
 <td class="rouge-gutter gl"><pre class="lineno">1
@@ -2461,7 +2477,11 @@ content-Type: application/x-www-form-urlencoded
 <p>성공한 경우는 아래 응답을 주며 Token은 즉시 만료처리됩니다.</p>
 
 <div class="code">
-    <div class="code_title"></div>
+    <div class="code_title">
+        <div class="label"></div>
+        <div class="copy"></div>
+        <div class="copy_success">복사성공!</div>
+    </div>
     <div class="code_body">
 <div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code><table class="rouge-table"><tbody><tr>
 <td class="rouge-gutter gl"><pre class="lineno">1
@@ -2477,7 +2497,11 @@ Content-Length: 11
 </div>
 
 <div class="code">
-    <div class="code_title"></div>
+    <div class="code_title">
+        <div class="label"></div>
+        <div class="copy"></div>
+        <div class="copy_success">복사성공!</div>
+    </div>
     <div class="code_body">
 <div class="language-json highlighter-rouge"><div class="highlight"><pre class="highlight"><code><table class="rouge-table"><tbody><tr>
 <td class="rouge-gutter gl"><pre class="lineno">1
@@ -2491,7 +2515,11 @@ Content-Length: 11
 <p>요청한 Token과 일치하는 것이 없는 경우 아래와 같이 에러 응답을 반환합니다.</p>
 
 <div class="code">
-    <div class="code_title"></div>
+    <div class="code_title">
+        <div class="label"></div>
+        <div class="copy"></div>
+        <div class="copy_success">복사성공!</div>
+    </div>
     <div class="code_body">
 <div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code><table class="rouge-table"><tbody><tr>
 <td class="rouge-gutter gl"><pre class="lineno">1
@@ -2507,7 +2535,11 @@ Content-Length:
 </div>
 
 <div class="code">
-    <div class="code_title"></div>
+    <div class="code_title">
+        <div class="label"></div>
+        <div class="copy"></div>
+        <div class="copy_success">복사성공!</div>
+    </div>
     <div class="code_body">
 <div class="language-json highlighter-rouge"><div class="highlight"><pre class="highlight"><code><table class="rouge-table"><tbody><tr>
 <td class="rouge-gutter gl"><pre class="lineno">1
@@ -2523,21 +2555,21 @@ Content-Length:
 
 <ol>
   <li>Play의 상태가 등록중, 심사대기, 심사반려, 심사중, 심사완료, 배포대기 중인 경우에 스피커에서 테스트가 가능합니다.
-<img src="/assets/images/link-oauth20-06.png" alt="">
+<img src="/assets/images/link-oauth20-06.png" alt="" class="img_inline img_internal">
 </li>
   <li>
-<a href="/nugu-play/create-plays-with-play-builder/test-a-play">테스트하기</a>에서 ‘디바이스(스피커)에서 테스트하기’ 항목을 참고하여 테스트 스피커를 추가합니다.</li>
+<a href="/nugu-play/create-plays-with-play-builder/test-a-play" class="a_internal">테스트하기</a>에서 ‘디바이스(스피커)에서 테스트하기’ 항목을 참고하여 테스트 스피커를 추가합니다.</li>
   <li>NUGU 앱에 접속하여 왼쪽 위의 햄버거 메뉴를 클릭한 후 NUGU play 항목에서 내가 만든 Play를 클릭합니다.
-<img src="/assets/images/link-oauth20-07.png" alt="">
+<img src="/assets/images/link-oauth20-07.png" alt="" class="img_inline img_internal">
 </li>
   <li>‘계정 연동’ 버튼을 클릭합니다. 계정 연동 후 스피커로 테스트합니다. NUGU 앱에서 계정 연동을 하고 스피커로 테스트 하면 accessToken을 받을 수 있습니다. (단, 플레이 등록 후 하루 후부터 스피커 테스트가 가능합니다.)
-<img src="/assets/images/link-oauth20-08.png" alt="">
+<img src="/assets/images/link-oauth20-08.png" alt="" class="img_inline img_internal">
 </li>
 </ol>
 
 <div class="alerts info">
     
-<p>Play를 등록하는 방법은 <a href="/nugu-play/play-registration-and-review/register-a-play">Play 정보 등록</a>을 참고하세요.</p>
+<p>Play를 등록하는 방법은 <a href="/nugu-play/play-registration-and-review/register-a-play" class="a_internal">Play 정보 등록</a>을 참고하세요.</p>
 
 </div>
 
@@ -2571,13 +2603,13 @@ Content-Length:
 </section>
 <div id="modal_image_area" class="modal_image_area hide">
     <div class="modal_wrapper">
-        <img id="modal_image" class="modal_image" src="">
+        <img id="modal_image" class="modal_image" src="" data-skip-src-to-absolute>
     </div>
 </div>
 <script type="text/x-jsrender" id="search_contents_tmpl">
 
 <div class="search_content">
-    <a href="/nugu-play/create-plays-with-play-builder/{{:url}}">
+    <a href="{{:url}}">
         <div class="page_title">{{:title}}</div>
         <div class="content">
             {{for contents}}

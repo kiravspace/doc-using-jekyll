@@ -8,7 +8,7 @@
 
 
 
-<meta http-equiv="Last-Modified" content="2022-06-23 08:56:35 +0000">
+<meta http-equiv="Last-Modified" content="2022-06-27 10:20:03 +0000">
 
 
 
@@ -63,10 +63,10 @@
 <body>
 <header>
     <div class="header">
-        <div class="title">
-            <img src="/assets/icon/icon.png">
+        <a href="/" class="title">
+            <img src="/assets/icon/icon.png" class="img_inline">
             Developers | Guide
-        </div>
+        </a>
     </div>
     <div class="search">
         <div id="go_search" class="search_bar">
@@ -2152,13 +2152,13 @@
 
 <p>NUGU 플랫폼의 Dialog Manager는 지정된 포맷(Backend proxy API 규격)으로 요청을 하기 때문에 외부 서비스의 REST API 포맷이 Backend proxy API 규격과 다르다면 포맷을 변환해주기 위한 Backend proxy 서버를 개발해야 합니다.</p>
 
-<p><img src="/assets/images/backend-proxy-01.png" alt=""></p>
+<p><img src="/assets/images/backend-proxy-01.png" alt="" class="img_internal"></p>
 
-<p>이 서버는 Play Builder를 통해 Play를 만드는 과정에서 정의한 파라미터와 <a href="/nugu-play/create-plays-with-play-builder/use-backend-proxy/backend-proxy-api-reference">Backend proxy API Reference</a>에서 제공하는 규격을 사용하여 직접 개발해야 합니다.</p>
+<p>이 서버는 Play Builder를 통해 Play를 만드는 과정에서 정의한 파라미터와 <a href="/nugu-play/create-plays-with-play-builder/use-backend-proxy/backend-proxy-api-reference" class="a_internal">Backend proxy API Reference</a>에서 제공하는 규격을 사용하여 직접 개발해야 합니다.</p>
 
 <p>NUGU 플랫폼에서는 Backend proxy를 구축할 수 있는 클라우드 환경을 제공하고 있지 않으며, Play를 개발하는 곳에서 직접 구축을 하거나 클라우드 서비스를 이용할 수 있습니다.</p>
 
-<p><img src="/assets/images/backend-proxy-02.png" alt=""></p>
+<p><img src="/assets/images/backend-proxy-02.png" alt="" class="img_internal"></p>
 
 <p>위 그림에서 첫번째 단계와 두번째 단계는 Play Builder에서 설정하는 작업이기 때문에 여기서 추가로 설명하지 않습니다.</p>
 
@@ -2211,13 +2211,13 @@
 
 <p>각각의 정보를 참조하기 위한 Play Builder 화면은 아래와 같습니다.</p>
 
-<p><img src="/assets/images/backend-proxy-03.png" alt=""></p>
+<p><img src="/assets/images/backend-proxy-03.png" alt="" class="img_internal"></p>
 
-<p><img src="/assets/images/backend-proxy-04.png" alt=""></p>
+<p><img src="/assets/images/backend-proxy-04.png" alt="" class="img_internal"></p>
 
 <h2 id="request-body">Request Body</h2>
 
-<p>Request의 Body로 전달되는 JSON 포맷의 데이터는 <a href="/nugu-play/create-plays-with-play-builder/use-backend-proxy/backend-proxy-api-reference">Backend proxy API Reference</a>를 참조합니다. 이 JSON 데이터는 임의의 필드가 추가 될 수 있으므로, 이에 대한 영향이 없도록 구현되어야 합니다. Request Body에 정의된 필드 중 Play Builder에 설정한 값들에 의해 결정되는 필드는 action.parameters 입니다.</p>
+<p>Request의 Body로 전달되는 JSON 포맷의 데이터는 <a href="/nugu-play/create-plays-with-play-builder/use-backend-proxy/backend-proxy-api-reference" class="a_internal">Backend proxy API Reference</a>를 참조합니다. 이 JSON 데이터는 임의의 필드가 추가 될 수 있으므로, 이에 대한 영향이 없도록 구현되어야 합니다. Request Body에 정의된 필드 중 Play Builder에 설정한 값들에 의해 결정되는 필드는 action.parameters 입니다.</p>
 
 <p>NUGU 플랫폼에서 Play Builder에 설정된 정보로부터 action.parameters 필드를 채우는 규칙은 다음과 같습니다.</p>
 
@@ -2246,14 +2246,18 @@
 
 <p>예를 들어 설명하면 아래와 같습니다.</p>
 
-<p><img src="/assets/images/backend-proxy-05.png" alt=""></p>
+<p><img src="/assets/images/backend-proxy-05.png" alt="" class="img_internal"></p>
 
 <p>Backend Parameter의 경우 Backend proxy에서 처리한 결과를 가져오는 용도로 사용되기 때문에 Request Body에는 null을 갖게 됩니다.</p>
 
 <p>Backend Parameter에 어떤 값을 채워줄지는 Play Builder에서 설정한 Action의 용도에 따라 다르며, Play Builder 작성자와 Backend proxy 개발자 간에 어떻게 처리해야 할지 정확하게 내용을 공유하고 있어야 합니다.</p>
 
 <div class="code">
-    <div class="code_title"></div>
+    <div class="code_title">
+        <div class="label"></div>
+        <div class="copy"></div>
+        <div class="copy_success">복사성공!</div>
+    </div>
     <div class="code_body">
 <div class="language-json highlighter-rouge"><div class="highlight"><pre class="highlight"><code><table class="rouge-table"><tbody><tr>
 <td class="rouge-gutter gl"><pre class="lineno">1
@@ -2315,13 +2319,13 @@
 
 <h3 id="resultcode">resultCode</h3>
 
-<p><img src="/assets/images/backend-proxy-06.png" alt=""></p>
+<p><img src="/assets/images/backend-proxy-06.png" alt="" class="img_internal"></p>
 
 <p>“output” 필드 외에 “resultCode”가 정의되어 있습니다. 이 필드는 위 그림에서 설정한 Exception Code에 의해 결정됩니다.</p>
 
 <div class="alerts info">
     
-<p><a href="/nugu-play/create-plays-with-play-builder/define-an-action/manage-exceptions">예외 상황 관리</a>를 참고하세요.</p>
+<p><a href="/nugu-play/create-plays-with-play-builder/define-an-action/manage-exceptions" class="a_internal">예외 상황 관리</a>를 참고하세요.</p>
 
 </div>
 
@@ -2375,13 +2379,13 @@
 </section>
 <div id="modal_image_area" class="modal_image_area hide">
     <div class="modal_wrapper">
-        <img id="modal_image" class="modal_image" src="">
+        <img id="modal_image" class="modal_image" src="" data-skip-src-to-absolute>
     </div>
 </div>
 <script type="text/x-jsrender" id="search_contents_tmpl">
 
 <div class="search_content">
-    <a href="/nugu-play/create-plays-with-play-builder/use-backend-proxy/{{:url}}">
+    <a href="{{:url}}">
         <div class="page_title">{{:title}}</div>
         <div class="content">
             {{for contents}}

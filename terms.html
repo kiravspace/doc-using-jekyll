@@ -8,7 +8,7 @@
 
 
 
-<meta http-equiv="Last-Modified" content="2022-06-23 08:56:35 +0000">
+<meta http-equiv="Last-Modified" content="2022-06-27 10:20:03 +0000">
 
 
 
@@ -63,10 +63,10 @@
 <body>
 <header>
     <div class="header">
-        <div class="title">
-            <img src="/assets/icon/icon.png">
+        <a href="/" class="title">
+            <img src="/assets/icon/icon.png" class="img_inline">
             Developers | Guide
-        </div>
+        </a>
     </div>
     <div class="search">
         <div id="go_search" class="search_bar">
@@ -2186,7 +2186,7 @@
     </tr>
     <tr>
       <td style="text-align: left">Play 호출 이름</td>
-      <td style="text-align: left">Play 호출 이름은 사용자가 Play를 호출하기 위해 발화하는 고유한 이름을 말합니다.<br>사용자가 Play 호출 이름을 발화하면 해당 Play의 세션으로 진입하여 해당 Play의 기능을 사용할 수 있게 됩니다.<br>자세한 내용은 <a href="/nugu-play/play-registration-and-review/register-a-play#define-an-invocation-name">호출 이름 정의하기</a>를 참고해야 합니다.</td>
+      <td style="text-align: left">Play 호출 이름은 사용자가 Play를 호출하기 위해 발화하는 고유한 이름을 말합니다.<br>사용자가 Play 호출 이름을 발화하면 해당 Play의 세션으로 진입하여 해당 Play의 기능을 사용할 수 있게 됩니다.<br>자세한 내용은 <a href="/nugu-play/play-registration-and-review/register-a-play#define-an-invocation-name" class="a_internal">호출 이름 정의하기</a>를 참고해야 합니다.</td>
     </tr>
     <tr>
       <td style="text-align: left">Public Play</td>
@@ -2255,13 +2255,13 @@
 </section>
 <div id="modal_image_area" class="modal_image_area hide">
     <div class="modal_wrapper">
-        <img id="modal_image" class="modal_image" src="">
+        <img id="modal_image" class="modal_image" src="" data-skip-src-to-absolute>
     </div>
 </div>
 <script type="text/x-jsrender" id="search_contents_tmpl">
 
 <div class="search_content">
-    <a href="/{{:url}}">
+    <a href="{{:url}}">
         <div class="page_title">{{:title}}</div>
         <div class="content">
             {{for contents}}

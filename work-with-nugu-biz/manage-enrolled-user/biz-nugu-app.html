@@ -8,7 +8,7 @@
 
 
 
-<meta http-equiv="Last-Modified" content="2022-06-23 08:56:35 +0000">
+<meta http-equiv="Last-Modified" content="2022-06-27 10:20:03 +0000">
 
 
 
@@ -63,10 +63,10 @@
 <body>
 <header>
     <div class="header">
-        <div class="title">
-            <img src="/assets/icon/icon.png">
+        <a href="/" class="title">
+            <img src="/assets/icon/icon.png" class="img_inline">
             Developers | Guide
-        </div>
+        </a>
     </div>
     <div class="search">
         <div id="go_search" class="search_bar">
@@ -2158,13 +2158,13 @@
   <li>NUGU APP의 Biz 사용자 설정 메뉴는, 초대 받아 등록되어 있는 Biz Service나 Play가 존재하는 경우만 노출됩니다.</li>
 </ul>
 
-<p><img src="/assets/images/app1.jpg" alt=""></p>
+<p><img src="/assets/images/app1.jpg" alt="" class="img_internal"></p>
 
-<p><img src="/assets/images/app2.jpg" alt=""></p>
+<p><img src="/assets/images/app2.jpg" alt="" class="img_internal"></p>
 
-<p><img src="/assets/images/app3.jpg" alt=""></p>
+<p><img src="/assets/images/app3.jpg" alt="" class="img_internal"></p>
 
-<p><img src="/assets/images/app4.jpg" alt=""></p>
+<p><img src="/assets/images/app4.jpg" alt="" class="img_internal"></p>
 
 <h2 id="2-biz-사용자-설정-체험판">2. Biz 사용자 설정 (체험판)</h2>
 
@@ -2174,14 +2174,14 @@
   <li>
     <p>Biz 사용자 설정에 진입하면, 해당 유저가 TID 인증을 통해 수락했던 Private Play 목록이 표시됩니다.</p>
 
-    <p><img src="/assets/images/app%EC%B2%B4%ED%97%98%ED%8C%901.jpg" alt=""></p>
+    <p><img src="/assets/images/app%EC%B2%B4%ED%97%98%ED%8C%901.jpg" alt="" class="img_internal"></p>
   </li>
   <li>
     <p>초대 수락했던 Private Play에 대한 사용 동의 철회가 가능합니다. 동의 철회 즉시, 해당 Play를 사용할 수 없습니다.</p>
   </li>
 </ol>
 
-<p><img src="/assets/images/app%EC%B2%B4%ED%97%98%ED%8C%902.jpg" alt=""></p>
+<p><img src="/assets/images/app%EC%B2%B4%ED%97%98%ED%8C%902.jpg" alt="" class="img_internal"></p>
 
 <h2 id="3-biz-사용자-설정-정식판">3. Biz 사용자 설정 (정식판)</h2>
 
@@ -2191,19 +2191,19 @@
   <li>
     <p>Biz 사용자 설정에 진입하면, 해당 유저가 TID 인증을 통해 수락했던 Biz Service 목록이 표시됩니다.</p>
 
-    <p><img src="/assets/images/app%EC%A0%95%EC%8B%9D%ED%8C%901.jpg" alt=""></p>
+    <p><img src="/assets/images/app%EC%A0%95%EC%8B%9D%ED%8C%901.jpg" alt="" class="img_internal"></p>
   </li>
   <li>
     <p>초대 수락했던 Biz Service에 대한 사용 동의 철회가 가능합니다. 동의 철회 즉시, Biz Service에서 제공 하는 Play를 사용할 수 없고 발송하는 API를 받지 않게 됩니다.</p>
 
-    <p><img src="/assets/images/app%EC%A0%95%EC%8B%9D%ED%8C%902.jpg" alt=""></p>
+    <p><img src="/assets/images/app%EC%A0%95%EC%8B%9D%ED%8C%902.jpg" alt="" class="img_internal"></p>
   </li>
   <li>
     <p>초대 시 설정했던 Biz API의 수신 동의와, 수신 대상 디바이스의 설정을 변경할 수 있습니다. Announcement API 발송에 대한 수신을 원치 않거나, 대상 디바이스를 변경하고 싶은 경우 해당 메뉴에서 수정 할 수 있습니다.</p>
 
-    <p><img src="/assets/images/app%EC%A0%95%EC%8B%9D%ED%8C%903.jpg" alt=""></p>
+    <p><img src="/assets/images/app%EC%A0%95%EC%8B%9D%ED%8C%903.jpg" alt="" class="img_internal"></p>
 
-    <p><img src="/assets/images/app%EC%A0%95%EC%8B%9D%ED%8C%904.jpg" alt=""></p>
+    <p><img src="/assets/images/app%EC%A0%95%EC%8B%9D%ED%8C%904.jpg" alt="" class="img_internal"></p>
   </li>
 </ol>
 
@@ -2237,13 +2237,13 @@
 </section>
 <div id="modal_image_area" class="modal_image_area hide">
     <div class="modal_wrapper">
-        <img id="modal_image" class="modal_image" src="">
+        <img id="modal_image" class="modal_image" src="" data-skip-src-to-absolute>
     </div>
 </div>
 <script type="text/x-jsrender" id="search_contents_tmpl">
 
 <div class="search_content">
-    <a href="/work-with-nugu-biz/manage-enrolled-user/{{:url}}">
+    <a href="{{:url}}">
         <div class="page_title">{{:title}}</div>
         <div class="content">
             {{for contents}}

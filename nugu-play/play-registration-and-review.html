@@ -8,7 +8,7 @@
 
 
 
-<meta http-equiv="Last-Modified" content="2022-06-23 08:56:35 +0000">
+<meta http-equiv="Last-Modified" content="2022-06-27 10:20:03 +0000">
 
 
 
@@ -63,10 +63,10 @@
 <body>
 <header>
     <div class="header">
-        <div class="title">
-            <img src="/assets/icon/icon.png">
+        <a href="/" class="title">
+            <img src="/assets/icon/icon.png" class="img_inline">
             Developers | Guide
-        </div>
+        </a>
     </div>
     <div class="search">
         <div id="go_search" class="search_bar">
@@ -2151,10 +2151,10 @@
         <p>Play Builder를 통해 개발한 Play를 사용자에게 제공하기 위해서는 <code class="language-plaintext highlighter-rouge">Developers Console</code> &gt; <code class="language-plaintext highlighter-rouge">Play kit</code> &gt; <code class="language-plaintext highlighter-rouge">Play 관리</code> &gt; <code class="language-plaintext highlighter-rouge">Play 등록</code> 메뉴에서 Play에 관한 정보를 등록한 후 심사 과정을 거쳐야 합니다.</p>
 
 <ul>
-  <li><a href="/nugu-play/play-registration-and-review/register-a-play">Play 정보 등록</a></li>
-  <li><a href="/nugu-play/play-registration-and-review/play-smarthome-play">Play 정보 등록 (smarthome play) </a></li>
-  <li><a href="/nugu-play/play-registration-and-review/modify-or-delete-play-information">Play 정보 수정 및 삭제</a></li>
-  <li><a href="/nugu-play/play-registration-and-review/play-review">Play 심사</a></li>
+  <li><a href="/nugu-play/play-registration-and-review/register-a-play" class="a_internal">Play 정보 등록</a></li>
+  <li><a href="/nugu-play/play-registration-and-review/play-smarthome-play" class="a_internal">Play 정보 등록 (smarthome play) </a></li>
+  <li><a href="/nugu-play/play-registration-and-review/modify-or-delete-play-information" class="a_internal">Play 정보 수정 및 삭제</a></li>
+  <li><a href="/nugu-play/play-registration-and-review/play-review" class="a_internal">Play 심사</a></li>
 </ul>
 
 <div class="alerts danger">
@@ -2193,13 +2193,13 @@
 </section>
 <div id="modal_image_area" class="modal_image_area hide">
     <div class="modal_wrapper">
-        <img id="modal_image" class="modal_image" src="">
+        <img id="modal_image" class="modal_image" src="" data-skip-src-to-absolute>
     </div>
 </div>
 <script type="text/x-jsrender" id="search_contents_tmpl">
 
 <div class="search_content">
-    <a href="/nugu-play/{{:url}}">
+    <a href="{{:url}}">
         <div class="page_title">{{:title}}</div>
         <div class="content">
             {{for contents}}

@@ -8,7 +8,7 @@
 
 
 
-<meta http-equiv="Last-Modified" content="2022-06-23 08:56:35 +0000">
+<meta http-equiv="Last-Modified" content="2022-06-27 10:20:03 +0000">
 
 
 
@@ -63,10 +63,10 @@
 <body>
 <header>
     <div class="header">
-        <div class="title">
-            <img src="/assets/icon/icon.png">
+        <a href="/" class="title">
+            <img src="/assets/icon/icon.png" class="img_inline">
             Developers | Guide
-        </div>
+        </a>
     </div>
     <div class="search">
         <div id="go_search" class="search_bar">
@@ -2167,7 +2167,7 @@
 
 <p>따라서 Custom Intent, Build-in Intent, AudioPlayer Event에 대한 Action을 정의할 때는 각 Action 내에서 스피커의 상태에 따라 구현을 달리해야 할 수 있기 때문에 매우 많은 조합에 대한 처리를 해주어야 합니다.</p>
 
-<p><img src="/assets/images/audioplayer-define-action-01.png" alt=""></p>
+<p><img src="/assets/images/audioplayer-define-action-01.png" alt="" class="img_internal"></p>
 
 <p>그러나, 실제 구현할 때는 모든 경우의 수를 다 정의할 필요는 없으며, 시나리오에 꼭 필요한 사항만 정의하면 되기 때문에 최댓값보다는 적은 수의 Action을 정의하게 됩니다.</p>
 
@@ -2203,13 +2203,13 @@
 </section>
 <div id="modal_image_area" class="modal_image_area hide">
     <div class="modal_wrapper">
-        <img id="modal_image" class="modal_image" src="">
+        <img id="modal_image" class="modal_image" src="" data-skip-src-to-absolute>
     </div>
 </div>
 <script type="text/x-jsrender" id="search_contents_tmpl">
 
 <div class="search_content">
-    <a href="/nugu-play/create-plays-with-play-builder/create-a-play-with-audioplayer/{{:url}}">
+    <a href="{{:url}}">
         <div class="page_title">{{:title}}</div>
         <div class="content">
             {{for contents}}

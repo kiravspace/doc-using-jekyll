@@ -8,7 +8,7 @@
 
 
 
-<meta http-equiv="Last-Modified" content="2022-06-23 08:56:35 +0000">
+<meta http-equiv="Last-Modified" content="2022-06-27 10:20:03 +0000">
 
 
 
@@ -63,10 +63,10 @@
 <body>
 <header>
     <div class="header">
-        <div class="title">
-            <img src="/assets/icon/icon.png">
+        <a href="/" class="title">
+            <img src="/assets/icon/icon.png" class="img_inline">
             Developers | Guide
-        </div>
+        </a>
     </div>
     <div class="search">
         <div id="go_search" class="search_bar">
@@ -2152,7 +2152,7 @@
 
 <p>그러나, Output의 세번째 유형 Response + Branch Action을 통해서는 컨텍스트를 이어 가는 멀티턴 대화를 구성할 수 있습니다. Response + Branch Action이 선택된 Action은 Response를 내보낸 뒤에 사용자의 발화를 다시 듣고, Branch Action 중 조건을 만족시키는 Action으로 이동합니다.</p>
 
-<p><img src="/assets/images/response-with-branch-actions-01.png" alt=""></p>
+<p><img src="/assets/images/response-with-branch-actions-01.png" alt="" class="img_internal"></p>
 
 <p>Response + Branch Action는 세 요소로 구성됩니다.</p>
 
@@ -2173,7 +2173,7 @@
 
 <p>Branch Action을 만들 때, precondition으로 사용할 Entity가 첫 Intent에 없으면 Branch Action의 precondition을 정의할 수 없습니다. 이 경우, Utterance Parameter의 Entity mapping 팝업 창에서 ‘다른 Intent의 Entity Type 더 불러오기’ 버튼을 눌러, Play 내 모든 Entity Type을 가져 온 다음 원하는 Entity Type을 Utterance Parameter에 매핑하여 사용할 수 있습니다.</p>
 
-<p><img src="/assets/images/response-with-branch-actions-02.png" alt=""></p>
+<p><img src="/assets/images/response-with-branch-actions-02.png" alt="" class="img_internal"></p>
 
 <div class="alerts danger">
     
@@ -2187,7 +2187,7 @@
 
 <p>Reprompt를 2개 이상 입력한 경우, 두번째 Prompt부터는 대기 Prompt로 지정됩니다. 이 대기 Prompt가 발화된 후에는 멀티턴 시작 Response 후의 대기 상태로 이동하여 다시 사용자의 발화를 듣습니다. 이렇게 이동한 대기 상태도 기존의 컨텍스트를 유지한 채 다시 사용자의 발화를 듣는 대기 상태입니다.</p>
 
-<p><img src="/assets/images/response-with-branch-actions-03.png" alt=""></p>
+<p><img src="/assets/images/response-with-branch-actions-03.png" alt="" class="img_internal"></p>
 
 <div class="alerts info">
     
@@ -2225,13 +2225,13 @@
 </section>
 <div id="modal_image_area" class="modal_image_area hide">
     <div class="modal_wrapper">
-        <img id="modal_image" class="modal_image" src="">
+        <img id="modal_image" class="modal_image" src="" data-skip-src-to-absolute>
     </div>
 </div>
 <script type="text/x-jsrender" id="search_contents_tmpl">
 
 <div class="search_content">
-    <a href="/nugu-play/create-plays-with-play-builder/define-an-action/{{:url}}">
+    <a href="{{:url}}">
         <div class="page_title">{{:title}}</div>
         <div class="content">
             {{for contents}}

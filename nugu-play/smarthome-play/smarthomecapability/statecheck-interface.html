@@ -8,7 +8,7 @@
 
 
 
-<meta http-equiv="Last-Modified" content="2022-06-23 08:56:35 +0000">
+<meta http-equiv="Last-Modified" content="2022-06-27 10:20:03 +0000">
 
 
 
@@ -63,10 +63,10 @@
 <body>
 <header>
     <div class="header">
-        <div class="title">
-            <img src="/assets/icon/icon.png">
+        <a href="/" class="title">
+            <img src="/assets/icon/icon.png" class="img_inline">
             Developers | Guide
-        </div>
+        </a>
     </div>
     <div class="search">
         <div id="go_search" class="search_bar">
@@ -2157,7 +2157,11 @@
 <p>Discovery Sample Request</p>
 
 <div class="code">
-    <div class="code_title">(POST, /nugu/v1/devices)</div>
+    <div class="code_title">
+        <div class="label">(POST, /nugu/v1/devices)</div>
+        <div class="copy"></div>
+        <div class="copy_success">복사성공!</div>
+    </div>
     <div class="code_body">
 <div class="language-json highlighter-rouge"><div class="highlight"><pre class="highlight"><code><table class="rouge-table"><tbody><tr>
 <td class="rouge-gutter gl"><pre class="lineno">1
@@ -2175,7 +2179,11 @@
 <p>Discovery Sample Response</p>
 
 <div class="code">
-    <div class="code_title"></div>
+    <div class="code_title">
+        <div class="label"></div>
+        <div class="copy"></div>
+        <div class="copy_success">복사성공!</div>
+    </div>
     <div class="code_body">
 <div class="language-json highlighter-rouge"><div class="highlight"><pre class="highlight"><code><table class="rouge-table"><tbody><tr>
 <td class="rouge-gutter gl"><pre class="lineno">1
@@ -2258,7 +2266,11 @@ Directive : AskState</p>
 <p>Sample Request</p>
 
 <div class="code">
-    <div class="code_title">Control Request 예시 (POST, /nugu/v1/capabilities/StateCheck/directives/AskState)</div>
+    <div class="code_title">
+        <div class="label">Control Request 예시 (POST, /nugu/v1/capabilities/StateCheck/directives/AskState)</div>
+        <div class="copy"></div>
+        <div class="copy_success">복사성공!</div>
+    </div>
     <div class="code_body">
 <div class="language-json highlighter-rouge"><div class="highlight"><pre class="highlight"><code><table class="rouge-table"><tbody><tr>
 <td class="rouge-gutter gl"><pre class="lineno">1
@@ -2338,7 +2350,11 @@ Directive : AskState</p>
 <p>Sample Response</p>
 
 <div class="code">
-    <div class="code_title"></div>
+    <div class="code_title">
+        <div class="label"></div>
+        <div class="copy"></div>
+        <div class="copy_success">복사성공!</div>
+    </div>
     <div class="code_body">
 <div class="language-json highlighter-rouge"><div class="highlight"><pre class="highlight"><code><table class="rouge-table"><tbody><tr>
 <td class="rouge-gutter gl"><pre class="lineno">1
@@ -2409,7 +2425,11 @@ Directive : AskOpenState</p>
 <p>Sample Request</p>
 
 <div class="code">
-    <div class="code_title">Control Request 예시 (POST, /nugu/v1/capabilities/StateCheck/directives/AskOpenState)</div>
+    <div class="code_title">
+        <div class="label">Control Request 예시 (POST, /nugu/v1/capabilities/StateCheck/directives/AskOpenState)</div>
+        <div class="copy"></div>
+        <div class="copy_success">복사성공!</div>
+    </div>
     <div class="code_body">
 <div class="language-json highlighter-rouge"><div class="highlight"><pre class="highlight"><code><table class="rouge-table"><tbody><tr>
 <td class="rouge-gutter gl"><pre class="lineno">1
@@ -2489,7 +2509,11 @@ Directive : AskOpenState</p>
 <p>Sample Response</p>
 
 <div class="code">
-    <div class="code_title"></div>
+    <div class="code_title">
+        <div class="label"></div>
+        <div class="copy"></div>
+        <div class="copy_success">복사성공!</div>
+    </div>
     <div class="code_body">
 <div class="language-json highlighter-rouge"><div class="highlight"><pre class="highlight"><code><table class="rouge-table"><tbody><tr>
 <td class="rouge-gutter gl"><pre class="lineno">1
@@ -2543,7 +2567,7 @@ Directive : AskOpenState</p>
 
 <h2 id="error--exception">Error &amp; Exception</h2>
 
-<p>해당 Capability/Directive에서 응답 시 사용할 수 있는 ErrorCode는 <a href="/nugu-play/smarthome-play/smarthomeerror">SmartHomeError</a>를 참조해주시기 바랍니다.</p>
+<p>해당 Capability/Directive에서 응답 시 사용할 수 있는 ErrorCode는 <a href="/nugu-play/smarthome-play/smarthomeerror" class="a_internal">SmartHomeError</a>를 참조해주시기 바랍니다.</p>
 
     </div>
     
@@ -2575,13 +2599,13 @@ Directive : AskOpenState</p>
 </section>
 <div id="modal_image_area" class="modal_image_area hide">
     <div class="modal_wrapper">
-        <img id="modal_image" class="modal_image" src="">
+        <img id="modal_image" class="modal_image" src="" data-skip-src-to-absolute>
     </div>
 </div>
 <script type="text/x-jsrender" id="search_contents_tmpl">
 
 <div class="search_content">
-    <a href="/nugu-play/smarthome-play/smarthomecapability/{{:url}}">
+    <a href="{{:url}}">
         <div class="page_title">{{:title}}</div>
         <div class="content">
             {{for contents}}

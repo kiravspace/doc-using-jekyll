@@ -8,7 +8,7 @@
 
 
 
-<meta http-equiv="Last-Modified" content="2022-06-23 08:56:35 +0000">
+<meta http-equiv="Last-Modified" content="2022-06-27 10:20:03 +0000">
 
 
 
@@ -63,10 +63,10 @@
 <body>
 <header>
     <div class="header">
-        <div class="title">
-            <img src="/assets/icon/icon.png">
+        <a href="/" class="title">
+            <img src="/assets/icon/icon.png" class="img_inline">
             Developers | Guide
-        </div>
+        </a>
     </div>
     <div class="search">
         <div id="go_search" class="search_bar">
@@ -2165,15 +2165,19 @@
 <div id="tabs-13" class="tabs">
     <ul class="tabs_title">
         
-            <li data-content-id="tab-content-14" class="tab_title">Ubuntu</li>
+            <li data-content-id="tab-content-14" class="tab_title selected">Ubuntu</li>
         
             <li data-content-id="tab-content-23" class="tab_title">Debian</li>
         
     </ul>
-    <div id="tab-content-14" class="tab_content">
+    <div id="tab-content-14" class="tab_content selected">
     
 <div class="code">
-    <div class="code_title"></div>
+    <div class="code_title">
+        <div class="label"></div>
+        <div class="copy"></div>
+        <div class="copy_success">복사성공!</div>
+    </div>
     <div class="code_body">
 <div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code><table class="rouge-table"><tbody><tr>
 <td class="rouge-gutter gl"><pre class="lineno">1
@@ -2193,7 +2197,11 @@
 <p>사용하고 있는 Debian 버전에 따라 NUGU SDK의 Bionic 또는 Xenial PPA 주소를 추가해야 합니다.</p>
 
 <div class="code">
-    <div class="code_title"></div>
+    <div class="code_title">
+        <div class="label"></div>
+        <div class="copy"></div>
+        <div class="copy_success">복사성공!</div>
+    </div>
     <div class="code_body">
 <div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code><table class="rouge-table"><tbody><tr>
 <td class="rouge-gutter gl"><pre class="lineno">1
@@ -2219,7 +2227,11 @@ deb http://ppa.launchpad.net/nugulinux/sdk/ubuntu xenial main
 <p>이제 NUGU SDK PPA에 대한 인증키를 설치해야 합니다.</p>
 
 <div class="code">
-    <div class="code_title"></div>
+    <div class="code_title">
+        <div class="label"></div>
+        <div class="copy"></div>
+        <div class="copy_success">복사성공!</div>
+    </div>
     <div class="code_body">
 <div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code><table class="rouge-table"><tbody><tr>
 <td class="rouge-gutter gl"><pre class="lineno">1
@@ -2272,7 +2284,11 @@ deb http://ppa.launchpad.net/nugulinux/sdk/ubuntu xenial main
 <p>아래 명령을 통해 시스템에 설치할 수 있습니다.</p>
 
 <div class="code">
-    <div class="code_title"></div>
+    <div class="code_title">
+        <div class="label"></div>
+        <div class="copy"></div>
+        <div class="copy_success">복사성공!</div>
+    </div>
     <div class="code_body">
 <div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code><table class="rouge-table"><tbody><tr>
 <td class="rouge-gutter gl"><pre class="lineno">1
@@ -2371,7 +2387,11 @@ deb http://ppa.launchpad.net/nugulinux/sdk/ubuntu xenial main
 <p>NUGU SDK for Linux는 event-driven 방식으로 어플리케이션을 개발할 수 있도록 <a href="https://wiki.gnome.org/Projects/GLib">glib</a>에서 제공하는 <a href="https://developer.gnome.org/glib/stable/glib-The-Main-Event-Loop.html">event loop</a>을 사용하고 있습니다. 따라서 <code class="language-plaintext highlighter-rouge">main()</code> 코드는 아래 구조로 작성되어야 합니다.</p>
 
 <div class="code">
-    <div class="code_title"></div>
+    <div class="code_title">
+        <div class="label"></div>
+        <div class="copy"></div>
+        <div class="copy_success">복사성공!</div>
+    </div>
     <div class="code_body">
 <div class="language-c highlighter-rouge"><div class="highlight"><pre class="highlight"><code><table class="rouge-table"><tbody><tr>
 <td class="rouge-gutter gl"><pre class="lineno">1
@@ -2425,7 +2445,11 @@ deb http://ppa.launchpad.net/nugulinux/sdk/ubuntu xenial main
 <p>⁣1. 헤더 파일(nugu_client.hh, capability_factory.hh)을 include에 포함시키고, <code class="language-plaintext highlighter-rouge">NuguClientKit, NuguCapability</code> namespace를 사용하도록 설정합니다.</p>
 
 <div class="code">
-    <div class="code_title"></div>
+    <div class="code_title">
+        <div class="label"></div>
+        <div class="copy"></div>
+        <div class="copy_success">복사성공!</div>
+    </div>
     <div class="code_body">
 <div class="language-cpp highlighter-rouge"><div class="highlight"><pre class="highlight"><code><table class="rouge-table"><tbody><tr>
 <td class="rouge-gutter gl"><pre class="lineno">1
@@ -2447,7 +2471,11 @@ deb http://ppa.launchpad.net/nugulinux/sdk/ubuntu xenial main
 <p>⁣2. <code class="language-plaintext highlighter-rouge">IASRHandler</code> 객체를 생성하고, 음성인식 모델 파일을 설정합니다.</p>
 
 <div class="code">
-    <div class="code_title"></div>
+    <div class="code_title">
+        <div class="label"></div>
+        <div class="copy"></div>
+        <div class="copy_success">복사성공!</div>
+    </div>
     <div class="code_body">
 <div class="language-cpp highlighter-rouge"><div class="highlight"><pre class="highlight"><code><table class="rouge-table"><tbody><tr>
 <td class="rouge-gutter gl"><pre class="lineno">1
@@ -2467,7 +2495,11 @@ deb http://ppa.launchpad.net/nugulinux/sdk/ubuntu xenial main
 <p>⁣3. <code class="language-plaintext highlighter-rouge">NuguClient</code> 객체를 생성하고, <code class="language-plaintext highlighter-rouge">ASR Capability</code> 추가 후, SDK를 초기화 합니다.</p>
 
 <div class="code">
-    <div class="code_title"></div>
+    <div class="code_title">
+        <div class="label"></div>
+        <div class="copy"></div>
+        <div class="copy_success">복사성공!</div>
+    </div>
     <div class="code_body">
 <div class="language-cpp highlighter-rouge"><div class="highlight"><pre class="highlight"><code><table class="rouge-table"><tbody><tr>
 <td class="rouge-gutter gl"><pre class="lineno">1
@@ -2489,7 +2521,11 @@ deb http://ppa.launchpad.net/nugulinux/sdk/ubuntu xenial main
 <p>⁣4. 음성인식 기능을 사용하기 위해 OAuth2 access-token 설정 후, NUGU 서비스 연결을 요청합니다.</p>
 
 <div class="code">
-    <div class="code_title"></div>
+    <div class="code_title">
+        <div class="label"></div>
+        <div class="copy"></div>
+        <div class="copy_success">복사성공!</div>
+    </div>
     <div class="code_body">
 <div class="language-cpp highlighter-rouge"><div class="highlight"><pre class="highlight"><code><table class="rouge-table"><tbody><tr>
 <td class="rouge-gutter gl"><pre class="lineno">1
@@ -2523,7 +2559,11 @@ deb http://ppa.launchpad.net/nugulinux/sdk/ubuntu xenial main
 <p>NUGU SDK for Linux는 빌드 설정을 쉽게 구성할 수 있도록 <code class="language-plaintext highlighter-rouge">pkg-config</code> 파일을 제공합니다. 따라서, 아래와 같이 <code class="language-plaintext highlighter-rouge">nugu.pc</code>를 사용해 빌드 명령을 수행할 수 있습니다.</p>
 
 <div class="code">
-    <div class="code_title"></div>
+    <div class="code_title">
+        <div class="label"></div>
+        <div class="copy"></div>
+        <div class="copy_success">복사성공!</div>
+    </div>
     <div class="code_body">
 <div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code><table class="rouge-table"><tbody><tr>
 <td class="rouge-gutter gl"><pre class="lineno">1
@@ -2582,13 +2622,13 @@ deb http://ppa.launchpad.net/nugulinux/sdk/ubuntu xenial main
 </section>
 <div id="modal_image_area" class="modal_image_area hide">
     <div class="modal_wrapper">
-        <img id="modal_image" class="modal_image" src="">
+        <img id="modal_image" class="modal_image" src="" data-skip-src-to-absolute>
     </div>
 </div>
 <script type="text/x-jsrender" id="search_contents_tmpl">
 
 <div class="search_content">
-    <a href="/nugu-sdk/platform/linux/{{:url}}">
+    <a href="{{:url}}">
         <div class="page_title">{{:title}}</div>
         <div class="content">
             {{for contents}}

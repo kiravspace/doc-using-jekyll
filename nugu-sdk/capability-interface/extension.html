@@ -8,7 +8,7 @@
 
 
 
-<meta http-equiv="Last-Modified" content="2022-06-23 08:56:35 +0000">
+<meta http-equiv="Last-Modified" content="2022-06-27 10:20:03 +0000">
 
 
 
@@ -67,10 +67,10 @@
 <body>
 <header>
     <div class="header">
-        <div class="title">
-            <img src="/assets/icon/icon.png">
+        <a href="/" class="title">
+            <img src="/assets/icon/icon.png" class="img_inline">
             Developers | Guide
-        </div>
+        </a>
     </div>
     <div class="search">
         <div id="go_search" class="search_bar">
@@ -2193,19 +2193,23 @@
 <div id="tabs-22" class="tabs">
     <ul class="tabs_title">
         
-            <li data-content-id="tab-content-23" class="tab_title">Android</li>
+            <li data-content-id="tab-content-23" class="tab_title selected">Android</li>
         
             <li data-content-id="tab-content-45" class="tab_title">iOS</li>
         
             <li data-content-id="tab-content-55" class="tab_title">Linux</li>
         
     </ul>
-    <div id="tab-content-23" class="tab_content">
+    <div id="tab-content-23" class="tab_content selected">
     
 <p>NuguAndroidClient instance 를 통해 ExtensionAgent instance 에 접근할 수 있습니다.</p>
 
 <div class="code">
-    <div class="code_title"></div>
+    <div class="code_title">
+        <div class="label"></div>
+        <div class="copy"></div>
+        <div class="copy_success">복사성공!</div>
+    </div>
     <div class="code_body">
 <div class="language-text highlighter-rouge"><div class="highlight"><pre class="highlight"><code><table class="rouge-table"><tbody><tr>
 <td class="rouge-gutter gl"><pre class="lineno">1
@@ -2219,7 +2223,11 @@
 <p>NuguAndroidClient 생성시 ExtensionAgentInterface.Client 를 추가합니다.</p>
 
 <div class="code">
-    <div class="code_title"></div>
+    <div class="code_title">
+        <div class="label"></div>
+        <div class="copy"></div>
+        <div class="copy_success">복사성공!</div>
+    </div>
     <div class="code_body">
 <div class="language-text highlighter-rouge"><div class="highlight"><pre class="highlight"><code><table class="rouge-table"><tbody><tr>
 <td class="rouge-gutter gl"><pre class="lineno">1
@@ -2245,7 +2253,11 @@ NuguAndroidClient.Builder(...)
 <p>NuguClient instance 를 통해 ExtensionAgent instance 에 접근할 수 있습니다.</p>
 
 <div class="code">
-    <div class="code_title"></div>
+    <div class="code_title">
+        <div class="label"></div>
+        <div class="copy"></div>
+        <div class="copy_success">복사성공!</div>
+    </div>
     <div class="code_body">
 <div class="language-text highlighter-rouge"><div class="highlight"><pre class="highlight"><code><table class="rouge-table"><tbody><tr>
 <td class="rouge-gutter gl"><pre class="lineno">1
@@ -2263,7 +2275,11 @@ NuguAndroidClient.Builder(...)
 <p>CapabilityFactory::makeCapability 함수로 ExtensionAgent 를 생성하고 NuguClient 에 추가해 주어야합니다.</p>
 
 <div class="code">
-    <div class="code_title"></div>
+    <div class="code_title">
+        <div class="label"></div>
+        <div class="copy"></div>
+        <div class="copy_success">복사성공!</div>
+    </div>
     <div class="code_body">
 <div class="language-text highlighter-rouge"><div class="highlight"><pre class="highlight"><code><table class="rouge-table"><tbody><tr>
 <td class="rouge-gutter gl"><pre class="lineno">1
@@ -2291,26 +2307,30 @@ nugu_client-&gt;getCapabilityBuilder()
 
 <h3 id="context-구성-및-기능-실행">Context 구성 및 기능 실행</h3>
 
-<p>Play 에서 알아야 하는 디바이스/Application 의 정보를 <a href="#context">Context</a> 에 포함시켜 주어야 합니다.</p>
+<p>Play 에서 알아야 하는 디바이스/Application 의 정보를 <a href="#context" class="hash_internal">Context</a> 에 포함시켜 주어야 합니다.</p>
 
-<p>특정 기능의 실행이 <a href="#action">Action</a> directive 로 요청될 수 있습니다.</p>
+<p>특정 기능의 실행이 <a href="#action" class="hash_internal">Action</a> directive 로 요청될 수 있습니다.</p>
 
 <div id="tabs-77" class="tabs">
     <ul class="tabs_title">
         
-            <li data-content-id="tab-content-78" class="tab_title">Android</li>
+            <li data-content-id="tab-content-78" class="tab_title selected">Android</li>
         
             <li data-content-id="tab-content-97" class="tab_title">iOS</li>
         
             <li data-content-id="tab-content-116" class="tab_title">Linux</li>
         
     </ul>
-    <div id="tab-content-78" class="tab_content">
+    <div id="tab-content-78" class="tab_content selected">
     
 <p>ExtensionAgentInterface.Client 를 구현합니다.</p>
 
 <div class="code">
-    <div class="code_title"></div>
+    <div class="code_title">
+        <div class="label"></div>
+        <div class="copy"></div>
+        <div class="copy_success">복사성공!</div>
+    </div>
     <div class="code_body">
 <div class="language-text highlighter-rouge"><div class="highlight"><pre class="highlight"><code><table class="rouge-table"><tbody><tr>
 <td class="rouge-gutter gl"><pre class="lineno">1
@@ -2346,7 +2366,11 @@ nugu_client-&gt;getCapabilityBuilder()
 <p>ExtensionAgentDelegate 를 추가합니다.</p>
 
 <div class="code">
-    <div class="code_title"></div>
+    <div class="code_title">
+        <div class="label"></div>
+        <div class="copy"></div>
+        <div class="copy_success">복사성공!</div>
+    </div>
     <div class="code_body">
 <div class="language-text highlighter-rouge"><div class="highlight"><pre class="highlight"><code><table class="rouge-table"><tbody><tr>
 <td class="rouge-gutter gl"><pre class="lineno">1
@@ -2382,7 +2406,11 @@ extensionAgent.delegate = MyExtensionAgentDelegate()
 <p>IExtensionListener를 추가합니다.</p>
 
 <div class="code">
-    <div class="code_title"></div>
+    <div class="code_title">
+        <div class="label"></div>
+        <div class="copy"></div>
+        <div class="copy_success">복사성공!</div>
+    </div>
     <div class="code_body">
 <div class="language-text highlighter-rouge"><div class="highlight"><pre class="highlight"><code><table class="rouge-table"><tbody><tr>
 <td class="rouge-gutter gl"><pre class="lineno">1
@@ -2420,22 +2448,26 @@ CapabilityFactory::makeCapability&lt;ExtensionAgent, IExtensionHandler&gt;(exten
 
 <h3 id="기능-요청">기능 요청</h3>
 
-<p>특정 기능 실행을 <a href="#commandissued">CommandIssued</a> event 로 요청할 수 있습니다.</p>
+<p>특정 기능 실행을 <a href="#commandissued" class="hash_internal">CommandIssued</a> event 로 요청할 수 있습니다.</p>
 
 <div id="tabs-141" class="tabs">
     <ul class="tabs_title">
         
-            <li data-content-id="tab-content-142" class="tab_title">Android</li>
+            <li data-content-id="tab-content-142" class="tab_title selected">Android</li>
         
             <li data-content-id="tab-content-150" class="tab_title">iOS</li>
         
             <li data-content-id="tab-content-158" class="tab_title">Linux</li>
         
     </ul>
-    <div id="tab-content-142" class="tab_content">
+    <div id="tab-content-142" class="tab_content selected">
     
 <div class="code">
-    <div class="code_title"></div>
+    <div class="code_title">
+        <div class="label"></div>
+        <div class="copy"></div>
+        <div class="copy_success">복사성공!</div>
+    </div>
     <div class="code_body">
 <div class="language-text highlighter-rouge"><div class="highlight"><pre class="highlight"><code><table class="rouge-table"><tbody><tr>
 <td class="rouge-gutter gl"><pre class="lineno">1
@@ -2451,7 +2483,11 @@ CapabilityFactory::makeCapability&lt;ExtensionAgent, IExtensionHandler&gt;(exten
 <div id="tab-content-150" class="tab_content">
     
 <div class="code">
-    <div class="code_title"></div>
+    <div class="code_title">
+        <div class="label"></div>
+        <div class="copy"></div>
+        <div class="copy_success">복사성공!</div>
+    </div>
     <div class="code_body">
 <div class="language-text highlighter-rouge"><div class="highlight"><pre class="highlight"><code><table class="rouge-table"><tbody><tr>
 <td class="rouge-gutter gl"><pre class="lineno">1
@@ -2480,7 +2516,11 @@ CapabilityFactory::makeCapability&lt;ExtensionAgent, IExtensionHandler&gt;(exten
 <h2 id="context">Context</h2>
 
 <div class="code">
-    <div class="code_title"></div>
+    <div class="code_title">
+        <div class="label"></div>
+        <div class="copy"></div>
+        <div class="copy_success">복사성공!</div>
+    </div>
     <div class="code_body">
 <div class="language-text highlighter-rouge"><div class="highlight"><pre class="highlight"><code><table class="rouge-table"><tbody><tr>
 <td class="rouge-gutter gl"><pre class="lineno">1
@@ -2525,7 +2565,11 @@ CapabilityFactory::makeCapability&lt;ExtensionAgent, IExtensionHandler&gt;(exten
 <h3 id="action">Action</h3>
 
 <div class="code">
-    <div class="code_title"></div>
+    <div class="code_title">
+        <div class="label"></div>
+        <div class="copy"></div>
+        <div class="copy_success">복사성공!</div>
+    </div>
     <div class="code_body">
 <div class="language-text highlighter-rouge"><div class="highlight"><pre class="highlight"><code><table class="rouge-table"><tbody><tr>
 <td class="rouge-gutter gl"><pre class="lineno">1
@@ -2584,7 +2628,11 @@ CapabilityFactory::makeCapability&lt;ExtensionAgent, IExtensionHandler&gt;(exten
 <h3 id="actionsucceeded">ActionSucceeded</h3>
 
 <div class="code">
-    <div class="code_title"></div>
+    <div class="code_title">
+        <div class="label"></div>
+        <div class="copy"></div>
+        <div class="copy_success">복사성공!</div>
+    </div>
     <div class="code_body">
 <div class="language-text highlighter-rouge"><div class="highlight"><pre class="highlight"><code><table class="rouge-table"><tbody><tr>
 <td class="rouge-gutter gl"><pre class="lineno">1
@@ -2620,7 +2668,11 @@ CapabilityFactory::makeCapability&lt;ExtensionAgent, IExtensionHandler&gt;(exten
 <h3 id="actionfailed">ActionFailed</h3>
 
 <div class="code">
-    <div class="code_title"></div>
+    <div class="code_title">
+        <div class="label"></div>
+        <div class="copy"></div>
+        <div class="copy_success">복사성공!</div>
+    </div>
     <div class="code_body">
 <div class="language-text highlighter-rouge"><div class="highlight"><pre class="highlight"><code><table class="rouge-table"><tbody><tr>
 <td class="rouge-gutter gl"><pre class="lineno">1
@@ -2656,7 +2708,11 @@ CapabilityFactory::makeCapability&lt;ExtensionAgent, IExtensionHandler&gt;(exten
 <h3 id="commandissued">CommandIssued</h3>
 
 <div class="code">
-    <div class="code_title"></div>
+    <div class="code_title">
+        <div class="label"></div>
+        <div class="copy"></div>
+        <div class="copy_success">복사성공!</div>
+    </div>
     <div class="code_body">
 <div class="language-text highlighter-rouge"><div class="highlight"><pre class="highlight"><code><table class="rouge-table"><tbody><tr>
 <td class="rouge-gutter gl"><pre class="lineno">1
@@ -2740,13 +2796,13 @@ CapabilityFactory::makeCapability&lt;ExtensionAgent, IExtensionHandler&gt;(exten
 </section>
 <div id="modal_image_area" class="modal_image_area hide">
     <div class="modal_wrapper">
-        <img id="modal_image" class="modal_image" src="">
+        <img id="modal_image" class="modal_image" src="" data-skip-src-to-absolute>
     </div>
 </div>
 <script type="text/x-jsrender" id="search_contents_tmpl">
 
 <div class="search_content">
-    <a href="/nugu-sdk/capability-interface/{{:url}}">
+    <a href="{{:url}}">
         <div class="page_title">{{:title}}</div>
         <div class="content">
             {{for contents}}

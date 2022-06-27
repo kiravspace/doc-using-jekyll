@@ -8,7 +8,7 @@
 
 
 
-<meta http-equiv="Last-Modified" content="2022-06-23 08:56:35 +0000">
+<meta http-equiv="Last-Modified" content="2022-06-27 10:20:03 +0000">
 
 
 
@@ -67,10 +67,10 @@
 <body>
 <header>
     <div class="header">
-        <div class="title">
-            <img src="/assets/icon/icon.png">
+        <a href="/" class="title">
+            <img src="/assets/icon/icon.png" class="img_inline">
             Developers | Guide
-        </div>
+        </a>
     </div>
     <div class="search">
         <div id="go_search" class="search_bar">
@@ -2155,7 +2155,11 @@
         <p>NUGU SDK 의 <code class="language-plaintext highlighter-rouge">NuguVoiceChrome</code>, <code class="language-plaintext highlighter-rouge">AudioDisplayView</code> 등과 같은 UI Component 들은 각자 theme 이라는 변수를 통해 Dark / Light 모드 테마를 지원하고 있습니다. theme 변수를 직접 변경해주면 해당 UI Component 의 테마는 동적으로 변경됩니다.</p>
 
 <div class="code">
-    <div class="code_title"></div>
+    <div class="code_title">
+        <div class="label"></div>
+        <div class="copy"></div>
+        <div class="copy_success">복사성공!</div>
+    </div>
     <div class="code_body">
 <div class="language-swift highlighter-rouge"><div class="highlight"><pre class="highlight"><code><table class="rouge-table"><tbody><tr>
 <td class="rouge-gutter gl"><pre class="lineno">1
@@ -2185,7 +2189,11 @@
 <p>고객의 편의를 위해 <code class="language-plaintext highlighter-rouge">NuguClientKit</code> 에서는 <code class="language-plaintext highlighter-rouge">NuguThemeController</code> 라는 컨트롤러 모델을 제공하고 있습니다. <code class="language-plaintext highlighter-rouge">NuguThemeController</code> 를 생성하여, <code class="language-plaintext highlighter-rouge">VoiceChromePresenter</code>, <code class="language-plaintext highlighter-rouge">DisplayWebViewPresenter</code>, <code class="language-plaintext highlighter-rouge">AudioDisplayViewPresenter</code> 의 생성자로 추가하면 해당 UI Component 들의 theme 가 <code class="language-plaintext highlighter-rouge">NuguThemeController</code> 와 연동됩니다.</p>
 
 <div class="code">
-    <div class="code_title"></div>
+    <div class="code_title">
+        <div class="label"></div>
+        <div class="copy"></div>
+        <div class="copy_success">복사성공!</div>
+    </div>
     <div class="code_body">
 <div class="language-swift highlighter-rouge"><div class="highlight"><pre class="highlight"><code><table class="rouge-table"><tbody><tr>
 <td class="rouge-gutter gl"><pre class="lineno">1
@@ -2264,13 +2272,13 @@
 </section>
 <div id="modal_image_area" class="modal_image_area hide">
     <div class="modal_wrapper">
-        <img id="modal_image" class="modal_image" src="">
+        <img id="modal_image" class="modal_image" src="" data-skip-src-to-absolute>
     </div>
 </div>
 <script type="text/x-jsrender" id="search_contents_tmpl">
 
 <div class="search_content">
-    <a href="/nugu-sdk/platform/ios/{{:url}}">
+    <a href="{{:url}}">
         <div class="page_title">{{:title}}</div>
         <div class="content">
             {{for contents}}

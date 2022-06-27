@@ -8,7 +8,7 @@
 
 
 
-<meta http-equiv="Last-Modified" content="2022-06-23 08:56:35 +0000">
+<meta http-equiv="Last-Modified" content="2022-06-27 10:20:03 +0000">
 
 
 
@@ -63,10 +63,10 @@
 <body>
 <header>
     <div class="header">
-        <div class="title">
-            <img src="/assets/icon/icon.png">
+        <a href="/" class="title">
+            <img src="/assets/icon/icon.png" class="img_inline">
             Developers | Guide
-        </div>
+        </a>
     </div>
     <div class="search">
         <div id="go_search" class="search_bar">
@@ -2156,7 +2156,7 @@
 
 <div class="alerts info">
     
-<p>Utterance Parameter 등록 및 매핑에 대한 자세한 내용은 <a href="/nugu-play/create-plays-with-play-builder/define-an-action/use-parameters">Parameter 사용하기</a>를 참고하세요.</p>
+<p>Utterance Parameter 등록 및 매핑에 대한 자세한 내용은 <a href="/nugu-play/create-plays-with-play-builder/define-an-action/use-parameters" class="a_internal">Parameter 사용하기</a>를 참고하세요.</p>
 
 </div>
 
@@ -2165,11 +2165,11 @@
 <p>⁣1. Play Builder 좌측 메뉴에서 <code class="language-plaintext highlighter-rouge">Actions</code> &gt; <code class="language-plaintext highlighter-rouge">Custom Actions</code>를 클릭한 후, Slot-Filling Prompt를 설정할 Action을 선택합니다.
 ⁣2. 응답에 필요한 정보 가져오기 영역에서 Slot-Filling Prompt를 통해 Entity를 다시 받을 Utterance Parameter에 Entity를 매핑한 후 ‘필수’ 박스에 체크합니다.</p>
 
-<p><img src="/assets/images/slot-filling-prompt-01.png" alt=""></p>
+<p><img src="/assets/images/slot-filling-prompt-01.png" alt="" class="img_internal"></p>
 
 <p>⁣3. 이후 Slot-filling Prompt를 입력합니다.</p>
 
-<p><img src="/assets/images/slot-filling-prompt-02.gif" alt=""></p>
+<p><img src="/assets/images/slot-filling-prompt-02.gif" alt="" class="img_internal"></p>
 
 <p>Slot-filling Prompt는 다른 Prompt와 달리 마지막 발화부터 입력하는 스택 구조이며 LIFO(Last In First Out)로 동작합니다. 여러 개의 Prompt를 입력하면 가장 마지막에 입력한 Prompt부터 차례대로 사용자에게 응답하게 됩니다.</p>
 
@@ -2177,11 +2177,11 @@
 
 <div class="alerts info">
     
-<p><strong>종료 Prompt</strong>에 대한 자세한 내용은 <a href="/nugu-play/create-plays-with-play-builder/define-an-action/use-responses/use-prompts#prompt-types">Prompt의 유형</a>을 참고하세요.</p>
+<p><strong>종료 Prompt</strong>에 대한 자세한 내용은 <a href="/nugu-play/create-plays-with-play-builder/define-an-action/use-responses/use-prompts#prompt-types" class="a_internal">Prompt의 유형</a>을 참고하세요.</p>
 
 </div>
 
-<p><img src="/assets/images/slot-filling-prompt-02.gif" alt=""></p>
+<p><img src="/assets/images/slot-filling-prompt-02.gif" alt="" class="img_internal"></p>
 
 <h2 id="slot-filling-prompt-작성-시-주의-사항">Slot-filling Prompt 작성 시 주의 사항</h2>
 
@@ -2275,13 +2275,13 @@
 </section>
 <div id="modal_image_area" class="modal_image_area hide">
     <div class="modal_wrapper">
-        <img id="modal_image" class="modal_image" src="">
+        <img id="modal_image" class="modal_image" src="" data-skip-src-to-absolute>
     </div>
 </div>
 <script type="text/x-jsrender" id="search_contents_tmpl">
 
 <div class="search_content">
-    <a href="/nugu-play/create-plays-with-play-builder/define-an-action/use-parameters/{{:url}}">
+    <a href="{{:url}}">
         <div class="page_title">{{:title}}</div>
         <div class="content">
             {{for contents}}

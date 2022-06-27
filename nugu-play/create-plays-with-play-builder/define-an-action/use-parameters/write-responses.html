@@ -8,7 +8,7 @@
 
 
 
-<meta http-equiv="Last-Modified" content="2022-06-23 08:56:35 +0000">
+<meta http-equiv="Last-Modified" content="2022-06-27 10:20:03 +0000">
 
 
 
@@ -63,10 +63,10 @@
 <body>
 <header>
     <div class="header">
-        <div class="title">
-            <img src="/assets/icon/icon.png">
+        <a href="/" class="title">
+            <img src="/assets/icon/icon.png" class="img_inline">
             Developers | Guide
-        </div>
+        </a>
     </div>
     <div class="search">
         <div id="go_search" class="search_bar">
@@ -2155,26 +2155,26 @@
   <li>
     <p>Output 정의 영역에서 Output 유형은 <code class="language-plaintext highlighter-rouge">Response</code> 버튼을 선택하고, Prompt 유형은 <code class="language-plaintext highlighter-rouge">대기</code> 또는 <code class="language-plaintext highlighter-rouge">종료</code> 버튼을 클릭합니다.</p>
 
-    <p><img src="/assets/images/write-responses-01.png" alt=""></p>
+    <p><img src="/assets/images/write-responses-01.png" alt="" class="img_internal"></p>
 
     <ul>
       <li>Prompt 유형에서 ‘대기’는 Prompt가 스피커를 통해 발화되고 난 후 세션이 끊어지지 않고 유지되는 옵션이며, ‘종료’는 발화 후 세션이 끊어지는 옵션을 의미합니다.</li>
       <li>Prompt List의 Prompt 입력창에 중괄호를 연속으로 2번 입력하면 Parameter 자동완성창이 열리며, 위에서 입력했던 “day”, “location”, “status” 3개의 Parameter가 표시됩니다.</li>
     </ul>
 
-    <p><img src="/assets/images/write-responses-02.gif" alt=""></p>
+    <p><img src="/assets/images/write-responses-02.gif" alt="" class="img_internal"></p>
   </li>
   <li>
     <p>키보드 혹은 마우스를 이용하여 ‘location’을 선택한 후 ‘의’를 입력한 후, 다시 중괄호 두 개를 눌러 자동완성을 통해 ‘day’를 선택합니다. 그 후에 “날씨는” 을 입력하고 다시 동일한 방법으로 ‘status’를 입력합니다. 입력을 완료하면 Prompt 입력창에는 다음과 같이 표시됩니다.</p>
 
-    <p><img src="/assets/images/write-responses-03.png" alt=""></p>
+    <p><img src="/assets/images/write-responses-03.png" alt="" class="img_internal"></p>
   </li>
   <li>
     <p>Play Builder 우측 상단에 있는 <code class="language-plaintext highlighter-rouge">Play 저장</code> 버튼을 클릭하여 Action 생성을 완료합니다.</p>
 
     <p>지금까지 작업한 <code class="language-plaintext highlighter-rouge">answer.weather</code> Action은 다음과 같은 구조를 갖게 되며, Backend proxy가 기상정보를 ‘status’에 담아서 제공을 할 경우 “여수의 오늘 날씨는 흐립니다”와 같은 답변이 나가게 됩니다.</p>
 
-    <p><img src="/assets/images/write-responses-04.png" alt=""></p>
+    <p><img src="/assets/images/write-responses-04.png" alt="" class="img_internal"></p>
   </li>
 </ol>
 
@@ -2183,7 +2183,7 @@
 <p>이 장과 함께 보면 좋은 도움말</p>
 
 <ul>
-  <li><a href="/nugu-play/create-plays-with-play-builder/define-an-action/use-responses/use-prompts#prompt-types">Prompt의 유형</a></li>
+  <li><a href="/nugu-play/create-plays-with-play-builder/define-an-action/use-responses/use-prompts#prompt-types" class="a_internal">Prompt의 유형</a></li>
 </ul>
 
 </div>
@@ -2218,13 +2218,13 @@
 </section>
 <div id="modal_image_area" class="modal_image_area hide">
     <div class="modal_wrapper">
-        <img id="modal_image" class="modal_image" src="">
+        <img id="modal_image" class="modal_image" src="" data-skip-src-to-absolute>
     </div>
 </div>
 <script type="text/x-jsrender" id="search_contents_tmpl">
 
 <div class="search_content">
-    <a href="/nugu-play/create-plays-with-play-builder/define-an-action/use-parameters/{{:url}}">
+    <a href="{{:url}}">
         <div class="page_title">{{:title}}</div>
         <div class="content">
             {{for contents}}
