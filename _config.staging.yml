@@ -1,5 +1,5 @@
 url: "https://kiravspace.github.io"
-baseurl: "/doc-using-jekyll"
+baseurl: "/jekyll-potion"
 
 exclude:
   - "CNAME"

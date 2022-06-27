@@ -13,8 +13,12 @@ module Jekyll::Potion
           context["tabs_id"] = id
 
           tabs = []
+          @elements.each_index { |i|
+            @elements[i].first = i == 0;
+          }
+
           @elements.each do |e|
-            tabs.push({ "title" => e.title, "tab_id" => e.id })
+            tabs.push({ "title" => e.title, "tab_id" => e.id, "first" => e.first })
           end
 
           context["tabs"] = tabs
@@ -26,6 +30,8 @@ module Jekyll::Potion
 
   class TabContentTag < Liquid::Block
     include PotionBlockElement
+
+    attr_accessor :first
 
     def id_format
       "tab-content-#{options.line_number}"
@@ -40,6 +46,7 @@ module Jekyll::Potion
         page_context,
         ->(context, converter) do
           context["tab_id"] = id
+          context["first"] = first
           context["tab_body"] = converter.convert(@body.render(page_context))
         end
       )

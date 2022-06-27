@@ -25,7 +25,7 @@ module Jekyll::Potion
               context["link_description"] = html.at("meta[name='description']")["content"] unless html.at("meta[name='description']").nil?
               context["link_url"] = params["url"]
             rescue StandardError => msg
-              puts "#{params["url"]} is break."
+              logger.warn("#{params["url"]} is break.")
               context["link_title"] = params["url"]
               context["link_url"] = params["url"]
             end

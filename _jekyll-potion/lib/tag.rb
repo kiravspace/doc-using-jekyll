@@ -7,6 +7,7 @@ module Jekyll::Potion
     attr_accessor :id
     attr_accessor :template_name
     attr_accessor :params
+    attr_accessor :logger
 
     def initialize(tag_name, markup, options)
       super
@@ -22,6 +23,8 @@ module Jekyll::Potion
         @template_name << "-#{$1}" unless $1.nil?
         @params = attr_to_hash($2) unless $2.nil?
       end
+
+      @logger = Logger.new(self)
     end
 
     def id_format

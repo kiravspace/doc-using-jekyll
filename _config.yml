@@ -7,7 +7,6 @@ exclude:
   - "*.iml"
   - ".idea/"
   - "_jekyll-potion"
-#  - "_favicon"
 
 collections:
   posts:

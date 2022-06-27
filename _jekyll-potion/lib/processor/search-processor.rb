@@ -2,30 +2,14 @@ require "nokogiri"
 require "json"
 
 module Jekyll::Potion
-  class SearchProcessor < Processor
+  class SearchProcessor < HTMLPageProcessor
     def initialize(config)
       super
       @indexes = []
     end
 
-    def load_static_files(base, dir = "")
-      Dir.foreach(File.join(base, dir)) { |file_name|
-        next if file_name == "." or file_name == ".."
-
-        path = File.join(base, dir, file_name)
-
-        if File.directory?(path)
-          load_static_files(base, file_name)
-        else
-          logger.trace("add static file #{File.join(dir, file_name)}")
-          config.add_static_files(base, dir, file_name)
-        end
-      }
-    end
-
-    def page_post_render(page)
+    def html_post_render(page, html)
       if config.markdown_converter.matches(page.extname)
-        html = Nokogiri::HTML.parse(page.output)
         page_potion = config.page_potion(page)
 
         page_index = {

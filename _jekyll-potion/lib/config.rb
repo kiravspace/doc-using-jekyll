@@ -34,7 +34,7 @@ module Jekyll::Potion
         "navigation-processor",
         "empty-content-processor",
         "pagination-processor",
-        "rewrite-img-src-processor",
+        "rewrite-img-processor",
         "rewrite-a-href-processor",
         "search-processor"
       ]
@@ -58,41 +58,41 @@ module Jekyll::Potion
                                           .map { |processor_class| processor_class.new(self) }
 
       @assets_collection = Jekyll::Collection.new(@site, assets_path)
-
-      puts @config
-      puts site.config[CONFIG_KEY]
     end
 
     def merge(default, config)
       merged = {}
-      default.each do |k, v|
-        if v.instance_of? Hash
-          merged[k] = self.merge(v, config[k])
-        else
-          merged[k] = config[k] ||= v
+
+      unless config.nil?
+        default.each do |k, v|
+          if v.instance_of? Hash
+            merged[k] = self.merge(v, config[k])
+          else
+            merged[k] = config[k] ||= v
+          end
         end
       end
       merged
     end
 
     def site_pre_render(site)
-      @processors.each { |processor| processor.site_pre_render(site) }
+      Processor.do_with_site(@processors, :site_pre_render, site)
     end
 
     def site_post_render(site)
-      @processors.each { |processor| processor.site_post_render(site) }
+      Processor.do_with_site(@processors, :site_post_render, site)
     end
 
     def site_post_read(site)
-      @processors.each { |processor| processor.site_post_read(site) }
+      Processor.do_with_site(@processors, :site_post_read, site)
     end
 
     def page_pre_render(page)
-      @processors.each { |processor| processor.page_pre_render(page) }
+      Processor.do_with_page(@processors, :page_pre_render, page)
     end
 
     def page_post_render(page)
-      @processors.each { |processor| processor.page_post_render(page) }
+      Processor.do_with_page(@processors, :page_post_render, page)
     end
 
     def baseurl
@@ -127,12 +127,12 @@ module Jekyll::Potion
       @config[TITLE_KEY]
     end
 
+    def index_url
+      File.join(baseurl, "")
+    end
+
     def site_icon
-      if @config[ICON_KEY].empty?
-        @config[ICON_KEY]
-      else
-        File.join(baseurl, @config[ICON_KEY])
-      end
+      File.join(baseurl, @config[ICON_KEY]) unless @config[ICON_KEY].empty?
     end
 
     def favicon_path
@@ -165,6 +165,10 @@ module Jekyll::Potion
 
     def static_files
       @site.static_files
+    end
+
+    def make_page(base, dir, name)
+      Jekyll::Page.new(@site, base, dir, name)
     end
 
     def add_static_files(base, dir, name)
