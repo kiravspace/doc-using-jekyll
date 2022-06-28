@@ -35,6 +35,7 @@ module Jekyll::Potion
         "empty-content-processor",
         "pagination-processor",
         "rewrite-img-processor",
+        "make-header-link-processor",
         "rewrite-a-href-processor",
         "search-processor"
       ]
@@ -88,11 +89,11 @@ module Jekyll::Potion
     end
 
     def page_pre_render(page)
-      Processor.do_with_page(@processors, :page_pre_render, page)
+      Processor.do_with_page(@processors, :page_pre_render, page) if markdown_converter.matches(page.extname)
     end
 
     def page_post_render(page)
-      Processor.do_with_page(@processors, :page_post_render, page)
+      Processor.do_with_page(@processors, :page_post_render, page) if markdown_converter.matches(page.extname)
     end
 
     def baseurl

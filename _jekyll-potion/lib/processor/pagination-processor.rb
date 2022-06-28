@@ -6,7 +6,7 @@ module Jekyll::Potion
     end
 
     def page_pre_render(page)
-      if config.show_pagination? && config.markdown_converter.matches(page.extname)
+      if config.show_pagination?
         config.page_potion(page).render_for_pagination(@template)
       end
     end

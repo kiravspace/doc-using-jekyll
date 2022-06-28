@@ -1,25 +1,30 @@
 <div class="api">
     <div class="api_summary">{{ api_summary }}</div>
-    <div class="api_header">
-        <div class="api_method">{{ api_method }}</div>
-        <div class="api_url">{{ api_base_url }}{{ api_path }}</div>
-    </div>
-    {{ api_description }}
-    <div class="api_parameter_title">Parameters</div>
-    {% if api_query_parameters %}
-        <div class="api_parameter_category_title">Query</div>
-        <div class="api_parameters">
-            {{ api_query_parameters }}
+    <div class="api_content">
+        <div class="api_header">
+            <div class="api_method"><label>{{ api_method | upcase }}</label></div>
+            <div class="api_url">
+                <label class="api_base_url">{{ api_base_url }}</label>
+                <label class="api_path">{{ api_path }}</label>
+            </div>
         </div>
-    {% endif %}
-    {% if api_body_parameters %}
-        <div class="api_parameter_category_title">Body</div>
-        <div class="api_parameters">
-            {{ api_body_parameters }}
+        {{ api_description }}
+        <div class="api_parameter_title">Parameters</div>
+        {% if api_query_parameters %}
+            <div class="api_parameter_category_title">Query</div>
+            <div class="api_parameters">
+                {{ api_query_parameters }}
+            </div>
+        {% endif %}
+        {% if api_body_parameters %}
+            <div class="api_parameter_category_title">Body</div>
+            <div class="api_parameters">
+                {{ api_body_parameters }}
+            </div>
+        {% endif %}
+        <div class="api_response_title">Responses</div>
+        <div class="api_responses">
+            {{ api_responses }}
         </div>
-    {% endif %}
-    <div class="api_response_title">Responses</div>
-    <div class="api_responses">
-        {{ api_responses }}
     </div>
 </div>

@@ -24,11 +24,11 @@ Play Builder를 이용하여 '날씨와 미세 먼지 정보를 제공하는 Pla
    * 입력한 Intent에 해당하는 예상 발화들을 입력합니다.
    * 실제 예: "날씨 알려줘", "날씨 알려주세요", "날씨 어때?"
    * 같은 의도라도 다양한 표현이 존재할 수 있으므로 예상 발화를 많이 입력할수록 사용자 의도 파악에 도움이 됩니다.
-5. 입력한 발화를 삭제하려면 Expression 리스트에서 각 발화마다 표시된 휴지통() 아이콘을 누릅니다.
+5. 입력한 발화를 삭제하려면 Expression 리스트에서 각 발화마다 표시된 휴지통(![](../../../assets/images/create-an-action-and-an-answer-05.png)) 아이콘을 누릅니다.
 
    ![](../../../assets/images/create-an-intent-and-custom-utterances-01.gif)
 6. Intent에 예상 발화를 등록한 후 `Play 저장` 버튼을 클릭하여 Intent 등록 작업을 완료합니다.
-7`Play 저장` 버튼 대신 `목록` 버튼을 클릭하면 Play에 Intent를 추가하지 않고 Custom Intents 페이지로 이동합니다.
+7. `Play 저장` 버튼 대신 `목록` 버튼을 클릭하면 Play에 Intent를 추가하지 않고 Custom Intents 페이지로 이동합니다.
 
 {% alerts style="info" %}
 Intent를 Play에 저장하면, NLU 엔진은 등록된 예상 발화를 자동으로 학습해서 해당 Play의 NLU 모델을 생성하게 됩니다. 이 NLU 모델은 사용자의 발화를 이해하여 Intent/Entity를 분석하는 역할을 합니다.

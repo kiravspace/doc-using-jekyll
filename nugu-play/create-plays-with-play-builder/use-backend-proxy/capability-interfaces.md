@@ -9,7 +9,7 @@ Capability Interface는 디바이스의 기능을 제어하기 위한 규격을 
 특정 기능을 위한 명령어들을 같은 이름 공간(namespace) 내에 정의하며, Play가 지원하는 기능에 따라 필요한 Capability Interface를 포함하여 구현할 수 있습니다. Capability Interface는 외부 연동 서버(Backend proxy)에 구현이 되어 있어야 Play에서 활용할 수 있습니다.
 
 {% alerts style="info" %}
-Play에서 Capability Interface를 활용하는 방법에 대한 자세한 내용은 [AudioPlayer Interface 지원하는 Play 만들기](../../create-a-play-with-audioplayer)를 참고하세요.
+Play에서 Capability Interface를 활용하는 방법에 대한 자세한 내용은 [AudioPlayer Interface 지원하는 Play 만들기](../create-a-play-with-audioplayer)를 참고하세요.
 {% endalerts %}
 
 Capability Interface는 다음의 세 요소로 구성되어 있습니다.

@@ -1,7 +1,9 @@
 <header>
     <div class="header">
         <a href="{{ site.data.potion.index_url }}" class="title">
+            {% if site.data.potion.site_icon %}
             <img src="{{ site.data.potion.site_icon }}">
+            {% endif %}
             {{ site.data.potion.site_title }}
         </a>
     </div>

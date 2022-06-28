@@ -52,7 +52,7 @@ $(function () {
             this.keyupEventHandlers.push({
                 "keyCode": 27,
                 "condition": () => !this.modal_image_area.parent().hasClass("hide"),
-                "accept": e => this.modal_image_area.parent().addClass("hide")
+                "accept": () => this.modal_image_area.parent().addClass("hide")
             });
 
             Page.on(this, $("#go_search"), "click", () => {
@@ -85,15 +85,16 @@ $(function () {
             this.keyupEventHandlers.push({
                 "keyCode": 27,
                 "condition": () => !this.modal_search_area.parent().hasClass("hide"),
-                "accept": e => this.modal_search_area.parent().addClass("hide")
+                "accept": () => this.modal_search_area.parent().addClass("hide")
             });
 
             this.updateSectionTabs();
             this.updateSectionImages();
             this.updateSectionLinks();
+            this.updateSectionCopy();
             this.updateSectionCodes();
 
-            Page.on(this, $(window), "popstate", e => {
+            Page.on(this, $(window), "popstate", () => {
                 this.loadPage($(location).attr("pathname") + $(location).attr("hash"));
             });
         }
@@ -122,7 +123,7 @@ $(function () {
                 .filter((_, div) => $(div).parent().has(selected).length)
                 .removeClass("fold");
 
-            selected.parent().addClass("selected")[0].scrollIntoView();
+            selected.parent().addClass("selected");
         }
 
         updateSectionTabs() {
@@ -157,6 +158,18 @@ $(function () {
             Page.on(this, only_hash_links, "click", this.updateHash);
         }
 
+        updateSectionCopy() {
+            let copy_links = this.section.find("div.copy_link");
+
+            Page.on(this, copy_links, "click", e => {
+                let $copy_link = $(e.currentTarget);
+
+                let url = [$(location).attr("protocol"), $(location).attr("host"), $copy_link.attr("data-copy-link")].join("");
+
+                navigator.clipboard.writeText(url);
+            });
+        }
+
         updateSectionCodes() {
             let codeCopy = this.section.find("div.copy");
             Page.on(this, codeCopy, "click", e => {
@@ -175,7 +188,10 @@ $(function () {
         }
 
         loadPage(pathname, callback) {
-            this.section.load(pathname + " #container", html => {
+            this.section.load(pathname + " #container", (html, status) => {
+                if (status !== "success") {
+                    return;
+                }
                 this.section.scrollTop(0);
                 let title = html.match("<title>(.*?)</title>")[1];
                 document.title = title;
@@ -187,6 +203,7 @@ $(function () {
                 this.updateSectionTabs();
                 this.updateSectionImages();
                 this.updateSectionLinks();
+                this.updateSectionCopy();
                 this.updateSectionCodes();
 
                 this.updateNavigationSelected(pathname);
@@ -347,8 +364,8 @@ $(function () {
         }
 
         static goHash(hash) {
-            let $hash = $(hash);
-            if ($hash) {
+            let $hash = $(decodeURI(hash));
+            if ($hash.length) {
                 $hash[0].scrollIntoView();
             }
         }
