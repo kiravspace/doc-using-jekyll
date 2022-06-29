@@ -29,7 +29,7 @@ NUGU APP 설정 > 사용자 설정 > Biz 사용자 설정
    ![](../../assets/images/app체험판1.jpg)
 2. 초대 수락했던 Private Play에 대한 사용 동의 철회가 가능합니다. 동의 철회 즉시, 해당 Play를 사용할 수 없습니다.
 
-![](../../assets/images/app체험판2.jpg)
+   ![](../../assets/images/app체험판2.jpg)
 
 ## 3. Biz 사용자 설정 (정식판)
 

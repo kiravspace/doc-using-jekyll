@@ -1,16 +1,28 @@
-<header>
-    <div class="header">
-        <a href="{{ site.data.potion.index_url }}" class="title">
+<div class="header menu">
+    <div>
+        <div id="menu" class="menu_icon show_menu"></div>
+    </div>
+</div>
+<div class="header title">
+    <div>
+        <a href="{{ site.data.potion.index_url }}" class="title_link">
             {% if site.data.potion.site_icon %}
             <img src="{{ site.data.potion.site_icon }}">
             {% endif %}
             {{ site.data.potion.site_title }}
         </a>
     </div>
-    <div class="search">
-        <div id="go_search" class="search_bar">
+</div>
+<div class="header search">
+    <div>
+        <div class="search_bar show_search">
             <div class="search_icon"></div>
-            | 검색
+            <div class="search_text">| 검색</div>
         </div>
     </div>
-</header>
+</div>
+<div class="header small_search">
+    <div>
+        <div class="search_icon show_search"></div>
+    </div>
+</div>

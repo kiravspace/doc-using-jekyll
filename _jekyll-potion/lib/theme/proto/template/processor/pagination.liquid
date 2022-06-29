@@ -1,24 +1,30 @@
-<div class="pagination_block">
+<div class="block_row pagination">
     {% if has_before? %}
-        <a href="{{ before.url }}">
-            <div class="block left">
-                <div class="block_thumb prev"></div>
-                <div class="block_content">
-                    <div class="block_title">{{ before.page.title }}</div>
-                    <div class="block_description">{{ before.page.description }}</div>
-                </div>
+        <div>
+            <div class="block pagination">
+                <a class="block_body" href="{{ before.url }}">
+                    <div class="thumb prev"></div>
+                    <div class="content right">
+                        <div class="x_small">이전</div>
+                        <div class="large">{{ before.page.title }}</div>
+                        <div class="small">{{ before.page.description }}</div>
+                    </div>
+                </a>
             </div>
-        </a>
+        </div>
     {% endif %}
     {% if has_after? %}
-        <a href="{{ after.url }}">
-            <div class="block right">
-                <div class="block_content">
-                    <div class="block_title">{{ after.page.title }}</div>
-                    <div class="block_description">{{ after.page.description }}</div>
-                </div>
-                <div class="block_thumb next"></div>
+        <div>
+            <div class="block pagination">
+                <a class="block_body" href="{{ after.url }}">
+                    <div class="content">
+                        <div class="x_small">다음</div>
+                        <div class="large">{{ after.page.title }}</div>
+                        <div class="small">{{ after.page.description }}</div>
+                    </div>
+                    <div class="thumb next"></div>
+                </a>
             </div>
-        </a>
+        </div>
     {% endif %}
 </div>

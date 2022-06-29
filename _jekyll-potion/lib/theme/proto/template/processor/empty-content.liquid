@@ -1,13 +1,15 @@
-<div class="empty_block">
+<div class="block_row">
     {% for child in page.potion.children %}
-        <a class="left" href="{{ child.url }}">
+        <div>
             <div class="block">
-                <div class="block_thumb document"></div>
-                <div class="block_content">
-                    <div class="block_title">{{ child.page.title }}</div>
-                    <div class="block_description">{{ child.page.description }}</div>
-                </div>
+                <a class="block_body" href="{{ child.url }}">
+                    <div class="thumb document"></div>
+                    <div class="content">
+                        <div class="large">{{ child.page.title }}</div>
+                        <div class="small">{{ child.page.description }}</div>
+                    </div>
+                </a>
             </div>
-        </a>
+        </div>
     {% endfor %}
 </div>

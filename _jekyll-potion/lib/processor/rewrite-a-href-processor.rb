@@ -18,16 +18,15 @@ module Jekyll::Potion
         if href =~ HASH_SCHEME
           hash_count += 1
           a_tag.add_class("hash_internal")
+        elsif href !~ ABSOLUTE_PATH
+          absolute_href = Pathname.new(
+            File.join(config.baseurl, File.dirname(page.path), href)
+          ).cleanpath.to_s
+
+          a_tag["href"] = absolute_href
         end
 
-        next if href =~ HTTP_SCHEME || href =~ ABSOLUTE_PATH || href =~ HASH_SCHEME
-
-        absolute_href = Pathname.new(
-          File.join(config.baseurl, File.dirname(page.path), href)
-        ).cleanpath.to_s
-
         href_count += 1
-        a_tag["href"] = absolute_href
         a_tag.add_class("a_internal")
       }
 

@@ -13,7 +13,7 @@ module Jekyll::Potion
 
       page_index = {
         "url" => page_potion.url,
-        "hashes" => create_indexes(page, html.css("section").css("div.container").css("div.content")),
+        "hashes" => create_indexes(page, html.css("main").css("div.main_container").css("div.content")),
         "order" => page_potion.order
       }
       @indexes << page_index
