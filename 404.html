@@ -60,23 +60,39 @@
 </head>
 <body>
 <header>
-    <div class="header">
-        <a href="/" class="title">
+    <div class="header menu">
+    <div>
+        <div id="menu" class="menu_icon show_menu"></div>
+    </div>
+</div>
+<div class="header title">
+    <div>
+        <a href="/" class="title_link">
+            
             <img src="/assets/icon/icon.png">
+            
             Developers | Guide
         </a>
     </div>
-    <div class="search">
-        <div id="go_search" class="search_bar">
+</div>
+<div class="header search">
+    <div>
+        <div class="search_bar show_search">
             <div class="search_icon"></div>
-            | 검색
+            <div class="search_text">| 검색</div>
         </div>
     </div>
-</header>
+</div>
+<div class="header small_search">
+    <div>
+        <div class="search_icon show_search"></div>
+    </div>
+</div>
 
+</header>
 <nav>
     <div class="nav_container">
-        <ul class="nav_menu">
+    <ul class="nav_menu">
     
         <li>
     <div class="nav_link fold ">
@@ -2136,11 +2152,10 @@
     
 </ul>
 
-    </div>
+</div>
 </nav>
-
-<section id="section">
-    <div id="container" class="container">
+<main>
+    <div id="container" class="main_container">
     <div class="header">
         <div class="heading"></div>
         <div class="description"></div>
@@ -2148,12 +2163,13 @@
     <div class="content">
         <p>페이지를 찾을 수 없습니다.</p>
 
+        
+        
     </div>
-    
-    
 </div>
-</section>
-<div id="modal_image_area" class="modal_image_area hide">
+
+</main>
+<div id="modal_image_area" class="modal hide">
     <div class="modal_wrapper">
         <img id="modal_image" class="modal_image" src="" data-skip-src-to-absolute>
     </div>
@@ -2172,7 +2188,7 @@
 </div>
 
 </script>
-<div id="modal_search_area" class="modal_image_area hide">
+<div id="modal_search_area" class="modal hide">
     <div class="modal_wrapper">
         <div class="modal_search">
             <div class="search_bar">

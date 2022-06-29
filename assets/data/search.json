@@ -185,7 +185,14 @@
           "let displayPlayerController = NuguDisplayPlayerController()",
           "MainViewController.swift\n        \n        복사성공!",
           "extension MainViewController: AudioDisplayViewPresenterDelegate {\n     func displayControllerShouldUpdateTemplate(template: AudioPlayerDisplayTemplate) {\n         NuguCentralManager.shared.displayPlayerController.update(template)\n     }\n\n     func displayControllerShouldUpdateState(state: AudioPlayerState) {\n         NuguCentralManager.shared.displayPlayerController.update(state)\n     }\n\n     func displayControllerShouldUpdateDuration(duration: Int) {\n         NuguCentralManager.shared.displayPlayerController.update(duration)\n     }\n\n     func displayControllerShouldRemove() {\n         NuguCentralManager.shared.displayPlayerController.remove()\n     }\n    ...\n}",
-          "MPNowPlayingInfoCenter 관련 기능을 AudioDisplayViewPresenter 와 ControlCenterManager 에서 처리하기 때문에 Application 의 NuguDisplayPlayerController.swift 및 관련 코드를 삭제합니다."
+          "MPNowPlayingInfoCenter 관련 기능을 AudioDisplayViewPresenter 와 ControlCenterManager 에서 처리하기 때문에 Application 의 NuguDisplayPlayerController.swift 및 관련 코드를 삭제합니다.",
+          "이전\n                        테스트 환경 설정",
+          "다음\n                        Android\n                        Android 환경에서 NUGU 서비스를 쉽게 사용할 수 있도록 NUGU SDK for Android를 제공합니다.",
+          "이전",
+          "테스트 환경 설정",
+          "다음",
+          "Android",
+          "Android 환경에서 NUGU 서비스를 쉽게 사용할 수 있도록 NUGU SDK for Android를 제공합니다."
         ]
       }
     ],
@@ -209,7 +216,10 @@
           "NUGU developers에서는 NUGU의 PoC에서 손쉽게 새로운 기능과 서비스를 Play로 제공할 수 있도록 지원하는 NUGU play kit과,  Play를 비지니스 목적으로 Private하게 사용하게 하고 Announcement 메세지를 보낼 수 있는 NUGU biz kit를 지원하며, 여러분의 다양한 디바이스 또는 어플리케이션 등에서 NUGU의 다양한 서비스를 직접 제공할 수 있도록 지원하는 NUGU SDK를 제공합니다.",
           "NUGU play kit은 대화 기반 인공지능 서비스를 개발할 수 있는 통합 개발 환경을 GUI 기반으로 제공함으로써, 사용자들은 쉽게 자신들의 서비스를 개발할 수 있습니다. NUGU play kit에서는 사용자 발화가 처리되는 과정에 필요한 요소 기술들을 제공하고 서비스를 개발할 수 있도록 하는 통합 개발 환경인 Play Builder가 제공됩니다. 개발된 서비스는 NUGU의 ‘심사’와 ‘배포’ 과정을 거친 후 스피커, T map, Btv, T전화 등의 PoC에서 사용자들에게 제공됩니다. 또한 특정 사용자 그룹이나 전용 디바이스에서만 해당 서비스를 제공하고자 할 경우에는 NUGU biz  kit기능을 통하여 이를 설정할 수 있습니다.",
           "NUGU SDK는 여러분의 다양한 디바이스와 어플리케이션 등에서 NUGU의 자연어 이해 기반의 다양한 기능이 직접 제공될 수 있도록 NUGU 플랫폼과의 연동 및 NUGU의 다양한 서비스 제공을 지원합니다. NUGU SDK는 Android OS, iOS, Linux OS를 지원하며, SDK 탑재를 위한 개발가이드 및 UX 가이드 등을 함께 제공합니다.",
-          "NUGU developers는 개발자가 아니어도 대화 기반 인공지능 서비스를 개발할 수 있는 플랫폼입니다. 또한 자체의 인공지능 플랫폼을 갖추지 못했더라도, 다양한 상품에 쉽고 빠르게 인공지능 기반의 기능을 제공할 수 있도록 지원합니다. NUGU 이용자들에게 좋은 서비스를 제공하길 희망하는 모든 분들과 빠르게 NUGU의 인공지능 기능을 다양한 디바이스와 어플리케이션에서 제공하고자 희망하시는 모든 분들께서 NUGU developers를 통해 그 희망을 실현할 수 있기를 바랍니다."
+          "NUGU developers는 개발자가 아니어도 대화 기반 인공지능 서비스를 개발할 수 있는 플랫폼입니다. 또한 자체의 인공지능 플랫폼을 갖추지 못했더라도, 다양한 상품에 쉽고 빠르게 인공지능 기반의 기능을 제공할 수 있도록 지원합니다. NUGU 이용자들에게 좋은 서비스를 제공하길 희망하는 모든 분들과 빠르게 NUGU의 인공지능 기능을 다양한 디바이스와 어플리케이션에서 제공하고자 희망하시는 모든 분들께서 NUGU developers를 통해 그 희망을 실현할 수 있기를 바랍니다.",
+          "다음\n                        NUGU play",
+          "다음",
+          "NUGU play"
         ]
       }
     ],
@@ -380,7 +390,13 @@
           "{\n  \"version\": 1,\n  \"requestId\": \"20190916109ad8219c251742859c56f6ec3c4700bb\",\n  \"action\": {\n    \"command\": {\n      \"smartHomeCapability\": \"AirflowControl\",\n      \"smartHomeDirective\": \"SetAirflowMin\"\n    },\n    \"smartHomeDevices\": [\n      {\n        \"id\": \"1111\",\n        \"deviceTypeCode\": \"AIR_CONDITIONER\",\n        \"deviceTypeName\": \"에어컨\",\n        \"deviceModelName\": \"example air_conditioner\",\n        \"friendlyName\": \"거실\",\n        \"manufacturer\": \"example manufacturer\",\n        \"supportedCapabilities\": {\n          \"airflowControl\": {\n            \"supportedAirflowTypes\": [\"HIGH\", \"MIDDLE\", \"LOW\", \"AUTO\"]\n          }\n        },\n        \"customData\": {\n          \"foo\": \"bar\"\n        }\n      },\n      {\n        \"id\": \"2222\",\n        \"deviceTypeCode\": \"AIR_CONDITIONER\",\n        \"deviceTypeName\": \"에어컨\",\n        \"deviceModelName\": \"example air_conditioner\",\n        \"friendlyName\": \"안방\",\n        \"manufacturer\": \"example manufacturer\",\n        \"supportedCapabilities\": {\n          \"airflowControl\": {\n            \"supportedAirflowTypes\": [\"HIGH\", \"MIDDLE\", \"LOW\", \"AUTO\"]\n          }\n        },\n        \"customData\": {\n          \"foo\": \"bar\"\n        }\n      }\n    ]\n  },\n  \"context\": {\n    \"session\": {\n      \"id\": \"example_session_id\",\n      \"accessToken\": \"example_access_token\"\n    }\n  }\n}",
           "Response Sample",
           "복사성공!",
-          "{\n  \"requestId\": \"20190916109ad8219c251742859c56f6ec3c4700bb\",\n  \"data\": [\n    {\n      \"resultCode\": \"OK\",\n      \"smartHomeDevice\": {\n        \"id\": \"1111\",\n        \"deviceTypeCode\": \"AIR_CONDITIONER\",\n        \"deviceTypeName\": \"에어컨\",\n        \"friendlyName\": \"거실\",\n        \"deviceModelName\": \"example air_conditioner\",\n        \"customData\": {\n          \"foo\": \"bar\"\n        }\n      }\n    },\n    {\n      \"resultCode\": \"OK\",\n      \"smartHomeDevice\": {\n        \"id\": \"2222\",\n        \"deviceTypeCode\": \"AIR_CONDITIONER\",\n        \"deviceTypeName\": \"에어컨\",\n        \"friendlyName\": \"안방\",\n        \"deviceModelName\": \"example air_conditioner\",\n        \"customData\": {\n          \"foo\": \"bar\"\n        }\n      }\n    }\n  ]\n}"
+          "{\n  \"requestId\": \"20190916109ad8219c251742859c56f6ec3c4700bb\",\n  \"data\": [\n    {\n      \"resultCode\": \"OK\",\n      \"smartHomeDevice\": {\n        \"id\": \"1111\",\n        \"deviceTypeCode\": \"AIR_CONDITIONER\",\n        \"deviceTypeName\": \"에어컨\",\n        \"friendlyName\": \"거실\",\n        \"deviceModelName\": \"example air_conditioner\",\n        \"customData\": {\n          \"foo\": \"bar\"\n        }\n      }\n    },\n    {\n      \"resultCode\": \"OK\",\n      \"smartHomeDevice\": {\n        \"id\": \"2222\",\n        \"deviceTypeCode\": \"AIR_CONDITIONER\",\n        \"deviceTypeName\": \"에어컨\",\n        \"friendlyName\": \"안방\",\n        \"deviceModelName\": \"example air_conditioner\",\n        \"customData\": {\n          \"foo\": \"bar\"\n        }\n      }\n    }\n  ]\n}",
+          "이전\n                        SmartHomeCapability",
+          "다음\n                        AirQualityCheck Interface",
+          "이전",
+          "SmartHomeCapability",
+          "다음",
+          "AirQualityCheck Interface"
         ]
       }
     ],
@@ -449,7 +465,13 @@
           "해당 Capability/Directive에서 응답 시 사용할 수 있는 ErrorCode는 SmartHomeError를 참조해주시기 바랍니다.",
           "Sample Error Response",
           "복사성공!",
-          "{\n  \"requestId\":\"20190916109ad8219c251742859c56f6ec3c4700bb\",\n  \"data\":[\n     {\n        \"resultCode\":\"DeviceTurnedOff\",\n        \"smartHomeDevice\":{\n           \"id\":\"D68856420232\",\n           \"deviceTypeCode\":\"AIR_CONDITIONER\",\n           \"deviceModelName\":\"삼성전자 스마트 에어컨\",\n           \"friendlyName\":\"거실\",\n           \"deviceTypeName\":\"에어컨\",\n           \"customData\":{\n              \"foo\": \"bar\"\n           }\n        }\n     }\n  ]\n}"
+          "{\n  \"requestId\":\"20190916109ad8219c251742859c56f6ec3c4700bb\",\n  \"data\":[\n     {\n        \"resultCode\":\"DeviceTurnedOff\",\n        \"smartHomeDevice\":{\n           \"id\":\"D68856420232\",\n           \"deviceTypeCode\":\"AIR_CONDITIONER\",\n           \"deviceModelName\":\"삼성전자 스마트 에어컨\",\n           \"friendlyName\":\"거실\",\n           \"deviceTypeName\":\"에어컨\",\n           \"customData\":{\n              \"foo\": \"bar\"\n           }\n        }\n     }\n  ]\n}",
+          "이전\n                        AirflowControl Interface",
+          "다음\n                        BrightnessControl Interface",
+          "이전",
+          "AirflowControl Interface",
+          "다음",
+          "BrightnessControl Interface"
         ]
       }
     ],
@@ -482,7 +504,14 @@
         "indexes": [
           "지원하는 OS 버전",
           "NUGU SDK for Android는 Android Lollipop(5.0) 이상을 지원합니다.",
-          "Android Kitkat(4.4)에서도 동작하지만 TLS v1.2를 사용하도록 설정이 필요합니다."
+          "Android Kitkat(4.4)에서도 동작하지만 TLS v1.2를 사용하도록 설정이 필요합니다.",
+          "이전\n                        1.0 으로 업그레이드\n                        NUGU SDK iOS 를 0.x 에서 1.0 으로 업그레이드 하기위한 가이드입니다.",
+          "다음\n                        시작하기",
+          "이전",
+          "1.0 으로 업그레이드",
+          "NUGU SDK iOS 를 0.x 에서 1.0 으로 업그레이드 하기위한 가이드입니다.",
+          "다음",
+          "시작하기"
         ]
       }
     ],
@@ -596,7 +625,13 @@
           "email | string | 발송 대상 Biz 사용자 이메일",
           "resultCode | enum | 발송 결과OK : 발송 대상 기기 모두 성공SOME_OK : 발송 대상 기기 일부 성공FAIL : 발송 대상 기기 모두 실패NOT_AGREE : API 수신 거부NO_DEVICE : API 수신 허용 기기 없음",
           "deviceResults | array of object | 기기별 응답값",
-          "deviceResults[].code | enum | 기기별 발송 결과OK : 발송 성공NOT_CONNECTED : 사용자에 연결되지 않은 기기TIMEOUT : 기기와의 연결 실패CONNECT_ERROR : 기기가 꺼져 있거나, 네트워크에 문제가 있음NOT_SUPPORTED : 지원하지 않는 기기ERROR : 알 수 없는 에러(개발팀 문의 필요)"
+          "deviceResults[].code | enum | 기기별 발송 결과OK : 발송 성공NOT_CONNECTED : 사용자에 연결되지 않은 기기TIMEOUT : 기기와의 연결 실패CONNECT_ERROR : 기기가 꺼져 있거나, 네트워크에 문제가 있음NOT_SUPPORTED : 지원하지 않는 기기ERROR : 알 수 없는 에러(개발팀 문의 필요)",
+          "이전\n                        전용디바이스 그룹별 Announcement 전송",
+          "다음\n                        Biz 사용자 그룹별 Announcement 전송",
+          "이전",
+          "전용디바이스 그룹별 Announcement 전송",
+          "다음",
+          "Biz 사용자 그룹별 Announcement 전송"
         ]
       }
     ],
@@ -709,7 +744,13 @@
           "devices | array of object | 발송 요청 그룹내 디바이스들의 발송 결과",
           "devices[].uniqueName | string | 발송 대상 기기의 unique name",
           "devices[].token | string | 발송 대상 기기의 API Token",
-          "devices[].resultCode | enum | 발송 결과OK : 발송 성공NOT_CONNECTED : 사용자에 연결되지 않은 기기TIMEOUT : 기기와의 연결 실패CONNECT_ERROR : 기기가 꺼져 있거나, 네트워크에 문제가 있음NOT_SUPPORTED : 지원하지 않는 기기ERROR : 알 수 없는 에러(개발팀 문의 필요)"
+          "devices[].resultCode | enum | 발송 결과OK : 발송 성공NOT_CONNECTED : 사용자에 연결되지 않은 기기TIMEOUT : 기기와의 연결 실패CONNECT_ERROR : 기기가 꺼져 있거나, 네트워크에 문제가 있음NOT_SUPPORTED : 지원하지 않는 기기ERROR : 알 수 없는 에러(개발팀 문의 필요)",
+          "이전\n                        API 발송 (Announcement)",
+          "다음\n                        Biz 사용자별 Announcement 전송",
+          "이전",
+          "API 발송 (Announcement)",
+          "다음",
+          "Biz 사용자별 Announcement 전송"
         ]
       }
     ],
@@ -824,7 +865,13 @@
           "users[].email | string | 발송 대상 Biz 사용자 이메일",
           "users[].resultCode | enum | 발송 결과OK : 발송 대상 기기 모두 성공SOME_OK : 발송 대상 기기 일부 성공FAIL : 발송 대상 기기 모두 실패NOT_AGREE : API 수신 거부NO_DEVICE : API 수신 허용 기기 없음",
           "users[].deviceResults | array of object | 기기별 응답값",
-          "users[].deviceResults[].code | enum | 기기별 발송 결과OK : 발송 성공NOT_CONNECTED : 사용자에 연결되지 않은 기기TIMEOUT : 기기와의 연결 실패CONNECT_ERROR : 기기가 꺼져 있거나, 네트워크에 문제가 있음NOT_SUPPORTED : 지원하지 않는 기기ERROR : 알 수 없는 에러(개발팀 문의 필요)"
+          "users[].deviceResults[].code | enum | 기기별 발송 결과OK : 발송 성공NOT_CONNECTED : 사용자에 연결되지 않은 기기TIMEOUT : 기기와의 연결 실패CONNECT_ERROR : 기기가 꺼져 있거나, 네트워크에 문제가 있음NOT_SUPPORTED : 지원하지 않는 기기ERROR : 알 수 없는 에러(개발팀 문의 필요)",
+          "이전\n                        Biz 사용자별 Announcement 전송",
+          "다음\n                        NUGU SDK",
+          "이전",
+          "Biz 사용자별 Announcement 전송",
+          "다음",
+          "NUGU SDK"
         ]
       }
     ],
@@ -841,6 +888,12 @@
           "Biz 전용 디바이스 그룹이나, Biz 사용자를 대상으로 Announcement 메세지 (tts, image)를 보낼 수 있는 기능입니다.",
           "Biz 사용자 그룹별 Announcement 전송",
           "Biz 사용자별 Announcement 전송",
+          "전용디바이스 그룹별 Announcement 전송",
+          "이전\n                        전용 디바이스 그룹 조회",
+          "다음\n                        전용디바이스 그룹별 Announcement 전송",
+          "이전",
+          "전용 디바이스 그룹 조회",
+          "다음",
           "전용디바이스 그룹별 Announcement 전송"
         ]
       }
@@ -935,7 +988,13 @@
           "name | string | 생성한 그룹 이름",
           "token | string | 생성한 그룹 API 토큰",
           "alias | string | 생성한 그룹의 Alias",
-          "playServiceIds | array of string | 그룹에 할당된 private play의 playServiceId"
+          "playServiceIds | array of string | 그룹에 할당된 private play의 playServiceId",
+          "이전\n                        Biz 사용자 그룹 관련",
+          "다음\n                        Biz 사용자 그룹 수정",
+          "이전",
+          "Biz 사용자 그룹 관련",
+          "다음",
+          "Biz 사용자 그룹 수정"
         ]
       }
     ],
@@ -1044,7 +1103,13 @@
           "복사성공!",
           "{\n    \"userApiToken\": \"XXX\",\n    \"resultCode\": \"OK\"\n}",
           "userApiToken | body | string | Y | 진행중인 Biz 사용자 API Token",
-          "resultCode | body | enum | Y | OK : 사용자 생성 완료 CONFLICT : 생성한 Biz Api Token이 다른 Biz 사용자에 중복된 경우"
+          "resultCode | body | enum | Y | OK : 사용자 생성 완료 CONFLICT : 생성한 Biz Api Token이 다른 Biz 사용자에 중복된 경우",
+          "이전\n                        Biz 사용자 초대 목록 조회",
+          "다음\n                        Biz 전용 디바이스 API",
+          "이전",
+          "Biz 사용자 초대 목록 조회",
+          "다음",
+          "Biz 전용 디바이스 API"
         ]
       }
     ],
@@ -1093,7 +1158,13 @@
           "3.1 HTTP Status",
           "204 | 정상 삭제시 응답",
           "403 | 퍼블리셔 API Token이 유효하지 않거나, 유효하지 않은 자원에 접근할 경우 리턴",
-          "404 | 삭제대상 그룹을 찾을 수 없을 때 응답"
+          "404 | 삭제대상 그룹을 찾을 수 없을 때 응답",
+          "이전\n                        Biz 사용자 그룹 수정",
+          "다음\n                        Biz 사용자 그룹 목록 조회",
+          "이전",
+          "Biz 사용자 그룹 수정",
+          "다음",
+          "Biz 사용자 그룹 목록 조회"
         ]
       }
     ],
@@ -1142,7 +1213,13 @@
           "3.1 HTTP Status",
           "204 | 정상 삭제시 응답",
           "403 | 퍼블리셔 API Token이 유효하지 않거나, 유효하지 않은 자원에 접근할 경우 리턴",
-          "404 | 삭제대상 사용자를 찾을 수 없을 때 응답"
+          "404 | 삭제대상 사용자를 찾을 수 없을 때 응답",
+          "이전\n                        Biz 사용자 수정",
+          "다음\n                        Biz 사용자 목록 조회",
+          "이전",
+          "Biz 사용자 수정",
+          "다음",
+          "Biz 사용자 목록 조회"
         ]
       }
     ],
@@ -1228,7 +1305,13 @@
           "plays[].agreeYn | Y/N | play별 이용동의 여부 사용자 초대 유형이 SERVICE일 경우 Y",
           "plays[].apiAgreeYn | Y/N | play별 API 수신 동의 여부 사용자 초대 유형이 SERVICE일 경우 Y",
           "plays[].apiAllowedDeviceCount | int | play별 API 수신 허용 기기 수 사용자 초대 유형이 SERVICE일 경우 serviceApiAllowedDeviceCount",
-          "plays[].acceptedDateTime | string | play별 초대 승인일(ISO-8601) 사용자 초대 유형이 SERVICE일 경우 serviceAcceptedDateTime"
+          "plays[].acceptedDateTime | string | play별 초대 승인일(ISO-8601) 사용자 초대 유형이 SERVICE일 경우 serviceAcceptedDateTime",
+          "이전\n                        Biz 사용자 목록 조회",
+          "다음\n                        Biz 사용자 초대 목록 조회",
+          "이전",
+          "Biz 사용자 목록 조회",
+          "다음",
+          "Biz 사용자 초대 목록 조회"
         ]
       }
     ],
@@ -1303,7 +1386,13 @@
           "invitations[].users[].name | string | 초대한 사용자의 이름",
           "invitations[].users[].token | string | 초대한 사용자의 API 토큰 신규 초대시 존재하지 않는다.",
           "invitations[].users[].alias | string | 초대한 사용자의 Alias",
-          "invitations[].users[].status | enum | 사용자에 대한 초대장 유효 여부ENABLE, DISABLE"
+          "invitations[].users[].status | enum | 사용자에 대한 초대장 유효 여부ENABLE, DISABLE",
+          "이전\n                        Biz 사용자 상세 조회",
+          "다음\n                        Biz 사용자 API Token 생성",
+          "이전",
+          "Biz 사용자 상세 조회",
+          "다음",
+          "Biz 사용자 API Token 생성"
         ]
       }
     ],
@@ -1384,7 +1473,13 @@
           "users[].serviceType | enum | 사용자 초대 유형SERVICE : 서비스PLAY : play",
           "users[].apiAgreeType | enum | Biz API 수신 동의 유형ALL : 동의SOME : 일부 동의NONE : 미동의",
           "users[].authType | enum | 제휴사 인증 여부 유형ALL : 인증SOME : 일부 인증NONE : 미인증",
-          "users[].acceptedDateTime | string | 초대 승인일(ISO-8601)"
+          "users[].acceptedDateTime | string | 초대 승인일(ISO-8601)",
+          "이전\n                        Biz 사용자 삭제",
+          "다음\n                        Biz 사용자 상세 조회",
+          "이전",
+          "Biz 사용자 삭제",
+          "다음",
+          "Biz 사용자 상세 조회"
         ]
       }
     ],
@@ -1463,7 +1558,13 @@
           "users[].serviceType | enum | 사용자 초대 유형 SERVICE : 서비스 PLAY : play",
           "users[].apiAgreeType | enum | Biz API 수신 동의 유형 ALL : 동의 SOME : 일부 동의 NONE : 미동의",
           "users[].authType | enum | 제휴사 인증 여부 유형 ALL : 인증 SOME : 일부 인증 NONE : 미인증",
-          "users[].acceptedDateTime | string | 초대 승인일(ISO-8601)"
+          "users[].acceptedDateTime | string | 초대 승인일(ISO-8601)",
+          "이전\n                        Biz 사용자 그룹 목록 조회",
+          "다음\n                        Biz 사용자 관련",
+          "이전",
+          "Biz 사용자 그룹 목록 조회",
+          "다음",
+          "Biz 사용자 관련"
         ]
       }
     ],
@@ -1540,7 +1641,13 @@
           "groups[].alias | array of object | 그룹 추가 정보",
           "groups[].playCount | int | 그룹에 할당된 private play 갯수",
           "groups[].userCount | long | 그룹에 속한 사용자 수",
-          "groups[].createdDateTime | string | 생성일(ISO-8601)"
+          "groups[].createdDateTime | string | 생성일(ISO-8601)",
+          "이전\n                        Biz 사용자 그룹 삭제",
+          "다음\n                        Biz 사용자 그룹 상세 조회",
+          "이전",
+          "Biz 사용자 그룹 삭제",
+          "다음",
+          "Biz 사용자 그룹 상세 조회"
         ]
       }
     ],
@@ -1643,7 +1750,13 @@
         "title": "Biz 사용자 초대 > 3. Response > 3.3 설명",
         "indexes": [
           "3.3 설명",
-          "id | int | 생성한 초대에 대한 식별자"
+          "id | int | 생성한 초대에 대한 식별자",
+          "이전\n                        Biz 사용자 관련",
+          "다음\n                        Biz 사용자 수정",
+          "이전",
+          "Biz 사용자 관련",
+          "다음",
+          "Biz 사용자 수정"
         ]
       }
     ],
@@ -1739,7 +1852,13 @@
           "name | string | 수정한 그룹 이름",
           "token | string | 수정한 그룹 API 토큰",
           "alias | string | 수정한 그룹의 Alias",
-          "playServiceIds | array of string | 그룹에 할당된 private play의 playServiceId"
+          "playServiceIds | array of string | 그룹에 할당된 private play의 playServiceId",
+          "이전\n                        Biz 사용자 그룹 생성",
+          "다음\n                        Biz 사용자 그룹 삭제",
+          "이전",
+          "Biz 사용자 그룹 생성",
+          "다음",
+          "Biz 사용자 그룹 삭제"
         ]
       }
     ],
@@ -1835,7 +1954,13 @@
           "email | string | 수정한 Biz 사용자의 이메일",
           "name | string | 수정한 Biz 사용자의 이름",
           "alias | string | 수정한 Biz 사용자의 Alias",
-          "targetGroupId | array of string | 변경할 그룹의 ID"
+          "targetGroupId | array of string | 변경할 그룹의 ID",
+          "이전\n                        Biz 사용자 초대",
+          "다음\n                        Biz 사용자 삭제",
+          "이전",
+          "Biz 사용자 초대",
+          "다음",
+          "Biz 사용자 삭제"
         ]
       }
     ],
@@ -1851,7 +1976,13 @@
           "Biz 사용자 API",
           "Biz 사용자 관련 API를 제공합니다.",
           "Biz 사용자 그룹 관련",
-          "Biz 사용자 관련"
+          "Biz 사용자 관련",
+          "이전\n                        Biz API",
+          "다음\n                        Biz 사용자 그룹 관련",
+          "이전",
+          "Biz API",
+          "다음",
+          "Biz 사용자 그룹 관련"
         ]
       }
     ],
@@ -1867,7 +1998,16 @@
           "API References",
           "NUGU SDK iOS",
           "https://nugu-developers.github.io/nugu-android/index.html",
-          "NUGU SDK Linux: NUGU SDK Documentation"
+          "NUGU SDK Linux: NUGU SDK Documentation",
+          "이전\n                        구성요소",
+          "다음\n                        Source code",
+          "NUGU SDK iOS",
+          "https://nugu-developers.github.io/nugu-android/index.html",
+          "NUGU SDK Linux: NUGU SDK Documentation",
+          "이전",
+          "구성요소",
+          "다음",
+          "Source code"
         ]
       }
     ],
@@ -1882,6 +2022,12 @@
         "indexes": [
           "Biz 전용 디바이스 API",
           "Biz 전용 디바이스 관련 API를 제공합니다.",
+          "전용 디바이스 그룹 조회",
+          "이전\n                        Biz 사용자 API Token 생성",
+          "다음\n                        전용 디바이스 그룹 조회",
+          "이전",
+          "Biz 사용자 API Token 생성",
+          "다음",
           "전용 디바이스 그룹 조회"
         ]
       }
@@ -1953,7 +2099,13 @@
           "groups[].devices[].uniqueName | string | Y | 전용디바이스 unique name",
           "groups[].devices[].token | string | Y | 전용디바이스 기기 API 토큰",
           "groups[].devices[].name | string | Y | 전용디바이스 이름",
-          "groups[].devices[].alias | string | Y | 전용디바이스 Alias"
+          "groups[].devices[].alias | string | Y | 전용디바이스 Alias",
+          "이전\n                        Biz 전용 디바이스 API",
+          "다음\n                        API 발송 (Announcement)",
+          "이전",
+          "Biz 전용 디바이스 API",
+          "다음",
+          "API 발송 (Announcement)"
         ]
       }
     ],
@@ -2237,7 +2389,15 @@
           "Recognize event 이후 클라이언트에서 에러(마이크를 열지 못하는 등)가 발생한 경우",
           "복사성공!",
           "{\n  \"header\": {\n    \"namespace\": \"ASR\",\n    \"name\": \"ListenFailed\",\n    \"messageId\": \"{{STRING}}\",\n    \"dialogRequestId\": \"{{STRING}}\",\n    \"version\": \"1.6\"\n  },\n  \"payload\": {\n    \"playServiceId\": \"{{STRING}}\"\n  }\n}",
-          "playServiceId | string | N | ExpectSpeech에 의한 발화인 경우에만 ExpectSpeech에서 받은 playServiceId를 적용"
+          "playServiceId | string | N | ExpectSpeech에 의한 발화인 경우에만 ExpectSpeech에서 받은 playServiceId를 적용",
+          "이전\n                        TTS\n                        음성 합성 결과를 전달받기 위한 규격",
+          "다음\n                        Text\n                        텍스트 명령을 Play 로 전달하기 위한 규격",
+          "이전",
+          "TTS",
+          "음성 합성 결과를 전달받기 위한 규격",
+          "다음",
+          "Text",
+          "텍스트 명령을 Play 로 전달하기 위한 규격"
         ]
       }
     ],
@@ -2260,7 +2420,13 @@
           "예를 들어 사용자가 “아리아, 일시 정지”라고 발화를 했을 때 스피커가 일시 정지(PAUSED) 상태일 때는 아무 동작도 수행을 하지 않도록 처리하고, 재생(PLAYING) 상태일 때만 AudioPlayer.Pause Directive를 전송하도록 구현할 수 있습니다.",
           "따라서 Custom Intent, Build-in Intent, AudioPlayer Event에 대한 Action을 정의할 때는 각 Action 내에서 스피커의 상태에 따라 구현을 달리해야 할 수 있기 때문에 매우 많은 조합에 대한 처리를 해주어야 합니다.",
           "그러나, 실제 구현할 때는 모든 경우의 수를 다 정의할 필요는 없으며, 시나리오에 꼭 필요한 사항만 정의하면 되기 때문에 최댓값보다는 적은 수의 Action을 정의하게 됩니다.",
-          "하지만, 원하는 정확한 동작을 실행하기 위해서는 스피커의 오디오 재생 상태를 정확히 파악한 상태에서 Action을 정의해야 합니다."
+          "하지만, 원하는 정확한 동작을 실행하기 위해서는 스피커의 오디오 재생 상태를 정확히 파악한 상태에서 Action을 정의해야 합니다.",
+          "이전\n                        Custom Intent 정의하기",
+          "다음\n                        Built-in Intent를 위한 Action 정의하기",
+          "이전",
+          "Custom Intent 정의하기",
+          "다음",
+          "Built-in Intent를 위한 Action 정의하기"
         ]
       }
     ],
@@ -2348,7 +2514,13 @@
           "여기서는 모든 이벤트에 대해 설명하지 않고, 일반적으로 AudioPlayer 기능을 지원하는 Play에서 필요로 하는 기능만을 설명합니다.",
           "PlaybackFinished | ⁣1. 플레이 리스트를 재생하는 경우에는 다음 곡을 이어서 재생하기 위한 Play Directive를 전송합니다.⁣2. 더 이상 재생할 곡이 없으면 Stop Directive를 전송합니다.(필수 사항은 아니지만 Stop Directive 전송을 권장합니다.)",
           "ProgressReportDelayInMilliseconds | 지정된 시간 위치까지 재생했을 때 이벤트를 한 번 발생시킵니다.예) 과금을 위해 1분 이상 재생되는 경우를 체크하고자 하는 경우",
-          "ProgressReportIntervalInMilliseconds | 지정된 시간 주기로 계속 이벤트가 호출됩니다.예) 인증을 위해 스트리밍 URL을 주기적으로 유효성 검사(Validation)를 해야 하는 경우에 사용됩니다."
+          "ProgressReportIntervalInMilliseconds | 지정된 시간 주기로 계속 이벤트가 호출됩니다.예) 인증을 위해 스트리밍 URL을 주기적으로 유효성 검사(Validation)를 해야 하는 경우에 사용됩니다.",
+          "이전\n                        Action 정의하기",
+          "다음\n                        Backend proxy 개발 가이드",
+          "이전",
+          "Action 정의하기",
+          "다음",
+          "Backend proxy 개발 가이드"
         ]
       }
     ],
@@ -2380,7 +2552,13 @@
         "indexes": [
           "특정 음악을 틀어주는 Play를 개발하는 경우",
           "만약, 개발하고자 하는 Play에서 “클래식 음악 틀어줘”와 같이 Entity로 분석되어야 하는 항목을 포함하는 경우에는 Built-in Intent만으로 표현할 수 없기 때문에, Custom Intent로 정의를 해주어야 합니다.",
-          "‘play’ Built-in Intent를 처리하는 Action을 추가로 정의하여 Entity를 지정하지 않은 경우의 동작 시나리오를 구현할 수도 있습니다."
+          "‘play’ Built-in Intent를 처리하는 Action을 추가로 정의하여 Entity를 지정하지 않은 경우의 동작 시나리오를 구현할 수도 있습니다.",
+          "이전\n                        AudioPlayer Interface 지원하는 Play 만들기",
+          "다음\n                        Action 정의하기",
+          "이전",
+          "AudioPlayer Interface 지원하는 Play 만들기",
+          "다음",
+          "Action 정의하기"
         ]
       }
     ],
@@ -2501,7 +2679,13 @@
           "PlaybackFinished Event",
           "하나의 음원 스트리밍 재생이 끝난 경우 발생하는 PlaybackFinished Event를 처리할 Action을 정의해야 합니다. 이 Action에서는 Play Directive 또는 Stop Directive 중 하나를 전송해야 합니다.",
           "Play Directive : 다음 재생할 곡이 있는 경우",
-          "Stop Directive : 한 곡만 재생하는 중이거나, Play List의 마지막 곡을 재생중이면서, 전체 반복을 하지 않는 경우"
+          "Stop Directive : 한 곡만 재생하는 중이거나, Play List의 마지막 곡을 재생중이면서, 전체 반복을 하지 않는 경우",
+          "이전\n                        AudioPlayer Interface",
+          "다음\n                        Display Interface",
+          "이전",
+          "AudioPlayer Interface",
+          "다음",
+          "Display Interface"
         ]
       }
     ],
@@ -2732,7 +2916,13 @@
           "PlaybackResumed",
           "일시 정지 중인 오디오를 다시 재생 시작할 때 사용합니다.",
           "복사성공!",
-          "{\n    \"type\": \"AudioPlayer.PlaybackResumed\",\n    \"requestId\": \"{{STRING}}\",\n    \"token\": \"{{STRING}}\",\n    \"offsetInMilliseconds\": {{LONG}}\n}"
+          "{\n    \"type\": \"AudioPlayer.PlaybackResumed\",\n    \"requestId\": \"{{STRING}}\",\n    \"token\": \"{{STRING}}\",\n    \"offsetInMilliseconds\": {{LONG}}\n}",
+          "이전\n                        Capability Interfaces",
+          "다음\n                        AudioPlayer를 위한 Display Interface",
+          "이전",
+          "Capability Interfaces",
+          "다음",
+          "AudioPlayer를 위한 Display Interface"
         ]
       }
     ],
@@ -3385,7 +3575,14 @@
           "복사성공!",
           "{\n  \"header\": {\n    \"namespace\": \"AudioPlayer\",\n    \"name\": \"RequestCommandFailed\",\n    \"messageId\": \"{{STRING}}\",\n    \"dialogRequestId\": \"{{STRING}}\",\n    \"version\": \"1.4\"\n  },\n  \"payload\": {\n    \"error\": {\n      \"type\": \"{{STRING}}\",\n      \"message\": \"{{STRING}}\"\n    }\n  }\n}",
           "error.type | string | Y | 에러 타입 코드- INVALID_COMMAND : IDLE/STOP 상태일때 Request Pause/Resume/Next/Previous/Stop Command Directive 수신한 경우 (STOP/IDLE 일때 RequestPlayCommand 는 정상요청이므로 제외에 유의)- UNKNOWN_ERROR : 그 이외에 처리중 에러난 경우",
-          "error.message | string | Y | STOP/IDLE 상태에서는 Request XXX Command 를 처리할 수 없음."
+          "error.message | string | Y | STOP/IDLE 상태에서는 Request XXX Command 를 처리할 수 없음.",
+          "이전\n                        Capability Interface",
+          "다음\n                        Display\n                        Play 에서 전달하는 UI 요소를 화면에 구성하기 규격",
+          "이전",
+          "Capability Interface",
+          "다음",
+          "Display",
+          "Play 에서 전달하는 UI 요소를 화면에 구성하기 규격"
         ]
       }
     ],
@@ -3412,8 +3609,9 @@
           "data 파라미터를 사용하여 디바이스 일련번호를 전달 할 수 있습니다.",
           "{“deviceSerialNumber”:”DEVICE_SERIAL_NUMBER”}",
           "인증 요청 (Authorize Endpoint)",
-          "get",
-          "https://api.host.domain/v1/auth/oauth/authorize",
+          "GET",
+          "https://api.host.domain",
+          "/v1/auth/oauth/authorize",
           "NUGU계정 미사용, 체험판 사용 시에는 불필요합니다.",
           "Parameters",
           "Query",
@@ -3450,8 +3648,9 @@
           "NUGU계정 미사용, 체험판은 grant_type=client_credentials 을 사용합니다.",
           "Client 인증 정보는 Body Parameter(application/x-www-form-urlencoded)를 사용 합니다.",
           "토큰 요청 (Token Endpoint)",
-          "post",
-          "https://api.host.domain/v1/auth/oauth/token",
+          "POST",
+          "https://api.host.domain",
+          "/v1/auth/oauth/token",
           "NUGU계정 미사용, 체험판 사용 시에는 code와 redirect_url 입력이 불필요합니다.",
           "Parameters",
           "Body",
@@ -3490,8 +3689,9 @@
           "Body\n        \n        복사성공!",
           "{\"error\":\"invalid_client\",\"error_description\":\"Bad client credentials\"}",
           "토큰 갱신 요청 (Token Endpoint)",
-          "post",
-          "https://api.host.domain/v1/auth/oauth/token",
+          "POST",
+          "https://api.host.domain",
+          "/v1/auth/oauth/token",
           "NUGU계정 미사용, 체험판 사용 시에는 불필요합니다.",
           "Parameters",
           "Body",
@@ -3532,7 +3732,7 @@
         "indexes": [
           "Revoke Endpoint",
           "연결 해제 (Revoke Endpoint)",
-          "post",
+          "POST",
           "/v1/auth/oauth/revoke",
           "Parameters",
           "Body",
@@ -3568,7 +3768,7 @@
         "indexes": [
           "Introspect Endpoint",
           "연결 조회 (Introspect Endpoint)",
-          "post",
+          "POST",
           "/v1/auth/oauth/introspect",
           "Parameters",
           "Body",
@@ -3595,7 +3795,13 @@
           "Header\n        \n        복사성공!",
           "HTTP/1.1 401 \nDate: Mon, 14 Oct 2019 04:22:45 GMT\nContent-Type: application/json;charset=UTF-8",
           "Body\n        \n        복사성공!",
-          "{\"error\":\"invalid_client\",\"error_description\":\"\"}"
+          "{\"error\":\"invalid_client\",\"error_description\":\"\"}",
+          "이전\n                        이용 통계 확인",
+          "다음\n                        Capability Interface",
+          "이전",
+          "이용 통계 확인",
+          "다음",
+          "Capability Interface"
         ]
       }
     ],
@@ -3706,7 +3912,13 @@
           "만약 서비스에 문제가 있을 경우에는 “500 Internal Server Error” 등 200 이외의 HTTP Status Code를 리턴하면 됩니다.",
           "복사성공!",
           "GET /health HTTP/1.1\nAccept: */*\n\n\nHTTP/1.1 200 OK\nContent-Length: 2\nOK",
-          "심사 요청 시 /health url이 정상 동작해야 하며, /health url에서 200 이외의 상태가 오래 지속되면 서비스가 직권 중지될 수 있으므로 유의해야 합니다."
+          "심사 요청 시 /health url이 정상 동작해야 하며, /health url에서 200 이외의 상태가 오래 지속되면 서비스가 직권 중지될 수 있으므로 유의해야 합니다.",
+          "이전\n                        Display Interface",
+          "다음\n                        Biz 사용자(Enrolled user) 정보 수신 연동",
+          "이전",
+          "Display Interface",
+          "다음",
+          "Biz 사용자(Enrolled user) 정보 수신 연동"
         ]
       }
     ],
@@ -3796,7 +4008,13 @@
         "indexes": [
           "directives",
           "directive에는 Play가 지원하는 Capability Interface에서 정의한 Directive가 올 수 있습니다. Play는 임의 개수의 Capability Interface를 지원하도록 설정할 수 있고, Play가 지원하는 Capability Interface의 모든 directive가 Response Body 내에 포함될 수 있습니다.",
-          "어떤 Play가 2개의 Capability Interface를 지원한다면 “directive” 필드에는 0개, 1개, 2개의 Directive가 포함될 수 있습니다."
+          "어떤 Play가 2개의 Capability Interface를 지원한다면 “directive” 필드에는 0개, 1개, 2개의 Directive가 포함될 수 있습니다.",
+          "이전\n                        Backend proxy 개발 가이드",
+          "다음\n                        Capability Interfaces",
+          "이전",
+          "Backend proxy 개발 가이드",
+          "다음",
+          "Capability Interfaces"
         ]
       }
     ],
@@ -3819,7 +4037,13 @@
           "사칙연산, 날짜/시간 계산 등 로직을 통해 정보를 가공하는 경우",
           "오디오 재생을 위한 명령어(Play, Pause, Stop)를 생성해야 하는 경우 자세한 내용은 AudioPlayer Interface 지원하는 Play 만들기를 참고하세요.",
           "시나리오 전체에 필요한 정보를 미리 가져와서 사용하는 경우",
-          "외부 서버를 연동하는 경우 여러 가지 예외 상황이 발생할 수 있습니다. 이러한 예외 상황을 Action에 정의하고, Backend proxy는 예외 상황이 발생했을 때 Action에서 정의한 상태값을 전달함으로써 다양한 예외 상황에 대처하는 응답을 만들 수 있습니다."
+          "외부 서버를 연동하는 경우 여러 가지 예외 상황이 발생할 수 있습니다. 이러한 예외 상황을 Action에 정의하고, Backend proxy는 예외 상황이 발생했을 때 Action에서 정의한 상태값을 전달함으로써 다양한 예외 상황에 대처하는 응답을 만들 수 있습니다.",
+          "이전\n                        Intent와 Entity",
+          "다음\n                        Capability interface",
+          "이전",
+          "Intent와 Entity",
+          "다음",
+          "Capability interface"
         ]
       }
     ],
@@ -3843,7 +4067,13 @@
         "indexes": [
           "Background 연결 종료",
           "복사성공!",
-          "class MyApplication : Application() {\n    override fun onCreate() {\n        super.onCreate()\n\n        ProcessLifecycleOwner.get().lifecycle\n            .addObserver(MyLifecycleObserver())\n    }\n}\n\nclass MyLifecycleObserver : LifecycleObserver {\n\n    @OnLifecycleEvent(Lifecycle.Event.ON_START)\n    fun onForeground() {\n        // 재연결\n        ClientManager.getClient().networkManager.startReceiveServerInitiatedDirective()\n    }\n\n    @OnLifecycleEvent(Lifecycle.Event.ON_STOP)\n    fun onBackground() {\n        // 연결 종료\n        ClientManager.getClient().networkManager.stopReceiveServerInitiatedDirective()\n    }\n}"
+          "class MyApplication : Application() {\n    override fun onCreate() {\n        super.onCreate()\n\n        ProcessLifecycleOwner.get().lifecycle\n            .addObserver(MyLifecycleObserver())\n    }\n}\n\nclass MyLifecycleObserver : LifecycleObserver {\n\n    @OnLifecycleEvent(Lifecycle.Event.ON_START)\n    fun onForeground() {\n        // 재연결\n        ClientManager.getClient().networkManager.startReceiveServerInitiatedDirective()\n    }\n\n    @OnLifecycleEvent(Lifecycle.Event.ON_STOP)\n    fun onBackground() {\n        // 연결 종료\n        ClientManager.getClient().networkManager.stopReceiveServerInitiatedDirective()\n    }\n}",
+          "이전\n                        구성요소",
+          "다음\n                        NUGU 서비스 관리 web server 연동",
+          "이전",
+          "구성요소",
+          "다음",
+          "NUGU 서비스 관리 web server 연동"
         ]
       }
     ],
@@ -3867,7 +4097,13 @@
         "indexes": [
           "Background 연결 종료",
           "복사성공!",
-          "NotificationCenter.default.addObserver(\n            self,\n            selector: #selector(willResignActive(_:)),\n            name: UIApplication.willResignActiveNotification,\n            object: nil\n        )\n\nNotificationCenter.default.addObserver(\n    self,\n    selector: #selector(didBecomeActive(_:)),\n    name: UIApplication.didBecomeActiveNotification,\n    object: nil\n)\n\nfunc willResignActive(_ notification: Notification) {\n    // 연결 종료\n    NuguCentralManager.shared.stopReceiveServerInitiatedDirective()\n}\n\nfunc didBecomeActive(_ notification: Notification) {\n    // 재연결\n    NuguCentralManager.shared.startReceiveServerInitiatedDirective()\n}"
+          "NotificationCenter.default.addObserver(\n            self,\n            selector: #selector(willResignActive(_:)),\n            name: UIApplication.willResignActiveNotification,\n            object: nil\n        )\n\nNotificationCenter.default.addObserver(\n    self,\n    selector: #selector(didBecomeActive(_:)),\n    name: UIApplication.didBecomeActiveNotification,\n    object: nil\n)\n\nfunc willResignActive(_ notification: Notification) {\n    // 연결 종료\n    NuguCentralManager.shared.stopReceiveServerInitiatedDirective()\n}\n\nfunc didBecomeActive(_ notification: Notification) {\n    // 재연결\n    NuguCentralManager.shared.startReceiveServerInitiatedDirective()\n}",
+          "이전\n                        구성요소",
+          "다음\n                        NUGU 서비스 관리 web server 연동",
+          "이전",
+          "구성요소",
+          "다음",
+          "NUGU 서비스 관리 web server 연동"
         ]
       }
     ],
@@ -3944,7 +4180,15 @@
           "{\n  \"Location\": {\n    \"version\": \"1.1\",\n    \"level\": {{LONG}},\n    \"charging\": {{BOOLEAN}},\n    \"approximateLevel\": {{BOOLEAN}}\n  }\n}",
           "level | Long | Y | 배터리 잔량(0 ~ 100)",
           "charging | boolean | Y | 충전 여부",
-          "approximateLevel | boolean | N | 배터리 잔량의 근사치 여부 ( 일부 디바이스의 경우 정확한 배터리 잔량을 측정할 수 없음)"
+          "approximateLevel | boolean | N | 배터리 잔량의 근사치 여부 ( 일부 디바이스의 경우 정확한 배터리 잔량을 측정할 수 없음)",
+          "이전\n                        Screen\n                        디바이스의 디스플레이를 제어하기 위한 규격",
+          "다음\n                        Sound\n                        디바이스의 음원 파일 재생을 위한 규격",
+          "이전",
+          "Screen",
+          "디바이스의 디스플레이를 제어하기 위한 규격",
+          "다음",
+          "Sound",
+          "디바이스의 음원 파일 재생을 위한 규격"
         ]
       }
     ],
@@ -3957,7 +4201,21 @@
         "hash": "",
         "title": "시작하기 전에 알면 좋은 것들",
         "indexes": [
-          "시작하기 전에 알면 좋은 것들"
+          "시작하기 전에 알면 좋은 것들",
+          "Play",
+          "Intent와 Entity",
+          "Backend proxy",
+          "Capability interface",
+          "이전\n                        4) Play 테스트 및 빌드하기",
+          "다음\n                        Play",
+          "Play",
+          "Intent와 Entity",
+          "Backend proxy",
+          "Capability interface",
+          "이전",
+          "4) Play 테스트 및 빌드하기",
+          "다음",
+          "Play"
         ]
       }
     ],
@@ -3977,7 +4235,13 @@
           "Biz 사용자 목록 조회",
           "Biz 사용자 상세 조회",
           "Biz 사용자 초대 목록 조회",
-          "Biz 사용자 API Token 생성"
+          "Biz 사용자 API Token 생성",
+          "이전\n                        Biz 사용자 그룹 상세 조회",
+          "다음\n                        Biz 사용자 초대",
+          "이전",
+          "Biz 사용자 그룹 상세 조회",
+          "다음",
+          "Biz 사용자 초대"
         ]
       }
     ],
@@ -4074,7 +4338,13 @@
           "V1ANN201 | display.type 값이 잘못됨",
           "V1ANN202 | display.title 값이 없음",
           "V1ANN203 | display.header 값이 없음",
-          "V1ANN204 | display.body 값이 없음"
+          "V1ANN204 | display.body 값이 없음",
+          "이전\n                        Biz 사용자 설정 (NUGU APP)",
+          "다음\n                        Biz 사용자 API",
+          "이전",
+          "Biz 사용자 설정 (NUGU APP)",
+          "다음",
+          "Biz 사용자 API"
         ]
       }
     ],
@@ -4118,7 +4388,13 @@
           "정식판에서는 유저를 Biz Service 단위로 초대하여 보유한 Play와 Announcement등 Biz API를 발송 할 수 있습니다. 등록된 Biz 사용자는, NUGU APP의 Biz 사용자 설정 메뉴에서 Biz Service의 사용 여부의 변경과, Biz API를 수신 동의 및 수신 받을 기기를 지정, 변경 할 수 있습니다.",
           "Biz 사용자 설정에 진입하면, 해당 유저가 TID 인증을 통해 수락했던 Biz Service 목록이 표시됩니다.",
           "초대 수락했던 Biz Service에 대한 사용 동의 철회가 가능합니다. 동의 철회 즉시, Biz Service에서 제공 하는 Play를 사용할 수 없고 발송하는 API를 받지 않게 됩니다.",
-          "초대 시 설정했던 Biz API의 수신 동의와, 수신 대상 디바이스의 설정을 변경할 수 있습니다. Announcement API 발송에 대한 수신을 원치 않거나, 대상 디바이스를 변경하고 싶은 경우 해당 메뉴에서 수정 할 수 있습니다."
+          "초대 시 설정했던 Biz API의 수신 동의와, 수신 대상 디바이스의 설정을 변경할 수 있습니다. Announcement API 발송에 대한 수신을 원치 않거나, 대상 디바이스를 변경하고 싶은 경우 해당 메뉴에서 수정 할 수 있습니다.",
+          "이전\n                        Biz 사용자 초대 (정식판)",
+          "다음\n                        Biz API",
+          "이전",
+          "Biz 사용자 초대 (정식판)",
+          "다음",
+          "Biz API"
         ]
       }
     ],
@@ -4136,7 +4412,13 @@
           "Biz 사용자 그룹 수정",
           "Biz 사용자 그룹 삭제",
           "Biz 사용자 그룹 목록 조회",
-          "Biz 사용자 그룹 상세 조회"
+          "Biz 사용자 그룹 상세 조회",
+          "이전\n                        Biz 사용자 API",
+          "다음\n                        Biz 사용자 그룹 생성",
+          "이전",
+          "Biz 사용자 API",
+          "다음",
+          "Biz 사용자 그룹 생성"
         ]
       }
     ],
@@ -4489,7 +4771,15 @@
         "indexes": [
           "MediaControlPreviousFailed",
           "복사성공!",
-          "{\n  \"header\": {\n    \"namespace\": \"Bluetooth\",\n    \"name\": \"MediaControlPreviousFailed\",\n    \"messageId\": \"{{STRING}}\",\n    \"dialogRequestId\": \"{{STRING}}\",\n    \"version\": \"1.0\"\n  },\n  \"payload\": {\n    \"playServiceId\": \"{{STRING}}\"\n  }\n}"
+          "{\n  \"header\": {\n    \"namespace\": \"Bluetooth\",\n    \"name\": \"MediaControlPreviousFailed\",\n    \"messageId\": \"{{STRING}}\",\n    \"dialogRequestId\": \"{{STRING}}\",\n    \"version\": \"1.0\"\n  },\n  \"payload\": {\n    \"playServiceId\": \"{{STRING}}\"\n  }\n}",
+          "이전\n                        Speaker\n                        디바이스의 볼륨을 제어하기 위한 규격",
+          "다음\n                        Mic\n                        디바이스의 마이크를 제어하기 위한 규격",
+          "이전",
+          "Speaker",
+          "디바이스의 볼륨을 제어하기 위한 규격",
+          "다음",
+          "Mic",
+          "디바이스의 마이크를 제어하기 위한 규격"
         ]
       }
     ],
@@ -4504,7 +4794,13 @@
         "indexes": [
           "부팅화면",
           "기기를 켠 후 부팅이 완료될 때까지 표시되는 화면입니다.\n부팅 화면은 NUGU 로고와 그래픽 요소로 애니메이션이 적용되어 있습니다.\n화면 비율과 로고는 같은 비율로 표시해야 합니다.",
-          " | "
+          " | ",
+          "이전\n                        NUGU 기기",
+          "다음\n                        Voice Chrome",
+          "이전",
+          "NUGU 기기",
+          "다음",
+          "Voice Chrome"
         ]
       }
     ],
@@ -4641,7 +4937,13 @@
         "title": "BrightnessControl Interface > Error & Exception",
         "indexes": [
           "Error & Exception",
-          "해당 Capability/Directive에서 응답 시 사용할 수 있는 ErrorCode는 SmartHomeError를 참조해주시기 바랍니다."
+          "해당 Capability/Directive에서 응답 시 사용할 수 있는 ErrorCode는 SmartHomeError를 참조해주시기 바랍니다.",
+          "이전\n                        AirQualityCheck Interface",
+          "다음\n                        ChargeControl Interface",
+          "이전",
+          "AirQualityCheck Interface",
+          "다음",
+          "ChargeControl Interface"
         ]
       }
     ],
@@ -4701,7 +5003,13 @@
           "NUGU.ACTION.rewind",
           "사용자가 ‘다시’, ‘다시 틀어줘’, ‘재시작’ 등과 같이 NUGU.INTENT.rewind에 해당하는 발화를 한 경우에 동작하는 Action입니다.\n이 Action은 Response는 갖지 않으며, 최근 응답을 처음부터 재생하는 명령을 수행합니다.",
           "이 장과 함께 보면 좋은 도움말",
-          "Action Tree 알아보기"
+          "Action Tree 알아보기",
+          "이전\n                        Action 정의하기",
+          "다음\n                        Parameter",
+          "이전",
+          "Action 정의하기",
+          "다음",
+          "Parameter"
         ]
       }
     ],
@@ -4773,7 +5081,13 @@
         "indexes": [
           "NUGU.INTENT.rewind",
           "NUGU.INTENT.rewind 또한 Control/Universal에 모두 포함된 Intent 입니다.",
-          "AudioPlayer를 사용함으로 설정하면 NUGU.INTENT.rewind는 오직 Custom Action의 trigger로만 사용되며, 만일 이 Intent를 Trigger로 갖는 Action을 정의하지 않으면, 사용자가 ‘다시’라고 말을 해도 Fallback 처리되는 Play가 됩니다."
+          "AudioPlayer를 사용함으로 설정하면 NUGU.INTENT.rewind는 오직 Custom Action의 trigger로만 사용되며, 만일 이 Intent를 Trigger로 갖는 Action을 정의하지 않으면, 사용자가 ‘다시’라고 말을 해도 Fallback 처리되는 Play가 됩니다.",
+          "이전\n                        User Utterance Model 정의하기 (Intent & Entity)",
+          "다음\n                        예상 발화 작성 가이드",
+          "이전",
+          "User Utterance Model 정의하기 (Intent & Entity)",
+          "다음",
+          "예상 발화 작성 가이드"
         ]
       }
     ],
@@ -4814,7 +5128,13 @@
         "indexes": [
           "Event",
           "디바이스가 명령을 수행하면 상태가 변경되는데, 이 상태의 변경을 Play에 알려주기 위해 사용됩니다.",
-          "Capability Interface의 자세한 사용법은 Capability Interfaces를 참고하세요."
+          "Capability Interface의 자세한 사용법은 Capability Interfaces를 참고하세요.",
+          "이전\n                        Backend proxy",
+          "다음\n                        Play 설정하기",
+          "이전",
+          "Backend proxy",
+          "다음",
+          "Play 설정하기"
         ]
       }
     ],
@@ -4940,7 +5260,14 @@
           "Message | 문자 기능 제어 | 지원 | 지원 | 지원",
           "MediaPlayer | 음악 앱 제어 | 지원 | 지원 | 미지원",
           "Routine | 루틴 실행 | 지원 | 지원 | 지원",
-          "Utility | Directive 실행 순서 제어 | 지원 | 지원 | 지원"
+          "Utility | Directive 실행 순서 제어 | 지원 | 지원 | 지원",
+          "이전\n                        Authentication",
+          "다음\n                        AudioPlayer\n                        Play 에서 전달하는 음원을 재생하기 위한 규격",
+          "이전",
+          "Authentication",
+          "다음",
+          "AudioPlayer",
+          "Play 에서 전달하는 음원을 재생하기 위한 규격"
         ]
       }
     ],
@@ -5007,7 +5334,13 @@
         "indexes": [
           "Capability Interface의 종류",
           "Capability Interface 종류는 다음과 같습니다. 현재는 AudioPlayer Interface만 지원합니다.",
-          "AudioPlayer Interface : 스트리밍을 통한 음악 재생"
+          "AudioPlayer Interface : 스트리밍을 통한 음악 재생",
+          "이전\n                        Backend proxy 구축하기",
+          "다음\n                        AudioPlayer Interface",
+          "이전",
+          "Backend proxy 구축하기",
+          "다음",
+          "AudioPlayer Interface"
         ]
       }
     ],
@@ -5101,7 +5434,13 @@
         "title": "ChargeControl Interface > Error & Exception",
         "indexes": [
           "Error & Exception",
-          "해당 Capability/Directive에서 응답 시 사용할 수 있는 ErrorCode는 SmartHomeError를 참조해주시기 바랍니다."
+          "해당 Capability/Directive에서 응답 시 사용할 수 있는 ErrorCode는 SmartHomeError를 참조해주시기 바랍니다.",
+          "이전\n                        BrightnessControl Interface",
+          "다음\n                        ColorControl Interface",
+          "이전",
+          "BrightnessControl Interface",
+          "다음",
+          "ColorControl Interface"
         ]
       }
     ],
@@ -5204,7 +5543,15 @@
           "chips | list | Y | 발화 가이드 목록",
           "chips.type | string | Y | ACTION : 보이스크롬 가이드의 ‘액션버튼’으로 기능 단위의 동작 처리를 위한 발화 가이드.GENERAL : 기본 발화 가이드NUDGE : 넛지 발화 가이드",
           "chips.text | string | Y | 버튼 텍스트- Text.TextInput event 를 보내기 위한 텍스트 명령 문자열",
-          "chips.token | string | N | Text.TextInput event 의 출처를 구분하기 위한 값"
+          "chips.token | string | N | Text.TextInput event 의 출처를 구분하기 위한 값",
+          "이전\n                        Sound\n                        디바이스의 음원 파일 재생을 위한 규격",
+          "다음\n                        Session\n                        Play 와 Client 간의 세션을 유지하기 위한 규격",
+          "이전",
+          "Sound",
+          "디바이스의 음원 파일 재생을 위한 규격",
+          "다음",
+          "Session",
+          "Play 와 Client 간의 세션을 유지하기 위한 규격"
         ]
       }
     ],
@@ -5270,7 +5617,13 @@
         "title": "ColorControl Interface > Error & Exception",
         "indexes": [
           "Error & Exception",
-          "해당 Capability/Directive에서 응답 시 사용할 수 있는 ErrorCode는 SmartHomeError를 참조해주시기 바랍니다."
+          "해당 Capability/Directive에서 응답 시 사용할 수 있는 ErrorCode는 SmartHomeError를 참조해주시기 바랍니다.",
+          "이전\n                        ChargeControl Interface",
+          "다음\n                        DeviceTemperatureControl Interface",
+          "이전",
+          "ChargeControl Interface",
+          "다음",
+          "DeviceTemperatureControl Interface"
         ]
       }
     ],
@@ -5339,7 +5692,13 @@
           "libcurl | https://github.com/curl/curl.git | MIT style license",
           "nghttp2 | https://github.com/nghttp2/nghttp2.git | MIT",
           "jsoncpp | https://github.com/open-source-parsers/jsoncpp.git | MIT",
-          "Opus | https://opus-codec.org/development | BSD"
+          "Opus | https://opus-codec.org/development | BSD",
+          "이전\n                        시작하기",
+          "다음\n                        API References",
+          "이전",
+          "시작하기",
+          "다음",
+          "API References"
         ]
       }
     ],
@@ -5413,7 +5772,13 @@
           "NUGU iOS SDK는 의존성 관리를 위해 CocoaPods를 지원합니다.\n더 자세한 내용은 https://cocoapods.org에서 확인이 가능합니다.",
           "NUGU SDK for iOS의 각각의 구성요소는 CocoaPods를 통해 의존성 관리를 추가할 수 있습니다. 구성요소를 재구성할 때, 필요에 맞게 의존성 관리를 추가하면 됩니다.",
           "Podfile\n        \n        복사성공!",
-          "target 'your_application' do\n    pod 'NuguCore'\n    pod 'NuguAgents'\n    pod 'NuguClientKit'\n    pod 'NuguLoginKit'\n    pod 'NuguUIKit'\n    pod 'NuguServiceKit'\n    pod 'KeenSense'\n    pod 'JadeMarble'\n    pod 'NattyLog'\n    pod 'SilverTray'\nend"
+          "target 'your_application' do\n    pod 'NuguCore'\n    pod 'NuguAgents'\n    pod 'NuguClientKit'\n    pod 'NuguLoginKit'\n    pod 'NuguUIKit'\n    pod 'NuguServiceKit'\n    pod 'KeenSense'\n    pod 'JadeMarble'\n    pod 'NattyLog'\n    pod 'SilverTray'\nend",
+          "이전\n                        시작하기",
+          "다음\n                        Background 동작 처리",
+          "이전",
+          "시작하기",
+          "다음",
+          "Background 동작 처리"
         ]
       }
     ],
@@ -5432,7 +5797,13 @@
           "Global 설정에서 파라미터를 정의한 뒤 Value 필드에 값을 넣으면 이 값은 파라미터의 기본값이 됩니다. Backend proxy에서 해당 값을 변경하지 않는다면, 여기에 넣은 값이 항상 들어있게 됩니다.",
           "Global 설정에서 정의 했거나, 자신 보다 상위 액션에서 정의한 Configurable Parameter는 이름을 변경할 수 없지만 Value 필드는 수정 가능하도록 열려있게 되며, 여기서 입력한 값으로 파라미터의 값이 업데이트 됩니다.",
           "Root Action에서 AAA라는 Configurable Parameter에 1이라는 값을 넣으면, 그 Root Action의 하위 액션에서는 AAA에 항상 1이 담기게 됩니다. 그러나 특정 Branch Action에서 AAA의 Value를 2로 지정하면, 해당 Branch Action에서 AAA 파라미터의 값은 2로 변경되게 됩니다.",
-          "이 파라미터를 통해, 특정 Branch Action의 동작을 Backend proxy와 상관없이 Play에서 직접 제어하거나, 특정 Branch Action에 도달했음을 Backend proxy에 전달할 수 있습니다."
+          "이 파라미터를 통해, 특정 Branch Action의 동작을 Backend proxy와 상관없이 Play에서 직접 제어하거나, 특정 Branch Action에 도달했음을 Backend proxy에 전달할 수 있습니다.",
+          "이전\n                        하나의 Parameter에 여러 Entity mapping 하기",
+          "다음\n                        Response",
+          "이전",
+          "하나의 Parameter에 여러 Entity mapping 하기",
+          "다음",
+          "Response"
         ]
       }
     ],
@@ -5471,7 +5842,13 @@
           "훈련/결과 불일치 문장 찾기",
           "이 도구는 NLU 엔진에 예상 발화 문장이 실제로 입력되었을 때, 요청한 대로 분석할 수 없는 경우를 찾아냅니다. 이는 해당 문장 외에도 다른 문장의 영향을 받아 요청한 대로 분석할 수 없는 경우를 의미합니다. 실제 분석 결과가 훈련 요청한 대로 나오지 않는 원인은 여러가지가 있을 수 있습니다. 중복 태깅에 의해서도 발생할 수 있으며, 동일하진 않더라도 의미상 유사한 문장이 훈련 데이터에 있어서 서로 간섭을 일으킬 수 도 있습니다.",
           "다음과 같이 같은 텍스트가 여러 개의 Entity Type으로 정의된 경우, 훈련 요청한 대로 실제 분석이 되지 않게 됩니다. 다음과 같이 ‘택배’라는 텍스트가 연락처를 의미하는 ‘CONTACTS’와 기능을 의미하는 ‘FUNCTION’에 포함된 경우 중의성이 발생하여 원하는 결과를 얻을 수 없을 가능성이 높습니다.",
-          "검증 도구를 통과했다고 하여 훈련 데이터가 완벽함을 의미하지 않습니다.\n다음의 작성 가이드에 따라 구성되어야, Play가 사용자의 말을 더 잘 이해할 수 있습니다."
+          "검증 도구를 통과했다고 하여 훈련 데이터가 완벽함을 의미하지 않습니다.\n다음의 작성 가이드에 따라 구성되어야, Play가 사용자의 말을 더 잘 이해할 수 있습니다.",
+          "이전\n                        지원 도구",
+          "다음\n                        실패 발화 분석",
+          "이전",
+          "지원 도구",
+          "다음",
+          "실패 발화 분석"
         ]
       }
     ],
@@ -5537,7 +5914,13 @@
           "Capability Interface를 사용하는 경우, 트리 최하단에서 응답을 내보내는 Action도 Backend proxy와 연결하여 Directive를 받아와야 합니다.",
           "이 장과 같이 보면 좋은 도움말",
           "Backend proxy",
-          "Backend Parameter"
+          "Backend Parameter",
+          "이전\n                        Common Action 사용하기",
+          "다음\n                        Response Filter 사용하기",
+          "이전",
+          "Common Action 사용하기",
+          "다음",
+          "Response Filter 사용하기"
         ]
       }
     ],
@@ -5558,7 +5941,13 @@
           "Custom Intent 정의하기",
           "Action 정의하기",
           "Built-in Intent를 위한 Action 정의하기",
-          "AudioPlayer Interface에서 제공하는 Built-in Intent, Directive, Event에 대한 자세한 설명은 Capability Interfaces를 참고하세요."
+          "AudioPlayer Interface에서 제공하는 Built-in Intent, Directive, Event에 대한 자세한 설명은 Capability Interfaces를 참고하세요.",
+          "이전\n                        테스트하기",
+          "다음\n                        Custom Intent 정의하기",
+          "이전",
+          "테스트하기",
+          "다음",
+          "Custom Intent 정의하기"
         ]
       }
     ],
@@ -5581,7 +5970,13 @@
           "기본 응답은 사용자가 Play에 진입했을 때, Play를 종료할 때, 사용자 발화에 대해 처리할 수 없을 때에 응답할 기본 메시지를 입력합니다.",
           "기본 응답은 Play를 생성한 후에 Built-in Action의 welcome, stop, fallback Action에서 각각 수정할 수 있습니다.",
           "Play를 만드는 과정을 설명하는 팝업창에서 다음 버튼을 클릭하면 Play 생성이 완료됩니다.",
-          "생성된 Play는 홈 화면에 등록됩니다. 화면의 새 Play 생성 버튼을 클릭하여 Play를 계속해서 추가 생성할 수 있습니다."
+          "생성된 Play는 홈 화면에 등록됩니다. 화면의 새 Play 생성 버튼을 클릭하여 Play를 계속해서 추가 생성할 수 있습니다.",
+          "이전\n                        아리아, 안녕!",
+          "다음\n                        2) Intent 만들고 예상 발화 등록하기",
+          "이전",
+          "아리아, 안녕!",
+          "다음",
+          "2) Intent 만들고 예상 발화 등록하기"
         ]
       }
     ],
@@ -5630,7 +6025,13 @@
           "이 장과 함께 보면 좋은 도움말",
           "Action이란",
           "Action Tree 만들기",
-          "Response 작성하기"
+          "Response 작성하기",
+          "이전\n                        2) Intent 만들고 예상 발화 등록하기",
+          "다음\n                        4) Play 테스트 및 빌드하기",
+          "이전",
+          "2) Intent 만들고 예상 발화 등록하기",
+          "다음",
+          "4) Play 테스트 및 빌드하기"
         ]
       }
     ],
@@ -5664,7 +6065,8 @@
           "실제 예: “날씨 알려줘”, “날씨 알려주세요”, “날씨 어때?”",
           "같은 의도라도 다양한 표현이 존재할 수 있으므로 예상 발화를 많이 입력할수록 사용자 의도 파악에 도움이 됩니다.",
           "입력한 발화를 삭제하려면 Expression 리스트에서 각 발화마다 표시된 휴지통() 아이콘을 누릅니다.",
-          "Intent에 예상 발화를 등록한 후 Play 저장 버튼을 클릭하여 Intent 등록 작업을 완료합니다.\n7Play 저장 버튼 대신 목록 버튼을 클릭하면 Play에 Intent를 추가하지 않고 Custom Intents 페이지로 이동합니다.",
+          "Intent에 예상 발화를 등록한 후 Play 저장 버튼을 클릭하여 Intent 등록 작업을 완료합니다.",
+          "Play 저장 버튼 대신 목록 버튼을 클릭하면 Play에 Intent를 추가하지 않고 Custom Intents 페이지로 이동합니다.",
           "Intent를 Play에 저장하면, NLU 엔진은 등록된 예상 발화를 자동으로 학습해서 해당 Play의 NLU 모델을 생성하게 됩니다. 이 NLU 모델은 사용자의 발화를 이해하여 Intent/Entity를 분석하는 역할을 합니다."
         ]
       },
@@ -5674,7 +6076,13 @@
         "indexes": [
           "미세 먼지 관련 Intent 추가",
           "“미세 먼지” 관련 Intent도 위 “날씨” 관련 Intent 추가 방법과 동일하게 추가합니다.(예: ask.microdust)",
-          "추가한 Intent는 Custom Intents 페이지에서 확인 및 관리할 수 있습니다."
+          "추가한 Intent는 Custom Intents 페이지에서 확인 및 관리할 수 있습니다.",
+          "이전\n                        1) Play 생성하기",
+          "다음\n                        3) Action 만들고 응답 등록하기",
+          "이전",
+          "1) Play 생성하기",
+          "다음",
+          "3) Action 만들고 응답 등록하기"
         ]
       }
     ],
@@ -5719,7 +6127,13 @@
           "응답은 음성 답변으로만 구현할 수 있으며, 특정 동작을 수행하거나 미디어를 컨트롤하는 등의 명령을 정의할 수도 있습니다.",
           "단계별로 조금 더 상세히 살펴보면 다음과 같습니다.",
           "다음 장(아리아, 안녕!)에서는 Play 만드는 법에 대해 간단하게 설명하고, 이후 각 과정에 대해 순서대로 상세하게 설명합니다.",
-          "Play Builder 내의 모든 상세 페이지에는 화면에 도움말이 직접 포함되어 있어 작업에 필요한 정보를 표시해 줍니다.\n화면 하단의 도움말 버튼을 통해 도움말을 켜고 끌 수 있습니다."
+          "Play Builder 내의 모든 상세 페이지에는 화면에 도움말이 직접 포함되어 있어 작업에 필요한 정보를 표시해 줍니다.\n화면 하단의 도움말 버튼을 통해 도움말을 켜고 끌 수 있습니다.",
+          "이전\n                        Prompt 디자인",
+          "다음\n                        아리아, 안녕!",
+          "이전",
+          "Prompt 디자인",
+          "다음",
+          "아리아, 안녕!"
         ]
       }
     ],
@@ -5797,7 +6211,13 @@
         "title": "Play 설정하기 > 빌드/History(General > 빌드 / History)",
         "indexes": [
           "빌드/History(General > 빌드 / History)",
-          "빌드 이력(History)을 확인할 수 있습니다. 또한, 이 페이지에서도 Play 빌드 버튼을 이용하여 Play를 빌드할 수 있습니다."
+          "빌드 이력(History)을 확인할 수 있습니다. 또한, 이 페이지에서도 Play 빌드 버튼을 이용하여 Play를 빌드할 수 있습니다.",
+          "이전\n                        Capability interface",
+          "다음\n                        User Utterance Model 정의하기 (Intent & Entity)",
+          "이전",
+          "Capability interface",
+          "다음",
+          "User Utterance Model 정의하기 (Intent & Entity)"
         ]
       }
     ],
@@ -5827,7 +6247,14 @@
           "(NuguAndroidClient Object).themeManager.theme = ThemeManagerInterface.THEME.DARK",
           "THEME.LIGHT (default)    - 밝은 테마로 표시",
           "THEME.DARK                     - 어두운 테마로 표시",
-          "THEME.SYSTEM                - 시스템 설정 (설정 > 디스플레이 > 야간모드) on/off 에 따라 표시"
+          "THEME.SYSTEM                - 시스템 설정 (설정 > 디스플레이 > 야간모드) on/off 에 따라 표시",
+          "이전\n                        NUGU 사용자 인터페이스\n                        User Interface",
+          "다음\n                        테스트 환경 설정",
+          "이전",
+          "NUGU 사용자 인터페이스",
+          "User Interface",
+          "다음",
+          "테스트 환경 설정"
         ]
       }
     ],
@@ -5847,7 +6274,13 @@
           "public class NuguVoiceChrome: UIView {\n    public var theme: NuguVoiceChromeTheme\n}\n\npublic class AudioDisplayView: UIView { \n    public var theme: AudioDisplayTheme\n}\n\nex> nuguVoiceChrome.theme = .dark",
           "고객의 편의를 위해 NuguClientKit 에서는 NuguThemeController 라는 컨트롤러 모델을 제공하고 있습니다. NuguThemeController 를 생성하여, VoiceChromePresenter, DisplayWebViewPresenter, AudioDisplayViewPresenter 의 생성자로 추가하면 해당 UI Component 들의 theme 가 NuguThemeController 와 연동됩니다.",
           "복사성공!",
-          "lazy var themeController = NuguThemeController()\n    \n    private lazy var voiceChromePresenter = VoiceChromePresenter(\n        viewController: self,\n        nuguClient: NuguCentralManager.shared.client,\n        themeController: themeController\n    )\n    private lazy var displayWebViewPresenter = DisplayWebViewPresenter(\n        viewController: self,\n        nuguClient: NuguCentralManager.shared.client,\n        clientInfo: [\"buttonColor\": \"white\"],\n        themeController: themeController\n    )\n    private lazy var audioDisplayViewPresenter = AudioDisplayViewPresenter(\n        viewController: self,\n        nuguClient: NuguCentralManager.shared.client,\n        themeController: themeController\n    )\n    \n    ex> themeController.theme = .dark"
+          "lazy var themeController = NuguThemeController()\n    \n    private lazy var voiceChromePresenter = VoiceChromePresenter(\n        viewController: self,\n        nuguClient: NuguCentralManager.shared.client,\n        themeController: themeController\n    )\n    private lazy var displayWebViewPresenter = DisplayWebViewPresenter(\n        viewController: self,\n        nuguClient: NuguCentralManager.shared.client,\n        clientInfo: [\"buttonColor\": \"white\"],\n        themeController: themeController\n    )\n    private lazy var audioDisplayViewPresenter = AudioDisplayViewPresenter(\n        viewController: self,\n        nuguClient: NuguCentralManager.shared.client,\n        themeController: themeController\n    )\n    \n    ex> themeController.theme = .dark",
+          "이전\n                        NUGU 사용자 인터페이스",
+          "다음\n                        테스트 환경 설정",
+          "이전",
+          "NUGU 사용자 인터페이스",
+          "다음",
+          "테스트 환경 설정"
         ]
       }
     ],
@@ -5901,7 +6334,13 @@
           "Backend Parameter명을 “status”로 지정합니다.",
           "Play Builder 우측 상단에 있는 Play 저장을 눌러 Play를 저장합니다.",
           "Play의 Parameter 설정이 완료되면, 이제 Backend proxy에서 이 Parameter에 적절한 값을 전달해 주도록 Backend proxy 동작 환경을 설정해야 합니다.",
-          "이렇게 입력을 하고, Backend proxy가 기상 정보를 Backend Parameter에 담아주면 다음과 같은 상태가 됩니다."
+          "이렇게 입력을 하고, Backend proxy가 기상 정보를 Backend Parameter에 담아주면 다음과 같은 상태가 됩니다.",
+          "이전\n                        Parameter",
+          "다음\n                        Parameter로 응답 작성하기",
+          "이전",
+          "Parameter",
+          "다음",
+          "Parameter로 응답 작성하기"
         ]
       }
     ],
@@ -5918,7 +6357,13 @@
           "사용자의 발화를 예상하여 만든 User Utterance Model에서 정의된 Intent들이 실제로 NLU 엔진을 통해 분석되었을 때 이를 처리하는 것이 Action입니다. 즉, Action은 Play 내에서 사용자의 발화에 대해서 답변하거나 명령을 수행하는 역할을 합니다.",
           "아리아, 안녕!에서 살펴보았듯이 Intent를 처리하기 위해 하나의 Action을 만들고, 이 Action에 응답을 작성할 수 있습니다. 이때의 Intent를 Action의 Trigger라고 표현하며 이 Intent가 들어오면 항상 연결된 Action이 동작하게 됩니다.",
           "이와 같이 Action은 하나의 Intent를 처리하는 역할을 하기도 하지만, Action 하위에 또 다른 Action을 추가하여 Tree 구조를 만든 뒤 응답을 작성할 수도 있습니다.",
-          "Action Tree에 대한 자세한 내용은 Branch Action 사용하기(Action Tree 만들기)에서 알아보도록 하겠습니다."
+          "Action Tree에 대한 자세한 내용은 Branch Action 사용하기(Action Tree 만들기)에서 알아보도록 하겠습니다.",
+          "이전\n                        예상 발화 작성 가이드",
+          "다음\n                        Built-in Actions",
+          "이전",
+          "예상 발화 작성 가이드",
+          "다음",
+          "Built-in Actions"
         ]
       }
     ],
@@ -5977,7 +6422,13 @@
           "날짜 형식에 맞는 문자열이 있다면, 보다 더 적합한 날짜 형태로 변경합니다.",
           "날짜 형식에 대한 내용은 DateTimeFormatter를 참고하세요.",
           "NLF Function의 자동완성을 위한 기호는 : 이며, 사용 방법은 NLG Translator와 같습니다.",
-          "참고로, Response Filter는 종류에 상관없이 중첩해서 사용할 수 있습니다."
+          "참고로, Response Filter는 종류에 상관없이 중첩해서 사용할 수 있습니다.",
+          "이전\n                        외부 연동 서버 (Backend proxy) 연결하기",
+          "다음\n                        테스트하기",
+          "이전",
+          "외부 연동 서버 (Backend proxy) 연결하기",
+          "다음",
+          "테스트하기"
         ]
       }
     ],
@@ -6090,7 +6541,13 @@
           "정규화 규칙을 제공하는 Type이라고 하더라도 상세 화면에서 보여지는 대표값이 해당 Type의 모든 Entity를 의미하는 것은 아닙니다.",
           "함께 보면 좋은 도움말",
           "Intent의 예상 발화 문장을 잘 입력하는 방법",
-          "AudioPlayer Interface 알아보기"
+          "AudioPlayer Interface 알아보기",
+          "이전\n                        Play 설정하기",
+          "다음\n                        Built-in Intent",
+          "이전",
+          "Play 설정하기",
+          "다음",
+          "Built-in Intent"
         ]
       }
     ],
@@ -6110,7 +6567,13 @@
           "Biz 사용자 관리 API | - | 제공",
           "Biz 전용 디바이스 조회 API | - | 제공",
           "Announcement API | - | 제공",
-          "사용자 초대 유형 | Play 단위 | Biz Service 단위"
+          "사용자 초대 유형 | Play 단위 | Biz Service 단위",
+          "이전\n                        주요 개념",
+          "다음\n                        Private Play",
+          "이전",
+          "주요 개념",
+          "다음",
+          "Private Play"
         ]
       }
     ],
@@ -6160,7 +6623,13 @@
         "title": "체험판과 정식판 > 체험판 신청",
         "indexes": [
           "체험판 신청",
-          "체험판 신청서를 작성하거나 제휴 프로세스가 완료되면 NUGU SDK 를 사용할 수 있는 인증정보가 제공됩니다. 다음 체험판 신청하기 가이드에 따라 NUGU SDK 체험판을 사용해보세요."
+          "체험판 신청서를 작성하거나 제휴 프로세스가 완료되면 NUGU SDK 를 사용할 수 있는 인증정보가 제공됩니다. 다음 체험판 신청하기 가이드에 따라 NUGU SDK 체험판을 사용해보세요.",
+          "이전\n                        NUGU SDK",
+          "다음\n                        체험판 신청하기",
+          "이전",
+          "NUGU SDK",
+          "다음",
+          "체험판 신청하기"
         ]
       }
     ],
@@ -6283,7 +6752,13 @@
           "사용자: 배송차량 도착시간 알려줘\nNUGU: 상온 배송차량이 아직 물류센터를 출발하지 않았습니다. ← 답변\n무엇을 더 도와드릴까요? (Listening 상태) ← 다음 명령 요청",
           "수행할 수 없는 명령을 한 경우에는 한 번 더 사용자에게 묻는 것도 고려해 볼 수 있습니다.",
           "사용자: 모짜르트의 애국가 들려줘.\nNUGU: 제가 처리할 수 없는 조합이네요. ← 답변\n다시 한번 말씀해주시겠어요? (Listening 상태) ← 다음 명령 요청",
-          "Action 구현에 대한 자세한 내용은 Action 정의하기를 참고하세요."
+          "Action 구현에 대한 자세한 내용은 Action 정의하기를 참고하세요.",
+          "이전\n                        사용자 발화(User Utterance) 예상 하기",
+          "다음\n                        Prompt 디자인",
+          "이전",
+          "사용자 발화(User Utterance) 예상 하기",
+          "다음",
+          "Prompt 디자인"
         ]
       }
     ],
@@ -6367,7 +6842,13 @@
         "title": "DeviceTemperatureControl Interface > Error & Exception",
         "indexes": [
           "Error & Exception",
-          "해당 Capability/Directive에서 응답 시 사용할 수 있는 ErrorCode는 SmartHomeError를 참조해주시기 바랍니다."
+          "해당 Capability/Directive에서 응답 시 사용할 수 있는 ErrorCode는 SmartHomeError를 참조해주시기 바랍니다.",
+          "이전\n                        ColorControl Interface",
+          "다음\n                        HumidityControl Interface",
+          "이전",
+          "ColorControl Interface",
+          "다음",
+          "HumidityControl Interface"
         ]
       }
     ],
@@ -7032,7 +7513,14 @@
           "grammarGuide | GrammarGuide | N | -",
           "supportFocusedItemToken | boolean | N | Context에 있는 focusedItemToken이 지원되어야 하는지 여부",
           "supportVisibleTokenList | boolean | N | Context에 있는 visibleTokenList가 지원되어야 하는지 여부",
-          "data | Object | N | 서비스에서 필요한 데이터를 JSON 포맷으로 추가 가능"
+          "data | Object | N | 서비스에서 필요한 데이터를 JSON 포맷으로 추가 가능",
+          "이전\n                        Display\n                        Play 에서 전달하는 UI 요소를 화면에 구성하기 규격",
+          "다음\n                        Display-Event",
+          "이전",
+          "Display",
+          "Play 에서 전달하는 UI 요소를 화면에 구성하기 규격",
+          "다음",
+          "Display-Event"
         ]
       }
     ],
@@ -7113,7 +7601,14 @@
           "ControlScrollFailed",
           "복사성공!",
           "{\n  \"header\": {\n    \"namespace\": \"Display\",\n    \"name\": \"ControlScrollFailed\",\n    \"messageId\": \"{{STRING}}\",\n    \"dialogRequestId\": \"{{STRING}}\",\n    \"version\": \"1.4\"\n  },\n  \"payload\": {\n    \"playServiceId\": \"{{STRING}}\",\n    \"direction\": \"{{STRING}}\"\n  }\n}",
-          "direction | string | N | PREVIOUS, NEXT"
+          "direction | string | N | PREVIOUS, NEXT",
+          "이전\n                        Display-Directive",
+          "다음\n                        System\n                        디바이스의 전원 및 네트워크 연결 상태를 관리하기 위한 규격",
+          "이전",
+          "Display-Directive",
+          "다음",
+          "System",
+          "디바이스의 전원 및 네트워크 연결 상태를 관리하기 위한 규격"
         ]
       }
     ],
@@ -7768,7 +8263,13 @@
         "indexes": [
           "Sample Code",
           "복사성공!",
-          "{\n      \"type\": \"Display.ImageList3\",\n      \"version\": \"1.0\",\n      \"playServiceId\": \"{{playServiceId}}\",\n      \"token\": \"{{token}}\",\n      \"title\" : {\n        \"logo\": {\n          \"contentDescription\": \"{{contentDescription}}\",\n          \"sources\": [\n              {\n                  \"url\": \"http://someurl.com/name.png\"\n              }\n          ]\n        },\n        \"text\": {\n            \"text\": \"내 플레이리스트\"\n        }\n      },\n      \"background\": {\n        \"image\": {\n          \"contentDescription\": \"{{STRING}}\",\n          \"sources\": [\n              {\n                  \"url\": \"http://someurl.com/name.png\",\n                  \"size\": \"LARGE\"\n              }\n            ]\n          }\n      },\n      \"listItems\": [\n        {\n          \"token\": \"{{111}}\",\n          \"image\": {\n            \"contentDescription\": \"{{STRING}}\",\n            \"sources\": [\n                {\n                    \"url\": \"http://someurl.com/name.png\",\n                    \"size\": \"LARGE\"\n                }\n            ]\n          },\n          \"header\": {\n            \"text\": \"감성 리메이크\"\n          },\n          \"icon\": {\n            \"contentDescription\": \"{{STRING}}\",\n            \"sources\": [\n                {\n                    \"url\": \"http://someurl.com/name.png\",\n                    \"size\": \"X_SMALL\"\n                }\n            ]\n          }\n        },\n        {\n          \"token\": \"{{222}}\",\n          \"image\": {\n            \"contentDescription\": \"{{STRING}}\",\n            \"sources\": [\n                {\n                    \"url\": \"http://someurl.com/name.png\"\n                }\n            ]\n          },\n          \"header\": {\n            \"text\": \"Deep Plow\"\n          }\n        },\n        {\n          \"token\": \"{{333}}\",\n          \"image\": {\n            \"contentDescription\": \"{{STRING}}\",\n            \"sources\": [\n                {\n                    \"url\": \"http://someurl.com/name.png\"\n                }\n            ]\n          },\n          \"header\": {\n            \"text\": \"운동 할 때 무한 반복해도 절대 질리지 않는 트랙들!\"\n          }\n        },\n        {\n          \"token\": \"{{111}}\",\n          \"image\": {\n            \"contentDescription\": \"{{STRING}}\",\n            \"sources\": [\n                {\n                    \"url\": \"http://someurl.com/name.png\",\n                    \"size\": \"LARGE\"\n                }\n            ]\n          },\n          \"header\": {\n            \"text\": \"감성 리메이크\"\n          }\n        },\n        {\n          \"token\": \"{{222}}\",\n          \"image\": {\n            \"contentDescription\": \"{{STRING}}\",\n            \"sources\": [\n                {\n                    \"url\": \"http://someurl.com/name.png\"\n                }\n            ]\n          },\n          \"header\": {\n            \"text\": \"Deep Plow\"\n          }\n        },\n        {\n          \"token\": \"{{333}}\",\n          \"image\": {\n            \"contentDescription\": \"{{STRING}}\",\n            \"sources\": [\n                {\n                    \"url\": \"http://someurl.com/name.png\"\n                }\n            ]\n          },\n          \"header\": {\n            \"text\": \"운동 할 때 무한 반복해도 절대 질리지 않는 트랙들!\"\n          }\n        },\n        {\n          \"token\": \"{{111}}\",\n          \"image\": {\n            \"contentDescription\": \"{{STRING}}\",\n            \"sources\": [\n                {\n                    \"url\": \"http://someurl.com/name.png\",\n                    \"size\": \"LARGE\"\n                }\n            ]\n          },\n          \"header\": {\n            \"text\": \"감성 리메이크\"\n          }\n        },\n        {\n          \"token\": \"{{222}}\",\n          \"image\": {\n            \"contentDescription\": \"{{STRING}}\",\n            \"sources\": [\n                {\n                    \"url\": \"http://someurl.com/name.png\"\n                }\n            ]\n          },\n          \"header\": {\n            \"text\": \"Deep Plow\"\n          }\n        },\n        {\n          \"token\": \"{{333}}\",\n          \"image\": {\n            \"contentDescription\": \"{{STRING}}\",\n            \"sources\": [\n                {\n                    \"url\": \"http://someurl.com/name.png\"\n                }\n            ]\n          },\n          \"header\": {\n            \"text\": \"운동 할 때 무한 반복해도 절대 질리지 않는 트랙들!\"\n          }\n        }\n    ]\n}"
+          "{\n      \"type\": \"Display.ImageList3\",\n      \"version\": \"1.0\",\n      \"playServiceId\": \"{{playServiceId}}\",\n      \"token\": \"{{token}}\",\n      \"title\" : {\n        \"logo\": {\n          \"contentDescription\": \"{{contentDescription}}\",\n          \"sources\": [\n              {\n                  \"url\": \"http://someurl.com/name.png\"\n              }\n          ]\n        },\n        \"text\": {\n            \"text\": \"내 플레이리스트\"\n        }\n      },\n      \"background\": {\n        \"image\": {\n          \"contentDescription\": \"{{STRING}}\",\n          \"sources\": [\n              {\n                  \"url\": \"http://someurl.com/name.png\",\n                  \"size\": \"LARGE\"\n              }\n            ]\n          }\n      },\n      \"listItems\": [\n        {\n          \"token\": \"{{111}}\",\n          \"image\": {\n            \"contentDescription\": \"{{STRING}}\",\n            \"sources\": [\n                {\n                    \"url\": \"http://someurl.com/name.png\",\n                    \"size\": \"LARGE\"\n                }\n            ]\n          },\n          \"header\": {\n            \"text\": \"감성 리메이크\"\n          },\n          \"icon\": {\n            \"contentDescription\": \"{{STRING}}\",\n            \"sources\": [\n                {\n                    \"url\": \"http://someurl.com/name.png\",\n                    \"size\": \"X_SMALL\"\n                }\n            ]\n          }\n        },\n        {\n          \"token\": \"{{222}}\",\n          \"image\": {\n            \"contentDescription\": \"{{STRING}}\",\n            \"sources\": [\n                {\n                    \"url\": \"http://someurl.com/name.png\"\n                }\n            ]\n          },\n          \"header\": {\n            \"text\": \"Deep Plow\"\n          }\n        },\n        {\n          \"token\": \"{{333}}\",\n          \"image\": {\n            \"contentDescription\": \"{{STRING}}\",\n            \"sources\": [\n                {\n                    \"url\": \"http://someurl.com/name.png\"\n                }\n            ]\n          },\n          \"header\": {\n            \"text\": \"운동 할 때 무한 반복해도 절대 질리지 않는 트랙들!\"\n          }\n        },\n        {\n          \"token\": \"{{111}}\",\n          \"image\": {\n            \"contentDescription\": \"{{STRING}}\",\n            \"sources\": [\n                {\n                    \"url\": \"http://someurl.com/name.png\",\n                    \"size\": \"LARGE\"\n                }\n            ]\n          },\n          \"header\": {\n            \"text\": \"감성 리메이크\"\n          }\n        },\n        {\n          \"token\": \"{{222}}\",\n          \"image\": {\n            \"contentDescription\": \"{{STRING}}\",\n            \"sources\": [\n                {\n                    \"url\": \"http://someurl.com/name.png\"\n                }\n            ]\n          },\n          \"header\": {\n            \"text\": \"Deep Plow\"\n          }\n        },\n        {\n          \"token\": \"{{333}}\",\n          \"image\": {\n            \"contentDescription\": \"{{STRING}}\",\n            \"sources\": [\n                {\n                    \"url\": \"http://someurl.com/name.png\"\n                }\n            ]\n          },\n          \"header\": {\n            \"text\": \"운동 할 때 무한 반복해도 절대 질리지 않는 트랙들!\"\n          }\n        },\n        {\n          \"token\": \"{{111}}\",\n          \"image\": {\n            \"contentDescription\": \"{{STRING}}\",\n            \"sources\": [\n                {\n                    \"url\": \"http://someurl.com/name.png\",\n                    \"size\": \"LARGE\"\n                }\n            ]\n          },\n          \"header\": {\n            \"text\": \"감성 리메이크\"\n          }\n        },\n        {\n          \"token\": \"{{222}}\",\n          \"image\": {\n            \"contentDescription\": \"{{STRING}}\",\n            \"sources\": [\n                {\n                    \"url\": \"http://someurl.com/name.png\"\n                }\n            ]\n          },\n          \"header\": {\n            \"text\": \"Deep Plow\"\n          }\n        },\n        {\n          \"token\": \"{{333}}\",\n          \"image\": {\n            \"contentDescription\": \"{{STRING}}\",\n            \"sources\": [\n                {\n                    \"url\": \"http://someurl.com/name.png\"\n                }\n            ]\n          },\n          \"header\": {\n            \"text\": \"운동 할 때 무한 반복해도 절대 질리지 않는 트랙들!\"\n          }\n        }\n    ]\n}",
+          "이전\n                        AudioPlayer를 위한 Display Interface",
+          "다음\n                        Backend proxy API Reference",
+          "이전",
+          "AudioPlayer를 위한 Display Interface",
+          "다음",
+          "Backend proxy API Reference"
         ]
       }
     ],
@@ -7794,7 +8295,13 @@
           "Display Template은 아래 디바이스 및 해상도를 지원합니다.",
           "TV (B tv) | 1920 x 1080 | Landscape",
           "Display Speaker (NUGU nemo) | 1280 x 800 | Landscape",
-          "Mobile | 360 x 640 (Android)375 x 667 (iOS) | Portrait"
+          "Mobile | 360 x 640 (Android)375 x 667 (iOS) | Portrait",
+          "이전\n                        Voice Chrome",
+          "다음\n                        NUGU Inside",
+          "이전",
+          "Voice Chrome",
+          "다음",
+          "NUGU Inside"
         ]
       }
     ],
@@ -8096,7 +8603,14 @@
           "{\n  \"type\": \"{{STRING}}\",\n  \"text\": TextObject,\n  \"image\": ImageObject\n}",
           "type | string | Y | TEXTIMAGE",
           "text | TextObject | N | -",
-          "image | ImageObject | N | -"
+          "image | ImageObject | N | -",
+          "이전\n                        AudioPlayer\n                        Play 에서 전달하는 음원을 재생하기 위한 규격",
+          "다음\n                        Display-Directive",
+          "이전",
+          "AudioPlayer",
+          "Play 에서 전달하는 음원을 재생하기 위한 규격",
+          "다음",
+          "Display-Directive"
         ]
       }
     ],
@@ -8151,7 +8665,13 @@
           "Play 배포 대기 상태(지정한 배포일이 아직 도래하지 않은 상태)에서는 언제든지 배포 신청을 취소할 수 있습니다.",
           "Developers > Play kit > 관리 페이지에서 배포 신청을 취소할 Play의 배포취소 버튼을 클릭합니다.",
           "배포 취소 확인 팝업창에서 확인 버튼을 클릭하면 배포 신청이 취소됩니다.",
-          "배포 취소가 완료되면 해당 Play는 배포대기에서 심사완료 상태로 변경되고, 배포요청 버튼이 생성됩니다."
+          "배포 취소가 완료되면 해당 Play는 배포대기에서 심사완료 상태로 변경되고, 배포요청 버튼이 생성됩니다.",
+          "이전\n                        Play 배포 및 관리하기",
+          "다음\n                        Play 업데이트",
+          "이전",
+          "Play 배포 및 관리하기",
+          "다음",
+          "Play 업데이트"
         ]
       }
     ],
@@ -8170,7 +8690,13 @@
           "Play 업데이트",
           "Play 관리",
           "Play 이용 통계 확인",
-          "Play 운영 정책"
+          "Play 운영 정책",
+          "이전\n                        Play 심사",
+          "다음\n                        Play 배포",
+          "이전",
+          "Play 심사",
+          "다음",
+          "Play 배포"
         ]
       }
     ],
@@ -8312,7 +8838,13 @@
         "title": "Biz 사용자 초대 (정식판) > 4. 초대장 인증 (사용자 초대 수락) > Biz Service 초대 완료",
         "indexes": [
           "Biz Service 초대 완료",
-          "인증 시점부터 지정된 Private Play 이용이 가능하며, Biz API 수신 받을 수 있습니다. 초대 수락한 정보는 NUGU APP에서 확인 및 수정이 가능합니다."
+          "인증 시점부터 지정된 Private Play 이용이 가능하며, Biz API 수신 받을 수 있습니다. 초대 수락한 정보는 NUGU APP에서 확인 및 수정이 가능합니다.",
+          "이전\n                        Biz 사용자 초대 (체험판)",
+          "다음\n                        Biz 사용자 설정 (NUGU APP)",
+          "이전",
+          "Biz 사용자 초대 (체험판)",
+          "다음",
+          "Biz 사용자 설정 (NUGU APP)"
         ]
       }
     ],
@@ -8413,7 +8945,13 @@
           "사용자는 이메일로 수신된 초대장에서 “여기” 링크를 클릭하여 NUGU ID 인증 페이지로 이동할 수 있으며, 로그인 인증 시점부터 Private Play 이용이 가능합니다. 제공 받은 Private Play의 상세 정보는 NUGU App에서 확인할 수 있습니다.",
           "이메일마다 하나의 NUGU ID만 인증 할 수 있습니다.",
           "Private Play 사용자는 언제든지 NUGU App에서 Private Play 이용 권한을 해제할 수 있습니다. 해제 시 Private Play 이용 권한이 제거되며, 제된 이후에는 Private Play를 이용할 수 없습니다.",
-          "만약, 권한 재부여를 원할 경우에는 서비스 관리자가 NUGU developers를 통해 다시 초대장을 발송해야 합니다."
+          "만약, 권한 재부여를 원할 경우에는 서비스 관리자가 NUGU developers를 통해 다시 초대장을 발송해야 합니다.",
+          "이전\n                        Biz 사용자 관리",
+          "다음\n                        Biz 사용자 초대 (정식판)",
+          "이전",
+          "Biz 사용자 관리",
+          "다음",
+          "Biz 사용자 초대 (정식판)"
         ]
       }
     ],
@@ -8435,7 +8973,14 @@
           "Device G/W에 요청 처리 안됨 | 현재 누구 서비스와의 연결이 원활하지 않습니다. 잠시 후 다시 시도해 주세요. | device_GW_error_005",
           "Device G/W에서 TTS 연동 실패 | 누구 서비스 중에 문제가 발생했어요. 잠시 후 다시 말씀해주세요. | device_GW_error_006",
           "Device G/W에서 PR 연동 실패 | 누구 서비스 중에 문제가 발생했어요. 잠시 후 다시 말씀해주세요. | device_GW_error_006",
-          "Error Message"
+          "Error Message",
+          "이전\n                        NUGU Inside",
+          "다음\n                        Release note",
+          "Error Message",
+          "이전",
+          "NUGU Inside",
+          "다음",
+          "Release note"
         ]
       }
     ],
@@ -8591,7 +9136,15 @@
           "CommandIssued",
           "복사성공!",
           "{\n  \"header\": {\n    \"namespace\": \"Extension\",\n    \"name\": \"CommandIssued\",\n    \"messageId\": \"{{STRING}}\",\n    \"dialogRequestId\": \"{{STRING}}\",\n    \"version\": \"1.1\"\n  },\n  \"payload\": {\n    \"playServiceId\": \"{{STRING}}\",\n    \"data\": {}\n  }\n}",
-          "data | object | Y | 임의의 JSON object"
+          "data | object | Y | 임의의 JSON object",
+          "이전\n                        Location\n                        디바이스 위치 정보를 Play 로 전달하기 위한 규격",
+          "다음\n                        Speaker\n                        디바이스의 볼륨을 제어하기 위한 규격",
+          "이전",
+          "Location",
+          "디바이스 위치 정보를 Play 로 전달하기 위한 규격",
+          "다음",
+          "Speaker",
+          "디바이스의 볼륨을 제어하기 위한 규격"
         ]
       }
     ],
@@ -8613,7 +9166,13 @@
           "Intent 만들고 예상 발화 등록하기: 사용자가 해당 Play를 사용하고자 할 때의 예상 발화문을 입력합니다.",
           "Action 만들고 응답 입력하기: 사용자의 의도를 기반으로 NUGU가 응답하거나 동작하는 것을 Action이라고 합니다. Action별로 사용자에게 제공할 응답 및 동작들을 입력합니다.",
           "테스트 및 빌드하기: 제공하고자 하는 동작을 정의했다면 Play Builder 내에서 테스트를 할 수 있고, 이후 빌드하여 Play를 완성할 수 있습니다.",
-          "Play Builder 내의 모든 상세 페이지에는 화면에 도움말이 직접 포함되어 있어 작업에 필요한 정보를 표시해 줍니다.\n화면 하단의 도움말 버튼을 통해 도움말을 켜고 끌 수 있습니다."
+          "Play Builder 내의 모든 상세 페이지에는 화면에 도움말이 직접 포함되어 있어 작업에 필요한 정보를 표시해 줍니다.\n화면 하단의 도움말 버튼을 통해 도움말을 켜고 끌 수 있습니다.",
+          "이전\n                        Play Builder로 Play 만들기",
+          "다음\n                        1) Play 생성하기",
+          "이전",
+          "Play Builder로 Play 만들기",
+          "다음",
+          "1) Play 생성하기"
         ]
       }
     ],
@@ -8683,7 +9242,13 @@
           "다양한 조사/부사 및 어순 변경\n\n    \n      “어제 에스케이 와이번스 야구 결과 알고싶어”, “어제 에스케이 와이번스 야구 결과를 알고싶어”, “어제 에스케이 와이번스 야구 결과가 알고싶어”, “에스케이 와이번스 어제 야구 결과 알고싶어”, “어제 야구 결과 에스케이 와이번스 꺼 알고 싶어”",
           "사용자가 발화할 만한 수준에서 Entity의 순서를 변경하여 등록\n\n    \n      “어제 에스케이 와이번스 시합 결과 알려줘”, “에스케이 와이번스 어제 시합 결과 알려줘”",
           "한국 프로 야구 경기 결과를 조회하는 Play를 개발한다고 할 때, 위의 여섯 가지 원칙을 적용하여 다음과 같은 일련의 발화들을 등록해 볼 수 있습니다.",
-          "오늘 경기 결과 알려줘\n      \n        SK와이번스 오늘 경기 결과\n        삼성 라이온즈 경기 결과 알려줘\n        오늘 두산베어스 경기 어떻게 됐어?\n        어제 LG 트윈스 게임 이겼어 졌어?\n        한화 이글스 어제 경기 이겼는지 말해줘\n        오늘 KT 위즈 경기 스코어 알려줘\n        어제 롯데 자이언츠 시합 어떻게 끝났는지 좀 말해 줄래\n        넥센 히어로즈 19일 시합 결과 좀 알려 줄래\n        KIA 타이거즈 화요일 게임 어떻게 됐는지 확인 부탁해\n        오늘 NC 다이노스 야구 어떻게 끝났어?\n        …"
+          "오늘 경기 결과 알려줘\n      \n        SK와이번스 오늘 경기 결과\n        삼성 라이온즈 경기 결과 알려줘\n        오늘 두산베어스 경기 어떻게 됐어?\n        어제 LG 트윈스 게임 이겼어 졌어?\n        한화 이글스 어제 경기 이겼는지 말해줘\n        오늘 KT 위즈 경기 스코어 알려줘\n        어제 롯데 자이언츠 시합 어떻게 끝났는지 좀 말해 줄래\n        넥센 히어로즈 19일 시합 결과 좀 알려 줄래\n        KIA 타이거즈 화요일 게임 어떻게 됐는지 확인 부탁해\n        오늘 NC 다이노스 야구 어떻게 끝났어?\n        …",
+          "이전\n                        Built-in Intent",
+          "다음\n                        Action 정의하기",
+          "이전",
+          "Built-in Intent",
+          "다음",
+          "Action 정의하기"
         ]
       }
     ],
@@ -8841,7 +9406,13 @@
         "title": "HumidityControl Interface > Error & Exception",
         "indexes": [
           "Error & Exception",
-          "해당 Capability/Directive에서 응답 시 사용할 수 있는 ErrorCode는 SmartHomeError를 참조해주시기 바랍니다."
+          "해당 Capability/Directive에서 응답 시 사용할 수 있는 ErrorCode는 SmartHomeError를 참조해주시기 바랍니다.",
+          "이전\n                        DeviceTemperatureControl Interface",
+          "다음\n                        ModeControl Interface",
+          "이전",
+          "DeviceTemperatureControl Interface",
+          "다음",
+          "ModeControl Interface"
         ]
       }
     ],
@@ -8931,7 +9502,13 @@
           "예를 들어, 날씨를 안내하는 Play를 만든다고 할 때, 날씨 안내 기능을 사용하기 위해서는 ‘날씨 정보를 요청’이라는 의도를 표현해야 하며, 이를 ask.weather라는 Intent로 정의할 수 있습니다. 이 의도를 표현하기 위해 사용자가 “날씨 알려줘”, “날씨 알려주세요.”, “날씨가 어때”라고 말할 것으로 예상되는 경우, 이 세 문장을 ‘예상 발화’라고 합니다.",
           "ask.weather를 생성하고, 이 Intent에 예상 발화를 연결하면 User Utterance Model이 완성됩니다.",
           "그러나, 실제로는 사용자가 “어제 날씨 알려줘”, “내일 날씨 알려줘”, “명동 날씨 알려줘” 와 같이 발화할 수도 있습니다. 이러한 발화들을 각각 독립된 Intent로 정의한 뒤, 각 Intent를 처리하는 기능들을 추가하여 처리하는 것도 가능합니다.",
-          "그러나 ‘어제’, ‘내일’, ‘명동’을 Entity로 간주하고 동일한 ask.weather Intent로 처리하면, 조금 더 효율적으로 대응이 가능합니다. 이를 위해, 같은 속성을 가진 Entity끼리 하나의 Entity Type으로 묶고, 이를 예상 발화에 지정하면 Entity를 활용한 User Utterance Model을 정의할 수 있습니다. Entity Type을 예상 발화에 지정할 때에는 Entity Type별로 하나의 값만을 사용해도 됩니다."
+          "그러나 ‘어제’, ‘내일’, ‘명동’을 Entity로 간주하고 동일한 ask.weather Intent로 처리하면, 조금 더 효율적으로 대응이 가능합니다. 이를 위해, 같은 속성을 가진 Entity끼리 하나의 Entity Type으로 묶고, 이를 예상 발화에 지정하면 Entity를 활용한 User Utterance Model을 정의할 수 있습니다. Entity Type을 예상 발화에 지정할 때에는 Entity Type별로 하나의 값만을 사용해도 됩니다.",
+          "이전\n                        Play",
+          "다음\n                        Backend proxy",
+          "이전",
+          "Play",
+          "다음",
+          "Backend proxy"
         ]
       }
     ],
@@ -8991,7 +9568,13 @@
           "Download",
           "NUGU SDK for Android의 구성요소는 모두 별도로 추가할 수 있습니다.",
           "복사성공!",
-          "dependencies {\n    implementation \"com.skt.nugu.sdk:nugu-core:${nugu_latestVersion}\"\n    implementation \"com.skt.nugu.sdk:nugu-interface:${nugu_latestVersion}\"\n    implementation \"com.skt.nugu.sdk:nugu-agent:${nugu_latestVersion}\"\n    implementation \"com.skt.nugu.sdk:nugu-client-kit:${nugu_latestVersion}\"\n    implementation \"com.skt.nugu.sdk:nugu-android-helper:${nugu_latestVersion}\"\n    implementation \"com.skt.nugu.sdk:nugu-ux-kit:${nugu_latestVersion}\"\n    implementation \"com.skt.nugu.sdk:nugu-login-kit:${nugu_latestVersion}\"\n    implementation \"com.skt.nugu.sdk:nugu-service-kit:${nugu_latestVersion}\"\n\n    implementation \"com.skt.nugu:keensense:${keensense_latestVersion}\"\n    implementation \"com.skt.nugu:jademarble:${jademarble_latestVersion}\"\n    implementation \"com.skt.nugu:silvertray:${silvertray_latestVersion}\"\n}"
+          "dependencies {\n    implementation \"com.skt.nugu.sdk:nugu-core:${nugu_latestVersion}\"\n    implementation \"com.skt.nugu.sdk:nugu-interface:${nugu_latestVersion}\"\n    implementation \"com.skt.nugu.sdk:nugu-agent:${nugu_latestVersion}\"\n    implementation \"com.skt.nugu.sdk:nugu-client-kit:${nugu_latestVersion}\"\n    implementation \"com.skt.nugu.sdk:nugu-android-helper:${nugu_latestVersion}\"\n    implementation \"com.skt.nugu.sdk:nugu-ux-kit:${nugu_latestVersion}\"\n    implementation \"com.skt.nugu.sdk:nugu-login-kit:${nugu_latestVersion}\"\n    implementation \"com.skt.nugu.sdk:nugu-service-kit:${nugu_latestVersion}\"\n\n    implementation \"com.skt.nugu:keensense:${keensense_latestVersion}\"\n    implementation \"com.skt.nugu:jademarble:${jademarble_latestVersion}\"\n    implementation \"com.skt.nugu:silvertray:${silvertray_latestVersion}\"\n}",
+          "이전\n                        시작하기",
+          "다음\n                        Background 동작 처리",
+          "이전",
+          "시작하기",
+          "다음",
+          "Background 동작 처리"
         ]
       }
     ],
@@ -9026,7 +9609,14 @@
           "NUGU SDK for iOS는 iOS 12.0 or 10.0 이상을 지원합니다.",
           "iOS 12.0+ (v1.3.0 or more) iOS 10.0+ (less than v1.3.0)",
           "macOS 10.15.0+ (v1.4.0 or more) including mac catalyst",
-          "tvOS 13.0+ (v1.4.0 or more)"
+          "tvOS 13.0+ (v1.4.0 or more)",
+          "이전\n                        Platform\n                        NUGU SDK는 iOS, Android, Linux 플랫폼을 지원합니다. 각각의 플랫폼에 맞는 언어와 특성을 따르고 있으며, 동일한 구조를 가지고 있는 영역(Common)과 플랫폼 별로 다른 구조를 가진 영역(Depends on platform)이 구분되어 있습니다.",
+          "다음\n                        시작하기",
+          "이전",
+          "Platform",
+          "NUGU SDK는 iOS, Android, Linux 플랫폼을 지원합니다. 각각의 플랫폼에 맞는 언어와 특성을 따르고 있으며, 동일한 구조를 가지고 있는 영역(Common)과 플랫폼 별로 다른 구조를 가진 영역(Depends on platform)이 구분되어 있습니다.",
+          "다음",
+          "시작하기"
         ]
       }
     ],
@@ -9050,7 +9640,13 @@
           "Call 동작 중 다른 명령이 발화 될 경우, Call 상태 유지",
           "Alert 동작 중 다른 명령이 발화될 경우, Alert 종료 후 신규 동작 실행",
           "Info. 동작 중 다른 명령이 발화될 경우, Info. 종료 후 신규 동작 실행",
-          "Media 동작 중 다른 명령이 발화될 경우, Media pause 상태에서 신규 동작 실행 후 Media resume"
+          "Media 동작 중 다른 명령이 발화될 경우, Media pause 상태에서 신규 동작 실행 후 Media resume",
+          "이전\n                        NUGU 대화 상태",
+          "다음\n                        Icon 등록",
+          "이전",
+          "NUGU 대화 상태",
+          "다음",
+          "Icon 등록"
         ]
       }
     ],
@@ -9080,7 +9676,13 @@
           "profile.privatePlay.enrolledUser.tag | string | N | 초대 사용자 추가 정보 (대리점 코드, 사번, 인트라넷 사용자 아이디 등 필요한 정보를 넣어서 이용)",
           "profile.privatePlay.enrolledUser.userToken | string | N | 초대 사용자에게 Biz 사용자 API Token 생성 과정에 생성한 Token 정보, Biz Kit 정식판 퍼블리셔 전용",
           "profile.privatePlay.enrolledUser.serviceType | string | N | 초대 받아 등록된 사용자의 초대 유형, Biz Kit 정식판 퍼블리셔 전용 (PLAY, SERVICE)",
-          "연동 규격에 사용자 개인 정보를 포함하고 있으므로 Private Play의 Backend proxy server는 HTTPS를 사용해야 합니다. Private Play에서 HTTP를 이용해 Backend proxy server를 개발할 경우 심사 반려됩니다."
+          "연동 규격에 사용자 개인 정보를 포함하고 있으므로 Private Play의 Backend proxy server는 HTTPS를 사용해야 합니다. Private Play에서 HTTP를 이용해 Backend proxy server를 개발할 경우 심사 반려됩니다.",
+          "이전\n                        Backend proxy API Reference",
+          "다음\n                        OAuth 2.0 연동하기",
+          "이전",
+          "Backend proxy API Reference",
+          "다음",
+          "OAuth 2.0 연동하기"
         ]
       }
     ],
@@ -9306,7 +9908,13 @@
           "테스트하기에서 ‘디바이스(스피커)에서 테스트하기’ 항목을 참고하여 테스트 스피커를 추가합니다.",
           "NUGU 앱에 접속하여 왼쪽 위의 햄버거 메뉴를 클릭한 후 NUGU play 항목에서 내가 만든 Play를 클릭합니다.",
           "‘계정 연동’ 버튼을 클릭합니다. 계정 연동 후 스피커로 테스트합니다. NUGU 앱에서 계정 연동을 하고 스피커로 테스트 하면 accessToken을 받을 수 있습니다. (단, 플레이 등록 후 하루 후부터 스피커 테스트가 가능합니다.)",
-          "Play를 등록하는 방법은 Play 정보 등록을 참고하세요."
+          "Play를 등록하는 방법은 Play 정보 등록을 참고하세요.",
+          "이전\n                        Biz 사용자(Enrolled user) 정보 수신 연동",
+          "다음\n                        지원 도구",
+          "이전",
+          "Biz 사용자(Enrolled user) 정보 수신 연동",
+          "다음",
+          "지원 도구"
         ]
       }
     ],
@@ -9346,7 +9954,13 @@
           "CPU Architecture\n    \n      64bit x86(amd64)\n      arm(armhf, arm64)",
           "64bit x86(amd64)",
           "arm(armhf, arm64)",
-          "사용중인 Linux가 Debian 계열의 Linux(deb 패키지 설치가 가능)일 경우, NUGU SDK for Linux 설치가 가능합니다.\n하지만, Ubuntu 이외의 타 배포판에 대한 지원은 하지 않습니다."
+          "사용중인 Linux가 Debian 계열의 Linux(deb 패키지 설치가 가능)일 경우, NUGU SDK for Linux 설치가 가능합니다.\n하지만, Ubuntu 이외의 타 배포판에 대한 지원은 하지 않습니다.",
+          "이전\n                        테스트 환경 설정",
+          "다음\n                        시작하기",
+          "이전",
+          "테스트 환경 설정",
+          "다음",
+          "시작하기"
         ]
       }
     ],
@@ -9499,7 +10113,13 @@
           "헥타르 | ha㏊",
           "헥토파스칼 | hPa㍱",
           "화씨 | ℉",
-          "훰토미터 | fm㎙"
+          "훰토미터 | fm㎙",
+          "이전\n                        Icon 등록",
+          "다음\n                        용어 정의",
+          "이전",
+          "Icon 등록",
+          "다음",
+          "용어 정의"
         ]
       }
     ],
@@ -9577,7 +10197,15 @@
           "{\n  \"Location\": {\n    \"version\": \"1.0\",\n    \"current\": {\n      \"latitude\": \"{{STRING}}\",\n      \"longitude\": \"{{STRING}}\"\n    }\n  }\n}",
           "current | object | N | 현재 위치의 정보",
           "current.latitude | string | Y | 위도",
-          "current.longitude | string | Y | 경도"
+          "current.longitude | string | Y | 경도",
+          "이전\n                        Text\n                        텍스트 명령을 Play 로 전달하기 위한 규격",
+          "다음\n                        Extension\n                        정의되지 않은 기능을 수행하기 위한 규격",
+          "이전",
+          "Text",
+          "텍스트 명령을 Play 로 전달하기 위한 규격",
+          "다음",
+          "Extension",
+          "정의되지 않은 기능을 수행하기 위한 규격"
         ]
       }
     ],
@@ -9647,7 +10275,13 @@
           "추천된 문장의 의도가 Intent와 유사하다고 판단된다면, 우측 버튼을 통해 훈련 문장으로 추가하는 것을 권장합니다.",
           "실패 발화 분석도구의 분석 기간은 Play 배포에 의해 결정됩니다. 배포 시점 이후의 가장 빠른 로그가 분석 시점이 되며, 해당 배포 Play 버전의 마지막 로그가 분석 종점이 됩니다. 분석은 하루에 한 번, 오전 4 ~ 6시 사이에 진행 됩니다.",
           "음성 인식 단계에서 화자의 의도와 다르게 인식된 발화도 실패 발화 분석의 분석 대상으로 노출될 수 있습니다. 음성 인식 엔진은 Play 개발자가 입력한 훈련 데이터를 기반으로 학습되어 동작하므로, 인식이 잘 되지 않는 문장/텍스트를 추가하여 인식이 되도록 데이터를 쌓아나갈 수 있습니다. 그러나 사람 간의 대화에서도 구분이 쉽지 않은 발화(예: 일/이/삼십일일/삼십일 등의 숫자 관련 표현, 들려/들어/틀어, ㅔ/ㅐ/ㅖ, 막다/맑다 등), 어려운 발음, 불분명한 발음 등의 경우에는 데이터의 보강에도 불구하고 인식이 정확히 이루어지지 않을 가능성이 있습니다.",
-          "Play로 들어오는 발화 중, Built-in Intent로 분석되었거나, 정상 응답을 한 발화는 실패 발화 분석 결과에 노출되지 않습니다. 전체 발화 통계는 다음의 도움말을 참고하세요.\nPlay 이용 통계 확인"
+          "Play로 들어오는 발화 중, Built-in Intent로 분석되었거나, 정상 응답을 한 발화는 실패 발화 분석 결과에 노출되지 않습니다. 전체 발화 통계는 다음의 도움말을 참고하세요.\nPlay 이용 통계 확인",
+          "이전\n                        훈련 데이터 검증",
+          "다음\n                        Pre-built Play Builder로 스마트홈 Play 만들기",
+          "이전",
+          "훈련 데이터 검증",
+          "다음",
+          "Pre-built Play Builder로 스마트홈 Play 만들기"
         ]
       }
     ],
@@ -9699,7 +10333,13 @@
           "화면 상단의 Play 삭제 버튼을 클릭합니다.",
           "서비스 중인 Play는 고객 VoC 발생 시 해결하기 위해 「NUGU developers」 이용약관 제15조 제7항을 근거로 60일 동안 중단 처리 기간을 진행합니다.",
           "중단 처리 기간이 완료된 후에는 전자상거래법상 표시 광고에 관한 기록 보관기간인 6개월간 Play의 정보가 보관됨을 안내해 드리며, 6개월 이후 Play의 정보는 삭제 됩니다.",
-          "Play가 삭제되면 NUGU play kit에 등록한 해당 Play 관련 정보를 모두 삭제하고, 서비스를 중지합니다."
+          "Play가 삭제되면 NUGU play kit에 등록한 해당 Play 관련 정보를 모두 삭제하고, 서비스를 중지합니다.",
+          "이전\n                        Play 업데이트",
+          "다음\n                        Play 이용 통계 확인",
+          "이전",
+          "Play 업데이트",
+          "다음",
+          "Play 이용 통계 확인"
         ]
       }
     ],
@@ -9716,7 +10356,13 @@
           "특정 사용자 그룹을 초대하여,  해당 사용자가 보유한 디바이스로 퍼블리셔에서 제공하는 서비스를 이용할 수 있도록 권한을 부여하고 관리하는 기능입니다.  자사 임직원 또는 단체에 소속된 회원만 초대하여, 초대를 수락 회원들의 NUGU 디바이스에서 Private Play를 사용하게 하거나, Announcement 메세지를 수신 할 수 있도록 할 수 있습니다.",
           "Biz 사용자 초대 (체험판)",
           "Biz 사용자 초대 (정식판)",
-          "Biz 사용자 설정 (NUGU APP)"
+          "Biz 사용자 설정 (NUGU APP)",
+          "이전\n                        Biz 전용 디바이스 관리",
+          "다음\n                        Biz 사용자 초대 (체험판)",
+          "이전",
+          "Biz 전용 디바이스 관리",
+          "다음",
+          "Biz 사용자 초대 (체험판)"
         ]
       }
     ],
@@ -9774,7 +10420,13 @@
         "title": "예외 상황 관리 > Global Exception Case 정의",
         "indexes": [
           "Global Exception Case 정의",
-          "Play 내에서 공통으로 사용할 Exception Case는 General > 외부 연동 서버 설정 > 예외 상황 관리 에서 정의하고 사용할 수 있습니다. 이 곳에서 정의한 Exception Case는 모든 액션에 상속됩니다."
+          "Play 내에서 공통으로 사용할 Exception Case는 General > 외부 연동 서버 설정 > 예외 상황 관리 에서 정의하고 사용할 수 있습니다. 이 곳에서 정의한 Exception Case는 모든 액션에 상속됩니다.",
+          "이전\n                        Response + Branch Action (멀티턴 대화)",
+          "다음\n                        Common Action 사용하기",
+          "이전",
+          "Response + Branch Action (멀티턴 대화)",
+          "다음",
+          "Common Action 사용하기"
         ]
       }
     ],
@@ -9788,7 +10440,13 @@
         "title": "PoC 관리하기",
         "indexes": [
           "PoC 관리하기",
-          "NUGU SDK를 사용하여 디바이스 및 앱을 개발할 때, NUGU developer를 통해 필요한 정보를 확인하고 관리할 수 있습니다."
+          "NUGU SDK를 사용하여 디바이스 및 앱을 개발할 때, NUGU developer를 통해 필요한 정보를 확인하고 관리할 수 있습니다.",
+          "이전\n                        체험판 신청하기",
+          "다음\n                        PoC 관리",
+          "이전",
+          "체험판 신청하기",
+          "다음",
+          "PoC 관리"
         ]
       }
     ],
@@ -9928,7 +10586,13 @@
           "오디오 북",
           "스마트 홈",
           "11번가 쇼핑",
-          "B tv 연동"
+          "B tv 연동",
+          "이전\n                        Private Play",
+          "다음\n                        Biz 사용자 관리",
+          "이전",
+          "Private Play",
+          "다음",
+          "Biz 사용자 관리"
         ]
       }
     ],
@@ -10564,7 +11228,15 @@
           "HandleLyricsFailed",
           "복사성공!",
           "{\n  \"header\": {\n    \"namespace\": \"MediaPlayer\",\n    \"name\": \"HandleLyricsFailed\",\n    \"messageId\": \"{{STRING}}\",\n    \"dialogRequestId\": \"{{STRING}}\",\n    \"version\": \"1.1\"\n  },\n  \"payload\": {\n    \"playServiceId\": \"{{STRING}}\",\n    \"errorCode\": \"{{STRING}}\"\n  }\n}",
-          "errorCode | string | N | (임의의 String으로 SDK에서 enum 처리하면 안됨)실패 원인을 의미하며, 여기에 전달하는 string 값을 기반으로 응답 TTS 생성- appInternalServerError : CP의 내부 서버 연동간의 이슈로 응답실패 발생 시"
+          "errorCode | string | N | (임의의 String으로 SDK에서 enum 처리하면 안됨)실패 원인을 의미하며, 여기에 전달하는 string 값을 기반으로 응답 TTS 생성- appInternalServerError : CP의 내부 서버 연동간의 이슈로 응답실패 발생 시",
+          "이전\n                        Message\n                        문자 확인 및 전송 기능 제어를 위한 규격",
+          "다음\n                        Routine\n                        루틴을 실행하기 위한 규격",
+          "이전",
+          "Message",
+          "문자 확인 및 전송 기능 제어를 위한 규격",
+          "다음",
+          "Routine",
+          "루틴을 실행하기 위한 규격"
         ]
       }
     ],
@@ -10848,7 +11520,15 @@
           "ReadMessageFinished",
           "복사성공!",
           "{\n  \"header\": {\n    \"namespace\": \"Message\",\n    \"name\": \"ReadMessageFinished\",\n    \"messageId\": \"{{STRING}}\",\n    \"dialogRequestId\": \"{{STRING}}\",\n    \"version\": \"1.0\"\n  },\n  \"payload\": {\n    \"playServiceId\": \"{{STRING}}\",\n    \"token\": \"{{STRING}}\"\n  }\n}",
-          "token | string | Y | Message.ReadMessage Directive에서 전달한 token"
+          "token | string | Y | Message.ReadMessage Directive에서 전달한 token",
+          "이전\n                        PhoneCall\n                        전화 수/발신 기능 제어를 위한 규격",
+          "다음\n                        MediaPlayer\n                        음악 앱을 제어하기 위한 규격",
+          "이전",
+          "PhoneCall",
+          "전화 수/발신 기능 제어를 위한 규격",
+          "다음",
+          "MediaPlayer",
+          "음악 앱을 제어하기 위한 규격"
         ]
       }
     ],
@@ -10951,7 +11631,15 @@
           "SetMic",
           "복사성공!",
           "{\n  \"header\": {\n    \"namespace\": \"Mic\",\n    \"name\": \"SetMic\",\n    \"messageId\": \"{{STRING}}\",\n    \"dialogRequestId\": \"{{STRING}}\",\n    \"version\": \"1.0\"\n  },\n  \"payload\": {\n    \"playServiceId\": \"{{STRING}}\",\n    \"status\": \"{{STRING}}\"\n  }\n}",
-          "status | string | Y | ON / OFF"
+          "status | string | Y | ON / OFF",
+          "이전\n                        Bluetooth\n                        디바이스의 블루투스를 제어하기 위한 규격",
+          "다음\n                        Screen\n                        디바이스의 디스플레이를 제어하기 위한 규격",
+          "이전",
+          "Bluetooth",
+          "디바이스의 블루투스를 제어하기 위한 규격",
+          "다음",
+          "Screen",
+          "디바이스의 디스플레이를 제어하기 위한 규격"
         ]
       }
     ],
@@ -11037,7 +11725,13 @@
         "title": "ModeControl Interface > Error & Exception",
         "indexes": [
           "Error & Exception",
-          "해당 Capability/Directive에서 응답 시 사용할 수 있는 ErrorCode는 SmartHomeError를 참조해주시기 바랍니다."
+          "해당 Capability/Directive에서 응답 시 사용할 수 있는 ErrorCode는 SmartHomeError를 참조해주시기 바랍니다.",
+          "이전\n                        HumidityControl Interface",
+          "다음\n                        PowerCheck Interface",
+          "이전",
+          "HumidityControl Interface",
+          "다음",
+          "PowerCheck Interface"
         ]
       }
     ],
@@ -11059,7 +11753,13 @@
           "등록 중 (심사를 진행하기 위해 정보를 확정한 상태)",
           "심사 중 (심사 담당자에 의해 Play 심사가 진행 중인 상태)",
           "서비스 중 (배포 완료되어 서비스 중인 상태)",
-          "Play가 상용 서비스 중인 경우에는 Play를 삭제 진행 시, 서비스 중단 절차가 필요합니다. 서비스 중인 Play를 중지하거나, 삭제할 경우 NUGU 운영팀의 확인이 필요합니다. 중지 및 삭제 요청 시 NUGU 운영팀 담당자에게 내용이 전달되어 담당자 확인을 거치게 됩니다."
+          "Play가 상용 서비스 중인 경우에는 Play를 삭제 진행 시, 서비스 중단 절차가 필요합니다. 서비스 중인 Play를 중지하거나, 삭제할 경우 NUGU 운영팀의 확인이 필요합니다. 중지 및 삭제 요청 시 NUGU 운영팀 담당자에게 내용이 전달되어 담당자 확인을 거치게 됩니다.",
+          "이전\n                        Play 정보 등록 (smarthome play)",
+          "다음\n                        Play 심사",
+          "이전",
+          "Play 정보 등록 (smarthome play)",
+          "다음",
+          "Play 심사"
         ]
       }
     ],
@@ -11098,7 +11798,13 @@
           "주요 발화 통계",
           "Developers Console > Play kit > 통계 페이지의 주요 발화 Top 100 통계 항목에서 조회할 Play를 선택하고, 조회 기간을 설정한 후 확인 버튼을 클릭합니다.",
           "조회가 완료되면 주요 발화 Top 100 리스트에서 발화 내용을 확인할 수 있습니다.",
-          "마찬가지로 실패 발화 TOP 100, intent Top 10도 조회 할 수 있습니다."
+          "마찬가지로 실패 발화 TOP 100, intent Top 10도 조회 할 수 있습니다.",
+          "이전\n                        Play 관리",
+          "다음\n                        Play 운영 정책",
+          "이전",
+          "Play 관리",
+          "다음",
+          "Play 운영 정책"
         ]
       }
     ],
@@ -11125,7 +11831,13 @@
           "이때, 제공하는 기능에 따라 아래와 같이 각 Action에서 사용하는 Entity가 중복되어 데이터로 구성될 수 있습니다. 텍스트가 여러 Entity type에 중복된 경우, 사용자가 해당 텍스트만 발화했을 때 NLU엔진은 두 Entity type중 하나로 분석하게 됩니다.",
           "위의 경우에서, 사용자가 ‘아기상어’ 라고 발화를 한 경우 SONG_TITLE 또는 VIDEO_TITLE로 분석됩니다. 특히, Slot-filling 상황에서라면 사용자는 Entity 하나만 발화할 가능성이 높으며, 사용자는 정상적으로 발화를 해도 Slot-filling이 되지 않게 됩니다. 이런 경우, 가급적 다음과 같이 하나의 Entity로 통합하여 User Utterance Model을 구성하는 것이 좋습니다.",
           "그러나 Entity type 사이에 중복되는 텍스트를 피할 수 없는 경우, 다음과 같이 Slot-filling 상황에서만 파라미터에 담기도록 Entity를 매핑하여 해결할 수 있습니다.",
-          "먼저, 파라미터 song_title에 VIDEO_TITLE 엔티티를 매핑해줍니다. 다른 intent에 포함된 Entity인 경우, 다른 Intent의 Entity type 더 불러오기 버튼을 한번 클릭하여 엔티티 리스트를 확장한 뒤 선택해야 합니다. Slot-filling 상황에서만 매핑되기를 희망하는 Entity (위의 예에서는 VIDEO_TYPE)를 클릭하여 배경색이 주황색으로 변하게 합니다. 이렇게 매핑된 Entity는 해당 파라미터의 Slot-filling 상황일 때만 파라미터에 담기게 되며, “아리아, 아기상어 틀어줘”와 같이 Intent와 함께 분석되는 경우에는 이 파라미터에 담기지 않게 됩니다."
+          "먼저, 파라미터 song_title에 VIDEO_TITLE 엔티티를 매핑해줍니다. 다른 intent에 포함된 Entity인 경우, 다른 Intent의 Entity type 더 불러오기 버튼을 한번 클릭하여 엔티티 리스트를 확장한 뒤 선택해야 합니다. Slot-filling 상황에서만 매핑되기를 희망하는 Entity (위의 예에서는 VIDEO_TYPE)를 클릭하여 배경색이 주황색으로 변하게 합니다. 이렇게 매핑된 Entity는 해당 파라미터의 Slot-filling 상황일 때만 파라미터에 담기게 되며, “아리아, 아기상어 틀어줘”와 같이 Intent와 함께 분석되는 경우에는 이 파라미터에 담기지 않게 됩니다.",
+          "이전\n                        필수 Entity 정의하기 (Slot-Filling Prompt)",
+          "다음\n                        Configurable Parameter",
+          "이전",
+          "필수 Entity 정의하기 (Slot-Filling Prompt)",
+          "다음",
+          "Configurable Parameter"
         ]
       }
     ],
@@ -11234,7 +11946,13 @@
         "title": "주요 개념 > Annoucement",
         "indexes": [
           "Annoucement",
-          "Biz API에서 지원하는 기능으로, Biz 전용 디바이스나 Biz 사용자의 디바이스에 토큰을 기준으로 Announcement 메세지 (tts, image)를 전송 할 수 있습니다. 자세한 내용은 API 발송 (Announcement)의 설명을 참고하세요."
+          "Biz API에서 지원하는 기능으로, Biz 전용 디바이스나 Biz 사용자의 디바이스에 토큰을 기준으로 Announcement 메세지 (tts, image)를 전송 할 수 있습니다. 자세한 내용은 API 발송 (Announcement)의 설명을 참고하세요.",
+          "이전\n                        NUGU biz kit",
+          "다음\n                        체험판 및 정식판",
+          "이전",
+          "NUGU biz kit",
+          "다음",
+          "체험판 및 정식판"
         ]
       }
     ],
@@ -11367,7 +12085,13 @@
           "볼륨 제어 (Volume up/down)",
           "볼륨을 올리거나 내릴 때 제공되는 효과입니다. 볼륨 제어 이후에 소리를 재생하여, 사용자가 변경된 볼륨 크기를 인지할 수 있도록 합니다. 음원이나 Prompt 재생 중에는 재생되고 있는 음원/Prompt로 볼륨 크기를 인지할 수 있으므로 볼륨 제어 효과음을 제공하지 않습니다. 볼륨을 0으로 변경 시에는 볼륨 제어 소리를 재생하여도 음소거 상태이므로 볼륨 제어 소리가 들리지 않게 되며 이는 정상 동작입니다. 하드웨어 버튼으로 볼륨 조절 시에도 소리를 제공하도록 합니다.",
           "볼륨을 높일 | 볼륨 제어음 재생 O | 볼륨 제어음 재생 O",
-          "볼륨을 낮출 때 | 볼륨 제어음 재생 O | 볼륨 제어음 재생 O"
+          "볼륨을 낮출 때 | 볼륨 제어음 재생 O | 볼륨 제어음 재생 O",
+          "이전\n                        SDK UX Guide",
+          "다음\n                        부팅화면",
+          "이전",
+          "SDK UX Guide",
+          "다음",
+          "부팅화면"
         ]
       }
     ],
@@ -11437,7 +12161,13 @@
           "func dismissDisplayView() {\n        guard let view = displayView else { return }\n        UIView.animate(\n            withDuration: 0.3,\n            animations: {\n                view.alpha = 0\n            },\n            completion: { _ in\n                view.removeFromSuperview()\n            }\n        )\n    }",
           "displayAgentShoudScroll() delegate 호출 시에도, 단순히 NuguDisplayWebView 의 scroll() 함수만 불러주면 됩니다.",
           "복사성공!",
-          "func displayAgentShouldScroll(templateId: String, direction: DisplayControlPayload.Direction, header: Downstream.Header, completion: @escaping (Bool) -> Void) {\n        DispatchQueue.main.async { [weak self] in\n            self?.displayView?.scroll(direction: direction, completion: completion)\n        }\n    }"
+          "func displayAgentShouldScroll(templateId: String, direction: DisplayControlPayload.Direction, header: Downstream.Header, completion: @escaping (Bool) -> Void) {\n        DispatchQueue.main.async { [weak self] in\n            self?.displayView?.scroll(direction: direction, completion: completion)\n        }\n    }",
+          "이전\n                        NUGU 서비스 관리 web server 연동",
+          "다음\n                        NUGU 사용자 인터페이스",
+          "이전",
+          "NUGU 서비스 관리 web server 연동",
+          "다음",
+          "NUGU 사용자 인터페이스"
         ]
       }
     ],
@@ -11491,7 +12221,14 @@
           "복사성공!",
           "// TemplateRenderer.kt in NuguUXKit\nfun clearAll(): Boolean \n\n// MainActivity.kt in SampleApp\noverride fun onBackPressed() {\n    if (templateRenderer.clearAll()) return\n    super.onBackPressed()\n}",
           "SampleApp의 MainActivity에서의 사용예시입니다.",
-          "백키 이벤트가 발생했을때 template이 노출상태라면 template을 제거하고, 아니면 activity를 종료하는 케이스에 사용될 수 있습니다."
+          "백키 이벤트가 발생했을때 template이 노출상태라면 template을 제거하고, 아니면 activity를 종료하는 케이스에 사용될 수 있습니다.",
+          "이전\n                        NUGU 서비스 관리 web server 연동",
+          "다음\n                        TemplateRenderer\n                        Template 유지 정책의 커스텀",
+          "이전",
+          "NUGU 서비스 관리 web server 연동",
+          "다음",
+          "TemplateRenderer",
+          "Template 유지 정책의 커스텀"
         ]
       }
     ],
@@ -11562,7 +12299,13 @@
         "title": "NUGU Inside > NUGU inside 텍스트 표기",
         "indexes": [
           "NUGU inside 텍스트 표기",
-          "본문 텍스트 또 그에 준하는 문장 속에 NUGU inside라는 명칭이 나오는 경우 마크를 사용하지 않습니다.\n제품/서비스 브랜드 조합형은 해당 브랜드명만 표기합니다."
+          "본문 텍스트 또 그에 준하는 문장 속에 NUGU inside라는 명칭이 나오는 경우 마크를 사용하지 않습니다.\n제품/서비스 브랜드 조합형은 해당 브랜드명만 표기합니다.",
+          "이전\n                        Display Template",
+          "다음\n                        Error handling",
+          "이전",
+          "Display Template",
+          "다음",
+          "Error handling"
         ]
       }
     ],
@@ -11630,7 +12373,13 @@
         "indexes": [
           "Play 호출 이름(Invocation name)",
           "Play 호출 이름은 사용자가 Play를 호출하기 위해 발화하는 고유한 이름을 말합니다. 사용자가 Play 호출 이름을 발화하면 해당 Play의 세션으로 진입하여 해당 Play의 기능을 사용할 수 있게 됩니다. 호출 이름은 Play Builder를 통해 Play를 만든 후, NUGU play kit에서 심사요청서를 작성할 때 입력할 수 있으며, 심사 단계에서 호출이름을 검토합니다.",
-          "Play 생성 시에 이 호출 이름을 정의해야 하고, 호출 이름에 대한 자세한 내용은 호출 이름 정의하기를 참고하면 됩니다."
+          "Play 생성 시에 이 호출 이름을 정의해야 하고, 호출 이름에 대한 자세한 내용은 호출 이름 정의하기를 참고하면 됩니다.",
+          "이전\n                        NUGU developers 소개",
+          "다음\n                        Voice UX Design Guide",
+          "이전",
+          "NUGU developers 소개",
+          "다음",
+          "Voice UX Design Guide"
         ]
       }
     ],
@@ -11646,7 +12395,14 @@
           "NUGU SDK",
           "NUGU SDK Guide (English)",
           "NUGU SDK는 다양한 디바이스와 앱에서의 NUGU 플랫폼 연동을 지원하여 음성인터페이스 기반 다양한 AI 기능을 제공합니다. NUGU SDK에서 제공되는 API 형식에 따라 이용자의 요청(음성명령)을 NUGU 플랫폼으로 전송하고 NUGU 플랫폼의 처리 결과를 클라이언트에 전달합니다.",
-          "NUGU SDK는 사용자의 요청(음성명령)을 NUGU 플랫폼으로 전송하고 NUGU 플랫폼의 처리 결과따라 디바이스나 어플리케이션의 기능을 제어합니다."
+          "NUGU SDK는 사용자의 요청(음성명령)을 NUGU 플랫폼으로 전송하고 NUGU 플랫폼의 처리 결과따라 디바이스나 어플리케이션의 기능을 제어합니다.",
+          "이전\n                        Biz 사용자 그룹별 Announcement 전송",
+          "다음\n                        체험판과 정식판",
+          "NUGU SDK Guide (English)",
+          "이전",
+          "Biz 사용자 그룹별 Announcement 전송",
+          "다음",
+          "체험판과 정식판"
         ]
       }
     ],
@@ -11732,7 +12488,15 @@
           "message : 알림메시지를 설정",
           "duration : LENGTH_SHORT, LENGTH_LONG, LENGTH_INDEFINITE 선택",
           "callback: dismissed 이벤트 콜백",
-          "show : 설정된 메시지 알림을 표시"
+          "show : 설정된 메시지 알림을 표시",
+          "이전\n                        TemplateView\n                        TemplateView 커스텀",
+          "다음\n                        Dark Mode 지원\n                        어두운 테마",
+          "이전",
+          "TemplateView",
+          "TemplateView 커스텀",
+          "다음",
+          "Dark Mode 지원",
+          "어두운 테마"
         ]
       }
     ],
@@ -11841,7 +12605,13 @@
         "indexes": [
           "비정형화된 명령",
           "사람과 사람 간의 대화와 같이 정형화되지 않는 절차나 발화를 할 가능성을 고려하여 예외 사례를 빠짐없이 디자인해야 합니다.",
-          "결론적으로 음성 서비스 디자인은 스마트폰과 같이 디스플레이가 있는 기기에서 제공하던 기능 그대로 음성으로 바꾸는 것이 아니라, 정보의 탐색 과정을 생략한 간단한 기능 위주로 디자인해야 하며, 상세한 오류 처리(Error Handling)도 필요합니다."
+          "결론적으로 음성 서비스 디자인은 스마트폰과 같이 디스플레이가 있는 기기에서 제공하던 기능 그대로 음성으로 바꾸는 것이 아니라, 정보의 탐색 과정을 생략한 간단한 기능 위주로 디자인해야 하며, 상세한 오류 처리(Error Handling)도 필요합니다.",
+          "이전\n                        NUGU play",
+          "다음\n                        기능 정의",
+          "이전",
+          "NUGU play",
+          "다음",
+          "기능 정의"
         ]
       }
     ],
@@ -11911,7 +12681,14 @@
           "<activity\n    android:name=\"com.skt.nugu.sampleapp.activity.SettingsServiceActivity\"\n    android:launchMode=\"singleTop\" >\n    <intent-filter>\n        <action android:name=\"android.intent.action.VIEW\" />\n        <category android:name=\"android.intent.category.DEFAULT\" />\n        <category android:name=\"android.intent.category.BROWSABLE\" />\n        <data\n            android:host=\"oauth_refresh\"\n            android:scheme=\"nugu.user.sample\" />\n    </intent-filter>\n</activity>",
           "Activity 에서 Intent  받으면 WebView 를 갱신합니다.",
           "SettingsServiceActivity.kt\n        \n        복사성공!",
-          "override fun onNewIntent(intent: Intent?) {\n    super.onNewIntent(intent)\n    webView.onNewIntent(intent)\n}"
+          "override fun onNewIntent(intent: Intent?) {\n    super.onNewIntent(intent)\n    webView.onNewIntent(intent)\n}",
+          "이전\n                        Background 동작 처리",
+          "다음\n                        NUGU Display의 노출과 제어\n                        TemplateRenderer 적용 방법",
+          "이전",
+          "Background 동작 처리",
+          "다음",
+          "NUGU Display의 노출과 제어",
+          "TemplateRenderer 적용 방법"
         ]
       }
     ],
@@ -11986,7 +12763,14 @@
           "func showToast(message: String?, bottomMargin: CGFloat? = nil, duration: Duration = .short)",
           "message : NuguToast 에 표현될 텍스트입니다.",
           "bottomMargin : 노출될 NuguToast 의 bottom margin 값입니다. (default = 88.0)",
-          "duration : NuguToast 를 노출할 시간 값이며, short = 4 / long = 7 으로 설정 가능합니다. (Default = .short)"
+          "duration : NuguToast 를 노출할 시간 값이며, short = 4 / long = 7 으로 설정 가능합니다. (Default = .short)",
+          "이전\n                        NUGU Display의 노출과 제어",
+          "다음\n                        Dark Mode 지원\n                        NUGU SDK 의 UI Component 들은 Dark / Light 모드를 지원합니다.",
+          "이전",
+          "NUGU Display의 노출과 제어",
+          "다음",
+          "Dark Mode 지원",
+          "NUGU SDK 의 UI Component 들은 Dark / Light 모드를 지원합니다."
         ]
       }
     ],
@@ -12306,7 +13090,15 @@
           "MakeCall이 성공하는 경우",
           "복사성공!",
           "{\n  \"header\": {\n    \"namespace\": \"PhoneCall\",\n    \"name\": \"MakeCallSucceeded\",\n    \"messageId\": \"{{STRING}}\",\n    \"dialogRequestId\": \"{{STRING}}\",\n    \"version\": \"1.2\"\n  },\n  \"payload\": {\n    \"playServiceId\": \"{{STRING}}\",\n    \"recipient\": Person\n  }\n}",
-          "recipient | Person | Y |  "
+          "recipient | Person | Y |  ",
+          "이전\n                        Session\n                        Play 와 Client 간의 세션을 유지하기 위한 규격",
+          "다음\n                        Message\n                        문자 확인 및 전송 기능 제어를 위한 규격",
+          "이전",
+          "Session",
+          "Play 와 Client 간의 세션을 유지하기 위한 규격",
+          "다음",
+          "Message",
+          "문자 확인 및 전송 기능 제어를 위한 규격"
         ]
       }
     ],
@@ -12343,9 +13135,23 @@
           "Repository | Github | Github | Github",
           "Release | Maven | Cocoapods Carthage | APT repository",
           "Storage | Touch로만 wake up: 13MBWake up word 1개: 14MBWake up word 2개: 15MB | Touch로만 wake up: 14MBWake up word 1개: 15MBWake up word 2개: 16MB | Touch로만 wake up: 6MBWake up word 1개: 7MBWake up word 2개: 8MB",
-          "iOS\n                iOS 환경에서 NUGU 서비스를 쉽게 사용할 수 있도록 NUGU SDK for iOS를 제공합니다.",
-          "Android\n                Android 환경에서 NUGU 서비스를 쉽게 사용할 수 있도록 NUGU SDK for Android를 제공합니다.",
-          "Linux\n                Linux 환경에서 NUGU 서비스를 쉽게 사용할 수 있도록 NUGU SDK for Linux를 제공합니다."
+          "iOS\n            iOS 환경에서 NUGU 서비스를 쉽게 사용할 수 있도록 NUGU SDK for iOS를 제공합니다.",
+          "Android\n            Android 환경에서 NUGU 서비스를 쉽게 사용할 수 있도록 NUGU SDK for Android를 제공합니다.",
+          "Linux\n            Linux 환경에서 NUGU 서비스를 쉽게 사용할 수 있도록 NUGU SDK for Linux를 제공합니다.",
+          "이전\n                        Utility\n                        Directive 의 실행 순서를 제어하기 위한 규격",
+          "다음\n                        iOS\n                        iOS 환경에서 NUGU 서비스를 쉽게 사용할 수 있도록 NUGU SDK for iOS를 제공합니다.",
+          "iOS",
+          "iOS 환경에서 NUGU 서비스를 쉽게 사용할 수 있도록 NUGU SDK for iOS를 제공합니다.",
+          "Android",
+          "Android 환경에서 NUGU 서비스를 쉽게 사용할 수 있도록 NUGU SDK for Android를 제공합니다.",
+          "Linux",
+          "Linux 환경에서 NUGU 서비스를 쉽게 사용할 수 있도록 NUGU SDK for Linux를 제공합니다.",
+          "이전",
+          "Utility",
+          "Directive 의 실행 순서를 제어하기 위한 규격",
+          "다음",
+          "iOS",
+          "iOS 환경에서 NUGU 서비스를 쉽게 사용할 수 있도록 NUGU SDK for iOS를 제공합니다."
         ]
       }
     ],
@@ -12391,7 +13197,13 @@
         "title": "Play 운영 정책 > Play 직권 해지",
         "indexes": [
           "Play 직권 해지",
-          "NUGU developers 운영자 직권으로 서비스가 중지된 후 일정 기간 동안 이에 대한 이의 제기가 없을 때는 NUGU 플랫폼의 자원 효율화를 위해 해당 Play를 삭제할 수 있습니다. 이 과정을 Play 직권 해지라고 하며, 직권 해지된 Play에 대해서는 향후 운영 및 VOC 대응을 위한 최소한의 정보(Play 서비스 이름, 삭제 사유, 개발사명 등)만을 남기고 모든 정보는 삭제합니다. 이 Play 직권 해지 과정에서 해당 Play가 점유했던 호출 이름은 회수되며, 동일 호출 이름을 신청한 다른 Play에 재배정될 수 있습니다."
+          "NUGU developers 운영자 직권으로 서비스가 중지된 후 일정 기간 동안 이에 대한 이의 제기가 없을 때는 NUGU 플랫폼의 자원 효율화를 위해 해당 Play를 삭제할 수 있습니다. 이 과정을 Play 직권 해지라고 하며, 직권 해지된 Play에 대해서는 향후 운영 및 VOC 대응을 위한 최소한의 정보(Play 서비스 이름, 삭제 사유, 개발사명 등)만을 남기고 모든 정보는 삭제합니다. 이 Play 직권 해지 과정에서 해당 Play가 점유했던 호출 이름은 회수되며, 동일 호출 이름을 신청한 다른 Play에 재배정될 수 있습니다.",
+          "이전\n                        Play 이용 통계 확인",
+          "다음\n                        Release note",
+          "이전",
+          "Play 이용 통계 확인",
+          "다음",
+          "Release note"
         ]
       }
     ],
@@ -12410,7 +13222,13 @@
           "Play 정보 등록 (smarthome play)",
           "Play 정보 수정 및 삭제",
           "Play 심사",
-          "Play 등록은 1024 이상의 해상도를 지원하는 장치에서 진행하세요. 해상도가 1024 미만인 경우 등록 팝업이 나타나지 않습니다."
+          "Play 등록은 1024 이상의 해상도를 지원하는 장치에서 진행하세요. 해상도가 1024 미만인 경우 등록 팝업이 나타나지 않습니다.",
+          "이전\n                        SmartHomeError",
+          "다음\n                        Play 정보 등록",
+          "이전",
+          "SmartHomeError",
+          "다음",
+          "Play 정보 등록"
         ]
       }
     ],
@@ -12607,7 +13425,13 @@
           "Developers Console > Play kit > Play 관리에서 심사를 취소할 심사대기 상태의 Play를 클릭하여 선택합니다.",
           "배포/심사 정보 페이지 하단에 위치한 심사취소 버튼을 클릭하여 심사 취소를 완료합니다.",
           "심사 취소 요청과 동시에 Play는 등록 중 상태로 바뀝니다.",
-          "Play 등록 상태는 Developers Console > Play kit > Play 관리 페이지에서 확인할 수 있습니다."
+          "Play 등록 상태는 Developers Console > Play kit > Play 관리 페이지에서 확인할 수 있습니다.",
+          "이전\n                        Play 정보 수정 및 삭제",
+          "다음\n                        Play 배포 및 관리하기",
+          "이전",
+          "Play 정보 수정 및 삭제",
+          "다음",
+          "Play 배포 및 관리하기"
         ]
       }
     ],
@@ -12629,7 +13453,13 @@
           "Play 서비스명을 등록합니다. (custom과 다르게, Play 서비스 ID는 자동생성 됩니다.)",
           "Play 서비스가 생성되면, Play 기본정보, 배포/심사정보를 입력할 수 있으며, Custom Play 보다 훨씬 단순한 내용으로 구성되어 있습니다. 필수 정보를 모두 기입하면 등록이 가능합니다.",
           "정보를 모두 입력하여 등록을 마치면, 스마트홈 Play는 등록을 진행한 Developers TID 기준으로, NUGU APP > 스마트홈 > 신규 디바이스 등록하기에서 Play Bulder에서 Play에서 설정한 Auth 정보를 바탕으로 스마트홈 계정을 연동 할 수 있는 Contents Provider 테스트 메뉴가 해당 TID에만 생성되고, 스마트홈 기기를 연결한 IoT 서비스사의 계정을 연동하여 테스트 할 수 있습니다.",
-          "테스트 이후 실제 상용 서비스를 위한 심사, 배포를 하기 위해서는 NUGU 스마트홈 제휴 제안을 통한 사전 제휴 협의가 필요합니다. 출시 일정, QA, 트래픽 예측, 안정성 검토 후 담당자와 상의하여 출시가 결정되면, 이후에는 Custom Play와 동일한 과정으로 심사, 배포를 진행할 수 있습니다."
+          "테스트 이후 실제 상용 서비스를 위한 심사, 배포를 하기 위해서는 NUGU 스마트홈 제휴 제안을 통한 사전 제휴 협의가 필요합니다. 출시 일정, QA, 트래픽 예측, 안정성 검토 후 담당자와 상의하여 출시가 결정되면, 이후에는 Custom Play와 동일한 과정으로 심사, 배포를 진행할 수 있습니다.",
+          "이전\n                        Play 정보 등록",
+          "다음\n                        Play 정보 수정 및 삭제",
+          "이전",
+          "Play 정보 등록",
+          "다음",
+          "Play 정보 수정 및 삭제"
         ]
       }
     ],
@@ -12771,7 +13601,13 @@
         "indexes": [
           "Play 세션",
           "사용자가 특정 Play의 호출 이름을 발화하여 호출하면, 그 Play가 활성화되면서 해당 Play의 명령만 수행할 수 있는 Play 세션으로 진입합니다. 이 세션이 열려 있는 동안에는 해당 호출 이름을 발화하지 않아도 그 Play의 기능을 계속 사용할 수 있고, 세션이 닫히기 전까지는 다른 Play를 사용할 수 없습니다.",
-          "특정 명령을 통해 세션을 닫을 수 있고, 정해진 세션 유지 시간이 경과하거나 Capability Interface 중 AudioPlayer의 명령이 수행되면 세션이 닫힙니다."
+          "특정 명령을 통해 세션을 닫을 수 있고, 정해진 세션 유지 시간이 경과하거나 Capability Interface 중 AudioPlayer의 명령이 수행되면 세션이 닫힙니다.",
+          "이전\n                        시작하기 전에 알면 좋은 것들",
+          "다음\n                        Intent와 Entity",
+          "이전",
+          "시작하기 전에 알면 좋은 것들",
+          "다음",
+          "Intent와 Entity"
         ]
       }
     ],
@@ -12847,7 +13683,13 @@
           "대표 발화문",
           "해당 PoC에서 지원하는 대표적인 발화문을 입력합니다. 대표 발화문은 NUGU 앱을 통해 노출됩니다.",
           "디바이스 디폴트 이미지",
-          "해당 PoC를 대표하는 이미지를 등록합니다. NUGU 앱에서 PoC를 대표하는 이미지로 노출됩니다."
+          "해당 PoC를 대표하는 이미지를 등록합니다. NUGU 앱에서 PoC를 대표하는 이미지로 노출됩니다.",
+          "이전\n                        PoC 관리하기",
+          "다음\n                        이용 통계 확인",
+          "이전",
+          "PoC 관리하기",
+          "다음",
+          "이용 통계 확인"
         ]
       }
     ],
@@ -12928,7 +13770,13 @@
         "title": "PowerCheck Interface > Error & Exception",
         "indexes": [
           "Error & Exception",
-          "해당 Capability/Directive에서 응답 시 사용할 수 있는 ErrorCode는 SmartHomeError를 참조해주시기 바랍니다."
+          "해당 Capability/Directive에서 응답 시 사용할 수 있는 ErrorCode는 SmartHomeError를 참조해주시기 바랍니다.",
+          "이전\n                        ModeControl Interface",
+          "다음\n                        PowerControl Interface",
+          "이전",
+          "ModeControl Interface",
+          "다음",
+          "PowerControl Interface"
         ]
       }
     ],
@@ -13002,7 +13850,13 @@
         "title": "PowerControl Interface > Error & Exception",
         "indexes": [
           "Error & Exception",
-          "해당 Capability/Directive에서 응답 시 사용할 수 있는 ErrorCode는 SmartHomeError를 참조해주시기 바랍니다."
+          "해당 Capability/Directive에서 응답 시 사용할 수 있는 ErrorCode는 SmartHomeError를 참조해주시기 바랍니다.",
+          "이전\n                        PowerCheck Interface",
+          "다음\n                        SetTimeControl Interface",
+          "이전",
+          "PowerCheck Interface",
+          "다음",
+          "SetTimeControl Interface"
         ]
       }
     ],
@@ -13050,7 +13904,13 @@
         "title": "Private Play > 2. Biz 사용자의 Private play 확인 > 2) NUGU APP의 Biz 사용자 설정에서 확인",
         "indexes": [
           "2) NUGU APP의 Biz 사용자 설정에서 확인",
-          "초대받아 등록된 Biz 사용자는, NUGU APP의 Biz 사용자 설정에서 Biz Service 혹은 Private Play를 확인 할 수 있으며, 이용 여부 설정을 변경 할 수 있습니다. 자세한 내용은 Biz 사용자 설정 (NUGU APP) 을 참고해주세요."
+          "초대받아 등록된 Biz 사용자는, NUGU APP의 Biz 사용자 설정에서 Biz Service 혹은 Private Play를 확인 할 수 있으며, 이용 여부 설정을 변경 할 수 있습니다. 자세한 내용은 Biz 사용자 설정 (NUGU APP) 을 참고해주세요.",
+          "이전\n                        체험판 및 정식판",
+          "다음\n                        Biz 전용 디바이스 관리",
+          "이전",
+          "체험판 및 정식판",
+          "다음",
+          "Biz 전용 디바이스 관리"
         ]
       }
     ],
@@ -13063,7 +13923,21 @@
         "hash": "",
         "title": "관련정보",
         "indexes": [
-          "관련정보"
+          "관련정보",
+          "NUGU 대화 상태",
+          "Layer 정책",
+          "Icon 등록",
+          "발화 옵션에서 UNIT 태그로 지원하는 단위",
+          "이전\n                        Release note",
+          "다음\n                        NUGU 대화 상태",
+          "NUGU 대화 상태",
+          "Layer 정책",
+          "Icon 등록",
+          "발화 옵션에서 UNIT 태그로 지원하는 단위",
+          "이전",
+          "Release note",
+          "다음",
+          "NUGU 대화 상태"
         ]
       }
     ],
@@ -13222,7 +14096,13 @@
           "작은 아이콘: 108 X 108 px 사이즈의 이미지 파일로 NUGU App > NUGU play 페이지와 Play 페이지에 보여집니다.",
           "큰 아이콘: 512 X 512 px 사이즈의 이미지 파일로 향후 확장되는 PoC에서 활용할 예정입니다.",
           "아이콘 등록에 관한 사항은 아이콘 등록를 참고하세요.",
-          "배포 후, NUGU App > NUGU play 메뉴에서 배포된 Play를 확인할 수 있습니다."
+          "배포 후, NUGU App > NUGU play 메뉴에서 배포된 Play를 확인할 수 있습니다.",
+          "이전\n                        Play 정보 등록 및 심사 요청하기",
+          "다음\n                        Play 정보 등록 (smarthome play)",
+          "이전",
+          "Play 정보 등록 및 심사 요청하기",
+          "다음",
+          "Play 정보 등록 (smarthome play)"
         ]
       }
     ],
@@ -13235,7 +14115,13 @@
         "hash": "",
         "title": "Icon 등록",
         "indexes": [
-          "Icon 등록"
+          "Icon 등록",
+          "이전\n                        Layer 정책",
+          "다음\n                        발화 옵션에서 UNIT 태그로 지원하는 단위",
+          "이전",
+          "Layer 정책",
+          "다음",
+          "발화 옵션에서 UNIT 태그로 지원하는 단위"
         ]
       }
     ],
@@ -13452,7 +14338,13 @@
           "System Requirements 추가",
           "Platform 에 따른 Capability interface 지원 현황 추가",
           "iOS NUGU 서비스 관리 web server 연동 페이지 추가",
-          "Android NUGU 서비스 관리 web server 연동 페이지 추가"
+          "Android NUGU 서비스 관리 web server 연동 페이지 추가",
+          "이전\n                        Error handling",
+          "다음\n                        관련정보",
+          "이전",
+          "Error handling",
+          "다음",
+          "관련정보"
         ]
       }
     ],
@@ -13814,7 +14706,13 @@
         "title": "Release note > Version 1.1.0 > 4. 다음 업데이트 추가 예정 기능",
         "indexes": [
           "4. 다음 업데이트 추가 예정 기능",
-          "Entity value 및 동의어 입력 시 허용 특수기호 추가\n\n    ’ (Apostrophe), & (Ampersand), - (Hyphen)"
+          "Entity value 및 동의어 입력 시 허용 특수기호 추가\n\n    ’ (Apostrophe), & (Ampersand), - (Hyphen)",
+          "이전\n                        Play 운영 정책",
+          "다음\n                        NUGU biz kit",
+          "이전",
+          "Play 운영 정책",
+          "다음",
+          "NUGU biz kit"
         ]
       }
     ],
@@ -13861,7 +14759,13 @@
           "Reprompt의 특성",
           "Default Branch를 지정하지 않은 경우에는, Reprompt를 1개 이상 정의해야 합니다. Reprompt는 마지막 발화부터 입력하는 스택 구조이며 LIFO(Last In First Out)로 동작합니다. 여러 개의 Prompt를 입력하면 가장 마지막에 입력한 Prompt부터 차례대로 사용자에게 응답하게 됩니다.",
           "Reprompt를 2개 이상 입력한 경우, 두번째 Prompt부터는 대기 Prompt로 지정됩니다. 이 대기 Prompt가 발화된 후에는 멀티턴 시작 Response 후의 대기 상태로 이동하여 다시 사용자의 발화를 듣습니다. 이렇게 이동한 대기 상태도 기존의 컨텍스트를 유지한 채 다시 사용자의 발화를 듣는 대기 상태입니다.",
-          "Reprompt에서 2개를 초과하는 대기 Prompt 사용은 피해주세요."
+          "Reprompt에서 2개를 초과하는 대기 Prompt 사용은 피해주세요.",
+          "이전\n                        Branch Action (Action Tree)",
+          "다음\n                        예외 상황 관리",
+          "이전",
+          "Branch Action (Action Tree)",
+          "다음",
+          "예외 상황 관리"
         ]
       }
     ],
@@ -14020,7 +14924,15 @@
           "ActionTriggered",
           "복사성공!",
           "{\n  \"header\": {\n    \"namespace\": \"Routine\",\n    \"name\": \"ActionTriggered\",\n    \"messageId\": \"{{STRING}}\",\n    \"dialogRequestId\": \"{{STRING}}\",\n    \"version\": \"1.0\"\n  },\n  \"payload\": {\n    \"playServiceId\": \"{{STRING}}\",\n    \"data\": {}\n  }\n}",
-          "data | object | Y | DATA type의 Action에서 보낼 데이터"
+          "data | object | Y | DATA type의 Action에서 보낼 데이터",
+          "이전\n                        MediaPlayer\n                        음악 앱을 제어하기 위한 규격",
+          "다음\n                        Utility\n                        Directive 의 실행 순서를 제어하기 위한 규격",
+          "이전",
+          "MediaPlayer",
+          "음악 앱을 제어하기 위한 규격",
+          "다음",
+          "Utility",
+          "Directive 의 실행 순서를 제어하기 위한 규격"
         ]
       }
     ],
@@ -14137,7 +15049,15 @@
           "SetBrightness",
           "복사성공!",
           "{\n  \"header\": {\n    \"namespace\": \"Screen\",\n    \"name\": \"SetBrightness\",\n    \"messageId\": \"{{STRING}}\",\n    \"dialogRequestId\": \"{{STRING}}\",\n    \"version\": \"1.0\"\n  },\n  \"payload\": {\n    \"playServiceId\": \"{{STRING}}\",\n    \"brightness\": {{LONG}}\n  }\n}",
-          "brightness | long | Y | 1 ~ 100"
+          "brightness | long | Y | 1 ~ 100",
+          "이전\n                        Mic\n                        디바이스의 마이크를 제어하기 위한 규격",
+          "다음\n                        Battery\n                        디바이스 배터리 정보를 Play 로 전달하기 위한 규격",
+          "이전",
+          "Mic",
+          "디바이스의 마이크를 제어하기 위한 규격",
+          "다음",
+          "Battery",
+          "디바이스 배터리 정보를 Play 로 전달하기 위한 규격"
         ]
       }
     ],
@@ -14150,7 +15070,25 @@
         "hash": "",
         "title": "SDK UX Guide",
         "indexes": [
-          "SDK UX Guide"
+          "SDK UX Guide",
+          "NUGU 기기",
+          "부팅화면",
+          "Voice Chrome",
+          "Display Template",
+          "NUGU Inside",
+          "Error handling",
+          "이전\n                        Source code",
+          "다음\n                        NUGU 기기",
+          "NUGU 기기",
+          "부팅화면",
+          "Voice Chrome",
+          "Display Template",
+          "NUGU Inside",
+          "Error handling",
+          "이전",
+          "Source code",
+          "다음",
+          "NUGU 기기"
         ]
       }
     ],
@@ -14250,7 +15188,15 @@
           "Set",
           "복사성공!",
           "{\n  \"Session\": {\n    \"namespace\": \"Session\",\n    \"name\": \"Set\",\n    \"messageId\": \"{{STRING}}\",\n    \"dialogRequestId\": \"{{STRING}}\",\n    \"version\": \"1.0\"\n  },\n  \"payload\": {\n    \"playServiceId\": \"{{STRING}}\",\n    \"sessionId\": \"{{STRING}}\"\n  }\n}",
-          "sessionId | string | Y |  "
+          "sessionId | string | Y |  ",
+          "이전\n                        Chips\n                        보이스 크롬에 노출되는 발화 가이드를 제공하기 위한 규격",
+          "다음\n                        PhoneCall\n                        전화 수/발신 기능 제어를 위한 규격",
+          "이전",
+          "Chips",
+          "보이스 크롬에 노출되는 발화 가이드를 제공하기 위한 규격",
+          "다음",
+          "PhoneCall",
+          "전화 수/발신 기능 제어를 위한 규격"
         ]
       }
     ],
@@ -14328,7 +15274,13 @@
         "title": "SetTimeControl Interface > Error & Exception",
         "indexes": [
           "Error & Exception",
-          "해당 Capability/Directive에서 응답 시 사용할 수 있는 ErrorCode는 SmartHomeError를 참조해주시기 바랍니다."
+          "해당 Capability/Directive에서 응답 시 사용할 수 있는 ErrorCode는 SmartHomeError를 참조해주시기 바랍니다.",
+          "이전\n                        PowerControl Interface",
+          "다음\n                        StateCheck Interface",
+          "이전",
+          "PowerControl Interface",
+          "다음",
+          "StateCheck Interface"
         ]
       }
     ],
@@ -14376,7 +15328,13 @@
           "전화번호나 비밀번호를 입력 받는 경우(숫자 개개를 정확히 인식하기 어려움)",
           "목록 중 하나를 선택해야 하는 경우, 1음절 숫자인 “일”, “이” 등으로 발화하지 않고 “첫 번째”, “두 번째”와 같은 방식으로 발화하도록 유도",
           "사용자의 확인이 필요할 경우 발화 예시를 제시합니다.\n\n    사용자에게서 얻고자 하는 답변이 확인 과정일 경우, 용자의 확인 여부를 명확히 구분할 수 있도록 “예/아니오” 형식의 발화보다는 명확한 의도가 담긴 발화를 할 수 있도록 예시를 제시하도록 합니다.",
-          "결제할까요? -> 응 (X)\n주문을 원하시면 “결제해줘”라고 말씀해주세요. -> 결제해줘 (O)"
+          "결제할까요? -> 응 (X)\n주문을 원하시면 “결제해줘”라고 말씀해주세요. -> 결제해줘 (O)",
+          "이전\n                        Parameter로 응답 작성하기",
+          "다음\n                        하나의 Parameter에 여러 Entity mapping 하기",
+          "이전",
+          "Parameter로 응답 작성하기",
+          "다음",
+          "하나의 Parameter에 여러 Entity mapping 하기"
         ]
       }
     ],
@@ -14451,7 +15409,13 @@
           "{\n  \"version\": 1,\n  \"requestId\": \"2019071712638a4378649347bdb21643127a0f6d83\",\n  \"action\": {\n    \"command\": {\n      \"smartHomeCapability\": \"TemperatureControl\",\n      \"smartHomeDirective\": \"SetTemperature\",\n      \"parameters\": {\n        \"temperatureLevel\": 22\n      }\n    },\n    \"smartHomeDevices\": [\n      {\n        \"id\": \"D83077224431\",\n        \"type\": \"에어컨\",\n        \"model\": null,\n        \"friendlyName\": \"거실\",\n        \"customData\": {}\n      }\n    ]\n  },\n  \"context\": {\n    \"session\": {\n      \"id\": \"a5a250af-48f7-4ceb-b099-ea6753afa570\",\n      \"accessToken\": \"DUMMY_ACCESS_TOKEN\",\n      \"userIdentifier\": \"SERVICE_PROVIDER_USER_ID (optional, e.g. Hue whitelist Identifier)\"\n    }\n  }\n}",
           "Control Response Sample",
           "Control Response 예시\n        \n        복사성공!",
-          "{\n  \"resultCode\": \"OK\", <-- 에러일 경우 에러코드 응답\n  \"requestId\": \"2019071712638a4378649347bdb21643127a0f6d83\", <-- request로 받은 값을 그대로 응답\n  \"parameters\": {} <-- directive 마다 필요한 property 채워서 응답.\n}"
+          "{\n  \"resultCode\": \"OK\", <-- 에러일 경우 에러코드 응답\n  \"requestId\": \"2019071712638a4378649347bdb21643127a0f6d83\", <-- request로 받은 값을 그대로 응답\n  \"parameters\": {} <-- directive 마다 필요한 property 채워서 응답.\n}",
+          "이전\n                        실패 발화 분석",
+          "다음\n                        SmartHomeDeviceType",
+          "이전",
+          "실패 발화 분석",
+          "다음",
+          "SmartHomeDeviceType"
         ]
       }
     ],
@@ -14718,7 +15682,13 @@
           "Attribute 사용 예시",
           "복사성공!",
           "IncreaseTemperature Directive Request 예시 (POST, /nugu/v1/capabilities/TemperatureControl/directives/IncreaseTemperature)\n\n\n{\n  \"version\": 1,\n  \"requestId\": \"20190916109ad8219c251742859c56f6ec3c4700bb\",\n  \"action\": {\n    \"command\": {\n      \"smartHomeCapability\": \"TemperatureControl\",\n      \"smartHomeDirective\": \"IncreaseTemperature\",\n      \"parameters\": {\n          \"temperatureDelta\": \"3\"\n      }\n    },\n    \"smartHomeDevices\": [\n      {\n        \"id\": \"1234567\",\n        \"deviceTypeCode\": \"AIR_CONDITIONER\",\n        \"deviceTypeName\": \"에어컨\",\n        \"deviceModelName\": \"example air_conditioner\",\n        \"friendlyName\": \"거실\",\n        \"manufacturer\": \"example manufacturer\",\n        \"supportedCapabilities\": {\n          \"temperatureControl\": {}\n        },\n        \"customData\": {\n          \"foo\": \"bar\"\n        },\n        \"connectionStatus\": true\n      }\n    ]\n  },\n  \"context\": {\n    \"session\": {\n      \"id\": \"example_session_id\",\n      \"accessToken\": \"example_access_token\"\n    }\n  }\n}",
-          "Related to TemperatureControl Interface"
+          "Related to TemperatureControl Interface",
+          "이전\n                        TemperatureControl Interface",
+          "다음\n                        SmartHomeError",
+          "이전",
+          "TemperatureControl Interface",
+          "다음",
+          "SmartHomeError"
         ]
       }
     ],
@@ -14745,7 +15715,13 @@
           "PowerControl | NUGU 스마트홈에 등록된 SmartHomeDevice의 전원제어방식에 대한 설명입니다.전원을 켜고 끄거나 동작을 시작, 중지할 수 있는 모든 종류의 SmartHomeDevice를 지원합니다. | 가스차단기가습기건조기공기청정기로봇청소기보일러선풍기세탁기스마트스위치스마트플러그식기세척기에어워셔에어컨오븐의류관리기제습기조명",
           "SetTimeControl | NUGU 스마트홈에 등록된 SmartHomeDevice의 제어시간설정방식에 대한 설명입니다.스마트홈 기기의 종료예약설정 등을 관리할 수 있습니다. | 가습기공기청정기보일러선풍기스마트플러그에어워셔에어컨제습기",
           "StateCheck | NUGU 스마트홈에 등록된 SmartHomeDevice의 상태조회방식에 대한 설명입니다. | 식기세척기열림감지센서오븐의류관리기정수기",
-          "TemperatureControl | NUGU 스마트홈에 등록된 SmartHomeDevice의 온도제어방식에 대한 설명입니다.TemperatureControl Interface는 주변 온도를 특정 온도로 설정하기 위한 스마트홈 기기의 제어 명령입니다. | 보일러에어컨"
+          "TemperatureControl | NUGU 스마트홈에 등록된 SmartHomeDevice의 온도제어방식에 대한 설명입니다.TemperatureControl Interface는 주변 온도를 특정 온도로 설정하기 위한 스마트홈 기기의 제어 명령입니다. | 보일러에어컨",
+          "이전\n                        조명",
+          "다음\n                        AirflowControl Interface",
+          "이전",
+          "조명",
+          "다음",
+          "AirflowControl Interface"
         ]
       }
     ],
@@ -14776,7 +15752,14 @@
           "식기세척기 | 식기세척기는 전원 자체를 켜거나 끄지 않고 기능을 시작 혹은 중지하며 현재 기기의 동작상태 체크 기능을 지원합니다. | PowerControlStateCheck",
           "에너지미터 | 에너지미터는 전력사용량을 측정하는 기기로 현재 기기의 전력사용량 및 목표전력사용량 조회 기능 등을 지원합니다. | PowerCheck",
           "에어워셔 | 에어워셔는 에어워셔 기기의 전원 제어 기능, 풍량 제어 기능, 에어워셔에서 측정한 주변 공기상태 조회 기능, 종료예약 설정 기능, 각 모델별로 지원하는 모드 설정 기능, 목표 설정 습도 제어 기능을 지원합니다. | PowerControlAirflowControlAirQualityCheckModeControlSetTimeControlHumidityControl",
-          "에어컨 | 에어컨은 공간에 대한 냉방 온도 조절 장치로 전원 제어 기능 및 목표 온도 설정 기능, 에어컨의 풍량 제어 기능, 각 모델별로 지원하는 모드 설정 기능, 종료예약 설정 기능, 에어컨에서 측정한 주변 공기상태 조회 기능을 지원합니다. | PowerControlTemperatureControlAirflowControlAirQualityCheckModeControlSetTimeControl"
+          "에어컨 | 에어컨은 공간에 대한 냉방 온도 조절 장치로 전원 제어 기능 및 목표 온도 설정 기능, 에어컨의 풍량 제어 기능, 각 모델별로 지원하는 모드 설정 기능, 종료예약 설정 기능, 에어컨에서 측정한 주변 공기상태 조회 기능을 지원합니다. | PowerControlTemperatureControlAirflowControlAirQualityCheckModeControlSetTimeControl",
+          "이전\n                        Pre-built Play Builder로 스마트홈 Play 만들기",
+          "다음\n                        가스차단기\n                        NUGU스마트홈에서 제공하는 기종 중 가스차단기(GAS_BREAKER) 기종에 대한 정보입니다. 가스차단기는 닫는 기능을 제공하며 안전 상의 이유로 음성제어 시 여는 기능은 제공하고 있지 않습니다.",
+          "이전",
+          "Pre-built Play Builder로 스마트홈 Play 만들기",
+          "다음",
+          "가스차단기",
+          "NUGU스마트홈에서 제공하는 기종 중 가스차단기(GAS_BREAKER) 기종에 대한 정보입니다. 가스차단기는 닫는 기능을 제공하며 안전 상의 이유로 음성제어 시 여는 기능은 제공하고 있지 않습니다."
         ]
       }
     ],
@@ -14855,7 +15838,13 @@
           "NotSupportedInCurrentMode | mode | 현재 설정된 모드에서 요청한 기능을 수행할 수 없을 때에 대한 에러입니다.",
           "DeviceInSleepMode | - | 제어 대상인 스마트홈 기기가 슬랩모드 혹은 절전 모드여서 제어에 실패한 경우에 대한 에러입니다.",
           "NoControlAuthority | - | ServiceProvider로부터 제어권을 받지 못해 일시적으로 음성제어가 불가능한 경우입니다. ServiceProvider별로 제어 가능한 상태에 대한 가이드 전달이 필요합니다.",
-          "SmartHomeError는 계속해서 업데이트됩니다."
+          "SmartHomeError는 계속해서 업데이트됩니다.",
+          "이전\n                        SmartHomeAttribute",
+          "다음\n                        Play 정보 등록 및 심사 요청하기",
+          "이전",
+          "SmartHomeAttribute",
+          "다음",
+          "Play 정보 등록 및 심사 요청하기"
         ]
       }
     ],
@@ -14976,7 +15965,15 @@
         "indexes": [
           "BeepFailed",
           "복사성공!",
-          "{\n  \"header\": {\n    \"namespace\": \"Sound\",\n    \"name\": \"BeepFailed\",\n    \"messageId\": \"{{STRING}}\",\n    \"dialogRequestId\": \"{{STRING}}\",\n    \"version\": \"1.0\"\n  },\n  \"payload\": {\n    \"playServiceId\": \"{{STRING}}\"\n  }\n}"
+          "{\n  \"header\": {\n    \"namespace\": \"Sound\",\n    \"name\": \"BeepFailed\",\n    \"messageId\": \"{{STRING}}\",\n    \"dialogRequestId\": \"{{STRING}}\",\n    \"version\": \"1.0\"\n  },\n  \"payload\": {\n    \"playServiceId\": \"{{STRING}}\"\n  }\n}",
+          "이전\n                        Battery\n                        디바이스 배터리 정보를 Play 로 전달하기 위한 규격",
+          "다음\n                        Chips\n                        보이스 크롬에 노출되는 발화 가이드를 제공하기 위한 규격",
+          "이전",
+          "Battery",
+          "디바이스 배터리 정보를 Play 로 전달하기 위한 규격",
+          "다음",
+          "Chips",
+          "보이스 크롬에 노출되는 발화 가이드를 제공하기 위한 규격"
         ]
       }
     ],
@@ -14990,9 +15987,21 @@
         "title": "Source code",
         "indexes": [
           "Source code",
-          "GitHub - nugu-developers/nugu-ios: NUGU SDK for iOS\n                NUGU SDK for iOS. Contribute to nugu-developers/nugu-ios development by creating an account on GitHub.",
-          "GitHub - nugu-developers/nugu-android: NUGU SDK for Android\n                NUGU SDK for Android. Contribute to nugu-developers/nugu-android development by creating an account on GitHub.",
-          "NUGU SDK for Linux Github repository\n                NUGU SDK for Linux. Contribute to nugu-developers/nugu-linux development by creating an account on GitHub."
+          "GitHub - nugu-developers/nugu-ios: NUGU SDK for iOS\n            NUGU SDK for iOS. Contribute to nugu-developers/nugu-ios development by creating an account on GitHub.",
+          "GitHub - nugu-developers/nugu-android: NUGU SDK for Android\n            NUGU SDK for Android. Contribute to nugu-developers/nugu-android development by creating an account on GitHub.",
+          "NUGU SDK for Linux Github repository\n            NUGU SDK for Linux. Contribute to nugu-developers/nugu-linux development by creating an account on GitHub.",
+          "이전\n                        API References",
+          "다음\n                        SDK UX Guide",
+          "GitHub - nugu-developers/nugu-ios: NUGU SDK for iOS",
+          "NUGU SDK for iOS. Contribute to nugu-developers/nugu-ios development by creating an account on GitHub.",
+          "GitHub - nugu-developers/nugu-android: NUGU SDK for Android",
+          "NUGU SDK for Android. Contribute to nugu-developers/nugu-android development by creating an account on GitHub.",
+          "NUGU SDK for Linux Github repository",
+          "NUGU SDK for Linux. Contribute to nugu-developers/nugu-linux development by creating an account on GitHub.",
+          "이전",
+          "API References",
+          "다음",
+          "SDK UX Guide"
         ]
       }
     ],
@@ -15166,7 +16175,15 @@
         "indexes": [
           "SetMuteFailed",
           "복사성공!",
-          "{\n  \"header\": {\n    \"namespace\": \"Speaker\",\n    \"name\": \"SetMuteFailed\",\n    \"messageId\": \"{{STRING}}\",\n    \"dialogRequestId\": \"{{STRING}}\",\n    \"version\": \"1.0\"\n  },\n  \"payload\": {\n    \"playServiceId\": \"{{STRING}}\"\n  }\n}"
+          "{\n  \"header\": {\n    \"namespace\": \"Speaker\",\n    \"name\": \"SetMuteFailed\",\n    \"messageId\": \"{{STRING}}\",\n    \"dialogRequestId\": \"{{STRING}}\",\n    \"version\": \"1.0\"\n  },\n  \"payload\": {\n    \"playServiceId\": \"{{STRING}}\"\n  }\n}",
+          "이전\n                        Extension\n                        정의되지 않은 기능을 수행하기 위한 규격",
+          "다음\n                        Bluetooth\n                        디바이스의 블루투스를 제어하기 위한 규격",
+          "이전",
+          "Extension",
+          "정의되지 않은 기능을 수행하기 위한 규격",
+          "다음",
+          "Bluetooth",
+          "디바이스의 블루투스를 제어하기 위한 규격"
         ]
       }
     ],
@@ -15417,7 +16434,16 @@
         "indexes": [
           "Sample Application",
           "NUGU SDK for iOS의 Github Repository에 있는 샘플 앱을 통해서도 NUGU SDK의 주요 사용 방법을 확인하실 수 있습니다.",
-          "GitHub - nugu-developers/nugu-ios: NUGU SDK for iOS\n                NUGU SDK for iOS. Contribute to nugu-developers/nugu-ios development by creating an account on GitHub."
+          "GitHub - nugu-developers/nugu-ios: NUGU SDK for iOS\n            NUGU SDK for iOS. Contribute to nugu-developers/nugu-ios development by creating an account on GitHub.",
+          "이전\n                        iOS\n                        iOS 환경에서 NUGU 서비스를 쉽게 사용할 수 있도록 NUGU SDK for iOS를 제공합니다.",
+          "다음\n                        구성요소",
+          "GitHub - nugu-developers/nugu-ios: NUGU SDK for iOS",
+          "NUGU SDK for iOS. Contribute to nugu-developers/nugu-ios development by creating an account on GitHub.",
+          "이전",
+          "iOS",
+          "iOS 환경에서 NUGU 서비스를 쉽게 사용할 수 있도록 NUGU SDK for iOS를 제공합니다.",
+          "다음",
+          "구성요소"
         ]
       }
     ],
@@ -15536,7 +16562,7 @@
           "Linux 기반의 제품은 대부분 디스플레이가 없어 별도의 연동 어플리케이션을 통한 사용자 인증을 필요로 합니다.",
           "다른 플랫폼과 달리 GUI framework이 다양하기 때문에 표준화된 인증 UI를 SDK에서 제공해 주기 어렵습니다.",
           "하지만, 인증을 쉽게 테스트할 수 있도록 아래의 NUGU SDK for Linux Github에 Python으로 작성된 별도의 웹기반 OAuth2 client 예제를 제공하고 있습니다.",
-          "NUGU SDK for Linux OAuth2 client python sample\n                NUGU SDK for Linux. Contribute to nugu-developers/nugu-linux development by creating an account on GitHub.",
+          "NUGU SDK for Linux OAuth2 client python sample\n            NUGU SDK for Linux. Contribute to nugu-developers/nugu-linux development by creating an account on GitHub.",
           "NUGU SDK PoC목록에서 nugu-config.json 파일을 다운로드 받은 후, Client ID, Client Secret 정보를 활용하여 위 OAuth2 client 예제를 통해 인증을 진행할 수 있습니다.",
           "체험판은 체험판 신청 내역에서  nugu-config.json 파일을 다운로드 받습니다."
         ]
@@ -15577,7 +16603,7 @@
           "복사성공!",
           "auto network_manager(nugu_client->getNetworkManager());\nnetwork_manager->setToken(\"...\");\nnetwork_manager->connect();",
           "전체 코드는 Github의 아래 wiki에서 확인할 수 있습니다.",
-          "NUGU SDK for Linux Wiki - Create your first application\n                NUGU SDK for Linux. Contribute to nugu-developers/nugu-linux development by creating an account on GitHub."
+          "NUGU SDK for Linux Wiki - Create your first application\n            NUGU SDK for Linux. Contribute to nugu-developers/nugu-linux development by creating an account on GitHub."
         ]
       },
       {
@@ -15603,7 +16629,20 @@
         "indexes": [
           "Download the SDK source code",
           "아래 Github 주소를 통해 NUGU SDK for Linux 전체 소스 코드를 다운로드 받을 수 있습니다.",
-          "NUGU SDK for Linux Github repository\n                NUGU SDK for Linux. Contribute to nugu-developers/nugu-linux development by creating an account on GitHub."
+          "NUGU SDK for Linux Github repository\n            NUGU SDK for Linux. Contribute to nugu-developers/nugu-linux development by creating an account on GitHub.",
+          "이전\n                        Linux\n                        Linux 환경에서 NUGU 서비스를 쉽게 사용할 수 있도록 NUGU SDK for Linux를 제공합니다.",
+          "다음\n                        구성요소",
+          "NUGU SDK for Linux OAuth2 client python sample",
+          "NUGU SDK for Linux. Contribute to nugu-developers/nugu-linux development by creating an account on GitHub.",
+          "NUGU SDK for Linux Wiki - Create your first application",
+          "NUGU SDK for Linux. Contribute to nugu-developers/nugu-linux development by creating an account on GitHub.",
+          "NUGU SDK for Linux Github repository",
+          "NUGU SDK for Linux. Contribute to nugu-developers/nugu-linux development by creating an account on GitHub.",
+          "이전",
+          "Linux",
+          "Linux 환경에서 NUGU 서비스를 쉽게 사용할 수 있도록 NUGU SDK for Linux를 제공합니다.",
+          "다음",
+          "구성요소"
         ]
       }
     ],
@@ -15846,7 +16885,16 @@
         "indexes": [
           "Download the SDK source code",
           "아래 Github 주소를 통해 NUGU SDK for Android 소스 코드를 다운로드 받을 수 있습니다.",
-          "GitHub - nugu-developers/nugu-android: NUGU SDK for Android\n                NUGU SDK for Android. Contribute to nugu-developers/nugu-android development by creating an account on GitHub."
+          "GitHub - nugu-developers/nugu-android: NUGU SDK for Android\n            NUGU SDK for Android. Contribute to nugu-developers/nugu-android development by creating an account on GitHub.",
+          "이전\n                        Android\n                        Android 환경에서 NUGU 서비스를 쉽게 사용할 수 있도록 NUGU SDK for Android를 제공합니다.",
+          "다음\n                        구성요소",
+          "GitHub - nugu-developers/nugu-android: NUGU SDK for Android",
+          "NUGU SDK for Android. Contribute to nugu-developers/nugu-android development by creating an account on GitHub.",
+          "이전",
+          "Android",
+          "Android 환경에서 NUGU 서비스를 쉽게 사용할 수 있도록 NUGU SDK for Android를 제공합니다.",
+          "다음",
+          "구성요소"
         ]
       }
     ],
@@ -15926,7 +16974,13 @@
         "title": "StateCheck Interface > Error & Exception",
         "indexes": [
           "Error & Exception",
-          "해당 Capability/Directive에서 응답 시 사용할 수 있는 ErrorCode는 SmartHomeError를 참조해주시기 바랍니다."
+          "해당 Capability/Directive에서 응답 시 사용할 수 있는 ErrorCode는 SmartHomeError를 참조해주시기 바랍니다.",
+          "이전\n                        SetTimeControl Interface",
+          "다음\n                        TemperatureControl Interface",
+          "이전",
+          "SetTimeControl Interface",
+          "다음",
+          "TemperatureControl Interface"
         ]
       }
     ],
@@ -15950,7 +17004,13 @@
           "발화 내역",
           "주요 발화 Top 100 / 실패 발화 Top 100",
           "Play 별 통계",
-          "선택한 POC에서 제공하는 Play에 대한 통계를 확인할 수 있습니다."
+          "선택한 POC에서 제공하는 Play에 대한 통계를 확인할 수 있습니다.",
+          "이전\n                        PoC 관리",
+          "다음\n                        Authentication",
+          "이전",
+          "PoC 관리",
+          "다음",
+          "Authentication"
         ]
       }
     ],
@@ -15982,7 +17042,13 @@
           "Alert – Message | 수신된 메시지를 Prompt로 제공하는 speaking 상태 진입",
           "Alert – Sound | 사운드 재생이 중지되고 listening – passive 상태 진입",
           "Responding – speaking Responding – error | Prompt가 중지되고 listening – passive 상태 진입이후 이어지는 사용자 발화에 대해 Prompt가 아닌 동작(볼륨 조절, 재생, 재시작 등)을 수행하는 경우에는 동작을 먼저 수행한 후, 중지되었던 Prompt를 처음부터 재시작사용자 발화에 대해 Prompt를 제공하는 경우에는 중지되었던 Prompt는 무시됨.1음절 발화, 소음, 무음 등 발화 미인식으로 처리된 경우에도 재생중이었던 Prompt는 무시됨",
-          "Responding - Playing | Playing을 일시정하고 listening – passive 상태 진입이후 이어지는 사용자 발화에 대해 동작이나 Prompt 를 제공한 후, playing 상태로 돌아옴 (1음절 발화, 소음, 무음 등 발화 미인식으로 처리된 경우에도 동일)"
+          "Responding - Playing | Playing을 일시정하고 listening – passive 상태 진입이후 이어지는 사용자 발화에 대해 동작이나 Prompt 를 제공한 후, playing 상태로 돌아옴 (1음절 발화, 소음, 무음 등 발화 미인식으로 처리된 경우에도 동일)",
+          "이전\n                        관련정보",
+          "다음\n                        Layer 정책",
+          "이전",
+          "관련정보",
+          "다음",
+          "Layer 정책"
         ]
       }
     ],
@@ -15998,7 +17064,13 @@
           "지원 도구",
           "Play Builder에서는 Play를 만드는데 필수는 아니지만, Play를 배포 후 운영하면서 수정하는데 도움이 되는 지원 도구를 제공합니다.",
           "훈련 데이터 검증 | 훈련 데이터를 입력하면서 발생할 수 있는 중의성을 찾아주는 도구",
-          "실패 발화 분석 | Play로 들어온 실제 사용자 발화 로그 중 정상적인 응답이 나가지 않은 것으로 추정되는 발화를 분석하는 도구"
+          "실패 발화 분석 | Play로 들어온 실제 사용자 발화 로그 중 정상적인 응답이 나가지 않은 것으로 추정되는 발화를 분석하는 도구",
+          "이전\n                        OAuth 2.0 연동하기",
+          "다음\n                        훈련 데이터 검증",
+          "이전",
+          "OAuth 2.0 연동하기",
+          "다음",
+          "훈련 데이터 검증"
         ]
       }
     ],
@@ -16285,7 +17357,14 @@
           "Connection-oriented 디바이스에서만 사용",
           "device-gateway와 연결 상테를 테스트하기 위한 event",
           "복사성공!",
-          "{\n  \"header\": {\n    \"namespace\": \"System\",\n    \"name\": \"SynchronizeState\",\n    \"messageId\": \"{{STRING}}\",\n    \"dialogRequestId\": \"{{STRING}}\",\n    \"version\": \"1.0\"\n  },\n  \"payload\": {}\n}"
+          "{\n  \"header\": {\n    \"namespace\": \"System\",\n    \"name\": \"SynchronizeState\",\n    \"messageId\": \"{{STRING}}\",\n    \"dialogRequestId\": \"{{STRING}}\",\n    \"version\": \"1.0\"\n  },\n  \"payload\": {}\n}",
+          "이전\n                        Display-Event",
+          "다음\n                        TTS\n                        음성 합성 결과를 전달받기 위한 규격",
+          "이전",
+          "Display-Event",
+          "다음",
+          "TTS",
+          "음성 합성 결과를 전달받기 위한 규격"
         ]
       }
     ],
@@ -16327,7 +17406,13 @@
           "Case 1 : 메뉴명, 지점명을 모두 발화한 경우 “스타벅스 소공동점에서 아메리카노 톨 사이즈 한 잔 주문해줘”",
           "Case 2 : 메뉴명, 지점명을 발화하지 않은 경우 “스타벅스에서 주문해줘”",
           "Case 3 : 메뉴명만 발화한 경우 “스타벅스에서 아메리카노 주문해줘”",
-          "Case 4 : 지점명만 발화한 경우 “스타벅스 소공동점에서 주문해줘”"
+          "Case 4 : 지점명만 발화한 경우 “스타벅스 소공동점에서 주문해줘”",
+          "이전\n                        Voice UX Design Guide",
+          "다음\n                        사용자 발화(User Utterance) 예상 하기",
+          "이전",
+          "Voice UX Design Guide",
+          "다음",
+          "사용자 발화(User Utterance) 예상 하기"
         ]
       }
     ],
@@ -16485,7 +17570,13 @@
         "title": "TemperatureControl Interface > Error & Exception",
         "indexes": [
           "Error & Exception",
-          "해당 Capability/Directive에서 응답 시 사용할 수 있는 ErrorCode는 SmartHomeError를 참조해주시기 바랍니다."
+          "해당 Capability/Directive에서 응답 시 사용할 수 있는 ErrorCode는 SmartHomeError를 참조해주시기 바랍니다.",
+          "이전\n                        StateCheck Interface",
+          "다음\n                        SmartHomeAttribute",
+          "이전",
+          "StateCheck Interface",
+          "다음",
+          "SmartHomeAttribute"
         ]
       }
     ],
@@ -16547,7 +17638,15 @@
           "TemplateHandler 적용",
           "작성한 커스텀 TemplateHandler를 리턴하는 TemplateHandlerFactory 를 TemplateRenderer에 적용하면 커스텀 TemplateHandler가 동작합니다.",
           "복사성공!",
-          "TemplateRenderer.templateHandlerFactory = object : TemplateHandler.TemplateHandlerFactory() {\n    override fun onCreate(\n        nuguProvider: TemplateRenderer.NuguClientProvider,\n        templateInfo: TemplateHandler.TemplateInfo,\n        fragment: Fragment\n    ): TemplateHandler {\n        return if (templateInfo.templateType == \"template you want set your own handler\")\n            YourTemplateHandler(nuguProvider, templateInfo, fragment)\n        else\n            super.onCreate(nuguProvider, templateInfo, fragment)\n    }\n}"
+          "TemplateRenderer.templateHandlerFactory = object : TemplateHandler.TemplateHandlerFactory() {\n    override fun onCreate(\n        nuguProvider: TemplateRenderer.NuguClientProvider,\n        templateInfo: TemplateHandler.TemplateInfo,\n        fragment: Fragment\n    ): TemplateHandler {\n        return if (templateInfo.templateType == \"template you want set your own handler\")\n            YourTemplateHandler(nuguProvider, templateInfo, fragment)\n        else\n            super.onCreate(nuguProvider, templateInfo, fragment)\n    }\n}",
+          "이전\n                        TemplateRenderer\n                        Template 유지 정책의 커스텀",
+          "다음\n                        TemplateView\n                        TemplateView 커스텀",
+          "이전",
+          "TemplateRenderer",
+          "Template 유지 정책의 커스텀",
+          "다음",
+          "TemplateView",
+          "TemplateView 커스텀"
         ]
       }
     ],
@@ -16593,7 +17692,15 @@
           "displayCardRenderFailed() : Template 화면 노출을 시도했으나 실패했을 경우 호출해야 합니다.",
           "displayCardCleared() : Template 화면이 제거되면 호출해야 합니다.",
           "DisplayAggregatorInterface.Renderer의 render()함수에서 처리결과로 true를 리턴했다면, 이후 반드시 displayCardRenderer() 혹은 displayCardRenderFailed()를 호출해야 합니다.",
-          "displayCardRendered()가 호출되지 않은 템플릿에 대해 displayCardCleared()가 호출되어서는 안됩니다.\n렌더링이 완료되지 않은 Template이 제거된 경우에는 displayCardRenderFailed()를 호출해야 합니다."
+          "displayCardRendered()가 호출되지 않은 템플릿에 대해 displayCardCleared()가 호출되어서는 안됩니다.\n렌더링이 완료되지 않은 Template이 제거된 경우에는 displayCardRenderFailed()를 호출해야 합니다.",
+          "이전\n                        NUGU Display의 노출과 제어\n                        TemplateRenderer 적용 방법",
+          "다음\n                        TemplateHandler\n                        Template, 응용레벨 사이의 상호작용 커스텀",
+          "이전",
+          "NUGU Display의 노출과 제어",
+          "TemplateRenderer 적용 방법",
+          "다음",
+          "TemplateHandler",
+          "Template, 응용레벨 사이의 상호작용 커스텀"
         ]
       }
     ],
@@ -16632,7 +17739,15 @@
           "TemplateView.kt에 선언된 정적 맵에 templateType과 templateConstructor가 매핑되어 있습니다.\n이 맵에서 templateType에 맞는 templateConstructor를 찾아 TemplateView를 생성합니다.\n매핑되는 것이 없을 경우 TemplateWebView 객체가 생성됩니다.",
           "원하는 templateType과 직접 구현한 TemplateView 생성자를 매핑하여 맵에 추가하면 됩니다.",
           "복사성공!",
-          "TemplateView.kt\n\n/**\n * key : TemplateType list\n * value : TemplateView Constructor\n */\n val templateConstructor: HashMap<List<String>, (String, Context) -> TemplateView> by lazy {\n    HashMap<List<String>, (String, Context) -> TemplateView>().also {\n        it[MEDIA_TEMPLATE_TYPES] = { templateType, context ->\n            DisplayAudioPlayer(templateType, context)\n        }\n    }\n}"
+          "TemplateView.kt\n\n/**\n * key : TemplateType list\n * value : TemplateView Constructor\n */\n val templateConstructor: HashMap<List<String>, (String, Context) -> TemplateView> by lazy {\n    HashMap<List<String>, (String, Context) -> TemplateView>().also {\n        it[MEDIA_TEMPLATE_TYPES] = { templateType, context ->\n            DisplayAudioPlayer(templateType, context)\n        }\n    }\n}",
+          "이전\n                        TemplateHandler\n                        Template, 응용레벨 사이의 상호작용 커스텀",
+          "다음\n                        NUGU 사용자 인터페이스\n                        User Interface",
+          "이전",
+          "TemplateHandler",
+          "Template, 응용레벨 사이의 상호작용 커스텀",
+          "다음",
+          "NUGU 사용자 인터페이스",
+          "User Interface"
         ]
       }
     ],
@@ -16664,7 +17779,10 @@
           "TTS | Text To Speech로 음성합성 엔진을 의미합니다.",
           "DM | Dialog Management로 대화처리 엔진을 의미합니다.",
           "NUGU SDK | 제휴사의 다양한 디바이스 또는 어플리케이션 등에서 NUGU 플랫폼에 연동하여 음성명령 기반의 NUGU 기능을 제공할 수 있도록 지원하는 Software Developement Kit입니다.",
-          "Prompt | 사용자에게 전달되는 응답 메시지를 의미합니다."
+          "Prompt | 사용자에게 전달되는 응답 메시지를 의미합니다.",
+          "이전\n                        발화 옵션에서 UNIT 태그로 지원하는 단위",
+          "이전",
+          "발화 옵션에서 UNIT 태그로 지원하는 단위"
         ]
       }
     ],
@@ -16744,7 +17862,13 @@
           "테스트 기기는 최대 10대까지 등록할 수 있습니다.",
           "Developers Console > Play Kit에서 Play가 등록완료 상태가 된 경우, 하단의 디바이스 등록 버튼을 통해 계정에 연결된 기기를 테스트 기기로 등록 할 수 있습니다.",
           "다른 방법으로는 Developers Console > Account > 회원 정보 관리에서 하단의 디바이스 등록 버튼을 통해 계정에 연결된 기기를 테스트 기기로 등록 할 수 있습니다.",
-          "테스트 기기 등록이 완료되면 테스트 기기 등록 메뉴의 등록된 기기 목록에 등록된 디바이스가 표시됩니다. NUGU 디바이스 테스트를 중지하려면, 등록된 디바이스 우측의 - 버튼을 클릭하여 디바이스를 삭제합니다."
+          "테스트 기기 등록이 완료되면 테스트 기기 등록 메뉴의 등록된 기기 목록에 등록된 디바이스가 표시됩니다. NUGU 디바이스 테스트를 중지하려면, 등록된 디바이스 우측의 - 버튼을 클릭하여 디바이스를 삭제합니다.",
+          "이전\n                        Response Filter 사용하기",
+          "다음\n                        AudioPlayer Interface 지원하는 Play 만들기",
+          "이전",
+          "Response Filter 사용하기",
+          "다음",
+          "AudioPlayer Interface 지원하는 Play 만들기"
         ]
       }
     ],
@@ -16783,7 +17907,13 @@
           "Play Builder에서 빌드할 Play를 선택하고, 우측 상단의 Play 빌드 버튼을 클릭한 후 확인창에서 확인 버튼을 클릭하면 빌드가 실행됩니다.",
           "완성된 Play 빌드는 General > 빌드/History 페이지에서 확인 및 관리할 수 있습니다.",
           "빌드를 완료한 후에도 Play를 수정 및 업데이트하고, 다시 빌드할 수 있습니다.",
-          "빌드를 완료한 Play는 NUGU developers > NUGU play kit > 관리 메뉴를 이용하여 Play 심사 및 배포할 수 있습니다."
+          "빌드를 완료한 Play는 NUGU developers > NUGU play kit > 관리 메뉴를 이용하여 Play 심사 및 배포할 수 있습니다.",
+          "이전\n                        3) Action 만들고 응답 등록하기",
+          "다음\n                        시작하기 전에 알면 좋은 것들",
+          "이전",
+          "3) Action 만들고 응답 등록하기",
+          "다음",
+          "시작하기 전에 알면 좋은 것들"
         ]
       }
     ],
@@ -16809,7 +17939,15 @@
           "테스트용 : test-dghttp.sktnugu.com",
           "Nugu 서비스를 사용하기 전 (initialize 단계가 적당합니다.) NuguServerInfo.l4SwitchAddress 값을 변경합니다.",
           "NuguCentralManager.swift\n        \n        복사성공!",
-          "private init() { \n    NuguServerInfo.l4SwitchAddress = \"https://review-dghttp.sktnugu.com\"\n}"
+          "private init() { \n    NuguServerInfo.l4SwitchAddress = \"https://review-dghttp.sktnugu.com\"\n}",
+          "이전\n                        Dark Mode 지원\n                        NUGU SDK 의 UI Component 들은 Dark / Light 모드를 지원합니다.",
+          "다음\n                        1.0 으로 업그레이드\n                        NUGU SDK iOS 를 0.x 에서 1.0 으로 업그레이드 하기위한 가이드입니다.",
+          "이전",
+          "Dark Mode 지원",
+          "NUGU SDK 의 UI Component 들은 Dark / Light 모드를 지원합니다.",
+          "다음",
+          "1.0 으로 업그레이드",
+          "NUGU SDK iOS 를 0.x 에서 1.0 으로 업그레이드 하기위한 가이드입니다."
         ]
       }
     ],
@@ -16837,7 +17975,15 @@
           "val transport = GrpcTransportFactory(\n   NuguServerInfo.Builder()\n       .deviceGW(\"review-dggprc.sktnugu.com\")\n       .build()\n)",
           "⁣3. 마지막으로 NuguAndroidClient를 생성하면 모든 설정이 완료 됩니다.",
           "복사성공!",
-          "import com.skt.nugu.sdk.client.port.transport.grpc2.GrpcTransportFactory\nimport com.skt.nugu.sdk.client.port.transport.grpc2.NuguServerInfo\n\n       // Create NuguAndroidClient\n       client = NuguAndroidClient.Builder(\n           context,\n           NuguOAuth.create(options),\n           audioSourceManager\n       ).transportFactory(transport)\n      .build()"
+          "import com.skt.nugu.sdk.client.port.transport.grpc2.GrpcTransportFactory\nimport com.skt.nugu.sdk.client.port.transport.grpc2.NuguServerInfo\n\n       // Create NuguAndroidClient\n       client = NuguAndroidClient.Builder(\n           context,\n           NuguOAuth.create(options),\n           audioSourceManager\n       ).transportFactory(transport)\n      .build()",
+          "이전\n                        Dark Mode 지원\n                        어두운 테마",
+          "다음\n                        Linux\n                        Linux 환경에서 NUGU 서비스를 쉽게 사용할 수 있도록 NUGU SDK for Linux를 제공합니다.",
+          "이전",
+          "Dark Mode 지원",
+          "어두운 테마",
+          "다음",
+          "Linux",
+          "Linux 환경에서 NUGU 서비스를 쉽게 사용할 수 있도록 NUGU SDK for Linux를 제공합니다."
         ]
       }
     ],
@@ -16995,7 +18141,15 @@
           "복사성공!",
           "{\n  \"header\": {\n    \"namespace\": \"Text\",\n    \"name\": \"TextRedirectFailed\",\n    \"messageId\": \"{{STRING}}\",\n    \"dialogRequestId\": \"{{STRING}}\",\n    \"version\": \"1.5\"\n  },\n  \"payload\": {\n    \"playServiceId\": \"{{STRING}}\",\n    \"token\": \"{{STRING}}\",\n    \"errorCode\": \"{{STRING}}\"\n  }\n}",
           "token | string | Y | TextSource에서 정의한 token",
-          "errorCode | string | Y | NOT_SUPPORTED_STATE"
+          "errorCode | string | Y | NOT_SUPPORTED_STATE",
+          "이전\n                        ASR\n                        음성인식 결과를 Play 로 전달하기 위한 규격",
+          "다음\n                        Location\n                        디바이스 위치 정보를 Play 로 전달하기 위한 규격",
+          "이전",
+          "ASR",
+          "음성인식 결과를 Play 로 전달하기 위한 규격",
+          "다음",
+          "Location",
+          "디바이스 위치 정보를 Play 로 전달하기 위한 규격"
         ]
       }
     ],
@@ -17098,7 +18252,13 @@
         "title": "체험판 신청하기 > 체험판 사용하기 > 신청 정보",
         "indexes": [
           "신청 정보",
-          "체험판 신청하기를 통해 작성했던 신청 정보를 조회할 수 있습니다."
+          "체험판 신청하기를 통해 작성했던 신청 정보를 조회할 수 있습니다.",
+          "이전\n                        체험판과 정식판",
+          "다음\n                        PoC 관리하기",
+          "이전",
+          "체험판과 정식판",
+          "다음",
+          "PoC 관리하기"
         ]
       }
     ],
@@ -17247,7 +18407,15 @@
           "SpeechStopped",
           "복사성공!",
           "{\n  \"header\": {\n    \"namespace\": \"TTS\",\n    \"name\": \"SpeechStopped\",\n    \"messageId\": \"{{STRING}}\",\n    \"dialogRequestId\": \"{{STRING}}\",\n    \"version\": \"1.1\"\n  },\n  \"payload\": {\n    \"playServiceId\": \"{{STRING}}\",\n    \"token\": \"{{STRING}}\"\n  }\n}",
-          "token | string | Y | TTS.Speak 디렉티브에서 설정한 token 값"
+          "token | string | Y | TTS.Speak 디렉티브에서 설정한 token 값",
+          "이전\n                        System\n                        디바이스의 전원 및 네트워크 연결 상태를 관리하기 위한 규격",
+          "다음\n                        ASR\n                        음성인식 결과를 Play 로 전달하기 위한 규격",
+          "이전",
+          "System",
+          "디바이스의 전원 및 네트워크 연결 상태를 관리하기 위한 규격",
+          "다음",
+          "ASR",
+          "음성인식 결과를 Play 로 전달하기 위한 규격"
         ]
       }
     ],
@@ -17285,7 +18453,13 @@
           "Recommended Capabilities",
           "NUGU스마트홈을 통해 가스차단기(GAS_BREAKER)를 제어할 때 권장하는 SmartHome Capability 목록입니다. 권장하는 모든 Capability를 지원하지 않아도 되며 스마트홈 기기 자체 기능에 맞추어 제공하고자 하는 Capability 목록을 Discovery 시 응답에 포함해야 합니다.",
           "Capability별 상세한 내용은 아래 리스트의 링크를 통해 확인하실 수 있습니다.",
-          "PowerControl | 가스차단기 전원 제어 기능입니다.전원을 켜고 끄며 동작을 제어하는 기능들로 구성되어 있습니다. | “가스차단기 닫아줘”"
+          "PowerControl | 가스차단기 전원 제어 기능입니다.전원을 켜고 끄며 동작을 제어하는 기능들로 구성되어 있습니다. | “가스차단기 닫아줘”",
+          "이전\n                        SmartHomeDeviceType",
+          "다음\n                        가습기",
+          "이전",
+          "SmartHomeDeviceType",
+          "다음",
+          "가습기"
         ]
       }
     ],
@@ -17323,7 +18497,13 @@
           "Recommended Capabilities",
           "NUGU스마트홈을 통해 스마트스위치(SWITCH)를 제어할 때 권장하는 SmartHome Capability 목록입니다. 권장하는 모든 Capability를 지원하지 않아도 되며 스마트홈 기기 자체 기능에 맞추어 제공하고자 하는 Capability 목록을 Discovery 시 응답에 포함해야 합니다.",
           "Capability별 상세한 내용은 아래 리스트의 링크를 통해 확인하실 수 있습니다.",
-          "PowerControl | 스마트스위치 전원 제어 기능입니다.전원을 켜고 끄며 동작을 제어하는 기능들로 구성되어 있습니다. | “스위치 켜줘”"
+          "PowerControl | 스마트스위치 전원 제어 기능입니다.전원을 켜고 끄며 동작을 제어하는 기능들로 구성되어 있습니다. | “스위치 켜줘”",
+          "이전\n                        세탁기",
+          "다음\n                        스마트플러그",
+          "이전",
+          "세탁기",
+          "다음",
+          "스마트플러그"
         ]
       }
     ],
@@ -17363,7 +18543,13 @@
           "Capability별 상세한 내용은 아래 리스트의 링크를 통해 확인하실 수 있습니다.",
           "PowerControl | 스마트플러그 전원 제어 기능입니다.전원을 켜고 끄며 동작을 제어하는 기능들로 구성되어 있습니다. | “스마트플러그 켜줘”",
           "PowerCheck | 스마트플러그 전력사용량 관련 조회 기능입니다. | “스마트플러그 전력사용량 알려줘”",
-          "SetTimeControl | 스마트플러그 기기의 시간 설정 기능입니다. | “스마트플러그 1시간 후로 종료예약해줘”"
+          "SetTimeControl | 스마트플러그 기기의 시간 설정 기능입니다. | “스마트플러그 1시간 후로 종료예약해줘”",
+          "이전\n                        스마트스위치",
+          "다음\n                        식기세척기",
+          "이전",
+          "스마트스위치",
+          "다음",
+          "식기세척기"
         ]
       }
     ],
@@ -17402,7 +18588,13 @@
           "NUGU스마트홈을 통해 식기세척기(DISH_WASHER)를 제어할 때 권장하는 SmartHome Capability 목록입니다. 권장하는 모든 Capability를 지원하지 않아도 되며 스마트홈 기기 자체 기능에 맞추어 제공하고자 하는 Capability 목록을 Discovery 시 응답에 포함해야 합니다.",
           "Capability별 상세한 내용은 아래 리스트의 링크를 통해 확인하실 수 있습니다.",
           "PowerControl | 식기세척기의 전원 제어 기능입니다.전원을 켜고 끄며 동작을 제어하는 기능들로 구성되어 있습니다. | “식기세척기 켜줘”",
-          "StateCheck | 식기세척기의 상태 조회 기능입니다.현재 기기의 상태를 조회하는 기능들로 구성되어 있습니다. | “식기세척기 현재 상태 알려줘”"
+          "StateCheck | 식기세척기의 상태 조회 기능입니다.현재 기기의 상태를 조회하는 기능들로 구성되어 있습니다. | “식기세척기 현재 상태 알려줘”",
+          "이전\n                        스마트플러그",
+          "다음\n                        에너지미터",
+          "이전",
+          "스마트플러그",
+          "다음",
+          "에너지미터"
         ]
       }
     ],
@@ -17440,7 +18632,13 @@
           "Recommended Capabilities",
           "NUGU스마트홈을 통해 에너지미터(ENERGY_METER)를 제어할 때 권장하는 SmartHome Capability 목록입니다. 권장하는 모든 Capability를 지원하지 않아도 되며 스마트홈 기기 자체 기능에 맞추어 제공하고자 하는 Capability 목록을 Discovery 시 응답에 포함해야 합니다.",
           "Capability별 상세한 내용은 아래 리스트의 링크를 통해 확인하실 수 있습니다.",
-          "PowerCheck | 에너지미터의 전력사용량 관련 조회 기능입니다. | “에너지미터 전력사용량 알려줘”"
+          "PowerCheck | 에너지미터의 전력사용량 관련 조회 기능입니다. | “에너지미터 전력사용량 알려줘”",
+          "이전\n                        식기세척기",
+          "다음\n                        에어워셔",
+          "이전",
+          "식기세척기",
+          "다음",
+          "에어워셔"
         ]
       }
     ],
@@ -17483,7 +18681,13 @@
           "AirQualityCheck | 에어워셔의 공기상태 조회 기능입니다. | “에어워셔에서 공기상태 조회해줘”",
           "SetTimeControl | 에어워셔 기기의 시간 설정 기능입니다. | “에어워셔 1시간 후로 종료예약해줘”",
           "ModeControl | 에어워셔의 모드 제어 기능입니다.설정 모드에 대한 상세한 정보는 SmartHomeAttribute : Mode를 참조하시기 바랍니다. | “에어워셔 공기청정모드로 설정해줘”",
-          "HumidityControl | 에어워셔의 습도 제어 기능입니다. | “에어워셔 습도 50%로 설정해줘”"
+          "HumidityControl | 에어워셔의 습도 제어 기능입니다. | “에어워셔 습도 50%로 설정해줘”",
+          "이전\n                        에너지미터",
+          "다음\n                        에어컨",
+          "이전",
+          "에너지미터",
+          "다음",
+          "에어컨"
         ]
       }
     ],
@@ -17526,7 +18730,13 @@
           "AirflowControl | 에어컨의 풍량 제어 기능입니다.설정 풍량에 대한 상세한 정보는 SmartHomeAttribute : AirflowType을 참조하시기 바랍니다. | “에어컨 풍량 강풍으로 설정해줘”",
           "ModeControl | 에어컨의 모드 제어 기능입니다.설정 모드에 대한 상세헌 정보는 SmartHomeAttribute : Mode를 참조하시기 바랍니다. | “에어컨 냉방모드로 설정해줘”",
           "SetTimeControl | 에어컨 기기의 시간 설정 기능입니다. | “에어컨 1시간 후로 종료예약해줘”",
-          "AirQualityControl | 에어컨의 공기상태 조회 기능입니다. | “에어컨에서 공기상태 조회해줘”"
+          "AirQualityControl | 에어컨의 공기상태 조회 기능입니다. | “에어컨에서 공기상태 조회해줘”",
+          "이전\n                        에어워셔",
+          "다음\n                        열림감지센서",
+          "이전",
+          "에어워셔",
+          "다음",
+          "열림감지센서"
         ]
       }
     ],
@@ -17564,7 +18774,13 @@
           "Recommended Capabilities",
           "NUGU스마트홈을 통해 열림감지센서(OPEN_SENSOR)를 제어할 때 권장하는 SmartHome Capability 목록입니다. 권장하는 모든 Capability를 지원하지 않아도 되며 스마트홈 기기 자체 기능에 맞추어 제공하고자 하는 Capability 목록을 Discovery 시 응답에 포함해야 합니다.",
           "Capability별 상세한 내용은 아래 리스트의 링크를 통해 확인하실 수 있습니다.",
-          "StateCheck | 열림감지센서의 현재 상태를 조회하는 기능입니다. | “열림감지센서 열림상태 알려줘”"
+          "StateCheck | 열림감지센서의 현재 상태를 조회하는 기능입니다. | “열림감지센서 열림상태 알려줘”",
+          "이전\n                        에어컨",
+          "다음\n                        오븐",
+          "이전",
+          "에어컨",
+          "다음",
+          "오븐"
         ]
       }
     ],
@@ -17604,7 +18820,13 @@
           "Capability별 상세한 내용은 아래 리스트의 링크를 통해 확인하실 수 있습니다.",
           "PowerControl | 오븐의 전원 제어 기능입니다.전원을 켜고 끄며 동작을 제어하는 기능들로 구성되어 있습니다. | “오븐 켜줘”",
           "StateCheck | 오븐의 상태 조회 기능입니다.현재 기기의 상태를 조회하는 기능들로 구성되어 있습니다. | “오븐 현재 상태 알려줘”",
-          "DeviceTemperatureControl | 오븐의 기기 온도 제어 기능입니다.기기 자체의 온도에 대한 기능들로 구성되어 있습니다. | “오븐 150도로 설정해줘”"
+          "DeviceTemperatureControl | 오븐의 기기 온도 제어 기능입니다.기기 자체의 온도에 대한 기능들로 구성되어 있습니다. | “오븐 150도로 설정해줘”",
+          "이전\n                        열림감지센서",
+          "다음\n                        의류관리기",
+          "이전",
+          "열림감지센서",
+          "다음",
+          "의류관리기"
         ]
       }
     ],
@@ -17643,7 +18865,13 @@
           "NUGU스마트홈을 통해 의류관리기(CLOTHING_CARE_MACHINE)을 제어할 때 권장하는 SmartHome Capability 목록입니다. 권장하는 모든 Capability를 지원하지 않아도 되며 스마트홈 기기 자체 기능에 맞추어 제공하고자 하는 Capability 목록을 Discovery 시 응답에 포함해야 합니다.",
           "Capability별 상세한 내용은 아래 리스트의 링크를 통해 확인하실 수 있습니다.",
           "PowerControl | 의류관리기의 전원제어 기능입니다.전원을 켜고 끄며 동작을 제어하는 기능들로 구성되어 있습니다. | “의류관리기 켜줘”",
-          "StateCheck | 의류관리기의 상태 조회 기능입니다.현재 기기의 상태를 조회하는 기능들로 구성되어 있습니다. | “의류관리기 현재 상태 알려줘”"
+          "StateCheck | 의류관리기의 상태 조회 기능입니다.현재 기기의 상태를 조회하는 기능들로 구성되어 있습니다. | “의류관리기 현재 상태 알려줘”",
+          "이전\n                        오븐",
+          "다음\n                        정수기",
+          "이전",
+          "오븐",
+          "다음",
+          "정수기"
         ]
       }
     ],
@@ -17681,7 +18909,13 @@
           "Recommended Capabilities",
           "NUGU스마트홈을 통해 정수기(WATER_PURIFIER)를 제어할 때 권장하는 SmartHome Capability 목록입니다. 권장하는 모든 Capability를 지원하지 않아도 되며 스마트홈 기기 자체 기능에 맞추어 제공하고자 하는 Capability 목록을 Discovery 시 응답에 포함해야 합니다.",
           "Capability별 상세한 내용은 아래 리스트의 링크를 통해 확인하실 수 있습니다.",
-          "StateCheck | 정수기의 상태 조회 기능입니다.현재 기기의 상태를 조회하는 기능들로 구성되어 있습니다. | “정수기 현재 상태 알려줘”"
+          "StateCheck | 정수기의 상태 조회 기능입니다.현재 기기의 상태를 조회하는 기능들로 구성되어 있습니다. | “정수기 현재 상태 알려줘”",
+          "이전\n                        의류관리기",
+          "다음\n                        제습기",
+          "이전",
+          "의류관리기",
+          "다음",
+          "제습기"
         ]
       }
     ],
@@ -17722,7 +18956,14 @@
           "PowerControl | 가습기 전원 제어 기능입니다.전원을 켜고 끄며 동작을 제어하는 기능들로 구성되어 있습니다. | “가습기 켜줘”",
           "AirflowControl | 가습기의 풍량 제어 기능입니다.설정 풍량에 대한 상세한 정보는 SmartHomeAttribute : AirflowType을 참조하시기 바랍니다. | “가습기 풍량 강풍으로 설정해줘”",
           "ModeControl | 가습기의 모드 제어 기능입니다.설정 모드에 대한 상세한 정보는 SmartHomeAttribute : Mode를 참조하시기 바랍니다. | “가습기 쾌면모드로 설정해줘”",
-          "SetTimeControl | 가습기 기기의 시간 설정 기능입니다. | “가습기 1시간 후로 종료예약해줘”"
+          "SetTimeControl | 가습기 기기의 시간 설정 기능입니다. | “가습기 1시간 후로 종료예약해줘”",
+          "이전\n                        가스차단기\n                        NUGU스마트홈에서 제공하는 기종 중 가스차단기(GAS_BREAKER) 기종에 대한 정보입니다. 가스차단기는 닫는 기능을 제공하며 안전 상의 이유로 음성제어 시 여는 기능은 제공하고 있지 않습니다.",
+          "다음\n                        건조기",
+          "이전",
+          "가스차단기",
+          "NUGU스마트홈에서 제공하는 기종 중 가스차단기(GAS_BREAKER) 기종에 대한 정보입니다. 가스차단기는 닫는 기능을 제공하며 안전 상의 이유로 음성제어 시 여는 기능은 제공하고 있지 않습니다.",
+          "다음",
+          "건조기"
         ]
       }
     ],
@@ -17764,7 +19005,13 @@
           "AirflowControl | 제습기의 풍량 제어 기능입니다.설정 풍량에 대한 상세한 정보는 SmartHomeAttribute : AirflowType을 참조하시기 바랍니다. | “제습기 풍량 강풍으로 설정해줘”",
           "ModeControl | 제습기의 모드 제어 기능입니다.설정 모드에 대한 상세한 정보는 SmartHomeAttribute : Mode를 참조하시기 바랍니다. | “제습기 자동제습모드로 설정해줘”",
           "SetTimeControl | 제습기 기기의 시간 설정 기능입니다. | “제습기 1시간 후로 종료예약해줘”",
-          "HumidityControl | 제습기의 습도 제어 기능입니다.주변 습도 및 희망 습도에 대한 기능들로 구성되어 있습니다. | “제습기 습도 50%로 설정해줘”"
+          "HumidityControl | 제습기의 습도 제어 기능입니다.주변 습도 및 희망 습도에 대한 기능들로 구성되어 있습니다. | “제습기 습도 50%로 설정해줘”",
+          "이전\n                        정수기",
+          "다음\n                        조명",
+          "이전",
+          "정수기",
+          "다음",
+          "조명"
         ]
       }
     ],
@@ -17804,7 +19051,13 @@
           "Capability별 상세한 내용은 아래 리스트의 링크를 통해 확인하실 수 있습니다.",
           "PowerControl | 조명 전원 제어 기능입니다.전원을 켜고 끄며 동작을 제어하는 기능들로 구성되어 있습니다. | “조명 켜줘”",
           "BrightnessControl | 조명 밝기 제어 기능입니다.조명의 밝기를 1~100의 밝기 단계로 구분하여 제어하게 됩니다. | “조명 밝기 20으로 설정해줘”",
-          "ColorControl | 조명 색상 변경 제어 기능입니다.설정 색상에 대한 상세한 정보는 SmartHomeAttribute : Color를 참조하시기 바랍니다. | “조명 색상 파란색으로 설정해줘”"
+          "ColorControl | 조명 색상 변경 제어 기능입니다.설정 색상에 대한 상세한 정보는 SmartHomeAttribute : Color를 참조하시기 바랍니다. | “조명 색상 파란색으로 설정해줘”",
+          "이전\n                        제습기",
+          "다음\n                        SmartHomeCapability",
+          "이전",
+          "제습기",
+          "다음",
+          "SmartHomeCapability"
         ]
       }
     ],
@@ -17842,7 +19095,13 @@
           "Recommended Capabilities",
           "NUGU스마트홈을 통해 건조기(DRYER)를 제어할 때 권장하는 SmartHome Capability 목록입니다. 권장하는 모든 Capability를 지원하지 않아도 되며 스마트홈 기기 자체 기능에 맞추어 제공하고자 하는 Capability 목록을 Discovery 시 응답에 포함해야 합니다.",
           "Capability별 상세한 내용은 아래 리스트의 링크를 통해 확인하실 수 있습니다.",
-          "PowerControl | 건조기 전원 제어 기능입니다.전원을 켜고 끄며 동작을 제어하는 기능들로 구성되어 있습니다. | “건조기 켜줘”"
+          "PowerControl | 건조기 전원 제어 기능입니다.전원을 켜고 끄며 동작을 제어하는 기능들로 구성되어 있습니다. | “건조기 켜줘”",
+          "이전\n                        가습기",
+          "다음\n                        공기센서",
+          "이전",
+          "가습기",
+          "다음",
+          "공기센서"
         ]
       }
     ],
@@ -17884,7 +19143,13 @@
           "AirflowControl | 공기청정기의 풍량 제어 기능입니다.설정 풍량에 대한 상세한 정보는 SmartHomeAttribute : AirflowType을 참고하시기 바랍니다. | “공기청정기 풍량 강풍으로 설정해줘”",
           "ModeControl | 에어컨의 모드 제어 기능입니다.설정 모드에 대한 상세한 정보는 SmartHomeAttribute : Mode를 참조하시기 바랍니다. | “공기청정기 자동모드로 설정해줘”",
           "SetTimeControl | 공기청정기 기기의 시간 설정 기능입니다. | “공기청정기 1시간 후로 종료예약해줘”",
-          "AirQualityCheck | 공기청정기의 공기상태 조회 기능입니다. | “공기청정기에서 공기상태 조회해줘”"
+          "AirQualityCheck | 공기청정기의 공기상태 조회 기능입니다. | “공기청정기에서 공기상태 조회해줘”",
+          "이전\n                        공기센서",
+          "다음\n                        냉장고",
+          "이전",
+          "공기센서",
+          "다음",
+          "냉장고"
         ]
       }
     ],
@@ -17922,7 +19187,13 @@
           "Recommended Capabilities",
           "NUGU스마트홈을 통해 공기센서(AIR_SENSOR)를 제어할 때 권장하는 SmartHome Capability 목록입니다. 권장하는 모든 Capability를 지원하지 않아도 되며 스마트홈 기기 자체 기능에 맞추어 제공하고자 하는 Capability 목록을 Discovery 시 응답에 포함해야 합니다.",
           "Capability별 상세한 내용은 아래 리스트의 링크를 통해 확인하실 수 있습니다.",
-          "AirQualityCheck | 공기센서를 통한 공기상태 조회 기능입니다. | “공기센서에서 공기상태 조회해줘”"
+          "AirQualityCheck | 공기센서를 통한 공기상태 조회 기능입니다. | “공기센서에서 공기상태 조회해줘”",
+          "이전\n                        건조기",
+          "다음\n                        공기청정기",
+          "이전",
+          "건조기",
+          "다음",
+          "공기청정기"
         ]
       }
     ],
@@ -17961,7 +19232,13 @@
           "NUGU스마트홈을 통해 냉장고(REFRIGERATOR)를 제어할 때 권장하는 SmartHome Capability 목록입니다. 권장하는 모든 Capability를 지원하지 않아도 되며 스마트홈 기기 자체 기능에 맞추어 제공하고자 하는 Capability 목록을 Discovery 시 응답에 포함해야 합니다.",
           "Capability별 상세한 내용은 아래 리스트의 링크를 통해 확인하실 수 있습니다.",
           "ModeControl | 냉장고의 모드 제어 기능입니다.설정 모드에 대한 상세한 정보는 SmartHomeAttribute : Mode를 참조하시기 바랍니다. | “냉장고 급속냉동모드로 설정해줘”",
-          "DeviceTemperatureControl | 냉장고의 기기 온도 제어 기능입니다.기기 자체의 온도에 대한 기능들로 구성되어 있습니다. | “냉장고 설정 온도 알려줘”"
+          "DeviceTemperatureControl | 냉장고의 기기 온도 제어 기능입니다.기기 자체의 온도에 대한 기능들로 구성되어 있습니다. | “냉장고 설정 온도 알려줘”",
+          "이전\n                        공기청정기",
+          "다음\n                        로봇청소기",
+          "이전",
+          "공기청정기",
+          "다음",
+          "로봇청소기"
         ]
       }
     ],
@@ -18000,7 +19277,13 @@
           "NUGU스마트홈을 통해 로봇청소기(ROBOT_CLEANER)를 제어할 때 권장하는 SmartHome Capability 목록입니다. 권장하는 모든 Capability를 지원하지 않아도 되며 스마트홈 기기 자체 기능에 맞추어 제공하고자 하는 Capability 목록을 Discovery 시 응답에 포함해야 합니다.",
           "Capability별 상세한 내용은 아래 리스트의 링크를 통해 확인하실 수 있습니다.",
           "PowerControl | 로봇청소기 전원 제어 기능입니다.전원을 켜고 끄며 동작을 제어하는 기능들로 구성되어 있습니다. | “로봇청소기 청소 시작해줘”",
-          "ChargeControl | 로봇청소기 전원 충전 관련 제어 기능입니다.충전을 시작/중지하는 기능들로 구성되어 있습니다. | “로봇청소기 충전해줘”"
+          "ChargeControl | 로봇청소기 전원 충전 관련 제어 기능입니다.충전을 시작/중지하는 기능들로 구성되어 있습니다. | “로봇청소기 충전해줘”",
+          "이전\n                        냉장고",
+          "다음\n                        보일러",
+          "이전",
+          "냉장고",
+          "다음",
+          "보일러"
         ]
       }
     ],
@@ -18041,7 +19324,13 @@
           "PowerControl | 보일러 전원 제어 기능입니다.전원을 켜고 끄며 동작을 제어하는 기능들로 구성되어 있습니다. | “보일러 켜줘”",
           "TemperatureControl | 보일러의 설정 온도 제어 기능입니다.기기 자체의 온도가 아닌 주변 온도 및 희망 온도에 대한 기능들로 구성되어 있습니다. | “보일러 온도 27도로 설정해줘”",
           "ModeControl | 보일러의 모드 제어 기능입니다.설정 모드에 대한 상세헌 정보는 SmartHomeAttribute : Mode를 참조하시기 바랍니다. | “보일러 실내난방모드로 설정해줘”",
-          "SetTimeControl | 보일러 기기의 시간 설정 기능입니다. | “보일러 1시간 후로 종료예약해줘”"
+          "SetTimeControl | 보일러 기기의 시간 설정 기능입니다. | “보일러 1시간 후로 종료예약해줘”",
+          "이전\n                        로봇청소기",
+          "다음\n                        선풍기",
+          "이전",
+          "로봇청소기",
+          "다음",
+          "선풍기"
         ]
       }
     ],
@@ -18082,7 +19371,13 @@
           "PowerControl | 선풍기 전원 제어 기능입니다.전원을 켜고 끄며 동작을 제어하는 기능들로 구성되어 있습니다. | “선풍기 켜줘”",
           "AirflowControl | 선풍기의 풍량 제어 기능입니다.설정 풍량에 대한 상세한 정보는 SmartHomeAttribute : Airflow Type을 참조하시기 바랍니다. | “선풍기 풍량 강풍으로 설정해줘”",
           "ModeControl | 선풍기의 모드 제어 기능입니다.설정 모드에 대한 상세한 정보는 SmartHomeAttribute : Mode를 참조하시기 바랍니다. | “선풍기 자동모드로 설정해줘”",
-          "SetTimeControl | 선풍기 기기의 시간 설정 기능입니다. | “선풍기 1시간 후로 종료예약해줘”"
+          "SetTimeControl | 선풍기 기기의 시간 설정 기능입니다. | “선풍기 1시간 후로 종료예약해줘”",
+          "이전\n                        보일러",
+          "다음\n                        세탁기",
+          "이전",
+          "보일러",
+          "다음",
+          "세탁기"
         ]
       }
     ],
@@ -18120,7 +19415,13 @@
           "Recommended Capabilities",
           "NUGU스마트홈을 통해 세탁기(WASHER)를 제어할 때 권장하는 SmartHome Capability 목록입니다. 권장하는 모든 Capability를 지원하지 않아도 되며 스마트홈 기기 자체 기능에 맞추어 제공하고자 하는 Capability 목록을 Discovery 시 응답에 포함해야 합니다.",
           "Capability별 상세한 내용은 아래 리스트의 링크를 통해 확인하실 수 있습니다.",
-          "PowerControl | 세탁기 전원 제어 기능입니다.전원을 켜고 끄며 동작을 제어하는 기능들로 구성되어 있습니다. | “세탁기 켜줘”"
+          "PowerControl | 세탁기 전원 제어 기능입니다.전원을 켜고 끄며 동작을 제어하는 기능들로 구성되어 있습니다. | “세탁기 켜줘”",
+          "이전\n                        선풍기",
+          "다음\n                        스마트스위치",
+          "이전",
+          "선풍기",
+          "다음",
+          "스마트스위치"
         ]
       }
     ],
@@ -18155,7 +19456,13 @@
         "indexes": [
           "업데이트 심사 / 배포",
           "등록된 업데이트 버전에 대한 심사/배포 프로세스는 Play 심사와 동일합니다.",
-          "Play 등록에 대한 자세한 내용은 Play 정보 등록 및 심사 요청하기를 참고하세요."
+          "Play 등록에 대한 자세한 내용은 Play 정보 등록 및 심사 요청하기를 참고하세요.",
+          "이전\n                        Play 배포",
+          "다음\n                        Play 관리",
+          "이전",
+          "Play 배포",
+          "다음",
+          "Play 관리"
         ]
       }
     ],
@@ -18174,7 +19481,13 @@
           "Play Builder에서 응답을 생성하기 위해 필요한 정보를 외부 서버로부터 가져오는 경우",
           "특정 값에 대한 서버의 판단이 필요한 경우",
           "Directive를 사용하여 디바이스의 기능을 동작시켜야 하는 경우",
-          "예외 상황에 대한 판단이 필요할 때"
+          "예외 상황에 대한 판단이 필요할 때",
+          "이전\n                        Built-in Intent를 위한 Action 정의하기",
+          "다음\n                        Backend proxy 구축하기",
+          "이전",
+          "Built-in Intent를 위한 Action 정의하기",
+          "다음",
+          "Backend proxy 구축하기"
         ]
       }
     ],
@@ -18286,7 +19599,13 @@
           "이 장과 함께 보면 좋은 도움말",
           "Response Filter 사용하기",
           "Response에서 조사 사용하기",
-          "Response에서 발화 옵션 사용하기"
+          "Response에서 발화 옵션 사용하기",
+          "이전\n                        Directive 사용하기",
+          "다음\n                        Response + Branch Action (멀티턴 대화)",
+          "이전",
+          "Directive 사용하기",
+          "다음",
+          "Response + Branch Action (멀티턴 대화)"
         ]
       }
     ],
@@ -18315,7 +19634,13 @@
           "NUGU.ACTION.fallback (Built-in Action)",
           "Common Action끼리 순환 호출을 하는 경우 Play는 정상 동작을 하지 않고 강제 종료됩니다.",
           "이 장과 함께 보면 좋은 도움말",
-          "Global Backend Parameter"
+          "Global Backend Parameter",
+          "이전\n                        예외 상황 관리",
+          "다음\n                        외부 연동 서버 (Backend proxy) 연결하기",
+          "이전",
+          "예외 상황 관리",
+          "다음",
+          "외부 연동 서버 (Backend proxy) 연결하기"
         ]
       }
     ],
@@ -18370,7 +19695,13 @@
           "Prompt | Prompt만 합성음으로 발화합니다.Prompt의 유형을 선택할 수 있습니다.(대기/종료)",
           "Prompt + Directive | Capability Interface를 사용하는 Play에서만 선택할 수 있는 유형입니다.Prompt가 먼저 합성음으로 발화되며, Prompt 발화가 끝난 뒤에 Directive가 동작합니다.Prompt 유형을 선택할 수 없으며, 종료 Prompt로만 동작합니다.",
           "Directive | Capability Interface를 사용하는 Play에서만 선택할 수 있는 유형입니다.Directive만 동작합니다.",
-          "Directive는 Play의 세션의 밖에서만 동작을 할 수 있습니다. 따라서, Prompt + Directive를 선택한 경우 이 Prompt는 세션을 종료시키는 종료 Prompt로만 구성할 수 있으며, Prompt가 합성음으로 발화된 후 Directive가 뒤이어 동작합니다. 이 종료 Prompt는 어떠한 기능이 동작할지 예고하는 용도로 사용하기를 권장합니다. Directive만 단독으로 정의된 경우 세션이 자동으로 종료된 뒤 Directive가 동작하게 됩니다."
+          "Directive는 Play의 세션의 밖에서만 동작을 할 수 있습니다. 따라서, Prompt + Directive를 선택한 경우 이 Prompt는 세션을 종료시키는 종료 Prompt로만 구성할 수 있으며, Prompt가 합성음으로 발화된 후 Directive가 뒤이어 동작합니다. 이 종료 Prompt는 어떠한 기능이 동작할지 예고하는 용도로 사용하기를 권장합니다. Directive만 단독으로 정의된 경우 세션이 자동으로 종료된 뒤 Directive가 동작하게 됩니다.",
+          "이전\n                        Prompt 사용하기",
+          "다음\n                        Branch Action (Action Tree)",
+          "이전",
+          "Prompt 사용하기",
+          "다음",
+          "Branch Action (Action Tree)"
         ]
       }
     ],
@@ -18394,7 +19725,13 @@
           "앞서 아리아, 안녕!에서 사용자의 발화에 대해 응답하는 아주 간단한 Play를 만들어보았습니다.",
           "이 Play는 사용자의 발화에 대해 똑같은 말만 반복하기 때문에 실제 활용도는 낮습니다. 사용자에게 의미있는 서비스가 되기 위해서는 정보가 필요합니다. 이 정보를 어딘가로부터 가져와서 Play에서 응답을 만들 때 활용하기 위해서는 이 정보들을 담아두는 Parameter라는 것이 필요합니다.",
           "Parameter는 정보를 담아두고 사용하는 일종의 그릇입니다. Play에서 응답을 만들 때 문장 내에 parameter를 입력하면, 해당 Parameter에 담긴 정보(Entity)에 따라 Play가 응답합니다.",
-          "이러한 Parameter는 정보를 어디서 가져오는가에 따라 Utterance Parameter와 Backend Parameter로 구분됩니다. Utterance Parameter는 사용자의 발화에서 가져온 정보를 담는 Parameter이며, Backend Parameter는 외부 서버 등 사용자의 발화 외의 곳에서 정보를 가져와 담는 Parameter입니다."
+          "이러한 Parameter는 정보를 어디서 가져오는가에 따라 Utterance Parameter와 Backend Parameter로 구분됩니다. Utterance Parameter는 사용자의 발화에서 가져온 정보를 담는 Parameter이며, Backend Parameter는 외부 서버 등 사용자의 발화 외의 곳에서 정보를 가져와 담는 Parameter입니다.",
+          "이전\n                        Built-in Actions",
+          "다음\n                        Parameter 정의하기",
+          "이전",
+          "Built-in Actions",
+          "다음",
+          "Parameter 정의하기"
         ]
       }
     ],
@@ -18575,7 +19912,13 @@
         "title": "Prompt 사용하기 > 발화 옵션 사용하기 > 발화 옵션에서 UNIT 태그로 지원하는 단위 목록",
         "indexes": [
           "발화 옵션에서 UNIT 태그로 지원하는 단위 목록",
-          "문장 내 발화 옵션 태그 중 텍스트 읽기 > 단위 읽기 태그에서 지원하는 목록은 단위 목록 문서에서 확인할 수 있습니다."
+          "문장 내 발화 옵션 태그 중 텍스트 읽기 > 단위 읽기 태그에서 지원하는 목록은 단위 목록 문서에서 확인할 수 있습니다.",
+          "이전\n                        Response",
+          "다음\n                        Directive 사용하기",
+          "이전",
+          "Response",
+          "다음",
+          "Directive 사용하기"
         ]
       }
     ],
@@ -18603,7 +19946,13 @@
           "다음 장에서 Prompt와 Directive 사용법에 대해 알아보도록 하겠습니다.",
           "이 장과 함께 보면 좋은 도움말",
           "Prompt",
-          "Directive"
+          "Directive",
+          "이전\n                        Configurable Parameter",
+          "다음\n                        Prompt 사용하기",
+          "이전",
+          "Configurable Parameter",
+          "다음",
+          "Prompt 사용하기"
         ]
       }
     ],
@@ -18661,7 +20010,15 @@
           "Block Directive를 기준으로 이전 Directive들이 모두 실행된 후 이후 Directive들이 실행됨",
           "복사성공!",
           "{\n  \"header\": {\n    \"namespace\": \"Utility\",\n    \"name\": \"Block\",\n    \"messageId\": \"{{STRING}}\",\n    \"dialogRequestId\": \"{{STRING}}\",\n    \"version\": \"1.0\"\n  },\n  \"payload\": {\n    \"playServiceId\": \"{{STRING}}\",\n    \"sleepInMillisecond\": {{LONG}}\n  }\n}",
-          "sleepInMillisecond | long | N | 다음 Directive를 실행하기 전에 대기하는 시간 지정되지 않으면 바로 시작 (default - 0)"
+          "sleepInMillisecond | long | N | 다음 Directive를 실행하기 전에 대기하는 시간 지정되지 않으면 바로 시작 (default - 0)",
+          "이전\n                        Routine\n                        루틴을 실행하기 위한 규격",
+          "다음\n                        Platform\n                        NUGU SDK는 iOS, Android, Linux 플랫폼을 지원합니다. 각각의 플랫폼에 맞는 언어와 특성을 따르고 있으며, 동일한 구조를 가지고 있는 영역(Common)과 플랫폼 별로 다른 구조를 가진 영역(Depends on platform)이 구분되어 있습니다.",
+          "이전",
+          "Routine",
+          "루틴을 실행하기 위한 규격",
+          "다음",
+          "Platform",
+          "NUGU SDK는 iOS, Android, Linux 플랫폼을 지원합니다. 각각의 플랫폼에 맞는 언어와 특성을 따르고 있으며, 동일한 구조를 가지고 있는 영역(Common)과 플랫폼 별로 다른 구조를 가진 영역(Depends on platform)이 구분되어 있습니다."
         ]
       }
     ],
@@ -18736,7 +20093,13 @@
           " | ",
           "Voice Chrome Window를 닫는 동작은 아래 2가지입니다. App 화면 영역을 터치하면 Voice Chrome Window는 닫히는 것을 권장합니다.",
           "App 화면 영역을 터치하면, Voice Chrome이 닫히고, 해당 화면의 액션버튼이 실행됩니다.",
-          "Android back key는 모든 단계에서 닫기 동작이 가능합니다."
+          "Android back key는 모든 단계에서 닫기 동작이 가능합니다.",
+          "이전\n                        부팅화면",
+          "다음\n                        Display Template",
+          "이전",
+          "부팅화면",
+          "다음",
+          "Display Template"
         ]
       }
     ],
@@ -18785,7 +20148,13 @@
           "사용자의 발화는 여러 가지 표현으로 나타날 수 있으므로, 하나의 의도에 대하여 다양한 표현을 작성하도록 합니다. 예를 들어, 음악 재생 의도가 있는 발화 작성 시 다음과와 같이 다양한 서술어와 목적어의 조합을 고려하여 작성합니다",
           "음악 재생 / 음악 틀어줘 / 음악 들려줘 / 음악 듣고 싶어 / 음악 들을래 / 음악 재생해줘 / 노래 들려줘 / 노래 틀어줘 / 노래 듣고 싶어",
           "다양성을 위해 은유적이고 관용적인 표현을 과도하게 발화로 작성하면 타 서비스의 기능에 영향을 줄 수 있으며, 개발 효율성이 떨어질 수 있습니다.",
-          "User Utterance Model 구현에 대한 자세한 내용은 예상 발화 작성 가이드를 참고하세요."
+          "User Utterance Model 구현에 대한 자세한 내용은 예상 발화 작성 가이드를 참고하세요.",
+          "이전\n                        기능 정의",
+          "다음\n                        대화 흐름 디자인",
+          "이전",
+          "기능 정의",
+          "다음",
+          "대화 흐름 디자인"
         ]
       }
     ],
@@ -18868,7 +20237,13 @@
           "func application(_ app: UIApplication, open url: URL, options: [UIApplication.OpenURLOptionsKey: Any] = [:]) -> Bool {\n    if ConfigurationStore.shared.isServiceWebRedirectUrl(url: url) {\n            NotificationCenter.default.post(name: .oauthRefresh, object: nil, userInfo: nil)\n            return true\n        }\n}",
           "ViewController 에서 Notification 을 받으면 WebView 를 갱신합니다.",
           "NuguServiceWebViewController.swift\n        \n        복사성공!",
-          "override func viewDidLoad() {\n    super.viewDidLoad()\n\n    NotificationCenter.default.addObserver(\n        self,\n        selector: #selector(refreshAfterOauth),\n        name: .oauthRefresh,\n        object: nil\n    )\n}\n\n@objc func refreshAfterOauth() {\n    presentedViewController?.dismiss(animated: true, completion: nil)\n    nuguServiceWebView.reload()\n}"
+          "override func viewDidLoad() {\n    super.viewDidLoad()\n\n    NotificationCenter.default.addObserver(\n        self,\n        selector: #selector(refreshAfterOauth),\n        name: .oauthRefresh,\n        object: nil\n    )\n}\n\n@objc func refreshAfterOauth() {\n    presentedViewController?.dismiss(animated: true, completion: nil)\n    nuguServiceWebView.reload()\n}",
+          "이전\n                        Background 동작 처리",
+          "다음\n                        NUGU Display의 노출과 제어",
+          "이전",
+          "Background 동작 처리",
+          "다음",
+          "NUGU Display의 노출과 제어"
         ]
       }
     ],
@@ -18906,7 +20281,13 @@
         "indexes": [
           "Biz 사용자 관리(Enrolled User)",
           "특정 사용자 그룹을 초대하여,  해당 사용자가 보유한 디바이스에서 퍼블리셔가 제공하는 서비스를 이용할 수 있도록 권한을 부여하고 관리하는 기능입니다.",
-          "예를 들어, 자사 임직원 또는 단체의 소속 회원만 초대하여, 초대를 수락 회원들의 NUGU 디바이스에서 Private Play를 사용하게 하거나, Announcement 메세지를 수신 할 수 있도록 할 수 있습니다."
+          "예를 들어, 자사 임직원 또는 단체의 소속 회원만 초대하여, 초대를 수락 회원들의 NUGU 디바이스에서 Private Play를 사용하게 하거나, Announcement 메세지를 수신 할 수 있도록 할 수 있습니다.",
+          "이전\n                        Release note",
+          "다음\n                        주요 개념",
+          "이전",
+          "Release note",
+          "다음",
+          "주요 개념"
         ]
       }
     ],
@@ -18985,7 +20366,13 @@
           "구어체로 친근하게 응답\n\n    가능한 구어체를 사용해 자연스러운 대화를 도출합니다. 답변(Prompt) 디자인 시, 글로 적다 보면 소설이나 에세이처럼 문어체로 작성될 우려가 있습니다.",
           "“아이유 밤편지를 재생합니다.” 보다는 “아이유의 밤편지, 들려드릴게요.”",
           "서술어 형태의 교차 배치\n\n    여러 문장을 제공해야 한다면 문장 서술어 부분에 ‘~에요’와 ‘~입니다’ 표현을 교차 사용하여 자연스러운 문장으로 구성합니다.",
-          "로그인 전에는 미리 듣기만 가능합니다. 전곡 듣기를 원하시면 누구 앱을 통해 로그인해 주세요."
+          "로그인 전에는 미리 듣기만 가능합니다. 전곡 듣기를 원하시면 누구 앱을 통해 로그인해 주세요.",
+          "이전\n                        대화 흐름 디자인",
+          "다음\n                        Play Builder로 Play 만들기",
+          "이전",
+          "대화 흐름 디자인",
+          "다음",
+          "Play Builder로 Play 만들기"
         ]
       }
     ],
@@ -19007,7 +20394,13 @@
           "키보드 혹은 마우스를 이용하여 ‘location’을 선택한 후 ‘의’를 입력한 후, 다시 중괄호 두 개를 눌러 자동완성을 통해 ‘day’를 선택합니다. 그 후에 “날씨는” 을 입력하고 다시 동일한 방법으로 ‘status’를 입력합니다. 입력을 완료하면 Prompt 입력창에는 다음과 같이 표시됩니다.",
           "Play Builder 우측 상단에 있는 Play 저장 버튼을 클릭하여 Action 생성을 완료합니다.\n\n    지금까지 작업한 answer.weather Action은 다음과 같은 구조를 갖게 되며, Backend proxy가 기상정보를 ‘status’에 담아서 제공을 할 경우 “여수의 오늘 날씨는 흐립니다”와 같은 답변이 나가게 됩니다.",
           "이 장과 함께 보면 좋은 도움말",
-          "Prompt의 유형"
+          "Prompt의 유형",
+          "이전\n                        Parameter 정의하기",
+          "다음\n                        필수 Entity 정의하기 (Slot-Filling Prompt)",
+          "이전",
+          "Parameter 정의하기",
+          "다음",
+          "필수 Entity 정의하기 (Slot-Filling Prompt)"
         ]
       }
     ],
