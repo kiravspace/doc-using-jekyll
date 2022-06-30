@@ -32,25 +32,25 @@ module Jekyll::Potion
       render_from_custom_context(
         page_context,
         ->(context, _) do
-          context["api_method"] = params["method"]
-          context["api_base_url"] = params["base_url"]
-          context["api_path"] = params["path"]
-          context["api_summary"] = params["summary"]
+          context["method"] = params["method"]
+          context["base_url"] = params["base_url"]
+          context["path"] = params["path"]
+          context["summary"] = params["summary"]
 
-          context["api_description"] = api_description(page_context)
+          context["description"] = api_description(page_context)
 
           parameter_map = @elements.select { |e| e.instance_of? ApiParameterTag }
                                    .group_by { |parameter| parameter.category }
                                    .map { |category, parameters| [category, parameters.sort_by { |parameter| parameter.line_number }] }
                                    .to_h
 
-          context["api_query_parameters"] = parameter_map[QUERY_CATEGORY].map { |query_parameters| query_parameters.render(page_context) }
+          context["query_parameters"] = parameter_map[QUERY_CATEGORY].map { |query_parameters| query_parameters.render(page_context) }
                                                                          .join if parameter_map.has_key?(QUERY_CATEGORY)
 
-          context["api_body_parameters"] = parameter_map[BODY_CATEGORY].map { |query_parameters| query_parameters.render(page_context) }
+          context["body_parameters"] = parameter_map[BODY_CATEGORY].map { |query_parameters| query_parameters.render(page_context) }
                                                                        .join if parameter_map.has_key?(BODY_CATEGORY)
 
-          context["api_responses"] = api_responses(page_context)
+          context["responses"] = api_responses(page_context)
         end
       )
     end
@@ -63,7 +63,7 @@ module Jekyll::Potion
       render_from_custom_context(
         page_context,
         ->(context, _) do
-          context["api_description"] = @body.render(page_context)
+          context["description"] = @body.render(page_context)
         end
       )
     end
@@ -86,10 +86,10 @@ module Jekyll::Potion
       render_from_custom_context(
         page_context,
         ->(context, _) do
-          context["api_request_name"] = params["name"]
-          context["api_request_type"] = params["type"]
-          context["api_request_category"] = params["category"]
-          context["api_request_description"] = @body.render(page_context)
+          context["name"] = params["name"]
+          context["type"] = params["type"]
+          context["category"] = params["category"]
+          context["description"] = @body.render(page_context)
         end
       )
     end
@@ -112,9 +112,9 @@ module Jekyll::Potion
       render_from_custom_context(
         page_context,
         ->(context, _) do
-          context["api_response_status"] = params["status"]
-          context["api_response_description"] = params["description"]
-          context["api_response_body"] = @body.render(page_context)
+          context["status"] = params["status"]
+          context["description"] = params["description"]
+          context["body"] = @body.render(page_context)
         end
       )
     end

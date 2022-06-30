@@ -18,7 +18,7 @@ module Jekyll::Potion
 
         unless img_tag.parent.text.strip.empty?
           inline_count += 1
-          img_tag.add_class("img_inline")
+          img_tag.add_class("img-inline")
         end
 
         next if src =~ HTTP_SCHEME || src =~ ABSOLUTE_PATH

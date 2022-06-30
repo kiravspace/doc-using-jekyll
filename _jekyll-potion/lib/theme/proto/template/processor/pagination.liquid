@@ -1,12 +1,12 @@
-<div class="block_row pagination">
+<div class="block-row pagination" data-skip-search-index>
     {% if has_before? %}
         <div>
             <div class="block pagination">
-                <a class="block_body" href="{{ before.url }}">
+                <a class="block-body" href="{{ before.url }}">
                     <div class="thumb prev"></div>
                     <div class="content right">
-                        <div class="x_small">이전</div>
-                        <div class="large">{{ before.page.title }}</div>
+                        <div class="x-small">이전</div>
+                        <div class="bold">{{ before.page.title }}</div>
                         <div class="small">{{ before.page.description }}</div>
                     </div>
                 </a>
@@ -16,10 +16,10 @@
     {% if has_after? %}
         <div>
             <div class="block pagination">
-                <a class="block_body" href="{{ after.url }}">
+                <a class="block-body" href="{{ after.url }}">
                     <div class="content">
-                        <div class="x_small">다음</div>
-                        <div class="large">{{ after.page.title }}</div>
+                        <div class="x-small">다음</div>
+                        <div class="bold">{{ after.page.title }}</div>
                         <div class="small">{{ after.page.description }}</div>
                     </div>
                     <div class="thumb next"></div>

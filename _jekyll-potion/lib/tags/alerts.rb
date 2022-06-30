@@ -11,8 +11,8 @@ module Jekyll::Potion
       render_from_custom_context(
         page_context,
         ->(context, converter) do
-          context["alert_style"] = params["style"]
-          context["alert_body"] = converter.convert(super)
+          context["style"] = params["style"]
+          context["body"] = converter.convert(super)
         end
       )
     end

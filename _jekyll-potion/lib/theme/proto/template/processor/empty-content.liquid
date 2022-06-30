@@ -1,11 +1,11 @@
-<div class="block_row">
+<div class="block-row" data-skip-search-index>
     {% for child in page.potion.children %}
         <div>
             <div class="block">
-                <a class="block_body" href="{{ child.url }}">
+                <a class="block-body" href="{{ child.url }}">
                     <div class="thumb document"></div>
                     <div class="content">
-                        <div class="large">{{ child.page.title }}</div>
+                        <div class="bold">{{ child.page.title }}</div>
                         <div class="small">{{ child.page.description }}</div>
                     </div>
                 </a>

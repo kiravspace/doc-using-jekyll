@@ -3,6 +3,8 @@ require "json"
 
 module Jekyll::Potion
   class SearchProcessor < HTMLPageProcessor
+    SKIP_KEYWORD = "data-skip-search-index"
+
     def initialize(config)
       super
       @indexes = []
@@ -13,7 +15,7 @@ module Jekyll::Potion
 
       page_index = {
         "url" => page_potion.url,
-        "hashes" => create_indexes(page, html.css("main").css("div.main_container").css("div.content")),
+        "hashes" => create_indexes(page, html.css("main").css("div.main-container").css("div.content")),
         "order" => page_potion.order
       }
       @indexes << page_index
@@ -76,50 +78,55 @@ module Jekyll::Potion
     def create_default_index(tag)
       indexes = []
 
-      case tag.name
-      when "a"
-        indexes << tag.text.strip unless tag.text.strip.empty?
-      when "p", "blockquote"
-        indexes << tag.text.strip unless tag.text.strip.empty?
-      when "ul", "ol"
-        tag.css("li").each { |li|
-          indexes << li.text.strip unless li.text.strip.empty?
-        }
-      when "table"
-        tag.css("thread").css("tr").each { |tr|
-          indexes << tr.css("th").map { |td| td.text.strip }.join(" | ")
-        }
-        tag.css("tbody").css("tr").each { |tr|
-          indexes << tr.css("td").map { |td| td.text.strip }.join(" | ")
-        }
-      when "div"
-        indexes.concat(create_div_index(tag))
-      when "pre"
-        if tag.classes.include?("highlight")
-          indexes << tag.css("td.rouge-code").text.strip unless tag.css("td.rouge-code").text.strip.empty?
+      unless tag.has_attribute?(SKIP_KEYWORD)
+        case tag.name
+        when "a"
+          indexes << tag.text.strip unless tag.text.strip.empty?
+        when "p", "blockquote"
+          indexes << tag.text.strip unless tag.text.strip.empty?
+        when "ul", "ol"
+          tag.css("li").each { |li|
+            indexes << li.text.strip unless li.text.strip.empty?
+          }
+        when "table"
+          tag.css("thread").css("tr").each { |tr|
+            indexes << tr.css("th").map { |td| td.text.strip }.join(" | ")
+          }
+          tag.css("tbody").css("tr").each { |tr|
+            indexes << tr.css("td").map { |td| td.text.strip }.join(" | ")
+          }
+        when "div"
+          indexes.concat(create_div_index(tag))
+        when "pre"
+          if tag.classes.include?("highlight")
+            indexes << tag.css("td.rouge-code").text.strip unless tag.css("td.rouge-code").text.strip.empty?
+          end
+        when "text", "hr", "label"
+          indexes << tag.text.strip unless tag.text.strip.empty?
+        else
+          logger.warn("undefined search type", tag.name)
         end
-      when "text", "hr", "label"
-        indexes << tag.text.strip unless tag.text.strip.empty?
-      else
-        logger.warn("undefined search type", tag.name)
       end
+
       indexes
     end
 
     def create_div_index(tag)
       indexes = []
 
-      case
-      when tag.classes.include?("tabs")
-        indexes << tag.css("ul").css("li").map { |li| li.text.strip }.join(" | ")
-        tag.css("div.tab_content").each { |tab_content|
-          tab_content.children.each { |child_tag| indexes.concat(create_default_index(child_tag)) }
-        }
-      when tag.classes.include?("code")
-        indexes << tag.css(".code_title").text.strip unless tag.css(".code_title").text.strip.empty?
-        indexes << tag.css("td.rouge-code").text.strip unless tag.css("td.rouge-code").text.strip.empty?
-      else
-        tag.children.each { |child_tag| indexes.concat(create_default_index(child_tag)) }
+      unless tag.has_attribute?(SKIP_KEYWORD)
+        case
+        when tag.classes.include?("tabs")
+          indexes << tag.css("ul").css("li").map { |li| li.text.strip }.join(" | ")
+          tag.css("div.tab-content").each { |tab_content|
+            tab_content.children.each { |child_tag| indexes.concat(create_default_index(child_tag)) }
+          }
+        when tag.classes.include?("code")
+          indexes << tag.css(".title").text.strip unless tag.css(".title").text.strip.empty?
+          indexes << tag.css("td.rouge-code").text.strip unless tag.css("td.rouge-code").text.strip.empty?
+        else
+          tag.children.each { |child_tag| indexes.concat(create_default_index(child_tag)) }
+        end
       end
 
       indexes

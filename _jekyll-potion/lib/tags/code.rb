@@ -30,8 +30,8 @@ module Jekyll::Potion
       render_from_custom_context(
         page_context,
         ->(context, converter) do
-          context["code_title"] = params["title"]
-          context["code_body"] = converter.convert(@body)
+          context["title"] = params["title"]
+          context["body"] = converter.convert(@body)
         end
       )
     end

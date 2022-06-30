@@ -5,15 +5,15 @@ $(function () {
     constructor() {
       this.title = $('header > div.header > a.title')
       this.nav = $('nav')
-      this.nav_container = $('nav > div.nav_container')
+      this.nav_container = $('nav > div.nav-container')
       this.main = $('main')
 
       this.is_hide_mobile_menu = true
 
-      this.modal_image_area = $('#modal_image_area > div.modal_wrapper')
+      this.modal_image_area = $('#modal_image_area > div.modal-wrapper')
       this.modal_image = $('#modal_image')
 
-      this.modal_search_area = $('#modal_search_area > div.modal_wrapper')
+      this.modal_search_area = $('#modal_search_area > div.modal-wrapper')
       this.search_input = $('#search_keyword')
       this.search_contents = $('#search_contents')
 
@@ -119,22 +119,22 @@ $(function () {
     }
 
     initNavigation() {
-      this.nav_container.find('span.nav_unfold').bind('click', e => $(e.currentTarget).parent().removeClass('fold'))
-      this.nav_container.find('span.nav_fold').bind('click', e => $(e.currentTarget).parent().addClass('fold'))
+      this.nav_container.find('span.nav-unfold').bind('click', e => $(e.currentTarget).parent().removeClass('fold'))
+      this.nav_container.find('span.nav-fold').bind('click', e => $(e.currentTarget).parent().addClass('fold'))
 
-      let links = this.nav_container.find('a.nav_href[href]')
+      let links = this.nav_container.find('a.nav-href[href]')
       Page.on(this, links, 'click', this.updateMainContent)
 
       this.updateNavigationSelected($(location).attr('pathname'))
     }
 
     updateNavigationSelected(pathname) {
-      this.nav_container.find('div.nav_link').removeClass('active')
+      this.nav_container.find('div.nav-link').removeClass('active')
 
-      let selected = this.nav_container.find('a.nav_href')
+      let selected = this.nav_container.find('a.nav-href')
         .filter((_, link) => Page.matchPath($(link).attr('href'), pathname))
 
-      selected.parents('ul.nav_menu').children('li').children('div.nav_link.fold.has_child')
+      selected.parents('ul.nav-menu').children('li').children('div.nav-link.fold.has-child')
         .filter((_, div) => $(div).parent().has(selected).length)
         .removeClass('fold')
 
@@ -142,22 +142,22 @@ $(function () {
     }
 
     updateMainTabs() {
-      let tabTitles = this.main.find('div.tabs').find('li.tab_title')
+      let tabTitles = this.main.find('div.tabs').find('li.tab-title')
 
       Page.on(this, tabTitles, 'click', e => {
         let $clicked = $(e.currentTarget)
 
         parent = $clicked.parents('div.tabs')
-        parent.find('li.tab_title').removeClass('selected')
-        parent.find('div.tab_content').removeClass('selected')
+        parent.find('li.tab-title').removeClass('active')
+        parent.find('div.tab-content').removeClass('active')
 
-        $clicked.addClass('selected')
-        $('#' + $clicked.attr('data-content-id')).addClass('selected')
+        $clicked.addClass('active')
+        $('#' + $clicked.attr('data-content-id')).addClass('active')
       })
     }
 
     updateMainImages() {
-      let expandableImages = this.main.find('img.img_internal:not(.img_inline)')
+      let expandableImages = this.main.find('img.img_internal:not(.img-inline)')
 
       Page.on(this, expandableImages, 'click', e => {
         this.modal_image.attr('src', $(e.currentTarget).attr('src'))
@@ -174,7 +174,7 @@ $(function () {
     }
 
     updateMainCopy() {
-      let copy_links = this.main.find('div.copy_link')
+      let copy_links = this.main.find('div.copy-link')
 
       Page.on(this, copy_links, 'click', e => {
         let $copy_link = $(e.currentTarget)
@@ -192,12 +192,12 @@ $(function () {
 
         let $copy_click = $(e.currentTarget)
 
-        let code = $copy_click.parent().parent().find('div.code_body').find('td.rouge-code').text().trim()
+        let code = $copy_click.parent().parent().find('div.body').find('td.rouge-code').text().trim()
 
         navigator.clipboard.writeText(code).then(() => {
-          let $copy_success = $copy_click.parent().find('div.copy_success')
-          $copy_success.addClass('show')
-          setTimeout(() => $copy_success.removeClass('show'), 1000)
+          let $success = $copy_click.parent().find('div.success')
+          $success.addClass('show')
+          setTimeout(() => $success.removeClass('show'), 1000)
         })
       })
     }
@@ -295,7 +295,7 @@ $(function () {
       })
 
       return result.map(r => {
-        r.contents = r.contents.map(s => s.replace(new RegExp('(' + keyword + ')', 'gi'), '<code>$1</code>'))
+        r.contents = r.contents.map(s => s.replace(new RegExp('(' + keyword + ')', 'gi'), '<code class="bold">$1</code>'))
         return r
       })
     }
