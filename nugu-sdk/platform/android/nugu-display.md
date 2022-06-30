@@ -40,7 +40,7 @@ TemplateRenderer는 NuguUXKit에 포함되어 있습니다.
 TemplateRenderer는 Fragment 형태로 Template 화면을 제공합니다.
 {% endalerts %}
 
-## TemplateRenderer 등록
+## TemplateRenderer 등록 <a id="templaterenderer-1"></a>
 
 nuguAndroidClient에 templateRenderer를 displayRenderer로 설정합니다.
 

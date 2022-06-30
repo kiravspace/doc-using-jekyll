@@ -141,7 +141,7 @@ CapabilityFactory::makeCapability<MessageAgent, IMessageHandler>(message_listene
 
 ### 문자 읽기
 
-문자 읽기가 [GetMessage](./message#getmessage), [ReadMessage](./message#readmessage) directive 로 요청될 수 있습니다.
+문자 읽기가 [GetMessage](#getmessage), [ReadMessage](#readmessage) directive 로 요청될 수 있습니다.
 
 {% tabs %}
 {% tabs::content title="Android" %}
@@ -187,7 +187,7 @@ CapabilityFactory::makeCapability<MessageAgent, IMessageHandler>(message_listene
 
 ### 재생 상태 모니터링
 
-[ReadMessage](./message#readmessage) directive 로 전달된 문자에 대한 재생 상태를 모니터링 할 수 있습니다.
+[ReadMessage](#readmessage) directive 로 전달된 문자에 대한 재생 상태를 모니터링 할 수 있습니다.
 
 {% tabs %}
 {% tabs::content title="Android" %}
@@ -348,9 +348,9 @@ messageAgent.addOnPlaybackListener(listener)
 ```
 {% endcode %}
 
-| parameter | type                         | mandatory | description |
-|:----------|:-----------------------------|:----------|:------------|
-| recipient | [Contact](./message#contact) | Y         |             |
+| parameter | type                | mandatory | description |
+|:----------|:--------------------|:----------|:------------|
+| recipient | [Contact](#contact) | Y         |             |
 
 ### GetMessage
 
@@ -453,9 +453,9 @@ messageAgent.addOnPlaybackListener(listener)
 ```
 {% endcode %}
 
-| parameter | type                         | mandatory | description |
-|:----------|:-----------------------------|:----------|:------------|
-| recipient | [Contact](./message#contact) | Y         |             |
+| parameter | type                | mandatory | description |
+|:----------|:--------------------|:----------|:------------|
+| recipient | [Contact](#contact) | Y         |             |
 
 ### SendMessageFailed
 

@@ -204,7 +204,7 @@ CapabilityFactory::makeCapability<PhoneCallAgent, IPhoneCallHandler>(phonecall_l
 
 ### 수신
 
-수신 전화에 대한 수락이 [AcceptCall](./phonecall#acceptcall) directive 로 거절이 [EndCall](./phonecall#endcall) directive 로 요청될 수 있습니다.
+수신 전화에 대한 수락이 [AcceptCall](#acceptcall) directive 로 거절이 [EndCall](#endcall) directive 로 요청될 수 있습니다.
 
 {% alerts style="info" %}
 iOS 는 수신 수락/거절 기능을 제공하지 않습니다.
@@ -293,7 +293,7 @@ CapabilityFactory::makeCapability<PhoneCallAgent, IPhoneCallHandler>(phonecall_l
 | template.recipientIntended      | object                      | N         | 발화에서 분석된 recipient 정보                                                                                                                                    |
 | template.recipientIntended.name | string                      | N         | 검색에 요청할때 사용된 상대방 이름   (NLU 분석으로 나온 이름)                                                                                                                   |
 | template.label                  | string                      | N         | NLU 분석 결과 label (집, 회사, ...) 정규화되어 있지 않고, 사용자 발화에서 분석된 값을 그대로 보냄                                                                                         |
-| template.searchScene            | string                      | N         | [SendCandidates](#sendcandidate) 참조                                                                                                                      |
+| template.searchScene            | string                      | N         | [SendCandidates](#sendcandidates) 참조                                                                                                                     |
 | template.candidates             | array of [Person](#person)  | N         | 화면에 검색 결과 리스트를 디스플레이하는 중에만 context에 추가                                                                                                                   |
 | recipient                       | object                      | N         | 통화 상대방에 대한 정보 수신중(INCOMING) 상태에서는 발신자 정보를 세팅 (CallArrived Event의 caller 정보)                                                                              |
 | recipient.name                  | string                      | N         | 통화 상대방의 이름                                                                                                                                               |
@@ -510,7 +510,7 @@ CapabilityFactory::makeCapability<PhoneCallAgent, IPhoneCallHandler>(phonecall_l
 ### CandidatesListed
 
 * 검색 결과 리스트가 화면에 보여지는 경우 보내는 Event
-* Parameter 들은 [Context](./phonecall#context) 를 통해 전송되며, 검색 결과가 없는 경우에도 empty 로 전송해야 함.
+* Parameter 들은 [Context](#context) 를 통해 전송되며, 검색 결과가 없는 경우에도 empty 로 전송해야 함.
 
 {% code %}
 ```text

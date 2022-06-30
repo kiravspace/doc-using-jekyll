@@ -225,7 +225,7 @@ module Jekyll::Potion
 
       Jekyll::Hooks.register_one(:site, :post_read, PRIORITY) do |site|
         config.make_site_potion
-        Logger.trace(Config.class.name, "make site potion")
+        Logger.trace(config.class.name, "make site potion")
         config.site_post_read(site)
       end
 

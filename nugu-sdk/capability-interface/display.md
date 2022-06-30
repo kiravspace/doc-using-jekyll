@@ -409,13 +409,13 @@ Template 에 사용되는 공통 object 의 데이터 구조입니다.
 ```
 {% endcode %}
 
-| parameter | type                                                                                                                                     | mandatory | description                |
-|:----------|:-----------------------------------------------------------------------------------------------------------------------------------------|:----------|:---------------------------|
-| logo      | [ImageObject](../../../nugu-play/create-plays-with-play-builder/use-backend-proxy/capability-interfaces/display-interface#imageobject)   | N         | png 타입으로 투명 이미지로 제공해야 함    |
-| text      | [TextObject](../../../nugu-play/create-plays-with-play-builder/use-backend-proxy/capability-interfaces/display-interface#textobject)     | Y         | 제목                         |
-| subtext   | [TextObject](../../../nugu-play/create-plays-with-play-builder/use-backend-proxy/capability-interfaces/display-interface#textobject)     | N         | ASR Text 등 부제목             |
-| subicon   | [ImageObject](../../../nugu-play/create-plays-with-play-builder/use-backend-proxy/capability-interfaces/display-interface#imageobject)   | N         | 서브 아이콘 ( 위치 : subText 왼쪽 ) |
-| button    | [ButtonObject](../../../nugu-play/create-plays-with-play-builder/use-backend-proxy/capability-interfaces/display-interface#buttonobject) | N         | 우측에 위치하는 버튼                |
+| parameter | type                          | mandatory | description                |
+|:----------|:------------------------------|:----------|:---------------------------|
+| logo      | [ImageObject](#imageobject)   | N         | png 타입으로 투명 이미지로 제공해야 함    |
+| text      | [TextObject](#textobject)     | Y         | 제목                         |
+| subtext   | [TextObject](#textobject)     | N         | ASR Text 등 부제목             |
+| subicon   | [ImageObject](#imageobject)   | N         | 서브 아이콘 ( 위치 : subText 왼쪽 ) |
+| button    | [ButtonObject](#buttonobject) | N         | 우측에 위치하는 버튼                |
 
 ### BackgroundObject
 
@@ -428,10 +428,10 @@ Template 에 사용되는 공통 object 의 데이터 구조입니다.
 ```
 {% endcode %}
 
-| parameter | type                                                                                                                                   | mandatory | description                        |
-|:----------|:---------------------------------------------------------------------------------------------------------------------------------------|:----------|:-----------------------------------|
-| image     | [ImageObject](../../../nugu-play/create-plays-with-play-builder/use-backend-proxy/capability-interfaces/display-interface#imageobject) | N         | -                                  |
-| color     | string                                                                                                                                 | N         | color형식(RGB)<br/>default : #000000 |
+| parameter | type                        | mandatory | description                        |
+|:----------|:----------------------------|:----------|:-----------------------------------|
+| image     | [ImageObject](#imageobject) | N         | -                                  |
+| color     | string                      | N         | color형식(RGB)<br/>default : #000000 |
 
 ### Duration
 
@@ -487,10 +487,10 @@ Banner에 사용되는 image object 입니다.
 ```
 {% endcode %}
 
-| parameter | type                                                                                                                                    | mandatory | description                                                                 |
-|:----------|:----------------------------------------------------------------------------------------------------------------------------------------|:----------|:----------------------------------------------------------------------------|
-| image     | [ImageObject](../../../nugu-play/create-plays-with-play-builder/use-backend-proxy/capability-interfaces/display-interface#imageobject)  | N         | banner에 사용되는 image object                                                   |
-| style     | object                                                                                                                                  | N         | banner에 적용되는 style object.<br/>사용예 : `style: { right: "115px", bottom: "430px" }` |
+| parameter | type                        | mandatory | description                                                                       |
+|:----------|:----------------------------|:----------|:----------------------------------------------------------------------------------|
+| image     | [ImageObject](#imageobject) | N         | banner에 사용되는 image object                                                         |
+| style     | object                      | N         | banner에 적용되는 style object.<br/>사용예 : `style: { right: "115px", bottom: "430px" }` |
 
 ### ToggleButtonObject
 
@@ -533,9 +533,9 @@ Template 의 종류를 구분하기 위한 속성입니다.
 ```
 {% endcode %}
 
-| parameter | type                                                                                                                                   | mandatory | description    |
-|:----------|:---------------------------------------------------------------------------------------------------------------------------------------|:----------|:---------------|
-| type      | string                                                                                                                                 | Y         | TEXT<br/>IMAGE |
-| text      | [TextObject](../../../nugu-play/create-plays-with-play-builder/use-backend-proxy/capability-interfaces/display-interface#textobject)   | N         | -              |
-| image     | [ImageObject](../../../nugu-play/create-plays-with-play-builder/use-backend-proxy/capability-interfaces/display-interface#imageobject) | N         | -              |
+| parameter | type                        | mandatory | description    |
+|:----------|:----------------------------|:----------|:---------------|
+| type      | string                      | Y         | TEXT<br/>IMAGE |
+| text      | [TextObject](#textobject)   | N         | -              |
+| image     | [ImageObject](#imageobject) | N         | -              |
 

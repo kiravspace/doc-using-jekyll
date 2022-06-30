@@ -45,10 +45,10 @@ module Jekyll::Potion
                                    .to_h
 
           context["query_parameters"] = parameter_map[QUERY_CATEGORY].map { |query_parameters| query_parameters.render(page_context) }
-                                                                         .join if parameter_map.has_key?(QUERY_CATEGORY)
+                                                                     .join if parameter_map.has_key?(QUERY_CATEGORY)
 
           context["body_parameters"] = parameter_map[BODY_CATEGORY].map { |query_parameters| query_parameters.render(page_context) }
-                                                                       .join if parameter_map.has_key?(BODY_CATEGORY)
+                                                                   .join if parameter_map.has_key?(BODY_CATEGORY)
 
           context["responses"] = api_responses(page_context)
         end

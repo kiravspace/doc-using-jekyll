@@ -68,7 +68,7 @@ nugu_client->getCapabilityBuilder()
 
 ### 재생 상태 모니터링
 
-[Play](./audioplayer#play) directive 로 전달된 음원에 대한 재생 상태를 모니터링 할 수 있습니다.
+[Play](#play) directive 로 전달된 음원에 대한 재생 상태를 모니터링 할 수 있습니다.
 
 {% tabs %}
 {% tabs::content title="Android" %}
@@ -127,11 +127,11 @@ CapabilityFactory::makeCapability<AudioPlayerAgent, IAudioPlayerHandler>(audio_p
 
 ### UI 구성 및 제어
 
-AudioPlayer 로 음원을 재생할 때 화면을 구성하기 위해 필요한 데이터는 [Play](./audioplayer#play) directive 의 `audioItem.metadata.template` 에 포함되어 전달됩니다.
+AudioPlayer 로 음원을 재생할 때 화면을 구성하기 위해 필요한 데이터는 [Play](#play) directive 의 `audioItem.metadata.template` 에 포함되어 전달됩니다.
 
-[Stop](./audioplayer#stop) directive 또는 SDK 내부 timer 등에 의해 종료될 수 있으며, [UpdateMetadata](./audioplayer#updatemetadata) directive 에 의해 변경될 수 있습니다.
+[Stop](#stop) directive 또는 SDK 내부 timer 등에 의해 종료될 수 있으며, [UpdateMetadata](#updatemetadata) directive 에 의해 변경될 수 있습니다.
 
-[AudioPlayer.Template1](./audioplayer#audioitem-metadata-template-audioplayer-template1) 에 포함된 가사의 화면은 `사용자 발화` 에 따라 [ShowLyrics](./audioplayer#showlyrics), [HideLyrics](./audioplayer#hidelyrics), [ControlLyricsPage](./audioplayer#controllyricspage) directive 로 제어될 수 있습니다.
+[AudioPlayer.Template1](#audioitem-metadata-template-audioplayer-template1) 에 포함된 가사의 화면은 `사용자 발화` 에 따라 [ShowLyrics](#showlyrics), [HideLyrics](#hidelyrics), [ControlLyricsPage](#controllyricspage) directive 로 제어될 수 있습니다.
 
 {% tabs %}
 {% tabs::content title="Android" %}
@@ -231,7 +231,7 @@ CapabilityFactory::makeCapability<AudioPlayerAgent, IAudioPlayerHandler>(audio_p
 
 ### 제어 명령
 
-PUI, GUI 등으로 사용자가 [다음](./audioplayer#nextcommandissued)/[이전](./audioplayer#previouscommandissued)/[즐겨찾기](./audioplayer#favoritecommandissued)/[반복](./audioplayer#repeatcommandissued)/[셔플](./audioplayer#shufflecommandissued) 요청을 event 로 전달할 수 있습니다.
+PUI, GUI 등으로 사용자가 [다음](#nextcommandissued)/[이전](#previouscommandissued)/[즐겨찾기](#favoritecommandissued)/[반복](#repeatcommandissued)/[셔플](#shufflecommandissued) 요청을 event 로 전달할 수 있습니다.
 
 {% tabs %}
 {% tabs::content title="Android" %}

@@ -70,7 +70,7 @@ let mediaPlayerAgent = nuguClient.mediaPlayerAgent
 
 ### Context 구성
 
-앱에서 재생중인 음원에 대한 정보를 [Context](./mediaplayer#context-1) 에 포함시켜 주어야 합니다.
+앱에서 재생중인 음원에 대한 정보를 [Context](#context) 에 포함시켜 주어야 합니다.
 
 {% tabs %}
 {% tabs::content title="Android" %}
@@ -109,7 +109,7 @@ mediaPlayerAgent.delegate = MyMediaPlayerAgentDelegate()
 
 ### 제어 명령
 
-`사용자 발화`에 의해 음악 [검색](./mediaplayer#search)/[재생](./mediaplayer#play)/[중지](./mediaplayer#stop)/[다음](./mediaplayer#next)/[이전](./mediaplayer#previous)/[탐색](./mediaplayer#move)/[일시정지](./mediaplayer#pause)/[계속재생](./mediaplayer#resume)/[다시재생](./mediaplayer#rewind)/[반복](./mediaplayer#toggle)/[즐겨찾기](./mediaplayer#toggle)/[셔플](./mediaplayer#toggle)/[재생목록 보기](./mediaplayer#handleplaylist)/[가사 보기](./mediaplayer#handlelyrics) 가 directive 로 요청될 수 있습니다.
+`사용자 발화`에 의해 음악 [검색](#search)/[재생](#play)/[중지](#stop)/[다음](#next)/[이전](#previous)/[탐색](#move)/[일시정지](#pause)/[계속재생](#resume)/[다시재생](#rewind)/[반복](#toggle)/[즐겨찾기](#toggle)/[셔플](#toggle)/[재생목록 보기](#handleplaylist)/[가사 보기](#handlelyrics) 가 directive 로 요청될 수 있습니다.
 
 {% tabs %}
 {% tabs::content title="Android" %}
@@ -236,7 +236,7 @@ mediaPlayerAgent.delegate = MyMediaPlayerAgentDelegate()
 
 ### 재생중인 곡 정보 요청
 
-재생중인 곡 정보가 [GetInfo](./mediaplayer#getinfo) directive 로 요청될 수 있습니다.
+재생중인 곡 정보가 [GetInfo](#getinfo) directive 로 요청될 수 있습니다.
 
 {% tabs %}
 {% tabs::content title="Android" %}
