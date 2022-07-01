@@ -6,9 +6,6 @@ includes_dir: ""
 exclude:
   - "*.iml"
   - ".idea/"
-  - "nugu-play/**"
-  - "nugu-sdk/**"
-  - "work-with-nugu-biz/**"
   - "_jekyll-potion/"
 
 collections:
