@@ -7,12 +7,14 @@ $(function () {
       this.nav_container = $('nav > div.nav-container')
       this.main = $('#container')
 
-      this.modal_image_area = $('#modal_image_area > div.modal-wrapper')
+      this.dimmed_area = $('div.dimmed')
+
+      this.image_area = $('div.popup-md.image')
       this.modal_image = $('#modal_image')
 
-      this.modal_search_area = $('#modal_search_area > div.modal-wrapper')
+      this.search_area = $('div.popup-md.search')
       this.search_input = $('#search_keyword')
-      this.search_contents = $('#search_contents')
+      this.search_results = $('#search_result')
 
       this.keyupEventHandlers = []
 
@@ -36,56 +38,47 @@ $(function () {
       this.initTitle()
       this.initNavigation()
 
-      Page.on(this, this.modal_image, 'load', () => this.modal_image_area.parent().removeClass('hide'))
-      Page.on(
-        this,
-        this.modal_image_area,
-        'click',
-        e => {
-          e.preventDefault()
-          if (e.currentTarget === this.modal_image_area[0]) {
-            this.modal_image_area.parent().addClass('hide')
-          }
-        }
-      )
-
-      this.keyupEventHandlers.push({
-        'keyCode': 27,
-        'condition': () => !this.modal_image_area.parent().hasClass('hide'),
-        'accept': () => this.modal_image_area.parent().addClass('hide')
+      Page.on(this, this.dimmed_area, 'click', e => {
+        this.dimmed_area.hide()
+        this.image_area.hide()
+        this.search_area.hide()
       })
 
-      Page.on(this, $('.show_search'), 'click', () => {
-        this.search_contents.children().remove()
-        this.modal_search_area.parent().removeClass('hide')
+      Page.on(this, this.modal_image, 'load', () => {
+        this.dimmed_area.show()
+        this.image_area.show()
       })
 
-      Page.on(this, this.modal_search_area.children(), 'click', e => e.stopPropagation())
-      Page.on(
-        this,
-        this.modal_search_area,
-        'click',
-        e => {
-          e.preventDefault()
-          if (e.currentTarget === this.modal_search_area[0]) {
-            this.search_contents.children().remove()
-            this.modal_search_area.parent().addClass('hide')
-          }
-        }
-      )
+      Page.on(this, $('.search-round'), 'click', () => {
+        this.search_results.children().remove()
+        this.dimmed_area.show()
+        this.search_area.show()
+        this.search_input.focus()
+      })
+
+      Page.on(this, this.search_area.find('button.icon--close-lg'), 'click', () => {
+        this.search_results.children().remove()
+        this.dimmed_area.hide()
+        this.search_area.hide()
+      })
 
       Page.on(this, this.search_input, 'keyup', e => {
-        if ((e.keyCode === 13 || e.which === 13) && this.search_input.val().trim().length >= 2) {
-          let indexes = this.select_search_result(this.search_input.val())
-          this.search_contents.children().remove()
-          this.search_contents.html($.templates('#search_contents_tmpl').render(indexes))
+        if (e.keyCode === 13 || e.which === 13) {
+          this.search_keyword()
         }
+      })
+
+      Page.on(this, this.search_area.find('button.icon--search'), 'click', () => {
+        this.search_keyword()
       })
 
       this.keyupEventHandlers.push({
         'keyCode': 27,
-        'condition': () => !this.modal_search_area.parent().hasClass('hide'),
-        'accept': () => this.modal_search_area.parent().addClass('hide')
+        'accept': () => {
+          this.dimmed_area.hide()
+          this.image_area.hide()
+          this.search_area.hide()
+        }
       })
 
       this.updateMainTabs()
@@ -242,6 +235,14 @@ $(function () {
       }
     }
 
+    search_keyword() {
+      if (this.search_input.val().trim().length >= 2) {
+        let indexes = this.select_search_result(this.search_input.val())
+        this.search_results.children().remove()
+        this.search_results.html($.templates('#search_contents_tmpl').render(indexes))
+      }
+    }
+
     select_search_result(keyword) {
       let result = Page.flatMap(
         this.search_indexes
@@ -274,7 +275,7 @@ $(function () {
       })
 
       return result.map(r => {
-        r.contents = r.contents.map(s => s.replace(new RegExp('(' + keyword + ')', 'gi'), '<code class="bold">$1</code>'))
+        r.contents = r.contents.map(s => s.replace(new RegExp('(' + keyword + ')', 'gi'), '<code>$1</code>'))
         return r
       })
     }

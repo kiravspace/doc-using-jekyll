@@ -15,7 +15,7 @@ module Jekyll::Potion
 
       page_index = {
         "url" => page_potion.url,
-        "hashes" => create_indexes(page, html.css("main").css("div.main-container").css("div.content")),
+        "hashes" => create_indexes(page, html.css("#container > div.content")),
         "order" => page_potion.order
       }
       @indexes << page_index
@@ -101,7 +101,7 @@ module Jekyll::Potion
           if tag.classes.include?("highlight")
             indexes << tag.css("td.rouge-code").text.strip unless tag.css("td.rouge-code").text.strip.empty?
           end
-        when "text", "hr", "label", "span", "article"
+        when "text", "hr", "label", "span", "article", "i"
           indexes << tag.text.strip unless tag.text.strip.empty?
         else
           logger.warn("undefined search type", tag.name)
