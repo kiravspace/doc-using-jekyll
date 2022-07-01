@@ -30,6 +30,8 @@ $(function () {
           if (e.keyCode === handler.keyCode || e.which === handler.keyCode) {
             if (handler.condition && handler.condition.call(context)) {
               handler.accept.call(context, e)
+            } else {
+              handler.accept.call(context, e)
             }
           }
         })
