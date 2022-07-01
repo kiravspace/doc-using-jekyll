@@ -29,7 +29,7 @@ module Jekyll::Potion
 
         src_count += 1
         img_tag["src"] = absolute_href
-        img_tag.add_class("img_internal")
+        img_tag.add_class("img-internal")
       }
 
       if src_count > 0 || inline_count > 0

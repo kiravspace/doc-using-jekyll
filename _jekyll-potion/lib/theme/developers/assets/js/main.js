@@ -3,12 +3,9 @@ $(function () {
     static HASH_REGEX = new RegExp('([^#]*)#([^#]*)')
 
     constructor() {
-      this.title = $('header > div.header > a.title')
-      this.nav = $('nav')
+      this.title = $('header > div > a.logo')
       this.nav_container = $('nav > div.nav-container')
-      this.main = $('main')
-
-      this.is_hide_mobile_menu = true
+      this.main = $('#container')
 
       this.modal_image_area = $('#modal_image_area > div.modal-wrapper')
       this.modal_image = $('#modal_image')
@@ -61,18 +58,6 @@ $(function () {
       Page.on(this, $('.show_search'), 'click', () => {
         this.search_contents.children().remove()
         this.modal_search_area.parent().removeClass('hide')
-      })
-
-      Page.on(this, $('.show_menu'), 'click', () => {
-        if (this.is_hide_mobile_menu) {
-          this.is_hide_mobile_menu = false
-          this.nav.addClass('show')
-          this.main.addClass('hide')
-        } else {
-          this.is_hide_mobile_menu = true
-          this.nav.removeClass('show')
-          this.main.removeClass('hide')
-        }
       })
 
       Page.on(this, this.modal_search_area.children(), 'click', e => e.stopPropagation())
@@ -129,7 +114,7 @@ $(function () {
     }
 
     updateNavigationSelected(pathname) {
-      this.nav_container.find('div.nav-link').removeClass('active')
+      this.nav_container.find('div.nav-link').parent().removeClass('active')
 
       let selected = this.nav_container.find('a.nav-href')
         .filter((_, link) => Page.matchPath($(link).attr('href'), pathname))
@@ -138,18 +123,18 @@ $(function () {
         .filter((_, div) => $(div).parent().has(selected).length)
         .removeClass('fold')
 
-      selected.parent().addClass('active')
+      selected.parent().parent().addClass('active')
     }
 
     updateMainTabs() {
-      let tabTitles = this.main.find('div.tabs').find('li.tab-title')
+      let tabNavs = this.main.find('div.tabs').find('li')
 
-      Page.on(this, tabTitles, 'click', e => {
+      Page.on(this, tabNavs, 'click', e => {
         let $clicked = $(e.currentTarget)
 
         parent = $clicked.parents('div.tabs')
-        parent.find('li.tab-title').removeClass('active')
-        parent.find('div.tab-content').removeClass('active')
+        parent.find('li').removeClass('active')
+        parent.find('div.tab-cont').removeClass('active')
 
         $clicked.addClass('active')
         $('#' + $clicked.attr('data-content-id')).addClass('active')
@@ -224,12 +209,6 @@ $(function () {
         this.updateNavigationSelected(pathname)
 
         if (callback) {
-          if (!this.is_hide_mobile_menu) {
-            this.is_hide_mobile_menu = true
-            this.nav.removeClass('show')
-            this.main.removeClass('hide')
-          }
-
           callback.call(this, title)
         }
       })

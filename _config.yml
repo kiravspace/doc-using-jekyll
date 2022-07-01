@@ -6,7 +6,10 @@ includes_dir: ""
 exclude:
   - "*.iml"
   - ".idea/"
-  - "_jekyll-potion"
+  - "nugu-play/**"
+  - "nugu-sdk/**"
+  - "work-with-nugu-biz/**"
+  - "_jekyll-potion/"
 
 collections:
   posts:
@@ -55,6 +58,7 @@ jekyll-spaceship:
 jekyll-potion:
   title: Developers | Guide
   icon: assets/icon/icon.png
+  theme: developers
   favicon:
     path: "_favicon/favicon.html"
     assets: "/assets/favicon"

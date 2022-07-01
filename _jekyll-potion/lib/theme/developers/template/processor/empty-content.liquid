@@ -1,0 +1,12 @@
+<div class="pagination pagination--area" data-skip-search-index>
+    {% for child in page.potion.children %}
+    <a href="{{ child.url }}" class="left">
+        <div class="block">
+            <div class="cont">
+                <div class="cont-tit">{{ child.page.title }}</div>
+                {% comment %}<div class="small">{{ child.page.description }}</div>{% endcomment %}
+            </div>
+        </div>
+    </a>
+    {% endfor %}
+</div>
