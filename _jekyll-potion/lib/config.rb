@@ -4,245 +4,224 @@ module Jekyll::Potion
 
     PRIORITY = 10
 
-    TITLE_KEY = "title"
-    ICON_KEY = "icon"
     THEME_KEY = "theme"
     ASSETS_PATH_KEY = "assets"
     IS_SHOW_PAGINATION_KEY = "is_show_pagination"
     IS_SHOW_EMPTY_KEY = "is_show_empty"
-    FAVICON_KEY = "favicon"
+
     FAVICON_PATH_KEY = "path"
     FAVICON_ASSETS_KEY = "assets"
     PROCESSOR_KEY = "processors"
 
+    SITE_KEY = "site"
+    INDEX_PAGE_KEY = "index-page"
+    PERMALINK_KEY = "permalink"
+    TITLE_KEY = "title"
+    ICON_KEY = "icon"
+    SITE_THEME_KEY = "theme"
+    FAVICON_KEY = "favicon"
+
+    CUSTOM_THEMES_KEY = "custom-themes"
+
     DEFAULT = {
-      TITLE_KEY => "",
-      ICON_KEY => "",
-      THEME_KEY => "proto",
-      ASSETS_PATH_KEY => "assets",
-      IS_SHOW_PAGINATION_KEY => true,
-      IS_SHOW_EMPTY_KEY => true,
-      FAVICON_KEY => {
-        FAVICON_PATH_KEY => "",
-        FAVICON_ASSETS_KEY => ""
-      },
-      PROCESSOR_KEY => [
-        "optional-front-matter-processor",
-        "static-files-processor",
+      PROCESSOR_KEY => [ # 필수, optional을 체크하고(필수는 빼고, optional), optional을 추가한다.
+        "make-theme-processor",
+        "make-front-matter-processor",
+        "make-favicon-processor",
         "make-title-processor",
         "make-date-processor",
-        "navigation-processor",
-        "empty-content-processor",
-        "pagination-processor",
+        "make-navigation-processor",
+        "make-empty-content-processor",
         "rewrite-img-processor",
         "make-header-link-processor",
         "rewrite-a-href-processor",
-        "search-processor"
-      ]
+        "make-search-index-processor",
+        "make-og-tag-processor"
+      ],
+      SITE_KEY => {
+        INDEX_PAGE_KEY => "",
+        PERMALINK_KEY => "",
+        TITLE_KEY => "",
+        ICON_KEY => "",
+        SITE_THEME_KEY => "proto",
+        FAVICON_KEY => ""
+      },
+      CUSTOM_THEMES_KEY => []
     }
 
     POTION_KEY = "potion"
 
     ALL_PAGES_KEY = "all_pages"
 
-    @config = {}
-    @processors = []
+    #####################################################################################################
+    # 테마 설정은 Theme로 이동
+    DEFAULT_THEME_NAME = "proto"
 
-    def site_after_init(site)
+    DEFAULT_THEMES = [DEFAULT_THEME_NAME]
+
+    METHODS = [
+      :site_after_init,
+      :site_post_read,
+      :site_pre_render,
+      :page_pre_render,
+      :page_post_render,
+      :site_post_render
+    ]
+
+    PRIORITY_MAP = {
+      :lowest => 0,
+      :low => 10,
+      :normal => 20,
+      :high => 30,
+      :highest => 40,
+    }.freeze
+
+    attr_accessor :themes
+    attr_reader :base_path
+    attr_reader :site
+
+    @@config = nil
+
+    def initialize(site)
       @base_path = File.dirname(__FILE__)
       @base_path["#{Dir.pwd}/"] = ""
 
       @site = site
-      @config = merge(DEFAULT, site.config[CONFIG_KEY])
+      @config = Merger.fill(site.config[CONFIG_KEY], DEFAULT)
 
-      @processors = @config[PROCESSOR_KEY].map { |processor| Processor.load_processor_class(processor) }
-                                          .map { |processor_class| processor_class.new(self) }
+      site.config["exclude"] << File.join(BASE_DIR, "")
 
-      @assets_collection = Jekyll::Collection.new(@site, assets_path)
+      @processors = {}
+
+      load_processors = @config[PROCESSOR_KEY].map { |processor| Processor.load_processor_class(processor) }
+
+      METHODS.each { |method|
+        processors = load_processors.select { |processor| processor.class.method_defined?(method, false) }
+        processors.sort { |p1, p2| PRIORITY_MAP[p2.priority[method]] <=> PRIORITY_MAP[p1.priority[method]] }
+        @processors[method] = processors
+      }
+
+      Tag.load_tag_classes(@base_path)
+
+      @themes = {}
+      @logger = Logger.new(self)
     end
 
-    def merge(default, config)
-      merged = {}
-
-      unless config.nil?
-        default.each do |k, v|
-          if v.instance_of? Hash
-            merged[k] = self.merge(v, config[k])
-          else
-            merged[k] = config[k] ||= v
-          end
-        end
-      end
-      merged
+    def permalink
+      @config[SITE_KEY][PERMALINK_KEY]
     end
 
-    def site_pre_render(site)
-      Processor.do_with_site(@processors, :site_pre_render, site)
+    def index_page
+      @config[SITE_KEY][INDEX_PAGE_KEY]
     end
 
-    def site_post_render(site)
-      Processor.do_with_site(@processors, :site_post_render, site)
+    def favicon
+      @config[SITE_KEY][FAVICON_KEY]
     end
 
-    def site_post_read(site)
-      Processor.do_with_site(@processors, :site_post_read, site)
-    end
-
-    def page_pre_render(page)
-      Processor.do_with_page(@processors, :page_pre_render, page) if markdown_converter.matches(page.extname)
-    end
-
-    def page_post_render(page)
-      Processor.do_with_page(@processors, :page_post_render, page) if markdown_converter.matches(page.extname)
-    end
-
-    def baseurl
-      @site.config["baseurl"] ||= ""
-    end
-
-    def theme_path
-      File.join(@base_path, "theme", @config[THEME_KEY])
-    end
-
-    def _includes
-      File.join(theme_path, "_includes")
-    end
-
-    def _sass
-      File.join(theme_path, "_sass")
-    end
-
-    def assets
-      File.join(theme_path, "assets")
-    end
-
-    def assets_path
-      @config[ASSETS_PATH_KEY]
-    end
-
-    def target_assets
-      File.join(baseurl, assets_path)
+    def custom_themes
+      @config[CUSTOM_THEMES_KEY]
     end
 
     def site_title
-      @config[TITLE_KEY]
-    end
-
-    def index_url
-      File.join(baseurl, "")
+      @config[SITE_KEY][TITLE_KEY]
     end
 
     def site_icon
-      File.join(baseurl, @config[ICON_KEY]) unless @config[ICON_KEY].empty?
+      @config[SITE_KEY][ICON_KEY]
     end
 
-    def favicon_path
-      @config[FAVICON_KEY][FAVICON_PATH_KEY]
+    def current_theme
+      @themes[@config[SITE_KEY][SITE_THEME_KEY]]
     end
 
-    def favicon_assets
-      File.join(baseurl, @config[FAVICON_KEY][FAVICON_ASSETS_KEY])
-    end
-
-    def templates_path
-      File.join(theme_path, "template")
-    end
-
-    def processor_templates
-      File.join(templates_path, "processor")
-    end
-
-    def tags_templates
-      File.join(templates_path, "tags")
-    end
-
-    def make_site_potion
-      make_site_data(POTION_KEY, self)
-    end
-
-    def make_site_data(key, value)
-      @site.data[key] = value
-    end
-
-    def static_files
-      @site.static_files
-    end
-
-    def make_page(base, dir, name)
-      Jekyll::Page.new(@site, base, dir, name)
-    end
-
-    def add_static_files(base, dir, name)
-      @site.static_files << Jekyll::StaticFile.new(@site, base, dir, name, @assets_collection)
+    def default_theme
+      @themes[DEFAULT_THEME_NAME]
     end
 
     def markdown_converter
       @site.find_converter_instance(Jekyll::Converters::Markdown)
     end
 
-    def markdown_pages
-      @site.pages.select { |page| markdown_converter.matches(page.extname) }
+    def site_after_init(site)
+      @processors[:site_after_init].each { |processor| processor.site_after_init(site) }
     end
 
-    def static_markdown_files
-      @site.static_files.select { |file| markdown_converter.matches(file.extname) }
+    def site_post_read(site)
+      @processors[:site_post_read].each { |processor| processor.site_post_read(site) }
     end
 
-    def load_processor_template(template_name)
-      load_template(processor_templates, template_name)
+    def site_pre_render(site)
+      @processors[:site_pre_render].each { |processor| processor.site_pre_render(site) }
     end
 
-    def load_tags_template(template_name)
-      load_template(tags_templates, template_name)
+    def page_pre_render(page)
+      is_update = false
+
+      html = Nokogiri::HTML.parse(page.output)
+      @processors[:page_pre_render].each { |processor| processor.page_pre_render(page, html) { |_| is_update = true } }
+
+      page.output = html.to_s if is_update
     end
 
-    def load_template(path, template_name)
-      Liquid::Template.parse(File.read([File.join(path, template_name), ".liquid"].join))
+    def page_post_render(page)
+      is_update = false
+
+      html = Nokogiri::HTML.parse(page.output)
+      @processors[:page_post_render].each { |processor| processor.page_post_render(page, html) { |_| is_update = true } }
+
+      page.output = html.to_s if is_update
     end
 
-    def site_potion
-      @site.data[POTION_KEY]
+    def site_post_render(site)
+      @processors[:site_post_render].each { |processor| processor.site_post_render(site) }
     end
 
-    def page_potion(page)
-      page.data[POTION_KEY]
+    def self.initialize(site)
+      @@config = Config.new(site)
+      Util.initialize(@@config)
     end
 
-    def show_pagination?
-      @config[IS_SHOW_PAGINATION_KEY]
+    def self.potion
+      @@config
     end
 
-    def show_empty?
-      @config[IS_SHOW_EMPTY_KEY]
+    def self.site
+      @@config.site
+    end
+
+    def self.base_path
+      @@config.base_path
+    end
+
+    def self.process(method, arg)
+      @@config.method(method).call(arg)
     end
 
     def self.load_config
-      config = Config.new
-
       Jekyll::Hooks.register_one(:site, :after_init, PRIORITY) do |site|
-        config.site_after_init(site)
+        Config.initialize(site)
+        Config.process(:site_after_init, site)
       end
 
       Jekyll::Hooks.register_one(:site, :post_read, PRIORITY) do |site|
-        config.make_site_potion
-        Logger.trace(config.class.name, "make site potion")
-        config.site_post_read(site)
+        Config.process(:site_post_read, site)
       end
 
       Jekyll::Hooks.register_one(:site, :pre_render, PRIORITY) do |site|
-        config.site_pre_render(site)
-      end
-
-      Jekyll::Hooks.register_one(:site, :post_render, PRIORITY) do |site|
-        config.site_post_render(site)
+        Config.process(:site_pre_render, site)
       end
 
       Jekyll::Hooks.register_one(:pages, :pre_render, PRIORITY) do |page|
-        config.page_pre_render(page)
+        Config.process(:page_pre_render, page)
       end
 
       Jekyll::Hooks.register_one(:pages, :post_render, PRIORITY) do |page|
-        config.page_post_render(page)
+        Config.process(:page_post_render, page)
+      end
+
+      Jekyll::Hooks.register_one(:site, :post_render, PRIORITY) do |site|
+        Config.process(:site_post_render, site)
       end
     end
   end

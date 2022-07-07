@@ -1,12 +1,13 @@
 module Jekyll::Potion
-  class RewriteAHrefProcessor < HTMLPageProcessor
+  class RewriteAHrefProcessor < Processor
     HTTP_SCHEME = %r!\Ahttp(s)?://!im.freeze
     ABSOLUTE_PATH = %r!\A/!im.freeze
     HASH_SCHEME = %r!\A#!im.freeze
 
     SKIP_KEYWORD = "data-skip-href-to-absolute"
+    INDEX_PAGE_KEYWORD = "data-to-index-page"
 
-    def html_post_render(page, html)
+    def page_post_render(page, html)
       href_count = 0
       hash_count = 0
 
@@ -14,16 +15,15 @@ module Jekyll::Potion
         href = a_tag["href"]
 
         next if href.strip.empty? && a_tag.has_attribute?(SKIP_KEYWORD)
+        next if href =~ HTTP_SCHEME
 
-        if href =~ HASH_SCHEME
+        if a_tag.has_attribute?(INDEX_PAGE_KEYWORD)
+          a_tag["href"] = Util[:url].index_url
+        elsif href =~ HASH_SCHEME
           hash_count += 1
           a_tag.add_class("hash_internal")
         elsif href !~ ABSOLUTE_PATH
-          absolute_href = Pathname.new(
-            File.join(config.baseurl, File.dirname(page.path), href)
-          ).cleanpath.to_s
-
-          a_tag["href"] = absolute_href
+          a_tag["href"] = Util[:path].based_absolute_path(File.dirname(page.path), href)
         end
 
         href_count += 1
@@ -31,8 +31,8 @@ module Jekyll::Potion
       }
 
       if href_count > 0 || hash_count > 0
-        logger.trace("#{page.name} #{href_count} a tags replace absolute path") if href_count > 0
-        logger.trace("#{page.name} #{hash_count} hashed a tags add class") if hash_count > 0
+        @logger.trace("#{page.name} #{href_count} a tags replace absolute path") if href_count > 0
+        @logger.trace("#{page.name} #{hash_count} hashed a tags add class") if hash_count > 0
         yield html
       end
     end

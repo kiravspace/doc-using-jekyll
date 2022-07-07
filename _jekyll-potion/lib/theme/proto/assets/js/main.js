@@ -142,14 +142,17 @@ $(function () {
     }
 
     updateMainTabs() {
-      let tabTitles = this.main.find('div.tabs').find('li.tab-title')
+      let tabNavs = this.main.find('.tabs').find('[data-content-id]')
 
-      Page.on(this, tabTitles, 'click', e => {
+      Page.on(this, tabNavs, 'click', e => {
         let $clicked = $(e.currentTarget)
 
-        parent = $clicked.parents('div.tabs')
-        parent.find('li.tab-title').removeClass('active')
-        parent.find('div.tab-content').removeClass('active')
+        parent = $clicked.parents('.tabs')
+        parent.find('[data-content-id]')
+          .removeClass('active')
+          .each((_, nav) => {
+            parent.find('[id=\'' + $(nav).attr('data-content-id') + '\']').removeClass('active')
+          })
 
         $clicked.addClass('active')
         $('#' + $clicked.attr('data-content-id')).addClass('active')

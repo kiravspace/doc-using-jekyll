@@ -4,14 +4,7 @@
     </div>
 </div>
 <div class="header title">
-    <div>
-        <a href="{{ site.data.potion.index_url }}" class="link">
-            {% if site.data.potion.site_icon %}
-            <img src="{{ site.data.potion.site_icon }}">
-            {% endif %}
-            {{ site.data.potion.site_title }}
-        </a>
-    </div>
+    {% logo %}
 </div>
 <div class="header search">
     <div>

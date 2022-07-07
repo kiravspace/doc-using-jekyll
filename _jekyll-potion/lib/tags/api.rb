@@ -1,8 +1,9 @@
 module Jekyll::Potion
-  class ApiTag < PotionBlock
+  class ApiTag < PotionWrapBlock
+    tag_name "api"
 
-    QUERY_CATEGORY = "query"
-    BODY_CATEGORY = "body"
+    QUERY_CATEGORY = "query".freeze
+    BODY_CATEGORY = "body".freeze
 
     def initialize(tag_name, markup, options)
       super
@@ -29,48 +30,36 @@ module Jekyll::Potion
     end
 
     def render(page_context)
-      render_from_custom_context(
-        page_context,
-        ->(context, _) do
-          context["method"] = params["method"]
-          context["base_url"] = params["base_url"]
-          context["path"] = params["path"]
-          context["summary"] = params["summary"]
+      @params["description"] = api_description(page_context)
 
-          context["description"] = api_description(page_context)
+      parameter_map = @elements.select { |e| e.instance_of? ApiParameterTag }
+                               .group_by { |parameter| parameter.category }
+                               .map { |category, parameters| [category, parameters.sort_by { |parameter| parameter.line_number }] }
+                               .to_h
 
-          parameter_map = @elements.select { |e| e.instance_of? ApiParameterTag }
-                                   .group_by { |parameter| parameter.category }
-                                   .map { |category, parameters| [category, parameters.sort_by { |parameter| parameter.line_number }] }
-                                   .to_h
+      @params["query_parameters"] = parameter_map[QUERY_CATEGORY].map { |query_parameters| query_parameters.render(page_context) }
+                                                                 .join if parameter_map.has_key?(QUERY_CATEGORY)
 
-          context["query_parameters"] = parameter_map[QUERY_CATEGORY].map { |query_parameters| query_parameters.render(page_context) }
-                                                                     .join if parameter_map.has_key?(QUERY_CATEGORY)
+      @params["body_parameters"] = parameter_map[BODY_CATEGORY].map { |query_parameters| query_parameters.render(page_context) }
+                                                               .join if parameter_map.has_key?(BODY_CATEGORY)
 
-          context["body_parameters"] = parameter_map[BODY_CATEGORY].map { |query_parameters| query_parameters.render(page_context) }
-                                                                   .join if parameter_map.has_key?(BODY_CATEGORY)
+      @params["responses"] = api_responses(page_context)
 
-          context["responses"] = api_responses(page_context)
-        end
-      )
+      Util[:tag].render_template(@template_name, @params)
     end
   end
 
-  class ApiDescriptionTag < Liquid::Block
-    include PotionBlockElement
+  class ApiDescriptionTag < ElementBlock
+    tag_name "api", "description"
 
     def render(page_context)
-      render_from_custom_context(
-        page_context,
-        ->(context, _) do
-          context["description"] = @body.render(page_context)
-        end
-      )
+      @params["description"] = @body.render(page_context)
+      Util[:tag].render_template(@template_name, @params)
     end
   end
 
-  class ApiParameterTag < Liquid::Block
-    include PotionBlockElement
+  class ApiParameterTag < ElementBlock
+    tag_name "api", "parameter"
 
     def initialize(tag_name, markup, options)
       super
@@ -79,24 +68,17 @@ module Jekyll::Potion
     end
 
     def category
-      params["category"]
+      @params["category"]
     end
 
     def render(page_context)
-      render_from_custom_context(
-        page_context,
-        ->(context, _) do
-          context["name"] = params["name"]
-          context["type"] = params["type"]
-          context["category"] = params["category"]
-          context["description"] = @body.render(page_context)
-        end
-      )
+      @params["description"] = @body.render(page_context)
+      Util[:tag].render_template(@template_name, @params)
     end
   end
 
-  class ApiResponseTag < Liquid::Block
-    include PotionBlockElement
+  class ApiResponseTag < ElementBlock
+    tag_name "api", "response"
 
     def initialize(tag_name, markup, options)
       super
@@ -105,23 +87,17 @@ module Jekyll::Potion
     end
 
     def status
-      params["status"]
+      @params["status"]
     end
 
     def render(page_context)
-      render_from_custom_context(
-        page_context,
-        ->(context, _) do
-          context["status"] = params["status"]
-          context["description"] = params["description"]
-          context["body"] = @body.render(page_context)
-        end
-      )
+      @params["body"] = @body.render(page_context)
+      Util[:tag].render_template(@template_name, @params)
     end
   end
 end
 
-Jekyll::Potion::ApiTag.register_tag("description", Jekyll::Potion::ApiDescriptionTag)
-Jekyll::Potion::ApiTag.register_tag("parameter", Jekyll::Potion::ApiParameterTag)
-Jekyll::Potion::ApiTag.register_tag("response", Jekyll::Potion::ApiResponseTag)
-Liquid::Template.register_tag("api", Jekyll::Potion::ApiTag)
+# Jekyll::Potion::ApiTag.register_tag("description", Jekyll::Potion::ApiDescriptionTag)
+# Jekyll::Potion::ApiTag.register_tag("parameter", Jekyll::Potion::ApiParameterTag)
+# Jekyll::Potion::ApiTag.register_tag("response", Jekyll::Potion::ApiResponseTag)
+# Liquid::Template.register_tag("api", Jekyll::Potion::ApiTag)

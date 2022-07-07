@@ -1,9 +1,9 @@
 module Jekyll::Potion
-  class LinkTag < Liquid::Tag
+  class LinkTag < PotionTag
+    tag_name "link"
+
     require "net/http"
     require "nokogiri"
-
-    include PotionTag
 
     HTTP_SCHEME = %r!http(s)?://!im.freeze
 
@@ -13,37 +13,32 @@ module Jekyll::Potion
     end
 
     def render(page_context)
-      render_from_custom_context(
-        page_context,
-        ->(context, _) do
-          if params["url"] =~ HTTP_SCHEME
-            begin
-              res = Net::HTTP.get_response URI(params["url"])
-              raise res.body unless res.is_a?(Net::HTTPSuccess)
-              html = Nokogiri::HTML.parse(res.body)
-              context["link_title"] = html.title
-              context["link_description"] = html.at("meta[name='description']")["content"] unless html.at("meta[name='description']").nil?
-              context["link_url"] = params["url"]
-            rescue StandardError => msg
-              logger.warn("#{params["url"]} is break.")
-              context["link_title"] = params["url"]
-              context["link_url"] = params["url"]
-            end
-          else
-            potion = context["site"].data[Config::ALL_PAGES_KEY][params["url"]]
-
-            unless potion.nil?
-              context["link_title"] = potion.page.data["title"]
-              context["link_description"] = potion.page.data["description"]
-              context["link_url"] = potion.url
-            end
-          end
-
-          context["link_title"] = params["caption"] unless params["caption"].nil? || params["caption"].empty?
+      if @params["url"] =~ HTTP_SCHEME
+        begin
+          res = Net::HTTP.get_response URI(@params["url"])
+          raise RuntimeError, res.class.name unless res.is_a?(Net::HTTPSuccess)
+          html = Nokogiri::HTML.parse(res.body)
+          @params["title"] = html.title
+          @params["description"] = html.at("meta[name='description']")["content"] unless html.at("meta[name='description']").nil?
+        rescue => error
+          logger.warn("#{@params["url"]} is break.", error.message)
+          @params["title"] = @params["url"]
         end
-      )
+      else
+        potion = PagePotion.potion(@params["url"])
+
+        unless potion.nil?
+          @params["title"] = potion.title
+          @params["description"] = potion.description
+          @params["url"] = potion.url
+        end
+      end
+
+      @params["title"] = @params["caption"] unless @params["caption"].nil? || @params["caption"].empty?
+
+      Util[:tag].render_template(@template_name, @params)
     end
   end
 end
 
-Liquid::Template.register_tag("link", Jekyll::Potion::LinkTag)
+# Liquid::Template.register_tag("link", Jekyll::Potion::LinkTag)

@@ -1,6 +1,6 @@
 module Jekyll::Potion
-  class MakeHeaderLinkProcessor < HTMLPageProcessor
-    def html_post_render(page, html)
+  class MakeHeaderLinkProcessor < Processor
+    def page_post_render(page, html)
       update_a_tag_count = 0
       create_a_tag_count = 0
 
@@ -38,14 +38,14 @@ module Jekyll::Potion
             copy_link.add_class("copy-link")
 
             absolute_href = Pathname.new(
-              File.join(config.baseurl, File.dirname(page.path))
+              File.join(Util[:url].baseurl, File.dirname(page.path))
             ).cleanpath.to_s
 
             copy_link["data-copy-link"] = "#{absolute_href}#{target_hash}"
             h_tag.add_child(copy_link)
           }
 
-      logger.trace("#{page.name} update header #{update_a_tag_count} a tags href update, #{create_a_tag_count} a tag create")
+      @logger.trace("#{page.name} update header #{update_a_tag_count} a tags href update, #{create_a_tag_count} a tag create")
       yield html
     end
   end

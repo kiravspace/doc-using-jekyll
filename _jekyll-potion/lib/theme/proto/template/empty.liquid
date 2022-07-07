@@ -1,0 +1,15 @@
+<div class="block-row" data-skip-search-index>
+    {% for child in potion.children %}
+        <div>
+            <div class="block">
+                <a class="block-body" href="{{ child.url }}">
+                    <div class="thumb document"></div>
+                    <div class="content">
+                        <div class="bold">{{ child.title }}</div>
+                        <div class="small">{{ child.description }}</div>
+                    </div>
+                </a>
+            </div>
+        </div>
+    {% endfor %}
+</div>

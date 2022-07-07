@@ -1,0 +1,30 @@
+<div class="block-row pagination" data-skip-search-index>
+    {% if potion.has_before? %}
+        <div>
+            <div class="block pagination">
+                <a class="block-body" href="{{ potion.before.url }}">
+                    <div class="thumb prev"></div>
+                    <div class="content right">
+                        <div class="x-small">이전</div>
+                        <div class="bold">{{ potion.before.title }}</div>
+                        <div class="small">{{ potion.before.description }}</div>
+                    </div>
+                </a>
+            </div>
+        </div>
+    {% endif %}
+    {% if potion.has_after? %}
+        <div>
+            <div class="block pagination">
+                <a class="block-body" href="{{ potion.after.url }}">
+                    <div class="content">
+                        <div class="x-small">다음</div>
+                        <div class="bold">{{ potion.after.title }}</div>
+                        <div class="small">{{ potion.after.description }}</div>
+                    </div>
+                    <div class="thumb next"></div>
+                </a>
+            </div>
+        </div>
+    {% endif %}
+</div>

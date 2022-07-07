@@ -2,13 +2,26 @@ require "nokogiri"
 
 module Jekyll::Potion
   class Processor
-    attr_accessor :config
-    attr_accessor :logger
+    @@priority = {}
 
-    def initialize(config)
-      @config = config
+    DEFAULT_PRIORITY = {
+      :site_after_init => :lowest,
+      :site_pre_render => :lowest,
+      :site_post_read => :lowest,
+      :page_pre_render => :lowest,
+      :page_post_render => :lowest,
+      :site_post_render => :lowest
+    }
+
+    attr_reader :priority
+
+    def initialize
       @logger = Logger.new(self)
+      @priority = Merger.fill(@@priority, DEFAULT_PRIORITY)
+      @@priority = {}
     end
+
+    def site_after_init(site) end
 
     def site_pre_render(site) end
 
@@ -16,9 +29,13 @@ module Jekyll::Potion
 
     def site_post_render(site) end
 
-    def page_pre_render(page) end
+    def page_pre_render(page, html) end
 
-    def page_post_render(page) end
+    def page_post_render(page, html) end
+
+    def self.priority(event, priority)
+      @@priority[event] = priority
+    end
 
     def self.load_processor_class(processor_name)
       require_relative "processor/#{processor_name}.rb"
@@ -32,36 +49,7 @@ module Jekyll::Potion
 
       Logger.trace(name, "load processor", processor_name)
 
-      Jekyll::Potion.const_get(constants.first)
-    end
-
-    def self.do_with_site(processors, symbol, site)
-      processors.select { |processor| processor.class.method_defined?(symbol, false) }
-                .each { |processor| processor.method(symbol).call(site) }
-    end
-
-    def self.do_with_page(processors, symbol, page)
-      processors.each { |processor|
-        html = Nokogiri::HTML.parse(page.output)
-
-        if processor.is_a?(HTMLPageProcessor)
-          method = HTMLPageProcessor.replace_method(processor, symbol)
-          method.call(page, html) { |updated| page.output = updated.to_s } unless method.nil?
-        elsif processor.class.method_defined?(symbol, false)
-          processor.method(symbol).call(page)
-        end
-      }
+      Jekyll::Potion.const_get(constants.first).new
     end
   end
-
-  class HTMLPageProcessor < Processor
-    def html_pre_render(page, html) end
-
-    def html_post_render(page, html) end
-
-    def self.replace_method(processor, symbol)
-      processor.method(symbol.to_s.gsub("page", "html").to_sym)
-    end
-  end
-
 end

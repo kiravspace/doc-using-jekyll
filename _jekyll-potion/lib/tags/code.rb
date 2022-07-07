@@ -1,6 +1,8 @@
 module Jekyll::Potion
-  class CodeTag < Liquid::Block
-    include PotionTag
+  class CodeTag < PotionBlock
+    include ScriptModule
+
+    tag_name "code"
 
     def initialize(tag_name, markup, options)
       super
@@ -27,15 +29,11 @@ module Jekyll::Potion
     end
 
     def render(page_context)
-      render_from_custom_context(
-        page_context,
-        ->(context, converter) do
-          context["title"] = params["title"]
-          context["body"] = converter.convert(@body)
-        end
-      )
+      @params["body"] = Util[:tag].markdown_convert(@body)
+
+      Util[:tag].render_template(@template_name, @params)
     end
   end
 end
 
-Liquid::Template.register_tag("code", Jekyll::Potion::CodeTag)
+# Liquid::Template.register_tag("code", Jekyll::Potion::CodeTag)

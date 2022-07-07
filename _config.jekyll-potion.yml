@@ -1,0 +1,75 @@
+collections:
+  posts:
+    output: false
+
+markdown: kramdown
+kramdown:
+  input: GFM
+  syntax_highlighter: rouge
+  syntax_highlighter_opts:
+    block:
+      line_numbers: true
+
+sass:
+  style: compressed
+
+########################################
+plugins:
+  - jekyll-spaceship
+
+jekyll-spaceship:
+  processors:
+    - table-processor
+    - media-processor
+    - mathjax-processor
+    - polyfill-processor
+  mathjax-processor:
+    config:
+      options:
+        enableMenu: false
+
+########################################
+jekyll-potion:
+  site:
+    index-page: "README.md"
+    permalink: "/:path/:basename"
+    title: "Developers | Guide"
+    icon: "assets/icon/icon.png"
+    theme: "developers"
+    favicon: "assets/favicon/favicon.html"
+  custom-themes:
+    - developers:
+        path: "developers" # 필수
+        layouts-dir: "_layouts"
+        includes-dir: "_includes"
+        default-layout: "default" # 필수
+        assets:
+          source-dir: "assets"
+          target-root-path: "/_assets"
+          scss-source-dir: "_scss"
+          scss-files:
+            - "main.scss"
+        content-x-path: "#container > div.content"
+        tags:
+          alerts:
+            info: "alerts--info"
+            warning: "alerts--warning"
+            danger: "alerts--danger"
+            success: "alerts--success"
+          code:
+            base-class: "code"
+            copy-class: "copy"
+            success-class: "success"
+            success-show-class: "show"
+  _processors:
+    available:
+      - make-front-matter-processor # 필수
+      - make-title-processor # 필수
+      - make-date-processor # 필수
+      - navigation-processor # 필수
+      - empty-content-processor # ?
+      - pagination-processor # ?
+      - rewrite-img-processor # ?
+      - make-header-link-processor # ?
+      - rewrite-a-href-processor # ?
+      - search-processor # ?

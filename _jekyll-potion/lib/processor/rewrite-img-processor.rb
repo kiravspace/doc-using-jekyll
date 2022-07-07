@@ -1,5 +1,5 @@
 module Jekyll::Potion
-  class RewriteImgProcessor < HTMLPageProcessor
+  class RewriteImgProcessor < Processor
     HTTP_SCHEME = %r!\Ahttp(s)?://!im.freeze
     ABSOLUTE_PATH = %r!\A/!im.freeze
 
@@ -7,7 +7,7 @@ module Jekyll::Potion
 
     RELATIVE_SRC = %r!src\s*="(?<src>\.+[^"]*?)"!im.freeze
 
-    def html_post_render(page, html)
+    def page_post_render(page, html)
       src_count = 0
       inline_count = 0
 
@@ -23,18 +23,14 @@ module Jekyll::Potion
 
         next if src =~ HTTP_SCHEME || src =~ ABSOLUTE_PATH
 
-        absolute_href = Pathname.new(
-          File.join(config.baseurl, File.dirname(page.path), src)
-        ).cleanpath.to_s
-
         src_count += 1
-        img_tag["src"] = absolute_href
+        img_tag["src"] = Util[:path].based_absolute_path(File.dirname(page.path), src)
         img_tag.add_class("img-internal")
       }
 
       if src_count > 0 || inline_count > 0
-        logger.trace("#{page.name} #{src_count} img tags replace absolute path") if src_count > 0
-        logger.trace("#{page.name} #{inline_count} inline img tags add class") if inline_count > 0
+        @logger.trace("#{page.name} #{src_count} img tags replace absolute path") if src_count > 0
+        @logger.trace("#{page.name} #{inline_count} inline img tags add class") if inline_count > 0
         yield html
       end
     end

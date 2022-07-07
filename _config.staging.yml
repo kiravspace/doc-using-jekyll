@@ -2,4 +2,7 @@ url: "https://kiravspace.github.io"
 baseurl: "/jekyll-potion"
 
 exclude:
+  - "*.iml"
+  - ".idea/"
+  - ".github/"
   - "CNAME"

@@ -7,11 +7,11 @@ module Jekyll::Potion
     attr_accessor :order
     attr_accessor :before
     attr_accessor :after
-    attr_accessor :empty
-    attr_accessor :pagination
 
-    def initialize(site_potion, page, template)
-      @baseurl = site_potion.baseurl
+    @@page_potions = {}
+
+    def initialize(baseurl, page)
+      @baseurl = baseurl
 
       if page.url == "/"
         @parent_path = ""
@@ -22,7 +22,7 @@ module Jekyll::Potion
       @page = page
       @children = []
 
-      @template = template
+      @@page_potions[page.url] = self
     end
 
     def set_order(order)
@@ -35,6 +35,14 @@ module Jekyll::Potion
       end
 
       order
+    end
+
+    def title
+      @page.data["title"]
+    end
+
+    def description
+      @page.data["description"]
     end
 
     def url
@@ -57,20 +65,19 @@ module Jekyll::Potion
       @page.content.strip.empty?
     end
 
-    def render_for_navigation
-      @template.render(self)
+    def self.potion(page)
+      if page.is_a?(Jekyll::Page)
+        @@page_potions[page.url]
+      elsif page.is_a?(Liquid::Context)
+        page = page.registers[:page]
+        @@page_potions[page["url"]]
+      elsif page.is_a?(String)
+        @@page_potions[page]
+      end
     end
 
-    def render_for_empty(template)
-      @empty = template.render(self)
-    end
-
-    def render_for_pagination(template)
-      @pagination = template.render(self)
-    end
-
-    def self.render_for_navigation(template, potions)
-      template.render({ "potions" => potions })
+    def self.potion_from_context(page_context)
+      self.potion(page_context.registers[:page])
     end
   end
 end
