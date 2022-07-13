@@ -51,27 +51,9 @@ $(function () {
         }
       )
 
-      this.keyupEventHandlers.push({
-        'keyCode': 27,
-        'condition': () => !this.modal_image_area.parent().hasClass('hide'),
-        'accept': () => this.modal_image_area.parent().addClass('hide')
-      })
-
       Page.on(this, $('.show_search'), 'click', () => {
         this.search_contents.children().remove()
         this.modal_search_area.parent().removeClass('hide')
-      })
-
-      Page.on(this, $('.show_menu'), 'click', () => {
-        if (this.is_hide_mobile_menu) {
-          this.is_hide_mobile_menu = false
-          this.nav.addClass('show')
-          this.main.addClass('hide')
-        } else {
-          this.is_hide_mobile_menu = true
-          this.nav.removeClass('show')
-          this.main.removeClass('hide')
-        }
       })
 
       Page.on(this, this.modal_search_area.children(), 'click', e => e.stopPropagation())
@@ -100,6 +82,24 @@ $(function () {
         'accept': () => this.modal_search_area.parent().addClass('hide')
       })
 
+      Page.on(this, $('[data-nav-link]'), 'click', this.updateMainContent)
+
+      Page.on(this, $(window), 'popstate', () => {
+        this.loadPage($(location).attr('pathname') + $(location).attr('hash'))
+      })
+
+      Page.on(this, $('.show_menu'), 'click', () => {
+        if (this.is_hide_mobile_menu) {
+          this.is_hide_mobile_menu = false
+          this.nav.addClass('show')
+          this.main.addClass('hide')
+        } else {
+          this.is_hide_mobile_menu = true
+          this.nav.removeClass('show')
+          this.main.removeClass('hide')
+        }
+      })
+
       this.navigation.init($(location).attr('pathname'))
       this.header.init()
       this.tabs.init()
@@ -108,28 +108,31 @@ $(function () {
       this.updateMainImages()
       this.updateMainLinks()
 
-      Page.on(this, $('[data-nav-link]'), 'click', this.updateMainContent)
-
-      Page.on(this, $(window), 'popstate', () => {
-        this.loadPage($(location).attr('pathname') + $(location).attr('hash'))
-      })
+      if ($(location).attr('hash')) {
+        Page.goHash($(location).attr('hash'))
+      }
     }
 
     updateMainImages() {
-      let expandableImages = this.main.find('img.img-internal:not(.img-inline)')
+      let expandableImages = $('img.img-internal:not(.img-inline):not([data-handled])')
 
       Page.on(this, expandableImages, 'click', e => {
         this.modal_image.attr('src', $(e.currentTarget).attr('src'))
       })
+
+      expandableImages.attr('data-handled', true)
     }
 
     updateMainLinks() {
       // #, /로 시작하는 내부링크의 경우 페이지내 전환을 위해 click 이벤트를 조작한다.
-      let absolute_links = this.main.find('a.a-internal[href]')
-      let only_hash_links = this.main.find('a.hash-internal[href]')
+      let absolute_links = $('a.a-internal[href]:not([data-nav-link]):not([data-handled])')
+      let only_hash_links = $('a.hash-internal[href]:not([data-nav-link]):not([data-handled])')
 
       Page.on(this, absolute_links, 'click', this.updateMainContent)
       Page.on(this, only_hash_links, 'click', this.updateHash)
+
+      absolute_links.attr('data-handled', true)
+      only_hash_links.attr('data-handled', true)
     }
 
     loadPage(pathname, callback) {
@@ -153,12 +156,6 @@ $(function () {
         this.updateMainLinks()
 
         if (callback) {
-          if (!this.is_hide_mobile_menu) {
-            this.is_hide_mobile_menu = true
-            this.nav.removeClass('show')
-            this.main.removeClass('hide')
-          }
-
           callback.call(this, title)
         }
       })
@@ -176,6 +173,14 @@ $(function () {
       this.loadPage(pathname, title => {
         if (typeof (history.pushState) !== 'undefined') {
           history.pushState(null, title, pathname)
+        }
+
+        this.navigation.init($(location).attr('pathname'))
+
+        if (!this.is_hide_mobile_menu) {
+          this.is_hide_mobile_menu = true
+          this.nav.removeClass('show')
+          this.main.removeClass('hide')
         }
       })
     }

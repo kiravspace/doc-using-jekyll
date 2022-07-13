@@ -90,9 +90,9 @@ $(function () {
 
       Page.on(this, $('#open_nav'), 'click', () => {
         if (this.nav.hasClass('open')) {
-          this.nav.removeClass("open")
+          this.nav.removeClass('open')
         } else {
-          this.nav.addClass("open")
+          this.nav.addClass('open')
         }
       })
 
@@ -116,7 +116,7 @@ $(function () {
         this.modal_image.attr('src', $(e.currentTarget).attr('src'))
       })
 
-      expandableImages.attr("data-handled", true)
+      expandableImages.attr('data-handled', true)
     }
 
     updateMainLinks() {
@@ -127,8 +127,8 @@ $(function () {
       Page.on(this, absolute_links, 'click', this.updateMainContent)
       Page.on(this, only_hash_links, 'click', this.updateHash)
 
-      absolute_links.attr("data-handled", true)
-      only_hash_links.attr("data-handled", true)
+      absolute_links.attr('data-handled', true)
+      only_hash_links.attr('data-handled', true)
     }
 
     loadPage(pathname, callback) {
@@ -174,7 +174,7 @@ $(function () {
         this.navigation.init($(location).attr('pathname'))
 
         if (this.nav.hasClass('open')) {
-          this.nav.removeClass("open")
+          this.nav.removeClass('open')
         }
       })
     }

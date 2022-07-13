@@ -39,8 +39,11 @@ module Jekyll::Potion
     def page_post_render(page, html)
       if favicon?
         head = html.css("head").first
-        @favicon_tags.each { |favicon_tag| head.add_child(favicon_tag) }
-        yield html
+
+        unless head.nil?
+          @favicon_tags.each { |favicon_tag| head.add_child(favicon_tag) }
+          yield html
+        end
       end
     end
 

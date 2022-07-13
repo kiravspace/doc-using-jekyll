@@ -28,7 +28,7 @@ module Jekyll::Potion
           head.add_child(og_description)
         end
 
-        if @site.empty?(:icon)
+        unless @site.empty?(:icon)
           og_image = Nokogiri::XML::Node.new("meta", html)
           og_image["property"] = "og:image"
           og_image["content"] = @site.full_url(@site[:icon])

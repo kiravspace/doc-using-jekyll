@@ -176,14 +176,12 @@ $breakpoint-desktop: 1024px;
 }
 
 html {
-  height: -webkit-fill-available;
 }
 
 body {
   width: 100vw;
   height: 100vh;
   min-height: 100vh;
-  min-height: -webkit-fill-available;
   margin: 0;
   overflow: hidden;
   background-color: white;
@@ -557,8 +555,10 @@ body {
               }
             }
           }
+        }
 
-          &.active {
+        &.active {
+          & > div.nav-link {
             background-color: lightgray;
             @include border(border);
             border-inline: none;
@@ -681,6 +681,7 @@ body {
 
       & > div.content {
         width: 100%;
+        padding-block: 1em;
         @extend %gap-grid-row;
 
         & > :first-child {
