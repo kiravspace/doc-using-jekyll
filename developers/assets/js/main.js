@@ -82,14 +82,6 @@ $(function () {
         }
       })
 
-      this.navigation.init($(location).attr('pathname'))
-      this.header.init()
-      this.tabs.init()
-      this.code.init()
-
-      this.updateMainImages()
-      this.updateMainLinks()
-
       Page.on(this, $('[data-nav-link]'), 'click', this.updateMainContent)
 
       Page.on(this, $(window), 'popstate', () => {
@@ -103,6 +95,18 @@ $(function () {
           this.nav.addClass("open")
         }
       })
+
+      this.navigation.init($(location).attr('pathname'))
+      this.header.init()
+      this.tabs.init()
+      this.code.init()
+
+      this.updateMainImages()
+      this.updateMainLinks()
+
+      if ($(location).attr('hash')) {
+        Page.goHash($(location).attr('hash'))
+      }
     }
 
     updateMainImages() {
