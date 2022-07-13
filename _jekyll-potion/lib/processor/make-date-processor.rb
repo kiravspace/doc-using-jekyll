@@ -5,20 +5,23 @@ module Jekyll::Potion
     def page_post_render(page, html)
       head = html.css("head").first
 
-      if File.method_defined?(:birthtime)
-        meta = Nokogiri::XML::Node.new("meta", html)
-        meta["name"] = "Date"
-        meta["content"] = File.birthtime(page.path)
-        head.add_child(meta)
-      end
+      unless head.nil?
+        if File.method_defined?(:birthtime)
+          meta = Nokogiri::XML::Node.new("meta", html)
+          meta["name"] = "Date"
+          meta["content"] = File.birthtime(page.path)
+          head.add_child(meta)
+        end
 
-      if File.method_defined?(:mtime)
-        meta = Nokogiri::XML::Node.new("meta", html)
-        meta["http-equiv"] = "Last-Modified"
-        meta["content"] = File.mtime(page.path)
-        head.add_child(meta)
+        if File.method_defined?(:mtime)
+          meta = Nokogiri::XML::Node.new("meta", html)
+          meta["http-equiv"] = "Last-Modified"
+          meta["content"] = File.mtime(page.path)
+          head.add_child(meta)
+        end
+
+        yield html
       end
-      yield html
     end
   end
 end

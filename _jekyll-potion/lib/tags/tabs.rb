@@ -1,6 +1,9 @@
 module Jekyll::Potion
-  class TabsTag < PotionWrapBlock
-    tag_name "tabs"
+  class TabsTag < PotionBlock
+    DEFAULT_CONFIG = {
+      "tabs_class" => "tabs",
+      "active_class" => "active"
+    }
 
     def render_tab_content(page_context)
       output = []
@@ -20,18 +23,16 @@ module Jekyll::Potion
         tabs.push({ "title" => e.title, "id" => e.id, "first" => e.first })
       end
 
-      config = Util[:tag].config("tabs")
-
       @params["tabs"] = tabs
       @params["contents"] = render_tab_content(page_context)
-      @params["active_class"] = config["active-class"]
+      @params.merge!(Potion[:tags][:tabs])
 
-      Util[:tag].render_template(@template_name, @params)
+      Potion[:theme].render_template(@template_name, @params)
     end
   end
 
-  class TabContentTag < ElementBlock
-    tag_name "tabs", "content"
+  class TabContentTag < Liquid::Block
+    include PotionBlockElement
 
     attr_accessor :first
 
@@ -44,17 +45,15 @@ module Jekyll::Potion
     end
 
     def render(page_context)
-      config = Util[:tag].config("tabs")
-
       @params["id"] = id
       @params["first"] = first
-      @params["body"] = Util[:tag].markdown_convert(@body.render(page_context))
-      @params["active_class"] = config["active-class"]
+      @params["body"] = Potion[:site].markdown_convert(@body.render(page_context))
+      @params.merge!(Potion[:tags][:tabs])
 
-      Util[:tag].render_template(@template_name, @params)
+      Potion[:theme].render_template(@template_name, @params)
     end
   end
 end
 
-# Jekyll::Potion::TabsTag.register_tag("content", Jekyll::Potion::TabContentTag)
-# Liquid::Template.register_tag("tabs", Jekyll::Potion::TabsTag)
+Jekyll::Potion::TabsTag.register_tag("content", Jekyll::Potion::TabContentTag)
+Liquid::Template.register_tag("tabs", Jekyll::Potion::TabsTag)

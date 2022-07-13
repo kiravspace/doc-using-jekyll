@@ -29,47 +29,28 @@ jekyll-spaceship:
         enableMenu: false
 
 ########################################
-jekyll-potion:
+jekyll_potion:
   site:
-    index-page: "README.md"
+    index_page: "README.md"
     permalink: "/:path/:basename"
     title: "Developers | Guide"
-    icon: "assets/icon/icon.png"
+    icon: "assets/img/logo-nugu.svg"
     theme: "developers"
     favicon: "assets/favicon/favicon.html"
-  custom-themes:
+  theme:
     - developers:
-        path: "developers" # 필수
-        layouts-dir: "_layouts"
-        includes-dir: "_includes"
-        default-layout: "default" # 필수
+        path: "developers"
         assets:
-          source-dir: "assets"
-          target-root-path: "/_assets"
-          scss-source-dir: "_scss"
-          scss-files:
-            - "main.scss"
-        content-x-path: "#container > div.content"
-        tags:
-          alerts:
-            info: "alerts--info"
-            warning: "alerts--warning"
-            danger: "alerts--danger"
-            success: "alerts--success"
-          code:
-            base-class: "code"
-            copy-class: "copy"
-            success-class: "success"
-            success-show-class: "show"
-  _processors:
-    available:
-      - make-front-matter-processor # 필수
-      - make-title-processor # 필수
-      - make-date-processor # 필수
-      - navigation-processor # 필수
-      - empty-content-processor # ?
-      - pagination-processor # ?
-      - rewrite-img-processor # ?
-      - make-header-link-processor # ?
-      - rewrite-a-href-processor # ?
-      - search-processor # ?
+          priority_files:
+            - "js/jsrender.min.js"
+          scss_files:
+            - "style.scss"
+        content_x_path: "#container > div.content"
+  processor:
+    - make_navigation_processor
+    - make_empty_content_processor
+    - make_header_link_processor
+    - rewrite_img_processor
+    - rewrite_a_href_processor
+    - make_search_index_processor
+    - make_og_tag_processor

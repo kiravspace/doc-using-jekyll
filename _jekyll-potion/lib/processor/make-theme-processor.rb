@@ -1,101 +1,130 @@
 module Jekyll::Potion
   class MakeThemeProcessor < Processor
     priority :site_after_init, :highest
+    priority :page_post_render, Processor::PRIORITY_MAP[:low] - 1
 
     JS_PATTERN = %r!^\.js$!i.freeze
     CSS_PATTERN = %r!^\.css$!i.freeze
     SCSS_PATTERN = Jekyll::Converters::Scss::EXTENSION_PATTERN
 
-    def initialize
+    def initialize(site, theme, config, tags)
       super
       @js_files = []
       @css_files = []
-      @scss_files = []
       @static_files = []
     end
 
     def site_after_init(site)
-      themes = Config::DEFAULT_THEMES.map { |theme_name| Util[:theme].theme_default(theme_name) }
-      Config.potion.custom_themes.each { |theme| themes << Theme.custom(theme.keys[0], theme.values[0]) }
-
-      Config.potion.themes = themes.map { |theme| [theme.name, theme] }.to_h
-
-      Config.potion.themes.values.select { |theme| !theme.is_default? }
-            .each { |theme| site.config["exclude"] << File.join(theme.theme_path, "") }
+      Potion[:themes].values.select { |theme| not theme[:internal] }
+        .each { |theme| site.config["exclude"] << File.join(theme[:path], "") }
 
       permalink = find_default_scope(site)
       if permalink.nil?
-        site.config["defaults"] << Util[:theme].default_scope
+        site.config["defaults"] << default_scope
       else
-        Merger.merge!(Util[:theme].default_scope, permalink)
+        if permalink.has_key?("values")
+          permalink["values"]["layout"] = @theme[:default_layout]
+        else
+          permalink["values"] = { "layout" => @theme[:default_layout] }
+        end
+
+        permalink["values"]["permalink"] = @site[:permalink] unless @site.empty?(:permalink)
       end
 
-      if Util[:theme].index_page?
+      unless @site.empty?(:index_page)
         index = find_index_scope(site)
 
         if index.nil?
-          site.config["defaults"] << Util[:theme].index_scope
+          site.config["defaults"] << index_scope
         else
-          Merger.merge!(Util[:theme].index_scope, index)
+          if index.has_key?("values")
+            index["values"]["permalink"] = ""
+          else
+            index["values"] = { "permalink" => "" }
+          end
         end
       end
 
-      site.includes_load_paths << Util[:theme].includes
-      site.config["layouts-dir"] = Util[:theme].layouts
+      site.includes_load_paths << @theme[:includes_dir]
+      site.config["layouts_dir"] = @theme[:layouts_dir]
+      site.config["sass"]["sass_dir"] = @theme[:assets][:scss_source_dir]
+    end
 
-      site.config["sass"]["sass_dir"] = Util[:theme].scss_source_dir
+    def include_scss_file?(file_name)
+      @theme[:assets][:scss_files].include?(file_name)
     end
 
     def site_post_read(site)
-      Util[:theme].load_files_in_assets { |base, dir, file_name|
+      Util.load_files(@theme[:assets][:source_dir]) { |base, dir, file_name|
         case
-        when scss_matches(file_name) && Util[:theme].include_scss_file?(file_name)
-          scss_file = Util[:page].assets_scss_potion_page(base, dir, file_name)
-          scss_map = Util[:page].assets_map_page(scss_file)
-          @scss_files << scss_file
+        when scss_matches(file_name) && @theme[:assets][:scss_files].include?(file_name)
+          scss_file = @theme.assets_scss_potion_page(base, dir, file_name)
+          scss_map = @theme.assets_map_page(scss_file)
+          @css_files << scss_file
           @static_files << scss_map
-          @logger.trace("add scss file #{File.join(dir, scss_file.name)}")
-          @logger.trace("add scss map file #{File.join(dir, scss_map.name)}")
+          @logger.trace("add scss file #{File.join(@theme[:assets][:source_dir], dir, scss_file.name)}")
+          @logger.trace("add scss map file #{File.join(@theme[:assets][:source_dir], dir, scss_map.name)}")
         when js_matches(file_name)
-          js_file = Util[:page].assets_static_file(base, dir, file_name)
+          js_file = @theme.assets_static_file(base, dir, file_name)
           @js_files << js_file
-          @logger.trace("add javascript file #{File.join(dir, file_name)}")
+          @logger.trace("add javascript file #{File.join(@theme[:assets][:source_dir], dir, file_name)}")
         when css_matches(file_name)
-          css_file = Util[:page].assets_static_file(base, dir, file_name)
+          css_file = @theme.assets_static_file(base, dir, file_name)
           @css_files << css_file
-          @logger.trace("add css file #{File.join(dir, file_name)}")
+          @logger.trace("add css file #{File.join(@theme[:assets][:source_dir], dir, file_name)}")
         else
-          @static_files << Util[:page].assets_static_file(base, dir, file_name)
-          @logger.trace("add static file #{File.join(dir, file_name)}")
+          @static_files << @theme.assets_static_file(base, dir, file_name)
+          @logger.trace("add static file #{File.join(@theme[:assets][:source_dir], dir, file_name)}")
         end
       }
     end
 
     def page_post_render(page, html)
       head = html.css("head").first
-      @scss_files.each { |scss_file|
-        link = Nokogiri::XML::Node.new("link", html)
-        link["rel"] = "stylesheet"
-        link["href"] = Util[:url].base_url(scss_file.relative_path)
-        head.add_child(link)
-      }
-      @css_files.each { |css_file|
-        link = Nokogiri::XML::Node.new("link", html)
-        link["rel"] = "stylesheet"
-        link["href"] = Util[:url].assets_base_url(css_file.relative_path)
-        head.add_child(link)
-      }
-      @js_files.each { |js_file|
-        script = Nokogiri::XML::Node.new("script", html)
-        script["type"] = "text/javascript"
-        script["src"] = Util[:url].assets_base_url(js_file.relative_path)
-        head.add_child(script)
-      }
-      yield html
+
+      unless head.nil?
+        priority_files = @theme[:assets][:priority_files]
+
+        priority_files.each { |priority_filepath|
+          file = @css_files.find { |file| priority_filepath == file.relative_path }
+          head.add_child(css_meta(file, html)) unless file.nil?
+        }
+
+        @css_files.each { |file|
+          next if priority_files.include?(file.relative_path)
+          head.add_child(css_meta(file, html))
+        }
+
+        priority_files.each { |priority_filepath|
+          file = @js_files.find { |file| priority_filepath == file.relative_path }
+          head.add_child(js_meta(file, html)) unless file.nil?
+        }
+
+        @js_files.each { |file|
+          next if priority_files.include?(file.relative_path)
+          head.add_child(js_meta(file, html))
+        }
+
+        yield html
+      end
+    end
+
+    def css_meta(file, html)
+      link = Nokogiri::XML::Node.new("link", html)
+      link["rel"] = "stylesheet"
+      link["href"] = @site.base_url(file.relative_path)
+      link
+    end
+
+    def js_meta(file, html)
+      script = Nokogiri::XML::Node.new("script", html)
+      script["type"] = "text/javascript"
+      script["src"] = @site.base_url(file.relative_path)
+      script
     end
 
     def site_post_render(site)
-      static_files = [@scss_files, @css_files, @js_files, @static_files].flatten
+      static_files = [@css_files, @js_files, @static_files].flatten
       site.static_files -= static_files
       site.static_files.concat(static_files)
     end
@@ -109,7 +138,31 @@ module Jekyll::Potion
     end
 
     def find_index_scope(site)
-      find_scope(site, Util[:theme].index_page)
+      find_scope(site, @site[:index_page])
+    end
+
+    def default_scope
+      default_scope = {
+        "scope" => {
+          "path" => ""
+        },
+        "values" => {
+          "layout" => Potion[:theme][:default_layout]
+        }
+      }
+      default_scope["values"]["permalink"] = @site[:permalink] unless @site.empty?(:permalink)
+      default_scope
+    end
+
+    def index_scope
+      {
+        "scope" => {
+          "path" => @site[:index_page]
+        },
+        "values" => {
+          "permalink" => ""
+        }
+      }
     end
 
     def js_matches(file_name)

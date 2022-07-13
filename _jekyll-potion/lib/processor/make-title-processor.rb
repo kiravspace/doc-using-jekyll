@@ -4,12 +4,8 @@ module Jekyll::Potion
 
     TITLE_REGEX = %r! \A\s* (?: \#{1,3}\s+(.*)(?:\s+\#{1,3})? | (.*)\r?\n[-=]+\s* )$ !x.freeze
 
-    def initialize
-      super
-    end
-
     def site_post_read(site)
-      Util[:converter].markdown_pages.each { |page|
+      @site.markdown_pages.each { |page|
         if page.data["title"].nil?
           page.data["title"] = make_title(page)
           page.content = page.content.gsub(TITLE_REGEX, "").strip
@@ -20,25 +16,27 @@ module Jekyll::Potion
     def page_post_render(page, html)
       head = html.css("head").first
 
-      title_value = Util[:site].page_title(page)
+      unless head.nil?
+        title_value = @site.page_title(page)
 
-      meta = Nokogiri::XML::Node.new("meta", html)
-      meta["http-equiv"] = "Title"
-      meta["content"] = title_value
-      head.add_child(meta)
-
-      if page.data.has_key?("description") and not page.data["description"].empty?
         meta = Nokogiri::XML::Node.new("meta", html)
-        meta["http-equiv"] = "Description"
-        meta["content"] = page.data["description"]
+        meta["http-equiv"] = "Title"
+        meta["content"] = title_value
         head.add_child(meta)
+
+        if page.data.has_key?("description") and not page.data["description"].empty?
+          meta = Nokogiri::XML::Node.new("meta", html)
+          meta["http-equiv"] = "Description"
+          meta["content"] = page.data["description"]
+          head.add_child(meta)
+        end
+
+        title = Nokogiri::XML::Node.new("title", html)
+        title.content = title_value
+        head.add_child(title)
+
+        yield html
       end
-
-      title = Nokogiri::XML::Node.new("title", html)
-      title.content = title_value
-      head.add_child(title)
-
-      yield html
     end
 
     def make_title(page)

@@ -1,8 +1,12 @@
 module Jekyll::Potion
-  class CodeTag < PotionBlock
-    include ScriptModule
+  class CodeTag < Liquid::Block
+    include PotionTag
 
-    tag_name "code"
+    DEFAULT_CONFIG = {
+      "code_class" => "code",
+      "success_class" => "success",
+      "success_show_class" => "show"
+    }
 
     def initialize(tag_name, markup, options)
       super
@@ -29,11 +33,12 @@ module Jekyll::Potion
     end
 
     def render(page_context)
-      @params["body"] = Util[:tag].markdown_convert(@body)
+      @params["body"] = Potion[:site].markdown_convert(@body)
+      @params.merge!(Potion[:tags][:code])
 
-      Util[:tag].render_template(@template_name, @params)
+      Potion[:theme].render_template(@template_name, @params)
     end
   end
 end
 
-# Liquid::Template.register_tag("code", Jekyll::Potion::CodeTag)
+Liquid::Template.register_tag("code", Jekyll::Potion::CodeTag)

@@ -1,9 +1,9 @@
 module Jekyll::Potion
-  class LinkTag < PotionTag
-    tag_name "link"
-
+  class LinkTag < Liquid::Tag
     require "net/http"
     require "nokogiri"
+
+    include PotionTag
 
     HTTP_SCHEME = %r!http(s)?://!im.freeze
 
@@ -36,9 +36,9 @@ module Jekyll::Potion
 
       @params["title"] = @params["caption"] unless @params["caption"].nil? || @params["caption"].empty?
 
-      Util[:tag].render_template(@template_name, @params)
+      Potion[:theme].render_template(@template_name, @params)
     end
   end
 end
 
-# Liquid::Template.register_tag("link", Jekyll::Potion::LinkTag)
+Liquid::Template.register_tag("link", Jekyll::Potion::LinkTag)

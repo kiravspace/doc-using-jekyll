@@ -3,8 +3,6 @@ module Jekyll::Potion
     HTTP_SCHEME = %r!\Ahttp(s)?://!im.freeze
     ABSOLUTE_PATH = %r!\A/!im.freeze
 
-    SKIP_KEYWORD = "data-skip-src-to-absolute"
-
     RELATIVE_SRC = %r!src\s*="(?<src>\.+[^"]*?)"!im.freeze
 
     def page_post_render(page, html)
@@ -14,18 +12,18 @@ module Jekyll::Potion
       html.css("img[src]").each { |img_tag|
         src = img_tag["src"]
 
-        next if src.strip.empty? && img_tag.has_attribute?(SKIP_KEYWORD)
+        next if src.strip.empty? && img_tag.has_attribute?(@config[:skip_keyword])
 
         unless img_tag.parent.text.strip.empty?
           inline_count += 1
-          img_tag.add_class("img-inline")
+          img_tag.add_class(@config[:inline_image_class])
         end
 
         next if src =~ HTTP_SCHEME || src =~ ABSOLUTE_PATH
 
         src_count += 1
-        img_tag["src"] = Util[:path].based_absolute_path(File.dirname(page.path), src)
-        img_tag.add_class("img-internal")
+        img_tag["src"] = @site.base_absolute_url(File.dirname(page.path), src)
+        img_tag.add_class(@config[:internal_image_class])
       }
 
       if src_count > 0 || inline_count > 0

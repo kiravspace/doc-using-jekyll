@@ -1,6 +1,6 @@
 module Jekyll::Potion
   class MakeEmptyContentProcessor < Processor
-    EMPTY_TAG = "{% empty %}"
+    EMPTY_TAG = "{% empty %}".freeze
 
     def page_pre_render(page, html)
       potion = PagePotion.potion(page)

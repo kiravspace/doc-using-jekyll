@@ -1,6 +1,6 @@
 module Jekyll::Potion
-  class FileTag < PotionTag
-    tag_name "file"
+  class FileTag < Liquid::Tag
+    include PotionTag
 
     def initialize(tag_name, markup, options)
       super
@@ -8,12 +8,12 @@ module Jekyll::Potion
     end
 
     def render(page_context)
-      @params["src"] = Util[:url].base_url(@params["src"])
+      @params["src"] = Potion[:site].base_url(@params["src"])
       @params["caption"] = @params["src"] unless @params.has_key?("caption")
 
-      Util[:tag].render_template(@template_name, @params)
+      Potion[:theme].render_template(@template_name, @params)
     end
   end
 end
 
-# Liquid::Template.register_tag("file", Jekyll::Potion::FileTag)
+Liquid::Template.register_tag("file", Jekyll::Potion::FileTag)

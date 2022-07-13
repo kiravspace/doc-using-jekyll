@@ -1,0 +1,14 @@
+<li data-nav-link-id="{{ potion.url }}">
+    <div class="nav-link fold{% if potion.has_child? %} has-child {% endif %}" data-fold-target-id="{{ potion.url }}">
+        <a href="{{ potion.url }}" class="nav-href" data-nav-link>{{ potion.title }}</a>
+        <span class="nav-unfold" data-unfold-id="{{ potion.url }}"> </span>
+        <span class="nav-fold" data-fold-id="{{ potion.url }}"> </span>
+    </div>
+    {% if potion.has_child? %}
+        <ul class="nav-menu">
+            {% for potion in potion.children %}
+                {% navigation-page %}
+            {% endfor %}
+        </ul>
+    {% endif %}
+</li>

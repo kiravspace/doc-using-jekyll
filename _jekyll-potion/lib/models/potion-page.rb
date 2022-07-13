@@ -1,8 +1,10 @@
 module Jekyll::Potion
   class PotionPage < Jekyll::Page
-    def initialize(site, dir, name, target)
+    attr_reader :target
+
+    def initialize(site, base, dir, name, target)
       @site = site
-      @base = site.source
+      @base = base
       @dir = dir
       @name = name
       @target = target

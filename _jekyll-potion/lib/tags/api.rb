@@ -1,9 +1,8 @@
 module Jekyll::Potion
-  class ApiTag < PotionWrapBlock
-    tag_name "api"
+  class ApiTag < PotionBlock
 
-    QUERY_CATEGORY = "query".freeze
-    BODY_CATEGORY = "body".freeze
+    QUERY_CATEGORY = "query"
+    BODY_CATEGORY = "body"
 
     def initialize(tag_name, markup, options)
       super
@@ -45,21 +44,21 @@ module Jekyll::Potion
 
       @params["responses"] = api_responses(page_context)
 
-      Util[:tag].render_template(@template_name, @params)
+      Potion[:theme].render_template(@template_name, @params)
     end
   end
 
-  class ApiDescriptionTag < ElementBlock
-    tag_name "api", "description"
+  class ApiDescriptionTag < Liquid::Block
+    include PotionBlockElement
 
     def render(page_context)
       @params["description"] = @body.render(page_context)
-      Util[:tag].render_template(@template_name, @params)
+      Potion[:theme].render_template(@template_name, @params)
     end
   end
 
-  class ApiParameterTag < ElementBlock
-    tag_name "api", "parameter"
+  class ApiParameterTag < Liquid::Block
+    include PotionBlockElement
 
     def initialize(tag_name, markup, options)
       super
@@ -73,12 +72,12 @@ module Jekyll::Potion
 
     def render(page_context)
       @params["description"] = @body.render(page_context)
-      Util[:tag].render_template(@template_name, @params)
+      Potion[:theme].render_template(@template_name, @params)
     end
   end
 
-  class ApiResponseTag < ElementBlock
-    tag_name "api", "response"
+  class ApiResponseTag < Liquid::Block
+    include PotionBlockElement
 
     def initialize(tag_name, markup, options)
       super
@@ -92,12 +91,12 @@ module Jekyll::Potion
 
     def render(page_context)
       @params["body"] = @body.render(page_context)
-      Util[:tag].render_template(@template_name, @params)
+      Potion[:theme].render_template(@template_name, @params)
     end
   end
 end
 
-# Jekyll::Potion::ApiTag.register_tag("description", Jekyll::Potion::ApiDescriptionTag)
-# Jekyll::Potion::ApiTag.register_tag("parameter", Jekyll::Potion::ApiParameterTag)
-# Jekyll::Potion::ApiTag.register_tag("response", Jekyll::Potion::ApiResponseTag)
-# Liquid::Template.register_tag("api", Jekyll::Potion::ApiTag)
+Jekyll::Potion::ApiTag.register_tag("description", Jekyll::Potion::ApiDescriptionTag)
+Jekyll::Potion::ApiTag.register_tag("parameter", Jekyll::Potion::ApiParameterTag)
+Jekyll::Potion::ApiTag.register_tag("response", Jekyll::Potion::ApiResponseTag)
+Liquid::Template.register_tag("api", Jekyll::Potion::ApiTag)

@@ -1,6 +1,6 @@
 module Jekyll::Potion
-  class EmptyTag < PotionTag
-    tag_name "empty"
+  class EmptyTag < Liquid::Tag
+    include PotionTag
 
     def initialize(tag_name, markup, options)
       super
@@ -9,9 +9,9 @@ module Jekyll::Potion
     def render(page_context)
       @params["potion"] = PagePotion.potion(page_context)
 
-      Util[:tag].render_template(@template_name, @params)
+      Potion[:theme].render_template(@template_name, @params)
     end
   end
 end
 
-# Liquid::Template.register_tag("empty", Jekyll::Potion::EmptyTag)
+Liquid::Template.register_tag("empty", Jekyll::Potion::EmptyTag)

@@ -3,13 +3,13 @@ $(function () {
     static HASH_REGEX = new RegExp('([^#]*)#([^#]*)')
 
     constructor() {
-      this.title = $('header > div > a.logo')
-      this.nav_container = $('nav > div.nav-container')
       this.main = $('#container')
+      this.main_wrapper = $('#container_wrapper')
+      this.nav = $('nav')
 
       this.dimmed_area = $('div.dimmed')
 
-      this.image_area = $('div.popup-md.image')
+      this.image_area = $('div.popup.image')
       this.modal_image = $('#modal_image')
 
       this.search_area = $('div.popup-md.search')
@@ -18,9 +18,11 @@ $(function () {
 
       this.keyupEventHandlers = []
 
-      Page.load(this, $('meta[property=\'search-indexes-location\']').attr('content'), (data) => {
-        this.search_indexes = data
-      })
+      this.navigation = $.navigation()
+      this.header = $.header()
+      this.search = $.search()
+      this.tabs = $.tabs()
+      this.code = $.code()
     }
 
     init() {
@@ -36,9 +38,6 @@ $(function () {
           }
         })
       })
-
-      this.initTitle()
-      this.initNavigation()
 
       Page.on(this, this.dimmed_area, 'click', e => {
         this.dimmed_area.hide()
@@ -83,114 +82,57 @@ $(function () {
         }
       })
 
-      this.updateMainTabs()
+      this.navigation.init($(location).attr('pathname'))
+      this.header.init()
+      this.tabs.init()
+      this.code.init()
+
       this.updateMainImages()
       this.updateMainLinks()
-      this.updateMainCopy()
-      this.updateMainCodes()
+
+      Page.on(this, $('[data-nav-link]'), 'click', this.updateMainContent)
 
       Page.on(this, $(window), 'popstate', () => {
         this.loadPage($(location).attr('pathname') + $(location).attr('hash'))
       })
-    }
 
-    initTitle() {
-      Page.on(this, this.title, 'click', this.updateMainContent)
-    }
-
-    initNavigation() {
-      this.nav_container.find('span.nav-unfold').bind('click', e => $(e.currentTarget).parent().removeClass('fold'))
-      this.nav_container.find('span.nav-fold').bind('click', e => $(e.currentTarget).parent().addClass('fold'))
-
-      let links = this.nav_container.find('a.nav-href[href]')
-      Page.on(this, links, 'click', this.updateMainContent)
-
-      this.updateNavigationSelected($(location).attr('pathname'))
-    }
-
-    updateNavigationSelected(pathname) {
-      this.nav_container.find('div.nav-link').parent().removeClass('active')
-
-      let selected = this.nav_container.find('a.nav-href')
-        .filter((_, link) => Page.matchPath($(link).attr('href'), pathname))
-
-      selected.parents('ul.nav-menu').children('li').children('div.nav-link.fold.has-child')
-        .filter((_, div) => $(div).parent().has(selected).length)
-        .removeClass('fold')
-
-      selected.parent().parent().addClass('active')
-    }
-
-    updateMainTabs() {
-      let tabNavs = this.main.find('.tabs').find('[data-content-id]')
-
-      Page.on(this, tabNavs, 'click', e => {
-        let $clicked = $(e.currentTarget)
-
-        parent = $clicked.parents('.tabs')
-        parent.find('[data-content-id]')
-          .removeClass('active')
-          .each((_, nav) => {
-            parent.find('[id=\'' + $(nav).attr('data-content-id') + '\']').removeClass('active')
-          })
-
-        $clicked.addClass('active')
-        $('#' + $clicked.attr('data-content-id')).addClass('active')
+      Page.on(this, $('#open_nav'), 'click', () => {
+        if (this.nav.hasClass('open')) {
+          this.nav.removeClass("open")
+        } else {
+          this.nav.addClass("open")
+        }
       })
     }
 
     updateMainImages() {
-      let expandableImages = this.main.find('img.img-internal:not(.img-inline)')
+      let expandableImages = $('img.img-internal:not(.img-inline):not([data-handled])')
 
       Page.on(this, expandableImages, 'click', e => {
         this.modal_image.attr('src', $(e.currentTarget).attr('src'))
       })
+
+      expandableImages.attr("data-handled", true)
     }
 
     updateMainLinks() {
       // #, /로 시작하는 내부링크의 경우 페이지내 전환을 위해 click 이벤트를 조작한다.
-      let absolute_links = this.main.find('a.a_internal[href]')
-      let only_hash_links = this.main.find('a.hash_internal[href]')
+      let absolute_links = $('a.a-internal[href]:not([data-nav-link]):not([data-handled])')
+      let only_hash_links = $('a.hash-internal[href]:not([data-nav-link]):not([data-handled])')
 
       Page.on(this, absolute_links, 'click', this.updateMainContent)
       Page.on(this, only_hash_links, 'click', this.updateHash)
-    }
 
-    updateMainCopy() {
-      let copy_links = this.main.find('div.copy-link')
-
-      Page.on(this, copy_links, 'click', e => {
-        let $copy_link = $(e.currentTarget)
-
-        let url = [$(location).attr('protocol'), $(location).attr('host'), $copy_link.attr('data-copy-link')].join('')
-
-        navigator.clipboard.writeText(url)
-      })
-    }
-
-    updateMainCodes() {
-      let codeCopy = this.main.find('div.copy')
-      Page.on(this, codeCopy, 'click', e => {
-        e.preventDefault()
-
-        let $copy_click = $(e.currentTarget)
-
-        let code = $copy_click.parent().parent().find('div.body').find('td.rouge-code').text().trim()
-
-        navigator.clipboard.writeText(code).then(() => {
-          let $success = $copy_click.parent().find('div.success')
-          $success.addClass('show')
-          setTimeout(() => $success.removeClass('show'), 1000)
-        })
-      })
+      absolute_links.attr("data-handled", true)
+      only_hash_links.attr("data-handled", true)
     }
 
     loadPage(pathname, callback) {
-      this.main.load(pathname + ' #container', (html, status) => {
+      this.main_wrapper.load(pathname + ' #container', (html, status) => {
         if (status !== 'success') {
           return
         }
-        this.main.scrollTop(0)
+        this.main_wrapper.scrollTop(0)
         let title = html.match('<title>(.*?)</title>')[1]
         document.title = title
 
@@ -198,13 +140,12 @@ $(function () {
           Page.goHash(Page.getHash(pathname))
         }
 
-        this.updateMainTabs()
+        this.header.init()
+        this.tabs.init()
+        this.code.init()
+
         this.updateMainImages()
         this.updateMainLinks()
-        this.updateMainCopy()
-        this.updateMainCodes()
-
-        this.updateNavigationSelected(pathname)
 
         if (callback) {
           callback.call(this, title)
@@ -225,6 +166,12 @@ $(function () {
         if (typeof (history.pushState) !== 'undefined') {
           history.pushState(null, title, pathname)
         }
+
+        this.navigation.init($(location).attr('pathname'))
+
+        if (this.nav.hasClass('open')) {
+          this.nav.removeClass("open")
+        }
       })
     }
 
@@ -242,119 +189,12 @@ $(function () {
 
     search_keyword() {
       if (this.search_input.val().trim().length >= 2) {
-        let indexes = this.select_search_result(this.search_input.val())
         this.search_results.children().remove()
-        this.search_results.html($.templates('#search_contents_tmpl').render(indexes))
-      }
-    }
 
-    select_search_result(keyword) {
-      let result = Page.flatMap(
-        this.search_indexes
-          .map((page) => {
-            let hashes = Page.select_hashes(page.hashes, keyword)
-
-            if (hashes.length > 0) {
-              return Page.flatMap(hashes).map(hash => {
-                return {
-                  'url': page.url + hash.hash,
-                  'title': hash.title,
-                  'order': page.order,
-                  'line_number': hash.line_number,
-                  'contents': hash.contents
-                }
-              })
-            } else {
-              return []
-            }
-          })
-          .filter(hashes => hashes.length > 0)
-      )
-
-      result.sort((r1, r2) => {
-        if (r1.order === r2.order) {
-          return r1.line_number - r2.line_number
-        }
-
-        return r1.order - r2.order
-      })
-
-      return result.map(r => {
-        r.contents = r.contents.map(s => s.replace(new RegExp('(' + keyword + ')', 'gi'), '<code>$1</code>'))
-        return r
-      })
-    }
-
-    static create_array(start, end) {
-      let array = []
-      for (let i = start; i <= end; i++) {
-        array.push(i)
-      }
-      return array
-    }
-
-    static distinct_index(indexes, nums) {
-      let contents_range_array = []
-      let distinct = []
-
-      nums.forEach((num) => {
-        let contains = contents_range_array.filter((contents_range) => {
-          return contents_range.includes(num)
-        }).length > 0
-
-        if (!contains) {
-          let start = Math.max(num - 1, 0)
-          let end = Math.min(start + 2, indexes.length - 1)
-          contents_range_array.push(Page.create_array(start, end))
-          distinct.push(num)
-        }
-      })
-
-      return distinct
-    }
-
-    static select_contents(indexes, num) {
-      let start = Math.max(num - 1, 0)
-      return {
-        'line_number': num,
-        'contents': indexes.slice(start, start + 3)
-      }
-    }
-
-    static select_content_hash_indexes(indexes, keyword) {
-      let filter = indexes
-        .map((index, indexes_index) => {
-          if (new RegExp(keyword, 'i').test(index)) {
-            return indexes_index
-          } else {
-            return -1
-          }
+        this.search.search(this.search_input.val(), this, results => {
+          this.search_results.html($.templates('#search_contents_tmpl').render(results))
         })
-        .filter(hash_indexes => hash_indexes >= 0)
-
-      return Page.distinct_index(indexes, filter)
-        .map(hash_index => Page.select_contents(indexes, hash_index))
-    }
-
-    static select_hashes(hashes, keyword) {
-      return hashes
-        .map((hash) => {
-          let hash_indexes = Page.select_content_hash_indexes(hash.indexes, keyword)
-
-          if (hash_indexes.length > 0) {
-            return hash_indexes.map((contents) => {
-              return {
-                'hash': (hash.hash === '') ? '' : '#' + hash.hash,
-                'title': hash.title,
-                'line_number': contents.line_number,
-                'contents': contents.contents
-              }
-            })
-          } else {
-            return []
-          }
-        })
-        .filter(hash => hash.length > 0)
+      }
     }
 
     static matchPath(path, requestPath) {
@@ -374,14 +214,6 @@ $(function () {
       if ($hash.length) {
         $hash[0].scrollIntoView()
       }
-    }
-
-    static flatMap(array) {
-      return [].concat.apply([], array)
-    }
-
-    static load(context, file, func) {
-      $.getJSON(file, data => func.call(context, data))
     }
 
     static on(context, selector, eventType, func) {
