@@ -46,6 +46,12 @@ jekyll_potion:
           scss_files:
             - "style.scss"
         content_x_path: "#container > div.content"
+        tags:
+          alerts:
+            info: "alerts--noti"
+            warning: "alerts--warning"
+            danger: "alerts--error"
+            success: "alerts--confirm"
   processor:
     - make_navigation_processor
     - make_empty_content_processor
