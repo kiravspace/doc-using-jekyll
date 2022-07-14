@@ -8,7 +8,7 @@
 
 <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=0">
 
-<meta http-equiv="Last-Modified" content="2022-07-14 08:41:35 +0000">
+<meta http-equiv="Last-Modified" content="2022-07-14 23:52:05 +0000">
 <meta http-equiv="Title" content="Developers | Guide - AudioPlayer Interface">
 <title>Developers | Guide - AudioPlayer Interface</title>
 <meta property="og:url" content="https://gh-page.kirav.net/nugu-play/create-plays-with-play-builder/use-backend-proxy/capability-interfaces/audioplayer-interface">
@@ -2402,7 +2402,7 @@
 
 <p>샘플링 주파수와 비트율은 최소 권장 사항을 의미합니다. 더 낮은 값을 사용해도 재생을 되지만 음질의 저하를 체감할 수 있기 때문에 최소 권장을 준수할 것을 강력히 권장합니다.</p>
 
-<div class="alerts info">
+<div class="alerts alerts--noti">
     <i class="icon"></i>
     <div class="text">
 <p>AudioPlayer Interface를 지원하는 Play를 만드는 방법은 <a href="/nugu-play/create-plays-with-play-builder/create-a-play-with-audioplayer" class="a-internal">AudioPlayer를 지원하는 Play 만들기</a>를 참고하세요.</p>
@@ -2454,7 +2454,7 @@
 
 <p>Built-in Intent는 Play Builder에 Intent를 정의하지 않아도 NUGU 플랫폼에서 기본으로 제공하는 Intent입니다. Built-in Intent는 Play 생성 시 추가되며, 모든 Play에서 공통(필수)으로 사용되는 Universal Intent와 Capability Interface(AudioPlayer Interface)를 사용함으로 선택했을 때 추가되는 Control Intent로 구분됩니다.</p>
 
-<div class="alerts info">
+<div class="alerts alerts--noti">
     <i class="icon"></i>
     <div class="text">
 <p>Built-in Intent에 대한 자세한 내용은 <a href="/nugu-play/create-plays-with-play-builder/define-user-utterance-model/built-in-intents" class="a-internal">Built-in Intent</a>를 참고하세요.</p>
@@ -2574,7 +2574,7 @@
 
 <p>그 외의 Intent들은 기능은 제공하지 않더라도 Action을 생성하여 적절한 답변을 주기를 권장하며, Action을 생성하지 않은 경우에는 Play 생성 시 설정한 Fallback Action이 실행됩니다.</p>
 
-<div class="alerts info">
+<div class="alerts alerts--noti">
     <i class="icon"></i>
     <div class="text">
 <p>“BTS 노래 틀어줘”와 같이 Entity와 함께 발화하는 경우는 Built-in intent로 분석되지 않습니다. Entity와 함께 분석되어 처리해야 하는 경우, 직접 Custom Intent를 정의해야 합니다.</p>

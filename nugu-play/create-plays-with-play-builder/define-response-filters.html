@@ -8,7 +8,7 @@
 
 <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=0">
 
-<meta http-equiv="Last-Modified" content="2022-07-14 08:41:35 +0000">
+<meta http-equiv="Last-Modified" content="2022-07-14 23:52:05 +0000">
 <meta http-equiv="Title" content="Developers | Guide - Response Filter 사용하기">
 <title>Developers | Guide - Response Filter 사용하기</title>
 <meta property="og:url" content="https://gh-page.kirav.net/nugu-play/create-plays-with-play-builder/define-response-filters">
@@ -2420,7 +2420,7 @@
 
 <p>이렇게 Translator가 적용된 `` Parameter에 “01”이라는 값이 들어오면 Translator가 “맑겠습니다.”라는 텍스트로 변환시키게 됩니다.</p>
 
-<div class="alerts danger">
+<div class="alerts alerts--error">
     <i class="icon"></i>
     <div class="text">
 <p>Parameter에 담긴 값이 Filter의 Source와 정확히 일치할 때만 동작합니다. 위의 예에서 status에 1 혹은 001이라는 값이 들어오면 동작하지 않습니다.</p>
@@ -2472,7 +2472,7 @@ Parameter 의 끝의 기호 <code class="language-plaintext highlighter-rouge">}
   <li>날짜 형식에 맞는 문자열이 있다면, 보다 더 적합한 날짜 형태로 변경합니다.</li>
 </ul>
 
-<div class="alerts info">
+<div class="alerts alerts--noti">
     <i class="icon"></i>
     <div class="text">
 <p>날짜 형식에 대한 내용은 <a href="https://docs.oracle.com/javase/8/docs/api/java/time/format/DateTimeFormatter.html">DateTimeFormatter</a>를 참고하세요.</p>

@@ -8,7 +8,7 @@
 
 <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=0">
 
-<meta http-equiv="Last-Modified" content="2022-07-14 08:41:35 +0000">
+<meta http-equiv="Last-Modified" content="2022-07-14 23:52:05 +0000">
 <meta http-equiv="Title" content="Developers | Guide - 실패 발화 분석">
 <title>Developers | Guide - 실패 발화 분석</title>
 <meta property="og:url" content="https://gh-page.kirav.net/nugu-play/create-plays-with-play-builder/support-tools/log-mining">
@@ -2430,21 +2430,21 @@
 
 <p>추천된 문장의 의도가 Intent와 유사하다고 판단된다면, 우측 버튼을 통해 훈련 문장으로 추가하는 것을 권장합니다.</p>
 
-<div class="alerts info">
+<div class="alerts alerts--noti">
     <i class="icon"></i>
     <div class="text">
 <p><code class="language-plaintext highlighter-rouge">실패 발화 분석</code>도구의 분석 기간은 Play 배포에 의해 결정됩니다. 배포 시점 이후의 가장 빠른 로그가 분석 시점이 되며, 해당 배포 Play 버전의 마지막 로그가 분석 종점이 됩니다. 분석은 하루에 한 번, 오전 4 ~ 6시 사이에 진행 됩니다.</p>
 </div>
 </div>
 
-<div class="alerts info">
+<div class="alerts alerts--noti">
     <i class="icon"></i>
     <div class="text">
 <p>음성 인식 단계에서 화자의 의도와 다르게 인식된 발화도 <code class="language-plaintext highlighter-rouge">실패 발화 분석</code>의 분석 대상으로 노출될 수 있습니다. 음성 인식 엔진은 Play 개발자가 입력한 훈련 데이터를 기반으로 학습되어 동작하므로, 인식이 잘 되지 않는 문장/텍스트를 추가하여 인식이 되도록 데이터를 쌓아나갈 수 있습니다. 그러나 사람 간의 대화에서도 구분이 쉽지 않은 발화(예: 일/이/삼십일일/삼십일 등의 숫자 관련 표현, 들려/들어/틀어, ㅔ/ㅐ/ㅖ, 막다/맑다 등), 어려운 발음, 불분명한 발음 등의 경우에는 데이터의 보강에도 불구하고 인식이 정확히 이루어지지 않을 가능성이 있습니다.</p>
 </div>
 </div>
 
-<div class="alerts info">
+<div class="alerts alerts--noti">
     <i class="icon"></i>
     <div class="text">
 <p>Play로 들어오는 발화 중, Built-in Intent로 분석되었거나, 정상 응답을 한 발화는 <code class="language-plaintext highlighter-rouge">실패 발화 분석</code> 결과에 노출되지 않습니다. 전체 발화 통계는 다음의 도움말을 참고하세요.<br>
