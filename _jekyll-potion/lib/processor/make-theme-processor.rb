@@ -9,14 +9,18 @@ module Jekyll::Potion
 
     def initialize(site, theme, config, tags)
       super
+      init
+    end
+
+    def init
       @js_files = []
       @css_files = []
       @static_files = []
     end
 
     def site_after_init(site)
-      Potion[:themes].values.select { |theme| not theme[:internal] }
-        .each { |theme| site.config["exclude"] << File.join(theme[:path], "") }
+      # Potion[:themes].values.select { |theme| not theme[:internal] }
+      #   .each { |theme| site.config["exclude"] << File.join(theme[:path], "") }
 
       permalink = find_default_scope(site)
       if permalink.nil?
@@ -55,6 +59,8 @@ module Jekyll::Potion
     end
 
     def site_post_read(site)
+      init
+
       Util.load_files(@theme[:assets][:source_dir]) { |base, dir, file_name|
         case
         when scss_matches(file_name) && @theme[:assets][:scss_files].include?(file_name)
@@ -62,24 +68,24 @@ module Jekyll::Potion
           scss_map = @theme.assets_map_page(scss_file)
           @css_files << scss_file
           @static_files << scss_map
-          @logger.trace("add scss file #{File.join(@theme[:assets][:source_dir], dir, scss_file.name)}")
-          @logger.trace("add scss map file #{File.join(@theme[:assets][:source_dir], dir, scss_map.name)}")
+          @logger.trace("detect scss file #{File.join(@theme[:assets][:source_dir], dir, scss_file.name)}")
+          @logger.trace("detect scss map file #{File.join(@theme[:assets][:source_dir], dir, scss_map.name)}")
         when js_matches(file_name)
           js_file = @theme.assets_static_file(base, dir, file_name)
           @js_files << js_file
-          @logger.trace("add javascript file #{File.join(@theme[:assets][:source_dir], dir, file_name)}")
+          @logger.trace("detect javascript file #{File.join(@theme[:assets][:source_dir], dir, file_name)}")
         when css_matches(file_name)
           css_file = @theme.assets_static_file(base, dir, file_name)
           @css_files << css_file
-          @logger.trace("add css file #{File.join(@theme[:assets][:source_dir], dir, file_name)}")
+          @logger.trace("detect css file #{File.join(@theme[:assets][:source_dir], dir, file_name)}")
         else
           @static_files << @theme.assets_static_file(base, dir, file_name)
-          @logger.trace("add static file #{File.join(@theme[:assets][:source_dir], dir, file_name)}")
+          @logger.trace("detect static file #{File.join(@theme[:assets][:source_dir], dir, file_name)}")
         end
       }
     end
 
-    def page_post_render(page, html)
+    def page_post_render(page, html, modified)
       head = html.css("head").first
 
       unless head.nil?
@@ -121,12 +127,6 @@ module Jekyll::Potion
       script["type"] = "text/javascript"
       script["src"] = @site.base_url(file.relative_path)
       script
-    end
-
-    def site_post_render(site)
-      static_files = [@css_files, @js_files, @static_files].flatten
-      site.static_files -= static_files
-      site.static_files.concat(static_files)
     end
 
     def find_scope(site, path)
@@ -176,5 +176,21 @@ module Jekyll::Potion
     def scss_matches(file_name)
       File.extname(file_name).match?(SCSS_PATTERN)
     end
+
+    def site_post_render(site)
+      static_files = [@css_files, @js_files, @static_files].flatten
+
+      in_theme_static_files = site.static_files.select { |file| file.relative_path.start_with?("/#{@theme[:path]}") }
+
+      in_theme_static_files.each { |file| @logger.trace("remove previous theme static file #{file.relative_path}") }
+
+      site.static_files -= in_theme_static_files
+      site.static_files -= static_files
+
+      static_files.each { |file| @logger.trace("add theme static file #{file.relative_path}") }
+
+      site.static_files.concat(static_files)
+    end
   end
+
 end

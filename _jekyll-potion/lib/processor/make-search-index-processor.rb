@@ -157,15 +157,17 @@ module Jekyll::Potion
       @logger.trace("add base javascript file #{File.join(SCRIPT_TEMPLATE_PATH, SEARCH_SCRIPT_NAME)}")
     end
 
-    def page_post_render(page, html)
-      potion = PagePotion.potion(page)
+    def page_post_render(page, html, modified)
+      if modified
+        potion = PagePotion.potion(page)
 
-      return if potion.nil?
+        return if potion.nil?
 
-      page_index = PageIndex.parse(@config[:skip_keyword], page, html, @theme[:content_x_path])
-      @indexes[page.url] = page_index
+        page_index = PageIndex.parse(@config[:skip_keyword], page, html, @theme[:content_x_path])
+        @indexes[page.url] = page_index
 
-      @logger.trace("make search index", "#{page.name}[#{page_index.count_sentences}]")
+        @logger.trace("make search index", "#{page.name}[#{page_index.count_sentences}]")
+      end
 
       head = html.css("head").first
 
@@ -180,9 +182,15 @@ module Jekyll::Potion
     end
 
     def site_post_render(site)
-      site.pages << @script_file
       index_file = @theme.assets_potion_page("", @base_path, @config[:search_file_name])
       index_file.output = JSON.pretty_generate(@indexes.values)
+
+      site.pages -= [@script_file, index_file]
+
+      @logger.trace("add base javascript file #{@script_file.relative_path}")
+      @logger.trace("add search index file #{index_file.relative_path}")
+
+      site.pages << @script_file
       site.pages << index_file
     end
   end

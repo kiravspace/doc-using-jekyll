@@ -13,7 +13,7 @@ module Jekyll::Potion
       }
     end
 
-    def page_post_render(page, html)
+    def page_post_render(page, html, modified)
       head = html.css("head").first
 
       unless head.nil?

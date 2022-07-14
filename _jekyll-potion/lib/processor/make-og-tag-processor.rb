@@ -2,7 +2,7 @@ module Jekyll::Potion
   class MakeOgTagProcessor < Processor
     priority :page_post_render, :normal
 
-    def page_post_render(page, html)
+    def page_post_render(page, html, modified)
       head = html.css("head").first
 
       unless head.nil?

@@ -12,13 +12,16 @@ module Jekyll::Potion
     PROCESSOR_KEY = "processor".freeze
 
     def initialize(potion_base_dir, site)
+      @logger = Logger.new(self)
+
+      @mtime = {}
       @objects = {}
 
       raise SyntaxError, "config is empty" unless site.config.has_key?(CONFIG_KEY)
 
       config = site.config[CONFIG_KEY]
 
-      site.config["exclude"] << File.join(potion_base_dir, "")
+      # site.config["exclude"] << File.join(potion_base_dir, "")
 
       @objects[:site] = Site.new(potion_base_dir, site, config[SITE_KEY])
 
@@ -45,22 +48,33 @@ module Jekyll::Potion
     end
 
     def site_after_init(site)
+      @logger.error("site_after_init")
       @processors[:site_after_init].each { |processor| processor.site_after_init(site) }
     end
 
     def site_post_read(site)
+      @logger.error("site_post_read")
       @processors[:site_post_read].each { |processor| processor.site_post_read(site) }
     end
 
     def site_pre_render(site)
+      @logger.error("site_pre_render")
       @processors[:site_pre_render].each { |processor| processor.site_pre_render(site) }
+    end
+
+    def modified?(page)
+      if @mtime[page.path] != File.mtime(page.path)
+        true
+      else
+        false
+      end
     end
 
     def page_pre_render(page)
       is_update = false
 
       html = Nokogiri::HTML.parse(page.output)
-      @processors[:page_pre_render].each { |processor| processor.page_pre_render(page, html) { |_| is_update = true } }
+      @processors[:page_pre_render].each { |processor| processor.page_pre_render(page, html, modified?(page)) { |_| is_update = true } }
 
       page.output = html.to_s if is_update
     end
@@ -69,12 +83,15 @@ module Jekyll::Potion
       is_update = false
 
       html = Nokogiri::HTML.parse(page.output)
-      @processors[:page_post_render].each { |processor| processor.page_post_render(page, html) { |_| is_update = true } }
+      @processors[:page_post_render].each { |processor| processor.page_post_render(page, html, modified?(page)) { |_| is_update = true } }
 
       page.output = html.to_s if is_update
+
+      @mtime[page.path] = File.mtime(page.path)
     end
 
     def site_post_render(site)
+      @logger.error("site_post_render")
       @processors[:site_post_render].each { |processor| processor.site_post_render(site) }
     end
 

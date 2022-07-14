@@ -104,9 +104,9 @@ module Jekyll::Potion
 
     def site_post_render(site) end
 
-    def page_pre_render(page, html) end
+    def page_pre_render(page, html, modified) end
 
-    def page_post_render(page, html) end
+    def page_post_render(page, html, modified) end
 
     def find_priority(method)
       if @priority[method].is_a?(Numeric)

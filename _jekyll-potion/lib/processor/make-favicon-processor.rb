@@ -28,15 +28,38 @@ module Jekyll::Potion
     def site_after_init(site)
       if favicon?
         @favicon_path = favicon_path
-        site.config["exclude"] << File.join(@favicon_path, "")
       end
     end
 
     def site_post_read(site)
-      load_favicon if favicon?
+      if favicon?
+        Nokogiri::HTML.parse(read_favicon_file).css("head").children.each { |tag|
+          if tag.name == "link" and tag["href"] =~ RELATIVE_PATH
+            url = @site.to_url(@favicon_path, tag["href"])
+
+            unless @favicons.contains?(url.url)
+              if url.name == "manifest.json"
+                resolve_manifest(url)
+              else
+                @favicons.add(url.url, @theme.assets_static_file(url.path, "", url.name, FAVICON_PATH))
+              end
+            end
+
+            tag["href"] = @theme.base_assets_url(FAVICON_PATH, url.name)
+          elsif tag.name == "meta" and tag["content"] =~ RELATIVE_PATH
+            url = @site.to_url(@favicon_path, tag["content"])
+            @favicons.add(url.url, @theme.assets_static_file(url.path, "", url.name, FAVICON_PATH)) unless @favicons.contains?(url.url)
+            tag["content"] = @theme.base_assets_url(FAVICON_PATH, url.name)
+          end
+
+          @favicon_tags << tag
+        }
+      end
+
+      @favicons.values.each { |file| @logger.trace("detect favicon file #{file.relative_path}") }
     end
 
-    def page_post_render(page, html)
+    def page_post_render(page, html, modified)
       if favicon?
         head = html.css("head").first
 
@@ -49,33 +72,15 @@ module Jekyll::Potion
 
     def site_post_render(site)
       if favicon?
-        site.static_files -= site.static_files.select { |file| file.is_a?(Jekyll::StaticFile) && @favicons.keys.include?(file.url) }
+        previous_static_files = site.static_files.select { |file| file.relative_path.start_with?("/#{@favicon_path}") }
+
+        previous_static_files.each { |file| @logger.trace("remove previous favicon file #{file.relative_path}") }
+
+        site.static_files -= previous_static_files
+
+        @favicons.values.each { |file| @logger.trace("add favicon file #{file.relative_path}") }
         site.static_files.concat(@favicons.values)
       end
-    end
-
-    def load_favicon
-      Nokogiri::HTML.parse(read_favicon_file).css("head").children.each { |tag|
-        if tag.name == "link" and tag["href"] =~ RELATIVE_PATH
-          url = @site.to_url(@favicon_path, tag["href"])
-
-          unless @favicons.contains?(url.url)
-            if url.name == "manifest.json"
-              resolve_manifest(url)
-            else
-              @favicons.add(url.url, @theme.assets_static_file(url.path, "", url.name, FAVICON_PATH))
-            end
-          end
-
-          tag["href"] = @theme.base_assets_url(FAVICON_PATH, url.name)
-        elsif tag.name == "meta" and tag["content"] =~ RELATIVE_PATH
-          url = @site.to_url(@favicon_path, tag["content"])
-          @favicons.add(url.url, @theme.assets_static_file(url.path, "", url.name, FAVICON_PATH)) unless @favicons.contains?(url.url)
-          tag["content"] = @theme.base_assets_url(FAVICON_PATH, url.name)
-        end
-
-        @favicon_tags << tag
-      }
     end
 
     def resolve_manifest(m_path)
