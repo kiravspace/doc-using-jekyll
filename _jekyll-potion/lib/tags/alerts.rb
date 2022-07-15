@@ -2,13 +2,6 @@ module Jekyll::Potion
   class AlertsTag < Liquid::Block
     include PotionTag
 
-    DEFAULT_CONFIG = {
-      "info" => "info",
-      "warning" => "warning",
-      "danger" => "danger",
-      "success" => "success"
-    }
-
     def initialize(tag_name, markup, options)
       super
       ensure_valid_attr("style")

@@ -5,7 +5,3 @@ exclude:
   - "*.iml"
   - ".idea/"
   - ".github/"
-
-sass:
-  sass_dir: ""
-  style: compressed

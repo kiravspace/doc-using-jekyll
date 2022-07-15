@@ -2,12 +2,6 @@ module Jekyll::Potion
   class CodeTag < Liquid::Block
     include PotionTag
 
-    DEFAULT_CONFIG = {
-      "code_class" => "code",
-      "success_class" => "success",
-      "success_show_class" => "show"
-    }
-
     def initialize(tag_name, markup, options)
       super
     end
