@@ -18,7 +18,9 @@ module Jekyll::Potion
       :title => "",
       :icon => "",
       :theme => "proto",
-      :favicon => ""
+      :favicon => "",
+      :exclude_pages => [],
+      :exclude => []
     }
 
     def initialize(potion_base_dir, site, config)

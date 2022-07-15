@@ -19,9 +19,6 @@ module Jekyll::Potion
     end
 
     def site_after_init(site)
-      # Potion[:themes].values.select { |theme| not theme[:internal] }
-      #   .each { |theme| site.config["exclude"] << File.join(theme[:path], "") }
-
       permalink = find_default_scope(site)
       if permalink.nil?
         site.config["defaults"] << default_scope

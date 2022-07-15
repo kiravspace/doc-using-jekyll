@@ -31,12 +31,13 @@ jekyll-spaceship:
 ########################################
 jekyll_potion:
   site:
-    index_page: "README.md"
+    index_page: "index.md"
     permalink: "/:path/:basename"
     title: "Developers | Guide"
     icon: "assets/img/logo-nugu.svg"
     theme: "developers"
     favicon: "assets/favicon/favicon.html"
+    exclude: ["README.md"]
   theme:
     - developers:
         path: "developers"

@@ -21,9 +21,9 @@ module Jekyll::Potion
 
       config = site.config[CONFIG_KEY]
 
-      # site.config["exclude"] << File.join(potion_base_dir, "")
-
       @objects[:site] = Site.new(potion_base_dir, site, config[SITE_KEY])
+
+      @objects[:site][:exclude].each { |file| site.config["exclude"] << file }
 
       Theme.initialize(@objects[:site], config[THEME_KEY])
 
@@ -48,17 +48,14 @@ module Jekyll::Potion
     end
 
     def site_after_init(site)
-      @logger.error("site_after_init")
       @processors[:site_after_init].each { |processor| processor.site_after_init(site) }
     end
 
     def site_post_read(site)
-      @logger.error("site_post_read")
       @processors[:site_post_read].each { |processor| processor.site_post_read(site) }
     end
 
     def site_pre_render(site)
-      @logger.error("site_pre_render")
       @processors[:site_pre_render].each { |processor| processor.site_pre_render(site) }
     end
 
