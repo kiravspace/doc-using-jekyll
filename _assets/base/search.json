@@ -297,31 +297,6 @@
   ]
 },
   {
-  "url": "/",
-  "order": 0,
-  "indexes": [
-    {
-  "skip_keyword": "data-skip-search-index",
-  "title": "NUGU developers 소개",
-  "hash": "",
-  "sentences": [
-    "NUGU developers 소개",
-    "NUGU developers에 오신 것을 환영합니다.",
-    "NUGU는 SK텔레콤의 인공지능 플랫폼으로, 사용자의 자연어(음성 언어 또는 문자 언어) 요청을 이해하여 의도를 파악한 후 정보 또는 관련한 서비스 제공합니다. NUGU 플랫폼은 NUGU 스피커, T map, B tv, 키즈폰, 알버트, T전화 등 다양한 디바이스와 애플리케이션 PoC(Point of Contact)에 적용 있으며 월간 최대 사용자 1000만 명을 넘어서고 있습니다.",
-    "NUGU developers를 통해 SK텔레콤이 보유한 최고 수준의 음성 인식, 음성 합성, 자연어 이해 등의 기술력을 기반으로, 새로운 기능을 개발하여 NUGU 이용자들에게 제공하거나, 제휴사에서 보유한 디바이스나 어플리케이션에서 음성명령을 통한 NUGU의 다양한 기능을 제공할 수 있습니다.",
-    "NUGU 플랫폼에서 사용자 발화를 처리하는 과정은 다음과 같습니다.",
-    "사용자 발화는 NUGU 플랫폼에서 제공하는 ‘음성 인식, 자연어 이해’ AI 기술을 통해 그 의도가 파악되고,",
-    "대화 관리자는 파악된 의도에 맞는 액션을 설정하여 사용자에게 전달할 응답을 생성하며,",
-    "생성된 응답은 음성 합성 모듈을 거쳐서 사용자에 합성음(tts)으로 전달합니다.",
-    "NUGU developers에서는 NUGU의 PoC에서 손쉽게 새로운 기능과 서비스를 Play로 제공할 수 있도록 지원하는 NUGU play kit과,  Play를 비지니스 목적으로 Private하게 사용하게 하고 Announcement 메세지를 보낼 수 있는 NUGU biz kit를 지원하며, 여러분의 다양한 디바이스 또는 어플리케이션 등에서 NUGU의 다양한 서비스를 직접 제공할 수 있도록 지원하는 NUGU SDK를 제공합니다.",
-    "NUGU play kit은 대화 기반 인공지능 서비스를 개발할 수 있는 통합 개발 환경을 GUI 기반으로 제공함으로써, 사용자들은 쉽게 자신들의 서비스를 개발할 수 있습니다. NUGU play kit에서는 사용자 발화가 처리되는 과정에 필요한 요소 기술들을 제공하고 서비스를 개발할 수 있도록 하는 통합 개발 환경인 Play Builder가 제공됩니다. 개발된 서비스는 NUGU의 ‘심사’와 ‘배포’ 과정을 거친 후 스피커, T map, Btv, T전화 등의 PoC에서 사용자들에게 제공됩니다. 또한 특정 사용자 그룹이나 전용 디바이스에서만 해당 서비스를 제공하고자 할 경우에는 NUGU biz  kit기능을 통하여 이를 설정할 수 있습니다.",
-    "NUGU SDK는 여러분의 다양한 디바이스와 어플리케이션 등에서 NUGU의 자연어 이해 기반의 다양한 기능이 직접 제공될 수 있도록 NUGU 플랫폼과의 연동 및 NUGU의 다양한 서비스 제공을 지원합니다. NUGU SDK는 Android OS, iOS, Linux OS를 지원하며, SDK 탑재를 위한 개발가이드 및 UX 가이드 등을 함께 제공합니다.",
-    "NUGU developers는 개발자가 아니어도 대화 기반 인공지능 서비스를 개발할 수 있는 플랫폼입니다. 또한 자체의 인공지능 플랫폼을 갖추지 못했더라도, 다양한 상품에 쉽고 빠르게 인공지능 기반의 기능을 제공할 수 있도록 지원합니다. NUGU 이용자들에게 좋은 서비스를 제공하길 희망하는 모든 분들과 빠르게 NUGU의 인공지능 기능을 다양한 디바이스와 어플리케이션에서 제공하고자 희망하시는 모든 분들께서 NUGU developers를 통해 그 희망을 실현할 수 있기를 바랍니다."
-  ]
-}
-  ]
-},
-  {
   "url": "/nugu-play/smarthome-play/smarthomecapability/airflowcontrol-interface",
   "order": 81,
   "indexes": [
@@ -4108,6 +4083,36 @@
   ]
 },
   {
+  "url": "/nugu-play/create-plays-with-play-builder/before-start/backend-proxy",
+  "order": 16,
+  "indexes": [
+    {
+  "skip_keyword": "data-skip-search-index",
+  "title": "Backend proxy",
+  "hash": "",
+  "sentences": [
+    "Backend proxy",
+    "사용자의 발화로부터 Intent와 Entity가 분석되면 대화 관리자가 적절한 Prompt를 생성하여 스피커로 전달합니다.",
+    "Prompt를 생성할 때 외부 서버로부터 필요한 정보를 가져와서 응답을 생성해야 하는 경우가 있습니다. 외부 서버를 호출하여 대화 관리자에게 정보를 전달하는 서버를 Backend proxy라고 합니다. Backend proxy는 외부 서버로부터 가져온 정보를 수정하거나 복잡한 로직을 통해 조건을 판단하는 기능도 수행할 수 있는데, 개발자가 직접 개발하여 NUGU 플랫폼과 연동할 수 있도록 준비해야 합니다.",
+    "다음 그림과 같이 사용자가 ‘명동 날씨 알려줘’라고 발화한 경우, ‘ask.weather’ Intent와 함께 ‘명동’을 Backend proxy로 전달합니다.",
+    "Backend proxy는 기상 정보를 제공하는 외부 서버를 호출하여 원하는 시간의 날씨 정보를 얻어와",
+    "{{status}}",
+    "로 결과를 반환하고, 대화 관리자",
+    "{{location}}",
+    "과",
+    "{{status}}",
+    "를 이용하여 날씨를 안내하는 응답을 스피커로 보내게 됩니다.",
+    "Backend proxy를 사용하는 경우는 다음과 같습니다.",
+    "외부 서버로부터 정보를 가져와야 하는 경우",
+    "사칙연산, 날짜/시간 계산 등 로직을 통해 정보를 가공하는 경우",
+    "오디오 재생을 위한 명령어(Play, Pause, Stop)를 생성해야 하는 경우 자세한 내용은 AudioPlayer Interface 지원하는 Play 만들기를 참고하세요.",
+    "시나리오 전체에 필요한 정보를 미리 가져와서 사용하는 경우",
+    "외부 서버를 연동하는 경우 여러 가지 예외 상황이 발생할 수 있습니다. 이러한 예외 상황을 Action에 정의하고, Backend proxy는 예외 상황이 발생했을 때 Action에서 정의한 상태값을 전달함으로써 다양한 예외 상황에 대처하는 응답을 만들 수 있습니다."
+  ]
+}
+  ]
+},
+  {
   "url": "/nugu-play/create-plays-with-play-builder/use-backend-proxy/backend-proxy",
   "order": 45,
   "indexes": [
@@ -4213,31 +4218,26 @@
   ]
 },
   {
-  "url": "/nugu-play/create-plays-with-play-builder/before-start/backend-proxy",
-  "order": 16,
+  "url": "/nugu-sdk/platform/ios/background",
+  "order": 174,
   "indexes": [
     {
   "skip_keyword": "data-skip-search-index",
-  "title": "Backend proxy",
+  "title": "Background 동작 처리",
   "hash": "",
   "sentences": [
-    "Backend proxy",
-    "사용자의 발화로부터 Intent와 Entity가 분석되면 대화 관리자가 적절한 Prompt를 생성하여 스피커로 전달합니다.",
-    "Prompt를 생성할 때 외부 서버로부터 필요한 정보를 가져와서 응답을 생성해야 하는 경우가 있습니다. 외부 서버를 호출하여 대화 관리자에게 정보를 전달하는 서버를 Backend proxy라고 합니다. Backend proxy는 외부 서버로부터 가져온 정보를 수정하거나 복잡한 로직을 통해 조건을 판단하는 기능도 수행할 수 있는데, 개발자가 직접 개발하여 NUGU 플랫폼과 연동할 수 있도록 준비해야 합니다.",
-    "다음 그림과 같이 사용자가 ‘명동 날씨 알려줘’라고 발화한 경우, ‘ask.weather’ Intent와 함께 ‘명동’을 Backend proxy로 전달합니다.",
-    "Backend proxy는 기상 정보를 제공하는 외부 서버를 호출하여 원하는 시간의 날씨 정보를 얻어와",
-    "{{status}}",
-    "로 결과를 반환하고, 대화 관리자",
-    "{{location}}",
-    "과",
-    "{{status}}",
-    "를 이용하여 날씨를 안내하는 응답을 스피커로 보내게 됩니다.",
-    "Backend proxy를 사용하는 경우는 다음과 같습니다.",
-    "외부 서버로부터 정보를 가져와야 하는 경우",
-    "사칙연산, 날짜/시간 계산 등 로직을 통해 정보를 가공하는 경우",
-    "오디오 재생을 위한 명령어(Play, Pause, Stop)를 생성해야 하는 경우 자세한 내용은 AudioPlayer Interface 지원하는 Play 만들기를 참고하세요.",
-    "시나리오 전체에 필요한 정보를 미리 가져와서 사용하는 경우",
-    "외부 서버를 연동하는 경우 여러 가지 예외 상황이 발생할 수 있습니다. 이러한 예외 상황을 Action에 정의하고, Backend proxy는 예외 상황이 발생했을 때 Action에서 정의한 상태값을 전달함으로써 다양한 예외 상황에 대처하는 응답을 만들 수 있습니다."
+    "Background 동작 처리",
+    "Connection-oriented 방식을 사용하는 PoC 의 경우 application 이 background 로 전활될 경우 필요하다면 연결을 끊어주어야 합니다.",
+    "NUGU 회원 연동 방식의 PoC 에서 OAuth token 발급 결과 scope 에 “device:S.I.D” 가 포함된 경우에만 connection-oriented 방식을 사용합니다."
+  ]
+},
+    {
+  "skip_keyword": "data-skip-search-index",
+  "title": "Background 동작 처리 > Background 연결 종료",
+  "hash": "#background-연결-종료",
+  "sentences": [
+    "Background 연결 종료",
+    "NotificationCenter.default.addObserver(\n            self,\n            selector: #selector(willResignActive(_:)),\n            name: UIApplication.willResignActiveNotification,\n            object: nil\n        )\n\nNotificationCenter.default.addObserver(\n    self,\n    selector: #selector(didBecomeActive(_:)),\n    name: UIApplication.didBecomeActiveNotification,\n    object: nil\n)\n\nfunc willResignActive(_ notification: Notification) {\n    // 연결 종료\n    NuguCentralManager.shared.stopReceiveServerInitiatedDirective()\n}\n\nfunc didBecomeActive(_ notification: Notification) {\n    // 재연결\n    NuguCentralManager.shared.startReceiveServerInitiatedDirective()\n}"
   ]
 }
   ]
@@ -4263,31 +4263,6 @@
   "sentences": [
     "Background 연결 종료",
     "class MyApplication : Application() {\n    override fun onCreate() {\n        super.onCreate()\n\n        ProcessLifecycleOwner.get().lifecycle\n            .addObserver(MyLifecycleObserver())\n    }\n}\n\nclass MyLifecycleObserver : LifecycleObserver {\n\n    @OnLifecycleEvent(Lifecycle.Event.ON_START)\n    fun onForeground() {\n        // 재연결\n        ClientManager.getClient().networkManager.startReceiveServerInitiatedDirective()\n    }\n\n    @OnLifecycleEvent(Lifecycle.Event.ON_STOP)\n    fun onBackground() {\n        // 연결 종료\n        ClientManager.getClient().networkManager.stopReceiveServerInitiatedDirective()\n    }\n}"
-  ]
-}
-  ]
-},
-  {
-  "url": "/nugu-sdk/platform/ios/background",
-  "order": 174,
-  "indexes": [
-    {
-  "skip_keyword": "data-skip-search-index",
-  "title": "Background 동작 처리",
-  "hash": "",
-  "sentences": [
-    "Background 동작 처리",
-    "Connection-oriented 방식을 사용하는 PoC 의 경우 application 이 background 로 전활될 경우 필요하다면 연결을 끊어주어야 합니다.",
-    "NUGU 회원 연동 방식의 PoC 에서 OAuth token 발급 결과 scope 에 “device:S.I.D” 가 포함된 경우에만 connection-oriented 방식을 사용합니다."
-  ]
-},
-    {
-  "skip_keyword": "data-skip-search-index",
-  "title": "Background 동작 처리 > Background 연결 종료",
-  "hash": "#background-연결-종료",
-  "sentences": [
-    "Background 연결 종료",
-    "NotificationCenter.default.addObserver(\n            self,\n            selector: #selector(willResignActive(_:)),\n            name: UIApplication.willResignActiveNotification,\n            object: nil\n        )\n\nNotificationCenter.default.addObserver(\n    self,\n    selector: #selector(didBecomeActive(_:)),\n    name: UIApplication.didBecomeActiveNotification,\n    object: nil\n)\n\nfunc willResignActive(_ notification: Notification) {\n    // 연결 종료\n    NuguCentralManager.shared.stopReceiveServerInitiatedDirective()\n}\n\nfunc didBecomeActive(_ notification: Notification) {\n    // 재연결\n    NuguCentralManager.shared.startReceiveServerInitiatedDirective()\n}"
   ]
 }
   ]
@@ -5823,6 +5798,80 @@
   ]
 },
   {
+  "url": "/nugu-sdk/platform/linux/component",
+  "order": 195,
+  "indexes": [
+    {
+  "skip_keyword": "data-skip-search-index",
+  "title": "구성요소",
+  "hash": "",
+  "sentences": [
+    "구성요소"
+  ]
+},
+    {
+  "skip_keyword": "data-skip-search-index",
+  "title": "구성요소 > 구성요소 목록",
+  "hash": "#구성요소-목록",
+  "sentences": [
+    "구성요소 목록",
+    "NUGU Component (Common)\n    \n      \nNuguClientKit: NUGU 서비스를 쉽게 개발할 수 있도록 도와주는 기능을 제공합니다.\n      \nNuguCapability: Capability를 쉽게 제어할 수 있는 API를 제공합니다.\n      \nNuguCore: NUGU 서비스 개발에 필요한 구성요소들을 제공합니다.",
+    "NuguClientKit: NUGU 서비스를 쉽게 개발할 수 있도록 도와주는 기능을 제공합니다.",
+    "NuguCapability: Capability를 쉽게 제어할 수 있는 API를 제공합니다.",
+    "NuguCore: NUGU 서비스 개발에 필요한 구성요소들을 제공합니다.",
+    "NUGU Component (Depends on platform)\n    \n      Plug-in: 디바이스 특성에 맞게 미디어 드라이버를 구현할 수 있는 API를 제공합니다.\n      \ngstreamer: plug-in에서 제공하는 player_driver를 이용해서 gstreamer를 통한 미디어 재생 기능을 제공합니다.\n      \nportaudio: plug-in에서 제공하는 recorder_driver, pcm_driver를 이용해서 portaudio를 통한 음성 데이터 입/출력 기능을 제공합니다.\n      \nopus: plug-in에서 제공하는 decoder_deriver를 이용해서 opus 코덱을 디코딩 합니다.",
+    "Plug-in: 디바이스 특성에 맞게 미디어 드라이버를 구현할 수 있는 API를 제공합니다.",
+    "gstreamer: plug-in에서 제공하는 player_driver를 이용해서 gstreamer를 통한 미디어 재생 기능을 제공합니다.",
+    "portaudio: plug-in에서 제공하는 recorder_driver, pcm_driver를 이용해서 portaudio를 통한 음성 데이터 입/출력 기능을 제공합니다.",
+    "opus: plug-in에서 제공하는 decoder_deriver를 이용해서 opus 코덱을 디코딩 합니다.",
+    "Vendor Component\n    \n      \nlibnugu-kwd: NUGU의 키워드를 감지하는 기능을 제공합니다.\n      \nlibnugu-epd: 발화의 시작과 끝을 감지하는 기능을 제공합니다.",
+    "libnugu-kwd: NUGU의 키워드를 감지하는 기능을 제공합니다.",
+    "libnugu-epd: 발화의 시작과 끝을 감지하는 기능을 제공합니다."
+  ]
+},
+    {
+  "skip_keyword": "data-skip-search-index",
+  "title": "구성요소 > Github",
+  "hash": "#github",
+  "sentences": [
+    "Github"
+  ]
+},
+    {
+  "skip_keyword": "data-skip-search-index",
+  "title": "구성요소 > Github > NUGU",
+  "hash": "#nugu",
+  "sentences": [
+    "NUGU",
+    "nugu-linux | https://github.com/nugu-developers/nugu-linux"
+  ]
+},
+    {
+  "skip_keyword": "data-skip-search-index",
+  "title": "구성요소 > 의존성 목록",
+  "hash": "#의존성-목록",
+  "sentences": [
+    "의존성 목록",
+    "NUGU SDK for Linux는 아래의 외부 라이브러리를 사용하고 있고, SDK 설치시 의존성으로 인해 자동으로 시스템에 설치됩니다.",
+    "PortAudio | MIT",
+    "Alsa | LGPL",
+    "Opus | BSD",
+    "GStreamer | LGPL",
+    "GLib | LGPL",
+    "SSL | Apache v2 (>=3.0.0), dual OpenSSL and SSLeay license(<3.0.0)",
+    "zlib | zlib",
+    "NUGU Keyword detector | Apache v2",
+    "NUGU End point detector | Apache v2",
+    "그리고 아래의 외부 Open source 들을 NUGU SDK for Linux에 포함하여 빌드하고 있습니다.",
+    "libcurl | https://github.com/curl/curl.git | MIT style license",
+    "nghttp2 | https://github.com/nghttp2/nghttp2.git | MIT",
+    "jsoncpp | https://github.com/open-source-parsers/jsoncpp.git | MIT",
+    "Opus | https://opus-codec.org/development | BSD"
+  ]
+}
+  ]
+},
+  {
   "url": "/nugu-sdk/platform/ios/component",
   "order": 173,
   "indexes": [
@@ -5904,80 +5953,6 @@
     "NUGU SDK for iOS의 각각의 구성요소는 CocoaPods를 통해 의존성 관리를 추가할 수 있습니다. 구성요소를 재구성할 때, 필요에 맞게 의존성 관리를 추가하면 됩니다.",
     "Podfile",
     "target 'your_application' do\n    pod 'NuguCore'\n    pod 'NuguAgents'\n    pod 'NuguClientKit'\n    pod 'NuguLoginKit'\n    pod 'NuguUIKit'\n    pod 'NuguServiceKit'\n    pod 'KeenSense'\n    pod 'JadeMarble'\n    pod 'NattyLog'\n    pod 'SilverTray'\nend"
-  ]
-}
-  ]
-},
-  {
-  "url": "/nugu-sdk/platform/linux/component",
-  "order": 195,
-  "indexes": [
-    {
-  "skip_keyword": "data-skip-search-index",
-  "title": "구성요소",
-  "hash": "",
-  "sentences": [
-    "구성요소"
-  ]
-},
-    {
-  "skip_keyword": "data-skip-search-index",
-  "title": "구성요소 > 구성요소 목록",
-  "hash": "#구성요소-목록",
-  "sentences": [
-    "구성요소 목록",
-    "NUGU Component (Common)\n    \n      \nNuguClientKit: NUGU 서비스를 쉽게 개발할 수 있도록 도와주는 기능을 제공합니다.\n      \nNuguCapability: Capability를 쉽게 제어할 수 있는 API를 제공합니다.\n      \nNuguCore: NUGU 서비스 개발에 필요한 구성요소들을 제공합니다.",
-    "NuguClientKit: NUGU 서비스를 쉽게 개발할 수 있도록 도와주는 기능을 제공합니다.",
-    "NuguCapability: Capability를 쉽게 제어할 수 있는 API를 제공합니다.",
-    "NuguCore: NUGU 서비스 개발에 필요한 구성요소들을 제공합니다.",
-    "NUGU Component (Depends on platform)\n    \n      Plug-in: 디바이스 특성에 맞게 미디어 드라이버를 구현할 수 있는 API를 제공합니다.\n      \ngstreamer: plug-in에서 제공하는 player_driver를 이용해서 gstreamer를 통한 미디어 재생 기능을 제공합니다.\n      \nportaudio: plug-in에서 제공하는 recorder_driver, pcm_driver를 이용해서 portaudio를 통한 음성 데이터 입/출력 기능을 제공합니다.\n      \nopus: plug-in에서 제공하는 decoder_deriver를 이용해서 opus 코덱을 디코딩 합니다.",
-    "Plug-in: 디바이스 특성에 맞게 미디어 드라이버를 구현할 수 있는 API를 제공합니다.",
-    "gstreamer: plug-in에서 제공하는 player_driver를 이용해서 gstreamer를 통한 미디어 재생 기능을 제공합니다.",
-    "portaudio: plug-in에서 제공하는 recorder_driver, pcm_driver를 이용해서 portaudio를 통한 음성 데이터 입/출력 기능을 제공합니다.",
-    "opus: plug-in에서 제공하는 decoder_deriver를 이용해서 opus 코덱을 디코딩 합니다.",
-    "Vendor Component\n    \n      \nlibnugu-kwd: NUGU의 키워드를 감지하는 기능을 제공합니다.\n      \nlibnugu-epd: 발화의 시작과 끝을 감지하는 기능을 제공합니다.",
-    "libnugu-kwd: NUGU의 키워드를 감지하는 기능을 제공합니다.",
-    "libnugu-epd: 발화의 시작과 끝을 감지하는 기능을 제공합니다."
-  ]
-},
-    {
-  "skip_keyword": "data-skip-search-index",
-  "title": "구성요소 > Github",
-  "hash": "#github",
-  "sentences": [
-    "Github"
-  ]
-},
-    {
-  "skip_keyword": "data-skip-search-index",
-  "title": "구성요소 > Github > NUGU",
-  "hash": "#nugu",
-  "sentences": [
-    "NUGU",
-    "nugu-linux | https://github.com/nugu-developers/nugu-linux"
-  ]
-},
-    {
-  "skip_keyword": "data-skip-search-index",
-  "title": "구성요소 > 의존성 목록",
-  "hash": "#의존성-목록",
-  "sentences": [
-    "의존성 목록",
-    "NUGU SDK for Linux는 아래의 외부 라이브러리를 사용하고 있고, SDK 설치시 의존성으로 인해 자동으로 시스템에 설치됩니다.",
-    "PortAudio | MIT",
-    "Alsa | LGPL",
-    "Opus | BSD",
-    "GStreamer | LGPL",
-    "GLib | LGPL",
-    "SSL | Apache v2 (>=3.0.0), dual OpenSSL and SSLeay license(<3.0.0)",
-    "zlib | zlib",
-    "NUGU Keyword detector | Apache v2",
-    "NUGU End point detector | Apache v2",
-    "그리고 아래의 외부 Open source 들을 NUGU SDK for Linux에 포함하여 빌드하고 있습니다.",
-    "libcurl | https://github.com/curl/curl.git | MIT style license",
-    "nghttp2 | https://github.com/nghttp2/nghttp2.git | MIT",
-    "jsoncpp | https://github.com/open-source-parsers/jsoncpp.git | MIT",
-    "Opus | https://opus-codec.org/development | BSD"
   ]
 }
   ]
@@ -9848,6 +9823,31 @@
     "해당 Capability/Directive에서 응답 시 사용할 수 있는 ErrorCode는",
     "SmartHomeError",
     "를 참조해주시기 바랍니다."
+  ]
+}
+  ]
+},
+  {
+  "url": "/",
+  "order": 0,
+  "indexes": [
+    {
+  "skip_keyword": "data-skip-search-index",
+  "title": "NUGU developers 소개",
+  "hash": "",
+  "sentences": [
+    "NUGU developers 소개",
+    "NUGU developers에 오신 것을 환영합니다.",
+    "NUGU는 SK텔레콤의 인공지능 플랫폼으로, 사용자의 자연어(음성 언어 또는 문자 언어) 요청을 이해하여 의도를 파악한 후 정보 또는 관련한 서비스 제공합니다. NUGU 플랫폼은 NUGU 스피커, T map, B tv, 키즈폰, 알버트, T전화 등 다양한 디바이스와 애플리케이션 PoC(Point of Contact)에 적용 있으며 월간 최대 사용자 1000만 명을 넘어서고 있습니다.",
+    "NUGU developers를 통해 SK텔레콤이 보유한 최고 수준의 음성 인식, 음성 합성, 자연어 이해 등의 기술력을 기반으로, 새로운 기능을 개발하여 NUGU 이용자들에게 제공하거나, 제휴사에서 보유한 디바이스나 어플리케이션에서 음성명령을 통한 NUGU의 다양한 기능을 제공할 수 있습니다.",
+    "NUGU 플랫폼에서 사용자 발화를 처리하는 과정은 다음과 같습니다.",
+    "사용자 발화는 NUGU 플랫폼에서 제공하는 ‘음성 인식, 자연어 이해’ AI 기술을 통해 그 의도가 파악되고,",
+    "대화 관리자는 파악된 의도에 맞는 액션을 설정하여 사용자에게 전달할 응답을 생성하며,",
+    "생성된 응답은 음성 합성 모듈을 거쳐서 사용자에 합성음(tts)으로 전달합니다.",
+    "NUGU developers에서는 NUGU의 PoC에서 손쉽게 새로운 기능과 서비스를 Play로 제공할 수 있도록 지원하는 NUGU play kit과,  Play를 비지니스 목적으로 Private하게 사용하게 하고 Announcement 메세지를 보낼 수 있는 NUGU biz kit를 지원하며, 여러분의 다양한 디바이스 또는 어플리케이션 등에서 NUGU의 다양한 서비스를 직접 제공할 수 있도록 지원하는 NUGU SDK를 제공합니다.",
+    "NUGU play kit은 대화 기반 인공지능 서비스를 개발할 수 있는 통합 개발 환경을 GUI 기반으로 제공함으로써, 사용자들은 쉽게 자신들의 서비스를 개발할 수 있습니다. NUGU play kit에서는 사용자 발화가 처리되는 과정에 필요한 요소 기술들을 제공하고 서비스를 개발할 수 있도록 하는 통합 개발 환경인 Play Builder가 제공됩니다. 개발된 서비스는 NUGU의 ‘심사’와 ‘배포’ 과정을 거친 후 스피커, T map, Btv, T전화 등의 PoC에서 사용자들에게 제공됩니다. 또한 특정 사용자 그룹이나 전용 디바이스에서만 해당 서비스를 제공하고자 할 경우에는 NUGU biz  kit기능을 통하여 이를 설정할 수 있습니다.",
+    "NUGU SDK는 여러분의 다양한 디바이스와 어플리케이션 등에서 NUGU의 자연어 이해 기반의 다양한 기능이 직접 제공될 수 있도록 NUGU 플랫폼과의 연동 및 NUGU의 다양한 서비스 제공을 지원합니다. NUGU SDK는 Android OS, iOS, Linux OS를 지원하며, SDK 탑재를 위한 개발가이드 및 UX 가이드 등을 함께 제공합니다.",
+    "NUGU developers는 개발자가 아니어도 대화 기반 인공지능 서비스를 개발할 수 있는 플랫폼입니다. 또한 자체의 인공지능 플랫폼을 갖추지 못했더라도, 다양한 상품에 쉽고 빠르게 인공지능 기반의 기능을 제공할 수 있도록 지원합니다. NUGU 이용자들에게 좋은 서비스를 제공하길 희망하는 모든 분들과 빠르게 NUGU의 인공지능 기능을 다양한 디바이스와 어플리케이션에서 제공하고자 희망하시는 모든 분들께서 NUGU developers를 통해 그 희망을 실현할 수 있기를 바랍니다.\n123321"
   ]
 }
   ]
